@@ -1,0 +1,24 @@
+{
+  "name": "belief-school",
+  "version": "0.0.0",
+  "authors": [
+    "Daniel Bonham <daniel@gladeye.co.nz>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "admin-lte": "~2.0.4",
+    "requirejs": "~2.1.16",
+    "jquery": "~2.1.3"
+  }
+}
