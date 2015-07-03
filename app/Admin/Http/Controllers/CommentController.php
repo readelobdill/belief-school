@@ -41,7 +41,6 @@ class CommentController extends Controller {
 
         $commentRenderer = new CommentRenderer($comments);
         $commentList = $commentRenderer->renderAll();
-
         return view('admin.comments.list', compact('module', 'comments', 'commentList'));
 
     }

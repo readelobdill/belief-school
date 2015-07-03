@@ -15,6 +15,12 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+
+
+Route::get('modules/{module}/update', ['as' => 'modules.update', 'uses' => 'ModuleController@updateModule']);
+
+
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

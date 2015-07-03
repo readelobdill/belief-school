@@ -38,4 +38,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->belongsTo('App\Models\Group');
     }
 
+    public function modules() {
+        return $this->belongsToMany('App\Models\Module');
+    }
+
+    public function moduleUser() {
+        return $this->hasMany('App\Models\ModuleUser');
+    }
+
 }

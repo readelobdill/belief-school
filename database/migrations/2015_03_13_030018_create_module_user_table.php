@@ -16,10 +16,14 @@ class CreateModuleUserTable extends Migration {
 		{
             $table->integer('user_id')->unsigned();
             $table->integer('module_id')->unsigned();
+
             $table->text('data');
+            $table->boolean('complete')->default(false);
+
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('module_id')->references('id')->on('modules');
-			$table->timestamps();
+
+            $table->timestamps();
 		});
 	}
 
