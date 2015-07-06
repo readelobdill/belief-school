@@ -56,15 +56,27 @@
 		width: 100%;
 		height: 100%;
 		visibility: hidden;
+		-webkit-font-smoothing: antialiased;
 		.content {
 			position:absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate3d(-50%, -50%, 0);
+			transform: translate(-50%, -50%);
 			h1 {
-				font-size: 20px;
+				font-size: 34px;
+				line-height: 50px;
 				color: #252e33;
 				text-align: center;
+				font-family: 'SantEliaRoughAlt-BoldThr', serif;
+				padding: 20px;
+			}
+			p {
+				text-align:center;
+				font-size: 16px;
+				line-height: 24px;
+			}
+			.next-question {
+				margin: 60px auto 0 auto;
 			}
 
 		}
@@ -110,6 +122,8 @@
 
 
 body {
-	font-family: 'Open Sans','Helvetica Neue', sans-serif;
+	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
 	overflow-y: scroll;
+	color: #252e33;
+
 }

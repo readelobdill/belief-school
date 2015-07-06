@@ -7,6 +7,7 @@ var source = require('vinyl-source-stream');
 var notify = require("gulp-notify");
 var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
+var livereload = require('gulp-livereload');
 
 
 function swallowError(error) {
@@ -14,9 +15,6 @@ function swallowError(error) {
     notify(error.toString());
     this.emit('end');
 }
-
-
-
 
 function scripts(watch, production) {
     var bundler, rebundle;
@@ -40,17 +38,22 @@ function scripts(watch, production) {
         var stream = bundler.bundle();
         stream.on('error', swallowError);
         stream = stream.pipe(source('output.js'));
-        return stream.pipe(gulp.dest('./public/js')).pipe(notify('Compiled JS'));;
+        return stream.pipe(gulp.dest('./public/js'))
+            .pipe(notify('Compiled JS'))
+            .pipe(livereload());
     }
 
     bundler.on('update', rebundle);
     return rebundle();
 }
 
-
+gulp.task('livereload', function() {
+    livereload.changed('./public/css/main.css');
+})
 
 gulp.task('watch', function() {
-    gulp.watch('./resources/assets/js/**/*.js', ['modules']);
+    livereload.listen();
+    gulp.watch('./public/css/main.css', ['livereload']);
 });
 
 gulp.task('scripts', function() {

@@ -6,7 +6,6 @@ import config from 'config';
 import animate from 'modules/animate';
 import Question from "modules/question";
 import Q from "q";
-import React from "react";
 
 
 

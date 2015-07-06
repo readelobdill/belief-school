@@ -1,6 +1,6 @@
 <div class="inner">
     @for($i = 1; $i < 8; $i++)
-        <div class="question"">
+        <div class="question">
             @include('app/home/questions/'.$i)
         </div>
     @endfor
