@@ -1,5 +1,5 @@
 <div class="content">
-    <h1>
+    <h1 class="title">
         Your<br>
         Belief School<br>
         journey starts here
@@ -9,7 +9,4 @@
         Answer below and find out&hellip;
     </p>
 
-    <div class="next-question down-arrow">
-        @include('app/partials/icons/down-arrow')
-    </div>
 </div>

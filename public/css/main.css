@@ -69,13 +69,114 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
+/* line 7, ../../resources/assets/scss/core/_base.scss */
+[data-arc] :first-child {
+  font-weight: 900;
+}
+/* line 10, ../../resources/assets/scss/core/_base.scss */
+[data-arc] :last-child {
+  font-weight: 900;
+}
+
+/* line 16, ../../resources/assets/scss/core/_base.scss */
+.title {
+  font-size: 30px;
+  line-height: 37px;
+  color: #252e33;
+  text-align: center;
+  font-family: 'SantEliaRoughAlt-BoldThr', serif;
+  padding: 20px;
+  margin-bottom: 22px;
+  position: relative;
+}
+/* line 25, ../../resources/assets/scss/core/_base.scss */
+.title:after {
+  width: 171px;
+  border-bottom: 1px solid #1f2020;
+  content: "";
+  display: block;
+  margin: 22px auto 0 auto;
+}
+/* line 33, ../../resources/assets/scss/core/_base.scss */
+.title > span {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
 @font-face {
   font-family: 'SantEliaRoughAlt-BoldThr';
   src: url('../fonts/2E98A4_0_0.eot?1436093214');
   src: url('../fonts/2E98A4_0_0.eot?&1436093214#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1436093222') format("woff2"), url('../fonts/2E98A4_0_0.woff?1436093214') format("woff"), url('../fonts/2E98A4_0_0.ttf?1436093212') format("truetype");
 }
+/* line 8, ../../resources/assets/scss/core/_fonts.scss */
+.title > span, input[type=text], input[type=email], input[type=password], textarea, body {
+  font-family: "brandon-grotesque", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+/* line 1, ../../resources/assets/scss/core/_forms.scss */
+input[type=text], input[type=email], input[type=password], textarea {
+  background: #f16060;
+  border: 0;
+  display: block;
+  color: white;
+  box-shadow: inset 0 0 1px 4px rgba(152, 32, 26, 0);
+  transition: background 0.2s ease;
+}
+/* line 9, ../../resources/assets/scss/core/_forms.scss */
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus {
+  outline: 0;
+  background: #252e33;
+}
+
+/* line 14, ../../resources/assets/scss/core/_forms.scss */
+input[type=text], input[type=email], input[type=password] {
+  width: 250px;
+  font-size: 17px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+  height: 81px;
+}
+/* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+input[type=text]:-moz-placeholder, input[type=email]:-moz-placeholder, input[type=password]:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 64, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=password]::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 67, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 56, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 28, ../../resources/assets/scss/core/_forms.scss */
+textarea {
+  width: 500px;
+  height: 130px;
+  padding: 25px;
+  margin: 32px auto 0 auto;
+  font-size: 20px;
+}
+
+/* line 1, ../../resources/assets/scss/core/_links.scss */
+a {
+  font-weight: bold;
+  color: #f16060;
+}
+/* line 4, ../../resources/assets/scss/core/_links.scss */
+a:hover {
+  color: #98201a;
+}
+
 /* line 2, ../../resources/assets/scss/core/_module.scss */
-div.module > .module-section {
+.module > .module-section {
   top: 0;
   left: 0;
   position: fixed;
@@ -84,46 +185,111 @@ div.module > .module-section {
   visibility: hidden;
 }
 /* line 10, ../../resources/assets/scss/core/_module.scss */
-div.module > .module-section .next-section {
+.module > .module-section > .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 22, ../../resources/assets/scss/core/_module.scss */
+.next-section {
   display: block;
   width: 50px;
   height: 50px;
   cursor: pointer;
   position: absolute;
-  bottom: 20px;
   left: 50%;
+  bottom: 20px;
   transform: translate3d(-50%, 0, 0);
   z-index: 25;
   visibility: hidden;
   border: 0;
+  transform-origin: 50% 50%;
 }
-/* line 22, ../../resources/assets/scss/core/_module.scss */
-div.module > .module-section .next-section svg {
+/* line 36, ../../resources/assets/scss/core/_module.scss */
+.next-section svg {
   width: 100%;
   height: 100%;
 }
-/* line 25, ../../resources/assets/scss/core/_module.scss */
-div.module > .module-section .next-section svg path {
+/* line 39, ../../resources/assets/scss/core/_module.scss */
+.next-section svg path {
   fill: white;
-}
-/* line 32, ../../resources/assets/scss/core/_module.scss */
-div.module > .module-section .next-question {
-  display: block;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-}
-/* line 37, ../../resources/assets/scss/core/_module.scss */
-div.module > .module-section .next-question svg {
-  width: 100%;
-  height: 100%;
-}
-/* line 40, ../../resources/assets/scss/core/_module.scss */
-div.module > .module-section .next-question svg path {
-  fill: #f16060;
+  transition: fill 0.3s ease;
 }
 
-/* line 5, ../../resources/assets/scss/pages/_home.scss */
+/* line 1, ../../resources/assets/scss/ui/_burger.scss */
+.burger {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.98);
+  cursor: pointer;
+  overflow: hidden;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* line 13, ../../resources/assets/scss/ui/_burger.scss */
+.burger:hover svg path {
+  fill: #f16060;
+}
+/* line 17, ../../resources/assets/scss/ui/_burger.scss */
+.burger svg {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+/* line 24, ../../resources/assets/scss/ui/_burger.scss */
+.burger svg path {
+  transition: fill 0.7s ease;
+  fill: #252e33;
+}
+/* line 28, ../../resources/assets/scss/ui/_burger.scss */
+.burger svg#close-burger {
+  display: none;
+}
+
+/* line 1, ../../resources/assets/scss/ui/_menu.scss */
+.menu {
+  position: absolute;
+  z-index: 98;
+  height: 100%;
+  width: 295px;
+  background: #252e33;
+  padding-top: 126px;
+  transform: translate3d(-295px, 0, 0);
+}
+/* line 10, ../../resources/assets/scss/ui/_menu.scss */
+.menu nav {
+  padding-left: 50px;
+  margin-bottom: 60px;
+}
+/* line 13, ../../resources/assets/scss/ui/_menu.scss */
+.menu nav h2 {
+  font-weight: bold;
+  color: #aeaeae;
+  text-transform: uppercase;
+  margin-bottom: 33px;
+}
+/* line 22, ../../resources/assets/scss/ui/_menu.scss */
+.menu nav ul li {
+  font-size: 15px;
+  color: #fbfbfb;
+  margin-bottom: 15px;
+}
+
+/* line 3, ../../resources/assets/scss/pages/home/_home.scss */
+.background-video > .inner {
+  width: 100%;
+  height: 100%;
+}
+/* line 8, ../../resources/assets/scss/pages/home/_home.scss */
 .background-video .display-video {
   position: absolute;
   top: 0;
@@ -131,21 +297,17 @@ div.module > .module-section .next-question svg path {
   min-width: 100%;
   min-height: 100%;
 }
-/* line 13, ../../resources/assets/scss/pages/_home.scss */
+/* line 16, ../../resources/assets/scss/pages/home/_home.scss */
 .background-video .home-banner {
-  position: absolute;
   z-index: 20;
   width: 700px;
-  left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
 }
 
-/* line 28, ../../resources/assets/scss/pages/_home.scss */
+/* line 28, ../../resources/assets/scss/pages/home/_home.scss */
 .intro-video {
   padding: 80px 40px;
 }
-/* line 32, ../../resources/assets/scss/pages/_home.scss */
+/* line 32, ../../resources/assets/scss/pages/home/_home.scss */
 .intro-video > .inner {
   width: 100%;
   height: 100%;
@@ -153,19 +315,117 @@ div.module > .module-section .next-question svg path {
   visibility: hidden;
 }
 
-/* line 41, ../../resources/assets/scss/pages/_home.scss */
+/* line 41, ../../resources/assets/scss/pages/home/_home.scss */
+.account-creation {
+  padding: 40px;
+}
+/* line 43, ../../resources/assets/scss/pages/home/_home.scss */
+.account-creation > .inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  visibility: hidden;
+}
+/* line 50, ../../resources/assets/scss/pages/home/_home.scss */
+.account-creation > .inner .next-section {
+  bottom: 60px;
+}
+/* line 53, ../../resources/assets/scss/pages/home/_home.scss */
+.account-creation > .inner .next-section svg path {
+  fill: #f16060;
+}
+/* line 58, ../../resources/assets/scss/pages/home/_home.scss */
+.account-creation > .inner .next-section:hover svg path {
+  fill: #98201a;
+}
+/* line 67, ../../resources/assets/scss/pages/home/_home.scss */
+.account-creation .content {
+  width: 442px;
+  text-align: center;
+}
+/* line 71, ../../resources/assets/scss/pages/home/_home.scss */
+.account-creation .content p {
+  text-align: center;
+  font-size: 17px;
+  line-height: 23px;
+  margin-bottom: 15px;
+}
+/* line 82, ../../resources/assets/scss/pages/home/_home.scss */
+.account-creation input {
+  margin: 8px 0;
+  height: 72px;
+  width: 100%;
+}
+
+/* line 93, ../../resources/assets/scss/pages/home/_home.scss */
+.details {
+  padding: 40px 40px;
+}
+/* line 95, ../../resources/assets/scss/pages/home/_home.scss */
+.details.module-section > .inner {
+  display: block;
+}
+/* line 100, ../../resources/assets/scss/pages/home/_home.scss */
+.details > .inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+/* line 107, ../../resources/assets/scss/pages/home/_home.scss */
+.details > .inner .content {
+  width: 445px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 26px;
+  color: #252e33;
+  padding: 20px 0;
+}
+/* line 116, ../../resources/assets/scss/pages/home/_home.scss */
+.details > .inner .content h1 > span {
+  margin-bottom: 25px;
+}
+/* line 121, ../../resources/assets/scss/pages/home/_home.scss */
+.details > .inner .content p {
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+/* line 126, ../../resources/assets/scss/pages/home/_home.scss */
+.details > .inner .content blockquote {
+  color: #f16060;
+  font-size: 21px;
+  margin-bottom: 32px;
+  padding: 23px 23px 23px 23px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 70%);
+  border-image-slice: 1;
+  font-weight: bold;
+}
+
+/* line 146, ../../resources/assets/scss/pages/home/_home.scss */
+body {
+  overflow-y: scroll;
+  color: #252e33;
+  font-size: 17px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 1, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions {
   padding: 40px 40px;
 }
-/* line 44, ../../resources/assets/scss/pages/_home.scss */
+/* line 4, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions > .inner {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.9);
   overflow: hidden;
   position: relative;
+  visibility: hidden;
 }
-/* line 52, ../../resources/assets/scss/pages/_home.scss */
+/* line 14, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question {
   position: absolute;
   top: 0;
@@ -173,73 +433,223 @@ div.module > .module-section .next-question svg path {
   width: 100%;
   height: 100%;
   visibility: hidden;
-  -webkit-font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* line 60, ../../resources/assets/scss/pages/_home.scss */
-.questions .question .content {
+/* line 27, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .content form {
+  position: relative;
+  display: inline-block;
+}
+/* line 30, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .content form .parsley-errors-list {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 2px;
+  right: 5px;
+  color: white;
+  font-size: 14px;
 }
-/* line 65, ../../resources/assets/scss/pages/_home.scss */
-.questions .question .content h1 {
-  font-size: 34px;
-  line-height: 50px;
-  color: #252e33;
-  text-align: center;
-  font-family: 'SantEliaRoughAlt-BoldThr', serif;
-  padding: 20px;
-}
-/* line 73, ../../resources/assets/scss/pages/_home.scss */
+/* line 38, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content p {
   text-align: center;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 24px;
 }
-/* line 78, ../../resources/assets/scss/pages/_home.scss */
-.questions .question .content .next-question {
-  margin: 60px auto 0 auto;
+/* line 43, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .content .controls {
+  text-align: center;
 }
-/* line 86, ../../resources/assets/scss/pages/_home.scss */
+/* line 45, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .content .controls .age {
+  font-size: 45px;
+}
+/* line 49, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .content .controls input[type=radio] {
+  display: none;
+}
+/* line 51, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .content .controls input[type=radio] + label {
+  position: relative;
+  padding-left: 40px;
+  text-transform: uppercase;
+  color: #f16060;
+  font-weight: 700;
+  padding-top: 7px;
+  display: inline-block;
+  margin: 0 30px;
+  cursor: pointer;
+}
+/* line 61, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .content .controls input[type=radio] + label:before, .questions .question .content .controls input[type=radio] + label:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 66, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .content .controls input[type=radio] + label:after {
+  transform-origin: 50% 50%;
+  transform: scale(0, 0);
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  background: #f16060;
+  top: 8px;
+  left: 8px;
+  content: "";
+  transition: transform 0.3s ease;
+}
+/* line 78, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .content .controls input[type=radio] + label:before {
+  content: "";
+  border: 4px solid #f16060;
+  width: 26px;
+  height: 26px;
+  border-radius: 34px;
+}
+/* line 89, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .content .controls input[type=radio]:checked + label:after {
+  transform: scale(1, 1);
+}
+/* line 105, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .next-question {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -25px;
+  opacity: 0.2;
+  cursor: pointer;
+}
+/* line 115, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .next-question svg {
+  width: 100%;
+  height: 100%;
+}
+/* line 118, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .next-question svg path {
+  fill: #f16060;
+  transition: fill 0.3s ease;
+}
+/* line 125, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions .question .next-question:hover svg path {
+  fill: #98201a;
+}
+/* line 134, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question-nav {
   position: absolute;
   top: 50%;
   transform: translate3d(0, -50%, 0);
-  right: 10px;
+  right: 30px;
   font-size: 20px;
   z-index: 20;
+  visibility: visible;
 }
-/* line 93, ../../resources/assets/scss/pages/_home.scss */
-.questions .question-nav li {
-  cursor: pointer;
-  padding: 5px;
+/* line 144, ../../resources/assets/scss/pages/home/_questions.scss */
+.questions.question-0 .question-nav {
+  visibility: hidden;
 }
 
-/* line 100, ../../resources/assets/scss/pages/_home.scss */
-.details {
-  padding: 40px 40px;
+/* line 2, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-/* line 103, ../../resources/assets/scss/pages/_home.scss */
-.details > .inner {
+
+/* line 16, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li {
+  position: relative;
+  display: block;
+  margin: 8px 0px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* line 26, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li a {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  overflow: hidden;
-}
-/* line 110, ../../resources/assets/scss/pages/_home.scss */
-.details > .inner .content {
-  width: 990px;
-  margin: 0 auto;
-  font-size: 20px;
-  line-height: 50px;
-  color: #252e33;
-  padding: 20px 0;
+  outline: none;
+  border-radius: 50%;
+  background-color: #f16060;
+  text-indent: -999em;
+  /* make the text accessible to screen readers */
+  cursor: pointer;
+  position: absolute;
 }
 
-/* line 124, ../../resources/assets/scss/pages/_home.scss */
-body {
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
-  overflow-y: scroll;
-  color: #252e33;
+/* line 39, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li a:focus {
+  outline: none;
+}
+
+/* line 43, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li:last-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  height: 18px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+/* line 54, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li:last-child::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f16060;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 67, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li.is-active:first-child ~ li:last-child {
+  transform: translateY(0%);
+}
+
+/* line 71, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li.is-active:nth-child(2) ~ li:last-child {
+  transform: translateY(100%);
+}
+
+/* line 75, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li.is-active:nth-child(3) ~ li:last-child {
+  transform: translateY(200%);
+}
+
+/* line 79, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li.is-active:nth-child(4) ~ li:last-child {
+  transform: translateY(300%);
+}
+
+/* line 83, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li.is-active:nth-child(5) ~ li:last-child {
+  transform: translateY(400%);
+}
+
+/* line 87, ../../resources/assets/scss/pages/home/_question-nav.scss */
+.question-nav li.is-active:nth-child(6) ~ li:last-child {
+  transform: translateY(500%);
 }

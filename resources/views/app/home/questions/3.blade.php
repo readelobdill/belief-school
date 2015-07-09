@@ -1,14 +1,12 @@
 <div class="content">
-    <h1>
-        I<br>
-        am
+    <h1 class="title">
+        How old are you?
 
     </h1>
-    <p>
-        What do you know about yourself?<br>
-        Answer below and find out&hellip;
-    </p>
-    <div class="next-question down-arrow">
-        @include('app/partials/icons/down-arrow')
+    <div class="controls">
+        <form action="" data-validate>
+            <input type="text" name="age" class="age" required data-parsley-type="integer" required data-parsley-validation-threshold="0">
+        </form>
+
     </div>
 </div>

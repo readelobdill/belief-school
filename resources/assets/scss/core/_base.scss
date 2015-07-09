@@ -1,3 +1,40 @@
 * {
 	box-sizing: border-box;
 }
+
+
+[data-arc] {
+	:first-child {
+		font-weight: 900;
+	}
+	:last-child {
+		font-weight: 900;
+	}
+}
+
+
+.title {
+	font-size: 30px;
+	line-height: 37px;
+	color: #252e33;
+	text-align: center;
+	font-family: 'SantEliaRoughAlt-BoldThr', serif;
+	padding: 20px;
+	margin-bottom: 22px;
+	position:relative;
+	&:after {
+		width: 171px;
+		border-bottom: 1px solid #1f2020;
+		content: "";
+		display:block;
+		margin: 22px auto 0 auto;
+
+	}
+	> span {
+		display:block;
+		@extend %brandon-grotesque;
+		font-size: 13px;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+	}
+}

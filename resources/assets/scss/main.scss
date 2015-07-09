@@ -5,5 +5,9 @@
 @import "core/base";
 @import "core/fonts";
 
+@import "core/forms";
+@import "core/links";
 @import "core/module";
-@import "pages/home";
+@import "ui/burger";
+@import "ui/menu";
+@import "pages/home/home";

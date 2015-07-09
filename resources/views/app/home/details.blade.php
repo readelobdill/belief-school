@@ -1,12 +1,21 @@
 <div class="inner">
     <div class="content">
-        @for($i = 0; $i < 100; $i++)
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultricies sapien aliquet diam sollicitudin, ac sodales ante vulputate. Duis ex dolor, dignissim a vehicula non, consectetur venenatis dolor. Proin bibendum elit nulla, sit amet feugiat arcu vestibulum vel. Nullam aliquam nisi ac nulla efficitur, accumsan commodo magna elementum. Cras ullamcorper vel ex ut bibendum. Curabitur eleifend non elit id maximus. Donec eget tellus sagittis, dapibus nulla in, porttitor enim. Ut a condimentum nisl.
-            </p>
-            <p>
-                Donec ornare tincidunt justo eget hendrerit. Maecenas suscipit id mauris eu tempor. Curabitur nisl sem, euismod non ornare in, laoreet ut ipsum. Vestibulum luctus tortor quis eleifend commodo. Integer tristique dolor vel tempor tempus. Vestibulum sed ipsum ac quam finibus lobortis. Duis velit turpis, ornare quis diam ut, congue sagittis sapien. Vivamus interdum euismod magna quis aliquam. Morbi auctor turpis mollis, porttitor quam vel, sagittis est. Duis vulputate neque eget odio sodales pellentesque sit amet vitae lacus. Vestibulum ac turpis a enim tincidunt laoreet quis quis tortor. Fusce id ipsum viverra, eleifend tortor a, tempus sem. Sed lobortis non nisl non ullamcorper.
-            </p>
-        @endfor
+       <h1 class="title">
+           <span data-arc="100">&middot; Whatever the reason &middot;</span>
+           I don't<br>
+           believe you
+       </h1>
+        <p>I believe you can be whatever you want, do whatever you want and have anything you want in this one precious life. The only thing standing between you and your hearts desire is your belief in yourself.</p>
+        <blockquote>
+            Are you interested in laying down a foundation
+            of self-belief so you can create the outcomes
+            you want in your life?
+        </blockquote>
+        <p>
+            Whatever project your are about to embark on, big or small  Belief School will give you the confidence to create change in your life.
+        </p>
+        <p>
+            Our program will take you through eight practicals exercices that you can complete at your own pace, giving you a clear understanding of how you operate in the world, the greatness within you and leaving you with a tool box of daily routines and processes that will have a profound effect on all aspects of your life.
+        </p>
     </div>
 </div>

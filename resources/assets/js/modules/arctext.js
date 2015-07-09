@@ -8,6 +8,7 @@
  *
  * Date: Mon Jan 23 2012
  */
+import jQuery from 'jquery';
 
 (function( $, undefined ) {
 	

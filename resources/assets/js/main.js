@@ -1,7 +1,9 @@
 import Home from "pages/home";
 import $ from 'jquery';
+import UI from "ui/ui";
 
-var page = $('body').data('page');
+UI.init();
+let page = $('body').data('page');
 switch(page) {
     case 'home' :
         Home.init();

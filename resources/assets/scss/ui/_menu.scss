@@ -1,0 +1,29 @@
+.menu {
+	position:absolute;
+	z-index: 98;
+	height: 100%;
+	width: 295px;
+	background: $fontColour;
+	padding-top: 126px;
+	transform: translate3d(-295px, 0, 0);
+
+	nav {
+		padding-left: 50px;
+		margin-bottom: 60px;
+		h2 {
+			font-weight: bold;
+			color: #aeaeae;
+			text-transform: uppercase;
+			margin-bottom: 33px;
+		}
+
+		ul {
+
+			li {
+				font-size: 15px;
+				color: #fbfbfb;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

@@ -15,6 +15,7 @@
   "dependencies": {
     "gsap": "^1.17.0",
     "jquery": "^2.1.4",
+    "parsleyjs": "^2.1.2",
     "q": "^1.4.1",
     "select2": "^4.0.0",
     "waypoints": "^3.1.1",

@@ -11,9 +11,19 @@ $(window).on('scroll', function() {
 
 function Video(video) {
     this.video = $(video)[0];
+    this.duration = 7.984;
 
-    this.video.pause();
-    this.updatePosition();
+    //this.video.pause();
+    if(this.video.readyState >= 1) {
+        this.updatePosition();
+    } else {
+        this.video.addEventListener('loadedmetadata',() => {
+            console.log(this.video);
+            this.updatePosition();
+        });
+    }
+
+
 
 }
 
@@ -38,11 +48,10 @@ Video.prototype.scrollTo = function(per, duration) {
 
 Video.prototype.seek = function(per) {
     this.video.currentTime = this.video.duration * per;
-    console.log(this.video.currentTime);
 }
 
 Video.prototype.videoHeight = function() {
-    var height = this.video.duration * multiplier;
+    var height = this.duration * multiplier;
     return height + $(window).height();
 }
 

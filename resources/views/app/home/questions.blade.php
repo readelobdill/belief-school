@@ -1,19 +1,22 @@
+<?php $questionCount = 7 ?>
 <div class="inner">
-    @for($i = 1; $i < 8; $i++)
-        <div class="question">
+    @for($i = 1; $i < $questionCount + 1; $i++)
+        <div class="question question-{{$i}}">
             @include('app/home/questions/'.$i)
+            <div class="next-question down-arrow">
+                @include('app/partials/icons/down-arrow')
+            </div>
         </div>
     @endfor
 
     <nav class="question-nav">
         <ul>
-            <li data-question="0">1</li>
-            <li data-question="1" >2</li>
-            <li data-question="2">3</li>
-            <li data-question="3">4</li>
-            <li data-question="4">5</li>
-            <li data-question="5">6</li>
-            <li data-question="6">7</li>
+            @for($i = 2; $i < $questionCount + 1; $i++)
+                <li data-question="{{ $i-1 }}"><a href="#"></a></li>
+            @endfor
+            <li></li>
         </ul>
     </nav>
+
+
 </div>

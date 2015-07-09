@@ -5,8 +5,8 @@ import $ from 'jquery';
 class Module {
     constructor(container) {
         this.container = $(container);
-        this.sections = this.container.find('section').map(function(index, section) {
-            return createSection(section);
+        this.sections = this.container.find('section').map((index, section) => {
+            return createSection(section, this);
         }).get();
 
         var currentPart = this.container.data('part');
