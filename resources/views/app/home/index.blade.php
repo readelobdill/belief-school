@@ -6,17 +6,17 @@
             @include('app/home/background-video')
         </section>
 
-        <section class="intro-video module-section" data-type="Video" data-part="2">
+        <section class="intro-video module-section has-container" data-type="Video" data-part="2">
             @include('app/home/intro-video')
         </section>
 
-        <section class="account-creation module-section" data-type="AccountCreation" data-part="3">
+        <section class="account-creation module-section has-container" data-type="AccountCreation" data-part="3">
             @include('app/home/account-creation')
         </section>
-        <section class="questions module-section" data-type="Questions" data-part="4">
+        <section class="questions module-section has-container" data-type="Questions" data-part="4">
             @include('app/home/questions')
         </section>
-        <section class="details module-section" data-type="Text" data-part="5">
+        <section class="details module-section has-container has-text" data-type="Text" data-part="5">
             @include('app/home/details')
         </section>
     </div>

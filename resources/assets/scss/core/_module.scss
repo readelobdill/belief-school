@@ -14,9 +14,103 @@
 		}
 
 
+		&.has-container {
+			padding: 40px;
+			z-index: 2;
+			> .inner {
+				width: 100%;
+				height: 100%;
+				background: rgba(255,255,255,0.90);
+				position:relative;
+				visibility: hidden;
+				overflow:hidden;
+			}
+		}
+
+
 
 	}
 
+}
+
+.has-text {
+	&.module-section {
+		> .inner {
+			display:block;
+		}
+	}
+	padding: 40px 40px;
+	> .inner {
+
+
+		.content {
+			width: 445px;
+			margin: 0 auto;
+			font-size: 17px;
+			line-height: 26px;
+			color: $fontColour;
+			padding: 20px 0 60px 0;
+
+			h1 {
+				> span {
+					margin-bottom: 25px;
+				}
+			}
+
+			h2 {
+				font-weight: bold;
+				font-size: 25px;
+				text-align:center;
+				margin-bottom: 50px;
+			}
+
+			p {
+				opacity: 0.8;
+				margin-bottom: 32px;
+			}
+
+			.dots {
+				margin-bottom: 50px;
+			}
+
+			blockquote {
+				color: $lightRed;
+				font-size: 21px;
+				margin-bottom: 32px;
+				padding: 23px 23px 23px 23px;
+				border: 2px solid transparent;
+				border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 70%);
+				border-image-slice: 1;
+				font-weight: bold;
+
+				&.multiple {
+					border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 90%);
+					border-image-slice: 1;
+					li {
+						border-bottom: 1px solid rgba($lightRed, 0.2);
+						padding-bottom: 18px;
+						margin-bottom: 18px;
+						&:last-child {
+							border-bottom: 0;
+							padding-bottom: 0;
+						}
+					}
+				}
+
+				&.dark {
+					border-image: linear-gradient(23deg, rgba($fontColour,.8) 0%, rgba($fontColour,0) 70%);
+					border-image-slice: 1;
+					color: $fontColour;
+				}
+
+
+			}
+
+			.actions {
+				text-align:center;
+			}
+		}
+	}
 }
 
 .next-section {
@@ -41,5 +135,55 @@
 			transition: fill 0.3s ease;
 		}
 
+	}
+}
+
+
+
+
+.congrats-section {
+	h1 {
+		margin-bottom: 40px;
+		line-height: 26px;
+	}
+	p {
+		max-width: 442px;
+		text-align: center;
+		margin-bottom: 40px;
+		line-height: 26px;
+	}
+	.actions {
+		text-align:center;
+		margin: 40px 0;
+	}
+}
+
+.call-to-action {
+	color: $lightRed;
+	font-weight: bold;
+	text-align:center;
+	font-size: 25px;
+
+}
+
+
+.actions {
+	text-align:center;
+}
+.down-arrow {
+	border: 0;
+	background: none;
+	width: 45px;
+	height: 45px;
+	padding: 0;
+	display:inline-block;
+	cursor:pointer;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		path {
+			fill: $lightRed;
+		}
 	}
 }

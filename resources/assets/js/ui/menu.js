@@ -14,6 +14,7 @@ class Menu {
 
     setupEventListeners() {
         this.timeline = new TimelineLite();
+        this.timeline.to(this.menu, 0, {display:'block'});
         this.timeline.to(this.menu, 0.3, {x: 0});
         this.timeline.to(this.burger.find('#open-burger'), 0.3, {x: -50}, 0);
         this.timeline.fromTo(this.burger.find('#close-burger'), 0.3, {x: 50}, {x: 0, display: 'block'}, 0);

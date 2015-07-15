@@ -105,6 +105,72 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: 40px;
 }
 
+/* line 42, ../../resources/assets/scss/core/_base.scss */
+h1.plain {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 48, ../../resources/assets/scss/core/_base.scss */
+.button {
+  border: 0;
+  text-transform: uppercase;
+  padding: 20px 35px 20px 20px;
+  background: #f16060;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  outline: 0;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+/* line 62, ../../resources/assets/scss/core/_base.scss */
+.button:hover {
+  background-color: #d85656;
+  color: white;
+}
+/* line 67, ../../resources/assets/scss/core/_base.scss */
+.button:after, .button:before {
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: white;
+  top: 50%;
+  right: 20px;
+  content: "";
+  transform-origin: 100% 50%;
+}
+/* line 80, ../../resources/assets/scss/core/_base.scss */
+.button:after {
+  transform: rotate(45deg);
+}
+/* line 83, ../../resources/assets/scss/core/_base.scss */
+.button:before {
+  transform: rotate(-45deg);
+}
+
+/* line 89, ../../resources/assets/scss/core/_base.scss */
+.dots {
+  background: url('../img/icons/bullets.svg?1436844418') no-repeat top left;
+  width: 70px;
+  height: 6px;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+/* line 97, ../../resources/assets/scss/core/_base.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 101, ../../resources/assets/scss/core/_base.scss */
+p.center {
+  text-align: center;
+}
+
 @font-face {
   font-family: 'SantEliaRoughAlt-BoldThr';
   src: url('../fonts/2E98A4_0_0.eot?1436093214');
@@ -156,13 +222,135 @@ input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-pl
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 28, ../../resources/assets/scss/core/_forms.scss */
+/* line 30, ../../resources/assets/scss/core/_forms.scss */
+.checkbox-list li {
+  margin-bottom: 20px;
+}
+
+/* line 36, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio] {
+  display: none;
+}
+/* line 38, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio] + label {
+  position: relative;
+  padding-left: 45px;
+  color: #252e33;
+  padding-top: 3px;
+  font-weight: normal;
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 46, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio] + label:before, input[type=radio] + label:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 51, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio] + label:after {
+  transform-origin: 50% 50%;
+  transform: scale(0, 0);
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  background: #f16060;
+  top: 8px;
+  left: 8px;
+  content: "";
+  transition: transform 0.3s ease;
+}
+/* line 63, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio] + label:before {
+  content: "";
+  border: 4px solid #f16060;
+  width: 26px;
+  height: 26px;
+  border-radius: 34px;
+}
+/* line 73, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio]:checked + label {
+  font-weight: bold;
+}
+/* line 75, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio]:checked + label:after {
+  transform: scale(1, 1);
+}
+
+/* line 87, ../../resources/assets/scss/core/_forms.scss */
 textarea {
   width: 500px;
   height: 130px;
   padding: 25px;
   margin: 32px auto 0 auto;
   font-size: 20px;
+}
+
+/* line 95, ../../resources/assets/scss/core/_forms.scss */
+.form-row {
+  position: relative;
+}
+/* line 97, ../../resources/assets/scss/core/_forms.scss */
+.form-row .parsley-errors-list {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #aeaeae;
+  color: #aeaeae;
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap;
+  margin-left: 20px;
+  background: white;
+  display: none;
+}
+/* line 111, ../../resources/assets/scss/core/_forms.scss */
+.form-row .parsley-errors-list.filled {
+  display: block;
+}
+/* line 115, ../../resources/assets/scss/core/_forms.scss */
+.form-row .parsley-errors-list li {
+  display: block;
+}
+/* line 119, ../../resources/assets/scss/core/_forms.scss */
+.form-row .parsley-errors-list:after, .form-row .parsley-errors-list:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+/* line 130, ../../resources/assets/scss/core/_forms.scss */
+.form-row .parsley-errors-list:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #ffffff;
+  border-width: 9px;
+  margin-top: -9px;
+}
+/* line 136, ../../resources/assets/scss/core/_forms.scss */
+.form-row .parsley-errors-list:before {
+  border-color: rgba(174, 174, 174, 0);
+  border-right-color: #aeaeae;
+  border-width: 10px;
+  margin-top: -10px;
+}
+/* line 148, ../../resources/assets/scss/core/_forms.scss */
+.form-row .arrow_box:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #ffffff;
+  border-width: 10px;
+  margin-top: -10px;
+}
+/* line 154, ../../resources/assets/scss/core/_forms.scss */
+.form-row .arrow_box:before {
+  border-color: rgba(174, 174, 174, 0);
+  border-right-color: #aeaeae;
+  border-width: 11px;
+  margin-top: -11px;
 }
 
 /* line 1, ../../resources/assets/scss/core/_links.scss */
@@ -190,8 +378,97 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
+/* line 17, ../../resources/assets/scss/core/_module.scss */
+.module > .module-section.has-container {
+  padding: 40px;
+  z-index: 2;
+}
+/* line 20, ../../resources/assets/scss/core/_module.scss */
+.module > .module-section.has-container > .inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  visibility: hidden;
+  overflow: hidden;
+}
 
-/* line 22, ../../resources/assets/scss/core/_module.scss */
+/* line 36, ../../resources/assets/scss/core/_module.scss */
+.has-text {
+  padding: 40px 40px;
+}
+/* line 38, ../../resources/assets/scss/core/_module.scss */
+.has-text.module-section > .inner {
+  display: block;
+}
+/* line 46, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content {
+  width: 445px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 26px;
+  color: #252e33;
+  padding: 20px 0 60px 0;
+}
+/* line 55, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content h1 > span {
+  margin-bottom: 25px;
+}
+/* line 60, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content h2 {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+/* line 67, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content p {
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+/* line 72, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content .dots {
+  margin-bottom: 50px;
+}
+/* line 76, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content blockquote {
+  color: #f16060;
+  font-size: 21px;
+  margin-bottom: 32px;
+  padding: 23px 23px 23px 23px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 70%);
+  border-image-slice: 1;
+  font-weight: bold;
+}
+/* line 86, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content blockquote.multiple {
+  border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 90%);
+  border-image-slice: 1;
+}
+/* line 89, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content blockquote.multiple li {
+  border-bottom: 1px solid rgba(241, 96, 96, 0.2);
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+/* line 93, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content blockquote.multiple li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+/* line 100, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content blockquote.dark {
+  border-image: linear-gradient(23deg, rgba(37, 46, 51, 0.8) 0%, rgba(37, 46, 51, 0) 70%);
+  border-image-slice: 1;
+  color: #252e33;
+}
+/* line 109, ../../resources/assets/scss/core/_module.scss */
+.has-text > .inner .content .actions {
+  text-align: center;
+}
+
+/* line 116, ../../resources/assets/scss/core/_module.scss */
 .next-section {
   display: block;
   width: 50px;
@@ -206,22 +483,73 @@ a:hover {
   border: 0;
   transform-origin: 50% 50%;
 }
-/* line 36, ../../resources/assets/scss/core/_module.scss */
+/* line 130, ../../resources/assets/scss/core/_module.scss */
 .next-section svg {
   width: 100%;
   height: 100%;
 }
-/* line 39, ../../resources/assets/scss/core/_module.scss */
+/* line 133, ../../resources/assets/scss/core/_module.scss */
 .next-section svg path {
   fill: white;
   transition: fill 0.3s ease;
+}
+
+/* line 145, ../../resources/assets/scss/core/_module.scss */
+.congrats-section h1 {
+  margin-bottom: 40px;
+  line-height: 26px;
+}
+/* line 149, ../../resources/assets/scss/core/_module.scss */
+.congrats-section p {
+  max-width: 442px;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 26px;
+}
+/* line 155, ../../resources/assets/scss/core/_module.scss */
+.congrats-section .actions {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* line 161, ../../resources/assets/scss/core/_module.scss */
+.call-to-action {
+  color: #f16060;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* line 170, ../../resources/assets/scss/core/_module.scss */
+.actions {
+  text-align: center;
+}
+
+/* line 173, ../../resources/assets/scss/core/_module.scss */
+.down-arrow {
+  border: 0;
+  background: none;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 182, ../../resources/assets/scss/core/_module.scss */
+.down-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+/* line 185, ../../resources/assets/scss/core/_module.scss */
+.down-arrow svg path {
+  fill: #f16060;
 }
 
 /* line 1, ../../resources/assets/scss/ui/_burger.scss */
 .burger {
   width: 50px;
   height: 50px;
-  position: absolute;
+  position: fixed;
   left: 25px;
   top: 25px;
   z-index: 99;
@@ -257,27 +585,29 @@ a:hover {
 
 /* line 1, ../../resources/assets/scss/ui/_menu.scss */
 .menu {
-  position: absolute;
+  position: fixed;
   z-index: 98;
   height: 100%;
   width: 295px;
   background: #252e33;
   padding-top: 126px;
   transform: translate3d(-295px, 0, 0);
+  overflow: auto;
+  display: none;
 }
-/* line 10, ../../resources/assets/scss/ui/_menu.scss */
+/* line 11, ../../resources/assets/scss/ui/_menu.scss */
 .menu nav {
   padding-left: 50px;
   margin-bottom: 60px;
 }
-/* line 13, ../../resources/assets/scss/ui/_menu.scss */
+/* line 14, ../../resources/assets/scss/ui/_menu.scss */
 .menu nav h2 {
   font-weight: bold;
   color: #aeaeae;
   text-transform: uppercase;
   margin-bottom: 33px;
 }
-/* line 22, ../../resources/assets/scss/ui/_menu.scss */
+/* line 23, ../../resources/assets/scss/ui/_menu.scss */
 .menu nav ul li {
   font-size: 15px;
   color: #fbfbfb;
@@ -307,103 +637,43 @@ a:hover {
 .intro-video {
   padding: 80px 40px;
 }
-/* line 32, ../../resources/assets/scss/pages/home/_home.scss */
-.intro-video > .inner {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.96);
-  visibility: hidden;
-}
 
-/* line 41, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 38, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation {
   padding: 40px;
 }
 /* line 43, ../../resources/assets/scss/pages/home/_home.scss */
-.account-creation > .inner {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  position: relative;
-  visibility: hidden;
-}
-/* line 50, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section {
   bottom: 60px;
 }
-/* line 53, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 46, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section svg path {
   fill: #f16060;
 }
-/* line 58, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 51, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section:hover svg path {
   fill: #98201a;
 }
-/* line 67, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 60, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content {
   width: 442px;
   text-align: center;
 }
-/* line 71, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 64, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content p {
   text-align: center;
   font-size: 17px;
   line-height: 23px;
   margin-bottom: 15px;
 }
-/* line 82, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 75, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation input {
   margin: 8px 0;
   height: 72px;
   width: 100%;
 }
 
-/* line 93, ../../resources/assets/scss/pages/home/_home.scss */
-.details {
-  padding: 40px 40px;
-}
-/* line 95, ../../resources/assets/scss/pages/home/_home.scss */
-.details.module-section > .inner {
-  display: block;
-}
-/* line 100, ../../resources/assets/scss/pages/home/_home.scss */
-.details > .inner {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  overflow: hidden;
-}
-/* line 107, ../../resources/assets/scss/pages/home/_home.scss */
-.details > .inner .content {
-  width: 445px;
-  margin: 0 auto;
-  font-size: 17px;
-  line-height: 26px;
-  color: #252e33;
-  padding: 20px 0;
-}
-/* line 116, ../../resources/assets/scss/pages/home/_home.scss */
-.details > .inner .content h1 > span {
-  margin-bottom: 25px;
-}
-/* line 121, ../../resources/assets/scss/pages/home/_home.scss */
-.details > .inner .content p {
-  opacity: 0.8;
-  margin-bottom: 32px;
-}
-/* line 126, ../../resources/assets/scss/pages/home/_home.scss */
-.details > .inner .content blockquote {
-  color: #f16060;
-  font-size: 21px;
-  margin-bottom: 32px;
-  padding: 23px 23px 23px 23px;
-  border: 2px solid transparent;
-  border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 70%);
-  border-image-slice: 1;
-  font-weight: bold;
-}
-
-/* line 146, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 92, ../../resources/assets/scss/pages/home/_home.scss */
 body {
   overflow-y: scroll;
   color: #252e33;
@@ -418,14 +688,9 @@ body {
 }
 /* line 4, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions > .inner {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9);
   overflow: hidden;
-  position: relative;
-  visibility: hidden;
 }
-/* line 14, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 11, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question {
   position: absolute;
   top: 0;
@@ -437,12 +702,12 @@ body {
   align-items: center;
   justify-content: center;
 }
-/* line 27, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 24, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content form {
   position: relative;
   display: inline-block;
 }
-/* line 30, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 27, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content form .parsley-errors-list {
   position: absolute;
   bottom: 2px;
@@ -450,25 +715,25 @@ body {
   color: white;
   font-size: 14px;
 }
-/* line 38, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 35, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content p {
   text-align: center;
   font-size: 17px;
   line-height: 24px;
 }
-/* line 43, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 40, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls {
   text-align: center;
 }
-/* line 45, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 42, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls .age {
   font-size: 45px;
 }
-/* line 49, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 46, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] {
   display: none;
 }
-/* line 51, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 48, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label {
   position: relative;
   padding-left: 40px;
@@ -480,13 +745,13 @@ body {
   margin: 0 30px;
   cursor: pointer;
 }
-/* line 61, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 58, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label:before, .questions .question .content .controls input[type=radio] + label:after {
   position: absolute;
   left: 0;
   top: 0;
 }
-/* line 66, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 63, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label:after {
   transform-origin: 50% 50%;
   transform: scale(0, 0);
@@ -499,7 +764,7 @@ body {
   content: "";
   transition: transform 0.3s ease;
 }
-/* line 78, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 75, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label:before {
   content: "";
   border: 4px solid #f16060;
@@ -507,11 +772,11 @@ body {
   height: 26px;
   border-radius: 34px;
 }
-/* line 89, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 86, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio]:checked + label:after {
   transform: scale(1, 1);
 }
-/* line 105, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 102, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question {
   display: block;
   width: 50px;
@@ -523,21 +788,21 @@ body {
   opacity: 0.2;
   cursor: pointer;
 }
-/* line 115, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 112, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question svg {
   width: 100%;
   height: 100%;
 }
-/* line 118, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 115, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question svg path {
   fill: #f16060;
   transition: fill 0.3s ease;
 }
-/* line 125, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 122, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question:hover svg path {
   fill: #98201a;
 }
-/* line 134, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 131, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question-nav {
   position: absolute;
   top: 50%;
@@ -547,7 +812,7 @@ body {
   z-index: 20;
   visibility: visible;
 }
-/* line 144, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 141, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions.question-0 .question-nav {
   visibility: hidden;
 }
@@ -652,4 +917,389 @@ body {
 /* line 87, ../../resources/assets/scss/pages/home/_question-nav.scss */
 .question-nav li.is-active:nth-child(6) ~ li:last-child {
   transform: translateY(500%);
+}
+
+/* line 3, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+.text-welcome form .actions {
+  text-align: center;
+  margin-top: 45px;
+}
+
+/* line 12, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion li {
+  margin: 30px 0;
+  position: relative;
+}
+/* line 16, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion li:after {
+  width: 69px;
+  border-bottom: 1px solid #d4d4d4;
+  content: "";
+  display: block;
+  margin: 22px auto 0 auto;
+}
+/* line 25, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion li .answer {
+  text-align: center;
+  padding: 10px 0;
+}
+/* line 32, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion li.is-open .toggle svg.collapse {
+  transform: translateY(0px);
+}
+/* line 35, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion li.is-open .toggle svg.expand {
+  transform: translateY(50px);
+}
+/* line 39, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion li.is-open .answer {
+  display: block;
+}
+/* line 43, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion .answer {
+  display: none;
+}
+/* line 46, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+/* line 51, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion h2 .toggle {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 20px;
+  cursor: pointer;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* line 60, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion h2 .toggle svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 67, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion h2 .toggle svg.collapse {
+  transform: translateY(-50px);
+}
+/* line 70, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+ul.accordion h2 .toggle svg path {
+  fill: #f16060;
+}
+
+/* line 2, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.boomerang .email-client {
+  margin-bottom: 60px;
+}
+/* line 6, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.boomerang .actions {
+  margin: 0 0 60px 0;
+  padding-top: 28px;
+}
+
+/* line 12, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.email-client {
+  width: 722px;
+  margin-left: -138.5px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background: white;
+}
+/* line 19, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.email-client .header {
+  height: 35px;
+  background: linear-gradient(#ebeaeb, #d7d6d7);
+  border-bottom: 1px solid #b5b4b5;
+  padding: 0 10px;
+  line-height: 35px;
+}
+/* line 25, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.email-client .header div {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 7px;
+}
+/* line 33, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.email-client .header div.close {
+  background: #fc605b;
+  border: 1px solid #ed534f;
+}
+/* line 37, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.email-client .header div.minimize {
+  background: #fdbc40;
+  border: 1px solid #edaf39;
+}
+/* line 41, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.email-client .header div.maxamize {
+  background: #33c748;
+  border: 1px solid #2dbb3e;
+}
+/* line 49, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.email-client .details {
+  padding-left: 25px;
+  color: #707070;
+  border-bottom: 1px solid #c6c6c6;
+}
+/* line 53, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.email-client .details div {
+  padding: 10px 0;
+}
+/* line 56, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.email-client .details .details-row, .email-client .details .cc-row {
+  border-bottom: 1px solid #c6c6c6;
+}
+/* line 60, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+.email-client .message {
+  padding: 25px;
+}
+
+/* line 65, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+p.annotation {
+  color: #aeaeae;
+  text-align: center;
+}
+
+/* line 3, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs {
+  width: 695px;
+  margin-left: -125px;
+}
+/* line 6, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .beliefs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+/* line 13, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .belief {
+  width: 221px;
+  height: 256px;
+  background-color: white;
+  position: relative;
+  display: block;
+}
+/* line 22, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .belief label {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+/* line 28, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .belief .icon {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+/* line 39, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .belief .icon svg {
+  width: 100%;
+  height: 100%;
+}
+/* line 42, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .belief .icon svg path {
+  fill: #f16060;
+}
+/* line 48, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .belief textarea {
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 50px 20px;
+  color: #252e33;
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+  border: 2px solid transparent;
+  border-image: linear-gradient(23deg, #abafb1 0%, rgba(171, 175, 177, 0) 90%);
+  border-image-slice: 1;
+}
+/* line 57, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .belief textarea:focus {
+  background: #f16060;
+  color: white;
+  border: 0;
+}
+/* line 70, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .belief textarea:focus + .icon svg path {
+  fill: white;
+}
+/* line 74, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .belief textarea:focus + .icon + label {
+  color: white;
+}
+/* line 79, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.limiting-beliefs .actions {
+  margin-top: 60px;
+}
+
+/* line 84, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.affirmations h1.plain {
+  margin-bottom: 30px;
+}
+
+/* line 89, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations {
+  width: 695px;
+  margin-left: -125px;
+}
+/* line 92, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .positive-affirmations-fields {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 97, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-affirmation, .positive-affirmations .the-belief {
+  width: 221px;
+  height: 256px;
+  background-color: transparent;
+  position: relative;
+}
+/* line 103, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-belief {
+  border: 2px solid transparent;
+  border-image: linear-gradient(23deg, #abafb1 0%, rgba(171, 175, 177, 0) 90%);
+  border-image-slice: 1;
+  display: block;
+  padding: 50px 25px 25px 25px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+/* line 111, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-belief .number {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+/* line 116, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-belief p.limiting-belief-text {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 22px;
+}
+/* line 123, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-belief strong {
+  font-size: 14px;
+}
+/* line 131, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-affirmation label {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+/* line 137, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-affirmation .icon {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+/* line 148, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-affirmation .icon svg {
+  width: 100%;
+  height: 100%;
+}
+/* line 151, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-affirmation .icon svg path {
+  fill: #f16060;
+}
+/* line 157, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-affirmation textarea {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  padding: 50px 20px;
+  color: #252e33;
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+  border: 2px solid transparent;
+  border-image: linear-gradient(23deg, #abafb1 0%, rgba(171, 175, 177, 0) 90%);
+  border-image-slice: 1;
+}
+/* line 166, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-affirmation textarea:focus {
+  background: #f16060;
+  color: white;
+  border: 0;
+}
+/* line 179, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-affirmation textarea:focus + .icon svg path {
+  fill: white;
+}
+/* line 183, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-affirmation textarea:focus + label {
+  color: white;
+}
+/* line 187, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .actions {
+  margin-top: 60px;
+}
+
+/* line 1, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.categories {
+  width: 890px;
+  margin-left: -222px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+/* line 8, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.categories .category {
+  width: 286px;
+  padding: 50px 25px 25px 25px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(23deg, rgba(37, 46, 51, 0.3) 0%, rgba(37, 46, 51, 0) 90%);
+  border-image-slice: 1;
+  color: #252e33;
+}
+/* line 15, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.categories .category i {
+  height: 45px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* line 20, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.categories .category i svg {
+  height: 100%;
+}
+/* line 23, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.categories .category i svg path {
+  fill: #f16060;
+}
+/* line 28, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.categories .category h3 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 22px;
+}
+/* line 33, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.categories .category p {
+  font-size: 14px;
 }

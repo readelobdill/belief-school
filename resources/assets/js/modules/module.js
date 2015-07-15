@@ -1,5 +1,5 @@
 import Video from "modules/video";
-import createSection from 'modules/module-section';
+import createSection from 'modules/module-section-factory';
 import $ from 'jquery';
 
 class Module {
@@ -10,10 +10,10 @@ class Module {
         }).get();
 
         var currentPart = this.container.data('part');
-        var newIndex = this.container.find('[data-part="'+currentPart+'"]').index()
+        var newIndex = this.container.find('[data-part="'+currentPart+'"]').index();
         this.goToSection(0).then(() => {
             return this.goToSection(newIndex);
-        })
+        });
         this.setupEventListeners();
     }
 
@@ -41,7 +41,7 @@ class Module {
     }
 
     setupEventListeners() {
-        this.container.on('click', '.next-section', this.nextSection.bind(this));
+
     }
 
 }

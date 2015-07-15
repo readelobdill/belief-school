@@ -30,10 +30,7 @@
 
 	padding: 80px 40px;
 	> .inner {
-		width: 100%;
-		height: 100%;
-		background: rgba(255,255,255,0.96);
-		visibility: hidden;
+
 	}
 
 }
@@ -41,11 +38,7 @@
 .account-creation {
 	padding: 40px;
 	> .inner {
-		width: 100%;
-		height: 100%;
-		background: rgba(255,255,255,0.90);
-		position:relative;
-		visibility: hidden;
+
 
 		.next-section {
 			bottom: 60px;
@@ -90,54 +83,7 @@
 
 
 
-.details {
-	&.module-section {
-		> .inner {
-			display:block;
-		}
-	}
-	padding: 40px 40px;
-	> .inner {
-		width: 100%;
-		height: 100%;
-		background: rgba(255,255,255,0.90);
-		overflow:hidden;
 
-
-		.content {
-			width: 445px;
-			margin: 0 auto;
-			font-size: 17px;
-			line-height: 26px;
-			color: $fontColour;
-			padding: 20px 0;
-
-			h1 {
-				> span {
-					margin-bottom: 25px;
-				}
-			}
-
-			p {
-				opacity: 0.8;
-				margin-bottom: 32px;
-			}
-
-			blockquote {
-				color: $lightRed;
-				font-size: 21px;
-				margin-bottom: 32px;
-				padding: 23px 23px 23px 23px;
-				border: 2px solid transparent;
-				border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 70%);
-				border-image-slice: 1;
-				font-weight: bold;
-
-
-			}
-		}
-	}
-}
 
 
 

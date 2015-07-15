@@ -13,12 +13,31 @@
 
 Route::get('/', 'WelcomeController@index');
 
+
+
+/*Modules*/
 Route::get('home', 'HomeController@index');
+Route::get('welcome', function() {
+    return view('app.welcome.index', ['page' => 'welcome']);
+});
+Route::get('boomerang', function() {
+    return view('app.modules.boomerang.index', ['page' => 'boomerang']);
+});
+
+Route::get('un-stuck', function() {
+    return view('app.modules.un-stuck.index', ['page' => 'un-stuck']);
+});
+Route::get('visualise', function() {
+    return view('app.modules.visualise.index', ['page' => 'visualise']);
+});
+
 
 
 
 Route::get('modules/{module}/update', ['as' => 'modules.update', 'uses' => 'ModuleController@updateModule']);
 
+
+Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUser']);
 
 
 Route::controllers([

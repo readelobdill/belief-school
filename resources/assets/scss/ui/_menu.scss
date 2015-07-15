@@ -1,12 +1,13 @@
 .menu {
-	position:absolute;
+	position:fixed;
 	z-index: 98;
 	height: 100%;
 	width: 295px;
 	background: $fontColour;
 	padding-top: 126px;
 	transform: translate3d(-295px, 0, 0);
-
+	overflow:auto;
+	display:none;
 	nav {
 		padding-left: 50px;
 		margin-bottom: 60px;
