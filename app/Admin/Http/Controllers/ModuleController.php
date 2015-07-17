@@ -20,7 +20,7 @@ class ModuleController extends Controller {
         $moduleCount = Module::count();
         $module = new Module([
             'name' => $this->request->input('name'),
-            'type' => $this->request->input('type'),
+            'slug' => $this->request->input('type'),
             'step' => $moduleCount
         ]);
         $module->save();

@@ -32,6 +32,10 @@ input[type=text], input[type=email], input[type=password] {
 	}
 }
 
+form .actions {
+	margin-top: 60px;
+}
+
 
 input[type=radio] {
 	display:none;
@@ -90,6 +94,10 @@ textarea {
 	padding: 25px;
 	margin: 32px auto 0 auto;
 	font-size: 20px;
+	max-width: 100%;
+	@include input-placeholder {
+		color: rgba(white, 0.8);
+	}
 }
 
 .form-row {

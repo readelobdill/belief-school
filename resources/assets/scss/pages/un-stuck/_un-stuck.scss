@@ -3,6 +3,7 @@
 .limiting-beliefs {
 	width: 695px;
 	margin-left: -125px;
+	margin-bottom: 30px;
 	.beliefs {
 		display:flex;
 		justify-content: space-between;
@@ -13,7 +14,6 @@
 	.belief {
 		width: 221px;
 		height: 256px;
-		background-color:white;
 		position:relative;
 		display:block;
 
@@ -48,21 +48,21 @@
 		textarea {
 			width: 100%;
 			height: 100%;
-			background: white;
 			padding: 50px 20px;
 			color: $fontColour;
 			text-align:center;
 			font-style: italic;
+			background: transparent;
 			margin: 0;
+			border: 2px solid transparent;
+			border-image: linear-gradient(23deg, rgba(#abafb1,1) 0%, rgba(#abafb1,0) 90%);
+			border-image-slice: 1;
+
 			&:focus {
 				background: $lightRed;
 				color:white;
 				border: 0;
 			}
-
-			border: 2px solid transparent;
-			border-image: linear-gradient(23deg, rgba(#abafb1,1) 0%, rgba(#abafb1,0) 90%);
-			border-image-slice: 1;
 
 		}
 

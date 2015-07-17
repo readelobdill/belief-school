@@ -10,11 +10,11 @@
             @include('app/modules/un-stuck/intro-video')
         </section>
 
-        <section class="i-am module-section has-container has-text" data-type="IAm" data-part="3">
-            @include('app/modules/un-stuck/i-am')
+        <section class="i-am module-section has-container has-text" data-type="Challenge" data-part="3">
+            @include('app/modules/un-stuck/challenge')
         </section>
-        <section class="affirmations module-section has-container has-text" data-type="Affirmations" data-part="4">
-            @include('app/modules/un-stuck/affirmations')
+        <section class="affirmations module-section has-container has-text" data-type="Response" data-part="4">
+            @include('app/modules/un-stuck/response')
         </section>
     </div>
 @endsection

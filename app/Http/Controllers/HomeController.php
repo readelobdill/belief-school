@@ -29,7 +29,7 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('app.home.index', ['page' => 'home']);
+		return view('app.modules.home.index', ['page' => 'home']);
 	}
 
 }

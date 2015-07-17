@@ -19,7 +19,7 @@
 	color: #252e33;
 	text-align: center;
 	font-family: 'SantEliaRoughAlt-BoldThr', serif;
-	padding: 20px;
+	padding: 0 20px 20px 20px;
 	margin-bottom: 22px;
 	position:relative;
 	&:after {
@@ -67,7 +67,7 @@ h1.plain {
 	&:after, &:before {
 
 		position: absolute;
-		//pointer-events: none;
+		pointer-events: none;
 		width: 10px;
 		height: 2px;
 		background-color:white;
@@ -84,6 +84,28 @@ h1.plain {
 		transform: rotate(-45deg);
 
 	}
+
+	&.success {
+		background: none;
+		border: 3px solid $lightRed;
+		color: $lightRed;
+		padding-right: 45px;
+
+		&:after, &:before {
+			background: $lightRed;
+			margin-top: 6px;
+			right: 30px;
+		}
+
+		&:after {
+			transform: rotate(45deg);
+			width: 10px;
+		}
+		&:before {
+			transform: rotate(135deg);
+			width: 18px;
+		}
+	}
 }
 
 .dots {
@@ -97,7 +119,24 @@ h1.plain {
 strong {
 	font-weight: bold;
 }
+em {
+	font-style: italic;
+}
 
 p.center {
 	text-align:center;
+}
+
+.auth {
+	position:fixed;
+	top: 0;
+	right: 50px;
+	z-index: 99;
+	height: 50px;
+	line-height: 50px;
+	a {
+		color: $fontColour;
+		text-decoration: none;
+		font-weight: normal;
+	}
 }

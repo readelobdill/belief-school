@@ -18,6 +18,7 @@ class CreateModuleUserTable extends Migration {
             $table->integer('module_id')->unsigned();
 
             $table->text('data');
+			$table->integer('step');
             $table->boolean('complete')->default(false);
 
             $table->foreign('user_id')->references('id')->on('users');

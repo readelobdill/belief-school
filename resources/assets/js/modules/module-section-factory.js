@@ -6,9 +6,10 @@ import AccountCreationSection from 'modules/module-sections/account-creation';
 import TextWelcomeSection from 'modules/module-sections/text-welcome';
 import CongratsSection from 'modules/module-sections/congrats';
 import BoomerangSection from 'modules/module-sections/boomerang';
-import IAmSection from 'modules/module-sections/i-am';
-import AffirmationsSection from 'modules/module-sections/affirmations';
+import ChallengeSection from 'modules/module-sections/challenge';
+import ResponseSection from 'modules/module-sections/response';
 import DreamboardSection from 'modules/module-sections/dreamboard';
+import YouToYouSection from 'modules/module-sections/you-to-you';
 import $ from 'jquery';
 
 var sectionTypes = {
@@ -20,9 +21,10 @@ var sectionTypes = {
     TextWelcome: TextWelcomeSection,
     Congrats: CongratsSection,
     Boomerang: BoomerangSection,
-    Affirmations: AffirmationsSection,
-    IAm: IAmSection,
-    Dreamboard: DreamboardSection
+    Response: ResponseSection,
+    Challenge: ChallengeSection,
+    Dreamboard: DreamboardSection,
+    YouToYou: YouToYouSection
 };
 
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Module extends Model {
 
-    protected $fillable = ['name', 'step', 'type'];
+    protected $fillable = ['name', 'step', 'module'];
 
 
 

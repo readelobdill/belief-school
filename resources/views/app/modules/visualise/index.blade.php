@@ -13,7 +13,7 @@
         <section class="i-am module-section has-container has-text" data-type="Text" data-part="3">
             @include('app/modules/visualise/intro')
         </section>
-        <section class="dreamboard module-section has-container has-text" data-type="Dreamboard" data-part="4">
+        <section class="dreamboard module-section has-container" data-type="Dreamboard" data-part="4">
             @include('app/modules/visualise/dreamboard')
         </section>
     </div>

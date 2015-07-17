@@ -21,6 +21,7 @@ class UserController extends Controller {
     }
 
     public function postCreate() {
+
         $user = new User([
             'name' => Input::get('name'),
             'email' => Input::get('email'),
@@ -29,7 +30,6 @@ class UserController extends Controller {
         $group = Group::find(Input::get('group_id'));
         $user->group()->associate($group);
         $user->save();
-
         return redirect(route('admin.users.list'))->with('message', 'User successfully created');
     }
 

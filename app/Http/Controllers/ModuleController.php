@@ -17,8 +17,12 @@ class ModuleController extends Controller {
     }
 
 
-    public function viewModule($id) {
-
+    public function viewModule($slug) {
+        $module = Module::where('slug', '=', $slug)->first();
+        if(empty($module)) {
+            return \App::abort(404);
+        }
+        return view('app.modules.'.$module->slug.'.index', ['page' => $module->slug]);
     }
 
 

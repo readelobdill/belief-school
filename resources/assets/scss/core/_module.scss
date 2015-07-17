@@ -15,7 +15,7 @@
 
 
 		&.has-container {
-			padding: 40px;
+			padding: 50px;
 			z-index: 2;
 			> .inner {
 				width: 100%;
@@ -51,65 +51,71 @@
 			color: $fontColour;
 			padding: 20px 0 60px 0;
 
-			h1 {
-				> span {
-					margin-bottom: 25px;
+
+		}
+	}
+	h1 {
+		> span {
+			margin-bottom: 25px;
+		}
+	}
+
+	h2 {
+		font-weight: bold;
+		font-size: 25px;
+		text-align:center;
+		margin-bottom: 50px;
+	}
+
+	p {
+		opacity: 0.8;
+		margin-bottom: 32px;
+	}
+
+	.bold {
+		font-weight :bold;
+	}
+
+	.dots {
+		margin-bottom: 60px;
+		margin-top: 60px;
+	}
+
+	blockquote {
+		color: $lightRed;
+		font-size: 21px;
+		margin-bottom: 32px;
+		padding: 23px 23px 23px 23px;
+		border: 2px solid transparent;
+		border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 70%);
+		border-image-slice: 1;
+		font-weight: bold;
+
+		&.multiple {
+			border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 90%);
+			border-image-slice: 1;
+			li {
+				border-bottom: 1px solid rgba($lightRed, 0.2);
+				padding-bottom: 18px;
+				margin-bottom: 18px;
+				&:last-child {
+					border-bottom: 0;
+					padding-bottom: 0;
 				}
-			}
-
-			h2 {
-				font-weight: bold;
-				font-size: 25px;
-				text-align:center;
-				margin-bottom: 50px;
-			}
-
-			p {
-				opacity: 0.8;
-				margin-bottom: 32px;
-			}
-
-			.dots {
-				margin-bottom: 50px;
-			}
-
-			blockquote {
-				color: $lightRed;
-				font-size: 21px;
-				margin-bottom: 32px;
-				padding: 23px 23px 23px 23px;
-				border: 2px solid transparent;
-				border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 70%);
-				border-image-slice: 1;
-				font-weight: bold;
-
-				&.multiple {
-					border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 90%);
-					border-image-slice: 1;
-					li {
-						border-bottom: 1px solid rgba($lightRed, 0.2);
-						padding-bottom: 18px;
-						margin-bottom: 18px;
-						&:last-child {
-							border-bottom: 0;
-							padding-bottom: 0;
-						}
-					}
-				}
-
-				&.dark {
-					border-image: linear-gradient(23deg, rgba($fontColour,.8) 0%, rgba($fontColour,0) 70%);
-					border-image-slice: 1;
-					color: $fontColour;
-				}
-
-
-			}
-
-			.actions {
-				text-align:center;
 			}
 		}
+
+		&.dark {
+			border-image: linear-gradient(23deg, rgba($fontColour,.8) 0%, rgba($fontColour,0) 70%);
+			border-image-slice: 1;
+			color: $fontColour;
+		}
+
+
+	}
+
+	.actions {
+		text-align:center;
 	}
 }
 
@@ -187,3 +193,52 @@
 		}
 	}
 }
+
+.indicator {
+	position:fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	height: 40px;
+	width: 160px;
+	z-index: 99;
+	display:flex;
+
+	.module-icon {
+		width: 50px;
+		height: 50px;
+		background: $lightRed;
+		padding: 8px;
+		svg {
+			width: 100%;
+			height: 100%;
+			path {
+				fill: white;
+			}
+		}
+	}
+
+	.forum-icon {
+		width: 120px;
+		height: 50px;
+		border: 2px solid $lightRed;
+		padding: 12px;
+		font-size: 14px;
+		color: $lightRed;
+		cursor:pointer;
+		text-decoration: none;
+		font-weight: normal;
+
+		svg {
+			width: 25px;
+			//height: 50px;
+			display:inline-block;
+			vertical-align:middle;
+			margin-right: 10px;
+			path {
+				fill: $lightRed;
+			}
+		}
+	}
+}
+
