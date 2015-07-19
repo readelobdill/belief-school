@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import animate from 'modules/animate'
 import config from 'config';
+import Q from 'q';
 
 var multiplier = config.scrollDivider;
 var scrollOffset = window.pageYOffset / multiplier;
@@ -12,16 +13,21 @@ $(window).on('scroll', function() {
 function Video(video) {
     this.video = $(video)[0];
     this.duration = 7.984;
+    let videoReady = Q.defer();
+    this.videoReady = videoReady.promise;
 
     //this.video.pause();
     if(this.video.readyState >= 1) {
-        this.updatePosition();
+        videoReady.resolve(this.video);
     } else {
         this.video.addEventListener('loadedmetadata',() => {
-            console.log(this.video);
-            this.updatePosition();
+            videoReady.resolve(this.video);
         });
     }
+
+    this.videoReady.then(() => {
+        this.updatePosition();
+    })
 
 
 
@@ -47,7 +53,12 @@ Video.prototype.scrollTo = function(per, duration) {
 }
 
 Video.prototype.seek = function(per) {
-    this.video.currentTime = this.video.duration * per;
+    return this.videoReady.then(() => {
+        console.log(this.video.duration);
+        this.video.currentTime = this.video.duration * per;
+        console.log(this.video.currentTime);
+    })
+
 }
 
 Video.prototype.videoHeight = function() {
@@ -58,8 +69,10 @@ Video.prototype.videoHeight = function() {
 
 
 Video.prototype.destroy = function() {
-    console.log('destroy');
-    cancelAnimationFrame(this.animationId);
+    this.videoReady.then(() => {
+        cancelAnimationFrame(this.animationId);
+    });
+
 };
 
 

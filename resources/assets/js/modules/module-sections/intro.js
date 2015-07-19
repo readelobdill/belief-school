@@ -21,6 +21,15 @@ class IntroSection extends ModuleSection {
         });
 
     }
+
+    jump() {
+        return animate.to(this.section, 0, {autoAlpha: 1}).then(() => {
+            animate.to(this.section.find('.inner'), 0, {opacity: 0});
+            this.teardown();
+
+        });
+    }
+
     close() {
         return this.video.scrollTo(1,1.5).then(() => {
             return animate.to(this.section.find('.inner'), 0.5, {autoAlpha: 0}).then(() => {
@@ -37,6 +46,7 @@ class IntroSection extends ModuleSection {
         super.teardown();
         this.video.destroy();
         this.video.seek(1);
+        console.log('teardown');
 
     }
 }
