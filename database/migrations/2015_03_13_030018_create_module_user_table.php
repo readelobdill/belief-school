@@ -14,13 +14,14 @@ class CreateModuleUserTable extends Migration {
 	{
 		Schema::create('module_user', function(Blueprint $table)
 		{
+			$table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('module_id')->unsigned();
 
             $table->text('data');
-			$table->integer('step');
+			$table->integer('part');
             $table->boolean('complete')->default(false);
-
+			$table->timestamp('completed_at');
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('module_id')->references('id')->on('modules');
 

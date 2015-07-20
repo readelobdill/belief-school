@@ -17,20 +17,19 @@ class ModuleController extends Controller {
     }
 
 
-    public function viewModule($slug) {
-        $module = Module::where('slug', '=', $slug)->first();
+    public function viewModule($module) {
+
         if(empty($module)) {
             return \App::abort(404);
         }
-        return view('app.modules.'.$module->slug.'.index', ['page' => $module->slug]);
+        return view('app.modules.'.$module->slug.'.index', ['page' => $module->slug, 'module' => $module]);
     }
 
 
 
-    public function updateModule($id) {
-        $module = Module::find($id);
+    public function updateModule($module) {
         $now = new Carbon();
-        $hasModule = $this->auth->user()->modules()->where('id', '=', $id)->first();
+        $hasModule = $this->auth->user()->modules()->where('modules.id', '=', $module->id)->first();
 
         if($module->step > 0) {
             $previousModule = $this->auth->user()
@@ -52,15 +51,32 @@ class ModuleController extends Controller {
                 'created_at' => $now,
                 'updated_at' => $now,
                 'data' => '',
-                'complete' => false
+                'complete' => false,
+                'step' => 1
             ]);
         }
 
-        $moduleUser = $this->auth->user()->moduleUser()->where('module_id', $id)->first();
+        $moduleUser = $this->auth->user()->moduleUser()->where('module_id', $module->id)->first();
+
         switch($module->type) {
-            case '3_fields':
-                $data = $this->request->input('data');
+            case 'tag-cloud':
+
+                break;
+            case 'dreamboard':
+                $file = $this->request->file('image');
+                $fileName = Str::random().'.'.$file->getExtension();
+                $file->move(public_path('uploads/dreamboard'), $fileName);
+                $moduleUser->addImage($fileName, $this->request->input('position'));
+                break;
+            default:
+                $data = json_decode($moduleUser->data);
+                if(empty($data)) {
+                    $data = [];
+                }
+                $data[$moduleUser->step] = $this->request->input();
                 $moduleUser->data = json_encode($data);
+                $moduleUser->step++;
+
                 break;
         }
 
@@ -69,6 +85,10 @@ class ModuleController extends Controller {
 
 
         return $moduleUser;
+
+    }
+
+    public function completeModule($slug) {
 
     }
 

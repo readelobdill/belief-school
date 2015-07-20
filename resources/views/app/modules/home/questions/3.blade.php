@@ -5,7 +5,7 @@
     </h1>
     <div class="controls">
         <form action="" data-validate>
-            <input type="text" name="age" class="age" required data-parsley-type="integer" required data-parsley-validation-threshold="0">
+            <input type="text" name="age" id="age" class="age" required data-parsley-type="integer" required data-parsley-validation-threshold="0">
         </form>
 
     </div>

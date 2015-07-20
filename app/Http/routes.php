@@ -20,8 +20,11 @@ Route::get('/', 'WelcomeController@index');
 
 
 Route::post('modules/{module}/update', ['as' => 'modules.update', 'uses' => 'ModuleController@updateModule']);
+Route::post('modules/{module}/complete', ['as' => 'modules.complete', 'uses' => 'ModuleController@completeModule']);
 Route::get('modules/{module}', ['as' => 'modules.view', 'uses' => 'ModuleController@viewModule']);
-
+Route::bind('module', function($value) {
+    return \App\Models\Module::where('slug', $value)->first();
+});
 
 Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUser']);
 
@@ -36,7 +39,7 @@ Route::get('admin', function() {
 });
 
 
-Route::group(['prefix' => 'admin', ], function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', ['as' => 'admin.home', 'uses' => '\App\Admin\Http\Controllers\DashboardController@getIndex']);
 
     Route::group(['prefix' => 'users'], function() {
