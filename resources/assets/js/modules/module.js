@@ -11,9 +11,13 @@ class Module {
 
         var currentPart = this.container.data('part');
         var newIndex = this.container.find('[data-part="'+currentPart+'"]').index();
-        this.goToSection(0).then(() => {
-            return this.goToSection(newIndex);
-        });
+        if(newIndex > 0) {
+            this.sections[0].jump();
+        }
+        this.goToSection(newIndex);
+
+
+
         this.setupEventListeners();
     }
 
