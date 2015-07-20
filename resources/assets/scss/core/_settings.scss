@@ -1,3 +1,7 @@
 $lightRed: #f16060;
 $darkRed: #98201a;
 $fontColour: #252e33;
+
+// animations
+$ease: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$transition: 300ms $ease;

@@ -1,15 +1,23 @@
+// css
 @import "compass/reset";
 @import "compass";
+@import "breakpoint";
 
+// core
 @import "core/settings";
 @import "core/base";
 @import "core/fonts";
-
 @import "core/forms";
 @import "core/links";
 @import "core/module";
+@import "core/typography";
+
+// ui elements
 @import "ui/burger";
 @import "ui/menu";
+@import "ui/buttons";
+
+// pages
 @import "pages/home/home";
 @import "pages/welcome/welcome";
 @import "pages/boomerang/boomerang";

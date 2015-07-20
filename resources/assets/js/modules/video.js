@@ -22,9 +22,6 @@ function Video(video) {
             this.updatePosition();
         });
     }
-
-
-
 }
 
 

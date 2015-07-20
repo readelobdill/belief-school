@@ -1,102 +1,67 @@
-
 .background-video {
-	> .inner {
-		width: 100%;
-		height: 100%;
-	}
+    > .inner {
+        width: 100%;
+        height: 100%;
+    }
 
-	.display-video {
-		position:absolute;
-		top: 0;
-		left: 0;
-		min-width: 100%;
-		min-height: 100%;
-	}
+    .display-video {
+        position:absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
 
-	.home-banner {
-		z-index: 20;
-		width: 700px;
+    .home-banner {
+        z-index: 20;
+        width: 700px;
 
-	}
-
-
-
-
+    }
 }
 
-
 .intro-video {
+    padding: 80px 40px;
+    > .inner {
 
-
-	padding: 80px 40px;
-	> .inner {
-
-	}
-
+    }
 }
 
 .account-creation {
-	padding: 40px;
-	> .inner {
+    padding: 40px;
+    > .inner {
 
+        .next-section {
+            bottom: 60px;
+            svg {
+                path {
+                    fill: $lightRed;
+                }
+            }
+            &:hover {
+                svg path {
+                    fill: $darkRed;
+                }
+            }
+        }
+    }
 
-		.next-section {
-			bottom: 60px;
-			svg {
-				path {
-					fill: $lightRed;
-				}
-			}
-			&:hover {
-				svg path {
-					fill: $darkRed;
-				}
-			}
-		}
+    .content {
+        width: 442px;
+        text-align: center;
 
+        p {
+            text-align:center;
+            font-size: 17px;
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+    }
 
-	}
-
-	.content {
-		width: 442px;
-		text-align: center;
-
-		p {
-			text-align:center;
-			font-size: 17px;
-			line-height: 23px;
-			margin-bottom: 15px;
-		}
-
-
-
-	}
-
-	input {
-		margin: 8px 0;
-		height: 72px;
-		width: 100%;
-	}
-
-
-}
-
-
-
-
-
-
-
-
-
-body {
-	@extend %brandon-grotesque;
-	overflow-y: scroll;
-	color: #252e33;
-	font-size: 17px;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-
+    input {
+        margin: 8px 0;
+        height: 72px;
+        width: 100%;
+    }
 }
 
 @import "questions";

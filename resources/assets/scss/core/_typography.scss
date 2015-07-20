@@ -1,0 +1,63 @@
+.title {
+    font-size: 30px;
+    line-height: 37px;
+    color: #252e33;
+    text-align: center;
+    font-family: 'SantEliaRoughAlt-BoldThr', serif;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 22px;
+    position:relative;
+    &:after {
+        width: 171px;
+        border-bottom: 1px solid #1f2020;
+        content: "";
+        display:block;
+        margin: 22px auto 0 auto;
+
+    }
+    > span {
+        display:block;
+        @extend %brandon-grotesque;
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+}
+
+blockquote {
+    color: $lightRed;
+    font-size: 21px;
+    margin-bottom: 32px;
+    padding: 23px 23px 23px 23px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 70%);
+    border-image-slice: 1;
+    font-weight: bold;
+
+    &.multiple {
+        border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 90%);
+        border-image-slice: 1;
+        li {
+            border-bottom: 1px solid rgba($lightRed, 0.2);
+            padding-bottom: 18px;
+            margin-bottom: 18px;
+            &:last-child {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &.dark {
+        border-image: linear-gradient(23deg, rgba($fontColour,.8) 0%, rgba($fontColour,0) 70%);
+        border-image-slice: 1;
+        color: $fontColour;
+    }
+}
+
+.call-to-action {
+    color: $lightRed;
+    font-weight: bold;
+    text-align:center;
+    font-size: 25px;
+}

@@ -1,0 +1,64 @@
+.button { //button with right arrow (to go somewhere) emplty border and type.
+    position:relative;
+    border: 0;
+    text-transform: uppercase;
+    padding: 20px 35px 20px 20px;
+    background: $lightRed;
+    color:white;
+    font-weight: bold;
+    outline: 0;
+    display:inline-block;
+    cursor:pointer;
+    text-decoration:none;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: mix($lightRed, black, 90%);
+        color: white;
+    }
+
+    &:after, &:before {
+        position: absolute;
+        pointer-events: none;
+        width: 10px;
+        height: 2px;
+        background-color:white;
+        top: 50%;
+        right: 20px;
+        content: "";
+        transform-origin: 100% 50%;
+        transition: transform $transition, width $transition;
+    }
+
+    &:after {
+        transform: rotate(45deg);
+    }
+
+    &:before {
+        transform: rotate(-45deg);
+
+    }
+
+    &.success {
+        background: none;
+        border: 3px solid $lightRed;
+        color: $lightRed;
+        padding-right: 45px;
+
+        &:after, &:before {
+            background: $lightRed;
+            margin-top: 6px;
+            right: 30px;
+
+        }
+
+        &:after {
+            transform: rotate(45deg);
+            width: 10px;
+        }
+        &:before {
+            transform: rotate(135deg);
+            width: 18px;
+        }
+    }
+}
