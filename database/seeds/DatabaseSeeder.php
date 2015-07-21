@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('GroupTableSeeder');
         $this->call('AdminUserSeeder');
+		$this->call('ModuleTableSeeder');
 	}
 
 }

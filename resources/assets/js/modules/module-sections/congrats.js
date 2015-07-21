@@ -1,6 +1,7 @@
 import ModuleSection from "modules/module-section";
 import animate from 'modules/animate';
 import $ from 'jquery';
+import client from 'sources/ModuleClient';
 
 export default class CongratsSection extends ModuleSection {
     open() {
@@ -12,5 +13,15 @@ export default class CongratsSection extends ModuleSection {
     setup() {
         super.setup();
         $('body').css('min-height', 0);
+    }
+
+
+    setupEventListeners() {
+        this.section.on('click','[data-complete-module]', this.completeModule.bind(this))
+    }
+
+    completeModule() {
+        var url = this.module.getCompleteUrl();
+        client.completeModule(url);
     }
 }

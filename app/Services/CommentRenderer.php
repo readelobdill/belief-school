@@ -20,7 +20,7 @@ class CommentRenderer {
         }
         $this->output .= '<ul class="comments-list">';
         foreach($comments as $key => $comment) {
-            $this->output .= '<li class="comment">';
+            $this->output .= '<li class="comment '.($comment->sticky ? 'sticky' : '').'" data-id="'.$comment->id.'">';
             $this->output .= view('comments.comment', compact('comment'))->render();
             $this->render($comment->children);
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Module extends Model {
 
-    protected $fillable = ['name', 'step', 'module'];
+    protected $fillable = ['name', 'order', 'module_id', 'slug', 'total_parts', 'free'];
 
 
 
@@ -12,7 +12,7 @@ class Module extends Model {
         foreach($order as $key => $id) {
             $module = static::find($id);
             if($module) {
-                $module->step = $key;
+                $module->order = $key;
                 $module->save();
             }
 
@@ -48,5 +48,13 @@ class Module extends Model {
     public function comments()
     {
         return $this->morphMany('App\Models\Comment', 'commentable');
+    }
+
+    public function requiredModule() {
+        return $this->belongsTo('App\Models\Module', 'module_id');
+    }
+
+    public function requiredBy() {
+        return $this->hasMany('App\Models\Module');
     }
 }

@@ -21,7 +21,7 @@ class ModuleController extends Controller {
         $module = new Module([
             'name' => $this->request->input('name'),
             'slug' => $this->request->input('type'),
-            'step' => $moduleCount
+            'order' => $moduleCount
         ]);
         $module->save();
 
@@ -47,7 +47,7 @@ class ModuleController extends Controller {
     }
 
     public function getList() {
-        $modules = Module::orderBy('step')->get();
+        $modules = Module::orderBy('order')->get();
 
         return view('admin.modules.list', compact('modules'));
     }

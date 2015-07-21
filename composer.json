@@ -10,7 +10,8 @@
 		"barryvdh/laravel-ide-helper": "~2.0",
 		"doctrine/dbal": "~2.5",
 		"stojg/crop": "~1.2",
-		"omnipay/paymentexpress": "~2.1"
+		"omnipay/paymentexpress": "~2.1",
+		"misd/linkify": "^1.1"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",

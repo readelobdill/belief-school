@@ -59,7 +59,7 @@
             Nothing terrible is going to happen, people will either respond or they won’t. The world will not end and your arm will not fall off. <strong>In doing this you will start to gain some valuable insight into the qualities that you have which make YOU special.</strong>
         </p>
         <div class="actions">
-            <a href="#" class="button">I'm Ready!</a>
+            <a href="#" class="button" data-update-module>I'm Ready!</a>
         </div>
 
 

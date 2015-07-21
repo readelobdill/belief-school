@@ -22,8 +22,19 @@ Route::get('/', 'WelcomeController@index');
 Route::post('modules/{module}/update', ['as' => 'modules.update', 'uses' => 'ModuleController@updateModule']);
 Route::post('modules/{module}/complete', ['as' => 'modules.complete', 'uses' => 'ModuleController@completeModule']);
 Route::get('modules/{module}', ['as' => 'modules.view', 'uses' => 'ModuleController@viewModule']);
+Route::get('modules/{module}/forum', ['as' => 'modules.forum', 'uses' => 'ModuleController@viewForum']);
+
+
+Route::post('comments/{comment}/reply', ['as' => 'comments.reply', 'uses' => 'CommentController@reply']);
+Route::post('modules/{module}/comment', ['as' => 'modules.comment', 'uses' => 'CommentController@create']);
+
 Route::bind('module', function($value) {
-    return \App\Models\Module::where('slug', $value)->first();
+    return \App\Models\Module::with(['requiredModule'])->where('slug', $value)->first();
+});
+
+
+Route::bind('comment', function($value) {
+    return \App\Models\Comment::with(['user'])->where('id', $value)->first();
 });
 
 Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUser']);
@@ -60,7 +71,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
         Route::post('/update-order', ['as' => 'admin.modules.update-order', 'uses' => '\App\Admin\Http\Controllers\ModuleController@updateOrder']);
 
 
-        Route::get('{module}/comments', ['as' => 'admin.modules.comments', 'uses' => '\App\Admin\Http\Controllers\CommentController@listForModule']);
+        Route::get('{id}/comments', ['as' => 'admin.modules.comments', 'uses' => '\App\Admin\Http\Controllers\CommentController@listForModule']);
     });
 
     Route::group(['prefix' => 'comments'], function() {

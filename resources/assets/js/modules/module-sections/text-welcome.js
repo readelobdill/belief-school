@@ -2,6 +2,7 @@ import Text from "./text";
 import Accordion from "modules/accordion"
 import $ from "jquery";
 import "parsleyjs";
+import client from 'sources/ModuleClient';
 
 class TextWelcome extends Text {
 
@@ -22,7 +23,9 @@ class TextWelcome extends Text {
 
         this.form.on('submit', (e) => {
             e.preventDefault();
-            this.module.nextSection();
+            this.submitForm().then(() => {
+                this.module.nextSection();
+            });
         })
     }
 
@@ -31,6 +34,12 @@ class TextWelcome extends Text {
         super.setupEventListeners();
 
 
+    }
+
+    submitForm() {
+        let url = this.module.getUpdateUrl();
+        let data = {challenge: this.section.find('input:checked').val()}
+        return client.saveModule(url, data);
     }
 
 

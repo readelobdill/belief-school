@@ -1,3 +1,4 @@
+/*Modules*/
 import Home from "pages/home";
 import Welcome from "pages/welcome";
 import Boomerang from "pages/boomerang";
@@ -8,6 +9,11 @@ import FearCourage from "pages/fear-courage";
 import Giving from "pages/giving";
 import Gratitude from "pages/gratitude";
 import SustainableChange from "pages/sustainable-change";
+
+/*Misc Pages*/
+import Forum from "forum/forum";
+
+/*Utility*/
 import $ from 'jquery';
 import UI from "ui/ui";
 
@@ -44,6 +50,8 @@ switch(page) {
     case 'sustainable-change':
         SustainableChange.init();
         break;
+    case 'forum':
+        Forum.init();
 
 
 

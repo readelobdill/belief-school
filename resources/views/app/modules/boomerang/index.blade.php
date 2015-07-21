@@ -1,7 +1,7 @@
 @extends('app/layout')
 
 @section('content')
-    <div class="module boomerang-module" data-part="{{Input::get('part', 1)}}">
+    <div class="module boomerang-module" data-part="{{Input::get('part', 1)}}" data-update-url="{{route('modules.update', [$module->slug])}}" data-complete-url="{{route('modules.complete', [$module->slug])}}">
         <section class="background-video module-section" data-type="Intro" data-part="1">
             @include('app/modules/boomerang/background-video')
         </section>

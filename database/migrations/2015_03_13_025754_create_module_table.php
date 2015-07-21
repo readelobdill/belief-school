@@ -16,7 +16,11 @@ class CreateModuleTable extends Migration {
 		{
 			$table->increments('id');
             $table->string('name', 200);
-            $table->integer('step');
+            $table->integer('order');
+			$table->integer('total_steps');
+			$table->integer('module_id')->unsigned();
+            $table->boolean('free')->default(false);
+            $table->boolean('locks')->default(true);
             $table->string('slug', 50);
 			$table->string('type', 50);
             $table->text('data');

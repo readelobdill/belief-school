@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\Module;
+use App\Services\CommentRenderer;
 use Carbon\Carbon;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
@@ -20,8 +21,46 @@ class ModuleController extends Controller {
     public function viewModule($module) {
 
         if(empty($module)) {
-            return \App::abort(404);
+            abort(404);
         }
+
+        if(!$module->free && !$this->auth->user()->paid) {
+            abort(404);
+        }
+        $moduleUser = $this->auth->user()->moduleUser()->where('module_id', $module->id)->first();
+        $requiredModule = null;
+        if(!empty($module->requiredModule)) {
+            $requiredModule = $this->auth->user()->moduleUser()->where('module_id', $module->requiredModule->id)->first();
+
+            if(empty($requiredModule)) {
+                abort(404);
+            }
+        }
+
+        if(!empty($moduleUser) && $moduleUser->complete) {
+            abort(404);
+        }
+
+
+
+        if($module->order > 0) {
+            $previousModule = $this->auth->user()
+
+                ->modules()
+                ->where('order', '=', $module->order - 1)
+                ->first();
+
+            if(empty($previousModule)) {
+                abort(404);
+            } else if(!$previousModule->pivot->complete) {
+                abort(404);
+            } else if($previousModule->pivot->complete && (new Carbon($previousModule->pivot->completed_at))->diffInHours() < 48 && $previousModule->locks) {
+                abort(404);
+            }
+        }
+
+
+
         return view('app.modules.'.$module->slug.'.index', ['page' => $module->slug, 'module' => $module]);
     }
 
@@ -31,17 +70,20 @@ class ModuleController extends Controller {
         $now = new Carbon();
         $hasModule = $this->auth->user()->modules()->where('modules.id', '=', $module->id)->first();
 
-        if($module->step > 0) {
+        if(!$module->free && !$this->auth->user()->paid) {
+            abort(404);
+        }
+        if($module->order > 0) {
             $previousModule = $this->auth->user()
                                         ->modules()
-                                        ->where('step', '=', $module->step - 1)
+                                        ->where('order', '=', $module->order - 1)
                                         ->first();
             if(empty($previousModule)) {
-                \App::abort(404);
-            } else if(!$previousModule->complete) {
-                \App::abort(404);
-            } else if($previousModule->complete && $previousModule->updated_at->diffInHours() < 48) {
-                \App::abort(404);
+                abort(404);
+            } else if(!$previousModule->pivot->complete) {
+                abort(404);
+            } else if($previousModule->pivot->complete && (new Carbon($previousModule->pivot->completed_at))->diffInHours() < 48 && $previousModule->locks) {
+                abort(404);
             }
 
         }
@@ -52,11 +94,18 @@ class ModuleController extends Controller {
                 'updated_at' => $now,
                 'data' => '',
                 'complete' => false,
-                'step' => 1
+                'step' => 0
             ]);
         }
 
         $moduleUser = $this->auth->user()->moduleUser()->where('module_id', $module->id)->first();
+
+        if($moduleUser->step > $module->total_parts) {
+            abort(404);
+        }
+        if($moduleUser->complete) {
+            abort(404);
+        }
 
         switch($module->type) {
             case 'tag-cloud':
@@ -88,7 +137,25 @@ class ModuleController extends Controller {
 
     }
 
-    public function completeModule($slug) {
+    public function completeModule($module) {
+        $moduleUser = $this->auth->user()->moduleUser()->where('module_id', $module->id)->first();
+        if(!empty($moduleUser)) {
+            $moduleUser->complete = true;
+            $moduleUser->completed_at = new Carbon();
+            $moduleUser->save();
+        } else {
+            abort(404);
+        }
+    }
+
+    public function viewForum($module) {
+
+        $comments = $module->getAllComments();
+
+        $commentRenderer = new CommentRenderer($comments);
+        $page = 'forum';
+
+        return view('app.forum.forum', compact('commentRenderer', 'module', 'page'));
 
     }
 

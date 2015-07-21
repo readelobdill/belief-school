@@ -19,6 +19,16 @@ export default {
             body: JSON.stringify(data)
         })
     },
+    completeModule: function(url) {
+        return fetch(url, {
+            method: 'post',
+            credentials: 'same-origin',
+            headers: $.extend({}, {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }, defaultHeaders)
+        })
+    },
     addImage: function(url, image, primary = false) {
         let data = new FormData();
         let imageName = primary ? 'primary' : 'secondary';

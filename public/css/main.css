@@ -1682,3 +1682,14 @@ form.letter textarea {
 .i-choose input {
   width: 100%;
 }
+
+/* line 1, ../../resources/assets/scss/forum/_comment.scss */
+ul.comments-list {
+  margin-left: 40px;
+  outline: 1px solid blue;
+}
+
+/* line 6, ../../resources/assets/scss/forum/_comment.scss */
+.comment {
+  outline: 1px solid green;
+}
