@@ -1,3 +1,28 @@
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+p {
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+
+    &.center {
+        text-align: center;
+    }
+}
+
+mark {
+    background-color: $black;
+    color: $white;
+    font-weight: 500;
+}
+
 .title {
     font-size: 30px;
     line-height: 37px;
@@ -7,14 +32,15 @@
     padding: 0 20px 20px 20px;
     margin-bottom: 22px;
     position:relative;
+
     &:after {
         width: 171px;
         border-bottom: 1px solid #1f2020;
         content: "";
         display:block;
         margin: 22px auto 0 auto;
-
     }
+
     > span {
         display:block;
         @extend %brandon-grotesque;
@@ -27,12 +53,13 @@
 blockquote {
     color: $lightRed;
     font-size: 21px;
+    font-weight: 600;
+    font-style: italic;
     margin-bottom: 32px;
-    padding: 23px 23px 23px 23px;
+    padding: 23px;
     border: 2px solid transparent;
     border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 70%);
     border-image-slice: 1;
-    font-weight: bold;
 
     &.multiple {
         border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 90%);

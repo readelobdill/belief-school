@@ -1,0 +1,98 @@
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+    outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    padding: 0;
+    border: 0;
+    background: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+form {
+    margin: 0;
+}
+
+input,
+textarea {
+    padding: 0;
+    border: 0;
+    -webkit-appearance: none;
+    &:focus {
+        outline: none;
+    }
+    &::-ms-clear {
+        display: none;
+    }
+}
+
+textarea {
+    resize: vertical;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img,
+iframe {
+    vertical-align: middle;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+small {
+    font-size: em(16);
+}
+
+blockquote {
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+address {
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: normal;
+    margin: 0;
+}
