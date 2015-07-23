@@ -1,15 +1,13 @@
 .button { //button with right arrow (to go somewhere) emplty border and type.
     position:relative;
-    border: 0;
     text-transform: uppercase;
     padding: 20px 35px 20px 20px;
+    letter-spacing: 0.02em;
     background: $lightRed;
-    color:white;
-    font-weight: bold;
-    outline: 0;
-    display:inline-block;
-    cursor:pointer;
-    text-decoration:none;
+    color: $white;
+    font-weight: 600;
+    //display: inline-block;
+    cursor: pointer;
     transition: background-color 0.2s ease;
 
     &:hover {
@@ -36,7 +34,6 @@
 
     &:before {
         transform: rotate(-45deg);
-
     }
 
     &.success {
