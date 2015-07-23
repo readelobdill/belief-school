@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModuleUser extends Model {
     protected $table = 'module_user';
-
+    protected $dates = ['created_at', 'updated_at', 'completed_at'];
     public function __construct() {
 
     }

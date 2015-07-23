@@ -18,6 +18,7 @@ class CreateModuleTable extends Migration {
             $table->string('name', 200);
             $table->integer('step');
             $table->string('slug', 50);
+			$table->string('type', 50);
             $table->text('data');
 			$table->timestamps();
 		});

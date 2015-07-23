@@ -8,8 +8,9 @@ import Q from "q";
 import "modules/arctext";
 import QuestionNav from "modules/question-nav";
 import ModuleSection from "modules/module-section";
+import client from "sources/ModuleClient";
 
-class QuestionsSection extends ModuleSection {
+export default class QuestionsSection extends ModuleSection {
 
     constructor(section, module) {
         super(section, module);
@@ -54,7 +55,7 @@ class QuestionsSection extends ModuleSection {
                 console.log(this.currentQuestion, this.questions.length);
                 if(this.currentQuestion >= this.questions.length - 1) {
                     console.log('nextSectin');
-                    this.module.nextSection()
+                    this.questionsFinished();
                 } else {
                     console.log('nextQuestion');
                     this.nextQuestion();
@@ -86,6 +87,20 @@ class QuestionsSection extends ModuleSection {
     getCurrentQuestion() {
         return this.questions[this.currentQuestion]
     }
-}
 
-module.exports = QuestionsSection;
+    questionsFinished() {
+        let url = this.module.getUpdateUrl();
+        let data = this.getQuestionData();
+        return client.saveModule(url, data);
+    }
+
+    getQuestionData() {
+        let inputs = this.section.find('input[type=text],input[type=integer],input[type=email],input[type=checkbox]:checked,input[type=radio]:checked,textarea');
+        let data = {};
+        for(let i = 0; i < inputs.length; i++) {
+            let input = $(inputs[i]);
+            data[input.attr('name')] = input.val();
+        }
+        return data;
+    }
+}

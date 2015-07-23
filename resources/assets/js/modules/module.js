@@ -45,6 +45,14 @@ class Module {
 
     }
 
+    getUpdateUrl() {
+        return this.container.data('update-url');
+    }
+
+    getCompleteUrl() {
+        return this.container.data('complete-url');
+    }
+
 }
 
 
