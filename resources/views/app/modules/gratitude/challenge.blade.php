@@ -23,41 +23,42 @@
         <form action="" class="gratitude-list">
             <ul>
                 <li>
-                    <input type="text" placeholder="I am...">
+                    <input type="text" placeholder="I am..." name="diary_1">
                 </li>
                 <li>
-                    <input type="text" placeholder="I am...">
+                    <input type="text" placeholder="I am..." name="diary_2">
                 </li>
                 <li>
-                    <input type="text" placeholder="I am...">
+                    <input type="text" placeholder="I am..." name="diary_3">
                 </li>
                 <li>
-                    <input type="text" placeholder="I am...">
+                    <input type="text" placeholder="I am..." name="diary_4">
                 </li>
                 <li>
-                    <input type="text" placeholder="I am...">
+                    <input type="text" placeholder="I am..." name="diary_5">
                 </li>
                 <li>
-                    <input type="text" placeholder="I am...">
+                    <input type="text" placeholder="I am..." name="diary_6">
                 </li>
                 <li>
-                    <input type="text" placeholder="I am...">
+                    <input type="text" placeholder="I am..." name="diary_7">
                 </li>
                 <li>
-                    <input type="text" placeholder="I am...">
+                    <input type="text" placeholder="I am..." name="diary_8">
                 </li>
                 <li>
-                    <input type="text" placeholder="I am...">
+                    <input type="text" placeholder="I am..." name="diary_9">
                 </li>
                 <li>
-                    <input type="text" placeholder="I am...">
+                    <input type="text" placeholder="I am..." name="diary_10">
                 </li>
             </ul>
+            <div class="actions">
+                <button class="button">Save to Manifesto!</button>
+            </div>
         </form>
 
-        <div class="actions">
-            <a href="#" class="button">Save to Manifesto!</a>
-        </div>
+
 
 
     </div>

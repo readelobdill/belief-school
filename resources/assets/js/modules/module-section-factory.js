@@ -10,6 +10,7 @@ import ChallengeSection from 'modules/module-sections/challenge';
 import ResponseSection from 'modules/module-sections/response';
 import DreamboardSection from 'modules/module-sections/dreamboard';
 import YouToYouSection from 'modules/module-sections/you-to-you';
+import FormSection from 'modules/module-sections/form';
 import $ from 'jquery';
 
 var sectionTypes = {
@@ -24,7 +25,8 @@ var sectionTypes = {
     Response: ResponseSection,
     Challenge: ChallengeSection,
     Dreamboard: DreamboardSection,
-    YouToYou: YouToYouSection
+    YouToYou: YouToYouSection,
+    Form: FormSection
 };
 
 

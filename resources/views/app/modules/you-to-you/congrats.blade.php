@@ -9,7 +9,7 @@
         <p>When heading over to your dashboard, take a moment to save it out - send it to your trusted friends and family and share your journey.</p>
         <div class="dots"></div>
         <div class="actions">
-            <a href="#" class="button">Whats next?</a>
+            <a href="#" class="button" data-complete-module>Whats next?</a>
         </div>
     </div>
 </div>

@@ -1,12 +1,13 @@
 <?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class ModuleUser extends Model {
+class ModuleUser extends Pivot {
     protected $table = 'module_user';
     protected $dates = ['created_at', 'updated_at', 'completed_at'];
-    public function __construct() {
-
+    public function __construct(Model $parent, $attributes, $table, $exists = false) {
+        parent::__construct($parent, $attributes, $table, $exists);
     }
 
     public function user() {
@@ -27,9 +28,20 @@ class ModuleUser extends Model {
 
 
 
-    public function addImage($imageName, $imageNumber) {
-        $data = json_decode($this->data, true);
-        $data['image_'.$imageNumber] = $imageName;
-        $this->data = json_encode($data);
+    public function addImage($image, $imageName) {
+        $data = $this->data;
+        if(empty($data)) {
+            $data = new \stdClass();
+        }
+        $data->{$imageName} = $image;
+        $this->data = $data;
+    }
+
+    public function getDataAttribute($value) {
+        return json_decode($value);
+    }
+
+    public function setDataAttribute($value) {
+        $this->attributes['data'] = json_encode($value);
     }
 }

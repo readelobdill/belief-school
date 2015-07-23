@@ -54,11 +54,11 @@
         </h1>
 
         <form action="" class="letter">
-            <textarea id="" cols="30" rows="10"></textarea>
+            <textarea id="" cols="30" rows="10" name="letter"></textarea>
         </form>
 
         <div class="actions">
-            <a href="" class="button">Save to dashboard</a>
+            <a href="" class="button" data-save-module>Save to dashboard</a>
         </div>
 
 

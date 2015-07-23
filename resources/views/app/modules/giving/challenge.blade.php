@@ -82,7 +82,7 @@
         </blockquote>
 
         <div class="actions">
-            <a href="#" class="button">Make your declaration! Save it into your manifesto now!</a>
+            <a href="#" class="button" data-save-module>Make your declaration! Save it into your manifesto now!</a>
         </div>
 
 

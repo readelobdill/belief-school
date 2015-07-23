@@ -28,6 +28,10 @@ Route::get('modules/{module}/forum', ['as' => 'modules.forum', 'uses' => 'Module
 Route::post('comments/{comment}/reply', ['as' => 'comments.reply', 'uses' => 'CommentController@reply']);
 Route::post('modules/{module}/comment', ['as' => 'modules.comment', 'uses' => 'CommentController@create']);
 
+
+Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+
+
 Route::bind('module', function($value) {
     return \App\Models\Module::with(['requiredModule'])->where('slug', $value)->first();
 });

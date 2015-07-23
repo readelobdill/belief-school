@@ -7,66 +7,27 @@
         
         <div class="board">
             <div class="row-4">
-                <div class="image">
-                    <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                </div>
-                <div class="image">
-                    <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                </div>
-                <div class="image">
-                    <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                </div>
-                <div class="image">
-                    <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                </div>
+                @include('app.modules.visualise.image', ['imageName' => 'image_1'])
+                @include('app.modules.visualise.image', ['imageName' => 'image_2'])
+                @include('app.modules.visualise.image', ['imageName' => 'image_3'])
+                @include('app.modules.visualise.image', ['imageName' => 'image_4'])
             </div>
             <div class="mid-row">
                 <div class="column">
-                    <div class="image">
-                        <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                    </div>
-                    <div class="image">
-                        <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                    </div>
+                    @include('app.modules.visualise.image', ['imageName' => 'image_5'])
+                    @include('app.modules.visualise.image', ['imageName' => 'image_6'])
                 </div>
-                <div class="image your-image">
-                    <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                </div>
+                @include('app.modules.visualise.image', ['imageName' => 'image_main'])
                 <div class="column">
-                    <div class="image">
-                        <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                    </div>
-                    <div class="image">
-                        <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                    </div>
+                    @include('app.modules.visualise.image', ['imageName' => 'image_7'])
+                    @include('app.modules.visualise.image', ['imageName' => 'image_8'])
                 </div>
             </div>
             <div class="row-4">
-                <div class="image">
-                    <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                </div>
-                <div class="image">
-                    <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                </div>
-                <div class="image">
-                    <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                </div>
-                <div class="image">
-                    <div class="camera-icon">@include('app/partials/icons/camera')</div>
-                    <img src="" alt="">
-                </div>
+                @include('app.modules.visualise.image', ['imageName' => 'image_9'])
+                @include('app.modules.visualise.image', ['imageName' => 'image_10'])
+                @include('app.modules.visualise.image', ['imageName' => 'image_11'])
+                @include('app.modules.visualise.image', ['imageName' => 'image_12'])
             </div>
             <div class="overlay">
 
@@ -84,7 +45,7 @@
         </div>
 
         <div class="actions">
-            <a href="#" class="button">Save to dashboard</a>
+            <a href="#" class="button" data-save-module>Save to dashboard</a>
         </div>
         <div class="social">
             <a href="#" class="facebook">@include('app/partials/icons/facebook')Share on Facebook</a>

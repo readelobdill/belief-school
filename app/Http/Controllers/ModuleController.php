@@ -27,17 +27,17 @@ class ModuleController extends Controller {
         if(!$module->free && !$this->auth->user()->paid) {
             abort(404);
         }
-        $moduleUser = $this->auth->user()->moduleUser()->where('module_id', $module->id)->first();
+        $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first();
         $requiredModule = null;
         if(!empty($module->requiredModule)) {
-            $requiredModule = $this->auth->user()->moduleUser()->where('module_id', $module->requiredModule->id)->first();
+            $requiredModule = $this->auth->user()->modules()->where('modules.id', $module->requiredModule->id)->first();
 
             if(empty($requiredModule)) {
                 abort(404);
             }
         }
 
-        if(!empty($moduleUser) && $moduleUser->complete) {
+        if(!empty($moduleUser) && $moduleUser->pivot->complete) {
             abort(404);
         }
 
@@ -45,7 +45,6 @@ class ModuleController extends Controller {
 
         if($module->order > 0) {
             $previousModule = $this->auth->user()
-
                 ->modules()
                 ->where('order', '=', $module->order - 1)
                 ->first();
@@ -54,14 +53,16 @@ class ModuleController extends Controller {
                 abort(404);
             } else if(!$previousModule->pivot->complete) {
                 abort(404);
-            } else if($previousModule->pivot->complete && (new Carbon($previousModule->pivot->completed_at))->diffInHours() < 48 && $previousModule->locks) {
+            } else if($previousModule->pivot->complete && (new Carbon($previousModule->pivot->completed_at))->diffInHours() < config('belief.lockout') && $previousModule->locks) {
                 abort(404);
             }
         }
 
-
-
-        return view('app.modules.'.$module->slug.'.index', ['page' => $module->slug, 'module' => $module]);
+        return view('app.modules.'.$module->slug.'.index', [
+            'page' => $module->slug,
+            'module' => $module,
+            'moduleUser' => (!empty($moduleUser) ? $moduleUser->pivot : false),
+            'requiredModule' => (!empty($requiredModule) ? $requiredModule->pivot : false)]);
     }
 
 
@@ -82,7 +83,7 @@ class ModuleController extends Controller {
                 abort(404);
             } else if(!$previousModule->pivot->complete) {
                 abort(404);
-            } else if($previousModule->pivot->complete && (new Carbon($previousModule->pivot->completed_at))->diffInHours() < 48 && $previousModule->locks) {
+            } else if($previousModule->pivot->complete && (new Carbon($previousModule->pivot->completed_at))->diffInHours() < config('belief.lockout') && $previousModule->locks) {
                 abort(404);
             }
 
@@ -98,7 +99,7 @@ class ModuleController extends Controller {
             ]);
         }
 
-        $moduleUser = $this->auth->user()->moduleUser()->where('module_id', $module->id)->first();
+        $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first()->pivot;
 
         if($moduleUser->step > $module->total_parts) {
             abort(404);
@@ -112,18 +113,30 @@ class ModuleController extends Controller {
 
                 break;
             case 'dreamboard':
-                $file = $this->request->file('image');
-                $fileName = Str::random().'.'.$file->getExtension();
-                $file->move(public_path('uploads/dreamboard'), $fileName);
-                $moduleUser->addImage($fileName, $this->request->input('position'));
+                if($this->request->file('image') && $this->request->input('name')) {
+                    $file = $this->request->file('image');
+                    $fileName = Str::random().'.'.$file->guessExtension();
+                    $file->move(public_path('uploads/dreamboard/'.$this->auth->user()->id), $fileName);
+                    $moduleUser->addImage($fileName, $this->request->input('name'));
+                }
+                if(count(get_object_vars($moduleUser->data)) == 13 && !$this->request->file('image')) {
+                    $moduleUser->step++;
+                }
+
+                $moduleUser->save();
+
+                if($this->request->file('image') && $this->request->input('name')) {
+                    return ['imageUrl' => asset('uploads/dreamboard/'.$this->auth->user()->id.'/'.$fileName)];
+                }
+
                 break;
             default:
-                $data = json_decode($moduleUser->data);
+                $data = $moduleUser->data;
                 if(empty($data)) {
                     $data = [];
                 }
                 $data[$moduleUser->step] = $this->request->input();
-                $moduleUser->data = json_encode($data);
+                $moduleUser->data = $data;
                 $moduleUser->step++;
 
                 break;
@@ -132,17 +145,16 @@ class ModuleController extends Controller {
 
         $moduleUser->save();
 
-
         return $moduleUser;
 
     }
 
     public function completeModule($module) {
-        $moduleUser = $this->auth->user()->moduleUser()->where('module_id', $module->id)->first();
-        if(!empty($moduleUser)) {
-            $moduleUser->complete = true;
-            $moduleUser->completed_at = new Carbon();
-            $moduleUser->save();
+        $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first();
+        if(!empty($moduleUser) && !$moduleUser->pivot->complete) {
+            $moduleUser->pivot->complete = true;
+            $moduleUser->pivot->completed_at = new Carbon();
+            $moduleUser->pivot->save();
         } else {
             abort(404);
         }

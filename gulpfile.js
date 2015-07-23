@@ -33,7 +33,7 @@ function scripts(watch, production) {
     }
 
     bundler.transform(babelify);
-
+    bundler.on('error', swallowError);
     rebundle = function() {
         var stream = bundler.bundle();
         stream.on('error', swallowError);

@@ -29,15 +29,20 @@ export default {
             }, defaultHeaders)
         })
     },
-    addImage: function(url, image, primary = false) {
+    addImage: function(url, image, imageName) {
         let data = new FormData();
-        let imageName = primary ? 'primary' : 'secondary';
         data.append('image', image);
+        data.append('name', imageName);
         return fetch(url, {
             method: 'post',
             credentials: 'same-origin',
+            headers: $.extend({}, {
+                'Accept' : 'application/json'
+            }, defaultHeaders),
             body: data
-        })
+        }).then((response) => {
+            return response.json();
+        });
     },
 
     registerUser(url, data) {

@@ -16,5 +16,8 @@
         <section class="dreamboard module-section has-container" data-type="Dreamboard" data-part="4">
             @include('app/modules/visualise/dreamboard')
         </section>
+        <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4">
+            @include('app/modules/visualise/congrats')
+        </section>
     </div>
 @endsection

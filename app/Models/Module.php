@@ -57,4 +57,14 @@ class Module extends Model {
     public function requiredBy() {
         return $this->hasMany('App\Models\Module');
     }
+
+
+    public function newPivot(Model $parent, array $attributes, $table, $exists)
+    {
+        if ($parent instanceof User) {
+            return new ModuleUser($parent, $attributes, $table, $exists);
+        }
+
+        return parent::newPivot($parent, $attributes, $table, $exists);
+    }
 }

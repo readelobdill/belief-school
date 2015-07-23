@@ -16,5 +16,8 @@
         <section class="affirmations module-section has-container has-text" data-type="Response" data-part="4">
             @include('app/modules/giving/response')
         </section>
+        <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4">
+            @include('app/modules/giving/congrats')
+        </section>
     </div>
 @endsection

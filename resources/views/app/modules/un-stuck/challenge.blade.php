@@ -5,11 +5,11 @@
         </h1>
 
         <p>
-            When you first came through Belief School you  identified the reason why you did not have the one thing you wanted in your life right now .
+            When you first came through Belief School you identified the reason why you did not have the one thing you wanted in your life right now .
         </p>
 
         <blockquote>
-            This was <em>“Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magnaliqua. Ut enim ad minim veniam”</em>
+            This was <em>“{{ $requiredModule->data[0]->why_not }}”</em>
         </blockquote>
 
         <p class="bold">

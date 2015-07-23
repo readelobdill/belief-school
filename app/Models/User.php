@@ -42,9 +42,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->belongsToMany('App\Models\Module')->withTimestamps()->withPivot(['created_at', 'updated_at', 'data', 'complete', 'step', 'completed_at']);
     }
 
-    public function moduleUser() {
-        return $this->hasMany('App\Models\ModuleUser');
-    }
+//    public function moduleUser() {
+//        return $this->hasMany('App\Models\ModuleUser');
+//    }
 
 
     public function setPasswordAttribute($password) {
@@ -65,6 +65,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function isAdmin() {
         return $this->isGroup('Admin') || $this->isGroup('Super Admin');
+    }
+
+
+    public function newPivot(Model $parent, array $attributes, $table, $exists)
+    {
+        if ($parent instanceof Module) {
+            return new ModuleUser($parent, $attributes, $table, $exists);
+        }
+
+        return parent::newPivot($parent, $attributes, $table, $exists);
     }
 
 }

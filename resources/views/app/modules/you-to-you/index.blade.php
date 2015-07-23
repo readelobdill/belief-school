@@ -16,5 +16,8 @@
         <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4">
             @include('app/modules/you-to-you/congrats')
         </section>
+        <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4">
+            @include('app/modules/you-to-you/congrats')
+        </section>
     </div>
 @endsection

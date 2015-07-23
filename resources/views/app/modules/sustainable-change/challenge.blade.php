@@ -25,7 +25,7 @@
         </p>
 
         <blockquote>
-            You chose <em>“Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magnaliqua. Ut enim ad minim veniam”</em>
+            You chose <em>“{{ $requiredModule->data[0]->challenge }}”</em>
         </blockquote>
 
         <p class="center">
@@ -33,7 +33,7 @@
         </p>
 
         <form action="">
-            <textarea name="" placeholder="I felt...(limited to 280 characters)..."></textarea>
+            <textarea name="" placeholder="I felt...(limited to 280 characters)..." name="feel"></textarea>
             <div class="actions">
                 <button class="button">Save to Manifesto!</button>
             </div>
