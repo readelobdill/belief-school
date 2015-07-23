@@ -94,7 +94,7 @@
             Choose one of these, the one that resonates with you, the one that you are fully prepared to commit to for the journey through this course.
         </blockquote>
 
-        <form action="{{ route('modules.update', ['welcome']) }}">
+        <form class="welcome-first-steps" action="{{ route('modules.update', ['welcome']) }}">
             <ul class="checkbox-list">
                 <li>
                     <input required type="radio" name="assert" id="choice-1" value="Walk, run, swim or cycle for 30min each day for the duration of this course"><label for="choice-1">Walk, run, swim or cycle for 30min each day for the duration of this course</label>

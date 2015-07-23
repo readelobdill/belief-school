@@ -38,9 +38,6 @@ class Module {
                 this.currentSection = section;
                 return this.sections[this.currentSection].open();
             }
-
-
-
         }
     }
 

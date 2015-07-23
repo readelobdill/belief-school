@@ -14,8 +14,6 @@
         position:relative;
         display:block;
 
-
-
         label {
             position:absolute;
             top: 6px;
@@ -169,7 +167,6 @@
             border: 2px solid transparent;
             border-image: linear-gradient(23deg, rgba(#abafb1, 1) 0%, rgba(#abafb1, 0) 90%);
             border-image-slice: 1;
-
         }
 
         textarea:focus + .icon {
@@ -177,6 +174,7 @@
                 fill: white;
             }
         }
+
         textarea:focus + label {
             color: white;
         }

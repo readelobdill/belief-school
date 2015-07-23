@@ -13,7 +13,6 @@
             justify-content: center;
         }
 
-
         &.has-container {
             padding: 50px;
             z-index: 2;
@@ -31,21 +30,22 @@
 }
 
 .has-text {
+    padding: 40px 40px;
+
     &.module-section {
         > .inner {
             display:block;
         }
     }
-    padding: 40px 40px;
-    > .inner {
 
+    > .inner {
         .content {
             width: 445px;
             margin: 0 auto;
             font-size: 17px;
             line-height: 26px;
             color: $fontColour;
-            padding: 20px 0 60px 0;
+            padding: 40px 0 60px 0;
         }
     }
 
@@ -80,7 +80,6 @@
             fill: white;
             transition: fill 0.3s ease;
         }
-
     }
 }
 
@@ -88,14 +87,17 @@
 
     h1 {
         margin-bottom: 40px;
-        line-height: 26px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
     }
+
     p {
         max-width: 442px;
         text-align: center;
         margin-bottom: 40px;
         line-height: 26px;
     }
+
     .actions {
         text-align:center;
         margin: 40px 0;
@@ -135,10 +137,11 @@
     display:flex;
 
     .module-icon {
-        width: 50px;
+        width: 50px !important;
         height: 50px;
         background: $lightRed;
         padding: 8px;
+
         svg {
             width: 100%;
             height: 100%;
@@ -149,15 +152,16 @@
     }
 
     .forum-icon {
-        width: 120px;
+        width: 110px;
         height: 50px;
         border: 2px solid $lightRed;
+        border-right: 0;
         padding: 12px;
         font-size: 14px;
         color: $lightRed;
         cursor:pointer;
         text-decoration: none;
-        font-weight: normal;
+        font-weight: 500;
 
         svg {
             width: 25px;
@@ -168,6 +172,10 @@
             path {
                 fill: $lightRed;
             }
+        }
+
+        span {
+            line-height: 21px;
         }
     }
 }

@@ -26,25 +26,12 @@ h1.plain {
     text-align:center;
 }
 
-
-.dots { // bullets /*/
+.dots {
     background: image-url('icons/bullets.svg') no-repeat top left;
     width: 70px;
     height: 6px;
     background-size: cover;
     margin: 0 auto;
-}
-
-strong {
-    font-weight: bold;
-}
-
-em {
-    font-style: italic;
-}
-
-p.center {
-    text-align:center;
 }
 
 .auth {
@@ -54,6 +41,7 @@ p.center {
     z-index: 99;
     height: 50px;
     line-height: 50px;
+
     a {
         color: $fontColour;
         text-decoration: none;
