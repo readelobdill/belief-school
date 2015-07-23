@@ -8,9 +8,7 @@ import ModuleSection from "modules/module-section";
 import Client from "sources/ModuleClient";
 import serialize from "util/serializeForm";
 
-
-
-class AccountCreationSection extends ModuleSection {
+export default class AccountCreationSection extends ModuleSection {
 
     constructor(section, module) {
         super(section,module);
@@ -47,7 +45,24 @@ class AccountCreationSection extends ModuleSection {
 
             }
         });
+        this.section.on('focus', 'input', this.formOnFocus.bind(this));
+        this.section.on('keyup', 'input', this.formOnFocus.bind(this));
     }
-}
 
-module.exports = AccountCreationSection;
+    formOnFocus(e) {
+        let field = $(e.currentTarget);
+
+        if( field.val() ){
+            field.addClass('has-content');
+        } else {
+            field.removeClass('has-content');
+        }
+
+        // let fun = () => {
+
+        // }
+
+    }
+
+
+}

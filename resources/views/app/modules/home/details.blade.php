@@ -15,7 +15,7 @@
             Whatever project your are about to embark on, big or small  Belief School will give you the confidence to create change in your life.
         </p>
         <p>
-            Our program will take you through eight practicals exercices that you can complete at your own pace, giving you a clear understanding of how you operate in the world, the greatness within you and leaving you with a tool box of daily routines and processes that will have a profound effect on all aspects of your life.
+            <mark>Our program will take you through eight practicals exercices that you can complete at your own pace,</mark> giving you a clear understanding of how you operate in the world, the greatness within you and leaving you with a tool box of daily routines and processes that will have a profound effect on all aspects of your life.
         </p>
 
     </div>
