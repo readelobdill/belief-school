@@ -33,7 +33,7 @@
         </p>
 
         <form action="">
-            <textarea name="" placeholder="I felt...(limited to 280 characters)..." name="feel"></textarea>
+            <textarea name="i_felt" placeholder="I felt...(limited to 280 characters)..." name="feel"></textarea>
             <div class="actions">
                 <button class="button">Save to Manifesto!</button>
             </div>

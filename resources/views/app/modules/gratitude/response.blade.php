@@ -21,7 +21,7 @@
 
         <form action="">
             <div class="form-row">
-                <textarea name="i-felt" required placeholder="I felt...(limited to 280 characters" maxlength="280"></textarea>
+                <textarea name="letter" required placeholder="" maxlength="280"></textarea>
             </div>
             <div class="actions">
                 <button class="button">Save to Manifesto!</button>

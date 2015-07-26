@@ -32,6 +32,10 @@ Route::post('modules/{module}/comment', ['as' => 'modules.comment', 'uses' => 'C
 Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
 
 
+Route::get('tagcloud/{secret}', ['as' => 'tagcloud', 'uses' => 'ModuleController@tagCloud']);
+Route::post('tagcloud/{secret}', ['as' => 'tags.submit', 'uses' => 'ModuleController@tagCloudSubmit']);
+
+
 Route::bind('module', function($value) {
     return \App\Models\Module::with(['requiredModule'])->where('slug', $value)->first();
 });

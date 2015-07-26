@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\Module;
+use App\Models\ModuleUser;
 use App\Services\CommentRenderer;
 use Carbon\Carbon;
 use Illuminate\Auth\Guard;
@@ -27,7 +28,10 @@ class ModuleController extends Controller {
         if(!$module->free && !$this->auth->user()->paid) {
             abort(404);
         }
-        $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first();
+        $moduleUser = $this->auth
+            ->user()
+            ->modules()
+            ->where('modules.id', $module->id)->first();
         $requiredModule = null;
         if(!empty($module->requiredModule)) {
             $requiredModule = $this->auth->user()->modules()->where('modules.id', $module->requiredModule->id)->first();
@@ -65,6 +69,37 @@ class ModuleController extends Controller {
             'requiredModule' => (!empty($requiredModule) ? $requiredModule->pivot : false)]);
     }
 
+    public function tagCloud($secret) {
+        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
+
+        if(empty($moduleUser)) {
+            abort(404);
+        }
+
+        if($moduleUser->module->type !== 'tag-cloud') {
+            abort(404);
+        }
+
+        return view('app.public-modules/tag-collection', ['moduleUser' => $moduleUser, 'page' => 'tag-cloud-form']);
+    }
+
+    public function tagCloudSubmit($secret) {
+        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
+
+        if(empty($moduleUser)) {
+            abort(404);
+        }
+
+        if($moduleUser->module->type !== 'tag-cloud') {
+            abort(404);
+        }
+
+
+        $moduleUser->addTags($this->request->input('tags'));
+        $moduleUser->save();
+        return $moduleUser;
+    }
+
 
 
     public function updateModule($module) {
@@ -95,7 +130,8 @@ class ModuleController extends Controller {
                 'updated_at' => $now,
                 'data' => '',
                 'complete' => false,
-                'step' => 0
+                'step' => 0,
+                'secret' => Str::random(26)
             ]);
         }
 
@@ -115,7 +151,7 @@ class ModuleController extends Controller {
             case 'dreamboard':
                 if($this->request->file('image') && $this->request->input('name')) {
                     $file = $this->request->file('image');
-                    $fileName = Str::random().'.'.$file->guessExtension();
+                    $fileName = Str::random(32).'.'.$file->guessExtension();
                     $file->move(public_path('uploads/dreamboard/'.$this->auth->user()->id), $fileName);
                     $moduleUser->addImage($fileName, $this->request->input('name'));
                 }

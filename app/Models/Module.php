@@ -58,11 +58,15 @@ class Module extends Model {
         return $this->hasMany('App\Models\Module');
     }
 
+    public function users() {
+        return $this->belongsToMany('App\Models\User')->withTimestamps()->withPivot(['created_at', 'updated_at', 'data', 'complete', 'step', 'completed_at']);
+    }
+
 
     public function newPivot(Model $parent, array $attributes, $table, $exists)
     {
         if ($parent instanceof User) {
-            return new ModuleUser($parent, $attributes, $table, $exists);
+            return new ModuleUserPivot($parent, $attributes, $table, $exists);
         }
 
         return parent::newPivot($parent, $attributes, $table, $exists);

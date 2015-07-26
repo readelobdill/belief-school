@@ -10,7 +10,7 @@
 
         <form action="" class="i-choose">
             <div class="form-row">
-                <input type="text" name="i-felt" required placeholder="I choose to...(limited to 140 characters" maxlength="140">
+                <input type="text" name="i_chose" required placeholder="I choose to...(limited to 140 characters" maxlength="140">
             </div>
             <div class="actions">
                 <button class="button">I'm committing to it!</button>

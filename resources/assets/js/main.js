@@ -9,6 +9,7 @@ import FearCourage from "pages/fear-courage";
 import Giving from "pages/giving";
 import Gratitude from "pages/gratitude";
 import SustainableChange from "pages/sustainable-change";
+import Dashboard from 'dashboard/dashboard';
 
 /*Misc Pages*/
 import Forum from "forum/forum";
@@ -52,6 +53,9 @@ switch(page) {
         break;
     case 'forum':
         Forum.init();
+        break;
+    case 'dashboard':
+        Dashboard.init();
 
 
 

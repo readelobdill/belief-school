@@ -9,8 +9,9 @@ class Module {
             return createSection(section, this);
         }).get();
 
+        var currentStep = this.container.data('step');
         var currentPart = this.container.data('part');
-        var newIndex = this.container.find('[data-part="'+currentPart+'"]').index();
+        var newIndex = this.container.find('[data-step="'+currentStep+'"]').index();
         if(newIndex > 0) {
             this.sections[0].jump();
         }

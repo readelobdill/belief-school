@@ -13,15 +13,8 @@
     @endif
 </head>
 <body data-page="{{$page}}">
-@include('app.partials.buttons.burger')
-@include('app.ui.menu')
-
-@include('app.ui.module-indicator')
-
-@include('app.ui.auth')
 
 @yield('content')
-
 
 <script src="{{asset('js/output.js')}}"></script>
 </body>

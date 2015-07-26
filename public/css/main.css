@@ -1194,6 +1194,160 @@ p.annotation {
   text-align: center;
 }
 
+/*!
+ * jQCloud 2.0.1
+ * Copyright 2011 Luca Ongaro (http://www.lucaongaro.eu)
+ * Copyright 2013 Daniel White (http://www.developerdan.com)
+ * Copyright 2014 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
+ */
+/* layout */
+/* line 9, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 14, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span {
+  padding: 0;
+}
+
+/* fonts */
+/* line 19, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 10px;
+  line-height: normal;
+}
+
+/* line 25, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud a {
+  font-size: inherit;
+  text-decoration: none;
+}
+
+/* line 30, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w10 {
+  font-size: 550%;
+}
+
+/* line 31, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w9 {
+  font-size: 500%;
+}
+
+/* line 32, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w8 {
+  font-size: 450%;
+}
+
+/* line 33, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w7 {
+  font-size: 400%;
+}
+
+/* line 34, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w6 {
+  font-size: 350%;
+}
+
+/* line 35, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w5 {
+  font-size: 300%;
+}
+
+/* line 36, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w4 {
+  font-size: 250%;
+}
+
+/* line 37, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w3 {
+  font-size: 200%;
+}
+
+/* line 38, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w2 {
+  font-size: 150%;
+}
+
+/* line 39, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w1 {
+  font-size: 100%;
+}
+
+/* colors */
+/* line 42, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud {
+  color: #09f;
+}
+
+/* line 43, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud a {
+  color: inherit;
+}
+
+/* line 44, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud a:hover {
+  color: #0df;
+}
+
+/* line 45, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud a:hover {
+  color: #0cf;
+}
+
+/* line 46, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w10 {
+  color: #0cf;
+}
+
+/* line 47, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w9 {
+  color: #0cf;
+}
+
+/* line 48, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w8 {
+  color: #0cf;
+}
+
+/* line 49, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w7 {
+  color: #39d;
+}
+
+/* line 50, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w6 {
+  color: #90c5f0;
+}
+
+/* line 51, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w5 {
+  color: #90a0dd;
+}
+
+/* line 52, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w4 {
+  color: #90c5f0;
+}
+
+/* line 53, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w3 {
+  color: #a0ddff;
+}
+
+/* line 54, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w2 {
+  color: #99ccee;
+}
+
+/* line 55, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w1 {
+  color: #aab5f0;
+}
+
 /* line 3, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs {
   width: 695px;

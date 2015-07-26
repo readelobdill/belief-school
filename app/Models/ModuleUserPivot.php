@@ -3,10 +3,12 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class ModuleUser extends Model {
+class ModuleUserPivot extends Pivot {
     protected $table = 'module_user';
     protected $dates = ['created_at', 'updated_at', 'completed_at'];
-
+    public function __construct(Model $parent, $attributes, $table, $exists = false) {
+        parent::__construct($parent, $attributes, $table, $exists);
+    }
 
     public function user() {
         return $this->belongsTo('App\Models\User');
@@ -21,7 +23,7 @@ class ModuleUser extends Model {
     public function addTags(array $tags) {
         $data = $this->data;
         if(empty($data)) {
-            $data = [];
+            $this->data = [];
         }
         $data = array_merge($data, $tags);
         $this->data = $data;

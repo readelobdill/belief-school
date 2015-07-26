@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container dashboard-module">
         <div class="inner">
             <div class="content">
                 <header>
@@ -15,20 +15,26 @@
                     </p>
                 </header>
                 <ul class="module-list">
-                    @include('app.dashboard.modules.home', ['module' => $module])
+                    @include('app.dashboard.modules.home', ['home' => $modules[0], 'welcome' => isset($modules[1]) ? $modules[1] : false])
                     @foreach($modules as $module)
                         @if($module->slug === 'home' || $module->slug === 'welcome')
                             <?php continue; ?>
                         @else
-                            <li class="module-{{ $module->slug }}">
-                                <div class="header">
-                                    <h2>Module {{$module->step + 1}} - {{$module->name}}</h2>
-                                    <div class="options">
-                                        @include('app.dasboard.module-options.'.$module->slug, ['module' => $module])
+                            @if($module->pivot && $module->pivot->complete)
+                                <li class="module-{{ $module->slug }} is-unlocked is-complete" data-type="{{$module->slug}}">
+                                    <div class="header">
+                                        <h2>Module {{$module->order - 1}} - {{$module->name}}</h2>
+                                        <div class="options">
+                                            @include('app.dashboard.module-options.'.$module->slug, ['module' => $module])
+                                        </div>
                                     </div>
-                                </div>
-                                @include('app.dashboard.modules.'.$module->slug, ['module' => $module])
-                            </li>
+                                    @include('app.dashboard.modules.'.$module->slug, ['module' => $module])
+                                </li>
+                            @elseif($module->pivot && !$module->pivot->complete)
+                                <li class="module-{{ $module->slug }} is-not-complete is-unlocked"></li>
+                            @else
+                                <li class="module-{{ $module->slug }} is-locked"></li>
+                            @endif
 
                         @endif
                     @endforeach

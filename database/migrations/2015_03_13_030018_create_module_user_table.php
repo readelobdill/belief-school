@@ -21,7 +21,9 @@ class CreateModuleUserTable extends Migration {
             $table->text('data');
 			$table->integer('part');
             $table->boolean('complete')->default(false);
+			$table->string('secret', 50);
 			$table->timestamp('completed_at');
+
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('module_id')->references('id')->on('modules');
 
