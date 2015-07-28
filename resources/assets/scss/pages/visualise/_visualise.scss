@@ -176,6 +176,22 @@
 				}
 			}
 		}
+		.loader {
+			display:none;
+			width: 62px;
+			height: 62px;
+			line-height: 62px;
+			text-align: center;
+			background: $lightRed;
+		}
+		&.is-loading {
+			.loader {
+				display:block;
+			}
+			.camera-icon {
+				display:none;
+			}
+		}
 	}
 }
 

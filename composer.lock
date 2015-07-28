@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ba3f2a92a87df93c54612b844ff08d3f",
+    "hash": "9c58c5e2e5baacef25737553d76c22bf",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",

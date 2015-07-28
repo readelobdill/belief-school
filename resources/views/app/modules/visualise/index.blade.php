@@ -13,10 +13,10 @@
         <section class="i-am module-section has-container has-text" data-type="Text" data-part="3">
             @include('app/modules/visualise/intro')
         </section>
-        <section class="dreamboard module-section has-container" data-type="Dreamboard" data-part="4">
+        <section class="dreamboard module-section has-container" data-type="Dreamboard" data-part="4" data-step="1">
             @include('app/modules/visualise/dreamboard')
         </section>
-        <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4" data-step="1">
+        <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4" data-step="2">
             @include('app/modules/visualise/congrats')
         </section>
     </div>

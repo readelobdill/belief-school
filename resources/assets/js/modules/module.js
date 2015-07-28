@@ -2,6 +2,8 @@ import Video from "modules/video";
 import createSection from 'modules/module-section-factory';
 import $ from 'jquery';
 
+let $body = $('body');
+
 class Module {
     constructor(container) {
         this.container = $(container);
@@ -29,6 +31,7 @@ class Module {
         this.goToSection(this.currentSection - 1);
     }
     goToSection(section) {
+        $body.attr('data-current-section', section);
         if(this.currentSection !== section && this.sections[section]) {
             if(this.sections[this.currentSection]) {
                return this.sections[this.currentSection].close().then(() => {
@@ -40,6 +43,7 @@ class Module {
                 return this.sections[this.currentSection].open();
             }
         }
+
     }
 
     setupEventListeners() {

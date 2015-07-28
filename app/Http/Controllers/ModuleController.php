@@ -7,6 +7,8 @@ use Carbon\Carbon;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use stojg\crop\CropBalanced;
+use stojg\crop\CropEntropy;
 
 class ModuleController extends Controller {
 
@@ -28,10 +30,19 @@ class ModuleController extends Controller {
         if(!$module->free && !$this->auth->user()->paid) {
             abort(404);
         }
-        $moduleUser = $this->auth
-            ->user()
-            ->modules()
-            ->where('modules.id', $module->id)->first();
+
+        if($module->slug === 'home' && !$this->auth->check()) {
+            $moduleUser = false;
+        } else if($this->auth->check()) {
+            $moduleUser = $this->auth
+                ->user()
+                ->modules()
+                ->where('modules.id', $module->id)->first();
+        } else {
+            return redirect()->guest('auth/login');
+        }
+
+
         $requiredModule = null;
         if(!empty($module->requiredModule)) {
             $requiredModule = $this->auth->user()->modules()->where('modules.id', $module->requiredModule->id)->first();
@@ -101,6 +112,19 @@ class ModuleController extends Controller {
     }
 
 
+    public function share($secret) {
+        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
+
+        if(empty($moduleUser)) {
+            abort(404);
+        }
+        $module = $moduleUser->module;
+        $module->pivot = $moduleUser;
+
+
+        return view('app.share-modules.'.$moduleUser->module->slug, ['module' => $module, 'page' => 'share-'.$moduleUser->module->slug]);
+    }
+
 
     public function updateModule($module) {
         $now = new Carbon();
@@ -153,10 +177,17 @@ class ModuleController extends Controller {
                     $file = $this->request->file('image');
                     $fileName = Str::random(32).'.'.$file->guessExtension();
                     $file->move(public_path('uploads/dreamboard/'.$this->auth->user()->id), $fileName);
+                    $cropper = new CropBalanced(public_path('uploads/dreamboard/'.$this->auth->user()->id.'/'.$fileName));
+                    $croppedImage = $cropper->resizeAndCrop(390,258);
+                    $croppedImage->writeImage(public_path('uploads/dreamboard/'.$this->auth->user()->id.'/'.$fileName));
                     $moduleUser->addImage($fileName, $this->request->input('name'));
                 }
+                if(count(get_object_vars($moduleUser->data)) == 1) {
+                    $moduleUser->step = 1;
+                }
+
                 if(count(get_object_vars($moduleUser->data)) == 13 && !$this->request->file('image')) {
-                    $moduleUser->step++;
+                    $moduleUser->step = 2;
                 }
 
                 $moduleUser->save();

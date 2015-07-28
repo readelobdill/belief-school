@@ -35,6 +35,8 @@ Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@ind
 Route::get('tagcloud/{secret}', ['as' => 'tagcloud', 'uses' => 'ModuleController@tagCloud']);
 Route::post('tagcloud/{secret}', ['as' => 'tags.submit', 'uses' => 'ModuleController@tagCloudSubmit']);
 
+Route::get('share/{secret}', ['as' => 'module.share', 'uses' => 'ModuleController@share']);
+
 
 Route::bind('module', function($value) {
     return \App\Models\Module::with(['requiredModule'])->where('slug', $value)->first();

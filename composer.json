@@ -9,7 +9,7 @@
         "lanz/laravel-commentable": "~2.0",
 		"barryvdh/laravel-ide-helper": "~2.0",
 		"doctrine/dbal": "~2.5",
-		"stojg/crop": "~1.2",
+		"stojg/crop": "^1.2",
 		"omnipay/paymentexpress": "~2.1",
 		"misd/linkify": "^1.1"
 	},

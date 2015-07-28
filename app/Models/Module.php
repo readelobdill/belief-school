@@ -6,7 +6,13 @@ class Module extends Model {
 
     protected $fillable = ['name', 'order', 'module_id', 'slug', 'total_parts', 'free'];
 
-
+    /**
+     * @param $slug
+     * @return Module
+     */
+    public static function findBySlug($slug) {
+        return static::where('slug', $slug)->first();
+    }
 
     public static function updateOrder($order) {
         foreach($order as $key => $id) {

@@ -1730,8 +1730,25 @@ div.jqcloud span.w1 {
 .board .image .camera-icon svg path {
   fill: white;
 }
+/* line 179, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.board .image .loader {
+  display: none;
+  width: 62px;
+  height: 62px;
+  line-height: 62px;
+  text-align: center;
+  background: #f16060;
+}
+/* line 188, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.board .image.is-loading .loader {
+  display: block;
+}
+/* line 191, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.board .image.is-loading .camera-icon {
+  display: none;
+}
 
-/* line 182, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 198, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social {
   position: relative;
   z-index: 20;
@@ -1741,7 +1758,7 @@ div.jqcloud span.w1 {
   margin-top: 40px;
   visibility: hidden;
 }
-/* line 190, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 206, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a {
   display: inline-block;
   font-size: 12px;
@@ -1752,15 +1769,15 @@ div.jqcloud span.w1 {
   vertical-align: top;
   font-weight: normal;
 }
-/* line 200, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 216, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a:hover {
   color: #f16060;
 }
-/* line 203, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 219, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a:hover svg path {
   fill: #f16060;
 }
-/* line 208, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 224, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a svg {
   height: 17px;
   display: inline-block;
