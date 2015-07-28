@@ -1,15 +1,28 @@
+// css
 @import "compass/reset";
 @import "compass";
+@import "breakpoint";
 
-@import "core/settings";
+// reset
+@import "core/reset";
+
+// core
+@import "core/settings"; // needs to be first.
+
 @import "core/base";
 @import "core/fonts";
-
 @import "core/forms";
+@import "core/helper";
 @import "core/links";
 @import "core/module";
+@import "core/typography";
+
+// ui elements
 @import "ui/burger";
+@import "ui/buttons";
 @import "ui/menu";
+
+// pages
 @import "pages/home/home";
 @import "pages/welcome/welcome";
 @import "pages/boomerang/boomerang";
@@ -18,4 +31,6 @@
 @import "pages/you-to-you/you-to-you";
 @import "pages/gratitude/gratitude";
 @import "pages/sustainable-change/sustainable-change";
+
+
 @import "forum/forum";

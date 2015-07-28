@@ -64,119 +64,159 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 1, ../../resources/assets/scss/core/_reset.scss */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+/* line 8, ../../resources/assets/scss/core/_reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* line 13, ../../resources/assets/scss/core/_reset.scss */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 20, ../../resources/assets/scss/core/_reset.scss */
+a {
+  text-decoration: none;
+}
+/* line 22, ../../resources/assets/scss/core/_reset.scss */
+a:active, a:focus {
+  outline: none;
+}
+
+/* line 28, ../../resources/assets/scss/core/_reset.scss */
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+/* line 32, ../../resources/assets/scss/core/_reset.scss */
+button:focus {
+  outline: none;
+}
+
+/* line 37, ../../resources/assets/scss/core/_reset.scss */
+form {
+  margin: 0;
+}
+
+/* line 41, ../../resources/assets/scss/core/_reset.scss */
+input,
+textarea {
+  padding: 0;
+  border: 0;
+  -webkit-appearance: none;
+}
+/* line 46, ../../resources/assets/scss/core/_reset.scss */
+input:focus,
+textarea:focus {
+  outline: none;
+}
+/* line 49, ../../resources/assets/scss/core/_reset.scss */
+input::-ms-clear,
+textarea::-ms-clear {
+  display: none;
+}
+
+/* line 54, ../../resources/assets/scss/core/_reset.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 58, ../../resources/assets/scss/core/_reset.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 63, ../../resources/assets/scss/core/_reset.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 68, ../../resources/assets/scss/core/_reset.scss */
+img,
+iframe {
+  vertical-align: middle;
+}
+
+/* line 73, ../../resources/assets/scss/core/_reset.scss */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 78, ../../resources/assets/scss/core/_reset.scss */
+small {
+  font-size: em(16);
+}
+
+/* line 82, ../../resources/assets/scss/core/_reset.scss */
+blockquote {
+  margin: 0;
+}
+
+/* line 86, ../../resources/assets/scss/core/_reset.scss */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 92, ../../resources/assets/scss/core/_reset.scss */
+address {
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: normal;
+  margin: 0;
+}
+
 /* line 1, ../../resources/assets/scss/core/_base.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 7, ../../resources/assets/scss/core/_base.scss */
+/* line 5, ../../resources/assets/scss/core/_base.scss */
+body {
+  overflow-y: scroll;
+  color: #252e33;
+  font-size: 17px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 15, ../../resources/assets/scss/core/_base.scss */
 [data-arc] :first-child {
   font-weight: 900;
 }
-/* line 10, ../../resources/assets/scss/core/_base.scss */
+/* line 18, ../../resources/assets/scss/core/_base.scss */
 [data-arc] :last-child {
   font-weight: 900;
 }
 
-/* line 16, ../../resources/assets/scss/core/_base.scss */
-.title {
-  font-size: 30px;
-  line-height: 37px;
-  color: #252e33;
-  text-align: center;
-  font-family: 'SantEliaRoughAlt-BoldThr', serif;
-  padding: 0 20px 20px 20px;
-  margin-bottom: 22px;
-  position: relative;
-}
-/* line 25, ../../resources/assets/scss/core/_base.scss */
-.title:after {
-  width: 171px;
-  border-bottom: 1px solid #1f2020;
-  content: "";
-  display: block;
-  margin: 22px auto 0 auto;
-}
-/* line 33, ../../resources/assets/scss/core/_base.scss */
-.title > span {
-  display: block;
-  font-size: 13px;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-}
-
-/* line 42, ../../resources/assets/scss/core/_base.scss */
+/* line 23, ../../resources/assets/scss/core/_base.scss */
 h1.plain {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
 }
 
-/* line 48, ../../resources/assets/scss/core/_base.scss */
-.button {
-  border: 0;
-  text-transform: uppercase;
-  padding: 20px 35px 20px 20px;
-  background: #f16060;
-  color: white;
-  font-weight: bold;
-  position: relative;
-  outline: 0;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-/* line 62, ../../resources/assets/scss/core/_base.scss */
-.button:hover {
-  background-color: #d85656;
-  color: white;
-}
-/* line 67, ../../resources/assets/scss/core/_base.scss */
-.button:after, .button:before {
-  position: absolute;
-  pointer-events: none;
-  width: 10px;
-  height: 2px;
-  background-color: white;
-  top: 50%;
-  right: 20px;
-  content: "";
-  transform-origin: 100% 50%;
-}
-/* line 80, ../../resources/assets/scss/core/_base.scss */
-.button:after {
-  transform: rotate(45deg);
-}
-/* line 83, ../../resources/assets/scss/core/_base.scss */
-.button:before {
-  transform: rotate(-45deg);
-}
-/* line 88, ../../resources/assets/scss/core/_base.scss */
-.button.success {
-  background: none;
-  border: 3px solid #f16060;
-  color: #f16060;
-  padding-right: 45px;
-}
-/* line 94, ../../resources/assets/scss/core/_base.scss */
-.button.success:after, .button.success:before {
-  background: #f16060;
-  margin-top: 6px;
-  right: 30px;
-}
-/* line 100, ../../resources/assets/scss/core/_base.scss */
-.button.success:after {
-  transform: rotate(45deg);
-  width: 10px;
-}
-/* line 104, ../../resources/assets/scss/core/_base.scss */
-.button.success:before {
-  transform: rotate(135deg);
-  width: 18px;
-}
-
-/* line 111, ../../resources/assets/scss/core/_base.scss */
+/* line 29, ../../resources/assets/scss/core/_base.scss */
 .dots {
   background: url('../img/icons/bullets.svg?1436844418') no-repeat top left;
   width: 70px;
@@ -185,22 +225,7 @@ h1.plain {
   margin: 0 auto;
 }
 
-/* line 119, ../../resources/assets/scss/core/_base.scss */
-strong {
-  font-weight: bold;
-}
-
-/* line 122, ../../resources/assets/scss/core/_base.scss */
-em {
-  font-style: italic;
-}
-
-/* line 126, ../../resources/assets/scss/core/_base.scss */
-p.center {
-  text-align: center;
-}
-
-/* line 130, ../../resources/assets/scss/core/_base.scss */
+/* line 37, ../../resources/assets/scss/core/_base.scss */
 .auth {
   position: fixed;
   top: 0;
@@ -209,7 +234,7 @@ p.center {
   height: 50px;
   line-height: 50px;
 }
-/* line 137, ../../resources/assets/scss/core/_base.scss */
+/* line 45, ../../resources/assets/scss/core/_base.scss */
 .auth a {
   color: #252e33;
   text-decoration: none;
@@ -221,27 +246,34 @@ p.center {
   src: url('../fonts/2E98A4_0_0.eot?1436093214');
   src: url('../fonts/2E98A4_0_0.eot?&1436093214#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1436093222') format("woff2"), url('../fonts/2E98A4_0_0.woff?1436093214') format("woff"), url('../fonts/2E98A4_0_0.ttf?1436093212') format("truetype");
 }
-/* line 8, ../../resources/assets/scss/core/_fonts.scss */
-.title > span, input[type=text], input[type=email], input[type=password], textarea, body {
+/* line 12, ../../resources/assets/scss/core/_fonts.scss */
+body, input[type=text], input[type=email], input[type=password], textarea, .title > span {
   font-family: "brandon-grotesque", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?unlzf5");
+  src: url("../fonts/icomoon.eot?#iefixunlzf5") format("embedded-opentype"), url("../fonts/icomoon.ttf?unlzf5") format("truetype"), url("../fonts/icomoon.woff?unlzf5") format("woff"), url("../fonts/icomoon.svg?unlzf5#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /* line 1, ../../resources/assets/scss/core/_forms.scss */
 input[type=text], input[type=email], input[type=password], textarea {
   background: #f16060;
   border: 0;
   display: block;
-  color: white;
+  font-weight: 500;
+  color: #ffffff;
   box-shadow: inset 0 0 1px 4px rgba(152, 32, 26, 0);
   transition: background 0.2s ease;
 }
-/* line 9, ../../resources/assets/scss/core/_forms.scss */
+/* line 10, ../../resources/assets/scss/core/_forms.scss */
 input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus {
   outline: 0;
-  background: #252e33;
 }
 
-/* line 14, ../../resources/assets/scss/core/_forms.scss */
+/* line 15, ../../resources/assets/scss/core/_forms.scss */
 input[type=text], input[type=email], input[type=password] {
   width: 250px;
   font-size: 17px;
@@ -267,21 +299,21 @@ input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-pl
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 30, ../../resources/assets/scss/core/_forms.scss */
+/* line 29, ../../resources/assets/scss/core/_forms.scss */
 .checkbox-list li {
   margin-bottom: 20px;
 }
 
-/* line 35, ../../resources/assets/scss/core/_forms.scss */
+/* line 34, ../../resources/assets/scss/core/_forms.scss */
 form .actions {
   margin-top: 60px;
 }
 
-/* line 40, ../../resources/assets/scss/core/_forms.scss */
+/* line 39, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio] {
   display: none;
 }
-/* line 42, ../../resources/assets/scss/core/_forms.scss */
+/* line 41, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio] + label {
   position: relative;
   padding-left: 45px;
@@ -297,7 +329,7 @@ input[type=radio] + label:before, input[type=radio] + label:after {
   left: 0;
   top: 0;
 }
-/* line 55, ../../resources/assets/scss/core/_forms.scss */
+/* line 56, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio] + label:after {
   transform-origin: 50% 50%;
   transform: scale(0, 0);
@@ -310,24 +342,25 @@ input[type=radio] + label:after {
   content: "";
   transition: transform 0.3s ease;
 }
-/* line 67, ../../resources/assets/scss/core/_forms.scss */
+/* line 69, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio] + label:before {
   content: "";
   border: 4px solid #f16060;
   width: 26px;
   height: 26px;
   border-radius: 34px;
+  padding: 13px;
 }
-/* line 77, ../../resources/assets/scss/core/_forms.scss */
+/* line 80, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio]:checked + label {
   font-weight: bold;
 }
-/* line 79, ../../resources/assets/scss/core/_forms.scss */
+/* line 82, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio]:checked + label:after {
   transform: scale(1, 1);
 }
 
-/* line 91, ../../resources/assets/scss/core/_forms.scss */
+/* line 89, ../../resources/assets/scss/core/_forms.scss */
 textarea {
   width: 500px;
   height: 130px;
@@ -353,11 +386,32 @@ textarea::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 103, ../../resources/assets/scss/core/_forms.scss */
+/* line 101, ../../resources/assets/scss/core/_forms.scss */
 .form-row {
   position: relative;
 }
-/* line 105, ../../resources/assets/scss/core/_forms.scss */
+/* line 104, ../../resources/assets/scss/core/_forms.scss */
+.form-row label {
+  position: absolute;
+  color: #ffffff;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  top: 50%;
+  font-weight: 500;
+  color: whitesmoke;
+  transition: all 0.2s ease;
+  transform: translateY(-50%);
+}
+/* line 117, ../../resources/assets/scss/core/_forms.scss */
+.form-row input:focus ~ label,
+.form-row input.has-content ~ label {
+  top: 10px;
+  left: 6px;
+  right: inherit;
+  transform: scale(0.85);
+}
+/* line 126, ../../resources/assets/scss/core/_forms.scss */
 .form-row .parsley-errors-list {
   position: absolute;
   left: 100%;
@@ -370,17 +424,18 @@ textarea::-webkit-input-placeholder {
   white-space: nowrap;
   margin-left: 20px;
   background: white;
+  font-size: 15px;
   display: none;
 }
-/* line 119, ../../resources/assets/scss/core/_forms.scss */
+/* line 141, ../../resources/assets/scss/core/_forms.scss */
 .form-row .parsley-errors-list.filled {
   display: block;
 }
-/* line 123, ../../resources/assets/scss/core/_forms.scss */
+/* line 145, ../../resources/assets/scss/core/_forms.scss */
 .form-row .parsley-errors-list li {
   display: block;
 }
-/* line 127, ../../resources/assets/scss/core/_forms.scss */
+/* line 149, ../../resources/assets/scss/core/_forms.scss */
 .form-row .parsley-errors-list:after, .form-row .parsley-errors-list:before {
   right: 100%;
   top: 50%;
@@ -391,28 +446,28 @@ textarea::-webkit-input-placeholder {
   position: absolute;
   pointer-events: none;
 }
-/* line 138, ../../resources/assets/scss/core/_forms.scss */
+/* line 160, ../../resources/assets/scss/core/_forms.scss */
 .form-row .parsley-errors-list:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 9px;
   margin-top: -9px;
 }
-/* line 144, ../../resources/assets/scss/core/_forms.scss */
+/* line 167, ../../resources/assets/scss/core/_forms.scss */
 .form-row .parsley-errors-list:before {
   border-color: rgba(174, 174, 174, 0);
   border-right-color: #aeaeae;
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 156, ../../resources/assets/scss/core/_forms.scss */
+/* line 179, ../../resources/assets/scss/core/_forms.scss */
 .form-row .arrow_box:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 162, ../../resources/assets/scss/core/_forms.scss */
+/* line 185, ../../resources/assets/scss/core/_forms.scss */
 .form-row .arrow_box:before {
   border-color: rgba(174, 174, 174, 0);
   border-right-color: #aeaeae;
@@ -422,12 +477,23 @@ textarea::-webkit-input-placeholder {
 
 /* line 1, ../../resources/assets/scss/core/_links.scss */
 a {
-  font-weight: bold;
   color: #f16060;
+  transition: color 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955), border 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 /* line 4, ../../resources/assets/scss/core/_links.scss */
 a:hover {
   color: #98201a;
+  border-color: #98201a;
+}
+
+/* line 11, ../../resources/assets/scss/core/_links.scss */
+p a {
+  font-weight: bold;
+  border-bottom: 2px solid #f16060;
+}
+/* line 14, ../../resources/assets/scss/core/_links.scss */
+p a:hover {
+  border-color: #98201a;
 }
 
 /* line 2, ../../resources/assets/scss/core/_module.scss */
@@ -445,12 +511,12 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
-/* line 17, ../../resources/assets/scss/core/_module.scss */
+/* line 16, ../../resources/assets/scss/core/_module.scss */
 .module > .module-section.has-container {
   padding: 50px;
   z-index: 2;
 }
-/* line 20, ../../resources/assets/scss/core/_module.scss */
+/* line 19, ../../resources/assets/scss/core/_module.scss */
 .module > .module-section.has-container > .inner {
   width: 100%;
   height: 100%;
@@ -460,87 +526,34 @@ a:hover {
   overflow: hidden;
 }
 
-/* line 36, ../../resources/assets/scss/core/_module.scss */
+/* line 32, ../../resources/assets/scss/core/_module.scss */
 .has-text {
   padding: 40px 40px;
 }
-/* line 38, ../../resources/assets/scss/core/_module.scss */
+/* line 36, ../../resources/assets/scss/core/_module.scss */
 .has-text.module-section > .inner {
   display: block;
 }
-/* line 46, ../../resources/assets/scss/core/_module.scss */
+/* line 42, ../../resources/assets/scss/core/_module.scss */
 .has-text > .inner .content {
   width: 445px;
   margin: 0 auto;
   font-size: 17px;
   line-height: 26px;
   color: #252e33;
-  padding: 20px 0 60px 0;
+  padding: 40px 0 60px 0;
 }
-/* line 58, ../../resources/assets/scss/core/_module.scss */
-.has-text h1 > span {
-  margin-bottom: 25px;
-}
-/* line 63, ../../resources/assets/scss/core/_module.scss */
-.has-text h2 {
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-/* line 70, ../../resources/assets/scss/core/_module.scss */
-.has-text p {
-  opacity: 0.8;
-  margin-bottom: 32px;
-}
-/* line 75, ../../resources/assets/scss/core/_module.scss */
-.has-text .bold {
-  font-weight: bold;
-}
-/* line 79, ../../resources/assets/scss/core/_module.scss */
+/* line 52, ../../resources/assets/scss/core/_module.scss */
 .has-text .dots {
   margin-bottom: 60px;
   margin-top: 60px;
 }
-/* line 84, ../../resources/assets/scss/core/_module.scss */
-.has-text blockquote {
-  color: #f16060;
-  font-size: 21px;
-  margin-bottom: 32px;
-  padding: 23px 23px 23px 23px;
-  border: 2px solid transparent;
-  border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 70%);
-  border-image-slice: 1;
-  font-weight: bold;
-}
-/* line 94, ../../resources/assets/scss/core/_module.scss */
-.has-text blockquote.multiple {
-  border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 90%);
-  border-image-slice: 1;
-}
-/* line 97, ../../resources/assets/scss/core/_module.scss */
-.has-text blockquote.multiple li {
-  border-bottom: 1px solid rgba(241, 96, 96, 0.2);
-  padding-bottom: 18px;
-  margin-bottom: 18px;
-}
-/* line 101, ../../resources/assets/scss/core/_module.scss */
-.has-text blockquote.multiple li:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-/* line 108, ../../resources/assets/scss/core/_module.scss */
-.has-text blockquote.dark {
-  border-image: linear-gradient(23deg, rgba(37, 46, 51, 0.8) 0%, rgba(37, 46, 51, 0) 70%);
-  border-image-slice: 1;
-  color: #252e33;
-}
-/* line 117, ../../resources/assets/scss/core/_module.scss */
+/* line 57, ../../resources/assets/scss/core/_module.scss */
 .has-text .actions {
   text-align: center;
 }
 
-/* line 122, ../../resources/assets/scss/core/_module.scss */
+/* line 62, ../../resources/assets/scss/core/_module.scss */
 .next-section {
   display: block;
   width: 50px;
@@ -555,49 +568,42 @@ a:hover {
   border: 0;
   transform-origin: 50% 50%;
 }
-/* line 136, ../../resources/assets/scss/core/_module.scss */
+/* line 76, ../../resources/assets/scss/core/_module.scss */
 .next-section svg {
   width: 100%;
   height: 100%;
 }
-/* line 139, ../../resources/assets/scss/core/_module.scss */
+/* line 79, ../../resources/assets/scss/core/_module.scss */
 .next-section svg path {
   fill: white;
   transition: fill 0.3s ease;
 }
 
-/* line 151, ../../resources/assets/scss/core/_module.scss */
+/* line 88, ../../resources/assets/scss/core/_module.scss */
 .congrats-section h1 {
   margin-bottom: 40px;
-  line-height: 26px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
 }
-/* line 155, ../../resources/assets/scss/core/_module.scss */
+/* line 94, ../../resources/assets/scss/core/_module.scss */
 .congrats-section p {
   max-width: 442px;
   text-align: center;
   margin-bottom: 40px;
   line-height: 26px;
 }
-/* line 161, ../../resources/assets/scss/core/_module.scss */
+/* line 101, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .actions {
   text-align: center;
   margin: 40px 0;
 }
 
-/* line 167, ../../resources/assets/scss/core/_module.scss */
-.call-to-action {
-  color: #f16060;
-  font-weight: bold;
-  text-align: center;
-  font-size: 25px;
-}
-
-/* line 176, ../../resources/assets/scss/core/_module.scss */
+/* line 107, ../../resources/assets/scss/core/_module.scss */
 .actions {
   text-align: center;
 }
 
-/* line 179, ../../resources/assets/scss/core/_module.scss */
+/* line 111, ../../resources/assets/scss/core/_module.scss */
 .down-arrow {
   border: 0;
   background: none;
@@ -607,17 +613,17 @@ a:hover {
   display: inline-block;
   cursor: pointer;
 }
-/* line 188, ../../resources/assets/scss/core/_module.scss */
+/* line 120, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg {
   width: 100%;
   height: 100%;
 }
-/* line 191, ../../resources/assets/scss/core/_module.scss */
+/* line 123, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg path {
   fill: #f16060;
 }
 
-/* line 197, ../../resources/assets/scss/core/_module.scss */
+/* line 129, ../../resources/assets/scss/core/_module.scss */
 .indicator {
   position: fixed;
   top: 50%;
@@ -628,44 +634,148 @@ a:hover {
   z-index: 99;
   display: flex;
 }
-/* line 207, ../../resources/assets/scss/core/_module.scss */
+/* line 139, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon {
-  width: 50px;
+  width: 50px !important;
   height: 50px;
   background: #f16060;
   padding: 8px;
 }
-/* line 212, ../../resources/assets/scss/core/_module.scss */
+/* line 145, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 215, ../../resources/assets/scss/core/_module.scss */
+/* line 148, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg path {
   fill: white;
 }
-/* line 221, ../../resources/assets/scss/core/_module.scss */
+/* line 154, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon {
-  width: 120px;
+  width: 110px;
   height: 50px;
   border: 2px solid #f16060;
+  border-right: 0;
   padding: 12px;
   font-size: 14px;
   color: #f16060;
   cursor: pointer;
   text-decoration: none;
-  font-weight: normal;
+  font-weight: 500;
 }
-/* line 232, ../../resources/assets/scss/core/_module.scss */
+/* line 166, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 238, ../../resources/assets/scss/core/_module.scss */
+/* line 172, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
+}
+/* line 177, ../../resources/assets/scss/core/_module.scss */
+.indicator .forum-icon span {
+  line-height: 21px;
+}
+
+/* line 1, ../../resources/assets/scss/core/_typography.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 5, ../../resources/assets/scss/core/_typography.scss */
+em {
+  font-style: italic;
+}
+
+/* line 9, ../../resources/assets/scss/core/_typography.scss */
+p {
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+/* line 15, ../../resources/assets/scss/core/_typography.scss */
+p.center {
+  text-align: center;
+}
+
+/* line 20, ../../resources/assets/scss/core/_typography.scss */
+mark {
+  background-color: #252E33;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* line 26, ../../resources/assets/scss/core/_typography.scss */
+.title {
+  font-size: 30px;
+  line-height: 37px;
+  color: #252e33;
+  text-align: center;
+  font-family: 'SantEliaRoughAlt-BoldThr', serif;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 22px;
+  position: relative;
+}
+/* line 36, ../../resources/assets/scss/core/_typography.scss */
+.title:after {
+  width: 171px;
+  border-bottom: 1px solid #1f2020;
+  content: "";
+  display: block;
+  margin: 22px auto 0 auto;
+}
+/* line 44, ../../resources/assets/scss/core/_typography.scss */
+.title > span {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* line 53, ../../resources/assets/scss/core/_typography.scss */
+blockquote {
+  color: #f16060;
+  font-size: 21px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 32px;
+  padding: 23px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 70%);
+  border-image-slice: 1;
+}
+/* line 64, ../../resources/assets/scss/core/_typography.scss */
+blockquote.multiple {
+  border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 90%);
+  border-image-slice: 1;
+}
+/* line 67, ../../resources/assets/scss/core/_typography.scss */
+blockquote.multiple li {
+  border-bottom: 1px solid rgba(241, 96, 96, 0.2);
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+/* line 71, ../../resources/assets/scss/core/_typography.scss */
+blockquote.multiple li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+/* line 78, ../../resources/assets/scss/core/_typography.scss */
+blockquote.dark {
+  border-image: linear-gradient(23deg, rgba(37, 46, 51, 0.8) 0%, rgba(37, 46, 51, 0) 70%);
+  border-image-slice: 1;
+  color: #252e33;
+}
+
+/* line 85, ../../resources/assets/scss/core/_typography.scss */
+.call-to-action {
+  color: #f16060;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
 }
 
 /* line 1, ../../resources/assets/scss/ui/_burger.scss */
@@ -706,6 +816,68 @@ a:hover {
   display: none;
 }
 
+/* line 1, ../../resources/assets/scss/ui/_buttons.scss */
+.button {
+  position: relative;
+  text-transform: uppercase;
+  padding: 20px 35px 20px 20px;
+  letter-spacing: 0.02em;
+  background: #f16060;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+/* line 13, ../../resources/assets/scss/ui/_buttons.scss */
+.button:hover {
+  background-color: #d85656;
+  color: white;
+}
+/* line 18, ../../resources/assets/scss/ui/_buttons.scss */
+.button:after, .button:before {
+  position: absolute;
+  pointer-events: none;
+  width: 10px;
+  height: 2px;
+  background-color: white;
+  top: 50%;
+  right: 20px;
+  content: "";
+  transform-origin: 100% 50%;
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), width 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+/* line 31, ../../resources/assets/scss/ui/_buttons.scss */
+.button:after {
+  transform: rotate(45deg);
+}
+/* line 35, ../../resources/assets/scss/ui/_buttons.scss */
+.button:before {
+  transform: rotate(-45deg);
+}
+/* line 39, ../../resources/assets/scss/ui/_buttons.scss */
+.button.success {
+  background: none;
+  border: 3px solid #f16060;
+  color: #f16060;
+  padding-right: 45px;
+}
+/* line 45, ../../resources/assets/scss/ui/_buttons.scss */
+.button.success:after, .button.success:before {
+  background: #f16060;
+  margin-top: 6px;
+  right: 30px;
+}
+/* line 52, ../../resources/assets/scss/ui/_buttons.scss */
+.button.success:after {
+  transform: rotate(45deg);
+  width: 10px;
+}
+/* line 56, ../../resources/assets/scss/ui/_buttons.scss */
+.button.success:before {
+  transform: rotate(135deg);
+  width: 18px;
+}
+
 /* line 1, ../../resources/assets/scss/ui/_menu.scss */
 .menu {
   position: fixed;
@@ -718,31 +890,109 @@ a:hover {
   overflow: auto;
   display: none;
 }
-/* line 11, ../../resources/assets/scss/ui/_menu.scss */
+/* line 12, ../../resources/assets/scss/ui/_menu.scss */
 .menu nav {
   padding-left: 50px;
   margin-bottom: 60px;
 }
-/* line 14, ../../resources/assets/scss/ui/_menu.scss */
+/* line 16, ../../resources/assets/scss/ui/_menu.scss */
 .menu nav h2 {
   font-weight: bold;
   color: #aeaeae;
   text-transform: uppercase;
   margin-bottom: 33px;
 }
-/* line 23, ../../resources/assets/scss/ui/_menu.scss */
-.menu nav ul li {
+/* line 25, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li {
+  position: relative;
   font-size: 15px;
   color: #fbfbfb;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  padding-left: 30px;
+}
+/* line 32, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li:before {
+  content: '\e62e';
+  position: absolute;
+  font-family: 'icomoon';
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
+  left: 0;
+  top: -1px;
+}
+/* line 44, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li a {
+  color: #ffffff;
+  border-bottom: 0;
+}
+/* line 50, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-intro:before {
+  content: '\e62e';
+}
+/* line 56, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-account:before {
+  content: '\e613';
+}
+/* line 62, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-about:before {
+  content: '\e612';
+}
+/* line 68, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-contact:before {
+  content: '\e62d';
+}
+/* line 74, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-dash:before {
+  content: '\e618';
+}
+/* line 80, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-terms:before {
+  content: '\e627';
+}
+/* line 86, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-mod1:before {
+  content: '\e609';
+}
+/* line 92, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-mod2:before {
+  content: '\e60b';
+}
+/* line 98, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-mod3:before {
+  content: '\e60c';
+}
+/* line 104, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-mod4:before {
+  content: '\e60d';
+}
+/* line 110, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-mod5:before {
+  content: '\e60e';
+}
+/* line 116, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-mod6:before {
+  content: '\e60f';
+}
+/* line 122, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-mod7:before {
+  content: '\e610';
+}
+/* line 128, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-mod8:before {
+  content: '\e611';
+}
+/* line 134, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-mod9:before {
+  content: '\e611';
 }
 
-/* line 3, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 2, ../../resources/assets/scss/pages/home/_home.scss */
 .background-video > .inner {
   width: 100%;
   height: 100%;
 }
-/* line 8, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 7, ../../resources/assets/scss/pages/home/_home.scss */
 .background-video .display-video {
   position: absolute;
   top: 0;
@@ -750,70 +1000,57 @@ a:hover {
   min-width: 100%;
   min-height: 100%;
 }
-/* line 16, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 15, ../../resources/assets/scss/pages/home/_home.scss */
 .background-video .home-banner {
   z-index: 20;
   width: 700px;
 }
 
-/* line 28, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 22, ../../resources/assets/scss/pages/home/_home.scss */
 .intro-video {
   padding: 80px 40px;
 }
 
-/* line 38, ../../resources/assets/scss/pages/home/_home.scss */
-.account-creation {
-  padding: 40px;
-}
-/* line 43, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 32, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section {
   bottom: 60px;
 }
-/* line 46, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 35, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section svg path {
   fill: #f16060;
 }
-/* line 51, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 40, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section:hover svg path {
   fill: #98201a;
 }
-/* line 60, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 47, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content {
   width: 442px;
   text-align: center;
 }
-/* line 64, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 51, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content p {
   text-align: center;
   font-size: 17px;
   line-height: 23px;
   margin-bottom: 15px;
 }
-/* line 75, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 59, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation input {
   margin: 8px 0;
   height: 72px;
   width: 100%;
 }
 
-/* line 92, ../../resources/assets/scss/pages/home/_home.scss */
-body {
-  overflow-y: scroll;
-  color: #252e33;
-  font-size: 17px;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
 /* line 1, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions {
   padding: 40px 40px;
 }
-/* line 4, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 3, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions > .inner {
   overflow: hidden;
 }
-/* line 11, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 7, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question {
   position: absolute;
   top: 0;
@@ -825,56 +1062,45 @@ body {
   align-items: center;
   justify-content: center;
 }
-/* line 24, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 19, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content form {
   position: relative;
   display: inline-block;
 }
-/* line 27, ../../resources/assets/scss/pages/home/_questions.scss */
-.questions .question .content form .parsley-errors-list {
-  position: absolute;
-  bottom: 2px;
-  right: 5px;
-  color: white;
-  font-size: 14px;
-}
-/* line 35, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 24, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content p {
   text-align: center;
-  font-size: 17px;
-  line-height: 24px;
 }
-/* line 40, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 28, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls {
   text-align: center;
 }
-/* line 42, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 31, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls .age {
   font-size: 45px;
 }
-/* line 46, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 35, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] {
   display: none;
 }
-/* line 48, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 37, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label {
   position: relative;
-  padding-left: 40px;
+  padding: 9px 0 0 42px;
   text-transform: uppercase;
   color: #f16060;
   font-weight: 700;
-  padding-top: 7px;
   display: inline-block;
   margin: 0 30px;
   cursor: pointer;
 }
-/* line 58, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 47, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label:before, .questions .question .content .controls input[type=radio] + label:after {
   position: absolute;
   left: 0;
   top: 0;
 }
-/* line 63, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 53, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label:after {
   transform-origin: 50% 50%;
   transform: scale(0, 0);
@@ -887,19 +1113,20 @@ body {
   content: "";
   transition: transform 0.3s ease;
 }
-/* line 75, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 66, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label:before {
   content: "";
   border: 4px solid #f16060;
   width: 26px;
   height: 26px;
   border-radius: 34px;
+  padding: 13px;
 }
-/* line 86, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 78, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio]:checked + label:after {
   transform: scale(1, 1);
 }
-/* line 102, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 94, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question {
   display: block;
   width: 50px;
@@ -908,24 +1135,24 @@ body {
   bottom: 60px;
   left: 50%;
   margin-left: -25px;
-  opacity: 0.2;
+  opacity: 1;
   cursor: pointer;
 }
-/* line 112, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 104, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question svg {
   width: 100%;
   height: 100%;
 }
-/* line 115, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 107, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question svg path {
   fill: #f16060;
   transition: fill 0.3s ease;
 }
-/* line 122, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 114, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question:hover svg path {
   fill: #98201a;
 }
-/* line 131, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 123, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question-nav {
   position: absolute;
   top: 50%;
@@ -935,7 +1162,7 @@ body {
   z-index: 20;
   visibility: visible;
 }
-/* line 141, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 133, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions.question-0 .question-nav {
   visibility: hidden;
 }
@@ -1066,30 +1293,30 @@ ul.accordion li .answer {
   text-align: center;
   padding: 10px 0;
 }
-/* line 32, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 33, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li.is-open .toggle svg.collapse {
   transform: translateY(0px);
 }
-/* line 35, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 36, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li.is-open .toggle svg.expand {
   transform: translateY(50px);
 }
-/* line 39, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 40, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li.is-open .answer {
   display: block;
 }
-/* line 43, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 45, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion .answer {
   display: none;
 }
-/* line 46, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 49, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
   margin-bottom: 10px;
 }
-/* line 51, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 54, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 .toggle {
   width: 30px;
   height: 30px;
@@ -1103,7 +1330,7 @@ ul.accordion h2 .toggle {
   -webkit-user-select: none;
   user-select: none;
 }
-/* line 60, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 64, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 .toggle svg {
   width: 100%;
   height: 100%;
@@ -1111,13 +1338,18 @@ ul.accordion h2 .toggle svg {
   top: 0;
   left: 0;
 }
-/* line 67, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 71, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 .toggle svg.collapse {
   transform: translateY(-50px);
 }
-/* line 70, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 75, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 .toggle svg path {
   fill: #f16060;
+}
+
+/* line 85, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+.welcome-first-steps {
+  margin-top: 70px;
 }
 
 /* line 2, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
@@ -1348,32 +1580,32 @@ div.jqcloud span.w1 {
   color: #aab5f0;
 }
 
-/* line 3, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 1, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs {
   width: 695px;
   margin-left: -125px;
   margin-bottom: 30px;
 }
-/* line 7, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 5, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .beliefs {
   display: flex;
   justify-content: space-between;
   position: relative;
 }
-/* line 14, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 11, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief {
   width: 221px;
   height: 256px;
   position: relative;
   display: block;
 }
-/* line 22, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 17, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief label {
   position: absolute;
   top: 6px;
   left: 10px;
 }
-/* line 28, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 23, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief .icon {
   position: absolute;
   bottom: 16px;
@@ -1386,16 +1618,16 @@ div.jqcloud span.w1 {
   border: 0;
   padding: 0;
 }
-/* line 39, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 34, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief .icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 42, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 37, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief .icon svg path {
   fill: #f16060;
 }
-/* line 48, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 43, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief textarea {
   width: 100%;
   height: 100%;
@@ -1409,48 +1641,48 @@ div.jqcloud span.w1 {
   border-image: linear-gradient(23deg, #abafb1 0%, rgba(171, 175, 177, 0) 90%);
   border-image-slice: 1;
 }
-/* line 61, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 56, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief textarea:focus {
   background: #f16060;
   color: white;
   border: 0;
 }
-/* line 70, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 65, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief textarea:focus + .icon svg path {
   fill: white;
 }
-/* line 74, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 69, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief textarea:focus + .icon + label {
   color: white;
 }
-/* line 79, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 74, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .actions {
   margin-top: 60px;
 }
 
-/* line 84, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 80, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .affirmations h1.plain {
   margin-bottom: 30px;
 }
 
-/* line 89, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 85, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations {
   width: 695px;
   margin-left: -125px;
 }
-/* line 92, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 88, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .positive-affirmations-fields {
   display: flex;
   justify-content: space-between;
 }
-/* line 97, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 93, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation, .positive-affirmations .the-belief {
   width: 221px;
   height: 256px;
   background-color: transparent;
   position: relative;
 }
-/* line 103, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 99, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-belief {
   border: 2px solid transparent;
   border-image: linear-gradient(23deg, #abafb1 0%, rgba(171, 175, 177, 0) 90%);
@@ -1460,13 +1692,13 @@ div.jqcloud span.w1 {
   text-align: center;
   margin-bottom: 15px;
 }
-/* line 111, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 107, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-belief .number {
   position: absolute;
   top: 6px;
   left: 10px;
 }
-/* line 116, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 112, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-belief p.limiting-belief-text {
   margin: 0;
   padding: 0;
@@ -1474,17 +1706,17 @@ div.jqcloud span.w1 {
   font-size: 14px;
   line-height: 22px;
 }
-/* line 123, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 119, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-belief strong {
   font-size: 14px;
 }
-/* line 131, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 126, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation label {
   position: absolute;
   top: 6px;
   left: 10px;
 }
-/* line 137, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 132, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation .icon {
   position: absolute;
   bottom: 16px;
@@ -1497,16 +1729,16 @@ div.jqcloud span.w1 {
   border: 0;
   padding: 0;
 }
-/* line 148, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 143, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation .icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 151, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 146, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation .icon svg path {
   fill: #f16060;
 }
-/* line 157, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 152, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea {
   width: 100%;
   height: 100%;
@@ -1520,21 +1752,21 @@ div.jqcloud span.w1 {
   border-image: linear-gradient(23deg, #abafb1 0%, rgba(171, 175, 177, 0) 90%);
   border-image-slice: 1;
 }
-/* line 166, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 161, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea:focus {
   background: #f16060;
   color: white;
   border: 0;
 }
-/* line 179, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 173, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea:focus + .icon svg path {
   fill: white;
 }
-/* line 183, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 178, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea:focus + label {
   color: white;
 }
-/* line 187, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 182, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .actions {
   margin-top: 60px;
 }

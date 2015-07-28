@@ -1,7 +1,18 @@
 a {
-	font-weight: bold;
-	color: $lightRed;
-	&:hover {
-		color: $darkRed;
-	}
+    color: $lightRed;
+    transition: color .1s $ease, border .1s $ease;
+    &:hover {
+        color: $darkRed;
+        border-color: $darkRed;
+    }
+}
+
+p {
+    a {
+        font-weight: bold;
+        border-bottom: 2px solid $lightRed;
+        &:hover {
+            border-color: $darkRed;
+        }
+    }
 }

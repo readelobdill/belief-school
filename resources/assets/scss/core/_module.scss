@@ -1,244 +1,182 @@
 .module {
-	> .module-section {
-		top: 0;
-		left: 0;
-		position:fixed;
-		width: 100%;
-		height: 100%;
-		visibility: hidden;
+    > .module-section {
+        top: 0;
+        left: 0;
+        position:fixed;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
 
-		> .inner {
-			display:flex;
-			align-items: center;
-			justify-content: center;
-		}
+        > .inner {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-
-		&.has-container {
-			padding: 50px;
-			z-index: 2;
-			> .inner {
-				width: 100%;
-				height: 100%;
-				background: rgba(255,255,255,0.90);
-				position:relative;
-				visibility: hidden;
-				overflow:hidden;
-			}
-		}
-
-
-
-	}
+        &.has-container {
+            padding: 50px;
+            z-index: 2;
+            > .inner {
+                width: 100%;
+                height: 100%;
+                background: rgba(255,255,255,0.90);
+                position:relative;
+                visibility: hidden;
+                overflow:hidden;
+            }
+        }
+    }
 
 }
 
 .has-text {
-	&.module-section {
-		> .inner {
-			display:block;
-		}
-	}
-	padding: 40px 40px;
-	> .inner {
+    padding: 40px 40px;
 
+    &.module-section {
+        > .inner {
+            display:block;
+        }
+    }
 
-		.content {
-			width: 445px;
-			margin: 0 auto;
-			font-size: 17px;
-			line-height: 26px;
-			color: $fontColour;
-			padding: 20px 0 60px 0;
+    > .inner {
+        .content {
+            width: 445px;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 26px;
+            color: $fontColour;
+            padding: 40px 0 60px 0;
+        }
+    }
 
+    .dots {
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
 
-		}
-	}
-	h1 {
-		> span {
-			margin-bottom: 25px;
-		}
-	}
-
-	h2 {
-		font-weight: bold;
-		font-size: 25px;
-		text-align:center;
-		margin-bottom: 50px;
-	}
-
-	p {
-		opacity: 0.8;
-		margin-bottom: 32px;
-	}
-
-	.bold {
-		font-weight :bold;
-	}
-
-	.dots {
-		margin-bottom: 60px;
-		margin-top: 60px;
-	}
-
-	blockquote {
-		color: $lightRed;
-		font-size: 21px;
-		margin-bottom: 32px;
-		padding: 23px 23px 23px 23px;
-		border: 2px solid transparent;
-		border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 70%);
-		border-image-slice: 1;
-		font-weight: bold;
-
-		&.multiple {
-			border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 90%);
-			border-image-slice: 1;
-			li {
-				border-bottom: 1px solid rgba($lightRed, 0.2);
-				padding-bottom: 18px;
-				margin-bottom: 18px;
-				&:last-child {
-					border-bottom: 0;
-					padding-bottom: 0;
-				}
-			}
-		}
-
-		&.dark {
-			border-image: linear-gradient(23deg, rgba($fontColour,.8) 0%, rgba($fontColour,0) 70%);
-			border-image-slice: 1;
-			color: $fontColour;
-		}
-
-
-	}
-
-	.actions {
-		text-align:center;
-	}
+    .actions {
+        text-align:center;
+    }
 }
 
 .next-section {
-	display:block;
-	width: 50px;
-	height: 50px;
-	cursor:pointer;
-	position:absolute;
-	left: 50%;
-	bottom: 20px;
-	transform: translate3d(-50%, 0, 0);
-	z-index: 25;
-	visibility:hidden;
-	border: 0;
-	transform-origin: 50% 50%;
+    display:block;
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+    position:absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate3d(-50%, 0, 0);
+    z-index: 25;
+    visibility:hidden;
+    border: 0;
+    transform-origin: 50% 50%;
 
-	svg {
-		width: 100%;
-		height: 100%;
-		path {
-			fill: white;
-			transition: fill 0.3s ease;
-		}
-
-	}
+    svg {
+        width: 100%;
+        height: 100%;
+        path {
+            fill: white;
+            transition: fill 0.3s ease;
+        }
+    }
 }
-
-
-
 
 .congrats-section {
-	h1 {
-		margin-bottom: 40px;
-		line-height: 26px;
-	}
-	p {
-		max-width: 442px;
-		text-align: center;
-		margin-bottom: 40px;
-		line-height: 26px;
-	}
-	.actions {
-		text-align:center;
-		margin: 40px 0;
-	}
+
+    h1 {
+        margin-bottom: 40px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+    }
+
+    p {
+        max-width: 442px;
+        text-align: center;
+        margin-bottom: 40px;
+        line-height: 26px;
+    }
+
+    .actions {
+        text-align:center;
+        margin: 40px 0;
+    }
 }
-
-.call-to-action {
-	color: $lightRed;
-	font-weight: bold;
-	text-align:center;
-	font-size: 25px;
-
-}
-
 
 .actions {
-	text-align:center;
+    text-align:center;
 }
-.down-arrow {
-	border: 0;
-	background: none;
-	width: 45px;
-	height: 45px;
-	padding: 0;
-	display:inline-block;
-	cursor:pointer;
 
-	svg {
-		width: 100%;
-		height: 100%;
-		path {
-			fill: $lightRed;
-		}
-	}
+.down-arrow {
+    border: 0;
+    background: none;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    display:inline-block;
+    cursor:pointer;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        path {
+            fill: $lightRed;
+        }
+    }
 }
 
 .indicator {
-	position:fixed;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 0;
-	height: 40px;
-	width: 160px;
-	z-index: 99;
-	display:flex;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    height: 40px;
+    width: 160px;
+    z-index: 99;
+    display:flex;
 
-	.module-icon {
-		width: 50px;
-		height: 50px;
-		background: $lightRed;
-		padding: 8px;
-		svg {
-			width: 100%;
-			height: 100%;
-			path {
-				fill: white;
-			}
-		}
-	}
+    .module-icon {
+        width: 50px !important;
+        height: 50px;
+        background: $lightRed;
+        padding: 8px;
 
-	.forum-icon {
-		width: 120px;
-		height: 50px;
-		border: 2px solid $lightRed;
-		padding: 12px;
-		font-size: 14px;
-		color: $lightRed;
-		cursor:pointer;
-		text-decoration: none;
-		font-weight: normal;
+        svg {
+            width: 100%;
+            height: 100%;
+            path {
+                fill: white;
+            }
+        }
+    }
 
-		svg {
-			width: 25px;
-			//height: 50px;
-			display:inline-block;
-			vertical-align:middle;
-			margin-right: 10px;
-			path {
-				fill: $lightRed;
-			}
-		}
-	}
+    .forum-icon {
+        width: 110px;
+        height: 50px;
+        border: 2px solid $lightRed;
+        border-right: 0;
+        padding: 12px;
+        font-size: 14px;
+        color: $lightRed;
+        cursor:pointer;
+        text-decoration: none;
+        font-weight: 500;
+
+        svg {
+            width: 25px;
+            //height: 50px;
+            display:inline-block;
+            vertical-align:middle;
+            margin-right: 10px;
+            path {
+                fill: $lightRed;
+            }
+        }
+
+        span {
+            line-height: 21px;
+        }
+    }
 }
 

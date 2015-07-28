@@ -10,8 +10,9 @@
     </p>
     <div class="controls">
         <form action="" data-validate>
-
-            <textarea name="want" id="want" cols="30" rows="10" required maxlength="140" ></textarea>
+            <div class="form-row">
+                <textarea name="want" id="want" cols="30" rows="10" required maxlength="140" ></textarea>
+            </div>
         </form>
     </div>
 

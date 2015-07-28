@@ -4,7 +4,9 @@
     </h1>
     <div class="controls">
         <form action="" data-validate>
-            <textarea name="how" id="how" cols="30" rows="10" required maxlength="140"></textarea>
+            <div class="form-row">
+                <textarea name="how" id="how" cols="30" rows="10" required maxlength="140"></textarea>
+            </div>
         </form>
     </div>
 

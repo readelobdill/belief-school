@@ -1,142 +1,50 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+body {
+    @extend %brandon-grotesque;
+    overflow-y: scroll;
+    color: #252e33;
+    font-size: 17px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
 
 [data-arc] {
-	:first-child {
-		font-weight: 900;
-	}
-	:last-child {
-		font-weight: 900;
-	}
-}
-
-
-.title {
-	font-size: 30px;
-	line-height: 37px;
-	color: #252e33;
-	text-align: center;
-	font-family: 'SantEliaRoughAlt-BoldThr', serif;
-	padding: 0 20px 20px 20px;
-	margin-bottom: 22px;
-	position:relative;
-	&:after {
-		width: 171px;
-		border-bottom: 1px solid #1f2020;
-		content: "";
-		display:block;
-		margin: 22px auto 0 auto;
-
-	}
-	> span {
-		display:block;
-		@extend %brandon-grotesque;
-		font-size: 13px;
-		text-transform: uppercase;
-		margin-bottom: 40px;
-	}
+    :first-child {
+        font-weight: 900;
+    }
+    :last-child {
+        font-weight: 900;
+    }
 }
 
 h1.plain {
-	font-size: 25px;
-	font-weight: bold;
-	text-align:center;
-}
-
-.button {
-	border: 0;
-	text-transform: uppercase;
-	padding: 20px 35px 20px 20px;
-	background: $lightRed;
-	color:white;
-	font-weight: bold;
-	position:relative;
-	outline: 0;
-	display:inline-block;
-	cursor:pointer;
-	text-decoration:none;
-	transition: background-color 0.2s ease;
-
-	&:hover {
-		background-color: mix($lightRed, black, 90%);
-		color: white;
-	}
-
-	&:after, &:before {
-
-		position: absolute;
-		pointer-events: none;
-		width: 10px;
-		height: 2px;
-		background-color:white;
-		top: 50%;
-		right: 20px;
-		content: "";
-		transform-origin: 100% 50%;
-	}
-
-	&:after {
-		transform: rotate(45deg);
-	}
-	&:before {
-		transform: rotate(-45deg);
-
-	}
-
-	&.success {
-		background: none;
-		border: 3px solid $lightRed;
-		color: $lightRed;
-		padding-right: 45px;
-
-		&:after, &:before {
-			background: $lightRed;
-			margin-top: 6px;
-			right: 30px;
-		}
-
-		&:after {
-			transform: rotate(45deg);
-			width: 10px;
-		}
-		&:before {
-			transform: rotate(135deg);
-			width: 18px;
-		}
-	}
+    font-size: 25px;
+    font-weight: bold;
+    text-align:center;
 }
 
 .dots {
-	background: image-url('icons/bullets.svg') no-repeat top left;
-	width: 70px;
-	height: 6px;
-	background-size: cover;
-	margin: 0 auto;
-}
-
-strong {
-	font-weight: bold;
-}
-em {
-	font-style: italic;
-}
-
-p.center {
-	text-align:center;
+    background: image-url('icons/bullets.svg') no-repeat top left;
+    width: 70px;
+    height: 6px;
+    background-size: cover;
+    margin: 0 auto;
 }
 
 .auth {
-	position:fixed;
-	top: 0;
-	right: 50px;
-	z-index: 99;
-	height: 50px;
-	line-height: 50px;
-	a {
-		color: $fontColour;
-		text-decoration: none;
-		font-weight: normal;
-	}
+    position:fixed;
+    top: 0;
+    right: 50px;
+    z-index: 99;
+    height: 50px;
+    line-height: 50px;
+
+    a {
+        color: $fontColour;
+        text-decoration: none;
+        font-weight: normal;
+    }
 }
