@@ -53,7 +53,7 @@ class ModuleController extends Controller {
         }
 
         if(!empty($moduleUser) && $moduleUser->pivot->complete) {
-            abort(404);
+            //abort(404);
         }
 
 
@@ -171,7 +171,7 @@ class ModuleController extends Controller {
 
         switch($module->type) {
             case 'tag-cloud':
-
+                $moduleUser->step++;
                 break;
             case 'dreamboard':
                 if($this->request->file('image') && $this->request->input('name')) {

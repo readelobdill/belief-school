@@ -1,7 +1,7 @@
 @extends('app/layout')
 
 @section('content')
-    <div class="module visualise-module" data-part="{{Input::get('part', 1)}}" data-step="{{ ($moduleUser ? $moduleUser->step : 0) }}" data-update-url="{{route('modules.update', [$module->slug])}}" data-complete-url="{{route('modules.complete', [$module->slug])}}">
+    <div class="module visualise-module" data-is-complete="{{ ($moduleUser ? $moduleUser->complete : 0) }}" data-is-complete="{{ ($moduleUser ? $moduleUser->complete : 0) }}" data-part="{{Input::get('part', 1)}}" data-step="{{ ($moduleUser ? $moduleUser->step : 0) }}" data-update-url="{{route('modules.update', [$module->slug])}}" data-complete-url="{{route('modules.complete', [$module->slug])}}">
         <section class="background-video module-section" data-type="Intro" data-part="1" data-step="0">
             @include('app/modules/visualise/background-video')
         </section>

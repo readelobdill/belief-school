@@ -58,6 +58,10 @@ class Module {
         return this.container.data('complete-url');
     }
 
+    isComplete() {
+        return this.container.data('is-complete');
+    }
+
 }
 
 
