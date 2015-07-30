@@ -24,6 +24,7 @@
             <strong>Your will be sending the email below</strong> (don't worry you can edit to to add whatever message you like!) <strong>to as wide a group as possible, choosing people who you feel will have your best interests at heart.</strong> They need to know you well enough to comment on your character and they need to be people whose opinions you trust.
         </p>
 
+
         <div class="email-client">
             <div class="header">
                 <div class="close"></div>
@@ -50,6 +51,8 @@
                 </p>
             </div>
         </div>
+
+
 
         <blockquote>
             Go on, get out of your comfort zone and send the emails.

@@ -1,68 +1,70 @@
 .boomerang {
-	.email-client {
-		margin-bottom: 60px;
-	}
+    .email-client {
+        margin-bottom: 60px;
+    }
 
-	.actions {
-		margin: 0 0 60px 0;
-		padding-top: 28px;
-	}
+    .actions {
+        margin: 0 0 60px 0;
+        padding-top: 28px;
+    }
 }
 
 .email-client {
-	width: 722px;
-	margin-left: -138.5px;
-	border: 1px solid #dddddd;
-	border-radius: 4px;
-	background: white;
+    max-width: 722px;
+    position: absolute;
+    margin-left: -138.5px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background: white;
 
-	.header {
-		height: 35px;
-		background: linear-gradient(#ebeaeb,#d7d6d7 );
-		border-bottom: 1px solid #b5b4b5;
-		padding:0 10px;
-		line-height: 35px;
-		div {
-			width: 11px;
-			height: 11px;
-			border-radius: 50%;
-			display:inline-block;
-			margin-right: 7px;
+    .header {
+        height: 35px;
+        background: linear-gradient(#ebeaeb,#d7d6d7 );
+        border-bottom: 1px solid #b5b4b5;
+        padding:0 10px;
+        line-height: 35px;
+        div {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            display:inline-block;
+            margin-right: 7px;
 
+            &.close {
+                background: #fc605b;
+                border: 1px solid #ed534f;
+            }
 
-			&.close {
-				background: #fc605b;
-				border: 1px solid #ed534f;
-			}
-			&.minimize {
-				background: #fdbc40;
-				border: 1px solid #edaf39;
-			}
-			&.maxamize {
-				background: #33c748;
-				border: 1px solid #2dbb3e;
-			}
-		}
+            &.minimize {
+                background: #fdbc40;
+                border: 1px solid #edaf39;
+            }
 
-	}
+            &.maxamize {
+                background: #33c748;
+                border: 1px solid #2dbb3e;
+            }
+        }
 
-	.details {
-		padding-left: 25px;
-		color: #707070;
-		border-bottom: 1px solid #c6c6c6;
-		div {
-			padding: 10px 0;
-		}
-		.details-row, .cc-row {
-			border-bottom: 1px solid #c6c6c6;
-		}
-	}
-	.message {
-		padding: 25px;
-	}
+    }
+
+    .details {
+        padding-left: 25px;
+        color: #707070;
+        border-bottom: 1px solid #c6c6c6;
+        div {
+            padding: 10px 0;
+        }
+        .details-row, .cc-row {
+            border-bottom: 1px solid #c6c6c6;
+        }
+    }
+    .message {
+        padding: 25px;
+    }
 }
 
 p.annotation {
-	color: #aeaeae;
-	text-align:center;
+    color: #aeaeae;
+    text-align:center;
 }

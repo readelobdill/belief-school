@@ -239,6 +239,29 @@ h1.plain {
   color: #252e33;
   text-decoration: none;
   font-weight: normal;
+  position: relative;
+}
+/* line 54, ../../resources/assets/scss/core/_base.scss */
+.auth a.logout:before {
+  content: '\e622';
+  position: absolute;
+  font-family: 'icomoon';
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
+  left: -20px;
+  top: -13px;
+}
+/* line 69, ../../resources/assets/scss/core/_base.scss */
+.auth a.login:before {
+  content: '\e621';
+  position: absolute;
+  font-family: 'icomoon';
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
+  left: -20px;
+  top: -13px;
 }
 
 @font-face {
@@ -528,7 +551,7 @@ p a:hover {
 
 /* line 32, ../../resources/assets/scss/core/_module.scss */
 .has-text {
-  padding: 40px 40px;
+  padding: 50px;
 }
 /* line 36, ../../resources/assets/scss/core/_module.scss */
 .has-text.module-section > .inner {
@@ -629,28 +652,35 @@ p a:hover {
   top: 50%;
   transform: translateY(-50%);
   right: 0;
-  height: 40px;
+  height: 50px;
   width: 160px;
   z-index: 99;
-  display: flex;
 }
-/* line 139, ../../resources/assets/scss/core/_module.scss */
+@media (max-width: 800px) {
+  /* line 129, ../../resources/assets/scss/core/_module.scss */
+  .indicator {
+    width: 50px;
+    height: 100px;
+  }
+}
+/* line 143, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon {
   width: 50px !important;
   height: 50px;
   background: #f16060;
   padding: 8px;
+  float: right;
 }
-/* line 145, ../../resources/assets/scss/core/_module.scss */
+/* line 154, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 148, ../../resources/assets/scss/core/_module.scss */
+/* line 157, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg path {
   fill: white;
 }
-/* line 154, ../../resources/assets/scss/core/_module.scss */
+/* line 163, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon {
   width: 110px;
   height: 50px;
@@ -662,21 +692,43 @@ p a:hover {
   cursor: pointer;
   text-decoration: none;
   font-weight: 500;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.2);
 }
-/* line 166, ../../resources/assets/scss/core/_module.scss */
+@media (max-width: 800px) {
+  /* line 163, ../../resources/assets/scss/core/_module.scss */
+  .indicator .forum-icon {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 50px;
+    border: none;
+  }
+}
+/* line 184, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 172, ../../resources/assets/scss/core/_module.scss */
+/* line 191, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
 }
-/* line 177, ../../resources/assets/scss/core/_module.scss */
+@media (max-width: 800px) {
+  /* line 184, ../../resources/assets/scss/core/_module.scss */
+  .indicator .forum-icon svg {
+    margin: 2px auto;
+  }
+}
+/* line 199, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon span {
   line-height: 21px;
+}
+@media (max-width: 800px) {
+  /* line 199, ../../resources/assets/scss/core/_module.scss */
+  .indicator .forum-icon span {
+    display: none;
+  }
 }
 
 /* line 1, ../../resources/assets/scss/core/_typography.scss */
@@ -1042,15 +1094,11 @@ blockquote.dark {
   width: 100%;
 }
 
-/* line 1, ../../resources/assets/scss/pages/home/_questions.scss */
-.questions {
-  padding: 40px 40px;
-}
-/* line 3, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 2, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions > .inner {
   overflow: hidden;
 }
-/* line 7, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 6, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question {
   position: absolute;
   top: 0;
@@ -1062,28 +1110,28 @@ blockquote.dark {
   align-items: center;
   justify-content: center;
 }
-/* line 19, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 18, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content form {
   position: relative;
   display: inline-block;
 }
-/* line 24, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 23, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content p {
   text-align: center;
 }
-/* line 28, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 27, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls {
   text-align: center;
 }
-/* line 31, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 30, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls .age {
   font-size: 45px;
 }
-/* line 35, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 34, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] {
   display: none;
 }
-/* line 37, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 36, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label {
   position: relative;
   padding: 9px 0 0 42px;
@@ -1094,13 +1142,13 @@ blockquote.dark {
   margin: 0 30px;
   cursor: pointer;
 }
-/* line 47, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 46, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label:before, .questions .question .content .controls input[type=radio] + label:after {
   position: absolute;
   left: 0;
   top: 0;
 }
-/* line 53, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 52, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label:after {
   transform-origin: 50% 50%;
   transform: scale(0, 0);
@@ -1113,7 +1161,7 @@ blockquote.dark {
   content: "";
   transition: transform 0.3s ease;
 }
-/* line 66, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 65, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio] + label:before {
   content: "";
   border: 4px solid #f16060;
@@ -1122,11 +1170,11 @@ blockquote.dark {
   border-radius: 34px;
   padding: 13px;
 }
-/* line 78, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 77, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .content .controls input[type=radio]:checked + label:after {
   transform: scale(1, 1);
 }
-/* line 94, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 93, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question {
   display: block;
   width: 50px;
@@ -1138,21 +1186,21 @@ blockquote.dark {
   opacity: 1;
   cursor: pointer;
 }
-/* line 104, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 103, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question svg {
   width: 100%;
   height: 100%;
 }
-/* line 107, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 106, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question svg path {
   fill: #f16060;
   transition: fill 0.3s ease;
 }
-/* line 114, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 113, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question:hover svg path {
   fill: #98201a;
 }
-/* line 123, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 122, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question-nav {
   position: absolute;
   top: 50%;
@@ -1162,7 +1210,7 @@ blockquote.dark {
   z-index: 20;
   visibility: visible;
 }
-/* line 133, ../../resources/assets/scss/pages/home/_questions.scss */
+/* line 132, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions.question-0 .question-nav {
   visibility: hidden;
 }
@@ -1364,13 +1412,14 @@ ul.accordion h2 .toggle svg path {
 
 /* line 12, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client {
-  width: 722px;
+  max-width: 722px;
+  position: absolute;
   margin-left: -138.5px;
   border: 1px solid #dddddd;
   border-radius: 4px;
   background: white;
 }
-/* line 19, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 20, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .header {
   height: 35px;
   background: linear-gradient(#ebeaeb, #d7d6d7);
@@ -1378,7 +1427,7 @@ ul.accordion h2 .toggle svg path {
   padding: 0 10px;
   line-height: 35px;
 }
-/* line 25, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 26, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .header div {
   width: 11px;
   height: 11px;
@@ -1391,36 +1440,36 @@ ul.accordion h2 .toggle svg path {
   background: #fc605b;
   border: 1px solid #ed534f;
 }
-/* line 37, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 38, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .header div.minimize {
   background: #fdbc40;
   border: 1px solid #edaf39;
 }
-/* line 41, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 43, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .header div.maxamize {
   background: #33c748;
   border: 1px solid #2dbb3e;
 }
-/* line 49, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 51, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .details {
   padding-left: 25px;
   color: #707070;
   border-bottom: 1px solid #c6c6c6;
 }
-/* line 53, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 55, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .details div {
   padding: 10px 0;
 }
-/* line 56, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 58, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .details .details-row, .email-client .details .cc-row {
   border-bottom: 1px solid #c6c6c6;
 }
-/* line 60, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 62, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .message {
   padding: 25px;
 }
 
-/* line 65, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 67, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 p.annotation {
   color: #aeaeae;
   text-align: center;

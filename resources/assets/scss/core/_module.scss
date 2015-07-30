@@ -30,7 +30,7 @@
 }
 
 .has-text {
-    padding: 40px 40px;
+    padding: 50px;
 
     &.module-section {
         > .inner {
@@ -131,16 +131,25 @@
     top: 50%;
     transform: translateY(-50%);
     right: 0;
-    height: 40px;
+    height: 50px;
     width: 160px;
     z-index: 99;
-    display:flex;
+
+    @include breakpoint($break-800) {
+        width: 50px;
+        height: 100px;
+    }
 
     .module-icon {
         width: 50px !important;
         height: 50px;
         background: $lightRed;
         padding: 8px;
+        float: right;
+
+        @include breakpoint($break-800) {
+
+        }
 
         svg {
             width: 100%;
@@ -162,6 +171,15 @@
         cursor:pointer;
         text-decoration: none;
         font-weight: 500;
+        float: left;
+        background-color: rgba(255, 255, 255, 0.2);
+
+        @include breakpoint($break-800) {
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 50px;
+            border: none;
+
+        }
 
         svg {
             width: 25px;
@@ -169,13 +187,21 @@
             display:inline-block;
             vertical-align:middle;
             margin-right: 10px;
+
             path {
                 fill: $lightRed;
+            }
+            @include breakpoint($break-800) {
+                margin: 2px auto;
             }
         }
 
         span {
             line-height: 21px;
+
+            @include breakpoint($break-800) {
+                display: none;
+            }
         }
     }
 }

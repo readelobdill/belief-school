@@ -46,5 +46,37 @@ h1.plain {
         color: $fontColour;
         text-decoration: none;
         font-weight: normal;
+        // display: inline-block;
+        position: relative;
+
+        &.logout {
+
+            &:before {
+                $size: 15px;
+                content: '\e622';
+                position: absolute;
+                font-family: 'icomoon';
+                font-size: $size;
+                width: $size;
+                height: $size;
+                left: -20px;
+                top: -13px;
+            }
+        }
+
+        &.login {
+
+            &:before {
+                $size: 15px;
+                content: '\e621';
+                position: absolute;
+                font-family: 'icomoon';
+                font-size: $size;
+                width: $size;
+                height: $size;
+                left: -20px;
+                top: -13px;
+            }
+        }
     }
 }

@@ -11,3 +11,8 @@ $icon: 'icomoon';
 // animations
 $ease: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 $transition: 300ms $ease;
+
+// breakpoints
+$breakpoint-default-feature: 'max-width';
+$break-620 : 620px; // window padding collapses
+$break-800 : 800px; // indicator folds down
