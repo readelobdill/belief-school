@@ -22,35 +22,35 @@
 
         <form action="" class="gratitude-list">
             <ul>
-                <li>
-                    <input type="text" placeholder="I am..." name="diary_1">
+                <li class="form-row">
+                    <input type="text" placeholder="I am..." name="diary_1" required maxlength="140">
                 </li>
-                <li>
-                    <input type="text" placeholder="I am..." name="diary_2">
+                <li class="form-row">
+                    <input type="text" placeholder="I am..." name="diary_2" required maxlength="140">
                 </li>
-                <li>
-                    <input type="text" placeholder="I am..." name="diary_3">
+                <li class="form-row">
+                    <input type="text" placeholder="I am..." name="diary_3" required maxlength="140">
                 </li>
-                <li>
-                    <input type="text" placeholder="I am..." name="diary_4">
+                <li class="form-row">
+                    <input type="text" placeholder="I am..." name="diary_4" required maxlength="140">
                 </li>
-                <li>
-                    <input type="text" placeholder="I am..." name="diary_5">
+                <li class="form-row">
+                    <input type="text" placeholder="I am..." name="diary_5" required maxlength="140">
                 </li>
-                <li>
-                    <input type="text" placeholder="I am..." name="diary_6">
+                <li class="form-row">
+                    <input type="text" placeholder="I am..." name="diary_6" required maxlength="140">
                 </li>
-                <li>
-                    <input type="text" placeholder="I am..." name="diary_7">
+                <li class="form-row">
+                    <input type="text" placeholder="I am..." name="diary_7" required maxlength="140">
                 </li>
-                <li>
-                    <input type="text" placeholder="I am..." name="diary_8">
+                <li class="form-row">
+                    <input type="text" placeholder="I am..." name="diary_8" required maxlength="140">
                 </li>
-                <li>
-                    <input type="text" placeholder="I am..." name="diary_9">
+                <li class="form-row">
+                    <input type="text" placeholder="I am..." name="diary_9" required maxlength="140">
                 </li>
-                <li>
-                    <input type="text" placeholder="I am..." name="diary_10">
+                <li class="form-row">
+                    <input type="text" placeholder="I am..." name="diary_10" required maxlength="140">
                 </li>
             </ul>
             <div class="actions">

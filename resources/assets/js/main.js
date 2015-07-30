@@ -17,8 +17,12 @@ import Forum from "forum/forum";
 /*Utility*/
 import $ from 'jquery';
 import UI from "ui/ui";
+import Loading from 'util/loading';
 
 UI.init();
+Loading.init();
+
+
 let page = $('body').data('page');
 switch(page) {
     case 'home' :

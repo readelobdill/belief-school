@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="module welcome-module" data-part="{{Input::get('part', 1)}}" data-step="{{ ($moduleUser ? $moduleUser->step : 0) }}" data-update-url="{{route('modules.update', [$module->slug])}}" data-complete-url="{{route('modules.complete', [$module->slug])}}">
-        <section class="background-video module-section" data-type="Intro" data-part="1">
+        <section class="background-video module-section" data-type="Intro" data-part="1" data-step="0">
             @include('app/modules/welcome/background-video')
         </section>
 

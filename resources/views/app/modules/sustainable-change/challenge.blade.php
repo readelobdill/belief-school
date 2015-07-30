@@ -33,7 +33,9 @@
         </p>
 
         <form action="">
-            <textarea name="i_felt" placeholder="I felt...(limited to 280 characters)..." name="feel"></textarea>
+            <div class="form-row">
+                <textarea name="i_felt" placeholder="I felt...(limited to 280 characters)..." name="feel" required maxlength="280"></textarea>
+            </div>
             <div class="actions">
                 <button class="button">Save to Manifesto!</button>
             </div>

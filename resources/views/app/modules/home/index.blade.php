@@ -16,7 +16,7 @@
         <section class="questions module-section has-container" data-type="Questions" data-part="4" data-step="1">
             @include('app/modules/home/questions')
         </section>
-        <section class="details module-section has-container has-text" data-type="Text" data-part="5" data-step="2">
+        <section class="details module-section has-container has-text" data-type="Payment" data-part="5" data-step="2">
             @include('app/modules/home/details')
         </section>
     </div>

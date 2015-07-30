@@ -7,19 +7,36 @@ import Q from "q";
 import ModuleSection from "modules/module-section";
 import Client from "sources/ModuleClient";
 import serialize from "util/serializeForm";
+import {showError, hideError} from 'util/errors';
 
 export default class AccountCreationSection extends ModuleSection {
 
     constructor(section, module) {
         super(section,module);
         this.form = this.section.find('form');
-        this.validator = this.form.parsley();
+        this.setupForm();
     }
     setup() {
         super.setup();
         $('body').css({minHeight: ''});
 
     }
+
+    setupForm() {
+        this.validator = this.form.parsley({
+            errorsWrapper: false,
+            errorsContainer: (field) => {
+                return false;
+            }
+        });
+        this.validator.on('field:success', (field) => {
+            hideError(field, '.form-row');
+        });
+        this.validator.on('field:error', (field) => {
+            showError(field, '.form-row');
+        });
+    }
+
 
     open() {
         this.setup();
@@ -38,7 +55,12 @@ export default class AccountCreationSection extends ModuleSection {
     }
     setupEventListeners() {
         this.section.on('click', '.next-section', (e) => {
+
             if (this.validator.validate()) {
+                if(this.submitting) {
+                    return false;
+                }
+                this.submitting = true;
                 Client.registerUser(this.form.attr('action'), serialize(this.form)).then((response) => {
                     return this.module.nextSection();
                 });
@@ -47,6 +69,7 @@ export default class AccountCreationSection extends ModuleSection {
         });
         this.section.on('focus', 'input', this.formOnFocus.bind(this));
         this.section.on('keyup', 'input', this.formOnFocus.bind(this));
+        this.section.on('change', 'input', this.formOnFocus.bind(this));
     }
 
     formOnFocus(e) {
@@ -57,10 +80,6 @@ export default class AccountCreationSection extends ModuleSection {
         } else {
             field.removeClass('has-content');
         }
-
-        // let fun = () => {
-
-        // }
 
     }
 

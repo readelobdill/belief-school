@@ -26,6 +26,15 @@
     }
 }
 
+[data-page=home] {
+    .indicator {
+        .forum-icon {
+            display:none;
+        }
+    }
+}
+
+
 .account-creation {
     > .inner {
 

@@ -23,6 +23,11 @@ class TextWelcome extends Text {
 
         this.form.on('submit', (e) => {
             e.preventDefault();
+            if(this.submitting) {
+                return false;
+            }
+            this.submitting = true;
+
             this.submitForm().then(() => {
                 this.module.nextSection();
             });

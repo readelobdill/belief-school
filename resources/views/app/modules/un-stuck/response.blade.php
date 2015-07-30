@@ -83,7 +83,7 @@
                         <strong>into a powerful affirmation</strong>
                     </label>
                     <div class="the-affirmation">
-                        <textarea name="response-1" id="affirmation-1" cols="30" rows="10"></textarea>
+                        <textarea name="response-1" id="affirmation-1" required></textarea>
                         <label class="number" for="affirmation-1">1 .</label>
 
                     </div>
@@ -96,7 +96,7 @@
                         <strong>into a powerful affirmation</strong>
                     </label>
                     <div class="the-affirmation">
-                        <textarea name="response-2" id="affirmation-2" cols="30" rows="10"></textarea>
+                        <textarea name="response-2" id="affirmation-2" required></textarea>
                         <label class="number" for="affirmation-2">2 .</label>
 
                     </div>
@@ -109,7 +109,7 @@
                         <strong>into a powerful affirmation</strong>
                     </label>
                     <div class="the-affirmation">
-                        <textarea name="response-3" id="affirmation-3" cols="30" rows="10"></textarea>
+                        <textarea name="response-3" id="affirmation-3" required></textarea>
                         <label class="number" for="affirmation-3">3 .</label>
 
                     </div>

@@ -31,14 +31,20 @@ export default class Dreamboard extends Text {
             $image.removeClass('is-loading').addClass('has-image').find('img').attr('src', response.imageUrl);
             this.toggleSubmit();
         }, false, (progress) => {
-            $loader.html(progress+'%');
+            $loader.html((progress*100)+'%');
         });
     }
 
     submit() {
+
+
         let url = this.module.getUpdateUrl();
         let data = {};
         if(this.section.find('.has-image').length == 13) {
+            if(this.submitting) {
+                return false;
+            }
+            this.submitting = true;
             client.saveModule(url, data).then(() => {
                 this.module.nextSection();
             });

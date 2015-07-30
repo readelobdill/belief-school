@@ -135,6 +135,7 @@
     width: 160px;
     z-index: 99;
     display:flex;
+    justify-content: flex-end;
 
     .module-icon {
         width: 50px !important;

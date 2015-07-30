@@ -123,7 +123,7 @@ textarea {
         transform: scale(.85);
     }
 
-    .parsley-errors-list {
+    .error-container {
         position:absolute;
         left: 100%;
         top: 50%;
@@ -136,11 +136,7 @@ textarea {
         margin-left: 20px;
         background: white;
         font-size: 15px;
-        display:none;
-
-        &.filled {
-            display:block;
-        }
+        opacity: 0;
 
         li {
             display:block;

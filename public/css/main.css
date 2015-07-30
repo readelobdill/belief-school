@@ -412,7 +412,7 @@ textarea::-webkit-input-placeholder {
   transform: scale(0.85);
 }
 /* line 126, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list {
+.form-row .error-container {
   position: absolute;
   left: 100%;
   top: 50%;
@@ -425,18 +425,14 @@ textarea::-webkit-input-placeholder {
   margin-left: 20px;
   background: white;
   font-size: 15px;
-  display: none;
+  opacity: 0;
 }
 /* line 141, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list.filled {
+.form-row .error-container li {
   display: block;
 }
 /* line 145, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list li {
-  display: block;
-}
-/* line 149, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list:after, .form-row .parsley-errors-list:before {
+.form-row .error-container:after, .form-row .error-container:before {
   right: 100%;
   top: 50%;
   border: solid transparent;
@@ -446,28 +442,28 @@ textarea::-webkit-input-placeholder {
   position: absolute;
   pointer-events: none;
 }
-/* line 160, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list:after {
+/* line 156, ../../resources/assets/scss/core/_forms.scss */
+.form-row .error-container:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 9px;
   margin-top: -9px;
 }
-/* line 167, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list:before {
+/* line 163, ../../resources/assets/scss/core/_forms.scss */
+.form-row .error-container:before {
   border-color: rgba(174, 174, 174, 0);
   border-right-color: #aeaeae;
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 179, ../../resources/assets/scss/core/_forms.scss */
+/* line 175, ../../resources/assets/scss/core/_forms.scss */
 .form-row .arrow_box:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 185, ../../resources/assets/scss/core/_forms.scss */
+/* line 181, ../../resources/assets/scss/core/_forms.scss */
 .form-row .arrow_box:before {
   border-color: rgba(174, 174, 174, 0);
   border-right-color: #aeaeae;
@@ -633,24 +629,25 @@ p a:hover {
   width: 160px;
   z-index: 99;
   display: flex;
+  justify-content: flex-end;
 }
-/* line 139, ../../resources/assets/scss/core/_module.scss */
+/* line 140, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon {
   width: 50px !important;
   height: 50px;
   background: #f16060;
   padding: 8px;
 }
-/* line 145, ../../resources/assets/scss/core/_module.scss */
+/* line 146, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 148, ../../resources/assets/scss/core/_module.scss */
+/* line 149, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg path {
   fill: white;
 }
-/* line 154, ../../resources/assets/scss/core/_module.scss */
+/* line 155, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon {
   width: 110px;
   height: 50px;
@@ -663,18 +660,18 @@ p a:hover {
   text-decoration: none;
   font-weight: 500;
 }
-/* line 166, ../../resources/assets/scss/core/_module.scss */
+/* line 167, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 172, ../../resources/assets/scss/core/_module.scss */
+/* line 173, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
 }
-/* line 177, ../../resources/assets/scss/core/_module.scss */
+/* line 178, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon span {
   line-height: 21px;
 }
@@ -1011,31 +1008,36 @@ blockquote.dark {
   padding: 80px 40px;
 }
 
-/* line 32, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 31, ../../resources/assets/scss/pages/home/_home.scss */
+[data-page=home] .indicator .forum-icon {
+  display: none;
+}
+
+/* line 41, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section {
   bottom: 60px;
 }
-/* line 35, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 44, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section svg path {
   fill: #f16060;
 }
-/* line 40, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 49, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section:hover svg path {
   fill: #98201a;
 }
-/* line 47, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 56, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content {
   width: 442px;
   text-align: center;
 }
-/* line 51, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 60, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content p {
   text-align: center;
   font-size: 17px;
   line-height: 23px;
   margin-bottom: 15px;
 }
-/* line 59, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 68, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation input {
   margin: 8px 0;
   height: 72px;

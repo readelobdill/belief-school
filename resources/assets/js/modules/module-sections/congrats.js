@@ -21,7 +21,16 @@ export default class CongratsSection extends ModuleSection {
     }
 
     completeModule() {
+        if(this.submitting) {
+            return false;
+        }
+        this.submitting = true;
+
         var url = this.module.getCompleteUrl();
-        client.completeModule(url);
+        client.completeModule(url).then(this.showNext);
+    }
+
+    showNext() {
+
     }
 }

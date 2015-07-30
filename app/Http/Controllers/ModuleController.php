@@ -73,6 +73,7 @@ class ModuleController extends Controller {
             }
         }
 
+
         return view('app.modules.'.$module->slug.'.index', [
             'page' => $module->slug,
             'module' => $module,

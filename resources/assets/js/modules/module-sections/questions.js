@@ -46,7 +46,10 @@ export default class QuestionsSection extends ModuleSection {
         this.section.on('click', '.question-nav li', function(e) {
             var el = $(e.currentTarget);
             var question = el.data('question');
-            this.goToQuestion(question);
+            if(question < this.currentQuestion) {
+                this.goToQuestion(question);
+            }
+
         }.bind(this));
 
         this.section.on('click', '.next-question', function(e) {
@@ -54,10 +57,8 @@ export default class QuestionsSection extends ModuleSection {
             if(this.getCurrentQuestion().validate()) {
                 console.log(this.currentQuestion, this.questions.length);
                 if(this.currentQuestion >= this.questions.length - 1) {
-                    console.log('nextSectin');
                     this.questionsFinished();
                 } else {
-                    console.log('nextQuestion');
                     this.nextQuestion();
                 }
 
@@ -70,13 +71,19 @@ export default class QuestionsSection extends ModuleSection {
     goToQuestion(question) {
         if(this.currentQuestion !== question && this.questions[question]) {
             this.questionNav.setQuestion(question);
-            this.questions[this.currentQuestion].close().then(() => {
+            let timeline = new TimelineLite();
+            timeline.add(this.questions[this.currentQuestion].close());
+            timeline.add(() => {
                 this.section.removeClass('question-'+this.currentQuestion);
-                this.currentQuestion = question;
-                this.questions[this.currentQuestion].open();
-                this.section.addClass('question-'+this.currentQuestion);
 
             });
+            timeline.add(this.questions[question].open(), '-=0.3');
+            timeline.add(() => {
+                this.section.addClass('question-'+question);
+                this.currentQuestion = question;
+            });
+
+
         }
     }
 
@@ -89,6 +96,11 @@ export default class QuestionsSection extends ModuleSection {
     }
 
     questionsFinished() {
+        if(this.submitting) {
+            return false;
+        }
+        this.submitting = true;
+
         let url = this.module.getUpdateUrl();
         let data = this.getQuestionData();
         return client.saveModule(url, data);

@@ -1,15 +1,19 @@
 import 'whatwg-fetch';
 import $ from 'jquery';
 import Q from 'q';
+import EventEmitter from 'events';
 
-let defaultHeaders = {
+const defaultHeaders = {
     'X-Requested-With' : 'XMLHttpRequest',
     'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
 
 }
 
-export default {
-    saveModule: function(url, data) {
+
+class ModuleClient extends EventEmitter {
+
+    saveModule(url, data) {
+        this.emit('load:start');
         return fetch(url, {
             method: 'post',
             credentials: 'same-origin',
@@ -18,9 +22,12 @@ export default {
                 'Content-Type': 'application/json'
             }, defaultHeaders),
             body: JSON.stringify(data)
+        }).then(() => {
+            this.emit('load:end');
         })
-    },
-    completeModule: function(url) {
+    }
+    completeModule(url) {
+        this.emit('load:start');
         return fetch(url, {
             method: 'post',
             credentials: 'same-origin',
@@ -28,17 +35,19 @@ export default {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }, defaultHeaders)
+        }).then(() => {
+            this.emit('load:end');
         })
-    },
-    addImage: function(url, image, imageName) {
-        let data = new FormData();
+    }
+    addImage(url, image, imageName) {
+        const data = new FormData();
         data.append('image', image);
         data.append('name', imageName);
-        let deferred = Q.defer();
+        const deferred = Q.defer();
 
-        let xhr = new XMLHttpRequest();
+        const xhr = new XMLHttpRequest();
 
-        let headers = new Headers($.extend({}, {
+        const headers = new Headers($.extend({}, {
             'Accept' : 'application/json'
         }, defaultHeaders));
 
@@ -51,13 +60,16 @@ export default {
 
         });
         xhr.addEventListener('load', (response) => {
-            deferred.resolve(response)
+            deferred.resolve(response);
+            this.emit('load:end')
         });
         xhr.addEventListener('error', (response) => {
-           deferred.reject(response);
+            deferred.reject(response);
+            this.emit('load:end')
         });
         xhr.addEventListener('abort', (response) => {
             deferred.reject(response);
+            this.emit('load:end')
         });
         xhr.open('POST', url);
 
@@ -72,9 +84,10 @@ export default {
         return deferred.promise.then((response) => {
             return JSON.parse(response.currentTarget.responseText);
         });
-    },
+    }
 
     registerUser(url, data) {
+        this.emit('load:start');
         return fetch(url, {
             method: 'post',
             credentials: 'same-origin',
@@ -83,6 +96,10 @@ export default {
                 'Content-Type': 'application/json'
             }, defaultHeaders),
             body: JSON.stringify(data)
-        })
+        }).then(() => {
+            this.emit('load:end');
+        });
     }
 }
+
+export default (new ModuleClient());
