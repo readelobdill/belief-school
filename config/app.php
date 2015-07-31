@@ -151,6 +151,8 @@ return [
         'Lanz\Commentable\CommentableServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 
+		'App\Providers\MenuServiceProvider',
+
 	],
 
 	/*

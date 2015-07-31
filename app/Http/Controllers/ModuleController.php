@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Models\Module;
 use App\Models\ModuleUser;
 use App\Services\CommentRenderer;
+use App\Services\DreamboardRenderer;
 use Carbon\Carbon;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
@@ -268,5 +269,13 @@ class ModuleController extends Controller {
         $fileName = Str::random().'.'.$file->getExtension();
         $file->move(public_path('uploads/dreamboard'), $fileName);
         $module->addImage($fileName, $imageNumber);
+    }
+
+
+    public function showDreamboardImage() {
+        $module = $this->auth->user()->modules()->where('slug', 'visualise')->first();
+        $dreamboard = new DreamboardRenderer($module->pivot->data, $this->auth->user());
+
+        return response($dreamboard->renderToImage()->getImageBlob(),200,['Content-type' => 'image/png']);
     }
 }

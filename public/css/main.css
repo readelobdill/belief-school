@@ -1048,6 +1048,14 @@ blockquote.dark {
 .menu ul li.ico-mod9:before {
   content: '\e611';
 }
+/* line 140, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-locked:before {
+  content: "\e621";
+}
+/* line 145, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-unlocked:before {
+  content: "\e622";
+}
 
 /* line 2, ../../resources/assets/scss/pages/home/_home.scss */
 .background-video > .inner {

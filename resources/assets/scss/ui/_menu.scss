@@ -136,6 +136,17 @@
                 }
             }
 
+            &.ico-locked {
+                &:before {
+                    content: "\e621";
+                }
+            }
+            &.ico-unlocked {
+                &:before {
+                    content: "\e622";
+                }
+            }
+
             // &.ico-mod10 {
             //     &:before {
             //         content: '\e613';
