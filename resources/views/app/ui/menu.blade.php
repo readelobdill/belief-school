@@ -3,23 +3,30 @@
         <h2>Navigation</h2>
         <ul>
             <li class="ico-intro"><a href="">Introduction</a></li>
-            <li class="ico-account"><a href="">Your account</a></li>
+            @if(Auth::check())
+                <li class="ico-account"><a href="">Your account</a></li>
+            @endif
             <li class="ico-about"><a href="">About Belief School</a></li>
             <li class="ico-contact"><a href="">Contact us</a></li>
-            <li class="ico-dash"><a href="">Dashboard</a></li>
+            @if(Auth::check())
+                <li class="ico-dash"><a href="{{route('dashboard')}}">Dashboard</a></li>
+            @endif
         </ul>
     </nav>
     <nav class="modules-navigation">
         <h2>Modules</h2>
         <ul>
-            <li class="ico-mod1"><a href="">Creating Clarity</a></li>
-            <li class="ico-mod2"><a href="">Module 2</a></li>
-            <li class="ico-mod3"><a href="">Module 3</a></li>
-            <li class="ico-mod4"><a href="">Module 4</a></li>
-            <li class="ico-mod5"><a href="">Module 5</a></li>
-            <li class="ico-mod6"><a href="">Module 6</a></li>
-            <li class="ico-mod7"><a href="">Module 7</a></li>
-            <li class="ico-mod8"><a href="">Module 8</a></li>
+            @foreach($modules as $key => $module)
+                @if($module->slug === 'home' || $module->isUnlocked($modules[$key-1]))
+                    <li class="ico-mod{{ ( $module->slug === 'home' ?  1 : $module->order-1) }}">
+                        <a  href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
+                    </li>
+                @else
+                    <li class="{{(Auth::check() && Auth::user()->paid ? 'ico-unlocked' : 'ico-locked')}}">
+                        Module {{$module->order - 1}}
+                    </li>
+                @endif
+            @endforeach
         </ul>
     </nav>
 </aside>

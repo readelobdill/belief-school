@@ -44,6 +44,22 @@ class Module extends Model {
         return $comments;
     }
 
+    public function isUnlocked(Module $previousModule) {
+        if(!empty($previousModule->pivot)
+            && $previousModule->pivot->complete
+            && $previousModule->pivot->completed_at->diffInHours() >= config('belief.lockout')) {
+            return true;
+        }
+        if(!$previousModule->locks) {
+            return true;
+        }
+        if(!empty($this->pivot)) {
+            return true;
+        }
+
+        return false;
+    }
+
 
 
     /**

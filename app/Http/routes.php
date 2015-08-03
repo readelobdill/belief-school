@@ -17,7 +17,7 @@ Route::get('/', 'WelcomeController@index');
 
 
 
-
+Route::get('dreamboardimage', ['uses' => 'ModuleController@showDreamboardImage']);
 
 Route::post('modules/{module}/update', ['as' => 'modules.update', 'uses' => 'ModuleController@updateModule']);
 Route::post('modules/{module}/complete', ['as' => 'modules.complete', 'uses' => 'ModuleController@completeModule']);

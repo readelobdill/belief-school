@@ -22,8 +22,9 @@ class ModuleClient extends EventEmitter {
                 'Content-Type': 'application/json'
             }, defaultHeaders),
             body: JSON.stringify(data)
-        }).then(() => {
+        }).then((response) => {
             this.emit('load:end');
+            return response;
         })
     }
     completeModule(url) {
@@ -35,8 +36,9 @@ class ModuleClient extends EventEmitter {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }, defaultHeaders)
-        }).then(() => {
+        }).then((response) => {
             this.emit('load:end');
+            return response;
         })
     }
     addImage(url, image, imageName) {
@@ -96,8 +98,9 @@ class ModuleClient extends EventEmitter {
                 'Content-Type': 'application/json'
             }, defaultHeaders),
             body: JSON.stringify(data)
-        }).then(() => {
+        }).then((response) => {
             this.emit('load:end');
+            return response;
         });
     }
 }
