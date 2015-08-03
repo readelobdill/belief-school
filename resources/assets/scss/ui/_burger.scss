@@ -1,33 +1,38 @@
 .burger {
-	width: 50px;
-	height: 50px;
-	position: fixed;
-	left: 25px;
-	top: 25px;
-	z-index: 99;
-	background: rgba(white, 0.98);
-	cursor:pointer;
-	overflow:hidden;
-	@include user-select(none);
-	&:hover {
-		svg path {
-			fill: $lightRed;
-		}
-	}
-	svg {
-		width: 34px;
-		height: 34px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 25px;
+    top: 25px;
+    z-index: 99;
+    background: rgba(white, 0.98);
+    cursor:pointer;
+    overflow:hidden;
+    @include user-select(none);
 
-		position:absolute;
-		top: 8px;
-		left: 8px;
-		path {
-			transition: fill 0.7s ease;
-			fill: $fontColour;
-		}
-		&#close-burger {
-			display:none;
-		}
-	}
+    @include breakpoint($break-620) {
+        top: 0;
+        left: 0;
+    }
+    &:hover {
+        svg path {
+            fill: $lightRed;
+        }
+    }
+    svg {
+        width: 34px;
+        height: 34px;
+
+        position:absolute;
+        top: 8px;
+        left: 8px;
+        path {
+            transition: fill 0.7s ease;
+            fill: $fontColour;
+        }
+        &#close-burger {
+            display:none;
+        }
+    }
 
 }

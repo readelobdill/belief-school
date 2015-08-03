@@ -435,7 +435,7 @@ textarea::-webkit-input-placeholder {
   transform: scale(0.85);
 }
 /* line 126, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list {
+.form-row .error-container {
   position: absolute;
   left: 100%;
   top: 50%;
@@ -448,18 +448,14 @@ textarea::-webkit-input-placeholder {
   margin-left: 20px;
   background: white;
   font-size: 15px;
-  display: none;
+  opacity: 0;
 }
 /* line 141, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list.filled {
+.form-row .error-container li {
   display: block;
 }
 /* line 145, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list li {
-  display: block;
-}
-/* line 149, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list:after, .form-row .parsley-errors-list:before {
+.form-row .error-container:after, .form-row .error-container:before {
   right: 100%;
   top: 50%;
   border: solid transparent;
@@ -469,28 +465,28 @@ textarea::-webkit-input-placeholder {
   position: absolute;
   pointer-events: none;
 }
-/* line 160, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list:after {
+/* line 156, ../../resources/assets/scss/core/_forms.scss */
+.form-row .error-container:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 9px;
   margin-top: -9px;
 }
-/* line 167, ../../resources/assets/scss/core/_forms.scss */
-.form-row .parsley-errors-list:before {
+/* line 163, ../../resources/assets/scss/core/_forms.scss */
+.form-row .error-container:before {
   border-color: rgba(174, 174, 174, 0);
   border-right-color: #aeaeae;
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 179, ../../resources/assets/scss/core/_forms.scss */
+/* line 175, ../../resources/assets/scss/core/_forms.scss */
 .form-row .arrow_box:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 185, ../../resources/assets/scss/core/_forms.scss */
+/* line 181, ../../resources/assets/scss/core/_forms.scss */
 .form-row .arrow_box:before {
   border-color: rgba(174, 174, 174, 0);
   border-right-color: #aeaeae;
@@ -539,7 +535,13 @@ p a:hover {
   padding: 50px;
   z-index: 2;
 }
-/* line 19, ../../resources/assets/scss/core/_module.scss */
+@media (max-width: 620px) {
+  /* line 16, ../../resources/assets/scss/core/_module.scss */
+  .module > .module-section.has-container {
+    padding: 0 !important;
+  }
+}
+/* line 24, ../../resources/assets/scss/core/_module.scss */
 .module > .module-section.has-container > .inner {
   width: 100%;
   height: 100%;
@@ -549,15 +551,15 @@ p a:hover {
   overflow: hidden;
 }
 
-/* line 32, ../../resources/assets/scss/core/_module.scss */
+/* line 37, ../../resources/assets/scss/core/_module.scss */
 .has-text {
   padding: 50px;
 }
-/* line 36, ../../resources/assets/scss/core/_module.scss */
+/* line 41, ../../resources/assets/scss/core/_module.scss */
 .has-text.module-section > .inner {
   display: block;
 }
-/* line 42, ../../resources/assets/scss/core/_module.scss */
+/* line 47, ../../resources/assets/scss/core/_module.scss */
 .has-text > .inner .content {
   width: 445px;
   margin: 0 auto;
@@ -566,17 +568,17 @@ p a:hover {
   color: #252e33;
   padding: 40px 0 60px 0;
 }
-/* line 52, ../../resources/assets/scss/core/_module.scss */
+/* line 57, ../../resources/assets/scss/core/_module.scss */
 .has-text .dots {
   margin-bottom: 60px;
   margin-top: 60px;
 }
-/* line 57, ../../resources/assets/scss/core/_module.scss */
+/* line 62, ../../resources/assets/scss/core/_module.scss */
 .has-text .actions {
   text-align: center;
 }
 
-/* line 62, ../../resources/assets/scss/core/_module.scss */
+/* line 67, ../../resources/assets/scss/core/_module.scss */
 .next-section {
   display: block;
   width: 50px;
@@ -591,42 +593,42 @@ p a:hover {
   border: 0;
   transform-origin: 50% 50%;
 }
-/* line 76, ../../resources/assets/scss/core/_module.scss */
+/* line 81, ../../resources/assets/scss/core/_module.scss */
 .next-section svg {
   width: 100%;
   height: 100%;
 }
-/* line 79, ../../resources/assets/scss/core/_module.scss */
+/* line 84, ../../resources/assets/scss/core/_module.scss */
 .next-section svg path {
   fill: white;
   transition: fill 0.3s ease;
 }
 
-/* line 88, ../../resources/assets/scss/core/_module.scss */
+/* line 93, ../../resources/assets/scss/core/_module.scss */
 .congrats-section h1 {
   margin-bottom: 40px;
   line-height: 28px;
   letter-spacing: 0.02em;
 }
-/* line 94, ../../resources/assets/scss/core/_module.scss */
+/* line 99, ../../resources/assets/scss/core/_module.scss */
 .congrats-section p {
   max-width: 442px;
   text-align: center;
   margin-bottom: 40px;
   line-height: 26px;
 }
-/* line 101, ../../resources/assets/scss/core/_module.scss */
+/* line 106, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .actions {
   text-align: center;
   margin: 40px 0;
 }
 
-/* line 107, ../../resources/assets/scss/core/_module.scss */
+/* line 112, ../../resources/assets/scss/core/_module.scss */
 .actions {
   text-align: center;
 }
 
-/* line 111, ../../resources/assets/scss/core/_module.scss */
+/* line 116, ../../resources/assets/scss/core/_module.scss */
 .down-arrow {
   border: 0;
   background: none;
@@ -636,17 +638,17 @@ p a:hover {
   display: inline-block;
   cursor: pointer;
 }
-/* line 120, ../../resources/assets/scss/core/_module.scss */
+/* line 125, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg {
   width: 100%;
   height: 100%;
 }
-/* line 123, ../../resources/assets/scss/core/_module.scss */
+/* line 128, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg path {
   fill: #f16060;
 }
 
-/* line 129, ../../resources/assets/scss/core/_module.scss */
+/* line 134, ../../resources/assets/scss/core/_module.scss */
 .indicator {
   position: fixed;
   top: 50%;
@@ -657,13 +659,13 @@ p a:hover {
   z-index: 99;
 }
 @media (max-width: 800px) {
-  /* line 129, ../../resources/assets/scss/core/_module.scss */
+  /* line 134, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     width: 50px;
     height: 100px;
   }
 }
-/* line 143, ../../resources/assets/scss/core/_module.scss */
+/* line 148, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon {
   width: 50px !important;
   height: 50px;
@@ -671,16 +673,16 @@ p a:hover {
   padding: 8px;
   float: right;
 }
-/* line 154, ../../resources/assets/scss/core/_module.scss */
+/* line 159, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 157, ../../resources/assets/scss/core/_module.scss */
+/* line 162, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg path {
   fill: white;
 }
-/* line 163, ../../resources/assets/scss/core/_module.scss */
+/* line 168, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon {
   width: 110px;
   height: 50px;
@@ -696,36 +698,36 @@ p a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 800px) {
-  /* line 163, ../../resources/assets/scss/core/_module.scss */
+  /* line 168, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon {
     background-color: rgba(255, 255, 255, 0.9);
     width: 50px;
     border: none;
   }
 }
-/* line 184, ../../resources/assets/scss/core/_module.scss */
+/* line 189, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 191, ../../resources/assets/scss/core/_module.scss */
+/* line 196, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
 }
 @media (max-width: 800px) {
-  /* line 184, ../../resources/assets/scss/core/_module.scss */
+  /* line 189, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon svg {
     margin: 2px auto;
   }
 }
-/* line 199, ../../resources/assets/scss/core/_module.scss */
+/* line 204, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon span {
   line-height: 21px;
 }
 @media (max-width: 800px) {
-  /* line 199, ../../resources/assets/scss/core/_module.scss */
+  /* line 204, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon span {
     display: none;
   }
@@ -846,11 +848,18 @@ blockquote.dark {
   -webkit-user-select: none;
   user-select: none;
 }
-/* line 13, ../../resources/assets/scss/ui/_burger.scss */
+@media (max-width: 620px) {
+  /* line 1, ../../resources/assets/scss/ui/_burger.scss */
+  .burger {
+    top: 0;
+    left: 0;
+  }
+}
+/* line 18, ../../resources/assets/scss/ui/_burger.scss */
 .burger:hover svg path {
   fill: #f16060;
 }
-/* line 17, ../../resources/assets/scss/ui/_burger.scss */
+/* line 22, ../../resources/assets/scss/ui/_burger.scss */
 .burger svg {
   width: 34px;
   height: 34px;
@@ -858,12 +867,12 @@ blockquote.dark {
   top: 8px;
   left: 8px;
 }
-/* line 24, ../../resources/assets/scss/ui/_burger.scss */
+/* line 29, ../../resources/assets/scss/ui/_burger.scss */
 .burger svg path {
   transition: fill 0.7s ease;
   fill: #252e33;
 }
-/* line 28, ../../resources/assets/scss/ui/_burger.scss */
+/* line 33, ../../resources/assets/scss/ui/_burger.scss */
 .burger svg#close-burger {
   display: none;
 }
@@ -1063,31 +1072,36 @@ blockquote.dark {
   padding: 80px 40px;
 }
 
-/* line 32, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 31, ../../resources/assets/scss/pages/home/_home.scss */
+[data-page=home] .indicator .forum-icon {
+  display: none;
+}
+
+/* line 41, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section {
   bottom: 60px;
 }
-/* line 35, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 44, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section svg path {
   fill: #f16060;
 }
-/* line 40, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 49, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section:hover svg path {
   fill: #98201a;
 }
-/* line 47, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 56, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content {
   width: 442px;
   text-align: center;
 }
-/* line 51, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 60, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content p {
   text-align: center;
   font-size: 17px;
   line-height: 23px;
   margin-bottom: 15px;
 }
-/* line 59, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 68, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation input {
   margin: 8px 0;
   height: 72px;
@@ -1412,14 +1426,21 @@ ul.accordion h2 .toggle svg path {
 
 /* line 12, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client {
-  max-width: 722px;
-  position: absolute;
+  width: 722px;
+  position: relative;
   margin-left: -138.5px;
   border: 1px solid #dddddd;
   border-radius: 4px;
   background: white;
 }
-/* line 20, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+@media (max-width: 920px) {
+  /* line 12, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+  .email-client {
+    width: 445px;
+    margin-left: 0;
+  }
+}
+/* line 25, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .header {
   height: 35px;
   background: linear-gradient(#ebeaeb, #d7d6d7);
@@ -1427,7 +1448,7 @@ ul.accordion h2 .toggle svg path {
   padding: 0 10px;
   line-height: 35px;
 }
-/* line 26, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 32, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .header div {
   width: 11px;
   height: 11px;
@@ -1435,44 +1456,198 @@ ul.accordion h2 .toggle svg path {
   display: inline-block;
   margin-right: 7px;
 }
-/* line 33, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 39, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .header div.close {
   background: #fc605b;
   border: 1px solid #ed534f;
 }
-/* line 38, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 44, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .header div.minimize {
   background: #fdbc40;
   border: 1px solid #edaf39;
 }
-/* line 43, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 49, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .header div.maxamize {
   background: #33c748;
   border: 1px solid #2dbb3e;
 }
-/* line 51, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 57, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .details {
   padding-left: 25px;
   color: #707070;
   border-bottom: 1px solid #c6c6c6;
 }
-/* line 55, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 61, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .details div {
   padding: 10px 0;
 }
-/* line 58, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 64, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .details .details-row, .email-client .details .cc-row {
   border-bottom: 1px solid #c6c6c6;
 }
-/* line 62, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 68, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 .email-client .message {
   padding: 25px;
 }
 
-/* line 67, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
+/* line 73, ../../resources/assets/scss/pages/boomerang/_boomerang.scss */
 p.annotation {
   color: #aeaeae;
   text-align: center;
+}
+
+/*!
+ * jQCloud 2.0.1
+ * Copyright 2011 Luca Ongaro (http://www.lucaongaro.eu)
+ * Copyright 2013 Daniel White (http://www.developerdan.com)
+ * Copyright 2014 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
+ */
+/* layout */
+/* line 9, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 14, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span {
+  padding: 0;
+}
+
+/* fonts */
+/* line 19, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 10px;
+  line-height: normal;
+}
+
+/* line 25, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud a {
+  font-size: inherit;
+  text-decoration: none;
+}
+
+/* line 30, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w10 {
+  font-size: 550%;
+}
+
+/* line 31, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w9 {
+  font-size: 500%;
+}
+
+/* line 32, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w8 {
+  font-size: 450%;
+}
+
+/* line 33, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w7 {
+  font-size: 400%;
+}
+
+/* line 34, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w6 {
+  font-size: 350%;
+}
+
+/* line 35, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w5 {
+  font-size: 300%;
+}
+
+/* line 36, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w4 {
+  font-size: 250%;
+}
+
+/* line 37, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w3 {
+  font-size: 200%;
+}
+
+/* line 38, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w2 {
+  font-size: 150%;
+}
+
+/* line 39, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w1 {
+  font-size: 100%;
+}
+
+/* colors */
+/* line 42, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud {
+  color: #09f;
+}
+
+/* line 43, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud a {
+  color: inherit;
+}
+
+/* line 44, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud a:hover {
+  color: #0df;
+}
+
+/* line 45, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud a:hover {
+  color: #0cf;
+}
+
+/* line 46, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w10 {
+  color: #0cf;
+}
+
+/* line 47, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w9 {
+  color: #0cf;
+}
+
+/* line 48, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w8 {
+  color: #0cf;
+}
+
+/* line 49, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w7 {
+  color: #39d;
+}
+
+/* line 50, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w6 {
+  color: #90c5f0;
+}
+
+/* line 51, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w5 {
+  color: #90a0dd;
+}
+
+/* line 52, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w4 {
+  color: #90c5f0;
+}
+
+/* line 53, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w3 {
+  color: #a0ddff;
+}
+
+/* line 54, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w2 {
+  color: #99ccee;
+}
+
+/* line 55, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w1 {
+  color: #aab5f0;
 }
 
 /* line 1, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
@@ -1731,8 +1906,9 @@ p.annotation {
   height: 100%;
   background: rgba(255, 255, 255, 0.95);
   z-index: 10;
+  visibility: hidden;
 }
-/* line 65, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 66, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .modal {
   position: absolute;
   top: 50%;
@@ -1746,13 +1922,14 @@ p.annotation {
   border-image: linear-gradient(23deg, rgba(37, 46, 51, 0.5) 0%, rgba(37, 46, 51, 0) 90%);
   border-image-slice: 1;
   color: #252e33;
+  visibility: hidden;
 }
-/* line 78, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 80, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .modal p {
   line-height: 26px;
   text-align: center;
 }
-/* line 82, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 84, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .modal .close {
   width: 38px;
   height: 38px;
@@ -1763,39 +1940,39 @@ p.annotation {
   padding: 12px;
   cursor: pointer;
 }
-/* line 91, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 93, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .modal .close svg {
   width: 100%;
   height: 100%;
 }
-/* line 94, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 96, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .modal .close svg path {
   fill: white;
 }
-/* line 101, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 103, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .row-4, .board .mid-row {
   padding: 20px 0;
 }
-/* line 104, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 106, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .row-4 {
   width: 862px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
-/* line 110, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 112, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .mid-row {
   display: flex;
   justify-content: space-between;
   width: 1085px;
 }
-/* line 114, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 116, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .mid-row .column {
   display: flex;
   width: 423px;
   justify-content: space-between;
 }
-/* line 121, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 123, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image {
   width: 195px;
   height: 129px;
@@ -1804,27 +1981,41 @@ p.annotation {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
-/* line 130, ../../resources/assets/scss/pages/visualise/_visualise.scss */
-.board .image.your-image {
+/* line 134, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.board .image input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 999px;
+  opacity: 0;
+  cursor: pointer;
+}
+/* line 144, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.board .image.image_main {
   transform-origin: 50% 50%;
   transform: scale(1.3, 1.3);
+  position: relative;
+  z-index: 2;
 }
-/* line 135, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 151, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image img {
   width: 100%;
   height: 100%;
   display: none;
 }
-/* line 141, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 157, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image.has-image img {
   display: block;
 }
-/* line 144, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 160, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image.has-image .camera-icon {
   display: none;
 }
-/* line 149, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 165, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image .camera-icon {
   width: 62px;
   height: 62px;
@@ -1832,17 +2023,34 @@ p.annotation {
   background: #f16060;
   padding: 17px;
 }
-/* line 155, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 171, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image .camera-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 158, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 174, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image .camera-icon svg path {
   fill: white;
 }
+/* line 179, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.board .image .loader {
+  display: none;
+  width: 62px;
+  height: 62px;
+  line-height: 62px;
+  text-align: center;
+  background: #f16060;
+}
+/* line 188, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.board .image.is-loading .loader {
+  display: block;
+}
+/* line 191, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+.board .image.is-loading .camera-icon {
+  display: none;
+}
 
-/* line 166, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 198, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social {
   position: relative;
   z-index: 20;
@@ -1850,8 +2058,9 @@ p.annotation {
   height: 17px;
   line-height: 17px;
   margin-top: 40px;
+  visibility: hidden;
 }
-/* line 173, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 206, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a {
   display: inline-block;
   font-size: 12px;
@@ -1862,15 +2071,15 @@ p.annotation {
   vertical-align: top;
   font-weight: normal;
 }
-/* line 183, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 216, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a:hover {
   color: #f16060;
 }
-/* line 186, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 219, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a:hover svg path {
   fill: #f16060;
 }
-/* line 191, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 224, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a svg {
   height: 17px;
   display: inline-block;
@@ -1962,4 +2171,15 @@ form.letter textarea {
 /* line 2, ../../resources/assets/scss/pages/sustainable-change/_sustainable-change.scss */
 .i-choose input {
   width: 100%;
+}
+
+/* line 1, ../../resources/assets/scss/forum/_comment.scss */
+ul.comments-list {
+  margin-left: 40px;
+  outline: 1px solid blue;
+}
+
+/* line 6, ../../resources/assets/scss/forum/_comment.scss */
+.comment {
+  outline: 1px solid green;
 }

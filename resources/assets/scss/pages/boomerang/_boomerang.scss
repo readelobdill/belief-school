@@ -10,12 +10,17 @@
 }
 
 .email-client {
-    max-width: 722px;
-    position: absolute;
+    width: 722px;
+    position: relative;
     margin-left: -138.5px;
     border: 1px solid #dddddd;
     border-radius: 4px;
     background: white;
+
+    @include breakpoint($break-920) {
+        width: 445px;
+        margin-left: 0;
+    }
 
     .header {
         height: 35px;
@@ -23,6 +28,7 @@
         border-bottom: 1px solid #b5b4b5;
         padding:0 10px;
         line-height: 35px;
+
         div {
             width: 11px;
             height: 11px;

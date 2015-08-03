@@ -6,6 +6,7 @@ export default class CongratsSection extends Text {
 
 
     setupEventListeners() {
+        super.setupEventListeners();
         this.section.on('click','[data-complete-module]', this.completeModule.bind(this))
     }
 

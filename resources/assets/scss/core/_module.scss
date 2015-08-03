@@ -16,6 +16,11 @@
         &.has-container {
             padding: 50px;
             z-index: 2;
+
+            @include breakpoint ($break-620) {
+                padding: 0 !important;
+            }
+
             > .inner {
                 width: 100%;
                 height: 100%;
