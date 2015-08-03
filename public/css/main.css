@@ -622,13 +622,26 @@ p a:hover {
   text-align: center;
   margin: 40px 0;
 }
+/* line 111, ../../resources/assets/scss/core/_module.scss */
+.congrats-section .congrats-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
 
-/* line 112, ../../resources/assets/scss/core/_module.scss */
+/* line 125, ../../resources/assets/scss/core/_module.scss */
 .actions {
   text-align: center;
 }
 
-/* line 116, ../../resources/assets/scss/core/_module.scss */
+/* line 129, ../../resources/assets/scss/core/_module.scss */
 .down-arrow {
   border: 0;
   background: none;
@@ -638,17 +651,17 @@ p a:hover {
   display: inline-block;
   cursor: pointer;
 }
-/* line 125, ../../resources/assets/scss/core/_module.scss */
+/* line 138, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg {
   width: 100%;
   height: 100%;
 }
-/* line 128, ../../resources/assets/scss/core/_module.scss */
+/* line 141, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg path {
   fill: #f16060;
 }
 
-/* line 134, ../../resources/assets/scss/core/_module.scss */
+/* line 147, ../../resources/assets/scss/core/_module.scss */
 .indicator {
   position: fixed;
   top: 50%;
@@ -659,13 +672,13 @@ p a:hover {
   z-index: 99;
 }
 @media (max-width: 800px) {
-  /* line 134, ../../resources/assets/scss/core/_module.scss */
+  /* line 147, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     width: 50px;
     height: 100px;
   }
 }
-/* line 148, ../../resources/assets/scss/core/_module.scss */
+/* line 161, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon {
   width: 50px !important;
   height: 50px;
@@ -673,16 +686,16 @@ p a:hover {
   padding: 8px;
   float: right;
 }
-/* line 159, ../../resources/assets/scss/core/_module.scss */
+/* line 172, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 162, ../../resources/assets/scss/core/_module.scss */
+/* line 175, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg path {
   fill: white;
 }
-/* line 168, ../../resources/assets/scss/core/_module.scss */
+/* line 181, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon {
   width: 110px;
   height: 50px;
@@ -698,41 +711,42 @@ p a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 800px) {
-  /* line 168, ../../resources/assets/scss/core/_module.scss */
+  /* line 181, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon {
     background-color: rgba(255, 255, 255, 0.9);
     width: 50px;
     border: none;
   }
 }
-/* line 189, ../../resources/assets/scss/core/_module.scss */
+/* line 202, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 196, ../../resources/assets/scss/core/_module.scss */
+/* line 209, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
 }
 @media (max-width: 800px) {
-  /* line 189, ../../resources/assets/scss/core/_module.scss */
+  /* line 202, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon svg {
     margin: 2px auto;
   }
 }
-/* line 204, ../../resources/assets/scss/core/_module.scss */
+/* line 217, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon span {
   line-height: 21px;
 }
 @media (max-width: 800px) {
-  /* line 204, ../../resources/assets/scss/core/_module.scss */
+  /* line 217, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon span {
     display: none;
   }
 }
 
+/*TODO: Might want to create a module folder, for misc shared module styles*/
 /* line 1, ../../resources/assets/scss/core/_typography.scss */
 strong {
   font-weight: bold;
@@ -1046,6 +1060,14 @@ blockquote.dark {
 /* line 134, ../../resources/assets/scss/ui/_menu.scss */
 .menu ul li.ico-mod9:before {
   content: '\e611';
+}
+/* line 140, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-locked:before {
+  content: "\e621";
+}
+/* line 145, ../../resources/assets/scss/ui/_menu.scss */
+.menu ul li.ico-unlocked:before {
+  content: "\e622";
 }
 
 /* line 2, ../../resources/assets/scss/pages/home/_home.scss */
