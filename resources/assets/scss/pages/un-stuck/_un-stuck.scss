@@ -2,10 +2,19 @@
     width: 695px;
     margin-left: -125px;
     margin-bottom: 30px;
+
+    @include breakpoint($brk-small) {
+        margin-left: auto;
+        width: 100%;
+    }
     .beliefs {
         display:flex;
         justify-content: space-between;
         position:relative;
+
+        @include breakpoint($brk-small) {
+            display: block;
+        }
     }
 
     .belief {
@@ -13,6 +22,10 @@
         height: 256px;
         position:relative;
         display:block;
+
+        @include breakpoint($brk-small) {
+            margin: 40px auto;
+        }
 
         label {
             position:absolute;
@@ -85,9 +98,14 @@
 .positive-affirmations {
     width: 695px;
     margin-left: -125px;
+
     .positive-affirmations-fields {
         display:flex;
         justify-content: space-between;
+
+        @include breakpoint($brk-medium) {
+            display: block;
+        }
     }
 
     .the-affirmation, .the-belief {
@@ -95,20 +113,31 @@
         height: 256px;
         background-color: transparent;
         position: relative;
+
+        @include breakpoint($brk-medium) {
+            margin: auto;
+        }
     }
+
     .the-belief {
         border: 2px solid transparent;
         border-image: linear-gradient(23deg, rgba(#abafb1, 1) 0%, rgba(#abafb1, 0) 90%);
         border-image-slice: 1;
-        display:block;
+        display: block;
         padding: 50px 25px 25px 25px;
         text-align:center;
         margin-bottom: 15px;
+
+        @include breakpoint($brk-medium) {
+            margin: 15px auto;
+        }
+
         .number {
             position:absolute;
             top: 6px;
             left: 10px;
         }
+
         p.limiting-belief-text {
             margin: 0;
             padding: 0;
@@ -116,6 +145,7 @@
             font-size: 14px;
             line-height: 22px;
         }
+
         strong {
             font-size: 14px;
         }
@@ -158,6 +188,7 @@
             text-align: center;
             font-style: italic;
             margin: 0;
+
             &:focus {
                 background: $lightRed;
                 color: white;

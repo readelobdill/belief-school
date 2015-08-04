@@ -12,9 +12,18 @@ $icon: 'icomoon';
 $ease: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 $transition: 300ms $ease;
 
+//gutter
+$gutter: 20px;
+
 // breakpoints
 $breakpoint-default-feature: 'max-width';
-$break-620 : 620px; // window padding collapses
+$break-620 : 620px;
+    // window padding collapses,
+    // menu icon movs top left
+$brk-small : 500px;
+    // content has text width 100%
 $break-800 : 800px; // indicator folds down
 $break-920 : 920px; // fake-email gets smaller.
+$brk-medium : 920px;
+    // poissitive affirmations stack.
 $break-1024 : 1024px; // fake-email gets smaller.
