@@ -10,6 +10,7 @@ import Giving from "pages/giving";
 import Gratitude from "pages/gratitude";
 import SustainableChange from "pages/sustainable-change";
 import Dashboard from 'dashboard/dashboard';
+import Account from 'auth/account';
 
 /*Misc Pages*/
 import Forum from "forum/forum";
@@ -60,6 +61,10 @@ switch(page) {
         break;
     case 'dashboard':
         Dashboard.init();
+        break;
+    case 'account':
+        Account.init();
+        break;
 
 
 }

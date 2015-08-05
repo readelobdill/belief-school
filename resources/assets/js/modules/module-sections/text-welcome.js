@@ -1,7 +1,7 @@
 import Text from "./text";
 import Accordion from "modules/accordion"
 import $ from "jquery";
-import "parsleyjs";
+import 'parsleyjs';
 import client from 'sources/ModuleClient';
 
 class TextWelcome extends Text {

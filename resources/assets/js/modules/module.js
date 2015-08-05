@@ -62,6 +62,13 @@ class Module {
         return this.container.data('is-complete');
     }
 
+    setData(data) {
+        this.data = data;
+    }
+    getData() {
+        return this.data;
+    }
+
 }
 
 

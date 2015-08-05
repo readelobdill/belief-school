@@ -26,41 +26,41 @@
         <form action="" class="positive-affirmations">
             <div class="positive-affirmations-fields">
                 <div class="belief">
-                    <label class="the-belief" for="affirmation-1">
+                    <label class="the-belief" for="response-1">
                         <span class="number">1 .</span>
                         <strong>After facing</strong>
-                        <p class="limiting-belief-text" >"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+                        <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-1'} : '' }}"</p>
                         <strong>I felt&hellip;</strong>
                     </label>
                     <div class="the-affirmation">
-                        <textarea name="response-1" id="affirmation-1" required></textarea>
-                        <label class="number" for="affirmation-1">1 .</label>
+                        <textarea name="response-1" id="response-1" required></textarea>
+                        <label class="number" for="response-1">1 .</label>
 
                     </div>
                 </div>
                 <div class="belief">
-                    <label class="the-belief" for="affirmation-2">
+                    <label class="the-belief" for="response-2">
                         <span class="number">2 .</span>
                         <strong>After facing</strong>
-                        <p class="limiting-belief-text" >"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+                        <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-2'} : '' }}"</p>
                         <strong>I felt&hellip;</strong>
                     </label>
                     <div class="the-affirmation">
-                        <textarea name="response-2" id="affirmation-2" required></textarea>
-                        <label class="number" for="affirmation-2">2 .</label>
+                        <textarea name="response-2" id="response-2" required></textarea>
+                        <label class="number" for="response-2">2 .</label>
 
                     </div>
                 </div>
                 <div class="belief">
-                    <label class="the-belief" for="affirmation-1">
+                    <label class="the-belief" for="response-3">
                         <span class="number">3 .</span>
                         <strong>After facing</strong>
-                        <p class="limiting-belief-text" >"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+                        <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-3'} : '' }}"</p>
                         <strong>I felt&hellip;</strong>
                     </label>
                     <div class="the-affirmation">
-                        <textarea name="response-3" id="affirmation-3" required></textarea>
-                        <label class="number" for="affirmation-3">3 .</label>
+                        <textarea name="response-3" id="response-3" required></textarea>
+                        <label class="number" for="response-3">3 .</label>
 
                     </div>
                 </div>

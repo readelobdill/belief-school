@@ -103,6 +103,22 @@ class ModuleClient extends EventEmitter {
             return response;
         });
     }
+
+    updateUser(url, data) {
+        this.emit('load:start');
+        return fetch(url, {
+            method: 'post',
+            credentials: 'same-origin',
+            headers: $.extend({}, {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }, defaultHeaders),
+            body: JSON.stringify(data)
+        }).then((response) => {
+            this.emit('load:end');
+            return response;
+        });
+    }
 }
 
 export default (new ModuleClient());

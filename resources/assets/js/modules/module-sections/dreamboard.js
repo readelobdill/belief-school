@@ -2,6 +2,9 @@ import ModuleSection from 'modules/module-section';
 import $ from 'jquery';
 import Text from './text';
 import client from 'sources/ModuleClient';
+import TweenMax from "gsap/src/uncompressed/TweenMax";
+import TimelineLite from "gsap/src/uncompressed/TimelineLite";
+
 
 export default class Dreamboard extends Text {
 
@@ -36,7 +39,7 @@ export default class Dreamboard extends Text {
     }
 
     submit() {
-
+        //this.showComplete();
 
         let url = this.module.getUpdateUrl();
         let data = {};
@@ -57,6 +60,14 @@ export default class Dreamboard extends Text {
         } else {
             this.section.find('[data-save-module]').addClass('is-disabled')
         }
+    }
+
+    showComplete() {
+        const timeline = new TimelineLite();
+        timeline.to(this.section.find('.overlay'), 0.3, {autoAlpha: 1}, 0);
+        timeline.to(this.section.find('.modal'), 0.3, {autoAlpha: 1}, 0);
+        timeline.to(this.section.find('.social'), 0.3, {autoAlpha: 1}, 0);
+
     }
 }
 

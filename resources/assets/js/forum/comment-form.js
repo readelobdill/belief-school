@@ -20,10 +20,15 @@ export default class CommentForm extends EventEmitter {
     }
 
     submitForm() {
+        if(this.submitting) {
+            return;
+        }
+        this.submitting = true;
         client.replyTo(this.form.attr('action'), serializeForm(this.form)).then((response) => {
             return response.text()
         }).then((text) => {
             this.emit('comment:new', text);
+            this.submitting = false;
         });
     }
 }
