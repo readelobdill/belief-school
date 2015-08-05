@@ -20,10 +20,24 @@ $breakpoint-default-feature: 'max-width';
 $break-620 : 620px;
     // window padding collapses,
     // menu icon movs top left
+
 $brk-small : 500px;
     // content has text width 100%
-$break-800 : 800px; // indicator folds down
-$break-920 : 920px; // fake-email gets smaller.
+
+$break-800 : 800px;
+    // indicator folds down
+
+$break-920 : 920px;
+    // fake-email gets smaller.
+
 $brk-medium : 920px;
     // poissitive affirmations stack.
-$break-1024 : 1024px; // fake-email gets smaller.
+
+$brk-large : 1120px;
+    // visualise catergories stack.
+
+$brk-xlarge : 1280px;
+    // 'visualise' - image upload collapse
+
+$break-1024 : 1024px;
+    // fake-email gets smaller.

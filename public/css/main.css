@@ -643,13 +643,17 @@ p a:hover {
   opacity: 0;
   visibility: hidden;
 }
+/* line 128, ../../resources/assets/scss/core/_module.scss */
+.congrats-section .congrats-container > .inner {
+  padding: 0 20px;
+}
 
-/* line 130, ../../resources/assets/scss/core/_module.scss */
+/* line 134, ../../resources/assets/scss/core/_module.scss */
 .actions {
   text-align: center;
 }
 
-/* line 134, ../../resources/assets/scss/core/_module.scss */
+/* line 138, ../../resources/assets/scss/core/_module.scss */
 .down-arrow {
   border: 0;
   background: none;
@@ -659,17 +663,17 @@ p a:hover {
   display: inline-block;
   cursor: pointer;
 }
-/* line 143, ../../resources/assets/scss/core/_module.scss */
+/* line 147, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg {
   width: 100%;
   height: 100%;
 }
-/* line 146, ../../resources/assets/scss/core/_module.scss */
+/* line 150, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg path {
   fill: #f16060;
 }
 
-/* line 152, ../../resources/assets/scss/core/_module.scss */
+/* line 156, ../../resources/assets/scss/core/_module.scss */
 .indicator {
   position: fixed;
   top: 50%;
@@ -680,19 +684,19 @@ p a:hover {
   z-index: 99;
 }
 @media (max-width: 800px) {
-  /* line 152, ../../resources/assets/scss/core/_module.scss */
+  /* line 156, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     width: 50px;
     height: 100px;
   }
 }
 @media (max-width: 500px) {
-  /* line 152, ../../resources/assets/scss/core/_module.scss */
+  /* line 156, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     display: none;
   }
 }
-/* line 169, ../../resources/assets/scss/core/_module.scss */
+/* line 173, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon {
   width: 50px !important;
   height: 50px;
@@ -700,16 +704,16 @@ p a:hover {
   padding: 8px;
   float: right;
 }
-/* line 180, ../../resources/assets/scss/core/_module.scss */
+/* line 184, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 183, ../../resources/assets/scss/core/_module.scss */
+/* line 187, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg path {
   fill: white;
 }
-/* line 189, ../../resources/assets/scss/core/_module.scss */
+/* line 193, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon {
   width: 110px;
   height: 50px;
@@ -725,36 +729,36 @@ p a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 800px) {
-  /* line 189, ../../resources/assets/scss/core/_module.scss */
+  /* line 193, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon {
     background-color: rgba(255, 255, 255, 0.9);
     width: 50px;
     border: none;
   }
 }
-/* line 210, ../../resources/assets/scss/core/_module.scss */
+/* line 214, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 217, ../../resources/assets/scss/core/_module.scss */
+/* line 221, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
 }
 @media (max-width: 800px) {
-  /* line 210, ../../resources/assets/scss/core/_module.scss */
+  /* line 214, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon svg {
     margin: 2px auto;
   }
 }
-/* line 225, ../../resources/assets/scss/core/_module.scss */
+/* line 229, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon span {
   line-height: 21px;
 }
 @media (max-width: 800px) {
-  /* line 225, ../../resources/assets/scss/core/_module.scss */
+  /* line 229, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon span {
     display: none;
   }
@@ -1922,7 +1926,15 @@ div.jqcloud span.w1 {
   justify-content: space-between;
   margin-bottom: 60px;
 }
-/* line 8, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+@media (max-width: 1120px) {
+  /* line 1, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+  .categories {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+/* line 14, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .categories .category {
   width: 286px;
   padding: 50px 25px 25px 25px;
@@ -1931,46 +1943,58 @@ div.jqcloud span.w1 {
   border-image-slice: 1;
   color: #252e33;
 }
-/* line 15, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+@media (max-width: 1120px) {
+  /* line 14, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+  .categories .category {
+    margin: 20px auto;
+  }
+}
+@media (max-width: 500px) {
+  /* line 14, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+  .categories .category {
+    width: 100%;
+  }
+}
+/* line 30, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .categories .category i {
   height: 45px;
   display: inline-block;
   margin-bottom: 10px;
 }
-/* line 20, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 35, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .categories .category i svg {
   height: 100%;
 }
-/* line 23, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 38, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .categories .category i svg path {
   fill: #f16060;
 }
-/* line 28, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 43, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .categories .category h3 {
   font-weight: bold;
   font-size: 25px;
   margin-bottom: 22px;
 }
-/* line 33, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 48, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .categories .category p {
   font-size: 14px;
 }
 
-/* line 42, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 57, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .dreamboard h1.title:after {
   width: 37px;
 }
-/* line 46, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 62, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .dreamboard .board {
   margin-bottom: 60px;
 }
-/* line 49, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 66, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .dreamboard .button {
   position: relative;
   z-index: 20;
 }
 
-/* line 56, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 74, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .overlay {
   position: absolute;
   top: 0;
@@ -1981,7 +2005,7 @@ div.jqcloud span.w1 {
   z-index: 10;
   visibility: hidden;
 }
-/* line 66, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 85, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .modal {
   position: absolute;
   top: 50%;
@@ -1997,12 +2021,12 @@ div.jqcloud span.w1 {
   color: #252e33;
   visibility: hidden;
 }
-/* line 80, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 100, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .modal p {
   line-height: 26px;
   text-align: center;
 }
-/* line 84, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 105, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .modal .close {
   width: 38px;
   height: 38px;
@@ -2013,39 +2037,52 @@ div.jqcloud span.w1 {
   padding: 12px;
   cursor: pointer;
 }
-/* line 93, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 114, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .modal .close svg {
   width: 100%;
   height: 100%;
 }
-/* line 96, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 117, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .modal .close svg path {
   fill: white;
 }
-/* line 103, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 124, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .row-4, .board .mid-row {
   padding: 20px 0;
 }
-/* line 106, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+@media (max-width: 1280px) {
+  /* line 124, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+  .board .row-4, .board .mid-row {
+    display: block;
+  }
+}
+/* line 133, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .row-4 {
   width: 862px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
-/* line 112, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 145, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .mid-row {
   display: flex;
   justify-content: space-between;
   width: 1085px;
 }
-/* line 116, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 149, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .mid-row .column {
   display: flex;
   width: 423px;
   justify-content: space-between;
 }
-/* line 123, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+@media (max-width: 1280px) {
+  /* line 149, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+  .board .mid-row .column {
+    display: block;
+    width: auto;
+  }
+}
+/* line 162, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image {
   width: 195px;
   height: 129px;
@@ -2058,7 +2095,21 @@ div.jqcloud span.w1 {
   overflow: hidden;
   cursor: pointer;
 }
-/* line 134, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+@media (max-width: 1280px) {
+  /* line 162, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+  .board .image {
+    float: left;
+  }
+  /* line 177, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+  .board .image.image_5 {
+    float: left;
+  }
+  /* line 180, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+  .board .image.image_7 {
+    float: left;
+  }
+}
+/* line 186, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image input {
   position: absolute;
   top: 0;
@@ -2067,28 +2118,28 @@ div.jqcloud span.w1 {
   opacity: 0;
   cursor: pointer;
 }
-/* line 144, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 196, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image.image_main {
   transform-origin: 50% 50%;
   transform: scale(1.3, 1.3);
   position: relative;
   z-index: 2;
 }
-/* line 151, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 207, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image img {
   width: 100%;
   height: 100%;
   display: none;
 }
-/* line 157, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 213, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image.has-image img {
   display: block;
 }
-/* line 160, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 216, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image.has-image .camera-icon {
   display: none;
 }
-/* line 165, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 221, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image .camera-icon {
   width: 62px;
   height: 62px;
@@ -2096,16 +2147,16 @@ div.jqcloud span.w1 {
   background: #f16060;
   padding: 17px;
 }
-/* line 171, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 227, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image .camera-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 174, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 230, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image .camera-icon svg path {
   fill: white;
 }
-/* line 179, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 235, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image .loader {
   display: none;
   width: 62px;
@@ -2114,16 +2165,16 @@ div.jqcloud span.w1 {
   text-align: center;
   background: #f16060;
 }
-/* line 188, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 244, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image.is-loading .loader {
   display: block;
 }
-/* line 191, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 247, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .board .image.is-loading .camera-icon {
   display: none;
 }
 
-/* line 198, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 254, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social {
   position: relative;
   z-index: 20;
@@ -2133,7 +2184,7 @@ div.jqcloud span.w1 {
   margin-top: 40px;
   visibility: hidden;
 }
-/* line 206, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 262, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a {
   display: inline-block;
   font-size: 12px;
@@ -2144,15 +2195,15 @@ div.jqcloud span.w1 {
   vertical-align: top;
   font-weight: normal;
 }
-/* line 216, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 272, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a:hover {
   color: #f16060;
 }
-/* line 219, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 275, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a:hover svg path {
   fill: #f16060;
 }
-/* line 224, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 280, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a svg {
   height: 17px;
   display: inline-block;
