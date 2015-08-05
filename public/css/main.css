@@ -1094,54 +1094,62 @@ blockquote.dark {
   height: 100%;
 }
 /* line 7, ../../resources/assets/scss/pages/home/_home.scss */
-.background-video .display-video {
+.background-video .video-wrapper {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* line 15, ../../resources/assets/scss/pages/home/_home.scss */
+.background-video .display-video {
+  margin-left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  backface-visibility: hidden;
   min-width: 100%;
   min-height: 100%;
 }
-/* line 15, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 23, ../../resources/assets/scss/pages/home/_home.scss */
 .background-video .home-banner {
   z-index: 20;
   width: 700px;
 }
 
-/* line 22, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 30, ../../resources/assets/scss/pages/home/_home.scss */
 .intro-video {
   padding: 80px 40px;
 }
 
-/* line 31, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 39, ../../resources/assets/scss/pages/home/_home.scss */
 [data-page=home] .indicator .forum-icon {
   display: none;
 }
 
-/* line 41, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 49, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section {
   bottom: 60px;
 }
-/* line 44, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 52, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section svg path {
   fill: #f16060;
 }
-/* line 49, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 57, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section:hover svg path {
   fill: #98201a;
 }
-/* line 56, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 64, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content {
   width: 442px;
   text-align: center;
 }
-/* line 60, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 68, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content p {
   text-align: center;
   font-size: 17px;
   line-height: 23px;
   margin-bottom: 15px;
 }
-/* line 68, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 76, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation input {
   margin: 8px 0;
   height: 72px;

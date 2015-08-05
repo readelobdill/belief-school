@@ -1,7 +1,7 @@
 import animate from "modules/animate";
 import config from "config";
 import $ from "jquery";
-import "parsleyjs";
+import 'parsleyjs';
 import TweenMax from "gsap/src/uncompressed/TweenMax";
 import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 import {showError, hideError} from 'util/errors';

@@ -72,4 +72,20 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return parent::newPivot($parent, $attributes, $table, $exists);
     }
 
+
+    public static function emailExists($email) {
+        $user = User::where('email', $email)->first();
+
+        if(empty($user)) {
+            return false;
+        } else {
+            if(\Auth::check() && $user->email === \Auth::user()->email) {
+                return false;
+            }
+            return true;
+        }
+    }
+
+
+
 }

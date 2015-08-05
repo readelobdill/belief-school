@@ -17,7 +17,7 @@ Route::get('/', 'WelcomeController@index');
 
 
 
-Route::get('dreamboardimage', ['uses' => 'ModuleController@showDreamboardImage']);
+Route::get('modules/visualise/dreamboard', ['as' => 'modules.visualise.dreamboard','uses' => 'ModuleController@showDreamboardImage']);
 
 Route::post('modules/{module}/update', ['as' => 'modules.update', 'uses' => 'ModuleController@updateModule']);
 Route::post('modules/{module}/complete', ['as' => 'modules.complete', 'uses' => 'ModuleController@completeModule']);
@@ -39,7 +39,11 @@ Route::get('share/{secret}', ['as' => 'module.share', 'uses' => 'ModuleControlle
 
 
 Route::bind('module', function($value) {
-    return \App\Models\Module::with(['requiredModule'])->where('slug', $value)->first();
+    $module = \App\Models\Module::with(['requiredModule'])->where('slug', $value)->first();
+    if($module) {
+        return $module;
+    }
+    abort(404);
 });
 
 
@@ -58,6 +62,20 @@ Route::controllers([
 Route::get('admin', function() {
 
 });
+
+
+Route::get('account', ['as' => 'account', 'middleware' => 'auth', 'uses' => 'UserController@account']);
+Route::post('account', ['as' => 'account.submit', 'middleware' => 'auth', 'uses' => 'UserController@submitAccount']);
+Route::any('email-exists', ['as' => 'account.check-email', 'uses' => 'UserController@checkEmail']);
+
+
+
+Route::get('terms-and-conditions', ['as' => 'terms-and-conditions', function() {
+    return view('app.misc.terms-and-conditions');
+}]);
+Route::get('privacy-policy', ['as' => 'privacy-policy', function() {
+    return view('app.misc.privacy-policy');
+}]);
 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {

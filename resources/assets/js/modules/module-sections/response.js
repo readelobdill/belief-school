@@ -52,6 +52,16 @@ export default class Affirmations extends Text {
         });
     }
 
+    setup() {
+        super.setup();
+        const data = this.module.getData();
+        if(data) {
+            this.section.find('[for="response-1"]').find('.limiting-belief-text').html('"'+data['challenge-1']+'"');
+            this.section.find('[for="response-2"]').find('.limiting-belief-text').html('"'+data['challenge-2']+'"');
+            this.section.find('[for="response-3"]').find('.limiting-belief-text').html('"'+data['challenge-3']+'"');
+        }
+    }
+
 
 }
 

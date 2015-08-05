@@ -13,7 +13,7 @@
                 <label>Last Name</label>
             </div>
             <div class="form-row">
-                <input type="email" name="email" required>
+                <input type="email" name="email" required data-parsley-remote="{{route('account.check-email')}}" data-parlsey-remote-reverse="true">
                 <label>Email Address</label>
             </div>
             <div class="form-row">
@@ -21,7 +21,7 @@
                 <label>Username</label>
             </div>
             <div class="form-row">
-                <input type="password" name="password" required minlength="8">
+                <input type="password" name="password" required data-parsley-pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
                 <label>Password</label>
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">

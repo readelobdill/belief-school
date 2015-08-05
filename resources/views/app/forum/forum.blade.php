@@ -6,8 +6,12 @@
             <div class="inner">
                 <div class="content">
                     @include('app.forum.form')
+                    @if($comments->isEmpty())
+                        <ul class="comments-list"></ul>
+                    @else
+                        {!! $commentRenderer->renderAll() !!}
+                    @endif
 
-                    {!! $commentRenderer->renderAll() !!}
                 </div>
 
             </div>

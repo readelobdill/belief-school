@@ -12,23 +12,24 @@ export default class Dashboard {
         let wordsRaw = JSON.parse($boomerang.find('.tagcloud-words').html());
         let wordsWeights = {};
         let words = [];
-
-        for(let word of wordsRaw) {
-            if(wordsWeights[word]) {
-                wordsWeights[word]++;
-            } else {
-                wordsWeights[word] = 1;
+        if(wordsRaw) {
+            for(let word of wordsRaw) {
+                if(wordsWeights[word]) {
+                    wordsWeights[word]++;
+                } else {
+                    wordsWeights[word] = 1;
+                }
             }
+
+            for(let word in wordsWeights) {
+                words.push({
+                    text: word,
+                    weight: wordsWeights[word]
+                })
+            }
+            $boomerang.find('.tagcloud').jQCloud(words, {width :400, height: 200});
         }
 
-        for(let word in wordsWeights) {
-            words.push({
-                text: word,
-                weight: wordsWeights[word]
-            })
-        }
-        console.log(words);
-        $boomerang.find('.tagcloud').jQCloud(words, {width :400, height: 200});
     }
 }
 

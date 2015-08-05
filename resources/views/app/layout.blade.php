@@ -12,7 +12,7 @@
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     @endif
 </head>
-<body data-page="{{$page}}">
+<body data-page="{{ $page or 'page' }}">
 @include('app.partials.buttons.burger')
 @include('app.ui.menu')
 

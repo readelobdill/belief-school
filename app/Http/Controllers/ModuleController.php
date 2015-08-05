@@ -236,7 +236,7 @@ class ModuleController extends Controller {
         $commentRenderer = new CommentRenderer($comments);
         $page = 'forum';
 
-        return view('app.forum.forum', compact('commentRenderer', 'module', 'page'));
+        return view('app.forum.forum', compact('commentRenderer', 'module', 'page', 'comments'));
 
     }
 

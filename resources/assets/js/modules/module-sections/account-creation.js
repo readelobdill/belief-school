@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import "parsleyjs";
+import 'parsleyjs';
 import TweenMax from "gsap/src/uncompressed/TweenMax";
 import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 import config from 'config';
@@ -55,18 +55,18 @@ export default class AccountCreationSection extends ModuleSection {
     }
     setupEventListeners() {
         this.section.on('click', '.next-section', (e) => {
-
-            if (this.validator.validate()) {
-                if(this.submitting) {
-                    return false;
-                }
-                this.submitting = true;
-                Client.registerUser(this.form.attr('action'), serialize(this.form)).then((response) => {
-                    return this.module.nextSection();
-                });
-
-            }
+            this.form.submit();
         });
+        this.form.on('submit', (e) => {
+            e.preventDefault();
+            if(this.submitting) {
+                return false;
+            }
+            this.submitting = true;
+            Client.registerUser(this.form.attr('action'), serialize(this.form)).then((response) => {
+                return this.module.nextSection();
+            });
+        } )
         this.section.on('focus', 'input', this.formOnFocus.bind(this));
         this.section.on('keyup', 'input', this.formOnFocus.bind(this));
         this.section.on('change', 'input', this.formOnFocus.bind(this));
