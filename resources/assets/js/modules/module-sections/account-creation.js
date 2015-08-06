@@ -35,6 +35,22 @@ export default class AccountCreationSection extends ModuleSection {
         this.validator.on('field:error', (field) => {
             showError(field, '.form-row');
         });
+
+        this.form.on('submit', (e) => {
+            e.preventDefault();
+            if(!this.validator.isValid()) {
+                return false;
+            }
+            if(this.submitting) {
+                return false;
+            }
+            this.submitting = true;
+            Client.registerUser(this.form.attr('action'), serialize(this.form)).then((response) => {
+                $('.auth').find('logout').removeClass('is-hidden');
+                $('.auth').find('login').addClass('is-hidden');
+                return this.module.nextSection();
+            });
+        } )
     }
 
 
@@ -55,20 +71,6 @@ export default class AccountCreationSection extends ModuleSection {
     }
     setupEventListeners() {
 
-
-        this.section.find('form').on('submit', (e) => {
-            e.preventDefault();
-            if(!this.validator.isValid()) {
-                return false;
-            }
-            if(this.submitting) {
-                return false;
-            }
-            this.submitting = true;
-            Client.registerUser(this.form.attr('action'), serialize(this.form)).then((response) => {
-                return this.module.nextSection();
-            });
-        } )
         this.section.on('focus', 'input', this.formOnFocus.bind(this));
         this.section.on('keyup', 'input', this.formOnFocus.bind(this));
         this.section.on('change', 'input', this.formOnFocus.bind(this));
