@@ -112,6 +112,10 @@ textarea {
         color: whitesmoke;
         transition: all 0.2s ease;
         transform: translateY(-50%);
+
+        @include breakpoint($brk-1024) {
+            top: 32%;
+        }
     }
 
     input:focus ~ label,
@@ -138,6 +142,16 @@ textarea {
         font-size: 15px;
         opacity: 0;
 
+        @include breakpoint($brk-1024) {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            top: 8px;
+            margin-left: 0;
+            text-align: center;
+            border-top: 0;
+        }
+
         li {
             display:block;
         }
@@ -151,6 +165,10 @@ textarea {
             width: 0;
             position: absolute;
             pointer-events: none;
+
+            @include breakpoint($brk-1024) {
+                display: none;
+            }
         }
 
         &:after {
@@ -184,4 +202,17 @@ textarea {
         border-width: 11px;
         margin-top: -11px;
     }
+}
+
+// errors that are not within the form-row
+.error-container {
+    border: 1px solid #aeaeae;
+    color: #aeaeae;
+    padding: 10px;
+    font-size: 15px;
+    background: white;
+    white-space: nowrap;
+    line-height: 1;
+    text-align: center;
+    border-top: 0;
 }

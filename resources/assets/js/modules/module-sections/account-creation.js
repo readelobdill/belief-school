@@ -54,11 +54,13 @@ export default class AccountCreationSection extends ModuleSection {
 
     }
     setupEventListeners() {
-        this.section.on('click', '.next-section', (e) => {
-            this.form.submit();
-        });
-        this.form.on('submit', (e) => {
+
+
+        this.section.find('form').on('submit', (e) => {
             e.preventDefault();
+            if(!this.validator.isValid()) {
+                return false;
+            }
             if(this.submitting) {
                 return false;
             }

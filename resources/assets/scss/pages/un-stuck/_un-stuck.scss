@@ -1,7 +1,7 @@
 .limiting-beliefs {
     width: 695px;
     margin-left: -125px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
     @include breakpoint($brk-small) {
         margin-left: auto;
@@ -12,7 +12,7 @@
         justify-content: space-between;
         position:relative;
 
-        @include breakpoint($brk-small) {
+        @include breakpoint($brk-medium) {
             display: block;
         }
     }
@@ -20,10 +20,10 @@
     .belief {
         width: 221px;
         height: 256px;
-        position:relative;
-        display:block;
+        position: relative;
+        display: block;
 
-        @include breakpoint($brk-small) {
+        @include breakpoint($brk-medium) {
             margin: 40px auto;
         }
 

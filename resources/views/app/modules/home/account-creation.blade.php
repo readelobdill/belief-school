@@ -25,10 +25,13 @@
                 <label>Password</label>
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <div class="actions">
+                <button class="next-section">
+                    @include('app/partials/icons/down-arrow')
+                </button>
+            </div>
         </form>
 
     </div>
-    <div class="next-section" data-next-section>
-        @include('app/partials/icons/down-arrow')
-    </div>
+
 </div>
