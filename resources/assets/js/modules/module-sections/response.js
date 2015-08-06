@@ -20,13 +20,11 @@ export default class Affirmations extends Text {
     }
 
     submit() {
-
-        if(this.submitting) {
-            return false;
-        }
-        this.submitting = true;
-
         if(this.validator.validate()) {
+            if(this.submitting) {
+                return false;
+            }
+            this.submitting = true;
             let data = serialize(this.section.find('form'));
             let url = this.module.getUpdateUrl();
             client.saveModule(url, data).then(() => {

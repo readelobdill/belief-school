@@ -49,12 +49,11 @@ export default class Challenge extends Text {
 
 
     submitChallenge() {
-
-        if(this.submitting) {
-            return false;
-        }
-        this.submitting = true;
         if(this.validator.validate()) {
+            if(this.submitting) {
+                return false;
+            }
+            this.submitting = true;
             let data = serialize(this.section.find('form'));
             this.module.setData(data);
             let url = this.module.getUpdateUrl();
