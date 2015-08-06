@@ -35,28 +35,28 @@
         <form action="" class="limiting-beliefs">
             <div class="beliefs">
                 <div class="belief">
-                    <textarea name="belief-1" id="belief-1" required></textarea>
+                    <textarea name="challenge-1" id="challenge-1" required></textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
                     </button>
-                    <label class="number" for="belief-1">1 .</label>
+                    <label class="number" for="challenge-1">1 .</label>
                 </div>
                 <div class="belief">
-                    <textarea name="belief-2" id="belief-2" required></textarea>
+                    <textarea name="challenge-2" id="challenge-2" required></textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
                     </button>
-                    <label class="number" for="belief-2">2 .</label>
+                    <label class="number" for="challenge-2">2 .</label>
                 </div>
                 <div class="belief">
-                    <textarea name="belief-3" id="belief-3" required></textarea>
+                    <textarea name="challenge-3" id="challenge-3" required></textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
                     </button>
-                    <label class="number" for="belief-3">3 .</label>
+                    <label class="number" for="challenge-3">3 .</label>
                 </div>
             </div>
         </form>
