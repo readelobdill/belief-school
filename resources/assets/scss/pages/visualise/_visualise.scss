@@ -1,3 +1,14 @@
+[data-page="visualise"] {
+    .content {
+        @include breakpoint($brk-small) {
+            width: 100%;
+            max-width: 390px;
+        }
+    }
+}
+
+
+
 .categories {
     width: 890px;
     margin-left: -222px;
@@ -29,11 +40,9 @@
 
         i {
             height: 45px;
-            //display:block;
             display: inline-block;
             margin-bottom: 10px;
             svg {
-                //width: 100%;
                 height: 100%;
                 path {
                     fill: $lightRed;
@@ -70,7 +79,6 @@
 }
 
 .board {
-
     .overlay {
         position:absolute;
         top: 0;
@@ -126,61 +134,116 @@
 
         @include breakpoint($brk-xlarge) {
             display: block;
+        }
 
+        @include breakpoint($brk-xlarge) {
+            padding: 10px 0;
+        }
+
+        @include breakpoint($brk-small) {
+            padding: 0;
         }
     }
 
     .row-4 {
         width: 862px;
-        display:flex;
-        justify-content: space-between;
         margin: 0 auto;
+        display: block;
+        @include pie-clearfix();
 
-        // @include breakpoint($brk-xlarge) {
-        //     display: inline-flex;
-        //     width: auto;
-        // }
+        @include breakpoint($brk-xlarge) {
+            width: 100%;
+        }
+    }
+
+    .col {
+        float: left;
+        display: flex;
+        justify-content: space-between;
+        @include pie-clearfix();
+
+        @include breakpoint($brk-xlarge) {
+            float: none;
+            width: 423px;
+        }
+
+        @include breakpoint($brk-small) {
+            width: 100%;
+            display: inline-block;
+            margin-top: 0 !important;
+        }
+
+        .image {
+            float: left;
+
+            @include breakpoint($brk-small) {
+                margin: 0 0 20px !important;
+                width: 100%;
+                float: none;
+            }
+
+            &:nth-child(2) {
+                margin-left: 27.5px;
+            }
+        }
+
+        &:nth-child(2){
+            float: right;
+
+            @include breakpoint($brk-xlarge) {
+                margin-bottom: 0;
+                margin-top: 20px;
+            }
+        }
     }
 
     .mid-row {
         display: flex;
         justify-content: space-between;
         width: 1085px;
-        .column {
-            display: flex;
-            width: 423px;
-            justify-content: space-between;
 
-            @include breakpoint($brk-xlarge) {
-                display: block;
-                width: auto;
-            }
-
+        @include breakpoint($brk-xlarge) {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
         }
     }
 
     .image {
         width: 195px;
         height: 129px;
-        background: #e6e6e6;
+        background: $grey;
         box-shadow: 0 0 30px rgba($fontColour, 0.05);
         display:flex;
         justify-content: center;
         align-items: center;
-        position:relative;
-        overflow:hidden;
-        cursor:pointer;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: background-color $transition;
+        backface-visibility: hidden;
+
+
+        &:hover {
+            background: #eee;
+
+            .camera-icon {
+                transform-origin: 50% 50%;
+                transform: scale(1.1, 1.1);
+                box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+            }
+        }
 
         @include breakpoint($brk-xlarge) {
-            float: left;
+            width: 50%;
+        }
 
-            &.image_5 {
-                float: left;
-            }
-            &.image_7 {
-                float: left;
-            }
-
+        @include breakpoint($brk-small) {
+            width: 100%;
+            padding-top: 66.1%;
+            height: auto;
+            margin-bottom: 10px;
+            margin: 20px 0;
         }
 
         input {
@@ -190,7 +253,6 @@
             font-size: 999px;
             opacity: 0;
             cursor:pointer;
-
         }
 
         &.image_main {
@@ -200,7 +262,17 @@
             z-index: 2;
 
             @include breakpoint($brk-xlarge) {
-                //transform: scale(1,1);
+                transform: scale(1, 1);
+                width: 195px * 2 + 32px;
+                height: 129px * 2 + 32px;
+                margin: 20px auto;
+            }
+
+            @include breakpoint($brk-small) {
+                width: 100%;
+                padding-top: 66.1%;
+                height: auto;
+                margin-top: 0;
             }
         }
 
@@ -209,9 +281,14 @@
             height: 100%;
             display:none;
         }
+
         &.has-image {
+            position: relative;
             img {
                 display:block;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
             .camera-icon {
                 display:none;
@@ -224,6 +301,14 @@
             border-radius: 50%;
             background: $lightRed;
             padding: 17px;
+            transition: transform $transition, box-shadow $transition;
+            box-shadow: 0 0 30px rgba(37, 46, 51, 0);
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -31px;
+            margin-top: -31px;
             svg {
                 width: 100%;
                 height: 100%;
@@ -239,6 +324,10 @@
             line-height: 62px;
             text-align: center;
             background: $lightRed;
+            border-radius: 50%;
+            color: $white;
+            font-weight: 500;
+
         }
         &.is-loading {
             .loader {
