@@ -62,11 +62,11 @@ export default class Question {
             });
             this.validator.on('field:success', (field) => {
                 this.showNext()
-                hideError(field, '.controls');
+                hideError(field, 'form');
             });
             this.validator.on('field:error', (field) => {
                 this.hideNext();
-                showError(field, '.controls');
+                showError(field, 'form', 'top');
             });
         }
     }

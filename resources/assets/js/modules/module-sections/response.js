@@ -45,10 +45,10 @@ export default class Affirmations extends Text {
             }
         });
         this.validator.on('field:success', (field) => {
-            hideError(field, '.belief');
+            hideError(field, '.the-affirmation');
         });
         this.validator.on('field:error', (field) => {
-            showError(field, '.belief', 'top');
+            showError(field, '.the-affirmation', 'top');
         });
     }
 
