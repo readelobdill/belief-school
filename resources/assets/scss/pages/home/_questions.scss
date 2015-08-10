@@ -14,10 +14,12 @@
         align-items: center;
         justify-content: center;
 
+
         .content {
             form {
                 position:relative;
                 display:inline-block;
+
             }
 
             p {
@@ -26,6 +28,13 @@
 
             .controls {
                 text-align:center;
+
+                .error-container {
+                    bottom: -50px;
+                    width: 100%;
+                    position: absolute;
+                    border-top: 1px solid #aeaeae;
+                }
 
                 .age {
                     font-size: 45px;
@@ -42,6 +51,10 @@
                         display: inline-block;
                         margin: 0 30px;
                         cursor: pointer;
+
+                        @include breakpoint($brk-small) {
+                            margin: 0 14px;
+                        }
 
                         &:before, &:after {
                             position:absolute;
@@ -127,12 +140,15 @@
         font-size: 20px;
         z-index: 20;
         visibility: visible;
+
+        @include breakpoint($break-620) {
+            right: inherit;
+            left: 15px;
+        }
     }
     &.question-0 {
         .question-nav {
             visibility:hidden;
         }
-
-
     }
 }

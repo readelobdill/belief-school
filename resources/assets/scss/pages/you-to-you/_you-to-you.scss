@@ -1,65 +1,74 @@
 .video-details {
-	width: 700px;
-	margin-left: -127px;
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 60px;
+    width: 700px;
+    margin-left: -127px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
 
-	.detail {
-		width: 225px;
-		border: 2px solid transparent;
-		border-image: linear-gradient(23deg, rgba(241,96,96,.4) 0%, rgba(241,96,96,0) 90%);
-		border-image-slice: 1;
-		padding: 60px 20px 30px 20px;
-		position:relative;
-		color: $lightRed;
-		text-align:center;
-		line-height: 26px;
-		.number {
-			position:absolute;
-			top: 6px;
-			left: 10px;
-		}
+    @include breakpoint($brk-medium) {
+        display:block;
+    }
 
-	}
+    .detail {
+        width: 225px;
+        height: 274px;
+        border: 2px solid transparent;
+        border-image: linear-gradient(23deg, rgba(241,96,96,.4) 0%, rgba(241,96,96,0) 90%);
+        border-image-slice: 1;
+        padding: 60px 20px 30px 20px;
+        position:relative;
+        color: $lightRed;
+        text-align:center;
+        line-height: 26px;
+        .number {
+            position:absolute;
+            top: 6px;
+            left: 10px;
+        }
+
+        @include breakpoint($brk-medium) {
+            margin: 20px auto;
+        }
+
+    }
 
 }
 
 .video {
-	width: 700px;
-	height: 290px;
-	margin-left: -127px;
-	display:flex;
-	align-items: center;
-	justify-content: center;
-	background: #f0f0f0;
-	margin-bottom: 60px;
-	.upload {
-		text-align:center;
-		.upload-icon {
-			width: 62px;
-			height: 62px;
-			border-radius: 50%;
-			background: $lightRed;
-			padding: 17px;
-			margin: 0 auto;
-			svg {
-				width: 100%;
-				height: 100%;
-				path {
-					fill: white;
-				}
-			}
-		}
-	}
+    width: 700px;
+    height: 290px;
+    margin-left: -127px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    margin-bottom: 60px;
+    .upload {
+        text-align:center;
+        .upload-icon {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: $lightRed;
+            padding: 17px;
+            margin: 0 auto;
+            svg {
+                width: 100%;
+                height: 100%;
+                path {
+                    fill: white;
+                }
+            }
+        }
+    }
 }
 
 form.letter {
-	width: 700px;
-	margin-left: -127px;
-	margin-bottom: 60px;
-	textarea {
-		width: 100%;
-		height: 290px;
-	}
+    width: 700px;
+    margin-left: -127px;
+    margin-bottom: 60px;
+    textarea {
+        width: 100%;
+        height: 290px;
+    }
 }

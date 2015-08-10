@@ -24,6 +24,9 @@
         z-index: 20;
         width: 700px;
 
+        @include breakpoint($break-620) {
+            width: 120%;
+        }
     }
 }
 

@@ -99,6 +99,11 @@
     width: 695px;
     margin-left: -125px;
 
+    @include breakpoint($brk-small) {
+        width: auto;
+        margin-left: auto;
+    }
+
     .positive-affirmations-fields {
         display:flex;
         justify-content: space-between;
@@ -115,7 +120,7 @@
         position: relative;
 
         @include breakpoint($brk-medium) {
-            margin: auto;
+            margin: 40px auto;
         }
     }
 

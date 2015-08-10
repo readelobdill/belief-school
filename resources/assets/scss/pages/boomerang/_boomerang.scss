@@ -17,9 +17,13 @@
     border-radius: 4px;
     background: white;
 
-    @include breakpoint($break-920) {
+    @include breakpoint($brk-medium) {
         width: 445px;
         margin-left: 0;
+    }
+
+    @include breakpoint($brk-small) {
+        width: 100%;
     }
 
     .header {
