@@ -1,8 +1,6 @@
 <div class="inner">
     <div class="content">
-        <h2>
-            Well done!
-        </h2>
+        <h1 class="plain">Well done!</h1>
 
         <blockquote>
             On the other side of fear is courage. Courage is one of those characteristics that are right up there with Humility, Joy and kindness. There is no downside to courage.
@@ -12,7 +10,6 @@
             Get It Out&hellip;
         </h1>
 
-
         <p>
             Once you've faced your fears you're going to be feeling A LOT.
         </p>
@@ -20,8 +17,6 @@
         <p class="center">
             Write out how feel after you faced each of the three fears below&hellip;
         </p>
-
-
 
         <form action="" class="positive-affirmations">
             <div class="positive-affirmations-fields">

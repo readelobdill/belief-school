@@ -67,9 +67,7 @@
 
         <div class="dots"></div>
 
-        <h2>
-            Stalling again?
-        </h2>
+        <h1 class="title">Stalling again?</h2>
 
         <p>
             If your mind is sifting through the things you are putting off, trying to work out which ones you are the least afraid of, searching for the ones that you are prepared to do... Stop! Choose three things, choose them now, write them down now (declare them so you are held accountable) and commit to YOURSELF that you will do them this week, do the first one NOW. For the love of your amazing self, declare it to our community that has your back!

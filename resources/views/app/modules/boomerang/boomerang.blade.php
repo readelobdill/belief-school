@@ -12,9 +12,7 @@
 
         <div class="dots"></div>
 
-        <h2>
-            Send an Email
-        </h2>
+        <h1 class="plain">Send an Email</h1>
 
         <blockquote>
             To really know your amazing self, you need to know the amazing qualities others see in you.
