@@ -1,7 +1,10 @@
 // font colours
 $lightRed: #f16060;
 $darkRed: #98201a;
+$hoverRed : #d95656;
 $fontColour: #252e33;
+$grey: #e6e6e6;
+$hoverGrey: #d6d6d6;
 $white: #ffffff;
 $black: #252E33;
 
@@ -20,6 +23,9 @@ $breakpoint-default-feature: 'max-width';
 $break-620 : 620px;
     // window padding collapses,
     // menu icon movs top left
+    // question-nav moves to left and side
+    // main logo turns responsive
+    // auth login background turns white
 
 $brk-small : 500px;
     // content has text width 100%
