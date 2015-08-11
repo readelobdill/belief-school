@@ -1,0 +1,318 @@
+.dashboard-module {
+    padding: 50px;
+
+    @include breakpoint($brk-small) {
+        width: 100%;
+        padding: 40px $gutter;
+    }
+
+    header {
+        padding-bottom: 50px;
+    }
+
+    > .inner {
+        .content {
+            position: relative;
+            //max-width: 920px;
+            width: 100%;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 26px;
+            color: $fontColour;
+            padding: 60px 0;
+
+            @include breakpoint($brk-small) {
+                width: 100%;
+                padding-top: 40px;
+            }
+        }
+    }
+
+    .dots {
+        margin: 30px auto;
+
+        @include breakpoint($brk-small) {
+            margin: 40px auto;
+        }
+    }
+
+    .actions {
+        text-align:center;
+    }
+
+    p {
+        max-width: 445px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 500;
+
+        em {
+            color: $lightRed;
+            font-weight: 400;
+        }
+    }
+}
+
+.header {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    background-color: $lightRed;
+    color: $white;
+    text-align: center;
+
+    >.inner {
+        max-width: 920px;
+        margin: 0 auto;
+        @include pie-clearfix();
+    }
+
+    &.is-locked {
+        background-color: transparent;
+        color: $lightRed;
+    }
+
+    h2 {
+        font-weight: 500;
+        position: relative;
+        float: left;
+        padding: 7px 20px;
+
+        @include breakpoint($break-620) {
+            font-size: 12px;
+            text-align: left;
+        }
+
+        &:before {
+            position: relative;
+            font-family: $icon;
+            content: "\e600";
+            left: -4px;
+            top: 4px;
+            font-size: 24px;
+        }
+    }
+}
+
+ul.actions {
+    float: right;
+
+    li {
+        display: inline-block;
+
+        @include breakpoint($break-620) {
+            display: block;
+        }
+
+        &.arrow {
+            padding: 8.5px 15px;
+            border-left: 1px solid #F89594;
+
+            &:after {
+                position: relative;
+                font-family: $icon;
+                content: "\e630";
+                top: 3px;
+                font-size: 16px;
+            }
+        }
+
+        &.forum {
+            padding: 8.5px 10px;
+
+            @include breakpoint($break-620) {
+                border-left: 1px solid #F89594;
+                border-bottom: 1px solid #F89594;
+            }
+
+            a.forum-icon {
+                font-size: 14px;
+                color: white;
+                font-weight: 500;
+                text-transform: initial;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    font-family: $icon;
+                    content: "\e62d";
+                    top: -1px;
+                    font-size: 19px;
+                    left: -28px;
+
+                    @include breakpoint($break-620) {
+                        position: relative;
+                        top: 2px;
+                        left: 0;
+                    }
+                }
+
+                span {
+                    line-height: 21px;
+
+                    @include breakpoint($break-620) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.unlock-countdown {
+            font-size: 14px;
+            text-transform: initial;
+            font-weight: 500;
+            position: relative;
+
+            >.inner {
+                height: 100%;
+
+                @include breakpoint($break-620) {
+                    display: none;
+                }
+            }
+
+            &.unlocked {
+                &:before {
+                    content: "\e622";
+                }
+            }
+
+            &:before {
+                position: absolute;
+                font-family: $icon;
+                content: "\e621";
+                left: -27px;
+                top: -19px;
+                font-size: 16px;
+
+                @include breakpoint($break-620) {
+                    top: 10px !important;
+                    left: -26px !important;
+                }
+            }
+
+
+        }
+    }
+}
+
+.tagcloud {
+    height: 200px;
+    background-color: whitesmoke;
+    margin-bottom: 30px;
+}
+
+.small-dashboard {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 15px;
+    text-transform: initial;
+    border: 0;
+
+    &:hover {
+        border: 0;
+    }
+}
+
+.module-boomerang {
+    h2:before{
+        content: "\e601";
+    }
+}
+
+.module-un-stuck {
+    h2:before{
+        content: "\e602";
+    }
+}
+
+.module-visualise {
+    h2:before{
+        content: "\e603";
+    }
+}
+
+.module-fear-courage {
+    h2:before{
+        content: "\e604";
+    }
+}
+
+.module-giving {
+    h2:before{
+        content: "\e605";
+    }
+}
+
+.module-gratitude {
+    h2:before{
+        content: "\e606";
+    }
+}
+
+.module-sustainable-change {
+    h2:before{
+        content: "\e607";
+    }
+}
+
+.module-you-to-you {
+    h2:before{
+        content: "\e608";
+    }
+}
+
+ul.module-list {
+    .content {
+        max-width: 920px;
+
+
+    }
+
+    li {
+        &.is-complete {
+            .header.locked {
+                background-color: transparent;
+            }
+
+            .actions {
+                li.arrow {
+                    border-left: 1px solid #F89594 !important;
+                }
+            }
+        }
+
+        &.is-unlocked {
+            border-top: 1px solid $grey;
+
+            .actions {
+                li.arrow {
+                    border-left: 1px solid $grey;
+                }
+            }
+        }
+
+        &.is-locked {
+            border-top: 1px solid $grey;
+
+            .header {
+                background-color: transparent;
+                color: $darkGrey;
+            }
+
+            &:last-child {
+                border-bottom: 1px solid $grey;
+            }
+
+            // .unlock-countdown:before {
+            //     left: -27px;
+            //     top: -19px;
+            // }
+
+            .actions {
+                li.arrow {
+                    border-left: 1px solid $grey;
+                }
+            }
+        }
+    }
+}

@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?unlzf5');
-	src:url('fonts/icomoon.eot?#iefixunlzf5') format('embedded-opentype'),
-		url('fonts/icomoon.ttf?unlzf5') format('truetype'),
-		url('fonts/icomoon.woff?unlzf5') format('woff'),
-		url('fonts/icomoon.svg?unlzf5#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?-gq5ssa');
+	src:url('fonts/icomoon.eot?#iefix-gq5ssa') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?-gq5ssa') format('truetype'),
+		url('fonts/icomoon.woff?-gq5ssa') format('woff'),
+		url('fonts/icomoon.svg?-gq5ssa#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -166,4 +166,7 @@
 }
 .icon-upload-video:before {
 	content: "\e62f";
+}
+.icon-arrow-down:before {
+	content: "\e630";
 }

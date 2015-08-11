@@ -60,8 +60,10 @@
 
             @include breakpoint($brk-small) {
                 width: 100%;
-                padding-top: 60px;
+                padding-top: 40px;
                 //padding: 60px $gutter $gutter; maybe this should be there, not sure need to check. There is a 20px padding on the inner. (line 15)
+                //another issue where there is an extra 60px more than the top should be.
+                //looks fine on 'un-stuck'
             }
         }
     }

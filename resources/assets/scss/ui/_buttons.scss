@@ -1,4 +1,4 @@
-.button { //button with right arrow (to go somewhere) emplty border and type.
+.button { //button with right arrow (to go somewhere) empty border and type.
     position:relative;
     text-transform: uppercase;
     padding: 20px 35px 20px 20px;
@@ -10,6 +10,15 @@
     cursor: pointer;
     transition: background-color 0.2s ease;
     font-size: 17px;
+
+    &.small-dashboard {
+
+        padding: 5px 15px;
+
+        &:after, &:before {
+            display: none;
+        }
+    }
 
     &:hover {
         background-color: mix($lightRed, black, 90%);
@@ -47,13 +56,13 @@
             background: $lightRed;
             margin-top: 6px;
             right: 30px;
-
         }
 
         &:after {
             transform: rotate(45deg);
             width: 10px;
         }
+
         &:before {
             transform: rotate(135deg);
             width: 18px;
