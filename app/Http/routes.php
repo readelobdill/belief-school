@@ -55,8 +55,8 @@ Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUs
 
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);
 
 Route::get('admin', function() {
@@ -73,6 +73,11 @@ Route::any('email-exists', ['as' => 'account.check-email', 'uses' => 'UserContro
 Route::get('terms-and-conditions', ['as' => 'terms-and-conditions', function() {
     return view('app.misc.terms-and-conditions');
 }]);
+
+Route::get('about', ['as' => 'about', function() {
+    return view('app.misc.about');
+}]);
+
 Route::get('privacy-policy', ['as' => 'privacy-policy', function() {
     return view('app.misc.privacy-policy');
 }]);
