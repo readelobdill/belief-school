@@ -80,6 +80,7 @@
         @include breakpoint($break-620) {
             font-size: 12px;
             text-align: left;
+            padding: 7px 10px;
         }
 
         &:before {
@@ -277,6 +278,10 @@ ul.module-list {
             .actions {
                 li.arrow {
                     border-left: 1px solid #F89594 !important;
+                }
+
+                @include breakpoint($brk-xsmall) {
+                    float: none;
                 }
             }
         }
