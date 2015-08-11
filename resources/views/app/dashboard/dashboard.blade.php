@@ -1,6 +1,8 @@
-@extends('app.layout')
+@extends('app/layout')
 
 @section('content')
+
+ <div class="module">
 
     <div class="container dashboard-module">
         <div class="inner">
@@ -10,54 +12,115 @@
                         Welcome to your<br>
                         Belief School Dashboard
                     </h1>
-                    <p>
+                    <p class="center">
                         This dashboard is your Manifesto. Track your Belief School journey as you progress through the course and check in regularly.
                     </p>
                 </header>
+
                 <ul class="module-list">
                     @include('app.dashboard.modules.home', ['home' => $modules[0], 'welcome' => isset($modules[1]) ? $modules[1] : false])
-                    @foreach($modules as $key => $mod)
-                        @if($mod->slug === 'home' || $mod->slug === 'welcome')
-                            <?php continue; ?>
-                        @else
+                        @foreach($modules as $key => $mod)
+                            @if($mod->slug === 'home' || $mod->slug === 'welcome')
+                                <?php continue; ?>
+                            @else
                             @if($mod->pivot && $mod->pivot->complete)
-                                {{--Unlocked and completed--}}
+
+                                {{-- Unlocked and completed --}}
                                 <li class="module-{{ $mod->slug }} is-unlocked is-complete" data-type="{{$mod->slug}}">
+
                                     <div class="header">
-                                        <h2>Module {{$mod->order - 1}} - {{$mod->name}}</h2>
-                                        <div class="options">
-                                            @include('app.dashboard.module-options.'.$mod->slug, ['module' => $mod])
+                                        <div class="inner">
+                                            <h2>Module {{$mod->order - 1}} - {{$mod->name}}</h2>
+                                            <ul class="actions">
+                                                <li class="forum">
+                                                    <a class="forum-icon" href="#">
+                                                        <span>Forum</span>
+                                                    </a>
+                                                </li>
+                                                <li class="arrow"></li>
+                                            </ul>
+                                            <div class="options">
+                                                @include('app.dashboard.module-options.'.$mod->slug, ['module' => $mod])
+                                            </div>
                                         </div>
                                     </div>
+
                                     @include('app.dashboard.modules.'.$mod->slug, ['module' => $mod])
                                 </li>
+
                             @elseif($mod->pivot && !$mod->pivot->complete)
-                                {{--Unlocked and started but not finished.--}}
+
+                                {{-- Unlocked and started but not finished. --}}
                                 <li class="module-{{ $mod->slug }} is-not-complete is-unlocked">
-                                    Module {{$mod->order - 1}} - {{$mod->name}}
+                                    <div class="header">
+                                        <div class="inner">
+                                            <h2>Module {{$mod->order - 1}} - {{$mod->name}}</h2>
+                                        </div>
+                                    </div>
                                 </li>
+
                             @elseif($modules[$key-1]->pivot && $modules[$key-1]->pivot->complete)
                                 @if($modules[$key-1]->pivot->completed_at->diffInHours() < config('belief.lockout'))
+
                                     {{-- Waiting for unlock --}}
                                     <li class="module-{{ $mod->slug }} is-locked">
-                                        Module {{$mod->order - 1}}
-                                        <div class="options">
+                                        <div class="header">
+                                            <div class="inner">
+                                                <h2>Module {{$mod->order - 1}}</h2>
+                                            </div>
+                                            <ul class="actions">
+                                                <li class="unlock-countdown">
+                                                    <div class="inner">
+                                                        Module will unlock in {{config('belief.lockout') - $modules[$key-1]->pivot->completed_at->diffInHours()}} hours
+                                                    </div>
+                                                </li>
+                                                <li class="arrow"></li>
+                                            </ul>
+                                        </div>
+                                        {{-- <div class="options">
                                             <span class="unlock-message">
                                                 Module will unlock in {{config('belief.lockout') - $modules[$key-1]->pivot->completed_at->diffInHours()}} hours
                                             </span>
-                                        </div>
+                                        </div> --}}
                                     </li>
+
                                 @else
+
                                     {{-- Unlocked but not started--}}
                                     <li class="module-{{ $mod->slug }} is-not-complete is-unlocked">
-                                        Module {{$mod->order - 1}} - {{$mod->name}}
+                                        <div class="header is-locked">
+                                            <div class="inner">
+                                                <h2> Module {{$mod->order - 1}} - {{$mod->name}} </h2>
+
+                                                <ul class="actions">
+                                                    <li class="unlock-countdown unlocked">
+                                                        <div class="inner"></div>
+                                                    </li>
+                                                    <li class="arrow"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </li>
+
                                 @endif
                             @else
-                                {{--Locked--}}
+
+                                {{-- Locked --}}
                                 <li class="module-{{ $mod->slug }} is-locked">
-                                    Module {{$mod->order - 1}}
+                                    <div class="header">
+                                        <div class="inner">
+                                            <h2>Module {{$mod->order - 1}}</h2>
+
+                                            <ul class="actions">
+                                                <li class="unlock-countdown">
+                                                    <div class="inner"></div>
+                                                </li>
+                                                <li class="arrow"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </li>
+
                             @endif
 
                         @endif
@@ -66,5 +129,5 @@
             </div>
         </div>
     </div>
-
+</div>
 @endsection
