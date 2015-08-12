@@ -82,16 +82,16 @@
 }
 
 .next-section {
-    display:block;
+    position: absolute;
+    display: block;
     width: 50px;
     height: 50px;
-    cursor:pointer;
-    position:absolute;
+    cursor: pointer;
     left: 50%;
     bottom: 20px;
     transform: translate3d(-50%, 0, 0);
     z-index: 25;
-    visibility:hidden;
+    visibility: hidden;
     border: 0;
     transform-origin: 50% 50%;
 
@@ -219,6 +219,7 @@
             background-color: rgba(255, 255, 255, 0.9);
             width: 50px;
             border: none;
+            padding: 15px 12px;
         }
 
         &:hover {
