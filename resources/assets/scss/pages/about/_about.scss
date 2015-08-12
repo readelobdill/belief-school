@@ -1,88 +1,91 @@
-.text-welcome {
-    form {
-        .actions {
-            text-align: center;
-            margin-top: 45px;
-        }
+.container.about {
+    //background: image-url('icons/bullets.svg') no-repeat top left;
+    padding: 50px;
 
+    @include breakpoint($brk-small) {
+        width: 100%;
+        padding: 40px $gutter;
+    }
+
+    header {
+        padding-bottom: 50px;
+    }
+
+    > .inner {
+        .content {
+            position: relative;
+            //max-width: 920px;
+            width: 100%;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 26px;
+            color: $fontColour;
+            padding: 60px 0;
+
+            @include breakpoint($brk-small) {
+                width: 100%;
+                padding-top: 40px;
+            }
+        }
+    }
+
+    .dots {
+        margin: 30px auto;
+
+        @include breakpoint($brk-small) {
+            margin: 40px auto;
+        }
+    }
+
+    .actions {
+        text-align:center;
+    }
+
+    p {
+        max-width: 445px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 500;
+
+        em {
+            color: $lightRed;
+            font-weight: 400;
+        }
     }
 }
 
-ul.accordion {
-    li {
-        margin: 30px 0;
+.header {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    background-color: $lightRed;
+    color: $white;
+    text-align: center;
 
-        position:relative;
-        &:after {
-            width: 69px;
-            border-bottom: 1px solid #d4d4d4;
-            content: "";
-            display:block;
-            margin: 22px auto 0 auto;
-
-        }
-
-        .answer {
-            text-align: center;
-            padding: 10px 0;
-        }
-    }
-
-    li.is-open {
-        .toggle {
-            svg.collapse {
-                transform: translateY(0px);
-            }
-            svg.expand {
-                transform: translateY(50px);
-            }
-        }
-        .answer {
-            display:block;
-        }
-    }
-
-    .answer {
-        display:none;
+    >.inner {
+        max-width: 920px;
+        margin: 0 auto;
+        @include pie-clearfix();
     }
 
     h2 {
-        text-align: center;
-        font-weight: bold;
-        font-size: 25px;
-        margin-bottom: 10px;
-        .toggle {
-            width: 30px;
-            height: 30px;
-            overflow:hidden;
-            margin: 0 auto;
-            position:relative;
-            margin-top: 20px;
-            cursor:pointer;
-            @include user-select(none);
+        font-weight: 500;
+        position: relative;
+        float: left;
+        padding: 7px 20px;
 
-            svg {
-                width: 100%;
-                height: 100%;
-                position:absolute;
-                top: 0;
-                left: 0;
-
-                &.collapse {
-                    transform: translateY(-50px);
-                }
-
-                path {
-                    fill: $lightRed;
-                }
-            }
+        @include breakpoint($break-620) {
+            font-size: 12px;
+            text-align: left;
+            padding: 7px 10px;
         }
 
+        &:before {
+            position: relative;
+            font-family: $icon;
+            content: "\e600";
+            left: -4px;
+            top: 4px;
+            font-size: 24px;
+        }
     }
-
 }
-
-.welcome-first-steps {
-    margin-top: 70px;
-}
-
