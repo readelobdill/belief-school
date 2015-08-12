@@ -27,7 +27,9 @@ export default class Dashboard {
                     weight: wordsWeights[word]
                 })
             }
-            $boomerang.find('.tagcloud').jQCloud(words, {width :400, height: 200});
+            $boomerang.find('.tagcloud').jQCloud(words, {
+                autoResize :true,
+                delay: 10});
         }
 
     }

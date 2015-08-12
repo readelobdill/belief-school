@@ -7,29 +7,30 @@
  */
 /* layout */
 div.jqcloud {
-	overflow: hidden;
-	position: relative;
+    overflow: hidden;
+    position: relative;
 }
 
 div.jqcloud span {
-	padding: 0;
+    padding: 0;
+    line-height: 1;
+    margin: 0 10px;
 }
 
 /* fonts */
 div.jqcloud {
-	font-family: "Helvetica", "Arial", sans-serif;
-	font-size: 10px;
-	line-height: normal;
+    font-size: 13px;
+    line-height: normal;
 }
 
 div.jqcloud a {
-	font-size: inherit;
-	text-decoration: none;
+    font-size: inherit;
+    text-decoration: none;
 }
 
-div.jqcloud span.w10 { font-size: 550%; }
-div.jqcloud span.w9 { font-size: 500%; }
-div.jqcloud span.w8 { font-size: 450%; }
+div.jqcloud span.w10 {font-size: 500%;}
+div.jqcloud span.w9 { font-size: 450%; }
+div.jqcloud span.w8 { font-size: 425%; }
 div.jqcloud span.w7 { font-size: 400%; }
 div.jqcloud span.w6 { font-size: 350%; }
 div.jqcloud span.w5 { font-size: 300%; }
@@ -43,13 +44,28 @@ div.jqcloud { color: #09f; }
 div.jqcloud a { color: inherit; }
 div.jqcloud a:hover { color: #0df; }
 div.jqcloud a:hover { color: #0cf; }
-div.jqcloud span.w10 { color: #0cf; }
-div.jqcloud span.w9 { color: #0cf; }
-div.jqcloud span.w8 { color: #0cf; }
-div.jqcloud span.w7 { color: #39d; }
+div.jqcloud span.w10 { color: #F16060; }
+div.jqcloud span.w9 { color: #F16060; }
+div.jqcloud span.w8 { color: #F16060; }
+div.jqcloud span.w7 { color: #D85B5C; }
 div.jqcloud span.w6 { color: #90c5f0; }
 div.jqcloud span.w5 { color: #90a0dd; }
-div.jqcloud span.w4 { color: #90c5f0; }
+
+div.jqcloud span.w4 { color: #E65F60; }
+
 div.jqcloud span.w3 { color: #a0ddff; }
 div.jqcloud span.w2 { color: #99ccee; }
-div.jqcloud span.w1 { color: #aab5f0; }
+
+div.jqcloud span.w1 { color: #EC6262; }
+
+
+// cloud styles for input.
+
+body[data-page="tag-cloud-form"] {
+    padding: 50px;
+
+    .form-row {
+        margin-bottom: 10px;
+    }
+}
+

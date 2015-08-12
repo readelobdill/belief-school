@@ -52,9 +52,18 @@
 
                                 {{-- Unlocked and started but not finished. --}}
                                 <li class="module-{{ $mod->slug }} is-not-complete is-unlocked">
-                                    <div class="header">
+                                    <div class="header is-locked">
                                         <div class="inner">
                                             <h2>Module {{$mod->order - 1}} - {{$mod->name}}</h2>
+
+                                            <ul class="actions">
+                                                <li class="forum">
+                                                    <a class="forum-icon" href="#">
+                                                        <span>Forum</span>
+                                                    </a>
+                                                </li>
+                                                <li class="arrow"></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
@@ -77,11 +86,6 @@
                                                 <li class="arrow"></li>
                                             </ul>
                                         </div>
-                                        {{-- <div class="options">
-                                            <span class="unlock-message">
-                                                Module will unlock in {{config('belief.lockout') - $modules[$key-1]->pivot->completed_at->diffInHours()}} hours
-                                            </span>
-                                        </div> --}}
                                     </li>
 
                                 @else
@@ -93,8 +97,10 @@
                                                 <h2> Module {{$mod->order - 1}} - {{$mod->name}} </h2>
 
                                                 <ul class="actions">
-                                                    <li class="unlock-countdown unlocked">
-                                                        <div class="inner"></div>
+                                                    <li class="forum">
+                                                        <a class="forum-icon" href="#">
+                                                            <span>Forum</span>
+                                                        </a>
                                                     </li>
                                                     <li class="arrow"></li>
                                                 </ul>

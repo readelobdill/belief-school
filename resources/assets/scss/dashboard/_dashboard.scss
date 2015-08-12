@@ -198,8 +198,9 @@ ul.actions {
 
 .tagcloud {
     height: 200px;
-    background-color: whitesmoke;
     margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: lowercase; //remove this for testing.
 }
 
 .small-dashboard {
@@ -229,6 +230,12 @@ ul.actions {
 .module-visualise {
     h2:before{
         content: "\e603";
+    }
+
+    .content {
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -307,11 +314,6 @@ ul.module-list {
             &:last-child {
                 border-bottom: 1px solid $grey;
             }
-
-            // .unlock-countdown:before {
-            //     left: -27px;
-            //     top: -19px;
-            // }
 
             .actions {
                 li.arrow {

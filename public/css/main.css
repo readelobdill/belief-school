@@ -718,11 +718,11 @@ p a:hover {
 
 /* line 84, ../../resources/assets/scss/core/_module.scss */
 .next-section {
+  position: absolute;
   display: block;
   width: 50px;
   height: 50px;
   cursor: pointer;
-  position: absolute;
   left: 50%;
   bottom: 20px;
   transform: translate3d(-50%, 0, 0);
@@ -866,20 +866,21 @@ p a:hover {
     background-color: rgba(255, 255, 255, 0.9);
     width: 50px;
     border: none;
+    padding: 15px 12px;
   }
 }
-/* line 226, ../../resources/assets/scss/core/_module.scss */
+/* line 227, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon:hover svg path {
   fill: rgba(241, 96, 96, 0.6);
 }
-/* line 232, ../../resources/assets/scss/core/_module.scss */
+/* line 233, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 239, ../../resources/assets/scss/core/_module.scss */
+/* line 240, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
   stroke: #f16060;
@@ -889,17 +890,17 @@ p a:hover {
   transition: fill 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @media (max-width: 800px) {
-  /* line 232, ../../resources/assets/scss/core/_module.scss */
+  /* line 233, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon svg {
     margin: 2px auto;
   }
 }
-/* line 250, ../../resources/assets/scss/core/_module.scss */
+/* line 251, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon span {
   line-height: 21px;
 }
 @media (max-width: 1120px) {
-  /* line 250, ../../resources/assets/scss/core/_module.scss */
+  /* line 251, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon span {
     display: none;
   }
@@ -1556,87 +1557,108 @@ blockquote.dark {
   transform: translateY(500%);
 }
 
-/* line 3, ../../resources/assets/scss/pages/about/_about.scss */
-.text-welcome form .actions {
-  text-align: center;
-  margin-top: 45px;
+/* line 1, ../../resources/assets/scss/pages/about/_about.scss */
+.container.about {
+  padding: 50px;
 }
-
-/* line 12, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion li {
-  margin: 30px 0;
+@media (max-width: 500px) {
+  /* line 1, ../../resources/assets/scss/pages/about/_about.scss */
+  .container.about {
+    width: 100%;
+    padding: 40px 20px;
+  }
+}
+/* line 10, ../../resources/assets/scss/pages/about/_about.scss */
+.container.about header {
+  padding-bottom: 50px;
+}
+/* line 15, ../../resources/assets/scss/pages/about/_about.scss */
+.container.about > .inner .content {
   position: relative;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 26px;
+  color: #252e33;
+  padding: 60px 0;
 }
-/* line 16, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion li:after {
-  width: 69px;
-  border-bottom: 1px solid #d4d4d4;
-  content: "";
-  display: block;
-  margin: 22px auto 0 auto;
+@media (max-width: 500px) {
+  /* line 15, ../../resources/assets/scss/pages/about/_about.scss */
+  .container.about > .inner .content {
+    width: 100%;
+    padding-top: 40px;
+  }
 }
-/* line 25, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion li .answer {
-  text-align: center;
-  padding: 10px 0;
+/* line 32, ../../resources/assets/scss/pages/about/_about.scss */
+.container.about .dots {
+  margin: 30px auto;
 }
-/* line 33, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion li.is-open .toggle svg.collapse {
-  transform: translateY(0px);
-}
-/* line 36, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion li.is-open .toggle svg.expand {
-  transform: translateY(50px);
+@media (max-width: 500px) {
+  /* line 32, ../../resources/assets/scss/pages/about/_about.scss */
+  .container.about .dots {
+    margin: 40px auto;
+  }
 }
 /* line 40, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion li.is-open .answer {
-  display: block;
-}
-/* line 45, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion .answer {
-  display: none;
-}
-/* line 49, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion h2 {
+.container.about .actions {
   text-align: center;
-  font-weight: bold;
-  font-size: 25px;
-  margin-bottom: 10px;
 }
-/* line 54, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion h2 .toggle {
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
-  margin-top: 20px;
-  cursor: pointer;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
+/* line 44, ../../resources/assets/scss/pages/about/_about.scss */
+.container.about p {
+  max-width: 445px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
 }
-/* line 64, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion h2 .toggle svg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 71, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion h2 .toggle svg.collapse {
-  transform: translateY(-50px);
-}
-/* line 75, ../../resources/assets/scss/pages/about/_about.scss */
-ul.accordion h2 .toggle svg path {
-  fill: #f16060;
+/* line 50, ../../resources/assets/scss/pages/about/_about.scss */
+.container.about p em {
+  color: #f16060;
+  font-weight: 400;
 }
 
-/* line 85, ../../resources/assets/scss/pages/about/_about.scss */
-.welcome-first-steps {
-  margin-top: 70px;
+/* line 57, ../../resources/assets/scss/pages/about/_about.scss */
+.header {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background-color: #f16060;
+  color: #ffffff;
+  text-align: center;
+}
+/* line 64, ../../resources/assets/scss/pages/about/_about.scss */
+.header > .inner {
+  max-width: 920px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.header > .inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 70, ../../resources/assets/scss/pages/about/_about.scss */
+.header h2 {
+  font-weight: 500;
+  position: relative;
+  float: left;
+  padding: 7px 20px;
+}
+@media (max-width: 620px) {
+  /* line 70, ../../resources/assets/scss/pages/about/_about.scss */
+  .header h2 {
+    font-size: 12px;
+    text-align: left;
+    padding: 7px 10px;
+  }
+}
+/* line 82, ../../resources/assets/scss/pages/about/_about.scss */
+.header h2:before {
+  position: relative;
+  font-family: "icomoon";
+  content: "\e600";
+  left: -4px;
+  top: 4px;
+  font-size: 24px;
 }
 
 /* line 3, ../../resources/assets/scss/pages/welcome/_welcome.scss */
@@ -1827,141 +1849,151 @@ div.jqcloud {
 /* line 14, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span {
   padding: 0;
+  line-height: 1;
+  margin: 0 10px;
 }
 
 /* fonts */
-/* line 19, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 21, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud {
-  font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 10px;
+  font-size: 13px;
   line-height: normal;
 }
 
-/* line 25, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 26, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud a {
   font-size: inherit;
   text-decoration: none;
 }
 
-/* line 30, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
-div.jqcloud span.w10 {
-  font-size: 550%;
-}
-
 /* line 31, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
-div.jqcloud span.w9 {
+div.jqcloud span.w10 {
   font-size: 500%;
 }
 
 /* line 32, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
-div.jqcloud span.w8 {
+div.jqcloud span.w9 {
   font-size: 450%;
 }
 
 /* line 33, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w8 {
+  font-size: 425%;
+}
+
+/* line 34, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w7 {
   font-size: 400%;
 }
 
-/* line 34, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 35, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w6 {
   font-size: 350%;
 }
 
-/* line 35, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 36, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w5 {
   font-size: 300%;
 }
 
-/* line 36, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 37, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w4 {
   font-size: 250%;
 }
 
-/* line 37, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 38, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w3 {
   font-size: 200%;
 }
 
-/* line 38, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 39, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w2 {
   font-size: 150%;
 }
 
-/* line 39, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 40, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w1 {
   font-size: 100%;
 }
 
 /* colors */
-/* line 42, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 43, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud {
   color: #09f;
 }
 
-/* line 43, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 44, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud a {
   color: inherit;
 }
 
-/* line 44, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 45, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud a:hover {
   color: #0df;
 }
 
-/* line 45, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 46, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud a:hover {
   color: #0cf;
 }
 
-/* line 46, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
-div.jqcloud span.w10 {
-  color: #0cf;
-}
-
 /* line 47, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
-div.jqcloud span.w9 {
-  color: #0cf;
+div.jqcloud span.w10 {
+  color: #F16060;
 }
 
 /* line 48, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
-div.jqcloud span.w8 {
-  color: #0cf;
+div.jqcloud span.w9 {
+  color: #F16060;
 }
 
 /* line 49, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
-div.jqcloud span.w7 {
-  color: #39d;
+div.jqcloud span.w8 {
+  color: #F16060;
 }
 
 /* line 50, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+div.jqcloud span.w7 {
+  color: #D85B5C;
+}
+
+/* line 51, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w6 {
   color: #90c5f0;
 }
 
-/* line 51, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 52, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w5 {
   color: #90a0dd;
 }
 
-/* line 52, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 54, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w4 {
-  color: #90c5f0;
+  color: #E65F60;
 }
 
-/* line 53, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 56, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w3 {
   color: #a0ddff;
 }
 
-/* line 54, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 57, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w2 {
   color: #99ccee;
 }
 
-/* line 55, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+/* line 59, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w1 {
-  color: #aab5f0;
+  color: #EC6262;
+}
+
+/* line 64, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+body[data-page="tag-cloud-form"] {
+  padding: 50px;
+}
+/* line 67, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
+body[data-page="tag-cloud-form"] .form-row {
+  margin-bottom: 10px;
 }
 
 /* line 1, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
@@ -1977,19 +2009,19 @@ div.jqcloud span.w1 {
     width: 100%;
   }
 }
-/* line 10, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 11, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .beliefs {
   display: flex;
   justify-content: space-between;
   position: relative;
 }
 @media (max-width: 920px) {
-  /* line 10, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+  /* line 11, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
   .limiting-beliefs .beliefs {
     display: block;
   }
 }
-/* line 20, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 21, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief {
   width: 221px;
   height: 256px;
@@ -1997,18 +2029,18 @@ div.jqcloud span.w1 {
   display: block;
 }
 @media (max-width: 920px) {
-  /* line 20, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+  /* line 21, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
   .limiting-beliefs .belief {
     margin: 40px auto;
   }
 }
-/* line 30, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 31, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief label {
   position: absolute;
   top: 6px;
   left: 10px;
 }
-/* line 36, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 37, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief .icon {
   position: absolute;
   bottom: 16px;
@@ -2021,22 +2053,21 @@ div.jqcloud span.w1 {
   border: 0;
   padding: 0;
 }
-/* line 47, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 48, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief .icon svg {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
 }
-/* line 52, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 53, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief .icon svg path {
   fill: #f16060;
 }
-/* line 58, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 59, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief textarea {
   width: 100%;
   height: 100%;
-  padding: 50px 20px;
+  padding: 30px 20px;
   color: #252e33;
   text-align: center;
   font-style: italic;
@@ -2046,67 +2077,69 @@ div.jqcloud span.w1 {
   border-image: linear-gradient(23deg, #abafb1 0%, rgba(171, 175, 177, 0) 90%);
   border-image-slice: 1;
 }
-/* line 71, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 72, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief textarea:focus {
   background: #f16060;
   color: white;
   border: 0;
 }
-/* line 80, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 81, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief textarea:focus + .icon svg path {
   fill: white;
 }
-/* line 84, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 85, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief textarea:focus + .icon + label {
   color: white;
 }
-/* line 89, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 90, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .actions {
   margin-top: 60px;
 }
 
-/* line 95, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 96, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .affirmations h1.plain {
   margin-bottom: 30px;
 }
 
-/* line 100, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 101, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations {
   width: 695px;
   margin-left: -125px;
 }
 @media (max-width: 500px) {
-  /* line 100, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+  /* line 101, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
   .positive-affirmations {
     width: auto;
     margin-left: auto;
   }
 }
-/* line 109, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 110, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .positive-affirmations-fields {
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 920px) {
-  /* line 109, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+  /* line 110, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
   .positive-affirmations .positive-affirmations-fields {
     display: block;
   }
 }
-/* line 118, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
-.positive-affirmations .the-affirmation, .positive-affirmations .the-belief {
+/* line 119, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+.positive-affirmations .the-affirmation,
+.positive-affirmations .the-belief {
   width: 221px;
   height: 256px;
   background-color: transparent;
   position: relative;
 }
 @media (max-width: 920px) {
-  /* line 118, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
-  .positive-affirmations .the-affirmation, .positive-affirmations .the-belief {
+  /* line 119, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+  .positive-affirmations .the-affirmation,
+  .positive-affirmations .the-belief {
     margin: 40px auto;
   }
 }
-/* line 129, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 131, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-belief {
   border: 2px solid transparent;
   border-image: linear-gradient(23deg, #abafb1 0%, rgba(171, 175, 177, 0) 90%);
@@ -2117,18 +2150,18 @@ div.jqcloud span.w1 {
   margin-bottom: 15px;
 }
 @media (max-width: 920px) {
-  /* line 129, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+  /* line 131, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
   .positive-affirmations .the-belief {
     margin: 15px auto;
   }
 }
-/* line 142, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 144, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-belief .number {
   position: absolute;
   top: 6px;
   left: 10px;
 }
-/* line 148, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 150, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-belief p.limiting-belief-text {
   margin: 0;
   padding: 0;
@@ -2136,17 +2169,17 @@ div.jqcloud span.w1 {
   font-size: 14px;
   line-height: 22px;
 }
-/* line 156, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 158, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-belief strong {
   font-size: 14px;
 }
-/* line 163, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 165, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation label {
   position: absolute;
   top: 6px;
   left: 10px;
 }
-/* line 169, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 171, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation .icon {
   position: absolute;
   bottom: 16px;
@@ -2159,16 +2192,16 @@ div.jqcloud span.w1 {
   border: 0;
   padding: 0;
 }
-/* line 180, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 182, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation .icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 183, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 185, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation .icon svg path {
   fill: #f16060;
 }
-/* line 189, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 191, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea {
   width: 100%;
   height: 100%;
@@ -2182,21 +2215,21 @@ div.jqcloud span.w1 {
   border-image: linear-gradient(23deg, #abafb1 0%, rgba(171, 175, 177, 0) 90%);
   border-image-slice: 1;
 }
-/* line 199, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 201, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea:focus {
   background: #f16060;
   color: white;
   border: 0;
 }
-/* line 211, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 214, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea:focus + .icon svg path {
   fill: white;
 }
-/* line 216, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 219, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea:focus + label {
   color: white;
 }
-/* line 220, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 223, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .actions {
   margin-top: 60px;
 }
@@ -2947,11 +2980,12 @@ ul.actions li.unlock-countdown:before {
 /* line 199, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .tagcloud {
   height: 200px;
-  background-color: whitesmoke;
   margin-bottom: 30px;
+  font-weight: 600;
+  text-transform: lowercase;
 }
 
-/* line 205, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 206, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .small-dashboard {
   font-size: 14px;
   font-weight: 500;
@@ -2959,91 +2993,95 @@ ul.actions li.unlock-countdown:before {
   text-transform: initial;
   border: 0;
 }
-/* line 212, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 213, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .small-dashboard:hover {
   border: 0;
 }
 
-/* line 218, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 219, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .module-boomerang h2:before {
   content: "\e601";
 }
 
-/* line 224, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 225, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .module-un-stuck h2:before {
   content: "\e602";
 }
 
-/* line 230, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 231, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .module-visualise h2:before {
   content: "\e603";
 }
-
 /* line 236, ../../resources/assets/scss/dashboard/_dashboard.scss */
+.module-visualise .content img {
+  width: 100%;
+}
+
+/* line 243, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .module-fear-courage h2:before {
   content: "\e604";
 }
 
-/* line 242, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 249, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .module-giving h2:before {
   content: "\e605";
 }
 
-/* line 248, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 255, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .module-gratitude h2:before {
   content: "\e606";
 }
 
-/* line 254, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 261, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .module-sustainable-change h2:before {
   content: "\e607";
 }
 
-/* line 260, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 267, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .module-you-to-you h2:before {
   content: "\e608";
 }
 
-/* line 266, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 273, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list .content {
   max-width: 920px;
 }
-/* line 274, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 281, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-complete .header.locked {
   background-color: transparent;
 }
-/* line 279, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 286, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-complete .actions li.arrow {
   border-left: 1px solid #F89594 !important;
 }
 @media (max-width: 400px) {
-  /* line 278, ../../resources/assets/scss/dashboard/_dashboard.scss */
+  /* line 285, ../../resources/assets/scss/dashboard/_dashboard.scss */
   ul.module-list li.is-complete .actions {
     float: none;
   }
 }
-/* line 289, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 296, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-unlocked {
   border-top: 1px solid #e6e6e6;
 }
-/* line 293, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 300, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-unlocked .actions li.arrow {
   border-left: 1px solid #e6e6e6;
 }
-/* line 299, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 306, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-locked {
   border-top: 1px solid #e6e6e6;
 }
-/* line 302, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 309, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-locked .header {
   background-color: transparent;
   color: #c5c5c5;
 }
-/* line 307, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 314, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-locked:last-child {
   border-bottom: 1px solid #e6e6e6;
 }
-/* line 317, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 319, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-locked .actions li.arrow {
   border-left: 1px solid #e6e6e6;
 }
