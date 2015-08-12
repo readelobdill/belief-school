@@ -32,6 +32,12 @@ export default class Dashboard {
                 delay: 10});
         }
 
+        this.dashboard.find('.is-unlocked.is-complete .header').click((e)  => {
+            $(e.currentTarget).closest('.is-unlocked.is-complete').toggleClass('is-open');
+        });
+
+
+
     }
 }
 
