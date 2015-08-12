@@ -30,6 +30,12 @@ export default class Dashboard {
             $boomerang.find('.tagcloud').jQCloud(words, {width :400, height: 200});
         }
 
+        this.dashboard.find('.is-unlocked.is-complete .header').click((e)  => {
+            $(e.currentTarget).closest('.is-unlocked.is-complete').toggleClass('is-open');
+        });
+
+
+
     }
 }
 
