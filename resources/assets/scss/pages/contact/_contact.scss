@@ -1,0 +1,97 @@
+.container.contact {
+    background: image-url('home-background.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px;
+    min-width: 320px;
+
+    @include breakpoint($brk-small) {
+        width: 100%;
+        padding: 0;
+    }
+
+    > .inner {
+        background: rgba($white, 0.9);
+        padding: 0 $gutter;
+
+        .content {
+            position: relative;
+            max-width: 920px;
+            width: 100%;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 26px;
+            color: $fontColour;
+            padding: 60px 0;
+
+            @include breakpoint($brk-small) {
+                width: 100%;
+                padding-top: 40px;
+            }
+        }
+    }
+
+    .dots {
+        margin: 30px auto;
+
+        @include breakpoint($brk-small) {
+            margin: 40px auto;
+        }
+    }
+
+    p {
+        max-width: 445px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 400;
+
+        em {
+            color: $lightRed;
+            font-weight: 400;
+        }
+
+        &.mini-quote {
+            font-weight: 500;
+            &:before{}
+            &:after{}
+        }
+    }
+
+    .col {
+        float: left;
+        width: 48%;
+        &:nth-child(even) {
+            float: right;
+        }
+    }
+
+    .content-block{
+        width: 100%;
+        @include pie-clearfix();
+        max-width: 920px;
+        margin: 0 auto;
+
+        .col {
+            float: left;
+            width: 48%;
+
+            &:nth-child(even) {
+                float: right;
+            }
+        }
+    }
+
+    .get-in-contact {
+        padding-bottom: 30px;
+        padding-top: 30px;
+        .col {
+            text-align: center;
+        }
+    }
+
+    .main-copy,
+    .terms-container {
+        padding-bottom: 30px;
+    }
+
+}
