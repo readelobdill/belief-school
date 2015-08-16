@@ -28,15 +28,30 @@ export default class Dashboard {
                 })
             }
             $boomerang.find('.tagcloud').jQCloud(words, {
-                autoResize :true,
-                delay: 10});
+                autoResize :true});
         }
 
-        this.dashboard.find('.is-unlocked.is-complete .header').click((e)  => {
+        this.dashboard.find('.is-unlocked.is-complete .header .arrow').click((e)  => {
             $(e.currentTarget).closest('.is-unlocked.is-complete').toggleClass('is-open');
+
+
+            // let $opener = $(e.currentTarget).closest('.is-unlocked.is-complete');
+            // let moduleIsOpen = $opener.hasClass('is-visible')
+
+            // if( moduleIsOpen ) {
+            //    $opener.removeClass('is-open');
+            //    setTimeout(function(){
+            //         $opener.removeClass('is-visible');
+            //    }, 1000)
+            // } else {
+            //     $opener.addClass('is-open');
+            //     setTimeout(function(){
+
+            //         $opener.addClass('is-visible');
+            //    }, 1000)
+            // }
+
         });
-
-
 
     }
 }

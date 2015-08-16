@@ -68,18 +68,20 @@ Route::get('account', ['as' => 'account', 'middleware' => 'auth', 'uses' => 'Use
 Route::post('account', ['as' => 'account.submit', 'middleware' => 'auth', 'uses' => 'UserController@submitAccount']);
 Route::any('email-exists', ['as' => 'account.check-email', 'uses' => 'UserController@checkEmail']);
 
-
-
-Route::get('terms-and-conditions', ['as' => 'terms-and-conditions', function() {
-    return view('app.misc.terms-and-conditions');
-}]);
-
 Route::get('about', ['as' => 'about', function() {
     return view('app.misc.about');
 }]);
 
+Route::get('contact', ['as' => 'contact', function() {
+    return view('app.misc.contact');
+}]);
+
+// Route::get('terms-and-conditions', ['as' => 'terms-and-conditions', function() {
+//     return view('app.misc.terms-and-conditions');
+// }]);
+
 Route::get('privacy-policy', ['as' => 'privacy-policy', function() {
-    return view('app.misc.privacy-policy');
+    return view('app.misc.privacy-terms');
 }]);
 
 

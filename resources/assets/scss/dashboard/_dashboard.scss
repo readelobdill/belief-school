@@ -1,5 +1,22 @@
-.dashboard-module {
+.dash-background {
+    background: image-url('home-background.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
     padding: 50px;
+
+    @include breakpoint($brk-small) {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.dashboard-module {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px $gutter 60px;
+
+    h1.plain {
+        margin-bottom: 25px;
+    }
 
     @include breakpoint($brk-small) {
         width: 100%;
@@ -7,7 +24,7 @@
     }
 
     header {
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
 
     > .inner {
@@ -19,11 +36,15 @@
             font-size: 17px;
             line-height: 26px;
             color: $fontColour;
-            padding: 60px 0;
+
 
             @include breakpoint($brk-small) {
                 width: 100%;
                 padding-top: 40px;
+            }
+
+            .inner-padding {
+                padding: 60px 0;
             }
         }
     }
@@ -69,13 +90,20 @@
     &.is-locked {
         background-color: transparent;
         color: $lightRed;
+
+            ul.actions li.forum a.forum-icon {
+                color: $lightRed !important;
+                span {
+                    color: $lightRed !important;
+                }
+            }
     }
 
     h2 {
         font-weight: 500;
         position: relative;
         float: left;
-        padding: 7px 20px;
+        padding: 6px 20px;
 
         @include breakpoint($break-620) {
             font-size: 12px;
@@ -106,19 +134,17 @@ ul.actions {
 
         &.arrow {
             padding: 8.5px 15px;
-            border-left: 1px solid #F89594;
-
-            &:after {
-                position: relative;
-                font-family: $icon;
-                content: "\e630";
-                top: 3px;
-                font-size: 16px;
-            }
+            background: transparent image-url('dashboard-arrow.svg') center center no-repeat;
+            position: relative;
+            top: 3px;
+            right: 3px;
+            width: 40px;
+            transform-origin: center center;
         }
 
         &.forum {
-            padding: 8.5px 10px;
+            padding: 8.5px 15px;
+            border-right: 1px solid #F89594;
 
             @include breakpoint($break-620) {
                 border-left: 1px solid #F89594;
@@ -182,7 +208,7 @@ ul.actions {
                 font-family: $icon;
                 content: "\e621";
                 left: -27px;
-                top: -19px;
+                top: -9px;
                 font-size: 16px;
 
                 @include breakpoint($break-620) {
@@ -255,6 +281,20 @@ ul.actions {
     h2:before{
         content: "\e606";
     }
+
+    ul.experience {
+        max-width: 445px;
+        margin: auto auto 30px;
+        li {
+            color: $lightRed;
+            font-style: italic;
+            span {
+                font-weight: 500;
+                font-style: normal;
+                color: $black;
+            }
+        }
+    }
 }
 
 .module-sustainable-change {
@@ -283,8 +323,8 @@ ul.module-list {
             }
 
             .actions {
-                li.arrow {
-                    border-left: 1px solid #F89594 !important;
+                li.forum {
+                    border-right: 1px solid #F89594 !important;
                 }
 
                 @include breakpoint($brk-xsmall) {
@@ -297,8 +337,8 @@ ul.module-list {
             border-top: 1px solid $grey;
 
             .actions {
-                li.arrow {
-                    border-left: 1px solid $grey;
+                li.forum {
+                    border-right: 1px solid $grey;
                 }
             }
         }
@@ -316,8 +356,16 @@ ul.module-list {
             }
 
             .actions {
+                li.unlock-countdown {
+                    padding: 8.5px 15px;
+                    border-right: 1px solid $grey;
+                    &:before {
+                        left: 0;
+                        top: inherit;
+                    }
+                }
                 li.arrow {
-                    border-left: 1px solid $grey;
+                    visibility: hidden;
                 }
             }
         }

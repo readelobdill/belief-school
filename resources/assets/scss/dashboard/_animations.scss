@@ -1,0 +1,40 @@
+li.is-unlocked.is-complete {
+
+    .header .arrow {
+        cursor: pointer;
+        transition: 400ms ease;
+        transform: rotate3d(1, 0, 0,0deg);
+        &:hover {
+            transform: scale(1.1, 1,1)
+        }
+    }
+
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease;
+    }
+
+    .inner-padding {
+        opacity: 0;
+        transition: opacity 800ms $ease;
+    }
+
+    &.is-open {
+        .header .arrow {
+            transform: rotate3d(1, 0, 0, 180deg);
+        }
+
+        .content {
+            max-height: 700px;
+        }
+
+        .inner-padding {
+            opacity: 1;
+        }
+    }
+}
+
+.auth {
+    padding-right: 20px;//TEMP
+}

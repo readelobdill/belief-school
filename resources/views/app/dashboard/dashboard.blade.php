@@ -2,7 +2,7 @@
 
 @section('content')
 
- <div class="module">
+ <div class="module dash-background">
 
     <div class="container dashboard-module">
         <div class="inner">
@@ -14,6 +14,9 @@
                     </h1>
                     <p class="center">
                         This dashboard is your Manifesto. Track your Belief School journey as you progress through the course and check in regularly.
+                    </p>
+                    <p class="center">
+                        <a class="button small-dashboard">Download manifesto</a>
                     </p>
                 </header>
 
@@ -52,7 +55,7 @@
 
                                 {{-- Unlocked and started but not finished. --}}
                                 <li class="module-{{ $mod->slug }} is-not-complete is-unlocked">
-                                    <div class="header is-locked">
+                                    <div class="header">
                                         <div class="inner">
                                             <h2>Module {{$mod->order - 1}} - {{$mod->name}}</h2>
 

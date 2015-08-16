@@ -1,13 +1,24 @@
-<p>Over the past 2 months I experienced</p>
-<ul>
-    @foreach($module->pivot->data[0] as $experience)
-        <li>
-            {{ $experience }}
-        </li>
-    @endforeach
-</ul>
+<div class="content">
+    <div class="inner-padding">
+        <h1 class="plain">Gratitude Diary - Over the last 2 months...</h1>
 
-<p>and I sent this letter to someone</p>
-<p>
-    <em>{{ $module->pivot->data[1]->letter }}</em>
-</p>
+        <ul class="experience">
+            @foreach($module->pivot->data[0] as $experience)
+                <li>
+                 {{--    @if ($experience == 0 ) --}}
+                       {{-- <li> <span>I am grateful for...</span>{{ $experience }} --}}
+                   {{--  @else --}}
+                        <span>I am...</span> {{ $experience }}
+                   {{--  @endif --}}
+                </li>
+            @endforeach
+        </ul>
+
+
+        <h1 class="plain">When I sent my letter of gratitude I felt...</h1>
+        <p>
+            <em>{{ $module->pivot->data[1]->letter }}</em>
+        </p>
+    </div>
+</div>
+
