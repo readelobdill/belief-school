@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Belief School</title>
-    <script src="//use.typekit.net/oni  6kia.js"></script>
+    <script src="//use.typekit.net/oni6kia.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="{{asset('css/main.css')}}"/>
     @if(App::environment('local'))
