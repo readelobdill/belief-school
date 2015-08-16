@@ -10,7 +10,6 @@
             Get It Out&hellip;
         </h1>
 
-
         <p>
             Once you've faced your fears you're going to be feeling A LOT.
         </p>
@@ -18,8 +17,6 @@
         <p class="center">
             Write out how feel after you faced each of the three fears below&hellip;
         </p>
-
-
 
         <form action="" class="positive-affirmations">
             <div class="positive-affirmations-fields">
@@ -64,7 +61,7 @@
                 </div>
             </div>
             <div class="actions">
-                <button class="button">Save to Manifesto</button>
+                <button class="button">Save to Dashboard</button>
             </div>
 
         </form>

@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class="actions">
-                <button class="button">Save to Manifesto</button>
+                <button class="button">Save to Dashboard</button>
             </div>
 
         </form>
