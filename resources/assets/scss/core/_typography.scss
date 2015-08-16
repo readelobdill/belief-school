@@ -15,6 +15,9 @@ p {
     &.center {
         text-align: center;
     }
+    &.margin-top {
+        margin-top: 24px;
+    }
 }
 
 mark {
@@ -53,7 +56,8 @@ mark {
 blockquote {
     color: $lightRed;
     font-size: 21px;
-    font-weight: 600;
+    //font-weight: 600; was 600, 500 looks better.
+    font-weight: 500;
     font-style: italic;
     margin-bottom: 32px;
     padding: 23px;

@@ -4,7 +4,7 @@
     height: 100%;
     width: 295px;
     background: $fontColour;
-    padding-top: 126px;
+    padding-top: 115px;
     transform: translate3d(-295px, 0, 0);
     overflow:auto;
     display:none;
@@ -28,6 +28,7 @@
             color: #fbfbfb;
             margin-bottom: 18px;
             padding-left: 30px;
+            transition: color $transition;
 
             &:before {
                 $size: 15px;
@@ -44,6 +45,11 @@
             a {
                 color: $white;
                 border-bottom: 0;
+                transition: color $transition;
+
+                &:hover {
+                    color: $darkGrey;
+                }
             }
 
             &.ico-intro {

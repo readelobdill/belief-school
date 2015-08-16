@@ -9,7 +9,7 @@
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    font-size: 17px;
+    font-size: 15px; //this was 17px;
 
     &.small-dashboard {
 
@@ -66,6 +66,31 @@
         &:before {
             transform: rotate(135deg);
             width: 18px;
+        }
+    }
+
+     &.is-locked {
+        background: $darkGrey;
+        cursor: default;
+        color: #ECECEC;
+
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            content: '\e621';
+            font-size: 15px;
+            background-color: transparent;
+            transform: rotate(0deg);
+            position: relative;
+            font-family: 'icomoon';
+            left: 12px;
+        }
+
+        &:hover {
+            background: $darkGrey;
+            color: #ECECEC;
         }
     }
 }

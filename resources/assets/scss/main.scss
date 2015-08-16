@@ -25,6 +25,7 @@
 // pages
 @import "pages/home/home";
 @import "pages/about/about";
+@import "pages/contact/contact";
 @import "pages/welcome/welcome";
 @import "pages/boomerang/boomerang";
 @import "pages/un-stuck/un-stuck";
@@ -32,9 +33,12 @@
 @import "pages/you-to-you/you-to-you";
 @import "pages/gratitude/gratitude";
 @import "pages/sustainable-change/sustainable-change";
+@import "pages/misc/privacy-terms";
+
 
 // dashboard
 @import "dashboard/dashboard";
+@import "dashboard/animations";
 
 // forum
 @import "forum/forum";
