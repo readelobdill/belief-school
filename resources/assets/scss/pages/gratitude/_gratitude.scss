@@ -1,8 +1,12 @@
 .gratitude-list {
-	input {
-		width: 100%;
-	}
-	li {
-		margin-bottom: 20px;
-	}
+    input {
+        width: 100%;
+    }
+    li {
+        margin-bottom: 20px;
+
+        label {
+            text-align: center;
+        }
+    }
 }

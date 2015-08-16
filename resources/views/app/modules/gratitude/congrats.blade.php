@@ -2,12 +2,11 @@
     <div class="pre-complete congrats-container">
         <div class="inner">
             <h1 class="plain">
-                Great job!<br>
-                Asking for feedback takes courage; you are
-                going to learn a lot about courage over
-                the course of your Belief School journey,
+                Continue to record what <br />you are grateful for...
             </h1>
-            <p>All of the answers will be collated and appear in your Dashboard once your recipients begin to send their answers, to you so you can start to build a picture of the awesomness you bring to the world.</p>
+
+            <p>Keep your Gratitude Diary going - try to write down what you are grateful for at least once a day, even if you only write one thing. Come back to your Belief School Dashboard to see the original 10 things you are grateful for if you are struggling to find inspiration.</p>
+
             <div class="dots"></div>
             <div class="actions">
                 <a href="#" class="button" data-complete-module>Whats next?</a>
