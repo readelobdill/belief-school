@@ -1,7 +1,7 @@
 <div class="inner">
     <div class="content">
         <h1 class="title">
-            How are you going
+            Where to from here?
         </h1>
 
         <p>
@@ -9,23 +9,26 @@
         </p>
 
         <p class="bold">You have now had a taste of the six steps to Self Belief:</p>
-        <blockquote class="multiple">
-            <ul>
+        {{-- <blockquote class="multiple"> --}}
+            <ol class="multiple-sustain">
                 <li>Celebrating your strengths</li>
                 <li>Creating self-affirming words – focusing on what you want</li>
                 <li>Surrounding yourself with the things that lift you up and draw you forward</li>
                 <li>Facing your fears – discovering the power of courage</li>
                 <li>Giving more</li>
                 <li>Being Grateful</li>
-            </ul>
-        </blockquote>
+            </ol>
+        {{-- </blockquote> --}}
 
-        <p>
+        <div class="dots"></div>
+
+        <h1 class="plain margin-bottom">
             Throughout your Belief School journey you chose to demonstrate to yourself that you can follow through.
-        </p>
+        </h1>
 
-        <blockquote>
-            You chose <em>“{{ $requiredModule->data[0]->challenge }}”</em>
+        <blockquote class="center">
+            You chose:<br />
+            <em>“{{ $requiredModule->data[0]->challenge }}”</em>
         </blockquote>
 
         <p class="center">
@@ -34,10 +37,10 @@
 
         <form action="">
             <div class="form-row">
-                <textarea name="i_felt" placeholder="I felt...(limited to 280 characters)..." name="feel" required maxlength="280"></textarea>
+                <textarea name="i_felt" placeholder="I felt..." name="feel" required maxlength="280"></textarea>
             </div>
             <div class="actions">
-                <button class="button">Save to Manifesto!</button>
+                <button class="button">Save to Dashboard!</button>
             </div>
         </form>
     </div>
