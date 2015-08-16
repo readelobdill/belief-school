@@ -6,8 +6,8 @@
             @if(Auth::check())
                 <li class="ico-account"><a href="{{route('account')}}">Your account</a></li>
             @endif
-            <li class="ico-about"><a href="">About Belief School</a></li>
-            <li class="ico-contact"><a href="">Contact us</a></li>
+            <li class="ico-about"><a href="{{ route('about') }}">About Belief School</a></li>
+            <li class="ico-contact"><a href="{{ route('contact') }}">Contact us</a></li>
             @if(Auth::check())
                 <li class="ico-dash"><a href="{{route('dashboard')}}">Dashboard</a></li>
             @endif
