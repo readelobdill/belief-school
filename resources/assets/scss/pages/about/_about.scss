@@ -1,20 +1,22 @@
 .container.about {
-    //background: image-url('icons/bullets.svg') no-repeat top left;
+    background: image-url('home-background.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
     padding: 50px;
+    min-width: 320px;
 
     @include breakpoint($brk-small) {
         width: 100%;
-        padding: 40px $gutter;
+        padding: 0;
     }
 
-    header {
-        padding-bottom: 50px;
-    }
 
     > .inner {
+        background: rgba($white, 0.9);
+        padding: 0 $gutter;
         .content {
             position: relative;
-            //max-width: 920px;
+            max-width: 920px;
             width: 100%;
             margin: 0 auto;
             font-size: 17px;
@@ -37,55 +39,322 @@
         }
     }
 
-    .actions {
-        text-align:center;
-    }
-
     p {
         max-width: 445px;
         margin-left: auto;
         margin-right: auto;
-        font-weight: 500;
+        font-weight: 400;
 
         em {
             color: $lightRed;
             font-weight: 400;
         }
+
+        &.mini-quote {
+            font-weight: 500;
+            position: relative;
+
+            &:before,
+            &:after {
+                font-family:$icon;
+                font-style: normal;
+                position: relative;
+                color: $black;
+                font-size: 13px;
+            }
+
+            &:before {
+                content: '\e62b';
+                top: -5px;
+                left: 0;
+                padding-right: 8px;
+            }
+
+            &:after {
+                content: '\e62a';
+                bottom: 5px;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .col {
+        float: left;
+        width: 48%;
+        &:nth-child(even) {
+            float: right;
+        }
+    }
+
+    .content-block{
+        width: 100%;
+        @include pie-clearfix();
+        max-width: 920px;
+        margin: 0 auto;
     }
 }
 
-.header {
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+.testimonials-container {
+    position: relative;
+    padding-bottom: 90px;
+    padding-top: 40px;
+
+    // .content-block {
+    //     background: $white;
+    //     z-index: 1
+    // }
+
+    // &:after,
+    // &:before {
+    //     z-index: -1;
+    //     position: absolute;
+    //     content: "";
+    //     bottom: 15px;
+    //     left: 10px;
+    //     width: 50%;
+    //     top: 80%;
+    //     max-width: 300px;
+    //     background: #777;
+    //     -webkit-box-shadow: 0 15px 10px #777;
+    //     -moz-box-shadow: 0 15px 10px #777;
+    //     box-shadow: 0 15px 10px #777;
+    //     -webkit-transform: rotate(-3deg);
+    //     -moz-transform: rotate(-3deg);
+    //     -o-transform: rotate(-3deg);
+    //     -ms-transform: rotate(-3deg);
+    //     transform: rotate(-3deg);
+    // }
+
+    // &:after {
+    //     -webkit-transform: rotate(3deg);
+    //     -moz-transform: rotate(3deg);
+    //     -o-transform: rotate(3deg);
+    //     -ms-transform: rotate(3deg);
+    //     transform: rotate(3deg);
+    //     right: 10px;
+    //     left: auto;
+    // }
+
+    .testimonial {
+        float: left;
+        width: 30%;
+        text-align: center;
+
+        @include breakpoint($break-800) {
+            max-width: 245px;
+            float: none !important;
+            width: 100%;
+            margin: 20px auto 40px;
+        }
+
+        &:nth-child(2) {
+            margin: 0 5%;
+
+            @include breakpoint($break-800) {
+                margin: 20px auto 40px;
+            }
+        }
+
+        &:last-child {
+            float: right;
+        }
+
+        .name {
+            position: relative;
+            padding-bottom: 25px;
+            font-weight: 500;
+
+            &:after {
+                position: absolute;
+                content: '';
+                height: 1px;
+                width: 30px;
+                top: 32px;
+                background-color: $lightRed;
+                left: 50%;
+                margin-left: -15px;
+            }
+        }
+
+        .quote {
+            position: relative;
+            font-style: italic;
+
+            &:before,
+            &:after {
+                font-family:$icon;
+                font-style: normal;
+                position: absolute;
+                color: $lightRed;
+                font-size: 13px;
+            }
+
+            &:before {
+                content: '\e62b';
+                top: 0;
+                left: 0;
+                margin-left: -10px;
+            }
+
+            &:after {
+                content: '\e62a';
+                bottom: 3px;
+                margin-left: 10px;
+                //margin-right: -10px;
+            }
+        }
+    }
+}
+
+.main-copy{
+    //padding-bottom: 60px;
+
+    h1.plain {
+        padding-bottom: 30px;
+    }
+}
+
+.red-block {
+    padding: 50px $gutter;
+    @include pie-clearfix();
     background-color: $lightRed;
     color: $white;
-    text-align: center;
 
-    >.inner {
-        max-width: 920px;
+    .content {
         margin: 0 auto;
-        @include pie-clearfix();
+        max-width: 920px;
     }
 
-    h2 {
-        font-weight: 500;
+    .main-quote{
+        font-size: 30px;
+        text-align: center;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 39px;
         position: relative;
-        float: left;
-        padding: 7px 20px;
+        transform: translateY(40%);
 
-        @include breakpoint($break-620) {
-            font-size: 12px;
-            text-align: left;
-            padding: 7px 10px;
+        &:before,
+        &:after {
+            position: absolute;
+            content: '\e62b';
+            height: 1px;
+            width: 120px;
+            top: -28px;
+            background-color: #ffffff;
+            left: 50%;
+            margin-left: -60px;
         }
 
-        &:before {
-            position: relative;
-            font-family: $icon;
-            content: "\e600";
-            left: -4px;
-            top: 4px;
-            font-size: 24px;
+
+        &:after {
+            content: '\e62a';
+            height: 1px;
+            width: 120px;
+            top: inherit;
+            bottom: -28px;
+            left: 50%;
+            margin-left: -60px;
         }
     }
+}
+
+.pricing-container {
+    padding-bottom: 60px;
+
+    .title {
+        .price {
+            font-size: 50px;
+            span {
+                font-size: 15px;
+                @extend %brandon-grotesque;
+            }
+        }
+        .gets {
+            margin: 3px auto;
+            border-top: 1px solid black;
+            width: 100px;
+            padding: 15px 0px;
+            @extend %brandon-grotesque;
+        }
+        &:after {
+            display: none;
+        }
+    }
+
+
+    .price-block {
+        border: 2px solid transparent;
+        border-image: linear-gradient(23deg, rgba(241, 96, 96, 0.4) 0%, rgba(241, 96, 96, 0) 90%);
+        border-image-slice: 1;
+        padding: 60px 20px 0px 20px;
+        position: relative;
+        color: #f16060;
+        text-align: center;
+        line-height: 26px;
+        float: left;
+        width: 32%;
+        height: 267px;
+
+        @include breakpoint($break-800) {
+            max-width: 245px;
+            float: none;
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        &:nth-child(2) {
+            margin: 0 2%;
+            @include breakpoint($break-800) {
+                margin: 20px auto;
+            }
+        }
+
+        &:last-child {
+
+        }
+
+        .icon {
+            position: relative;
+            margin: 0 auto;
+            width: 30px;
+            height: 30px;
+            margin-bottom: 20px;
+            width: 55px;
+
+            &:after {
+                position: absolute;
+                content: "\e62c";
+                font-family: $icon;
+                left: 7px;
+                top: 0;
+                font-size: 41px;
+                color: $black;
+            }
+
+            &.shield:after {
+                content: '\e628';
+                font-size: 47px;
+                left: 4px;
+                top: 2px;
+            }
+
+            &.message:after {
+                content: '\e62d';
+                font-size: 37px;
+                left: 9px;
+                top: 3px;
+            }
+        }
+        p {
+            color: $lightRed;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 600;
+        }
+    }
+}
+
+.terms-container {
+    padding-bottom: 30px;
 }
