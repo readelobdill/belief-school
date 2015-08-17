@@ -10,21 +10,23 @@
             <p>All of the answers will be collated and appear in your Dashboard once your recipients begin to send their answers, to you so you can start to build a picture of the awesomness you bring to the world.</p>
             <div class="dots"></div>
             <div class="actions">
-                <a href="#" class="button" data-complete-module>Whats next?</a>
+                <a href="#" class="button" data-complete-module>What's next?</a>
             </div>
         </div>
     </div>
     <div class="post-complete congrats-container">
         <div class="inner">
-            <h1 class="plain">Congratulations you are awesome!</h1>
-            <p>Your next module will unlock in 48 Hours.</p>
-            <p>
-                In the meantime <a href="{{route('dashboard')}}">keep an eye on your dashboard</a> for the qualities submitted by your friends and <a href="{{route('modules.forum',[$module->slug])}}">check in the forum to find support and chat to others about getting to know your amazing self.</a>
-            </p>
-            <div class="dots"></div>
-            <div class="actions">
-                <a href="#" class="button is-locked">Whats next?</a>
-            </div>
+            <h1 class="plain">Congratulations, you've made it through!</h1>
+
+            <p><strong>You've now completed your journey through Belief School. Come back from time to time to get inspiration from your dashboard and encouragement from our forums. This is your supportive community,</strong></p>
+
+            <p>When heading over to your dashboard, take a moment to save it out - send it to your trusted friends and family and share your journey.</p>
+
+
+            {{-- <div class="dots"></div> --}}
+          {{--   <div class="actions">
+                <a href="#" class="button is-locked">What's next?</a>
+            </div> --}}
         </div>
     </div>
 </div>

@@ -9,7 +9,7 @@
 
             <div class="dots"></div>
             <div class="actions">
-                <a href="#" class="button" data-complete-module>Whats next?</a>
+                <a href="#" class="button" data-complete-module>What's next?</a>
             </div>
         </div>
     </div>
@@ -20,10 +20,10 @@
             <p>
                 In the meantime <a href="{{route('dashboard')}}">keep an eye on your dashboard</a> for the qualities submitted by your friends and <a href="{{route('modules.forum',[$module->slug])}}">check in the forum to find support and chat to others about getting to know your amazing self.</a>
             </p>
-            <div class="dots"></div>
+            {{-- <div class="dots"></div>
             <div class="actions">
-                <a href="#" class="button is-locked">Whats next?</a>
-            </div>
+                <a href="#" class="button is-locked">What's next?</a>
+            </div> --}}
         </div>
     </div>
 </div>
