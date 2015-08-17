@@ -1,0 +1,38 @@
+.account-section {
+    > .inner {
+
+        padding: 0 $gutter;
+
+        .next-section {
+            bottom: 60px;
+            svg {
+                path {
+                    fill: $lightRed;
+                }
+            }
+            &:hover {
+                svg path {
+                    fill: $darkRed;
+                }
+            }
+        }
+    }
+
+    .content {
+        width: 442px;
+        text-align: center;
+
+        p {
+            text-align:center;
+            font-size: 17px;
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+    }
+
+    input {
+        margin: 8px 0;
+        height: 72px;
+        width: 100%;
+    }
+}
