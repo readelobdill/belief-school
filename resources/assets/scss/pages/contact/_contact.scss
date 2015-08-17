@@ -92,6 +92,12 @@
     .main-copy,
     .terms-container {
         padding-bottom: 30px;
+
+        blockquote {
+            max-width: 445px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
 }

@@ -46,9 +46,7 @@
                     This is <br>
                     your amazing life!
                 </h1>
-                <p>
-                    Print this out Frame it. Put it somewhere where you will look at it every day. Focus on the things that remind you how much value you bring to the world!
-                </p>
+                <p>Print this out.  Frame it.  Put it somewhere where you will look at it every day.  Focus on the things that remind you how much value you bring to the world!</p>
             </div>
         </div>
 

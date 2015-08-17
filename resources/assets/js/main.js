@@ -29,6 +29,11 @@ switch(page) {
     case 'home' :
         Home.init();
         break;
+
+    // case 'about' :
+
+    //     break
+
     case 'welcome' :
         Welcome.init();
         break;

@@ -24,7 +24,8 @@ h1.plain {
     font-size: 25px;
     font-weight: bold;
     text-align:center;
-    margin-bottom: 25px;
+    //margin-bottom: 25px;
+    margin-bottom: 45px;
 
     @include breakpoint($brk-small) {
         font-size: 22px;
@@ -66,6 +67,10 @@ h1.plain {
         font-weight: normal;
         //display: inline-block;
         position: relative;
+
+        &.is-hidden-g {
+            display: none;
+        }
 
         &.logout {
 
