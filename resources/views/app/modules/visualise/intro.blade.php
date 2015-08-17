@@ -4,17 +4,11 @@
             Visualise
         </h1>
 
-        <blockquote>
-            This week is fun! No mental workouts, just good old fashioned dreaming and appreciating what is fabulous in your life.
-        </blockquote>
+            <p>This week is fun! No mental workouts, just good old fashioned dreaming and appreciating what is fabulous in your life.</p>
 
-        <p>
-            The task for this week is to create a virtual display of all the wonderful things in your life past and present. A collection of all the things in your world that you love, that inspire you, that remind you of what a brilliant individual you are. Things you have accomplished, people who lift you up and see the best in you.
-        </p>
+            <p>The task for this week is to create a virtual display of all the wonderful things in your life past and present. A collection of all the things in your world that you love, that inspire you, that remind you of what a brilliant individual you are. Things you have accomplished, people who lift you up and see the best in you.</p>
 
-        <p>
-            <strong>You will eventually choose a template and fill it with pictures, images and inspirational words</strong>, but first you'll have to hunt these items down.  To make things easier I've created three categories; start collecting so you get a fairly even number of items from each:
-        </p>
+            <p><strong>You will eventually choose a template and fill it with pictures, images and inspirational words</strong>, but first you'll have to hunt these items down.  To make things easier I've created three categories; start collecting so you get a fairly even number of items from each:</p>
 
         <div class="categories">
             <div class="category">
@@ -46,23 +40,20 @@
             </div>
         </div>
 
+        <p class="center">This digital collage is for you so do not for one second take into account what others may think. <br />
+        <strong>Do not edit your image selection for anyone.</strong></p>
+
         <div class="dots"></div>
 
         <h1 class="title">
             Beautiful you
         </h1>
 
-        <p>
-            <strong>In the centre find a picture of yourself.</strong> You’ll know the one, it makes you feel great inside. It doesn’t matter if you are 15 or 55, this picture must fill you with a strong feeling of self-love and a sense of your own personal power.
+        <p><strong>In the centre find a picture of yourself.</strong> You’ll know the one, it makes you feel great inside. It doesn’t matter if you are 15 or 55, this picture must fill you with a strong feeling of self-love and a sense of your own personal power.<br />
+        This may take some finding, you may need to dig this out of old photos. <strong>This is very important, invest that energy into this exercise.</strong>
         </p>
 
-        <p>
-            This may take some finding, you may need to dig this out of old photos. <strong>This is very important, invest that energy into this exercise.</strong>
-        </p>
-
-        <p>
-            If you really can’t find a photo, take one this week. But before you do, you must do whatever is necessary to fill your heart with happiness, wonder and excitement – sing, dance, walk down memory lane.
-        </p>
+        <p>If you really can’t find a photo, take one this week. But before you do, you must do whatever is necessary to fill your heart with happiness, wonder and excitement – sing, dance, walk down memory lane.</p>
 
         <blockquote>
             Whatever it takes so you can see yourself shining in your eyes
