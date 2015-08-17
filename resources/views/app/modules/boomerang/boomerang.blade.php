@@ -66,8 +66,8 @@
 
         <p class="annotation">
             Having trouble opening email?<br>
-            Copy/past link below into own email instead<br>
-            <a href="">linky</a>
+            Copy/paste link below into own email instead<br>
+            <a href="#needs-link-generated">Link</a>
         </p>
 
     </div>

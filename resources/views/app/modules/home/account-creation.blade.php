@@ -1,7 +1,7 @@
 <div class="inner">
     <div class="content">
         <p>Create a Belief School account and get started on your FREE Belief School journey</p>
-        <p><a href="#">Or take me to the page of benefits first</a></p>
+        <p><a href="{{ route('about') }}">Or take me to the page of benefits first</a></p>
 
         <form action="{{route('users.create')}}" method="POST">
             <div class="form-row">
