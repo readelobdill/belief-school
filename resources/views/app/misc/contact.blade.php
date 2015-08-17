@@ -59,7 +59,7 @@
                 <div class="terms-container">
                     <h1 class="plain">Further Details</h1>
                     <p>
-                    Our <a href="">Terms &amp; Conditions</a> and <a href="">Privacy Policy</a> are important to us and you! Please take the time to review the information.</p>
+                    Our <a href="{{route('privacy-terms') }}">Terms &amp; Conditions</a> and <a href="{{route('privacy-terms') }}">Privacy Policy</a> are important to us and you! Please take the time to review the information.</p>
                 </div>
 
             </div>

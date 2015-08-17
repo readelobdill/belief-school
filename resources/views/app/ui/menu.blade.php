@@ -4,13 +4,14 @@
         <ul>
             <li class="ico-intro"><a href="">Introduction</a></li>
             @if(Auth::check())
-                <li class="ico-account"><a href="{{route('account')}}">Your account</a></li>
+                <li class="ico-account"><a href="{{route('account')}}">My account</a></li>
             @endif
             <li class="ico-about"><a href="{{ route('about') }}">About Belief School</a></li>
             <li class="ico-contact"><a href="{{ route('contact') }}">Contact us</a></li>
             @if(Auth::check())
                 <li class="ico-dash"><a href="{{route('dashboard')}}">Dashboard</a></li>
             @endif
+            <li class="ico-terms"><a href="{{route('privacy-terms') }}">Terms of Use/Privacy Policy</a></li>
         </ul>
     </nav>
     <nav class="modules-navigation">
@@ -18,7 +19,7 @@
         <ul>
             @foreach($modules as $key => $module)
                 @if($module->slug === 'home' || $module->isUnlocked($modules[$key-1]))
-                    <li class="ico-mod{{ ( $module->slug === 'home' ?  1 : $module->order-1) }}">
+                    <li class="ico-{{ ( $module->slug) }}">
                         <a  href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
                     </li>
                 @else
