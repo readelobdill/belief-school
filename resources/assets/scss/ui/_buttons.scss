@@ -10,9 +10,9 @@
     cursor: pointer;
     transition: background-color 0.2s ease;
     font-size: 15px; //this was 17px;
+    border: 0;
 
     &.small-dashboard {
-
         padding: 5px 15px;
 
         &:after, &:before {
@@ -23,6 +23,7 @@
     &:hover {
         background-color: mix($lightRed, black, 90%);
         color: white;
+
     }
 
     &:after, &:before {

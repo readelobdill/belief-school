@@ -35,6 +35,14 @@
                 background: rgba(255,255,255,0.90);
                 visibility: hidden;
                 overflow: hidden;
+                &.vimeo {
+                    background: transparent;
+
+                    iframe {
+                        width: 100%;
+                        height: 90%;
+                    }
+                }
             }
         }
     }
@@ -255,6 +263,13 @@
                 display: none;
             }
         }
+    }
+}
+
+[data-current-section="0"],
+[data-current-section="1"] {
+    .indicator {
+        display: none;
     }
 }
 

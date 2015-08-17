@@ -1,6 +1,6 @@
 @if(!empty($module))
     <div class="indicator">
-        <a class="forum-icon" href="#">
+        <a class="forum-icon" href="{{ route('modules.forum', [$module->slug]) }}">
             @include('app/partials/icons/forum')
             <span>Forums</span>
         </a>

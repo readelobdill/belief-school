@@ -88,59 +88,142 @@
                 }
             }
 
-            &.ico-mod1 {
+            &.ico-home {
+                &:before {
+                    content: '\e60a';
+                    // this needs to be replaced by a brain?.
+                }
+            }
+
+            // Welcome to Belief School
+            &.ico-welcome {
+                &:before {
+                    content: '\e60a';
+                }
+            }
+
+            // Module 1 - Know your Amazing Self
+            // Stop-hand icon
+            &.ico-boomerang {
                 &:before {
                     content: '\e609';
                 }
             }
 
-            &.ico-mod2 {
+            // Module 2 - Limiting Beliefs
+            // Stop-hand icon
+            &.ico-un-stuck {
                 &:before {
                     content: '\e60b';
                 }
             }
 
-            &.ico-mod3 {
+            // Module 3 - My Amazing Life
+            // Diamond Icon
+            &.ico-visualise {
                 &:before {
                     content: '\e60c';
                 }
             }
 
-            &.ico-mod4 {
+            // Module 4 - Fear and Courage
+            // stop hand on side Icon
+            &.ico-fear-courage {
                 &:before {
                     content: '\e60d';
                 }
             }
 
-            &.ico-mod5 {
+            // Module 5 - Who can you help?
+            //
+            &.ico-giving {
                 &:before {
-                   content: '\e60e';
+                    content: '\e60e';
                 }
             }
 
-            &.ico-mod6 {
+            // Module 6 - Reach Out
+            &.ico-gratitude {
                 &:before {
                     content: '\e60f';
                 }
             }
 
-            &.ico-mod7 {
+            // Module 7 - Where to From Here
+            &.ico-sustainable-change {
                 &:before {
                     content: '\e610';
                 }
             }
 
-            &.ico-mod8 {
+            // Module 8 - Here I am
+            &.ico-you-to-you {
                 &:before {
                     content: '\e611';
                 }
             }
 
-            &.ico-mod9 {
-                &:before {
-                    content: '\e611';
-                }
-            }
+
+
+
+
+
+            // ico-you-to-you
+
+            // &.ico-mod0 {
+            //     &:before {
+            //         content: '\e609';
+            //     }
+            // }
+
+            // &.ico-mod1 {
+            //     &:before {
+            //         content: '\e60a';
+            //     }
+            // }
+
+            // &.ico-mod2 {
+            //     &:before {
+            //         content: '\e60b';
+            //     }
+            // }
+
+            // &.ico-mod3 {
+            //     &:before {
+            //         content: '\e60c';
+            //     }
+            // }
+
+            // &.ico-mod4 {
+            //     &:before {
+            //         content: '\e60d';
+            //     }
+            // }
+
+            // &.ico-mod5 {
+            //     &:before {
+            //        content: '\e60e';
+            //     }
+            // }
+
+            // &.ico-mod6 {
+            //     &:before {
+            //         content: '\e60f';
+            //     }
+            // }
+
+            // &.ico-mod7 {
+            //     &:before {
+            //         content: '\e610';
+            //     }
+            // }
+
+            // &.ico-mod8 {
+            //     &:before {
+            //         content: '\e611';
+            //     }
+            // }
+
 
             &.ico-locked {
                 &:before {
