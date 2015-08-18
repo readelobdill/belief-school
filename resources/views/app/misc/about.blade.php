@@ -96,7 +96,7 @@
             <div class="content">
 
                 <div class="pricing-container">
-                     <h1 class="title">
+                    <h1 class="title">
                         <span data-arc="100">&middot; Pricing Details &middot;</span>
                         <div class="price">$99{{-- <span>NZD</span> --}}</div>
                         <p class="gets">Gets you...</p>
