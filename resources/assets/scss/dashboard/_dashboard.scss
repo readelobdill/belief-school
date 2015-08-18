@@ -244,6 +244,19 @@ ul.actions {
     }
 }
 
+.module-home {
+    &.page-icon:after {
+        content: '\e632';
+        left: 3px;
+    }
+}
+
+.module-welcome {
+    &.page-icon:after {
+        content: '\e601';
+    }
+}
+
 .module-boomerang {
     h2:before {
         content: "\e600";
