@@ -1,7 +1,8 @@
 <div class="inner">
     <div class="content">
-        <h1 class="title">
-            Where to from here?
+        <h1 class="title module-page-title">
+           <span data-arc="100">&middot; Module {{$module->order -1}}  &middot;</span>
+            {{ $module->name }}
         </h1>
 
         <p>

@@ -1,12 +1,13 @@
 <div class="inner">
     <div class="pre-complete congrats-container">
         <div class="inner">
-
-            “Give thanks for a little and you will find a lot” ~Hausa Proverb
+            <blockquote>
+                “<em>Give thanks for a little and you will find a lot</em>” ~Hausa Proverb
+            </blockquote>
 
             <div class="dots"></div>
             <div class="actions">
-                <a href="#" class="button" data-complete-module>What's next?</a>
+                <a href="#" class="button" data-complete-module>continue my journey...</a>
             </div>
         </div>
     </div>

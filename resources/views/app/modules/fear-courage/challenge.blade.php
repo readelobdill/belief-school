@@ -1,13 +1,11 @@
 <div class="inner">
     <div class="content">
-        <h1 class="title">
-            On the other side of Fear is Courage
+        <h1 class="title module-page-title">
+           <span data-arc="100">&middot; Module {{$module->order -1}}  &middot;</span>
+            {{ $module->name }}
         </h1>
 
-        <p>
-            Facing our fear is essential to build personal belief. When our life is ruled by fear we do not live to our true potential. If we are making choices based on what other people will think, or whether we are afraid of success or failure – life is limited to the very small safe zone we have built up around us.
-        </p>
-
+        <p>Facing our fear is essential to build personal belief. When our life is ruled by fear we do not live to our true potential. If we are making choices based on what other people will think, or whether we are afraid of success or failure – life is limited to the very small safe zone we have built up around us.</p>
 
         <blockquote>
             It is the knee scraping that gives us depth, empathy and the ability to lead others. It is stretching for things that we are not sure we will reach that builds our belief and courage muscles.
@@ -44,7 +42,7 @@
         <form action="" class="limiting-beliefs">
             <div class="beliefs">
                 <div class="belief">
-                    <textarea name="challenge-1" id="belief-1" required></textarea>
+                    <textarea name="challenge-1" id="belief-1" required maxlength="140"></textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
@@ -52,7 +50,7 @@
                     <label class="number" for="belief-1">1 .</label>
                 </div>
                 <div class="belief">
-                    <textarea name="challenge-2" id="belief-2" required></textarea>
+                    <textarea name="challenge-2" id="belief-2" required maxlength="140"></textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
@@ -60,7 +58,7 @@
                     <label class="number" for="belief-2">2 .</label>
                 </div>
                 <div class="belief">
-                    <textarea name="challenge-3" id="belief-3" required></textarea>
+                    <textarea name="challenge-3" id="belief-3" required maxlength="140"></textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
@@ -92,7 +90,7 @@
             Put this in perspective. You may not get the exact outcome you wanted, but that doesn’t matter – this exercise is not about the outcome, it is about the action of not letting your fear control you.
         </p>
         <div class="actions">
-            <a href="#" class="button" data-save-module>Make your declaration! Save it into your dashboard now!</a>
+            <a href="#" class="button" data-save-module>Make your declaration! <br />Save it into your dashboard now!</a>
         </div>
 
 

@@ -5,7 +5,7 @@
 
             <p>It is not what we do sometimes that matters it is what we do all the time. Fill your week with the unmovables: sleep, work and family, and then use the rest of your time wisely to nurture your body, heart and dreams.Download the planner from our resources section and use it to creare your weekly action plan to create real lasting change.</p>
 
-            <a href="#pdf-download">Download planner and get started.</a>
+            <p><a class="button" href="#pdf-download">Download planner and get started.</a></p>
 
             <div class="dots"></div>
             <div class="actions">

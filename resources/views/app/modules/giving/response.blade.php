@@ -1,12 +1,12 @@
 <div class="inner">
     <div class="content">
-        <h1 class="plain">Well done!</h1>
+        <h1 class="title">Well done!</h1>
 
         <blockquote>
             On the other side of fear is courage. Courage is one of those characteristics that are right up there with Humility, Joy and kindness. There is no downside to courage.
         </blockquote>
 
-        <h1 class="title">
+        <h1 class="plain">
             Get It Out&hellip;
         </h1>
 
