@@ -43,7 +43,7 @@ class ModuleController extends Controller {
                 ->modules()
                 ->where('modules.id', $module->id)->first();
         } else {
-            return redirect()->guest('auth/login');
+            return redirect()->guest(route('auth.login'));
         }
 
 
