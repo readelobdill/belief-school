@@ -4,8 +4,8 @@
             @include('app/partials/icons/forum')
             <span>Forums</span>
         </a>
-        <div class="module-icon">
-            @include('app/partials/icons/modules/'.$module->slug)
+        <div class="module-icon page-icon module-{{$module->slug}}">
+
         </div>
     </div>
 @endif

@@ -52,20 +52,32 @@
     h1.title {
         font-size: 40px;
         max-width: 320px;
+
         line-height: 1;
         color: $white;
+
         span {
-        font-size: 18px
+            font-size: 18px;
         }
+
         &:after {
-            border-color: $white;
+            width: 92px;
+            border: 2px solid $white;
         }
     }
 
     .module-icon {
+        text-align: center;
 
+        &:after {
+            position: relative;
+            font-family: $icon;
+            font-size: 90px;
+
+            color: $white;
+            position: relative;
+        }
     }
-
 }
 
 .has-text {
@@ -220,12 +232,24 @@
         padding: 8px;
         float: right;
 
+
         svg {
             width: 100%;
             height: 100%;
             path {
                 fill: white;
             }
+        }
+    }
+
+    .page-icon {
+        &:after {
+            position: relative;
+            font-size: 35px;
+            font-family: $icon;
+            color: $white;
+            top: 0;
+            left: 0;
         }
     }
 
@@ -293,7 +317,6 @@
     }
 }
 
-/*TODO: Might want to create a module folder, for misc shared module styles*/
 
 
 
