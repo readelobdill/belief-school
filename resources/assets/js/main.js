@@ -27,17 +27,11 @@ Loading.init();
 Arc.init();
 Forms.init();
 
-
-let page = $('body').data('page');
+const page = $('body').data('page');
 switch(page) {
     case 'home' :
         Home.init();
         break;
-
-    // case 'about' :
-
-    //     break
-
     case 'welcome' :
         Welcome.init();
         break;
