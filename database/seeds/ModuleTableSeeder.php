@@ -9,7 +9,7 @@ class ModuleTableSeeder extends Seeder {
             [
                 'name' => 'Home',
                 'slug' => 'home',
-                'total_parts' => 1,
+                'total_parts' => 2,
                 'module_id' => 0,
                 'free' => 1,
                 'locks' => false
