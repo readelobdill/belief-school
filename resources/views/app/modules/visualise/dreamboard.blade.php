@@ -37,28 +37,10 @@
                     @include('app.modules.visualise.image', ['imageName' => 'image_12'])
                 </div>
             </div>
-            <div class="overlay">
-
-            </div>
-            <div class="modal">
-                <span class="close">@include('app/partials/icons/close')</span>
-                <h1 class="title">
-                    This is <br>
-                    your amazing life!
-                </h1>
-                <p>Print this out.  Frame it.  Put it somewhere where you will look at it every day.  Focus on the things that remind you how much value you bring to the world!</p>
-            </div>
         </div>
 
         <div class="actions">
             <a href="#" class="button" data-save-module>Save to dashboard</a>
         </div>
-        <div class="social">
-            <a href="#" class="facebook">@include('app/partials/icons/facebook')Share on Facebook</a>
-            <a href="#" class="pinterest">@include('app/partials/icons/pinterest')Share on Pinterest</a>
-            <a href="#" class="download">@include('app/partials/icons/download')Download as PDF</a>
-        </div>
-
-
     </div>
 </div>
