@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import animate from 'modules/animate'
+import TweenMax from "gsap/src/uncompressed/TweenMax";
+import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 import config from 'config';
 import Q from 'q';
 
@@ -83,7 +85,7 @@ Video.prototype.updatePosition = function() {
 
 Video.prototype.scrollTo = function(per, duration) {
     var scrollTo = this.video.duration * per * multiplier;
-    return animate.to(window, duration, {
+    return TweenMax.to(window, duration, {
         scrollTo: {
             y: scrollTo
         }
@@ -93,9 +95,7 @@ Video.prototype.scrollTo = function(per, duration) {
 
 Video.prototype.seek = function(per) {
     return this.videoReady.then(() => {
-        console.log(this.video.duration);
         this.video.currentTime = this.video.duration * per;
-        console.log(this.video.currentTime);
     })
 
 }

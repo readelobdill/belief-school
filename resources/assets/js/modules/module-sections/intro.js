@@ -7,7 +7,7 @@ import animate from 'modules/animate';
 import Q from "q";
 import ModuleSection from "modules/module-section";
 
-class IntroSection extends ModuleSection {
+export default class IntroSection extends ModuleSection {
     constructor(section, module) {
         super(section, module);
         this.video = new Video(this.section.find('.display-video'));
@@ -15,9 +15,9 @@ class IntroSection extends ModuleSection {
     }
     open() {
         return super.open().then(() => {
-            return this.video.scrollTo(0.5, 2.5).then(() => {
-                return animate.fromTo(this.section.find('.next-section'), 0.7, {scaleX: 0.9, scaleY: 0.9}, {scaleX: 1, scaleY: 1, autoAlpha: 1});
-            });
+            const t = new TimelineLite();
+            t.add(this.video.scrollTo(0.5,2.5));
+            t.add(TweenMax.fromTo(this.section.find('.next-section'), 0.7, {scaleX: 0.9, scaleY: 0.9}, {scaleX: 1, scaleY: 1, autoAlpha: 1}));
         });
 
     }
@@ -31,11 +31,16 @@ class IntroSection extends ModuleSection {
     }
 
     close() {
-        return this.video.scrollTo(1,1.5).then(() => {
-            return animate.to(this.section.find('.inner'), 0.5, {autoAlpha: 0}).then(() => {
-                this.teardown();
-            });
+        const defer = Q.defer();
+        const t = new TimelineLite();
+        t.add(this.video.scrollTo(1,1.5));
+        t.to(this.section.find('.inner'), 0.5, {autoAlpha: 0})
+        t.add(() => {
+            this.teardown();
+            defer.resolve();
         });
+        return defer.promise;
+
     }
 
     setup() {
@@ -46,9 +51,6 @@ class IntroSection extends ModuleSection {
         super.teardown();
         this.video.destroy();
         this.video.seek(1);
-        console.log('teardown');
 
     }
 }
-
-module.exports = IntroSection;
