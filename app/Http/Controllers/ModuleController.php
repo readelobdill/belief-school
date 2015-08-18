@@ -74,6 +74,22 @@ class ModuleController extends Controller {
             }
         }
 
+        if(empty($moduleUser)) {
+            $now = new Carbon();
+            $this->auth->user()->modules()->attach($module, [
+                'created_at' => $now,
+                'updated_at' => $now,
+                'data' => '',
+                'complete' => false,
+                'step' => 0,
+                'secret' => Str::random(26)
+            ]);
+            $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first();
+        }
+
+
+
+
 
         return view('app.modules.'.$module->slug.'.index', [
             'page' => $module->slug,
