@@ -17,13 +17,9 @@
             <p>Keep your Gratitude Diary going - try to write down what you are grateful for at least once a day, even if you only write one thing. Come back to your Belief School Dashboard to see the original 10 things you are grateful for if you are struggling to find inspiration</p>
 
             <p>Your next module will unlock in 48 Hours.</p>
-            <p>
-                In the meantime <a href="{{route('dashboard')}}">keep an eye on your dashboard</a> for the qualities submitted by your friends and <a href="{{route('modules.forum',[$module->slug])}}">check in the forum to find support and chat to others about getting to know your amazing self.</a>
-            </p>
-            {{-- <div class="dots"></div>
-            <div class="actions">
-                <a href="#" class="button is-locked">What's next?</a>
-            </div> --}}
+
+            <p><a href="{{route('dashboard')}}">Take a look at your dashboard and see the progress on your amazing Belief School journey</a> or <a href="{{route('modules.forum',[$module->slug])}}">share what you are grateful for in our supportive community forum.</a></p>
+
         </div>
     </div>
 </div>
