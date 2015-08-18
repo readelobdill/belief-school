@@ -12,8 +12,12 @@ import SustainableChange from "pages/sustainable-change";
 import Dashboard from 'dashboard/dashboard';
 import Account from 'auth/account';
 
+
+
+
 /*Misc Pages*/
 import Forum from "forum/forum";
+import TagCloudForm from 'pages/tag-cloud-form';
 
 /*Utility*/
 import $ from 'jquery';
@@ -67,6 +71,9 @@ switch(page) {
         break;
     case 'account':
         Account.init();
+        break;
+    case 'tag-cloud-form':
+        TagCloudForm.init();
         break;
 
 
