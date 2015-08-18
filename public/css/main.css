@@ -689,15 +689,31 @@ p a:hover {
   height: 90%;
 }
 
-/* line 51, ../../resources/assets/scss/core/_module.scss */
+/* line 52, ../../resources/assets/scss/core/_module.scss */
+.module-title h1.title {
+  font-size: 40px;
+  max-width: 320px;
+  line-height: 1;
+  color: #ffffff;
+}
+/* line 57, ../../resources/assets/scss/core/_module.scss */
+.module-title h1.title span {
+  font-size: 18px;
+}
+/* line 60, ../../resources/assets/scss/core/_module.scss */
+.module-title h1.title:after {
+  border-color: #ffffff;
+}
+
+/* line 71, ../../resources/assets/scss/core/_module.scss */
 .has-text {
   padding: 50px;
 }
-/* line 55, ../../resources/assets/scss/core/_module.scss */
+/* line 75, ../../resources/assets/scss/core/_module.scss */
 .has-text.module-section > .inner {
   display: block;
 }
-/* line 61, ../../resources/assets/scss/core/_module.scss */
+/* line 81, ../../resources/assets/scss/core/_module.scss */
 .has-text > .inner .content {
   width: 445px;
   margin: 0 auto;
@@ -707,28 +723,28 @@ p a:hover {
   padding: 40px 0 60px 0;
 }
 @media (max-width: 500px) {
-  /* line 61, ../../resources/assets/scss/core/_module.scss */
+  /* line 81, ../../resources/assets/scss/core/_module.scss */
   .has-text > .inner .content {
     width: 100%;
     padding-top: 40px;
   }
 }
-/* line 79, ../../resources/assets/scss/core/_module.scss */
+/* line 99, ../../resources/assets/scss/core/_module.scss */
 .has-text .dots {
   margin: 60px auto;
 }
 @media (max-width: 500px) {
-  /* line 79, ../../resources/assets/scss/core/_module.scss */
+  /* line 99, ../../resources/assets/scss/core/_module.scss */
   .has-text .dots {
     margin: 40px auto;
   }
 }
-/* line 87, ../../resources/assets/scss/core/_module.scss */
+/* line 107, ../../resources/assets/scss/core/_module.scss */
 .has-text .actions {
   text-align: center;
 }
 
-/* line 92, ../../resources/assets/scss/core/_module.scss */
+/* line 112, ../../resources/assets/scss/core/_module.scss */
 .next-section {
   position: absolute;
   display: block;
@@ -743,25 +759,25 @@ p a:hover {
   border: 0;
   transform-origin: 50% 50%;
 }
-/* line 106, ../../resources/assets/scss/core/_module.scss */
+/* line 126, ../../resources/assets/scss/core/_module.scss */
 .next-section svg {
   width: 100%;
   height: 100%;
 }
-/* line 109, ../../resources/assets/scss/core/_module.scss */
+/* line 129, ../../resources/assets/scss/core/_module.scss */
 .next-section svg path {
   fill: white;
   transition: fill 0.3s ease;
 }
 
-/* line 118, ../../resources/assets/scss/core/_module.scss */
+/* line 138, ../../resources/assets/scss/core/_module.scss */
 .congrats-section h1 {
   margin-bottom: 40px;
   line-height: 28px;
   letter-spacing: 0.02em;
   max-width: 442px;
 }
-/* line 125, ../../resources/assets/scss/core/_module.scss */
+/* line 145, ../../resources/assets/scss/core/_module.scss */
 .congrats-section p {
   max-width: 442px;
   width: 100%;
@@ -769,12 +785,12 @@ p a:hover {
   margin-bottom: 40px;
   line-height: 26px;
 }
-/* line 133, ../../resources/assets/scss/core/_module.scss */
+/* line 153, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .actions {
   text-align: center;
   margin: 40px 0;
 }
-/* line 138, ../../resources/assets/scss/core/_module.scss */
+/* line 158, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .congrats-container {
   width: 100%;
   height: 100%;
@@ -787,17 +803,17 @@ p a:hover {
   opacity: 0;
   visibility: hidden;
 }
-/* line 150, ../../resources/assets/scss/core/_module.scss */
+/* line 170, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .congrats-container > .inner {
   padding: 0 20px;
 }
 
-/* line 156, ../../resources/assets/scss/core/_module.scss */
+/* line 176, ../../resources/assets/scss/core/_module.scss */
 .actions {
   text-align: center;
 }
 
-/* line 160, ../../resources/assets/scss/core/_module.scss */
+/* line 180, ../../resources/assets/scss/core/_module.scss */
 .down-arrow {
   border: 0;
   background: none;
@@ -807,17 +823,17 @@ p a:hover {
   display: inline-block;
   cursor: pointer;
 }
-/* line 169, ../../resources/assets/scss/core/_module.scss */
+/* line 189, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg {
   width: 100%;
   height: 100%;
 }
-/* line 172, ../../resources/assets/scss/core/_module.scss */
+/* line 192, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg path {
   fill: #f16060;
 }
 
-/* line 178, ../../resources/assets/scss/core/_module.scss */
+/* line 198, ../../resources/assets/scss/core/_module.scss */
 .indicator {
   position: fixed;
   top: 50%;
@@ -828,19 +844,19 @@ p a:hover {
   z-index: 99;
 }
 @media (max-width: 1120px) {
-  /* line 178, ../../resources/assets/scss/core/_module.scss */
+  /* line 198, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     width: 50px;
     height: 100px;
   }
 }
 @media (max-width: 620px) {
-  /* line 178, ../../resources/assets/scss/core/_module.scss */
+  /* line 198, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     display: none;
   }
 }
-/* line 196, ../../resources/assets/scss/core/_module.scss */
+/* line 216, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon {
   width: 50px !important;
   height: 50px;
@@ -848,16 +864,16 @@ p a:hover {
   padding: 8px;
   float: right;
 }
-/* line 203, ../../resources/assets/scss/core/_module.scss */
+/* line 223, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 206, ../../resources/assets/scss/core/_module.scss */
+/* line 226, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg path {
   fill: white;
 }
-/* line 212, ../../resources/assets/scss/core/_module.scss */
+/* line 232, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon {
   width: 110px;
   height: 50px;
@@ -873,7 +889,7 @@ p a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 1120px) {
-  /* line 212, ../../resources/assets/scss/core/_module.scss */
+  /* line 232, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon {
     background-color: rgba(255, 255, 255, 0.9);
     width: 50px;
@@ -881,18 +897,18 @@ p a:hover {
     padding: 15px 12px;
   }
 }
-/* line 235, ../../resources/assets/scss/core/_module.scss */
+/* line 255, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon:hover svg path {
   fill: rgba(241, 96, 96, 0.6);
 }
-/* line 241, ../../resources/assets/scss/core/_module.scss */
+/* line 261, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 248, ../../resources/assets/scss/core/_module.scss */
+/* line 268, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
   stroke: #f16060;
@@ -902,23 +918,23 @@ p a:hover {
   transition: fill 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @media (max-width: 800px) {
-  /* line 241, ../../resources/assets/scss/core/_module.scss */
+  /* line 261, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon svg {
     margin: 2px auto;
   }
 }
-/* line 259, ../../resources/assets/scss/core/_module.scss */
+/* line 279, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon span {
   line-height: 21px;
 }
 @media (max-width: 1120px) {
-  /* line 259, ../../resources/assets/scss/core/_module.scss */
+  /* line 279, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon span {
     display: none;
   }
 }
 
-/* line 271, ../../resources/assets/scss/core/_module.scss */
+/* line 291, ../../resources/assets/scss/core/_module.scss */
 [data-current-section="0"] .indicator,
 [data-current-section="1"] .indicator {
   display: none;
