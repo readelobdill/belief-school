@@ -45,12 +45,23 @@ class Module extends Model {
     }
 
     public function isUnlocked(Module $previousModule) {
+        if(!$this->free) {
+            if(\Auth::check()) {
+                if(!\Auth::user()->paid) {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+
+
         if(!empty($previousModule->pivot)
             && $previousModule->pivot->complete
             && $previousModule->pivot->completed_at->diffInHours() >= config('belief.lockout')) {
             return true;
         }
-        if(!$previousModule->locks) {
+        if(!$previousModule->locks && !empty($previousModule->pivot) && $previousModule->pivot->complete) {
             return true;
         }
         if(!empty($this->pivot)) {

@@ -3,14 +3,10 @@
         <h2>Navigation</h2>
         <ul>
             <li class="ico-intro"><a href="">Introduction</a></li>
-            @if(Auth::check())
-                <li class="ico-account"><a href="{{route('account')}}">My account</a></li>
-            @endif
+            <li class="ico-account requires-auth {{(!Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{route('account')}}">My account</a></li>
             <li class="ico-about"><a href="{{ route('about') }}">About Belief School</a></li>
             <li class="ico-contact"><a href="{{ route('contact') }}">Contact us</a></li>
-            @if(Auth::check())
-                <li class="ico-dash"><a href="{{route('dashboard')}}">Dashboard</a></li>
-            @endif
+            <li class="ico-dash requires-auth {{(!Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{route('dashboard')}}">Dashboard</a></li>
             <li class="ico-terms"><a href="{{route('privacy-terms') }}">Terms of Use/Privacy Policy</a></li>
         </ul>
     </nav>
