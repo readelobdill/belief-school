@@ -129,7 +129,7 @@ class ModuleController extends Controller {
 
         $moduleUser->addTags($this->request->input('tags'));
         $moduleUser->save();
-        return $moduleUser;
+        return view('app.public-modules.tag-collection-success', ['page' => 'tag-collection-success']);
     }
 
 
