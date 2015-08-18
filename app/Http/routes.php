@@ -70,14 +70,15 @@ Route::get('fake-pay', ['as' => 'payment',function() {
 Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUser']);
 
 
-Route::controllers([
-    'auth' => 'Auth\AuthController',
-    'password' => 'Auth\PasswordController',
-]);
 
-Route::get('admin', function() {
 
-});
+Route::get('login', ['as' => 'auth.login','uses' => 'Auth\AuthController@getLogin']);
+Route::post('login', ['uses' => 'Auth\AuthController@postLogin']);
+Route::post('logout', ['as' => 'auth.logout','uses' => 'Auth\AuthController@getLogout']);
+
+//Route::get('admin', function() {
+//
+//});
 
 
 Route::get('account', ['as' => 'account', 'middleware' => 'auth', 'uses' => 'UserController@account']);
