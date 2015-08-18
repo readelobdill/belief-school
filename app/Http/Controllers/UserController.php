@@ -32,7 +32,7 @@ class UserController extends Controller {
            'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|regex:^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})',
+            'password' => 'required|min:8',
             'username' => 'required'
         ]);
 
@@ -74,7 +74,7 @@ class UserController extends Controller {
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required|email',
-            'password' => 'required|regex:^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})',
+            'password' => 'required|min:8',
             'username' => 'required'
         ]);
 

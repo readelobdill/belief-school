@@ -21,7 +21,7 @@
                 <label>Username</label>
             </div>
             <div class="form-row">
-                <input type="password" name="password" required data-parsley-pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
+                <input type="password" name="password" required minlength="8">
                 <label>Password</label>
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
