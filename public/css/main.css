@@ -2126,8 +2126,8 @@ blockquote.dark {
 
 /* line 12, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li {
-  margin: 30px 0;
   position: relative;
+  margin: 30px 0;
 }
 /* line 16, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li:after {
@@ -2137,28 +2137,28 @@ ul.accordion li:after {
   display: block;
   margin: 22px auto 0 auto;
 }
-/* line 25, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 24, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li .answer {
   text-align: center;
   padding: 10px 0;
 }
-/* line 33, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 32, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li.is-open .toggle svg.collapse {
   transform: translateY(0px);
 }
-/* line 36, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 35, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li.is-open .toggle svg.expand {
   transform: translateY(50px);
 }
-/* line 40, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 39, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li.is-open .answer {
   display: block;
 }
-/* line 45, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 44, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion .answer {
   display: none;
 }
-/* line 49, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 48, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 {
   text-align: center;
   font-weight: bold;
