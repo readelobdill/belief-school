@@ -10,7 +10,6 @@ export default class Boomerang extends Text {
     }
 
     updateModule(e) {
-        e.preventDefault();
 
         if(this.submitting) {
             return false;
