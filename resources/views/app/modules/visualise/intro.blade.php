@@ -1,7 +1,8 @@
 <div class="inner">
     <div class="content">
-        <h1 class="title">
-            Visualise
+        <h1 class="title module-page-title">
+           <span data-arc="100">&middot; Module {{$module->order -1}}  &middot;</span>
+            {{ $module->name }}
         </h1>
 
             <p>This week is fun! No mental workouts, just good old fashioned dreaming and appreciating what is fabulous in your life.</p>

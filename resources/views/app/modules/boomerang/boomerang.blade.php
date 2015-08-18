@@ -1,7 +1,8 @@
 <div class="inner">
     <div class="content">
-        <h1 class="title">
-            Boomerang
+        <h1 class="title module-page-title">
+           <span data-arc="100">&middot; Module {{$module->order -1}}  &middot;</span>
+            {{ $module->name }}
         </h1>
 
         <p>How we see ourselves in the world may not be how others see us. Often we are hard on ourselves, only focusing on our short comings and not celebrating the beautiful qualities other see in us and the way that we operate in the world. A lot of people are unaware of their strengths and so miss the opportunity to use these in the pursuit of their goals.</p>
@@ -21,7 +22,6 @@
         <p>
             <strong>You will be sending the email below</strong> (don't worry you can edit to to add whatever message you like!) <strong>to as wide a group as possible, choosing people who you feel will have your best interests at heart.</strong> They need to know you well enough to comment on your character and they need to be people whose opinions you trust.
         </p>
-
 
         <div class="email-client">
             <div class="header">
@@ -50,8 +50,6 @@
             </div>
         </div>
 
-
-
         <blockquote>
             Go on, get out of your comfort zone and send the emails.
         </blockquote>
@@ -60,11 +58,8 @@
             Nothing terrible is going to happen, people will either respond or they won’t. The world will not end and your arm will not fall off. <strong>In doing this you will start to gain some valuable insight into the qualities that you have which make YOU special.</strong>
         </p>
         <div class="actions">
-            <a href="mailto:?subject=&body={{rawurlencode(config('belief.email') . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" data-update-module>I'm Ready!</a>
+            <a href="mailto:?subject=Show%20your%20friend%20how%20special%20they%20are&body={{rawurlencode(config('belief.email') . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" data-update-module>I'm Ready!</a>
         </div>
-
-
-
 
     </div>
 </div>

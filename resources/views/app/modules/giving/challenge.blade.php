@@ -1,8 +1,8 @@
 <div class="inner">
     <div class="content">
-        <h1 class="title">
-            The more you give,<br>
-            the more you get
+        <h1 class="title module-page-title">
+           <span data-arc="100">&middot; Module {{$module->order -1}}  &middot;</span>
+            {{ $module->name }}
         </h1>
 
         <p>
@@ -35,7 +35,7 @@
         <form action="" class="limiting-beliefs">
             <div class="beliefs">
                 <div class="belief">
-                    <textarea name="challenge-1" id="challenge-1" required></textarea>
+                    <textarea name="challenge-1" id="challenge-1" required maxlength="140"></textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
@@ -43,7 +43,7 @@
                     <label class="number" for="challenge-1">1 .</label>
                 </div>
                 <div class="belief">
-                    <textarea name="challenge-2" id="challenge-2" required></textarea>
+                    <textarea name="challenge-2" id="challenge-2" required maxlength="140"></textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
@@ -51,7 +51,7 @@
                     <label class="number" for="challenge-2">2 .</label>
                 </div>
                 <div class="belief">
-                    <textarea name="challenge-3" id="challenge-3" required></textarea>
+                    <textarea name="challenge-3" id="challenge-3" required maxlength="140"></textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
