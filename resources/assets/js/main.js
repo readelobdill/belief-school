@@ -20,10 +20,12 @@ import $ from 'jquery';
 import UI from "ui/ui";
 import Loading from 'util/loading';
 import Arc from 'ui/arc';
+import Forms from 'ui/forms';
 
 UI.init();
 Loading.init();
 Arc.init();
+Forms.init();
 
 
 let page = $('body').data('page');

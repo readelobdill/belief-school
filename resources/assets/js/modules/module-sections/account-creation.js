@@ -70,23 +70,8 @@ export default class AccountCreationSection extends ModuleSection {
     registerUser() {
 
     }
-    setupEventListeners() {
 
-        this.section.on('focus', 'input', this.formOnFocus.bind(this));
-        this.section.on('keyup', 'input', this.formOnFocus.bind(this));
-        this.section.on('change', 'input', this.formOnFocus.bind(this));
-    }
 
-    formOnFocus(e) {
-        let field = $(e.currentTarget);
-
-        if( field.val() ){
-            field.addClass('has-content');
-        } else {
-            field.removeClass('has-content');
-        }
-
-    }
 
 
 }
