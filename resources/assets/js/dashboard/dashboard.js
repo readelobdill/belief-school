@@ -14,10 +14,10 @@ export default class Dashboard {
         let words = [];
         if(wordsRaw) {
             for(let word of wordsRaw) {
-                if(wordsWeights[word]) {
-                    wordsWeights[word]++;
+                if(wordsWeights[word.toLowerCase()]) {
+                    wordsWeights[word.toLowerCase()]++;
                 } else {
-                    wordsWeights[word] = 1;
+                    wordsWeights[word.toLowerCase()] = 1;
                 }
             }
 
