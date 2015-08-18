@@ -15,7 +15,7 @@
             <h1 class="plain">Congratulations you are awesome!</h1>
             <p>Your next module will unlock in 48 Hours.</p>
             <p>
-                In the meantime <a href="{{route('dashboard')}}">keep an eye on your dashboard</a> for the qualities submitted by your friends and <a href="{{route('modules.forum',[$module->slug])}}">check in the forum to find support and chat to others about getting to know your amazing self.</a>
+                <a href="{{route('modules.forum',[$module->slug])}}">Offer support to others on their journey in the forum and share your fear &amp; courage learnings!</a>
             </p>
         </div>
     </div>
