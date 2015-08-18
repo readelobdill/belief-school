@@ -1,23 +1,42 @@
-.account-section {
+.container.account {
+    background: image-url('home-background.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px;
+    min-width: 320px;
+
+    @include breakpoint($brk-small) {
+        width: 100%;
+        padding: 0;
+    }
+
     > .inner {
+        background: rgba($white, 0.9);
+        padding: 40px $gutter;
 
-        padding: 0 $gutter;
+        @include breakpoint($break-620) {
+            //maybe make height 100%???
+        }
 
-        .next-section {
-            bottom: 60px;
-            svg {
-                path {
-                    fill: $lightRed;
-                }
-            }
-            &:hover {
-                svg path {
-                    fill: $darkRed;
-                }
+        .content {
+            position: relative;
+            max-width: 442px;
+            width: 100%;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 26px;
+            color: $fontColour;
+            padding: 60px 0;
+
+            @include breakpoint($brk-small) {
+                width: 100%;
+                padding-top: 40px;
             }
         }
     }
+}
 
+.account-section {
     .content {
         width: 442px;
         text-align: center;
