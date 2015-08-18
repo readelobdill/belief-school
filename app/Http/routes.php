@@ -16,6 +16,7 @@ Route::get('/', ['as' => 'home', 'uses' => 'ModuleController@viewModule']);
 
 Route::get('modules/{module}', ['as' => 'modules.view', 'uses' => 'ModuleController@viewModule']);
 
+Route::get('dreamboard/{secret}.png', ['as' => 'dreamboard.show','uses' => 'ModuleController@showDreamboardForSecret']);
 
 
 Route::group(['middleware' => 'auth'], function() {

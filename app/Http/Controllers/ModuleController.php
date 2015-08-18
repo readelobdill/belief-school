@@ -297,4 +297,15 @@ class ModuleController extends Controller {
 
         return response($dreamboard->renderToImage()->getImageBlob(),200,['Content-type' => 'image/png']);
     }
+
+    public function showDreamboardForSecret($secret) {
+        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
+        if($moduleUser->module->type !== 'dreamboard') {
+            abort(404);
+        }
+        $dreamboard = new DreamboardRenderer($moduleUser->data, $moduleUser->user);
+
+        return response($dreamboard->renderToImage()->getImageBlob(),200,['Content-type' => 'image/png']);
+
+    }
 }
