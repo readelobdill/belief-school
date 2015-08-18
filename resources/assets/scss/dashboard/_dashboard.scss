@@ -37,7 +37,6 @@
             line-height: 26px;
             color: $fontColour;
 
-
             @include breakpoint($brk-small) {
                 width: 100%;
                 padding-top: 40px;
@@ -118,7 +117,7 @@
         &:before {
             position: relative;
             font-family: $icon;
-            content: "\e600";
+            content: "\e632";
             left: -4px;
             top: 4px;
             font-size: 24px;
@@ -246,8 +245,13 @@ ul.actions {
 }
 
 .module-boomerang {
-    h2:before{
-        content: "\e601";
+    h2:before {
+        content: "\e600";
+    }
+    // used for module intro pages and forum incofcator links on the right hand side of modules.
+    &.module-icon:after,
+    .page-icon:after {
+        content: '\e600';
     }
 }
 
@@ -255,10 +259,20 @@ ul.actions {
     h2:before{
         content: "\e602";
     }
+
+    &.module-icon:after,
+    .page-icon:after {
+        content: "\e602";
+    }
 }
 
 .module-visualise {
     h2:before{
+        content: "\e603";
+    }
+
+    &.module-icon:after,
+    .page-icon:after {
         content: "\e603";
     }
 
@@ -273,16 +287,31 @@ ul.actions {
     h2:before{
         content: "\e604";
     }
+
+    &.module-icon:after,
+    .page-icon:after {
+        content: "\e604";
+    }
 }
 
 .module-giving {
     h2:before{
         content: "\e605";
     }
+
+    &.module-icon:after,
+    .page-icon:after {
+        content: "\e605";
+    }
 }
 
 .module-gratitude {
     h2:before{
+        content: "\e606";
+    }
+
+    &.module-icon:after,
+    .page-icon:after {
         content: "\e606";
     }
 
@@ -305,10 +334,19 @@ ul.actions {
     h2:before{
         content: "\e607";
     }
+
+    &.module-icon:after,
+    .page-icon:after {
+        content: "\e607";
+    }
 }
 
 .module-you-to-you {
     h2:before{
+        content: "\e608";
+    }
+    &.module-icon:after,
+    .page-icon:after {
         content: "\e608";
     }
 }
@@ -316,8 +354,6 @@ ul.actions {
 ul.module-list {
     .content {
         max-width: 920px;
-
-
     }
 
     li {

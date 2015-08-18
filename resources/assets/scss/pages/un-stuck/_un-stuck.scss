@@ -133,9 +133,10 @@
         border-image: linear-gradient(23deg, rgba(#abafb1, 1) 0%, rgba(#abafb1, 0) 90%);
         border-image-slice: 1;
         display: block;
-        padding: 50px 25px 25px 25px;
+        padding: 35px 25px 25px 25px;
         text-align: center;
         margin-bottom: 15px;
+        overflow: scroll;
 
         @include breakpoint($brk-medium) {
             margin: 15px auto;

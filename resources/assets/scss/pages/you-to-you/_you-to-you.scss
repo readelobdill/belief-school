@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
+    margin-top: 30px;
 
     @include breakpoint($brk-medium) {
         display:block;
@@ -31,7 +32,6 @@
         }
 
     }
-
 }
 
 .video {
@@ -43,8 +43,10 @@
     justify-content: center;
     background: #f0f0f0;
     margin-bottom: 60px;
+
     .upload {
         text-align:center;
+
         .upload-icon {
             width: 62px;
             height: 62px;
@@ -52,12 +54,22 @@
             background: $lightRed;
             padding: 17px;
             margin: 0 auto;
+            transform: scale(1, 1);
+            transform-origin: 50% 50%;
+            transition: transform 300ms ease;
+            cursor: pointer;
+
             svg {
                 width: 100%;
                 height: 100%;
                 path {
                     fill: white;
                 }
+            }
+
+            &:hover {
+                transform: scale(1.1, 1.1);
+                box-shadow: 0 0 30px rgba(255, 255, 255, 1);
             }
         }
     }

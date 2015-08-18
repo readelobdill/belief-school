@@ -28,6 +28,7 @@ mark {
 }
 
 .title {
+    position: relative;
     font-size: 30px;
     line-height: 37px;
     color: #252e33;
@@ -35,7 +36,12 @@ mark {
     font-family: 'SantEliaRoughAlt-BoldThr', serif;
     padding: 0 20px 20px 20px;
     margin-bottom: 22px;
-    position:relative;
+
+    &.module-page-title {
+        max-width: 320px;
+        margin: 0 auto 22px;
+        line-height: 1;
+    }
 
     &:after {
         width: 171px;
@@ -48,9 +54,10 @@ mark {
     > span {
         display:block;
         @extend %brandon-grotesque;
-        font-size: 13px;
+        font-size: 16px;
         text-transform: uppercase;
         margin-bottom: 40px;
+        font-weight: 500;
     }
 }
 
