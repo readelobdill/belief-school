@@ -88,10 +88,12 @@
                 }
             }
 
+            // Home Module
+            // person-brain
             &.ico-home {
                 &:before {
-                    content: '\e60a';
-                    // this needs to be replaced by a brain?.
+                    content: '\e631';
+                    left: 2px;
                 }
             }
 

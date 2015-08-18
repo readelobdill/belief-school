@@ -92,7 +92,7 @@
             Put this in perspective. You may not get the exact outcome you wanted, but that doesn’t matter – this exercise is not about the outcome, it is about the action of not letting your fear control you.
         </p>
         <div class="actions">
-            <a href="#" class="button" data-save-module>Make your declaration! Save it into your manifesto now!</a>
+            <a href="#" class="button" data-save-module>Make your declaration! Save it into your dashboard now!</a>
         </div>
 
 

@@ -18,7 +18,7 @@
                     <li class="ico-{{ ( $module->slug) }}">
                         <a  href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
                     </li>
-                @else
+               @else
                     <li class="{{(Auth::check() && Auth::user()->paid ? 'ico-unlocked' : 'ico-locked')}}">
                         Module {{$module->order - 1}}
                     </li>

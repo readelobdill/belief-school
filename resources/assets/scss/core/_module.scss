@@ -48,6 +48,26 @@
     }
 }
 
+.module-title {
+    h1.title {
+        font-size: 40px;
+        max-width: 320px;
+        line-height: 1;
+        color: $white;
+        span {
+        font-size: 18px
+        }
+        &:after {
+            border-color: $white;
+        }
+    }
+
+    .module-icon {
+
+    }
+
+}
+
 .has-text {
     padding: 50px;
 

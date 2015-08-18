@@ -1,13 +1,12 @@
 <div class="inner">
     <div class="pre-complete congrats-container">
         <div class="inner">
-            <h1 class="plain">
-                Great job!<br>
-                Asking for feedback takes courage; you are
-                going to learn a lot about courage over
-                the course of your Belief School journey,
-            </h1>
-            <p>All of the answers will be collated and appear in your Dashboard once your recipients begin to send their answers, to you so you can start to build a picture of the awesomness you bring to the world.</p>
+            <h1 class="plain">Download your planner</h1>
+
+            <p>It is not what we do sometimes that matters it is what we do all the time. Fill your week with the unmovables: sleep, work and family, and then use the rest of your time wisely to nurture your body, heart and dreams.Download the planner from our resources section and use it to creare your weekly action plan to create real lasting change.</p>
+
+            <a href="#pdf-download">Download planner and get started.</a>
+
             <div class="dots"></div>
             <div class="actions">
                 <a href="#" class="button" data-complete-module>What's next?</a>
@@ -16,15 +15,10 @@
     </div>
     <div class="post-complete congrats-container">
         <div class="inner">
-            <h1 class="plain">Congratulations you are awesome!</h1>
+            <h1 class="plain">Your almost there! Revisit your dashboard and review your Belief School Journey before the final step.</h1>
             <p>Your next module will unlock in 48 Hours.</p>
-            <p>
-                In the meantime <a href="{{route('dashboard')}}">keep an eye on your dashboard</a> for the qualities submitted by your friends and <a href="{{route('modules.forum',[$module->slug])}}">check in the forum to find support and chat to others about getting to know your amazing self.</a>
-            </p>
-           {{--  <div class="dots"></div>
-            <div class="actions">
-                <a href="#" class="button is-locked">What's next?</a>
-            </div> --}}
+
+            <p><a href="{{route('dashboard')}}">Take a look at your dashboard and see the progress on your amazing Belief School journey</a> or <a href="{route('modules.forum',[$module->slug])}}">share what you are grateful for in our supportive community forum.</a></p>
         </div>
     </div>
 </div>

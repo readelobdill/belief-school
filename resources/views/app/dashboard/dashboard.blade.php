@@ -57,8 +57,7 @@
                                 <li class="module-{{ $mod->slug }} is-not-complete is-unlocked">
                                     <div class="header">
                                         <div class="inner">
-                                            <h2>Module {{$mod->order - 1}} - {{$mod->name}}</h2>
-
+                                            <h2><a href="{{route('modules.view', [$mod->slug] )}}">Module {{$mod->order - 1}} - {{$mod->name}}</a></h2>
                                             <ul class="actions">
                                                 <li class="forum">
                                                     <a class="forum-icon" href="{{ route('modules.forum', [$mod->slug]) }}">
@@ -97,7 +96,7 @@
                                     <li class="module-{{ $mod->slug }} is-not-complete is-unlocked">
                                         <div class="header is-locked">
                                             <div class="inner">
-                                                <h2> Module {{$mod->order - 1}} - {{$mod->name}} </h2>
+                                                <h2><a href="{{route('modules.view', [$mod->slug] )}}">Module {{$mod->order - 1}} - {{$mod->name}}</a></h2>
 
                                                 <ul class="actions">
                                                     <li class="forum">
