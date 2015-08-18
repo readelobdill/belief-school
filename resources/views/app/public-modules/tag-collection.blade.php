@@ -1,7 +1,7 @@
 @extends('app.public-layout')
 
 @section('content')
-    <form action="{{route('tags.submit', [$moduleUser->secret])}}" method="POST">
+    <form action="{{route('tags.submit', [$moduleUser->secret])}}" method="POST" class="tag-cloud-form">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-row">
             <input type="text" name="tags[]">
