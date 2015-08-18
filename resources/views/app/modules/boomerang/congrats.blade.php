@@ -1,6 +1,11 @@
 <div class="inner">
         <div class="pre-complete congrats-container">
             <div class="inner">
+                <p class="annotation">
+                    Having trouble opening email?<br>
+                    Copy/paste link below into own email instead<br>
+                    <a href="{{route('tagcloud', [$moduleUser->secret])}}">{{route('tagcloud', [$moduleUser->secret])}}</a>
+                </p>
                 <h1 class="plain">
                     Great job! Asking for feedback takes courage; you are going to learn a lot about courage over the course of your Belief School journey,
                 </h1>

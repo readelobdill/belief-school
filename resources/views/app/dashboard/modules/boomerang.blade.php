@@ -9,7 +9,7 @@
         <div class="tagcloud"></div>
 
          <p class="center">
-            <a class="button small-dashboard">Re-send email</a>
+            <a href="mailto:?subject=&body={{rawurlencode(config('belief.email') . "\n\n" . route('tagcloud', [$module->pivot->secret]))}}" class="button small-dashboard">Re-send email</a>
         </p>
     </div>
 </div>
