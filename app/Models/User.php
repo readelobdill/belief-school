@@ -39,7 +39,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     public function modules() {
-        return $this->belongsToMany('App\Models\Module')->withTimestamps()->withPivot(['created_at', 'updated_at', 'data', 'complete', 'step', 'completed_at']);
+        return $this->belongsToMany('App\Models\Module')->withTimestamps()->withPivot(['created_at', 'updated_at', 'data', 'complete', 'step', 'completed_at', 'secret']);
     }
 
     public function setPasswordAttribute($password) {

@@ -92,7 +92,7 @@ class Module extends Model {
     }
 
     public function users() {
-        return $this->belongsToMany('App\Models\User')->withTimestamps()->withPivot(['created_at', 'updated_at', 'data', 'complete', 'step', 'completed_at']);
+        return $this->belongsToMany('App\Models\User')->withTimestamps()->withPivot(['created_at', 'updated_at', 'data', 'complete', 'step', 'completed_at', 'secret']);
     }
 
 
