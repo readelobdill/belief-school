@@ -8,8 +8,8 @@
 <div class="inner">
     <div class="module-title">
         <h1 class="title">
-          <span data-arc="90">&middot; Module {{$module->order - 1}} &middot;</span>
-            {{$module->name}}
+          <span data-arc="90">&middot; Welcome to &middot;</span>
+            Belief School
         </h1>
 
         <div class="module-icon module-{{$module->slug}}"></div>
