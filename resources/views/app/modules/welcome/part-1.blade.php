@@ -14,7 +14,7 @@
             For you to get the most out of Belief School we need to get a few things straight.
         </p>
         <p>
-            If you need help at anytime visit our <a href="#">friendly online community</a>.
+            If you need help at anytime visit our <a href="{{route('modules.forum',[$module->slug])}}">friendly online community</a>.
         </p>
         <blockquote>
             Check out the details below and get started on your Belief School journey
