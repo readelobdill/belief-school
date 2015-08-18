@@ -1,7 +1,7 @@
 @extends('app/layout')
 
 @section('content')
-    <div class="module sustainable-change-module" data-is-complete="{{ ($moduleUser ? $moduleUser->complete : 0) }}" data-part="{{Input::get('part', 1)}}" data-step="{{ ($moduleUser ? $moduleUser->step : 0) }}" data-update-url="{{route('modules.update', [$module->slug])}}" data-complete-url="{{route('modules.complete', [$module->slug])}}">
+    <div class="module sustainable-change-module" data-is-complete="{{ ($moduleUser ? $moduleUser->complete : 0) }}" data-skip="{{Input::get('skip', false) ? 1 : 0}}" data-step="{{ ($moduleUser ? $moduleUser->step : 0) }}" data-update-url="{{route('modules.update', [$module->slug])}}" data-complete-url="{{route('modules.complete', [$module->slug])}}">
         <section class="background-video module-section" data-type="Intro" data-part="1" data-step="0">
             @include('app/modules/sustainable-change/background-video')
         </section>

@@ -11,9 +11,15 @@ class Module {
             return createSection(section, this);
         }).get();
 
-        var currentStep = this.container.data('step');
-        var currentPart = this.container.data('part');
-        var newIndex = this.container.find('[data-step="'+currentStep+'"]').index();
+        var currentStep = parseInt(this.container.data('step'));
+        var skip = this.container.data('skip');
+        let newIndex = 0;
+        if(currentStep == 0 && !!parseInt(skip)) {
+            newIndex = 2;
+        } else {
+            newIndex = this.container.find('[data-step="'+currentStep+'"]').index();
+        }
+
         if(newIndex > 0) {
             this.sections[0].jump();
         }
