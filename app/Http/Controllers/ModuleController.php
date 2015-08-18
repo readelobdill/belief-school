@@ -207,7 +207,7 @@ class ModuleController extends Controller {
                     $moduleUser->step = 1;
                 }
 
-                if(count(get_object_vars($moduleUser->data)) == 13 && !$this->request->file('image')) {
+                if(count(get_object_vars($moduleUser->data)) == 13 && $this->request->file('image') === null) {
                     $moduleUser->step = 2;
                 }
 
