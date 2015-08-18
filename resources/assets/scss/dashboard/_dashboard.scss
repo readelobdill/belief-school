@@ -97,6 +97,10 @@
                     color: $lightRed !important;
                 }
             }
+
+            ul.actions li.arrow {
+                visibility: hidden;
+            }
     }
 
     h2 {
@@ -358,7 +362,7 @@ ul.module-list {
             .actions {
                 li.unlock-countdown {
                     padding: 8.5px 15px;
-                    border-right: 1px solid $grey;
+
                     &:before {
                         left: 0;
                         top: inherit;
