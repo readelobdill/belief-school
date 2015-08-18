@@ -55,7 +55,7 @@
 
                                 {{-- Unlocked and started but not finished. --}}
                                 <li class="module-{{ $mod->slug }} is-not-complete is-unlocked">
-                                    <div class="header">
+                                    <div class="header is-locked">
                                         <div class="inner">
                                             <h2><a href="{{route('modules.view', [$mod->slug] )}}">Module {{$mod->order - 1}} - {{$mod->name}}</a></h2>
                                             <ul class="actions">
