@@ -38,10 +38,6 @@ class ModuleSection {
 
     setup() {
         window.scrollTo(0,0);
-        this.section.find('[data-arc]').each(function() {
-            var arc = parseInt($(this).data('arc'));
-            $(this).arctext({radius: arc});
-        })
     }
 
     teardown() {

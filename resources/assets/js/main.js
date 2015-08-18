@@ -19,9 +19,11 @@ import Forum from "forum/forum";
 import $ from 'jquery';
 import UI from "ui/ui";
 import Loading from 'util/loading';
+import Arc from 'ui/arc';
 
 UI.init();
 Loading.init();
+Arc.init();
 
 
 let page = $('body').data('page');
