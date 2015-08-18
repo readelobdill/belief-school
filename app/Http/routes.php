@@ -54,6 +54,19 @@ Route::bind('comment', function($value) {
     return \App\Models\Comment::with(['user'])->where('id', $value)->first();
 });
 
+Route::get('fake-pay', ['as' => 'payment',function() {
+    $user = Auth::user();
+    $user->paid = true;
+    $user->save();
+    $module = $user->modules()->where('slug', 'home')->first();
+    $module->pivot->step++;
+    $module->pivot->complete = 1;
+    $module->pivot->completed_at = new \Carbon\Carbon();
+    $module->pivot->save();
+
+    return redirect(route('modules.view', ['home']));
+}]);
+
 Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUser']);
 
 
