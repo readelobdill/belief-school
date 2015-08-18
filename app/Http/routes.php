@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', ['as' => 'home', 'uses' => 'ModuleController@viewModule']);
 
 /*Modules*/
 
@@ -39,6 +39,9 @@ Route::get('share/{secret}', ['as' => 'module.share', 'uses' => 'ModuleControlle
 
 
 Route::bind('module', function($value) {
+    if(empty($value)) {
+        $value = 'home';
+    }
     $module = \App\Models\Module::with(['requiredModule'])->where('slug', $value)->first();
     if($module) {
         return $module;
