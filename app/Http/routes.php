@@ -74,7 +74,7 @@ Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUs
 
 Route::get('login', ['as' => 'auth.login','uses' => 'Auth\AuthController@getLogin']);
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin']);
-Route::post('logout', ['as' => 'auth.logout','uses' => 'Auth\AuthController@getLogout']);
+Route::get('logout', ['as' => 'auth.logout','uses' => 'Auth\AuthController@getLogout']);
 
 //Route::get('admin', function() {
 //

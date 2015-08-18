@@ -77,7 +77,7 @@ class ModuleController extends Controller {
             }
         }
 
-        if(empty($moduleUser)) {
+        if(empty($moduleUser) && $this->auth->check()) {
             $now = new Carbon();
             $this->auth->user()->modules()->attach($module, [
                 'created_at' => $now,
