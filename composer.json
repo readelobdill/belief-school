@@ -11,7 +11,8 @@
 		"doctrine/dbal": "~2.5",
 		"stojg/crop": "^1.2",
 		"omnipay/paymentexpress": "~2.1",
-		"misd/linkify": "^1.1"
+		"misd/linkify": "^1.1",
+		"vimeo/vimeo-api": "^1.2"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
