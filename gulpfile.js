@@ -8,6 +8,7 @@ var notify = require("gulp-notify");
 var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
+var rsync = require('gulp-rsync');
 
 
 function swallowError(error) {
@@ -62,4 +63,17 @@ gulp.task('scripts', function() {
 
 gulp.task('watchScripts', function() {
     return scripts(true, false);
+});
+
+gulp.task('gladeyestage', function() {
+    gulp.src('./')
+    .pipe(rsync({
+            root: './',
+            hostname : 'gladeye.org',
+            username: '55ca79962d47f',
+            destination: './site',
+            recursive: true,
+            exclude: ["*scss*", "*node_modules*", "*.sass-cache", "*.git", "*sublime*", "storage/views/*", ".idea/*", "storage/sessions/*", "storage/logs/*", '*/uploads/*']
+
+        }));
 });
