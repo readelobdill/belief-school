@@ -100,7 +100,7 @@
 
                                                 <ul class="actions">
                                                     <li class="forum">
-                                                        <a class="forum-icon" href="#">
+                                                        <a class="forum-icon" href="{{ route('modules.forum', [$mod->slug]) }}">
                                                             <span>Forum</span>
                                                         </a>
                                                     </li>

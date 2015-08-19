@@ -41,6 +41,9 @@
                     @include('app/partials/icons/upload-video')
                 </div>
                 Upload your video
+                <form action="" class="upload-video">
+                    <input type="file" name="video">
+                </form>
             </div>
         </div>
 

@@ -3,13 +3,14 @@
         <h1 class="plain">Gratitude Diary - Over the last 2 months...</h1>
 
         <ul class="experience">
-            @foreach($module->pivot->data[0] as $experience)
+            @foreach($module->pivot->data[0] as $key => $experience)
                 <li>
-                 {{--    @if ($experience == 0 ) --}}
-                       {{-- <li> <span>I am grateful for...</span>{{ $experience }} --}}
-                   {{--  @else --}}
+                     @if ($key === 'diary_1' )
+                        <li> <span>I am grateful for...</span>{{ $experience }}
+                     @else
+
                         <span>I am...</span> {{ $experience }}
-                   {{--  @endif --}}
+                     @endif
                 </li>
             @endforeach
         </ul>

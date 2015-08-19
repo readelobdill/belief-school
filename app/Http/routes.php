@@ -11,33 +11,63 @@
 |
 */
 
+/*These are out here becuase not all of the uses need auth, will auth corretly in the controller when needed.*/
 Route::get('/', ['as' => 'home', 'uses' => 'ModuleController@viewModule']);
 
-/*Modules*/
-
-
-
-Route::get('modules/visualise/dreamboard', ['as' => 'modules.visualise.dreamboard','uses' => 'ModuleController@showDreamboardImage']);
-
-Route::post('modules/{module}/update', ['as' => 'modules.update', 'uses' => 'ModuleController@updateModule']);
-Route::post('modules/{module}/complete', ['as' => 'modules.complete', 'uses' => 'ModuleController@completeModule']);
 Route::get('modules/{module}', ['as' => 'modules.view', 'uses' => 'ModuleController@viewModule']);
-Route::get('modules/{module}/forum', ['as' => 'modules.forum', 'uses' => 'ModuleController@viewForum']);
 
 
-Route::post('comments/{comment}/reply', ['as' => 'comments.reply', 'uses' => 'CommentController@reply']);
-Route::post('modules/{module}/comment', ['as' => 'modules.comment', 'uses' => 'CommentController@create']);
 
-
-Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
-
+/*Routes that use the secret from module_users so show public content*/
+Route::get('dreamboard/{secret}.png', ['as' => 'dreamboard.show','uses' => 'ModuleController@showDreamboardForSecret']);
+Route::get('share/{secret}', ['as' => 'module.share', 'uses' => 'ModuleController@share']);
 
 Route::get('tagcloud/{secret}', ['as' => 'tagcloud', 'uses' => 'ModuleController@tagCloud']);
 Route::post('tagcloud/{secret}', ['as' => 'tags.submit', 'uses' => 'ModuleController@tagCloudSubmit']);
 
-Route::get('share/{secret}', ['as' => 'module.share', 'uses' => 'ModuleController@share']);
+
+/*Authed routes*/
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('modules/{module}/forum', ['as' => 'modules.forum', 'uses' => 'ModuleController@viewForum']);
 
 
+    Route::post('comments/{comment}/reply', ['as' => 'comments.reply', 'uses' => 'CommentController@reply']);
+    Route::post('modules/{module}/comment', ['as' => 'modules.comment', 'uses' => 'CommentController@create']);
+
+
+    Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+
+    Route::get('modules/visualise/dreamboard', ['as' => 'modules.visualise.dreamboard','uses' => 'ModuleController@showDreamboardImage']);
+
+    Route::post('modules/{module}/update', ['as' => 'modules.update', 'uses' => 'ModuleController@updateModule']);
+    Route::post('modules/{module}/complete', ['as' => 'modules.complete', 'uses' => 'ModuleController@completeModule']);
+
+
+
+    Route::get('account', ['as' => 'account', 'middleware' => 'auth', 'uses' => 'UserController@account']);
+    Route::post('account', ['as' => 'account.submit', 'middleware' => 'auth', 'uses' => 'UserController@submitAccount']);
+
+    Route::get('fake-pay', ['as' => 'payment', 'middleware' => 'auth',function() {
+        $user = Auth::user();
+        $user->paid = true;
+        $user->save();
+        $module = $user->modules()->where('slug', 'home')->first();
+        $module->pivot->step++;
+        $module->pivot->complete = 1;
+        $module->pivot->completed_at = new \Carbon\Carbon();
+        $module->pivot->save();
+
+        return redirect(route('modules.view', ['home']));
+    }]);
+});
+
+
+
+
+
+
+
+/* Routes model bindings */
 Route::bind('module', function($value) {
     if(empty($value)) {
         $value = 'home';
@@ -54,37 +84,22 @@ Route::bind('comment', function($value) {
     return \App\Models\Comment::with(['user'])->where('id', $value)->first();
 });
 
-Route::get('fake-pay', ['as' => 'payment',function() {
-    $user = Auth::user();
-    $user->paid = true;
-    $user->save();
-    $module = $user->modules()->where('slug', 'home')->first();
-    $module->pivot->step++;
-    $module->pivot->complete = 1;
-    $module->pivot->completed_at = new \Carbon\Carbon();
-    $module->pivot->save();
-
-    return redirect(route('modules.view', ['home']));
-}]);
-
-Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUser']);
+/*End route model bindings*/
 
 
 
-
+/*Auth Routes*/
 Route::get('login', ['as' => 'auth.login','uses' => 'Auth\AuthController@getLogin']);
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin']);
 Route::get('logout', ['as' => 'auth.logout','uses' => 'Auth\AuthController@getLogout']);
 
-//Route::get('admin', function() {
-//
-//});
+Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUser']);
 
-
-Route::get('account', ['as' => 'account', 'middleware' => 'auth', 'uses' => 'UserController@account']);
-Route::post('account', ['as' => 'account.submit', 'middleware' => 'auth', 'uses' => 'UserController@submitAccount']);
 Route::any('email-exists', ['as' => 'account.check-email', 'uses' => 'UserController@checkEmail']);
 
+
+
+/*Misc Pages*/
 Route::get('about', ['as' => 'about', function() {
     return view('app.misc.about', ['page'=>'about']);
 }]);
@@ -93,15 +108,12 @@ Route::get('contact', ['as' => 'contact', function() {
     return view('app.misc.contact', ['page'=>'contact']);
 }]);
 
-// Route::get('terms-and-conditions', ['as' => 'terms-and-conditions', function() {
-//     return view('app.misc.terms-and-conditions');
-// }]);
-
 Route::get('privacy-terms', ['as' => 'privacy-terms', function() {
     return view('app.misc.privacy-terms');
 }]);
 
 
+/*Admin routes*/
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', ['as' => 'admin.home', 'uses' => '\App\Admin\Http\Controllers\DashboardController@getIndex']);
 

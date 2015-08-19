@@ -25,11 +25,13 @@ import UI from "ui/ui";
 import Loading from 'util/loading';
 import Arc from 'ui/arc';
 import Forms from 'ui/forms';
+import Sharer from 'ui/share'
 
 UI.init();
 Loading.init();
 Arc.init();
 Forms.init();
+Sharer.init();
 
 const page = $('body').data('page');
 switch(page) {
