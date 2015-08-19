@@ -1,42 +1,4 @@
-.container.account {
-    background: image-url('home-background.png') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 50px;
-    min-width: 320px;
-
-    @include breakpoint($brk-small) {
-        width: 100%;
-        padding: 0;
-    }
-
-    > .inner {
-        background: rgba($white, 0.9);
-        padding: 40px $gutter;
-
-        @include breakpoint($break-620) {
-            //maybe make height 100%???
-        }
-
-        .content {
-            position: relative;
-            max-width: 442px;
-            width: 100%;
-            margin: 0 auto;
-            font-size: 17px;
-            line-height: 26px;
-            color: $fontColour;
-            padding: 60px 0;
-
-            @include breakpoint($brk-small) {
-                width: 100%;
-                padding-top: 40px;
-            }
-        }
-    }
-}
-
-.account-section {
+section.account-section {
     .content {
         width: 442px;
         text-align: center;
@@ -47,11 +9,5 @@
             line-height: 23px;
             margin-bottom: 15px;
         }
-    }
-
-    input {
-        margin: 8px 0;
-        height: 72px;
-        width: 100%;
     }
 }
