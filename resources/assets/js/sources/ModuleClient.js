@@ -88,6 +88,52 @@ class ModuleClient extends EventEmitter {
         });
     }
 
+    saveVideo(url, video) {
+        const data = new FormData();
+        data.append('video', video);
+        const deferred = Q.defer();
+
+        const xhr = new XMLHttpRequest();
+
+        const headers = new Headers($.extend({}, {
+            'Accept' : 'application/json'
+        }, defaultHeaders));
+
+
+        xhr.upload.addEventListener('progress',(oEvent) => {
+            if (oEvent.lengthComputable) {
+                let percentComplete = oEvent.loaded / oEvent.total;
+                deferred.notify(percentComplete);
+            }
+
+        });
+        xhr.addEventListener('load', (response) => {
+            deferred.resolve(response);
+            this.emit('load:end')
+        });
+        xhr.addEventListener('error', (response) => {
+            deferred.reject(response);
+            this.emit('load:end')
+        });
+        xhr.addEventListener('abort', (response) => {
+            deferred.reject(response);
+            this.emit('load:end')
+        });
+        xhr.open('POST', url);
+
+
+        headers.forEach(function(value, name) {
+            xhr.setRequestHeader(name, value);
+        })
+
+        xhr.send(data);
+
+
+        return deferred.promise.then((response) => {
+            return JSON.parse(response.currentTarget.responseText);
+        });
+    }
+
     registerUser(url, data) {
         this.emit('load:start');
         return fetch(url, {
