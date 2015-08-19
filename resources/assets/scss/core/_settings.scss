@@ -5,6 +5,7 @@ $hoverRed : #d95656;
 $fontColour: #252e33;
 $grey: #e6e6e6;
 $darkGrey : #c5c5c5;
+$forumGrey: #8E8E8E;
 $hoverGrey: #d6d6d6;
 $white: #ffffff;
 $black: #252E33;
@@ -55,3 +56,7 @@ $brk-xlarge : 1280px;
 
 $break-1024 : 1024px;
     // fake-email gets smaller.
+
+.is-hidden-g {
+    display: none;
+}
