@@ -7,9 +7,9 @@
             <p>Print this out. Frame it. Put it somewhere where you will look at it every day.  Focus on the things that remind you how much value you bring to the world!</p>
 
             <div class="social">
-                <a href="#" class="facebook">@include('app/partials/icons/facebook')Share on Facebook</a>
-                <a href="#" class="pinterest">@include('app/partials/icons/pinterest')Share on Pinterest</a>
-                <a href="#" class="download">@include('app/partials/icons/download')Download as PDF</a>
+                <a data-share href="https://www.facebook.com/sharer/sharer.php?{{http_build_query(['u' => route('module.share', [$moduleUser->secret])])}}" class="facebook">@include('app/partials/icons/facebook')Share on Facebook</a>
+                <a data-share href="//www.pinterest.com/pin/create/button/?{{http_build_query(['url' => route('module.share', [$moduleUser->secret]), 'media' => route('dreamboard.show', [$moduleUser->secret]), 'description' => 'My Dreamboard'])}}" class="pinterest">@include('app/partials/icons/pinterest')Share on Pinterest</a>
+                <a target="_blank" href="{{route('dreamboard.show', [$module->pivot->secret])}}" class="download">@include('app/partials/icons/download')Download</a>
             </div>
             <div class="dots"></div>
             <div class="actions">
