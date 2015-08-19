@@ -186,7 +186,7 @@ address {
   margin: 0;
 }
 
-/* line 60, ../../resources/assets/scss/core/_settings.scss */
+/* line 61, ../../resources/assets/scss/core/_settings.scss */
 .is-hidden-g {
   display: none;
 }
@@ -292,7 +292,7 @@ h1.plain.margin-bottom {
   src: url('../fonts/2E98A4_0_0.eot?&1439760487#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1439760487') format("woff2"), url('../fonts/2E98A4_0_0.woff?1439760487') format("woff"), url('../fonts/2E98A4_0_0.ttf?1439760487') format("truetype");
 }
 /* line 12, ../../resources/assets/scss/core/_fonts.scss */
-body, input[type=text], input[type=email], input[type=password], textarea, .title > span, .pricing-container .title .price span, .pricing-container .title .gets {
+body, input[type=text], input[type=email], input[type=password], textarea, .title > span, .button, .pricing-container .title .price span, .pricing-container .title .gets {
   font-family: "brandon-grotesque", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -1149,7 +1149,17 @@ blockquote.dark {
   display: none;
 }
 
-/* line 1, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 2, ../../resources/assets/scss/ui/_buttons.scss */
+button.button.small {
+  padding: 7px 15px;
+  text-transform: inherit;
+}
+/* line 6, ../../resources/assets/scss/ui/_buttons.scss */
+button.button.small:after, button.button.small:before {
+  display: none;
+}
+
+/* line 13, ../../resources/assets/scss/ui/_buttons.scss */
 .button {
   position: relative;
   text-transform: uppercase;
@@ -1164,21 +1174,21 @@ blockquote.dark {
   font-size: 15px;
   border: 0;
 }
-/* line 15, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 29, ../../resources/assets/scss/ui/_buttons.scss */
 .button.small {
   padding: 5px 15px;
   text-transform: inherit;
 }
-/* line 19, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 33, ../../resources/assets/scss/ui/_buttons.scss */
 .button.small:after, .button.small:before {
   display: none;
 }
-/* line 24, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 38, ../../resources/assets/scss/ui/_buttons.scss */
 .button:hover {
   background-color: #d95656;
   color: white;
 }
-/* line 30, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 44, ../../resources/assets/scss/ui/_buttons.scss */
 .button:after, .button:before {
   position: absolute;
   pointer-events: none;
@@ -1191,48 +1201,48 @@ blockquote.dark {
   transform-origin: 100% 50%;
   transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), width 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-/* line 43, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 57, ../../resources/assets/scss/ui/_buttons.scss */
 .button:after {
   transform: rotate(45deg);
 }
-/* line 47, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 61, ../../resources/assets/scss/ui/_buttons.scss */
 .button:before {
   transform: rotate(-45deg);
 }
-/* line 51, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 65, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success {
   background: none;
   border: 3px solid #f16060;
   color: #f16060;
   padding-right: 45px;
 }
-/* line 57, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 71, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success:after, .button.success:before {
   background: #f16060;
   margin-top: 6px;
   right: 30px;
 }
-/* line 63, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 77, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success:after {
   transform: rotate(45deg);
   width: 10px;
 }
-/* line 68, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 82, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success:before {
   transform: rotate(135deg);
   width: 18px;
 }
-/* line 74, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 88, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked {
   background: #c5c5c5;
   cursor: default;
   color: #ECECEC;
 }
-/* line 79, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 93, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:before {
   display: none;
 }
-/* line 83, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 97, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:after {
   content: '\e621';
   font-size: 15px;
@@ -1242,7 +1252,7 @@ blockquote.dark {
   font-family: 'icomoon';
   left: 12px;
 }
-/* line 93, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 107, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:hover {
   background: #c5c5c5;
   color: #ECECEC;
@@ -3112,9 +3122,8 @@ div.jqcloud span.w1 {
   height: 17px;
   line-height: 17px;
   margin-top: 40px;
-  visibility: hidden;
 }
-/* line 351, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 350, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a {
   display: inline-block;
   font-size: 12px;
@@ -3125,15 +3134,15 @@ div.jqcloud span.w1 {
   vertical-align: top;
   font-weight: normal;
 }
-/* line 361, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 360, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a:hover {
   color: #f16060;
 }
-/* line 364, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 363, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a:hover svg path {
   fill: #f16060;
 }
-/* line 369, ../../resources/assets/scss/pages/visualise/_visualise.scss */
+/* line 368, ../../resources/assets/scss/pages/visualise/_visualise.scss */
 .social a svg {
   height: 17px;
   display: inline-block;
@@ -3994,29 +4003,42 @@ li.is-unlocked.is-complete.is-open .inner-padding {
 }
 
 /* line 1, ../../resources/assets/scss/forum/_forum.scss */
-.forum-navigator {
+.container.forums {
+  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 50px;
+  min-width: 320px;
+  height: 100vh;
+  width: 100%;
+  display: table;
+}
+/* line 11, ../../resources/assets/scss/forum/_forum.scss */
+.container.forums .forum-navigator {
+  position: absolute;
   width: 100%;
   background-color: #f16060;
   margin-bottom: 40px;
   min-width: 320px;
-  margin: 50px 50px 0;
+  left: 0;
+  top: 0;
 }
-/* line 8, ../../resources/assets/scss/forum/_forum.scss */
-.forum-navigator h2 {
+/* line 20, ../../resources/assets/scss/forum/_forum.scss */
+.container.forums .forum-navigator h2 {
   font-weight: 500;
   position: relative;
   padding: 6px 20px;
 }
 @media (max-width: 620px) {
-  /* line 8, ../../resources/assets/scss/forum/_forum.scss */
-  .forum-navigator h2 {
+  /* line 20, ../../resources/assets/scss/forum/_forum.scss */
+  .container.forums .forum-navigator h2 {
     font-size: 12px;
     text-align: left;
     padding: 7px 10px;
   }
 }
-/* line 19, ../../resources/assets/scss/forum/_forum.scss */
-.forum-navigator h2:before {
+/* line 31, ../../resources/assets/scss/forum/_forum.scss */
+.container.forums .forum-navigator h2:before {
   position: relative;
   font-family: "icomoon";
   content: "\e632";
@@ -4024,51 +4046,42 @@ li.is-unlocked.is-complete.is-open .inner-padding {
   top: 4px;
   font-size: 24px;
 }
-
-/* line 30, ../../resources/assets/scss/forum/_forum.scss */
-.container.forums {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 0 50px 50px;
-  min-width: 320px;
-  height: 100vh;
-  width: 100%;
-  display: table;
-}
-/* line 40, ../../resources/assets/scss/forum/_forum.scss */
+/* line 42, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums header {
+  padding-top: 50px;
   max-width: 445px;
   margin: 60px auto;
 }
-/* line 44, ../../resources/assets/scss/forum/_forum.scss */
+/* line 47, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums header .dots {
   margin: 40px auto;
 }
 @media (max-width: 500px) {
-  /* line 30, ../../resources/assets/scss/forum/_forum.scss */
+  /* line 1, ../../resources/assets/scss/forum/_forum.scss */
   .container.forums {
     width: 100%;
     padding: 0;
   }
 }
-/* line 54, ../../resources/assets/scss/forum/_forum.scss */
+/* line 57, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums > .inner {
+  position: relative;
   background: rgba(255, 255, 255, 0.9);
   padding: 0;
   height: 100%;
   width: 100%;
   display: table-cell;
   vertical-align: middle;
+  padding: 0 20px 40px;
 }
 @media (max-width: 620px) {
-  /* line 54, ../../resources/assets/scss/forum/_forum.scss */
+  /* line 57, ../../resources/assets/scss/forum/_forum.scss */
   .container.forums > .inner {
     padding-top: 80px;
     vertical-align: inherit;
   }
 }
-/* line 67, ../../resources/assets/scss/forum/_forum.scss */
+/* line 72, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums > .inner .content {
   position: relative;
   max-width: 645px;
@@ -4079,12 +4092,12 @@ li.is-unlocked.is-complete.is-open .inner-padding {
   color: #252e33;
 }
 @media (max-width: 500px) {
-  /* line 67, ../../resources/assets/scss/forum/_forum.scss */
+  /* line 72, ../../resources/assets/scss/forum/_forum.scss */
   .container.forums > .inner .content {
     width: 100%;
   }
 }
-/* line 82, ../../resources/assets/scss/forum/_forum.scss */
+/* line 87, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums input {
   margin: 8px 0;
   height: 72px;
@@ -4106,7 +4119,7 @@ ul.comments-list ul.comments-list {
   margin-left: 20px;
   margin-bottom: 20px;
 }
-/* line 11, ../../resources/assets/scss/forum/_comment.scss */
+/* line 12, ../../resources/assets/scss/forum/_comment.scss */
 ul.comments-list ul.comments-list:before {
   position: relative;
   font-family: "icomoon";
@@ -4115,38 +4128,38 @@ ul.comments-list ul.comments-list:before {
   top: 24px;
   font-size: 13px;
 }
-/* line 20, ../../resources/assets/scss/forum/_comment.scss */
+/* line 21, ../../resources/assets/scss/forum/_comment.scss */
 ul.comments-list ul.comments-list ul.comments-list {
   margin-left: 20px;
 }
-/* line 23, ../../resources/assets/scss/forum/_comment.scss */
+/* line 24, ../../resources/assets/scss/forum/_comment.scss */
 ul.comments-list ul.comments-list ul.comments-list ul.comments-list {
   margin-left: 20px;
 }
-/* line 26, ../../resources/assets/scss/forum/_comment.scss */
+/* line 27, ../../resources/assets/scss/forum/_comment.scss */
 ul.comments-list ul.comments-list ul.comments-list ul.comments-list ul.comments-list {
   margin-left: 0;
 }
 
-/* line 35, ../../resources/assets/scss/forum/_comment.scss */
+/* line 36, ../../resources/assets/scss/forum/_comment.scss */
 li.comment .inner {
   border: 2px solid #c5c5c5;
   position: relative;
   padding: 20px;
 }
-/* line 40, ../../resources/assets/scss/forum/_comment.scss */
+/* line 41, ../../resources/assets/scss/forum/_comment.scss */
 li.comment .inner p {
   margin-bottom: 0;
   padding: 10px 0;
   color: #8E8E8E;
 }
 
-/* line 49, ../../resources/assets/scss/forum/_comment.scss */
+/* line 50, ../../resources/assets/scss/forum/_comment.scss */
 form.comment-form textarea {
   width: 100%;
 }
 
-/* line 54, ../../resources/assets/scss/forum/_comment.scss */
+/* line 55, ../../resources/assets/scss/forum/_comment.scss */
 .comment-creation-date {
   position: absolute;
   font-size: 14px;
@@ -4155,17 +4168,17 @@ form.comment-form textarea {
   right: 20px;
 }
 
-/* line 66, ../../resources/assets/scss/forum/_comment.scss */
+/* line 67, ../../resources/assets/scss/forum/_comment.scss */
 form.reply-form textarea {
   width: 100%;
 }
 
-/* line 72, ../../resources/assets/scss/forum/_comment.scss */
+/* line 73, ../../resources/assets/scss/forum/_comment.scss */
 form.reply-form.is-hidden {
   display: none;
 }
 
-/* line 79, ../../resources/assets/scss/forum/_comment.scss */
+/* line 80, ../../resources/assets/scss/forum/_comment.scss */
 [data-page="forum"] .forum-icon {
   display: none;
 }
