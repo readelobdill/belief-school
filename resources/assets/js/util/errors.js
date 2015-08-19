@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import 'parsleyjs';
+import 'util/parsley';
 import TweenMax from "gsap/src/uncompressed/TweenMax";
 
 export function showError(field, container, direction) {

@@ -1,6 +1,6 @@
 import ModuleSection from 'modules/module-section';
 import $ from 'jquery';
-import 'parsleyjs';
+import 'util/parsley';
 import Text from './text';
 import serialize from 'util/serializeForm';
 import client from 'sources/ModuleClient';

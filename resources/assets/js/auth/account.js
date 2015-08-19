@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import 'parsleyjs';
+import 'util/parsley';
 import {showError, hideError} from 'util/errors';
 import client from 'sources/ModuleClient';
 import serialize from 'util/serializeForm';
