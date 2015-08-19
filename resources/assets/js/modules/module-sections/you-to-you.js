@@ -19,10 +19,15 @@ export default class YouToYou extends Text {
 
     submit() {
         let url = this.module.getUpdateUrl();
-        let data = serialize(this.section.find('form'));
-        client.saveModule(url, data).then(() => {
-            this.module.nextSection();
-        })
+        let videoInput = this.section.find('.upload-video [name=video]')[0];
+        if(videoInput.files.length > 0) {
+            client.saveVideo(url, videoInput.files[0]);
+        } else {
+           let data = serialize(this.section.find('form.letter'));
+           client.saveModule(url, data).then(() => {
+               this.module.nextSection();
+           });
+        }
     }
 }
 
