@@ -1,13 +1,13 @@
 @extends('app.layout')
 
 @section('content')
-    <div class="container account">
+    <div class="container non-mod-page">
         <div class="inner">
-                <header>
-                    <h1 class="title">
-                        Edit your account
-                    </h1>
-                </header>
+            <header>
+                <h1 class="title">
+                    Edit your account
+                </h1>
+            </header>
 
             <section class="account-section">
                 <div class="inner">

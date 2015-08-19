@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    min-height: 100%;
+}
+
 body {
     @extend %brandon-grotesque;
     overflow-y: scroll;
@@ -24,7 +28,6 @@ h1.plain {
     font-size: 25px;
     font-weight: bold;
     text-align:center;
-    //margin-bottom: 25px;
     margin-bottom: 45px;
 
     @include breakpoint($brk-small) {
@@ -67,9 +70,7 @@ h1.plain {
         font-weight: normal;
         position: relative;
 
-        &.is-hidden-g {
-            display: none;
-        }
+
 
         &.logout {
 

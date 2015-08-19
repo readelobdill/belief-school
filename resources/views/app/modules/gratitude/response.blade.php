@@ -22,7 +22,7 @@
             </div>
 
             <p class="center margin-top">
-                <a href="{{route('modules.forum',[$module->slug])}}" target="_blank" class="button small-dashboard">Need help?</a>
+                <a href="{{route('modules.forum',[$module->slug])}}" target="_blank" class="button small">Need help?</a>
             </p>
 
             <div class="actions">

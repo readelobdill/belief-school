@@ -8,11 +8,10 @@ export default class Comment {
         this.replyForm = new CommentForm(this.comment.find('.reply-form').first(), this);
         this.forum = forum;
         this.setupEventListeners();
-        console.log(this.comment);
     }
 
     setupEventListeners() {
-        this.comment.on('click', '.reply', (e) => {
+        this.comment.find('.reply').first().on('click', (e) => {
             e.preventDefault();
             this.reply();
         });
@@ -22,7 +21,7 @@ export default class Comment {
     }
 
     reply() {
-        this.replyForm.show();
+        this.replyForm.toggle();
     }
 
     addNewComment(comment) {
@@ -38,6 +37,6 @@ export default class Comment {
         $commentList.append($comment);
         CommentStore.emit('comment:added', new Comment($comment, this.forum));
 
-
+        this.replyForm.hide();
     }
 }

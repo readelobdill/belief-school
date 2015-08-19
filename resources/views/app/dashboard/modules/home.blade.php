@@ -23,7 +23,7 @@
             I don't have this because <em>{{$home->pivot->data->{'1'}->why_not}}</em>.
         </p>
 
-        @if($welcome)
+        @if($welcome && isset($welcome->pivot->data[0]))
             <p>Throughout my Belief School journey I chose to <em>{{$welcome->pivot->data[0]->challenge}}</em></p>
         @endif
     </div>

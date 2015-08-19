@@ -1,6 +1,6 @@
 <div class="inner">
     <div class="content">
-        <h1 class="plain">
+        <h1 class="title">
             This is just the beginning of your own personal journey
         </h1>
 
@@ -10,7 +10,7 @@
 
         <div class="dots"></div>
 
-        <h1 class="title">
+        <h1 class="plain">
             What are affirmations?
         </h1>
 

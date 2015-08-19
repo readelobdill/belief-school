@@ -12,8 +12,6 @@ class CommentRenderer {
         $this->comments = $comments;
     }
 
-
-
     public function render($comments) {
         if($comments->isEmpty()) {
             return;
@@ -28,7 +26,6 @@ class CommentRenderer {
         }
         $this->output .= '</ul>';
     }
-
 
     public function renderAll() {
         $this->render($this->comments);
