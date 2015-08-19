@@ -1,8 +1,82 @@
 ul.comments-list {
-	margin-left: 40px;
-	outline: 1px solid blue;
+    margin-left: 0;
+
+    @include breakpoint($break-620) {
+        margin-left: 0 !important;
+    }
+
+    ul.comments-list {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        &:before {
+            position: relative;
+            font-family: $icon;
+            content: "\e626";
+            left: -20px;
+            top: 24px;
+            font-size: 13px;
+        }
+
+        ul.comments-list {
+            margin-left: 20px;
+
+            ul.comments-list {
+                margin-left: 20px;
+
+                ul.comments-list {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
 }
 
-.comment {
-	outline: 1px solid green;
+li.comment {
+    .inner {
+        border: 2px solid $darkGrey;
+        position: relative;
+        padding: 20px;
+
+        p {
+            margin-bottom: 0;
+            padding: 10px 0;
+            color: $forumGrey;
+        }
+    }
+}
+
+form.comment-form {
+    textarea {
+        width: 100%;
+    }
+}
+
+.comment-creation-date {
+    position: absolute;
+    font-size: 14px;
+    color: $darkGrey;
+    top: 20px;
+    right: 20px;
+}
+
+.comment-username {
+
+}
+form.reply-form {
+    textarea {
+        width: 100%;
+    }
+}
+
+form.reply-form {
+    &.is-hidden {
+        display: none;
+    }
+
+}
+
+[data-page="forum"] {
+    .forum-icon {
+        display: none;
+    }
 }

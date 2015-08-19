@@ -1,1 +1,86 @@
-@import "comment";
+.forum-navigator {
+        width: 100%;
+        background-color: $lightRed;
+        min-width: 320px;
+        margin: 50px 50px 0;
+
+        h2 {
+            font-weight: 500;
+            position: relative;
+            padding: 6px 20px;
+
+            @include breakpoint($break-620) {
+                font-size: 12px;
+                text-align: left;
+                padding: 7px 10px;
+            }
+
+            &:before {
+                position: relative;
+                font-family: $icon;
+                content: "\e632";
+                left: -4px;
+                top: 4px;
+                font-size: 24px;
+            }
+        }
+    }
+
+.container.forums {
+    background: image-url('home-background.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 50px 50px;
+    min-width: 320px;
+    height: 100vh;
+    width: 100%;
+    display: table;
+
+    header {
+        max-width: 445px;
+        margin: 60px auto;
+
+        .dots {
+            margin: 40px auto;
+        }
+    }
+
+    @include breakpoint($brk-small) {
+        width: 100%;
+        padding: 0;
+    }
+
+    > .inner {
+        background: rgba($white, 0.9);
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+
+        @include breakpoint($break-620) {
+            padding-top: 80px;
+            vertical-align: inherit;
+        }
+
+        .content {
+            position: relative;
+            max-width: 645px;
+            width: 100%;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 26px;
+            color: $fontColour;
+
+            @include breakpoint($brk-small) {
+                width: 100%;
+            }
+        }
+    }
+
+    input {
+        margin: 8px 0;
+        height: 72px;
+        width: 100%;
+    }
+}

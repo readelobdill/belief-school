@@ -35,8 +35,18 @@ form .actions {
     margin-top: 60px;
 }
 
+.radio-row {
+    height: 72px;
+    position: relative;
 
-input[type=radio] {
+    label {
+        margin-top: 19px;
+    }
+}
+
+
+input[type=radio],
+input[type=checked] {
     display:none;
     + label {
         position: relative;
@@ -95,6 +105,7 @@ textarea {
     max-width: 100%;
     background: $lightRed;
     border: 2px solid $lightRed;
+    transition: background 0.2s ease, background 0.2s ease;//maybe remove if there is confict
     @include input-placeholder {
         color: rgba(white, 0.8);
     }

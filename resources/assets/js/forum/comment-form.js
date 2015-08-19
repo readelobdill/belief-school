@@ -31,4 +31,17 @@ export default class CommentForm extends EventEmitter {
             this.submitting = false;
         });
     }
+
+    show() {
+        this.form.removeClass('is-hidden');
+    }
+
+    hide() {
+        this.form.addClass('is-hidden');
+    }
+
+    toggle() {
+        this.form.toggleClass('is-hidden');
+        console.log(this.form);
+    }
 }
