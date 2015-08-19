@@ -186,12 +186,22 @@ address {
   margin: 0;
 }
 
+/* line 60, ../../resources/assets/scss/core/_settings.scss */
+.is-hidden-g {
+  display: none;
+}
+
 /* line 1, ../../resources/assets/scss/core/_base.scss */
 * {
   box-sizing: border-box;
 }
 
 /* line 5, ../../resources/assets/scss/core/_base.scss */
+html {
+  min-height: 100%;
+}
+
+/* line 9, ../../resources/assets/scss/core/_base.scss */
 body {
   overflow-y: scroll;
   color: #252e33;
@@ -200,16 +210,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 15, ../../resources/assets/scss/core/_base.scss */
+/* line 19, ../../resources/assets/scss/core/_base.scss */
 [data-arc] :first-child {
   font-weight: 900;
 }
-/* line 18, ../../resources/assets/scss/core/_base.scss */
+/* line 22, ../../resources/assets/scss/core/_base.scss */
 [data-arc] :last-child {
   font-weight: 900;
 }
 
-/* line 23, ../../resources/assets/scss/core/_base.scss */
+/* line 27, ../../resources/assets/scss/core/_base.scss */
 h1.plain {
   font-size: 25px;
   font-weight: bold;
@@ -217,18 +227,18 @@ h1.plain {
   margin-bottom: 45px;
 }
 @media (max-width: 500px) {
-  /* line 23, ../../resources/assets/scss/core/_base.scss */
+  /* line 27, ../../resources/assets/scss/core/_base.scss */
   h1.plain {
     font-size: 22px;
     line-height: 25px;
   }
 }
-/* line 34, ../../resources/assets/scss/core/_base.scss */
+/* line 37, ../../resources/assets/scss/core/_base.scss */
 h1.plain.margin-bottom {
   margin-bottom: 25px;
 }
 
-/* line 39, ../../resources/assets/scss/core/_base.scss */
+/* line 42, ../../resources/assets/scss/core/_base.scss */
 .dots {
   background: url('../img/icons/bullets.svg?1439760487') no-repeat top left;
   width: 70px;
@@ -237,7 +247,7 @@ h1.plain.margin-bottom {
   margin: 0 auto;
 }
 
-/* line 47, ../../resources/assets/scss/core/_base.scss */
+/* line 50, ../../resources/assets/scss/core/_base.scss */
 .auth {
   position: fixed;
   top: 0;
@@ -246,18 +256,14 @@ h1.plain.margin-bottom {
   height: 50px;
   line-height: 50px;
 }
-/* line 64, ../../resources/assets/scss/core/_base.scss */
+/* line 67, ../../resources/assets/scss/core/_base.scss */
 .auth a {
   color: #252e33;
   text-decoration: none;
   font-weight: normal;
   position: relative;
 }
-/* line 70, ../../resources/assets/scss/core/_base.scss */
-.auth a.is-hidden-g {
-  display: none;
-}
-/* line 76, ../../resources/assets/scss/core/_base.scss */
+/* line 77, ../../resources/assets/scss/core/_base.scss */
 .auth a.logout:before {
   content: '\e622';
   position: absolute;
@@ -268,7 +274,7 @@ h1.plain.margin-bottom {
   left: -20px;
   top: -13px;
 }
-/* line 91, ../../resources/assets/scss/core/_base.scss */
+/* line 92, ../../resources/assets/scss/core/_base.scss */
 .auth a.login:before {
   content: '\e621';
   position: absolute;
@@ -348,12 +354,24 @@ form .actions {
   margin-top: 60px;
 }
 
-/* line 39, ../../resources/assets/scss/core/_forms.scss */
-input[type=radio] {
+/* line 38, ../../resources/assets/scss/core/_forms.scss */
+.radio-row {
+  height: 72px;
+  position: relative;
+}
+/* line 42, ../../resources/assets/scss/core/_forms.scss */
+.radio-row label {
+  margin-top: 19px;
+}
+
+/* line 48, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio],
+input[type=checked] {
   display: none;
 }
-/* line 41, ../../resources/assets/scss/core/_forms.scss */
-input[type=radio] + label {
+/* line 51, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio] + label,
+input[type=checked] + label {
   position: relative;
   padding-left: 45px;
   color: #252e33;
@@ -362,14 +380,17 @@ input[type=radio] + label {
   display: inline-block;
   cursor: pointer;
 }
-/* line 50, ../../resources/assets/scss/core/_forms.scss */
-input[type=radio] + label:before, input[type=radio] + label:after {
+/* line 60, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio] + label:before, input[type=radio] + label:after,
+input[type=checked] + label:before,
+input[type=checked] + label:after {
   position: absolute;
   left: 0;
   top: 0;
 }
-/* line 56, ../../resources/assets/scss/core/_forms.scss */
-input[type=radio] + label:after {
+/* line 66, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio] + label:after,
+input[type=checked] + label:after {
   transform-origin: 50% 50%;
   transform: scale(0, 0);
   width: 18px;
@@ -381,8 +402,9 @@ input[type=radio] + label:after {
   content: "";
   transition: transform 0.3s ease;
 }
-/* line 69, ../../resources/assets/scss/core/_forms.scss */
-input[type=radio] + label:before {
+/* line 79, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio] + label:before,
+input[type=checked] + label:before {
   content: "";
   border: 4px solid #f16060;
   width: 26px;
@@ -390,16 +412,18 @@ input[type=radio] + label:before {
   border-radius: 34px;
   padding: 13px;
 }
-/* line 80, ../../resources/assets/scss/core/_forms.scss */
-input[type=radio]:checked + label {
+/* line 90, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio]:checked + label,
+input[type=checked]:checked + label {
   font-weight: bold;
 }
-/* line 82, ../../resources/assets/scss/core/_forms.scss */
-input[type=radio]:checked + label:after {
+/* line 92, ../../resources/assets/scss/core/_forms.scss */
+input[type=radio]:checked + label:after,
+input[type=checked]:checked + label:after {
   transform: scale(1, 1);
 }
 
-/* line 89, ../../resources/assets/scss/core/_forms.scss */
+/* line 99, ../../resources/assets/scss/core/_forms.scss */
 textarea {
   width: 500px;
   height: 130px;
@@ -409,6 +433,7 @@ textarea {
   max-width: 100%;
   background: #f16060;
   border: 2px solid #f16060;
+  transition: background 0.2s ease, background 0.2s ease;
 }
 /* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:-moz-placeholder {
@@ -426,7 +451,7 @@ textarea:-ms-input-placeholder {
 textarea::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 102, ../../resources/assets/scss/core/_forms.scss */
+/* line 113, ../../resources/assets/scss/core/_forms.scss */
 textarea:focus {
   background: rgba(255, 255, 255, 0.8);
   color: #f16060;
@@ -447,7 +472,7 @@ textarea:focus:-ms-input-placeholder {
 textarea:focus::-webkit-input-placeholder {
   color: #f16060;
 }
-/* line 111, ../../resources/assets/scss/core/_forms.scss */
+/* line 122, ../../resources/assets/scss/core/_forms.scss */
 textarea:hover {
   background: rgba(255, 255, 255, 0.8);
   color: #f16060;
@@ -489,11 +514,11 @@ textarea::-webkit-input-placeholder {
   opacity: 0.9;
 }
 
-/* line 126, ../../resources/assets/scss/core/_forms.scss */
+/* line 137, ../../resources/assets/scss/core/_forms.scss */
 .form-row {
   position: relative;
 }
-/* line 129, ../../resources/assets/scss/core/_forms.scss */
+/* line 140, ../../resources/assets/scss/core/_forms.scss */
 .form-row label {
   position: absolute;
   color: #ffffff;
@@ -506,7 +531,7 @@ textarea::-webkit-input-placeholder {
   transition: all 0.2s ease;
   transform: translateY(-50%);
 }
-/* line 146, ../../resources/assets/scss/core/_forms.scss */
+/* line 157, ../../resources/assets/scss/core/_forms.scss */
 .form-row input:focus ~ label,
 .form-row input.has-content ~ label {
   top: 10px;
@@ -514,7 +539,7 @@ textarea::-webkit-input-placeholder {
   right: inherit;
   transform: scale(0.85);
 }
-/* line 155, ../../resources/assets/scss/core/_forms.scss */
+/* line 166, ../../resources/assets/scss/core/_forms.scss */
 .form-row .error-container {
   position: absolute;
   left: 100%;
@@ -531,7 +556,7 @@ textarea::-webkit-input-placeholder {
   opacity: 0;
 }
 @media (max-width: 1024px) {
-  /* line 155, ../../resources/assets/scss/core/_forms.scss */
+  /* line 166, ../../resources/assets/scss/core/_forms.scss */
   .form-row .error-container {
     position: relative;
     left: 0;
@@ -542,11 +567,11 @@ textarea::-webkit-input-placeholder {
     border-top: 0;
   }
 }
-/* line 180, ../../resources/assets/scss/core/_forms.scss */
+/* line 191, ../../resources/assets/scss/core/_forms.scss */
 .form-row .error-container li {
   display: block;
 }
-/* line 184, ../../resources/assets/scss/core/_forms.scss */
+/* line 195, ../../resources/assets/scss/core/_forms.scss */
 .form-row .error-container:after, .form-row .error-container:before {
   right: 100%;
   top: 50%;
@@ -558,33 +583,33 @@ textarea::-webkit-input-placeholder {
   pointer-events: none;
 }
 @media (max-width: 1024px) {
-  /* line 184, ../../resources/assets/scss/core/_forms.scss */
+  /* line 195, ../../resources/assets/scss/core/_forms.scss */
   .form-row .error-container:after, .form-row .error-container:before {
     display: none;
   }
 }
-/* line 199, ../../resources/assets/scss/core/_forms.scss */
+/* line 210, ../../resources/assets/scss/core/_forms.scss */
 .form-row .error-container:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 9px;
   margin-top: -9px;
 }
-/* line 206, ../../resources/assets/scss/core/_forms.scss */
+/* line 217, ../../resources/assets/scss/core/_forms.scss */
 .form-row .error-container:before {
   border-color: rgba(174, 174, 174, 0);
   border-right-color: #aeaeae;
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 218, ../../resources/assets/scss/core/_forms.scss */
+/* line 229, ../../resources/assets/scss/core/_forms.scss */
 .form-row .arrow_box:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 224, ../../resources/assets/scss/core/_forms.scss */
+/* line 235, ../../resources/assets/scss/core/_forms.scss */
 .form-row .arrow_box:before {
   border-color: rgba(174, 174, 174, 0);
   border-right-color: #aeaeae;
@@ -592,7 +617,7 @@ textarea::-webkit-input-placeholder {
   margin-top: -11px;
 }
 
-/* line 233, ../../resources/assets/scss/core/_forms.scss */
+/* line 244, ../../resources/assets/scss/core/_forms.scss */
 .error-container {
   border: 1px solid #aeaeae;
   color: #aeaeae;
@@ -606,7 +631,7 @@ textarea::-webkit-input-placeholder {
 }
 
 @media (max-width: 1024px) {
-  /* line 245, ../../resources/assets/scss/core/_forms.scss */
+  /* line 256, ../../resources/assets/scss/core/_forms.scss */
   textarea + .error-container {
     border: 2px solid #ffffff !important;
     border-top: 0 !important;
@@ -729,6 +754,7 @@ p a:hover {
 /* line 93, ../../resources/assets/scss/core/_module.scss */
 .has-text > .inner .content {
   width: 445px;
+  width: 445px;
   margin: 0 auto;
   font-size: 17px;
   line-height: 26px;
@@ -742,22 +768,22 @@ p a:hover {
     padding-top: 40px;
   }
 }
-/* line 111, ../../resources/assets/scss/core/_module.scss */
+/* line 112, ../../resources/assets/scss/core/_module.scss */
 .has-text .dots {
   margin: 60px auto;
 }
 @media (max-width: 500px) {
-  /* line 111, ../../resources/assets/scss/core/_module.scss */
+  /* line 112, ../../resources/assets/scss/core/_module.scss */
   .has-text .dots {
     margin: 40px auto;
   }
 }
-/* line 119, ../../resources/assets/scss/core/_module.scss */
+/* line 120, ../../resources/assets/scss/core/_module.scss */
 .has-text .actions {
   text-align: center;
 }
 
-/* line 124, ../../resources/assets/scss/core/_module.scss */
+/* line 125, ../../resources/assets/scss/core/_module.scss */
 .next-section {
   position: absolute;
   display: block;
@@ -772,38 +798,38 @@ p a:hover {
   border: 0;
   transform-origin: 50% 50%;
 }
-/* line 138, ../../resources/assets/scss/core/_module.scss */
+/* line 139, ../../resources/assets/scss/core/_module.scss */
 .next-section svg {
   width: 100%;
   height: 100%;
 }
-/* line 141, ../../resources/assets/scss/core/_module.scss */
+/* line 142, ../../resources/assets/scss/core/_module.scss */
 .next-section svg path {
   fill: white;
   transition: fill 0.3s ease;
 }
 
-/* line 150, ../../resources/assets/scss/core/_module.scss */
+/* line 151, ../../resources/assets/scss/core/_module.scss */
 .congrats-section h1 {
   margin-bottom: 40px;
   line-height: 28px;
   letter-spacing: 0.02em;
-  max-width: 442px;
+  max-width: 445px;
 }
-/* line 157, ../../resources/assets/scss/core/_module.scss */
+/* line 158, ../../resources/assets/scss/core/_module.scss */
 .congrats-section p {
-  max-width: 442px;
+  max-width: 445px;
   width: 100%;
   text-align: center;
   margin-bottom: 40px;
   line-height: 26px;
 }
-/* line 165, ../../resources/assets/scss/core/_module.scss */
+/* line 166, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .actions {
   text-align: center;
   margin: 40px 0;
 }
-/* line 170, ../../resources/assets/scss/core/_module.scss */
+/* line 171, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .congrats-container {
   width: 100%;
   height: 100%;
@@ -816,17 +842,17 @@ p a:hover {
   opacity: 0;
   visibility: hidden;
 }
-/* line 182, ../../resources/assets/scss/core/_module.scss */
+/* line 183, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .congrats-container > .inner {
   padding: 0 20px;
 }
 
-/* line 188, ../../resources/assets/scss/core/_module.scss */
+/* line 189, ../../resources/assets/scss/core/_module.scss */
 .actions {
   text-align: center;
 }
 
-/* line 192, ../../resources/assets/scss/core/_module.scss */
+/* line 193, ../../resources/assets/scss/core/_module.scss */
 .down-arrow {
   border: 0;
   background: none;
@@ -836,17 +862,17 @@ p a:hover {
   display: inline-block;
   cursor: pointer;
 }
-/* line 201, ../../resources/assets/scss/core/_module.scss */
+/* line 202, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg {
   width: 100%;
   height: 100%;
 }
-/* line 204, ../../resources/assets/scss/core/_module.scss */
+/* line 205, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg path {
   fill: #f16060;
 }
 
-/* line 210, ../../resources/assets/scss/core/_module.scss */
+/* line 211, ../../resources/assets/scss/core/_module.scss */
 .indicator {
   position: fixed;
   top: 50%;
@@ -857,19 +883,19 @@ p a:hover {
   z-index: 99;
 }
 @media (max-width: 1120px) {
-  /* line 210, ../../resources/assets/scss/core/_module.scss */
+  /* line 211, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     width: 50px;
     height: 100px;
   }
 }
 @media (max-width: 620px) {
-  /* line 210, ../../resources/assets/scss/core/_module.scss */
+  /* line 211, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     display: none;
   }
 }
-/* line 228, ../../resources/assets/scss/core/_module.scss */
+/* line 229, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon {
   width: 50px !important;
   height: 50px;
@@ -877,16 +903,16 @@ p a:hover {
   padding: 8px;
   float: right;
 }
-/* line 236, ../../resources/assets/scss/core/_module.scss */
+/* line 237, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 239, ../../resources/assets/scss/core/_module.scss */
+/* line 240, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg path {
   fill: white;
 }
-/* line 246, ../../resources/assets/scss/core/_module.scss */
+/* line 247, ../../resources/assets/scss/core/_module.scss */
 .indicator .page-icon:after {
   position: relative;
   font-size: 35px;
@@ -895,7 +921,7 @@ p a:hover {
   top: 0;
   left: 0;
 }
-/* line 256, ../../resources/assets/scss/core/_module.scss */
+/* line 257, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon {
   width: 110px;
   height: 50px;
@@ -911,7 +937,7 @@ p a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 1120px) {
-  /* line 256, ../../resources/assets/scss/core/_module.scss */
+  /* line 257, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon {
     background-color: rgba(255, 255, 255, 0.9);
     width: 50px;
@@ -919,18 +945,18 @@ p a:hover {
     padding: 15px 12px;
   }
 }
-/* line 279, ../../resources/assets/scss/core/_module.scss */
+/* line 280, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon:hover svg path {
   fill: rgba(241, 96, 96, 0.6);
 }
-/* line 285, ../../resources/assets/scss/core/_module.scss */
+/* line 286, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 292, ../../resources/assets/scss/core/_module.scss */
+/* line 293, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
   stroke: #f16060;
@@ -940,23 +966,23 @@ p a:hover {
   transition: fill 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @media (max-width: 800px) {
-  /* line 285, ../../resources/assets/scss/core/_module.scss */
+  /* line 286, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon svg {
     margin: 2px auto;
   }
 }
-/* line 303, ../../resources/assets/scss/core/_module.scss */
+/* line 304, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon span {
   line-height: 21px;
 }
 @media (max-width: 1120px) {
-  /* line 303, ../../resources/assets/scss/core/_module.scss */
+  /* line 304, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon span {
     display: none;
   }
 }
 
-/* line 315, ../../resources/assets/scss/core/_module.scss */
+/* line 316, ../../resources/assets/scss/core/_module.scss */
 [data-current-section="0"] .indicator,
 [data-current-section="1"] .indicator {
   display: none;
@@ -1047,25 +1073,30 @@ blockquote.multiple {
   border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 90%);
   border-image-slice: 1;
 }
-/* line 79, ../../resources/assets/scss/core/_typography.scss */
+/* line 80, ../../resources/assets/scss/core/_typography.scss */
+blockquote.multiple ul {
+  padding-left: 19px;
+}
+/* line 84, ../../resources/assets/scss/core/_typography.scss */
 blockquote.multiple li {
+  list-style: disc;
   border-bottom: 1px solid rgba(241, 96, 96, 0.2);
   padding-bottom: 18px;
   margin-bottom: 18px;
 }
-/* line 83, ../../resources/assets/scss/core/_typography.scss */
+/* line 89, ../../resources/assets/scss/core/_typography.scss */
 blockquote.multiple li:last-child {
   border-bottom: 0;
   padding-bottom: 0;
 }
-/* line 90, ../../resources/assets/scss/core/_typography.scss */
+/* line 96, ../../resources/assets/scss/core/_typography.scss */
 blockquote.dark {
   border-image: linear-gradient(23deg, rgba(37, 46, 51, 0.8) 0%, rgba(37, 46, 51, 0) 70%);
   border-image-slice: 1;
   color: #252e33;
 }
 
-/* line 97, ../../resources/assets/scss/core/_typography.scss */
+/* line 103, ../../resources/assets/scss/core/_typography.scss */
 .call-to-action {
   color: #f16060;
   font-weight: bold;
@@ -1134,19 +1165,20 @@ blockquote.dark {
   border: 0;
 }
 /* line 15, ../../resources/assets/scss/ui/_buttons.scss */
-.button.small-dashboard {
+.button.small {
   padding: 5px 15px;
+  text-transform: inherit;
 }
-/* line 18, ../../resources/assets/scss/ui/_buttons.scss */
-.button.small-dashboard:after, .button.small-dashboard:before {
+/* line 19, ../../resources/assets/scss/ui/_buttons.scss */
+.button.small:after, .button.small:before {
   display: none;
 }
-/* line 23, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 24, ../../resources/assets/scss/ui/_buttons.scss */
 .button:hover {
   background-color: #d95656;
   color: white;
 }
-/* line 29, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 30, ../../resources/assets/scss/ui/_buttons.scss */
 .button:after, .button:before {
   position: absolute;
   pointer-events: none;
@@ -1159,48 +1191,48 @@ blockquote.dark {
   transform-origin: 100% 50%;
   transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), width 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-/* line 42, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 43, ../../resources/assets/scss/ui/_buttons.scss */
 .button:after {
   transform: rotate(45deg);
 }
-/* line 46, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 47, ../../resources/assets/scss/ui/_buttons.scss */
 .button:before {
   transform: rotate(-45deg);
 }
-/* line 50, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 51, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success {
   background: none;
   border: 3px solid #f16060;
   color: #f16060;
   padding-right: 45px;
 }
-/* line 56, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 57, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success:after, .button.success:before {
   background: #f16060;
   margin-top: 6px;
   right: 30px;
 }
-/* line 62, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 63, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success:after {
   transform: rotate(45deg);
   width: 10px;
 }
-/* line 67, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 68, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success:before {
   transform: rotate(135deg);
   width: 18px;
 }
-/* line 73, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 74, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked {
   background: #c5c5c5;
   cursor: default;
   color: #ECECEC;
 }
-/* line 78, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 79, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:before {
   display: none;
 }
-/* line 82, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 83, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:after {
   content: '\e621';
   font-size: 15px;
@@ -1210,7 +1242,7 @@ blockquote.dark {
   font-family: 'icomoon';
   left: 12px;
 }
-/* line 92, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 93, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:hover {
   background: #c5c5c5;
   color: #ECECEC;
@@ -1401,7 +1433,7 @@ blockquote.dark {
 }
 /* line 66, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content {
-  width: 442px;
+  width: 445px;
   text-align: center;
 }
 /* line 70, ../../resources/assets/scss/pages/home/_home.scss */
@@ -2445,15 +2477,6 @@ div.jqcloud span.w1 {
   color: #EC6262;
 }
 
-/* line 64, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
-body[data-page="tag-cloud-form"] {
-  padding: 50px;
-}
-/* line 67, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
-body[data-page="tag-cloud-form"] .form-row {
-  margin-bottom: 10px;
-}
-
 /* line 1, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs {
   width: 695px;
@@ -2525,7 +2548,7 @@ body[data-page="tag-cloud-form"] .form-row {
 .limiting-beliefs .belief textarea {
   width: 100%;
   height: 100%;
-  padding: 30px 20px;
+  padding: 30px 15px;
   color: #252e33;
   text-align: center;
   font-style: italic;
@@ -2539,7 +2562,7 @@ body[data-page="tag-cloud-form"] .form-row {
 .limiting-beliefs .belief textarea:focus {
   background: #f16060;
   color: white;
-  border: 0;
+  border: 2px solid #f16060;
 }
 /* line 81, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .limiting-beliefs .belief textarea:focus + .icon svg path {
@@ -2606,7 +2629,6 @@ body[data-page="tag-cloud-form"] .form-row {
   padding: 35px 25px 25px 25px;
   text-align: center;
   margin-bottom: 15px;
-  overflow: scroll;
 }
 @media (max-width: 920px) {
   /* line 131, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
@@ -2627,18 +2649,19 @@ body[data-page="tag-cloud-form"] .form-row {
   font-style: italic;
   font-size: 14px;
   line-height: 22px;
+  margin: 12px 0;
 }
-/* line 159, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 160, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-belief strong {
-  font-size: 14px;
+  font-size: 15px;
 }
-/* line 166, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 167, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation label {
   position: absolute;
   top: 6px;
   left: 10px;
 }
-/* line 172, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 173, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation .icon {
   position: absolute;
   bottom: 16px;
@@ -2651,44 +2674,45 @@ body[data-page="tag-cloud-form"] .form-row {
   border: 0;
   padding: 0;
 }
-/* line 183, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 184, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation .icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 186, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 187, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation .icon svg path {
   fill: #f16060;
 }
-/* line 192, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 193, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea {
   width: 100%;
   height: 100%;
   background: transparent;
-  padding: 50px 20px;
+  padding: 35px 15px;
   color: #252e33;
   text-align: center;
   font-style: italic;
   margin: 0;
+  transition: background 0.2s ease, border 0.2s ease;
   border: 2px solid transparent;
   border-image: linear-gradient(23deg, #abafb1 0%, rgba(171, 175, 177, 0) 90%);
   border-image-slice: 1;
 }
-/* line 202, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 204, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea:focus {
   background: #f16060;
   color: white;
-  border: 0;
+  border: 2px solid #f16060;
 }
-/* line 215, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 217, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea:focus + .icon svg path {
   fill: white;
 }
-/* line 220, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 222, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .the-affirmation textarea:focus + label {
   color: white;
 }
-/* line 224, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
+/* line 226, ../../resources/assets/scss/pages/un-stuck/_un-stuck.scss */
 .positive-affirmations .actions {
   margin-top: 60px;
 }
@@ -3358,62 +3382,138 @@ blockquote.center {
   clear: both;
 }
 
-/* line 1, ../../resources/assets/scss/pages/account/_account.scss */
-.container.account {
+/* line 1, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
+.container.non-mod-page {
   background: url('../img/home-background.png?1439760487') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
   min-width: 320px;
+  height: 100vh;
+  width: 100%;
+  display: table;
 }
 @media (max-width: 500px) {
-  /* line 1, ../../resources/assets/scss/pages/account/_account.scss */
-  .container.account {
+  /* line 1, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
+  .container.non-mod-page {
     width: 100%;
     padding: 0;
   }
 }
-/* line 13, ../../resources/assets/scss/pages/account/_account.scss */
-.container.account > .inner {
+/* line 16, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
+.container.non-mod-page > .inner {
   background: rgba(255, 255, 255, 0.9);
   padding: 40px 20px;
+  height: 100%;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
 }
-/* line 21, ../../resources/assets/scss/pages/account/_account.scss */
-.container.account > .inner .content {
+@media (max-width: 620px) {
+  /* line 16, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
+  .container.non-mod-page > .inner {
+    padding-top: 80px;
+    vertical-align: inherit;
+  }
+}
+/* line 29, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
+.container.non-mod-page > .inner .content {
   position: relative;
-  max-width: 442px;
+  max-width: 445px;
   width: 100%;
   margin: 0 auto;
   font-size: 17px;
   line-height: 26px;
   color: #252e33;
-  padding: 60px 0;
 }
 @media (max-width: 500px) {
-  /* line 21, ../../resources/assets/scss/pages/account/_account.scss */
-  .container.account > .inner .content {
+  /* line 29, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
+  .container.non-mod-page > .inner .content {
     width: 100%;
-    padding-top: 40px;
+  }
+}
+/* line 46, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
+.container.non-mod-page input {
+  margin: 8px 0;
+  height: 72px;
+  width: 100%;
+}
+
+/* line 1, ../../resources/assets/scss/pages/misc/_tag-cloud.scss */
+.container.non-mod-page {
+  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 50px;
+  min-width: 320px;
+  height: 100vh;
+  width: 100%;
+  display: table;
+}
+@media (max-width: 500px) {
+  /* line 1, ../../resources/assets/scss/pages/misc/_tag-cloud.scss */
+  .container.non-mod-page {
+    width: 100%;
+    padding: 0;
+  }
+}
+/* line 16, ../../resources/assets/scss/pages/misc/_tag-cloud.scss */
+.container.non-mod-page > .inner {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 20px;
+  height: 100%;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (max-width: 620px) {
+  /* line 16, ../../resources/assets/scss/pages/misc/_tag-cloud.scss */
+  .container.non-mod-page > .inner {
+    padding-top: 80px;
+    vertical-align: inherit;
+  }
+}
+/* line 29, ../../resources/assets/scss/pages/misc/_tag-cloud.scss */
+.container.non-mod-page > .inner .content {
+  position: relative;
+  max-width: 445px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 26px;
+  color: #252e33;
+}
+@media (max-width: 500px) {
+  /* line 29, ../../resources/assets/scss/pages/misc/_tag-cloud.scss */
+  .container.non-mod-page > .inner .content {
+    width: 100%;
   }
 }
 
-/* line 40, ../../resources/assets/scss/pages/account/_account.scss */
-.account-section .content {
+/* line 2, ../../resources/assets/scss/pages/misc/_login.scss */
+section.login .content {
   width: 442px;
   text-align: center;
 }
-/* line 44, ../../resources/assets/scss/pages/account/_account.scss */
-.account-section .content p {
+/* line 6, ../../resources/assets/scss/pages/misc/_login.scss */
+section.login .content p {
   text-align: center;
   font-size: 17px;
   line-height: 23px;
   margin-bottom: 15px;
 }
-/* line 52, ../../resources/assets/scss/pages/account/_account.scss */
-.account-section input {
-  margin: 8px 0;
-  height: 72px;
-  width: 100%;
+
+/* line 2, ../../resources/assets/scss/pages/account/_account.scss */
+section.account-section .content {
+  width: 442px;
+  text-align: center;
+}
+/* line 6, ../../resources/assets/scss/pages/account/_account.scss */
+section.account-section .content p {
+  text-align: center;
+  font-size: 17px;
+  line-height: 23px;
+  margin-bottom: 15px;
 }
 
 /* line 1, ../../resources/assets/scss/dashboard/_dashboard.scss */
@@ -3893,13 +3993,179 @@ li.is-unlocked.is-complete.is-open .inner-padding {
   padding-right: 20px;
 }
 
-/* line 1, ../../resources/assets/scss/forum/_comment.scss */
-ul.comments-list {
-  margin-left: 40px;
-  outline: 1px solid blue;
+/* line 1, ../../resources/assets/scss/forum/_forum.scss */
+.forum-navigator {
+  width: 100%;
+  background-color: #f16060;
+  margin-bottom: 40px;
+  min-width: 320px;
+  margin: 50px 50px 0;
+}
+/* line 8, ../../resources/assets/scss/forum/_forum.scss */
+.forum-navigator h2 {
+  font-weight: 500;
+  position: relative;
+  padding: 6px 20px;
+}
+@media (max-width: 620px) {
+  /* line 8, ../../resources/assets/scss/forum/_forum.scss */
+  .forum-navigator h2 {
+    font-size: 12px;
+    text-align: left;
+    padding: 7px 10px;
+  }
+}
+/* line 19, ../../resources/assets/scss/forum/_forum.scss */
+.forum-navigator h2:before {
+  position: relative;
+  font-family: "icomoon";
+  content: "\e632";
+  left: -4px;
+  top: 4px;
+  font-size: 24px;
 }
 
-/* line 6, ../../resources/assets/scss/forum/_comment.scss */
-.comment {
-  outline: 1px solid green;
+/* line 30, ../../resources/assets/scss/forum/_forum.scss */
+.container.forums {
+  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0 50px 50px;
+  min-width: 320px;
+  height: 100vh;
+  width: 100%;
+  display: table;
+}
+/* line 40, ../../resources/assets/scss/forum/_forum.scss */
+.container.forums header {
+  max-width: 445px;
+  margin: 60px auto;
+}
+/* line 44, ../../resources/assets/scss/forum/_forum.scss */
+.container.forums header .dots {
+  margin: 40px auto;
+}
+@media (max-width: 500px) {
+  /* line 30, ../../resources/assets/scss/forum/_forum.scss */
+  .container.forums {
+    width: 100%;
+    padding: 0;
+  }
+}
+/* line 54, ../../resources/assets/scss/forum/_forum.scss */
+.container.forums > .inner {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (max-width: 620px) {
+  /* line 54, ../../resources/assets/scss/forum/_forum.scss */
+  .container.forums > .inner {
+    padding-top: 80px;
+    vertical-align: inherit;
+  }
+}
+/* line 67, ../../resources/assets/scss/forum/_forum.scss */
+.container.forums > .inner .content {
+  position: relative;
+  max-width: 645px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 26px;
+  color: #252e33;
+}
+@media (max-width: 500px) {
+  /* line 67, ../../resources/assets/scss/forum/_forum.scss */
+  .container.forums > .inner .content {
+    width: 100%;
+  }
+}
+/* line 82, ../../resources/assets/scss/forum/_forum.scss */
+.container.forums input {
+  margin: 8px 0;
+  height: 72px;
+  width: 100%;
+}
+
+/* line 1, ../../resources/assets/scss/forum/_comment.scss */
+ul.comments-list {
+  margin-left: 0;
+}
+@media (max-width: 620px) {
+  /* line 1, ../../resources/assets/scss/forum/_comment.scss */
+  ul.comments-list {
+    margin-left: 0 !important;
+  }
+}
+/* line 8, ../../resources/assets/scss/forum/_comment.scss */
+ul.comments-list ul.comments-list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+/* line 11, ../../resources/assets/scss/forum/_comment.scss */
+ul.comments-list ul.comments-list:before {
+  position: relative;
+  font-family: "icomoon";
+  content: "\e626";
+  left: -20px;
+  top: 24px;
+  font-size: 13px;
+}
+/* line 20, ../../resources/assets/scss/forum/_comment.scss */
+ul.comments-list ul.comments-list ul.comments-list {
+  margin-left: 20px;
+}
+/* line 23, ../../resources/assets/scss/forum/_comment.scss */
+ul.comments-list ul.comments-list ul.comments-list ul.comments-list {
+  margin-left: 20px;
+}
+/* line 26, ../../resources/assets/scss/forum/_comment.scss */
+ul.comments-list ul.comments-list ul.comments-list ul.comments-list ul.comments-list {
+  margin-left: 0;
+}
+
+/* line 35, ../../resources/assets/scss/forum/_comment.scss */
+li.comment .inner {
+  border: 2px solid #c5c5c5;
+  position: relative;
+  padding: 20px;
+}
+/* line 40, ../../resources/assets/scss/forum/_comment.scss */
+li.comment .inner p {
+  margin-bottom: 0;
+  padding: 10px 0;
+  color: #8E8E8E;
+}
+
+/* line 49, ../../resources/assets/scss/forum/_comment.scss */
+form.comment-form textarea {
+  width: 100%;
+}
+
+/* line 54, ../../resources/assets/scss/forum/_comment.scss */
+.comment-creation-date {
+  position: absolute;
+  font-size: 14px;
+  color: #c5c5c5;
+  top: 20px;
+  right: 20px;
+}
+
+/* line 66, ../../resources/assets/scss/forum/_comment.scss */
+form.reply-form textarea {
+  width: 100%;
+}
+
+/* line 72, ../../resources/assets/scss/forum/_comment.scss */
+form.reply-form.is-hidden {
+  display: none;
+}
+
+/* line 79, ../../resources/assets/scss/forum/_comment.scss */
+[data-page="forum"] .forum-icon {
+  display: none;
 }

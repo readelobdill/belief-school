@@ -76,7 +76,13 @@ blockquote {
     &.multiple {
         border-image: linear-gradient(23deg, rgba(241,96,96,1) 0%, rgba(241,96,96,0) 90%);
         border-image-slice: 1;
+
+        ul {
+            padding-left: 19px;
+        }
+
         li {
+            list-style: disc;
             border-bottom: 1px solid rgba($lightRed, 0.2);
             padding-bottom: 18px;
             margin-bottom: 18px;

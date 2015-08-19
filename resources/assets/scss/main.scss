@@ -34,6 +34,9 @@
 @import "pages/gratitude/gratitude";
 @import "pages/sustainable-change/sustainable-change";
 @import "pages/misc/privacy-terms";
+@import "pages/misc/non-mod-page";
+@import "pages/misc/tag-cloud";
+@import "pages/misc/login";
 @import "pages/account/account";
 
 
@@ -43,3 +46,4 @@
 
 // forum
 @import "forum/forum";
+@import "forum/comment";

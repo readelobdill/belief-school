@@ -5,6 +5,4 @@
     <div class="actions">
         <button class="button">Submit Comment</button>
     </div>
-
-
 </form>
