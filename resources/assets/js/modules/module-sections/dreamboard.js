@@ -12,10 +12,10 @@ export default class Dreamboard extends Text {
 
     setupEventListeners() {
         super.setupEventListeners();
-        this.toggleSubmit();
         this.section.on('change', '.image input', (e) => {
             if(e.currentTarget.files.length > 0) {
                 this.submitImage(e.currentTarget.files[0], $(e.currentTarget).attr('name'));
+
             }
         });
 
