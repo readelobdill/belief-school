@@ -47,8 +47,8 @@ export default class AccountCreationSection extends ModuleSection {
             }
             this.submitting = true;
             Client.registerUser(this.form.attr('action'), serialize(this.form)).then((response) => {
-                $('.auth').find('logout').removeClass('is-hidden-g');
-                $('.auth').find('login').addClass('is-hidden-g');
+                $('.auth').find('.logout').removeClass('is-hidden-g');
+                $('.auth').find('.login').addClass('is-hidden-g');
                 $('.requires-auth').removeClass('is-hidden-g');
                 return this.module.nextSection();
             });
