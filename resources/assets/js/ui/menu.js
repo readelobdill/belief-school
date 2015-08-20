@@ -27,7 +27,10 @@ class Menu {
             }
             this.open = !this.open;
 
-        })
+        });
+        this.menu.on('click', 'a', () => {
+           this.timeline.reverse();
+        });
     }
 }
 
