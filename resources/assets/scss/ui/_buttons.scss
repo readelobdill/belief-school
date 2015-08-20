@@ -1,3 +1,15 @@
+button.button {
+    &.small {
+        padding: 7px 15px;
+        text-transform: inherit;
+
+        &:after, &:before {
+            display: none;
+        }
+    }
+}
+
+
 .button { //button with right arrow (to go somewhere) empty border and type.
     position:relative;
     text-transform: uppercase;
@@ -11,6 +23,8 @@
     transition: background-color 0.2s ease;
     font-size: 15px; //this was 17px;
     border: 0;
+    @extend %brandon-grotesque;
+
 
     &.small {
         padding: 5px 15px;

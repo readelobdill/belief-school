@@ -13,7 +13,7 @@
 
     <p>{{$comment->body}}</p>
 
-    <a href="#" data-id="{{$comment->id}}" class="reply">Write reply</a>
+    <a href="#" data-id="{{$comment->id}}" class="reply">Reply</a>
 
     @if($comment->depth == 0 && Auth::user()->isAdmin())
         <a href="{{route('admin.comments.sticky', [$comment->id])}}" class="btn btn-info btn-xs sticky-comment {{($comment->sticky ? 'active' : '')}}">Sticky</a>
@@ -28,7 +28,7 @@
             <textarea placeholder="Write a comment" name="body"></textarea>
         </div>
         <div class="actions">
-            <button class="button small">Reply</button>
+            <button class="button small">Comment</button>
         </div>
     </form>
 </div>

@@ -1,65 +1,123 @@
-.forum-navigator {
-        width: 100%;
-        background-color: $lightRed;
-        min-width: 320px;
-        margin: 50px 50px 0;
-
-        h2 {
-            font-weight: 500;
-            position: relative;
-            padding: 6px 20px;
-
-            @include breakpoint($break-620) {
-                font-size: 12px;
-                text-align: left;
-                padding: 7px 10px;
-            }
-
-            &:before {
-                position: relative;
-                font-family: $icon;
-                content: "\e632";
-                left: -4px;
-                top: 4px;
-                font-size: 24px;
-            }
-        }
-    }
-
 .container.forums {
     background: image-url('home-background.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
-    padding: 0 50px 50px;
+    padding: 50px;
     min-width: 320px;
     height: 100vh;
     width: 100%;
     display: table;
 
+    .forum-navigator {
+        position: absolute;
+        width: 100%;
+        background-color: $lightRed;
+        min-width: 320px;
+        left: 0;
+        top: 0;
+
+        @include breakpoint($break-620) {
+            top: 50px;
+        }
+
+        a {
+            color: $white;
+            font-size: 14px;
+            font-weight: 500;
+
+            &:hover {
+                color: $grey;
+            }
+        }
+
+        h2 {
+            position: relative;
+            font-weight: 600;
+            font-size: 17px;
+            padding: 10px 0 14px;
+            color: $white;
+            text-transform: uppercase;
+            text-align: center;
+
+            @include breakpoint($break-800) {
+                text-align: left;
+                padding-left: 25px;
+            }
+
+            &:before {
+                position: relative;
+                font-family: $icon;
+                content: "\e62d";
+                left: -10px;
+                top: 4px;
+                font-size: 20px;
+                color: $white;
+            }
+        }
+
+
+        ul.links {
+            position: absolute;
+            float: none;
+            top: 0;
+            right: 0;
+            height: 100%;
+
+            li {
+                padding: 14px 15px;
+                float: left;
+                height: 100%;
+            }
+
+            .module {
+                border-right: 1px solid #F89594;
+            }
+
+            .dashboard {
+                @include breakpoint($break-620) {
+                    display: none;
+                }
+            }
+        }
+    }
+
     header {
+        padding-top: 50px;
         max-width: 445px;
         margin: 60px auto;
 
         .dots {
             margin: 40px auto;
         }
+
+        h1.plain {
+            @include breakpoint($break-620) {
+                margin-top: 20px;
+            }
+        }
     }
 
-    @include breakpoint($brk-small) {
+    .actions {
+        margin: 15px 0 30px;
+    }
+
+    @include breakpoint($break-620) {
         width: 100%;
         padding: 0;
     }
 
     > .inner {
+        position: relative;
         background: rgba($white, 0.9);
         padding: 0;
         height: 100%;
         width: 100%;
         display: table-cell;
         vertical-align: middle;
+        padding: 0 $gutter 40px;
 
         @include breakpoint($break-620) {
-            padding-top: 80px;
+            //padding-top: 80px;
             vertical-align: inherit;
         }
 

@@ -1,20 +1,19 @@
 @extends('app.layout')
 
 @section('content')
-
-             <div class="forum-navigator">
-                <h2><a href="">Forum</a></h2>
-                <ul class="actions">
-                    <li class="dashboard">
-                        <a href="#">Dashboard</a>
-                    </li>
-                    <li class="dashboard">Dashboard</li>
-                </ul>
-            </div>
-
-
     <div class="container forums">
         <div class="inner">
+            <div class="forum-navigator">
+                <h2>Forum</h2>
+                <ul class="links">
+                    <li class="module">
+                        <a href="{{route('modules.view', [$module->slug])}}">Module {{$module->order - 1}} - {{$module->name}}</a>
+                    </li>
+                    <li class="dashboard">
+                        <a href="{{route('dashboard')}}">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
 
             <header>
                 <h1 class="plain">Welcome to the Know Your Amazing Self Forum</h1>
