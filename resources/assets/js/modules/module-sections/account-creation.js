@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import 'parsleyjs';
+import 'util/remote';
+import 'util/parsley';
 import TweenMax from "gsap/src/uncompressed/TweenMax";
 import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 import config from 'config';

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'whatwg-fetch';
-import 'parsleyjs';
+import 'util/parsley';
 
 class TagCloudForm {
     constructor(form) {

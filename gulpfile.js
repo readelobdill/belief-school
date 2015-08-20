@@ -33,7 +33,9 @@ function scripts(watch, production) {
         bundler = watchify(bundler);
     }
 
-    bundler.transform(babelify);
+    bundler.transform(babelify.configure({
+        ignore: 'parsley.js'
+    }));
     bundler.on('error', swallowError);
     rebundle = function() {
         var stream = bundler.bundle();

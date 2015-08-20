@@ -34,7 +34,7 @@ export default class Dreamboard extends Text {
             $image.removeClass('is-loading').addClass('has-image').find('img').attr('src', response.imageUrl);
             this.toggleSubmit();
         }, false, (progress) => {
-            $loader.html((progress*100)+'%');
+            $loader.html(Math.floor(progress*100)+'%');
         });
     }
 

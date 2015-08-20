@@ -2,6 +2,7 @@ import $ from 'jquery';
 import animate from 'modules/animate'
 import TweenMax from "gsap/src/uncompressed/TweenMax";
 import TimelineLite from "gsap/src/uncompressed/TimelineLite";
+import "gsap/src/uncompressed/plugins/ScrollToPlugin";
 import config from 'config';
 import Q from 'q';
 

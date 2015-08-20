@@ -18,12 +18,13 @@ class ModuleSection {
     open() {
 
         this.setup();
-        return new Promise((yes, no) => {
-            TweenMax.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 1, onComplete: () => {
-
-                yes();
-            }});
-        })
+        var deferred = Q.defer();
+        var t = new TimelineLite({onComplete: () => {
+            deferred.resolve()
+        }});
+        t.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 1});
+        t.fromTo(this.section.find('.inner'), config.defaultAnimationSpeed, {y: -40}, {autoAlpha: 1, y: 0}, '-=0.4');
+        return deferred.promise;
 
     }
 

@@ -9,7 +9,7 @@
         <div class="tagcloud"></div>
 
          <p class="center">
-            <a href="mailto:?subject=&body={{rawurlencode(config('belief.email') . "\n\n" . route('tagcloud', [$module->pivot->secret]))}}" class="button small">Re-send email</a>
+             <a href="mailto:?subject=Show%20your%20friend%20how%20special%20they%20are&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$module->pivot->secret]))}}" class="button small" data-update-module>Re-send email</a>
         </p>
     </div>
 </div>

@@ -58,7 +58,7 @@
             Nothing terrible is going to happen, people will either respond or they won’t. The world will not end and your arm will not fall off. <strong>In doing this you will start to gain some valuable insight into the qualities that you have which make YOU special.</strong>
         </p>
         <div class="actions">
-            <a href="mailto:?subject=Show%20your%20friend%20how%20special%20they%20are&body={{rawurlencode(config('belief.email') . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" data-update-module>I'm Ready!</a>
+            <a href="mailto:?subject=Show%20your%20friend%20how%20special%20they%20are&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" data-update-module>I'm Ready!</a>
         </div>
 
     </div>
