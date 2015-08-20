@@ -3915,77 +3915,78 @@ ul.actions li.unlock-countdown:before {
 /* line 381, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list .content {
   max-width: 920px;
+  margin: auto;
 }
-/* line 387, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 388, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-complete .header.locked {
   background-color: transparent;
 }
-/* line 392, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 393, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-complete .actions li.forum {
   border-right: 1px solid #F89594 !important;
 }
 @media (max-width: 620px) {
-  /* line 392, ../../resources/assets/scss/dashboard/_dashboard.scss */
+  /* line 393, ../../resources/assets/scss/dashboard/_dashboard.scss */
   ul.module-list li.is-complete .actions li.forum {
     border: none !important;
   }
 }
 @media (max-width: 500px) {
-  /* line 391, ../../resources/assets/scss/dashboard/_dashboard.scss */
+  /* line 392, ../../resources/assets/scss/dashboard/_dashboard.scss */
   ul.module-list li.is-complete .actions {
     width: 100%;
   }
 }
-/* line 406, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 407, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-unlocked {
   border-top: 1px solid #e6e6e6;
 }
-/* line 410, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 411, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-unlocked .actions li.forum {
   border-right: 1px solid #e6e6e6;
 }
-/* line 416, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 417, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-locked {
   border-top: 1px solid #e6e6e6;
 }
-/* line 419, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 420, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-locked .header {
   background-color: transparent;
   color: #c5c5c5;
 }
-/* line 424, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 425, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-locked:last-child {
   border-bottom: 1px solid #e6e6e6;
 }
-/* line 429, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 430, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-locked .actions li.unlock-countdown {
   padding: 8.5px 15px;
 }
 @media (max-width: 500px) {
-  /* line 429, ../../resources/assets/scss/dashboard/_dashboard.scss */
+  /* line 430, ../../resources/assets/scss/dashboard/_dashboard.scss */
   ul.module-list li.is-locked .actions li.unlock-countdown {
     width: 100%;
   }
 }
-/* line 436, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 437, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-locked .actions li.unlock-countdown:before {
   left: 0;
   top: inherit;
 }
 @media (max-width: 620px) {
-  /* line 436, ../../resources/assets/scss/dashboard/_dashboard.scss */
+  /* line 437, ../../resources/assets/scss/dashboard/_dashboard.scss */
   ul.module-list li.is-locked .actions li.unlock-countdown:before {
     left: inherit;
     top: 0;
     position: relative;
   }
 }
-/* line 447, ../../resources/assets/scss/dashboard/_dashboard.scss */
+/* line 448, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.module-list li.is-locked .actions li.arrow {
   visibility: hidden;
 }
 @media (max-width: 620px) {
-  /* line 447, ../../resources/assets/scss/dashboard/_dashboard.scss */
+  /* line 448, ../../resources/assets/scss/dashboard/_dashboard.scss */
   ul.module-list li.is-locked .actions li.arrow {
     display: none;
   }
@@ -4030,6 +4031,130 @@ li.is-unlocked.is-complete.is-open .inner-padding {
   padding-right: 20px;
 }
 
+/* line 1, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+[role=print] {
+  display: none;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  /* line 11, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 20, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  a[href]:after {
+    display: none;
+  }
+
+  /* line 24, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  abbr[title]:after {
+    display: none;
+  }
+
+  /* line 28, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    display: none;
+  }
+
+  /* line 33, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 39, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 43, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 48, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  /* line 52, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 59, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 64, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  header,
+  .burger,
+  .auth {
+    display: none !important;
+  }
+
+  /* line 73, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  .dashboard-module .is-not-complete,
+  .dashboard-module .is-locked {
+    display: none;
+  }
+  /* line 78, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  .dashboard-module .actions {
+    display: none;
+  }
+  /* line 82, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  .dashboard-module header[role=print] {
+    display: block !important;
+    page-break-after: always;
+  }
+  /* line 88, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  .dashboard-module h2:before {
+    content: '\e632';
+    font-family: "icomoon";
+    font-size: 65px;
+    color: #f16060;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -64px;
+  }
+  /* line 101, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  .dashboard-module .module-list header {
+    background-color: none;
+    color: #f16060;
+    text-align: center;
+  }
+  /* line 109, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  .dashboard-module .module-list .header > .inner {
+    padding-top: 90px;
+  }
+  /* line 114, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  .dashboard-module .module-list .header h2 {
+    float: none;
+  }
+  /* line 119, ../../resources/assets/scss/dashboard/_dashboard-printstyle.scss */
+  .dashboard-module .module-list li {
+    page-break-before: always;
+    border: 0 !important;
+  }
+}
 /* line 1, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums {
   background: url('../img/home-background.png?1439760487') no-repeat center center;
@@ -4112,28 +4237,28 @@ li.is-unlocked.is-complete.is-open .inner-padding {
   border-right: 1px solid #F89594;
 }
 @media (max-width: 620px) {
-  /* line 76, ../../resources/assets/scss/forum/_forum.scss */
+  /* line 81, ../../resources/assets/scss/forum/_forum.scss */
   .container.forums .forum-navigator ul.links .dashboard {
     display: none;
   }
 }
-/* line 84, ../../resources/assets/scss/forum/_forum.scss */
+/* line 89, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums header {
   padding-top: 50px;
   max-width: 445px;
   margin: 60px auto;
 }
-/* line 89, ../../resources/assets/scss/forum/_forum.scss */
+/* line 94, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums header .dots {
   margin: 40px auto;
 }
 @media (max-width: 620px) {
-  /* line 93, ../../resources/assets/scss/forum/_forum.scss */
+  /* line 98, ../../resources/assets/scss/forum/_forum.scss */
   .container.forums header h1.plain {
     margin-top: 20px;
   }
 }
-/* line 100, ../../resources/assets/scss/forum/_forum.scss */
+/* line 105, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums .actions {
   margin: 15px 0 30px;
 }
@@ -4144,7 +4269,7 @@ li.is-unlocked.is-complete.is-open .inner-padding {
     padding: 0;
   }
 }
-/* line 109, ../../resources/assets/scss/forum/_forum.scss */
+/* line 114, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums > .inner {
   position: relative;
   background: rgba(255, 255, 255, 0.9);
@@ -4156,12 +4281,12 @@ li.is-unlocked.is-complete.is-open .inner-padding {
   padding: 0 20px 40px;
 }
 @media (max-width: 620px) {
-  /* line 109, ../../resources/assets/scss/forum/_forum.scss */
+  /* line 114, ../../resources/assets/scss/forum/_forum.scss */
   .container.forums > .inner {
     vertical-align: inherit;
   }
 }
-/* line 124, ../../resources/assets/scss/forum/_forum.scss */
+/* line 129, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums > .inner .content {
   position: relative;
   max-width: 645px;
@@ -4172,12 +4297,12 @@ li.is-unlocked.is-complete.is-open .inner-padding {
   color: #252e33;
 }
 @media (max-width: 500px) {
-  /* line 124, ../../resources/assets/scss/forum/_forum.scss */
+  /* line 129, ../../resources/assets/scss/forum/_forum.scss */
   .container.forums > .inner .content {
     width: 100%;
   }
 }
-/* line 139, ../../resources/assets/scss/forum/_forum.scss */
+/* line 144, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums input {
   margin: 8px 0;
   height: 72px;
@@ -4213,38 +4338,38 @@ ul.comments-list ul.comments-list:before {
   /* line 13, ../../resources/assets/scss/forum/_comment.scss */
   ul.comments-list ul.comments-list:before {
     left: 7px;
-    top: 25px;
     font-size: 10px;
   }
 }
-/* line 28, ../../resources/assets/scss/forum/_comment.scss */
+/* line 27, ../../resources/assets/scss/forum/_comment.scss */
 ul.comments-list ul.comments-list ul.comments-list {
   margin-left: 20px;
 }
-/* line 31, ../../resources/assets/scss/forum/_comment.scss */
+/* line 30, ../../resources/assets/scss/forum/_comment.scss */
 ul.comments-list ul.comments-list ul.comments-list ul.comments-list {
   margin-left: 20px;
 }
-/* line 34, ../../resources/assets/scss/forum/_comment.scss */
+/* line 33, ../../resources/assets/scss/forum/_comment.scss */
 ul.comments-list ul.comments-list ul.comments-list ul.comments-list ul.comments-list {
   margin-left: 0;
 }
 
-/* line 42, ../../resources/assets/scss/forum/_comment.scss */
+/* line 41, ../../resources/assets/scss/forum/_comment.scss */
 li.comment {
   margin-top: 10px;
 }
-/* line 45, ../../resources/assets/scss/forum/_comment.scss */
+/* line 44, ../../resources/assets/scss/forum/_comment.scss */
 li.comment .inner {
   border: 2px solid #c5c5c5;
   position: relative;
   padding: 20px;
 }
-/* line 50, ../../resources/assets/scss/forum/_comment.scss */
+/* line 49, ../../resources/assets/scss/forum/_comment.scss */
 li.comment .inner p {
   margin-bottom: 0;
   padding: 10px 0;
   color: #8E8E8E;
+  word-break: break-word;
 }
 
 /* line 59, ../../resources/assets/scss/forum/_comment.scss */

@@ -59,7 +59,7 @@
                 </header>
 
                 <div class="content">
-                    <p>Return <a href="#">Home</a></p>
+                    <p>Return to you <a href="{{ route('dashboard') }}">Dashboard</a></p>
                 </div>
 
             </div>

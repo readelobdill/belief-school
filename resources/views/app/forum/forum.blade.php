@@ -7,7 +7,7 @@
                 <h2>Forum</h2>
                 <ul class="links">
                     <li class="module">
-                        <a href="{{route('modules.view', [$module->slug])}}">Module {{$module->order - 1}} - {{$module->name}}</a>
+                        <a href="{{route('modules.view', [$module->slug])}}">Module {{$module->order - 1}} <span>- {{$module->name}}</span></a>
                     </li>
                     <li class="dashboard">
                         <a href="{{route('dashboard')}}">Dashboard</a>
