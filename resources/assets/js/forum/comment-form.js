@@ -24,6 +24,7 @@ export default class CommentForm extends EventEmitter {
             return;
         }
         this.submitting = true;
+        this.emit('comment:sending');
         client.replyTo(this.form.attr('action'), serializeForm(this.form)).then((response) => {
             return response.text()
         }).then((text) => {
@@ -34,14 +35,21 @@ export default class CommentForm extends EventEmitter {
 
     show() {
         this.form.removeClass('is-hidden');
+        this.form.find('textarea').focus();
     }
 
     hide() {
         this.form.addClass('is-hidden');
+        this.form.find('textarea').blur();
     }
 
     toggle() {
         this.form.toggleClass('is-hidden');
-        console.log(this.form);
+        if(this.form.hasClass('is-hidden')) {
+            this.form.find('textarea').blur();
+        } else {
+            this.form.find('textarea').focus();
+        }
+
     }
 }
