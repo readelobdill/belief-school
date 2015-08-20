@@ -18,6 +18,10 @@ export default class Comment {
         this.replyForm.on('comment:new', (comment) => {
             this.addNewComment(comment)
         });
+        this.replyForm.on('comment:sending', () => {
+            this.replyForm.hide();
+            this.comment.addClass('comment-is-loading');
+        })
     }
 
     reply() {
@@ -36,7 +40,8 @@ export default class Comment {
 
         $commentList.append($comment);
         CommentStore.emit('comment:added', new Comment($comment, this.forum));
+        this.comment.removeClass('comment-is-loading');
 
-        this.replyForm.hide();
+
     }
 }
