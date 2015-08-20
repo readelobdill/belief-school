@@ -71,6 +71,11 @@
 
             .module {
                 border-right: 1px solid #F89594;
+                span {
+                    @include breakpoint($break-620) {
+                        //display:
+                    }
+                }
             }
 
             .dashboard {

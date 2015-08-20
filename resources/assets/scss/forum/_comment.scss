@@ -20,7 +20,6 @@ ul.comments-list {
 
             @include breakpoint($break-620) {
                 left: 7px;
-                top: 25px;
                 font-size: 10px;
             }
         }
@@ -51,6 +50,7 @@ li.comment {
             margin-bottom: 0;
             padding: 10px 0;
             color: $forumGrey;
+            word-break: break-word;
         }
     }
 }
