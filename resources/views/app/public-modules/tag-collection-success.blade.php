@@ -5,14 +5,14 @@
         <div class="inner">
             <header>
                 <h1 class="title">
-                    Write a few words about {{$moduleUser->user->first_name}}
+                   Thank you for writing a words about {{$moduleUser->user->first_name}}
                 </h1>
             </header>
 
             <section class="tag-cloud">
                 <div class="inner">
                     <div class="content">
-                        Thank you
+                        It is appreciated.
                     </div>
                 </div>
             </section>
