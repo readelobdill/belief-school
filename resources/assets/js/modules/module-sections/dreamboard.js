@@ -39,8 +39,6 @@ export default class Dreamboard extends Text {
     }
 
     submit() {
-        //this.showComplete();
-
         let url = this.module.getUpdateUrl();
         let data = {};
         if(this.section.find('.has-image').length == 13) {
