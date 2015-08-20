@@ -3,6 +3,6 @@
         <textarea name="body"></textarea>
     </div>
     <div class="actions">
-        <button class="button">Submit Comment</button>
+        <button class="button small">Submit Comment</button>
     </div>
 </form>

@@ -23,18 +23,24 @@ $gutter: 20px;
 // breakpoints
 $breakpoint-default-feature: 'max-width';
 $break-620 : 620px;
+
     // window paddi@ng collapses,
     // menu icon movs top left
     // question-nav moves to left and side
     // main logo turns responsive
     // auth login background turns white
     // dashboard titles go to centered
+    // forum title aligns left;
 
 $brk-xsmall : 400px;
     // dropdown arrow on dashboard: ; changes.
 
 $brk-small : 500px;
     // content has text width 100%
+    // dashboard headings collapse.
+
+$brk-550 : 550px;
+    //custom size for forum titles to stack.
 
 $break-800 : 800px;
     // indicator folds down
@@ -57,6 +63,7 @@ $brk-xlarge : 1280px;
 $break-1024 : 1024px;
     // fake-email gets smaller.
 
+// global styles
 .is-hidden-g {
     display: none;
 }

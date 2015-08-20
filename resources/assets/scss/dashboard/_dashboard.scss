@@ -4,7 +4,7 @@
     background-attachment: fixed;
     padding: 50px;
 
-    @include breakpoint($brk-small) {
+    @include breakpoint($break-620) {
         width: 100%;
         padding: 0;
     }
@@ -14,13 +14,13 @@
     background: rgba(255, 255, 255, 0.9);
     padding: 40px $gutter 60px;
 
-    h1.plain {
-        margin-bottom: 25px;
-    }
-
     @include breakpoint($brk-small) {
         width: 100%;
         padding: 40px $gutter;
+    }
+
+    h1.plain {
+        margin-bottom: 25px;
     }
 
     header {
@@ -28,7 +28,7 @@
     }
 
     > .inner {
-        .content {
+        >.content {
             position: relative;
             //max-width: 920px;
             width: 100%;
@@ -58,6 +58,10 @@
 
     .actions {
         text-align:center;
+
+        @include breakpoint($break-620) {
+            width: 100%;
+        }
     }
 
     p {
@@ -97,8 +101,14 @@
                 }
             }
 
+            ul.actions li.forum {
+                border-right: none !important;
+            }
+
             ul.actions li.arrow {
-                visibility: hidden;
+                @include breakpoint($break-620) {
+                    display: none !important;
+                }
             }
     }
 
@@ -108,9 +118,13 @@
         float: left;
         padding: 6px 20px;
 
+        @include breakpoint(670px) {
+            font-size: 14px;
+        }
+
         @include breakpoint($break-620) {
-            font-size: 12px;
-            text-align: left;
+            width: 100%;
+            text-align: center;
             padding: 7px 10px;
         }
 
@@ -132,7 +146,7 @@ ul.actions {
         display: inline-block;
 
         @include breakpoint($break-620) {
-            display: block;
+            //display: block;
         }
 
         &.arrow {
@@ -150,8 +164,7 @@ ul.actions {
             border-right: 1px solid #F89594;
 
             @include breakpoint($break-620) {
-                border-left: 1px solid #F89594;
-                border-bottom: 1px solid #F89594;
+                border: none;
             }
 
             a.forum-icon {
@@ -196,7 +209,7 @@ ul.actions {
                 height: 100%;
 
                 @include breakpoint($break-620) {
-                    display: none;
+                    display: none !important;
                 }
             }
 
@@ -210,13 +223,13 @@ ul.actions {
                 position: absolute;
                 font-family: $icon;
                 content: "\e621";
-                left: -27px;
-                top: -9px;
+                // left: -27px;
+                // top: -9px;
                 font-size: 16px;
 
                 @include breakpoint($break-620) {
-                    top: 10px !important;
-                    left: -26px !important;
+                    // top: ;
+                    // left: ;
                 }
             }
 
@@ -378,10 +391,14 @@ ul.module-list {
             .actions {
                 li.forum {
                     border-right: 1px solid #F89594 !important;
+
+                    @include breakpoint($break-620) {
+                        border: none !important;
+                    }
                 }
 
-                @include breakpoint($brk-xsmall) {
-                    float: none;
+                @include breakpoint($brk-small) {
+                    width: 100%;
                 }
             }
         }
@@ -412,13 +429,27 @@ ul.module-list {
                 li.unlock-countdown {
                     padding: 8.5px 15px;
 
+                    @include breakpoint($brk-small) {
+                        width: 100%;
+                    }
+
                     &:before {
                         left: 0;
                         top: inherit;
+
+                        @include breakpoint($break-620) {
+                            left: inherit;
+                            top: 0;
+                            position: relative;
+                        }
                     }
                 }
                 li.arrow {
                     visibility: hidden;
+
+                    @include breakpoint($break-620) {
+                        display: none;
+                    }
                 }
             }
         }
