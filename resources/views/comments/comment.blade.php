@@ -11,7 +11,7 @@
     <div class="comment-creation-date">{{$comment->created_at->diffForHumans()}}</div>
     <div class="comment-username"><strong>{{$comment->user->username}}</strong> said:</div>
 
-    <p>{{$comment->body}}</p>
+    <p>{!! $comment->body !!}</p>
 
     <a href="#" data-id="{{$comment->id}}" class="reply">Reply</a>
 

@@ -25,6 +25,6 @@ class Comment extends \Lanz\Commentable\Comment {
 
     public function getBodyAttribute($value) {
         $linkify = new Linkify();
-        return $linkify->process($value);
+        return $linkify->process(e($value));
     }
 }
