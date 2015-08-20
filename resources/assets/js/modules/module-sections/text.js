@@ -21,6 +21,7 @@ class TextSection extends ModuleSection {
             animate.to(this.section.find('.inner'), 0, {scrollTo: {y: Math.ceil(this.scrollPosition)}});
         });
         //this.updateTextScroll();
+
     }
 
     updateTextScroll() {
@@ -33,11 +34,15 @@ class TextSection extends ModuleSection {
     setup() {
         super.setup();
         this.updateHeight();
+        $(window).on('resize.text', () => {
+            this.updateHeight();
+        })
     }
 
     teardown() {
         super.teardown();
         cancelAnimationFrame(this.animationFrame);
+        $(window).off('resize.text');
     }
 
     open() {
