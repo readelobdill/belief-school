@@ -5,10 +5,9 @@
                     Great job! Asking for feedback takes courage; you are going to learn a lot about courage over the course of your Belief School journey,
                 </h1>
 
-                <p class="annotation">
-                    Having trouble opening email?<br>
-                    Copy/paste link below into own email instead<br>
-                    <a href="{{route('tagcloud', [$moduleUser->secret])}}">{{route('tagcloud', [$moduleUser->secret])}}</a>
+                <p class="annotation">Having trouble opening the email?<br />
+                    Copy/paste link below into own email instead<br />
+                    <strong>{{route('tagcloud', [$moduleUser->secret])}}</strong>
                 </p>
 
                 <p>All of the answers will be collated and appear in your Dashboard once your recipients begin to send their answers, to you so you can start to build a picture of the awesomness you bring to the world.</p>

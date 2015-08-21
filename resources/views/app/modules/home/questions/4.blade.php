@@ -1,6 +1,6 @@
 <div class="content">
     <h1 class="title">
-        <span data-arc="85"><span class="mid-dot">&middot;</span> What do you want? <span class="mid-dot">&middot;</span></span>
+        <span data-arc="150"><span class="mid-dot">&middot;</span> What do you want? <span class="mid-dot">&middot;</span></span>
         What do<br>
         you really want?
     </h1>

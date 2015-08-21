@@ -47,7 +47,7 @@
 
 
                             <div class="form-row">
-                                <p class="center"><button type="submit" class="button" style="margin-right: 15px;">Login</button></p>
+                                <p class="center"><button type="submit" class="button small" style="margin-right: 15px;">Login</button></p>
 
                                 <p class="center"><a href="/password/email">Forgot Your Password?</a></p>
 
