@@ -27,3 +27,12 @@ blockquote.center{
     text-align: center;
     border-image: none;
 }
+
+.you-chose {
+    font-size: 22px;
+    span {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+}
