@@ -40,7 +40,7 @@
         </div>
 
         <div class="actions">
-            <a href="#" class="button {{count(get_object_vars($moduleUser->data)) == 13 ? '' : 'is-disabled'}}" data-save-module>Save to dashboard </a>
+            <a href="#" class="button {{$moduleUser->data && count(get_object_vars($moduleUser->data)) == 13 ? '' : 'is-disabled'}}" data-save-module>Save to dashboard </a>
         </div>
     </div>
 </div>
