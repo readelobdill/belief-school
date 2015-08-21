@@ -50,19 +50,11 @@ h1.plain {
 .auth {
     position:fixed;
     top: 0;
-    right: 50px;
+    right: 0;
     z-index: 99;
     height: 50px;
     line-height: 50px;
-
-    // @include breakpoint($brk-small) {
-    //     background-color: white;
-    //     width: 100%;
-    //     right: 0;
-    //     text-align: right;
-    //     padding: 0 20px;
-    //     z-index: 3;
-    // }
+    padding-right: 20px;
 
     a {
         color: $fontColour;
@@ -70,10 +62,7 @@ h1.plain {
         font-weight: normal;
         position: relative;
 
-
-
         &.logout {
-
             &:before {
                 $size: 15px;
                 content: '\e622';
@@ -88,7 +77,6 @@ h1.plain {
         }
 
         &.login {
-
             &:before {
                 $size: 15px;
                 content: '\e621';

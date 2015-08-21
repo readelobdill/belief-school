@@ -8,14 +8,22 @@
         visibility: hidden;
         min-width: 320px;
 
+        &.background-video {
+            > .inner {
+                @include breakpoint($break-620) {
+                    padding: 80px $gutter;
+                }
+            }
+        }
+
         > .inner {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0 $gutter;
+            padding: 40px $gutter;
 
-            @include breakpoint($brk-small) {
-                padding: 40px $gutter;
+            @include breakpoint($break-620) {
+                padding: 80px $gutter;
                 align-items: inherit;
             }
         }
@@ -85,7 +93,7 @@
 
     &.module-section {
         > .inner {
-            display:block;
+            display: block;
         }
     }
 
@@ -97,11 +105,11 @@
             font-size: 17px;
             line-height: 26px;
             color: $fontColour;
-            padding: 40px 0 60px 0;
+            padding: 0 0 60px 0;
 
             @include breakpoint($brk-small) {
                 width: 100%;
-                padding-top: 40px;
+                //padding-top: 40px;
                 //padding: 60px $gutter $gutter; maybe this should be there, not sure need to check. There is a 20px padding on the inner. (line 15)
                 //another issue where there is an extra 60px more than the top should be.
                 //looks fine on 'un-stuck'
@@ -180,8 +188,16 @@
         opacity: 0;
         visibility: hidden;
 
+        @include breakpoint($break-620) {
+            align-items: inherit;
+        }
+
         >.inner {
-            padding: 0 $gutter;
+            padding: 40px $gutter;
+
+            @include breakpoint($break-620) {
+                padding-top: 80px;
+            }
         }
     }
 }

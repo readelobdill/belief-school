@@ -265,8 +265,9 @@ ul.actions {
 }
 
 .module-welcome {
-    &.page-icon:after {
-        content: '\e601';
+    &.module-icon:after,
+    .page-icon:after {
+        content: "\e601";
     }
 }
 

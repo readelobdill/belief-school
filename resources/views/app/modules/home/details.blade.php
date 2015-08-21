@@ -1,7 +1,7 @@
 <div class="inner">
     <div class="content">
        <h1 class="title">
-           <span data-arc="100">&middot; Whatever the reason &middot;</span>
+           <span data-arc="150">&middot; Whatever the reason &middot;</span>
            I don't<br>
            believe you
        </h1>

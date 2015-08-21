@@ -30,7 +30,9 @@
                     </div>
                 </h2>
                 <div class="answer">
-                    This is just the beginning of your own personal journey - writing out your limiting beliefs may seem daunting but we are about to turn those negative thoughts around with affirmation!
+                    <p>Whatever your story, whatever that constant dialogue in your head is saying, it is keeping you stuck, and it is not serving you in any way. It is familiar so it is comfortable but it is keeping you trapped. It is now time to let go of any story that you are telling yourself that does not take responsibility for where you are in your life right now.</p>
+
+                    <p>We are going to work very hard to teach you to operate in your present and focus on what you want, not what you don’t want. No excuses, no victim – just intention and action. Agreed? O.K?</p>
                 </div>
             </li>
             <li>
