@@ -117,6 +117,7 @@
         position: relative;
         float: left;
         padding: 6px 20px;
+        cursor:pointer;
 
         @include breakpoint(670px) {
             font-size: 14px;
