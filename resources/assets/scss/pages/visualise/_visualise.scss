@@ -7,8 +7,6 @@
     }
 }
 
-
-
 .categories {
     width: 890px;
     margin-left: -222px;
@@ -75,6 +73,7 @@
 
     .board {
         margin-bottom: 60px;
+        @include pie-clearfix();
     }
 
     .button {
@@ -352,9 +351,9 @@
     height: 17px;
     line-height: 17px;
     margin-top: 40px;
-    a {
 
-        display:inline-block;
+    a {
+        display: inline-block;
         font-size: 12px;
         color: $fontColour;
         text-decoration: none;
