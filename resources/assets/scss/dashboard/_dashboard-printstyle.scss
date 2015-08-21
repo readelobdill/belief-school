@@ -111,12 +111,6 @@
                     text-align: center;
                 }
 
-                .content {
-                    .inner-padding {
-                        opacity: 1;
-                    }
-                }
-
                 .header {
 
                     > .inner {
@@ -129,7 +123,7 @@
                     }
                 }
 
-                li {
+                > li {
                     page-break-before: always;
                     border: 0 !important;
                     .content {
@@ -139,6 +133,27 @@
 
             }
         }
+
+
+
+    li.is-unlocked.is-complete {
+
+        .content {
+            max-height: 700px;
+            transition: 0s ;
+            overflow: visible;
+        }
+
+        .inner-padding {
+            opacity: 1;
+            transition: none;
+
+        }
+    }
+
+
+
+
 }
 
 

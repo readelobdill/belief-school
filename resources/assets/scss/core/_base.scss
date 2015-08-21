@@ -48,13 +48,16 @@ h1.plain {
 }
 
 .auth {
-    position:fixed;
+    position: fixed;
     top: 0;
-    right: 0;
+    right: 50px;
     z-index: 99;
     height: 50px;
     line-height: 50px;
-    padding-right: 20px;
+
+    @include breakpoint($break-620) {
+        right: 20px;
+    }
 
     a {
         color: $fontColour;
