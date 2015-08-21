@@ -5,7 +5,6 @@
                 Congratulations, you've made it through!
             </h1>
             <p>You've now completed your journey through Belief School. Come back from time to time to get inspiration from your dashboard and encouragement from our forums. This is your supportive community,</p>
-            <div class="dots"></div>
             <div class="actions">
                 <a href="#" class="button" data-complete-module>Save to dashboard!</a>
             </div>
