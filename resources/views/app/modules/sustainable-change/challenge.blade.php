@@ -23,12 +23,12 @@
 
         <div class="dots"></div>
 
-        <h1 class="plain margin-bottom">
-            Throughout your Belief School journey you chose to demonstrate to yourself that you can follow through.
-        </h1>
+        <p class="center">
+            <strong>Throughout your Belief School journey you chose to demonstrate to yourself that you can follow through.</strong>
+        </p>
 
-        <blockquote class="center">
-            You chose:<br />
+        <blockquote class="center you-chose">
+            <span>You chose:</span>
             <em>“{{ $requiredModule->data[0]->challenge }}”</em>
         </blockquote>
 

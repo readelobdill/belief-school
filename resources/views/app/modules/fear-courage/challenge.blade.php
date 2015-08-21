@@ -89,8 +89,9 @@
         <p>
             Put this in perspective. You may not get the exact outcome you wanted, but that doesn’t matter – this exercise is not about the outcome, it is about the action of not letting your fear control you.
         </p>
+        <h1 class="plain">Make your declaration!</h1>
         <div class="actions">
-            <a href="#" class="button" data-save-module>Make your declaration! <br />Save it into your dashboard now!</a>
+            <a href="#" class="button" data-save-module>Save it into your dashboard now!</a>
         </div>
 
 

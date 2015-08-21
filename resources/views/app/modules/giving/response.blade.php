@@ -2,20 +2,16 @@
     <div class="content">
         <h1 class="title">Well done!</h1>
 
-        <blockquote>
+        <p class="center bold">
             On the other side of fear is courage. Courage is one of those characteristics that are right up there with Humility, Joy and kindness. There is no downside to courage.
-        </blockquote>
-
-        <h1 class="plain">
-            Get It Out&hellip;
-        </h1>
-
-        <p>
-            Once you've faced your fears you're going to be feeling A LOT.
         </p>
 
+        <h1 class="plain">
+            Giving Feels Good
+        </h1>
+
         <p class="center">
-            Write out how feel after you faced each of the three fears below&hellip;
+            Fill in how you felt when you had completed the three things you did for someone else  and what happened if anything?
         </p>
 
         <form action="" class="positive-affirmations">
