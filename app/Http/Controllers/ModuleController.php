@@ -4,6 +4,7 @@ use App\Models\Module;
 use App\Models\ModuleUser;
 use App\Services\CommentRenderer;
 use App\Services\DreamboardRenderer;
+use App\Services\ModuleCompletion;
 use Carbon\Carbon;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
@@ -169,6 +170,9 @@ class ModuleController extends Controller {
 
         }
 
+
+
+
         if(empty($hasModule)) {
             $this->auth->user()->modules()->attach($module, [
                 'created_at' => $now,
@@ -188,6 +192,8 @@ class ModuleController extends Controller {
         if($moduleUser->complete) {
             abort(404);
         }
+
+
 
         switch($module->type) {
             case 'tag-cloud':
@@ -241,6 +247,11 @@ class ModuleController extends Controller {
                     break;
                 }
             default:
+                $moduleValidator = new ModuleCompletion($module);
+                if(!$moduleValidator->isValid($moduleUser->step, $this->request->input())) {
+                    abort(422);
+                }
+
                 $data = $moduleUser->data;
                 if(empty($data)) {
                     $data = [];
