@@ -52,11 +52,11 @@ class TextSection extends ModuleSection {
     }
 
     updateHeight() {
-        console.log('updateHeight');
         let height = this.section.find('.content').outerHeight();
-        let padding = parseInt(this.section.css('padding-top'));
 
-        $('body').css({minHeight: height + (padding * 2)});
+        let padding = parseInt(this.section.css('padding-top'));
+        let innerPadding = parseInt(this.section.find('.inner').css('padding-top'));
+        $('body').css({minHeight: height + (padding * 2) + (innerPadding * 2)});
     }
 
 }
