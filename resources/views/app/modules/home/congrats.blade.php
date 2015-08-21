@@ -5,7 +5,6 @@
                 Some copy about thanks for paying and welcome to belief school
             </h1>
             <p>Lorum</p>
-            <div class="dots"></div>
             <div class="actions">
                 <a href="{{route('modules.view', ['welcome'])}}" class="button">Welcome module link</a>
             </div>
