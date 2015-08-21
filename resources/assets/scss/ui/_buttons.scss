@@ -20,7 +20,7 @@ button.button {
     font-weight: 600;
     display: inline-block;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
     font-size: 15px; //this was 17px;
     border: 0;
     @extend %brandon-grotesque;
@@ -51,7 +51,7 @@ button.button {
         right: 20px;
         content: "";
         transform-origin: 100% 50%;
-        transition: transform $transition, width $transition;
+        transition: transform $transition, width $transition, right $transition, margin $transition, background-color $transition;
     }
 
     &:after {
@@ -82,6 +82,26 @@ button.button {
         &:before {
             transform: rotate(135deg);
             width: 18px;
+        }
+    }
+
+    &.is-disabled {
+        background: $darkGrey;
+        cursor: default;
+        color: #ECECEC;
+        &:after, &:before {
+            transform-origin: 50% 50%;
+            width: 18px;
+            margin-top: -2px;
+            right: 10px;
+            background-color: #ECECEC;
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+
+        &:before {
+            transform: rotate(45deg);
         }
     }
 

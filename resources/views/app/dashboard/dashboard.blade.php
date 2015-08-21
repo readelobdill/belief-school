@@ -38,7 +38,7 @@
                             @if($mod->pivot && $mod->pivot->complete)
 
                                 {{-- Unlocked and completed --}}
-                                <li class="module-{{ $mod->slug }} is-unlocked is-complete" data-type="{{$mod->slug}}">
+                                <li class="module-{{ $mod->slug }} is-unlocked is-complete {{(!isset($modules[$key+1]) || (isset($modules[$key+1]) && (!$modules[$key+1]->pivot || !$modules[$key+1]->pivot->complete)) ? 'is-open' : '')}}" data-type="{{$mod->slug}}">
 
                                     <div class="header">
                                         <div class="inner">

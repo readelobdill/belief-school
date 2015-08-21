@@ -5,8 +5,9 @@ import client from 'sources/ModuleClient';
 import TweenMax from 'gsap/src/uncompressed/TweenMax';
 import TimelineLite from 'gsap/src/uncompressed/TimelineLite';
 import Q from 'q';
+import Text from './text';
 
-export default class CongratsSection extends ModuleSection {
+export default class CongratsSection extends Text {
 
 
     open() {
@@ -26,11 +27,11 @@ export default class CongratsSection extends ModuleSection {
 
     setup() {
         super.setup();
-        $('body').css('min-height', 0);
     }
 
 
     setupEventListeners() {
+        super.setupEventListeners();
         this.section.on('click','[data-complete-module]', this.completeModule.bind(this))
     }
 
@@ -77,5 +78,18 @@ export default class CongratsSection extends ModuleSection {
             position += 0.05;
         });
         return timeline;
+    }
+
+    updateHeight() {
+        let height;
+        if(this.module.isComplete()) {
+            height = this.section.find('.post-complete > .inner').outerHeight();
+        } else {
+            height = this.section.find('.pre-complete > .inner').outerHeight();
+        }
+
+        let padding = parseInt(this.section.css('padding-top'));
+        console.log(height);
+        $('body').css({minHeight: height + (padding * 2)});
     }
 }

@@ -12,10 +12,10 @@ export default class Dreamboard extends Text {
 
     setupEventListeners() {
         super.setupEventListeners();
-        this.toggleSubmit();
         this.section.on('change', '.image input', (e) => {
             if(e.currentTarget.files.length > 0) {
                 this.submitImage(e.currentTarget.files[0], $(e.currentTarget).attr('name'));
+
             }
         });
 
@@ -39,8 +39,6 @@ export default class Dreamboard extends Text {
     }
 
     submit() {
-        //this.showComplete();
-
         let url = this.module.getUpdateUrl();
         let data = {};
         if(this.section.find('.has-image').length == 13) {

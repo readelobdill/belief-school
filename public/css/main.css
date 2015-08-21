@@ -240,7 +240,7 @@ h1.plain.margin-bottom {
 
 /* line 42, ../../resources/assets/scss/core/_base.scss */
 .dots {
-  background: url('../img/icons/bullets.svg?1439760487') no-repeat top left;
+  background: url('../img/icons/bullets.svg?1436844418') no-repeat top left;
   width: 70px;
   height: 6px;
   background-size: cover;
@@ -289,8 +289,8 @@ h1.plain.margin-bottom {
 
 @font-face {
   font-family: 'SantEliaRoughAlt-BoldThr';
-  src: url('../fonts/2E98A4_0_0.eot?1439760487');
-  src: url('../fonts/2E98A4_0_0.eot?&1439760487#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1439760487') format("woff2"), url('../fonts/2E98A4_0_0.woff?1439760487') format("woff"), url('../fonts/2E98A4_0_0.ttf?1439760487') format("truetype");
+  src: url('../fonts/2E98A4_0_0.eot?1436093214');
+  src: url('../fonts/2E98A4_0_0.eot?&1436093214#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1436093222') format("woff2"), url('../fonts/2E98A4_0_0.woff?1436093214') format("woff"), url('../fonts/2E98A4_0_0.ttf?1436093212') format("truetype");
 }
 /* line 12, ../../resources/assets/scss/core/_fonts.scss */
 body, input[type=text], input[type=email], input[type=password], textarea, .title > span, .button, .pricing-container .title .price span, .pricing-container .title .gets {
@@ -1188,7 +1188,7 @@ button.button.small:after, button.button.small:before {
   font-weight: 600;
   display: inline-block;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
   font-size: 15px;
   border: 0;
 }
@@ -1203,7 +1203,7 @@ button.button.small:after, button.button.small:before {
 }
 /* line 38, ../../resources/assets/scss/ui/_buttons.scss */
 .button:hover {
-  background-color: #d95656;
+  background-color: #d85656;
   color: white;
 }
 /* line 44, ../../resources/assets/scss/ui/_buttons.scss */
@@ -1217,7 +1217,7 @@ button.button.small:after, button.button.small:before {
   right: 20px;
   content: "";
   transform-origin: 100% 50%;
-  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), width 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), width 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), right 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), margin 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 /* line 57, ../../resources/assets/scss/ui/_buttons.scss */
 .button:after {
@@ -1251,16 +1251,38 @@ button.button.small:after, button.button.small:before {
   width: 18px;
 }
 /* line 88, ../../resources/assets/scss/ui/_buttons.scss */
+.button.is-disabled {
+  background: #c5c5c5;
+  cursor: default;
+  color: #ECECEC;
+}
+/* line 92, ../../resources/assets/scss/ui/_buttons.scss */
+.button.is-disabled:after, .button.is-disabled:before {
+  transform-origin: 50% 50%;
+  width: 18px;
+  margin-top: -2px;
+  right: 10px;
+  background-color: #ECECEC;
+}
+/* line 99, ../../resources/assets/scss/ui/_buttons.scss */
+.button.is-disabled:after {
+  transform: rotate(-45deg);
+}
+/* line 103, ../../resources/assets/scss/ui/_buttons.scss */
+.button.is-disabled:before {
+  transform: rotate(45deg);
+}
+/* line 108, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked {
   background: #c5c5c5;
   cursor: default;
   color: #ECECEC;
 }
-/* line 93, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 113, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:before {
   display: none;
 }
-/* line 97, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 117, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:after {
   content: '\e621';
   font-size: 15px;
@@ -1270,7 +1292,7 @@ button.button.small:after, button.button.small:before {
   font-family: 'icomoon';
   left: 12px;
 }
-/* line 107, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 127, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:hover {
   background: #c5c5c5;
   color: #ECECEC;
@@ -1723,7 +1745,7 @@ button.button.small:after, button.button.small:before {
 
 /* line 1, ../../resources/assets/scss/pages/about/_about.scss */
 .container.about {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -2063,7 +2085,7 @@ button.button.small:after, button.button.small:before {
 
 /* line 1, ../../resources/assets/scss/pages/contact/_contact.scss */
 .container.contact {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3425,7 +3447,7 @@ blockquote.center {
 
 /* line 1, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
 .container.non-mod-page {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3482,7 +3504,7 @@ blockquote.center {
 
 /* line 1, ../../resources/assets/scss/pages/misc/_tag-cloud.scss */
 .container.non-mod-page {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3559,7 +3581,7 @@ section.account-section .content p {
 
 /* line 1, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .dash-background {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3730,7 +3752,7 @@ ul.actions li {
 /* line 152, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.actions li.arrow {
   padding: 8.5px 15px;
-  background: transparent url('../img/dashboard-arrow.svg?1439760487') center center no-repeat;
+  background: transparent url('../img/dashboard-arrow.svg?1439758397') center center no-repeat;
   position: relative;
   top: 3px;
   right: 3px;
@@ -4185,7 +4207,7 @@ li.is-unlocked.is-complete.is-open .inner-padding {
 }
 /* line 1, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
