@@ -240,7 +240,7 @@ h1.plain.margin-bottom {
 
 /* line 42, ../../resources/assets/scss/core/_base.scss */
 .dots {
-  background: url('../img/icons/bullets.svg?1439760487') no-repeat top left;
+  background: url('../img/icons/bullets.svg?1436844418') no-repeat top left;
   width: 70px;
   height: 6px;
   background-size: cover;
@@ -294,8 +294,8 @@ h1.plain.margin-bottom {
 
 @font-face {
   font-family: 'SantEliaRoughAlt-BoldThr';
-  src: url('../fonts/2E98A4_0_0.eot?1439760487');
-  src: url('../fonts/2E98A4_0_0.eot?&1439760487#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1439760487') format("woff2"), url('../fonts/2E98A4_0_0.woff?1439760487') format("woff"), url('../fonts/2E98A4_0_0.ttf?1439760487') format("truetype");
+  src: url('../fonts/2E98A4_0_0.eot?1436093214');
+  src: url('../fonts/2E98A4_0_0.eot?&1436093214#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1436093222') format("woff2"), url('../fonts/2E98A4_0_0.woff?1436093214') format("woff"), url('../fonts/2E98A4_0_0.ttf?1436093212') format("truetype");
 }
 /* line 12, ../../resources/assets/scss/core/_fonts.scss */
 body, input[type=text], input[type=email], input[type=password], textarea, .title > span, .button, .pricing-container .title .price span, .pricing-container .title .gets {
@@ -770,7 +770,6 @@ p a:hover {
   font-size: 17px;
   line-height: 26px;
   color: #252e33;
-  padding: 0 0 60px 0;
 }
 @media (max-width: 500px) {
   /* line 105, ../../resources/assets/scss/core/_module.scss */
@@ -778,22 +777,22 @@ p a:hover {
     width: 100%;
   }
 }
-/* line 123, ../../resources/assets/scss/core/_module.scss */
+/* line 121, ../../resources/assets/scss/core/_module.scss */
 .has-text .dots {
   margin: 60px auto;
 }
 @media (max-width: 500px) {
-  /* line 123, ../../resources/assets/scss/core/_module.scss */
+  /* line 121, ../../resources/assets/scss/core/_module.scss */
   .has-text .dots {
     margin: 40px auto;
   }
 }
-/* line 131, ../../resources/assets/scss/core/_module.scss */
+/* line 129, ../../resources/assets/scss/core/_module.scss */
 .has-text .actions {
   text-align: center;
 }
 
-/* line 136, ../../resources/assets/scss/core/_module.scss */
+/* line 134, ../../resources/assets/scss/core/_module.scss */
 .next-section {
   position: absolute;
   display: block;
@@ -808,41 +807,41 @@ p a:hover {
   border: 0;
   transform-origin: 50% 50%;
 }
-/* line 150, ../../resources/assets/scss/core/_module.scss */
+/* line 148, ../../resources/assets/scss/core/_module.scss */
 .next-section svg {
   width: 100%;
   height: 100%;
 }
-/* line 153, ../../resources/assets/scss/core/_module.scss */
+/* line 151, ../../resources/assets/scss/core/_module.scss */
 .next-section svg path {
   fill: white;
   transition: fill 0.3s ease;
 }
 
-/* line 162, ../../resources/assets/scss/core/_module.scss */
+/* line 160, ../../resources/assets/scss/core/_module.scss */
 .congrats-section h1 {
   margin-bottom: 40px;
   line-height: 28px;
   letter-spacing: 0.02em;
   max-width: 445px;
 }
-/* line 169, ../../resources/assets/scss/core/_module.scss */
+/* line 167, ../../resources/assets/scss/core/_module.scss */
 .congrats-section p {
   max-width: 445px;
   width: 100%;
   text-align: center;
   line-height: 26px;
 }
-/* line 176, ../../resources/assets/scss/core/_module.scss */
+/* line 174, ../../resources/assets/scss/core/_module.scss */
 .congrats-section blockquote {
   max-width: 445px;
 }
-/* line 180, ../../resources/assets/scss/core/_module.scss */
+/* line 178, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .actions {
   text-align: center;
   margin: 40px 0;
 }
-/* line 185, ../../resources/assets/scss/core/_module.scss */
+/* line 183, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .congrats-container {
   width: 100%;
   height: 100%;
@@ -856,28 +855,28 @@ p a:hover {
   visibility: hidden;
 }
 @media (max-width: 620px) {
-  /* line 185, ../../resources/assets/scss/core/_module.scss */
+  /* line 183, ../../resources/assets/scss/core/_module.scss */
   .congrats-section .congrats-container {
     align-items: inherit;
   }
 }
-/* line 201, ../../resources/assets/scss/core/_module.scss */
+/* line 199, ../../resources/assets/scss/core/_module.scss */
 .congrats-section .congrats-container > .inner {
   padding: 40px 20px;
 }
 @media (max-width: 620px) {
-  /* line 201, ../../resources/assets/scss/core/_module.scss */
+  /* line 199, ../../resources/assets/scss/core/_module.scss */
   .congrats-section .congrats-container > .inner {
     padding-top: 80px;
   }
 }
 
-/* line 211, ../../resources/assets/scss/core/_module.scss */
+/* line 209, ../../resources/assets/scss/core/_module.scss */
 .actions {
   text-align: center;
 }
 
-/* line 215, ../../resources/assets/scss/core/_module.scss */
+/* line 213, ../../resources/assets/scss/core/_module.scss */
 .down-arrow {
   border: 0;
   background: none;
@@ -887,17 +886,17 @@ p a:hover {
   display: inline-block;
   cursor: pointer;
 }
-/* line 224, ../../resources/assets/scss/core/_module.scss */
+/* line 222, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg {
   width: 100%;
   height: 100%;
 }
-/* line 227, ../../resources/assets/scss/core/_module.scss */
+/* line 225, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg path {
   fill: #f16060;
 }
 
-/* line 233, ../../resources/assets/scss/core/_module.scss */
+/* line 231, ../../resources/assets/scss/core/_module.scss */
 .indicator {
   position: fixed;
   top: 50%;
@@ -908,19 +907,19 @@ p a:hover {
   z-index: 99;
 }
 @media (max-width: 1120px) {
-  /* line 233, ../../resources/assets/scss/core/_module.scss */
+  /* line 231, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     width: 50px;
     height: 100px;
   }
 }
 @media (max-width: 620px) {
-  /* line 233, ../../resources/assets/scss/core/_module.scss */
+  /* line 231, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     display: none;
   }
 }
-/* line 251, ../../resources/assets/scss/core/_module.scss */
+/* line 249, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon {
   width: 50px !important;
   height: 50px;
@@ -928,16 +927,16 @@ p a:hover {
   padding: 8px;
   float: right;
 }
-/* line 259, ../../resources/assets/scss/core/_module.scss */
+/* line 257, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 262, ../../resources/assets/scss/core/_module.scss */
+/* line 260, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg path {
   fill: white;
 }
-/* line 269, ../../resources/assets/scss/core/_module.scss */
+/* line 267, ../../resources/assets/scss/core/_module.scss */
 .indicator .page-icon:after {
   position: relative;
   font-size: 35px;
@@ -946,7 +945,7 @@ p a:hover {
   top: 0;
   left: 0;
 }
-/* line 279, ../../resources/assets/scss/core/_module.scss */
+/* line 277, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon {
   width: 110px;
   height: 50px;
@@ -962,7 +961,7 @@ p a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 1120px) {
-  /* line 279, ../../resources/assets/scss/core/_module.scss */
+  /* line 277, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon {
     background-color: rgba(255, 255, 255, 0.9);
     width: 50px;
@@ -970,18 +969,18 @@ p a:hover {
     padding: 15px 12px;
   }
 }
-/* line 302, ../../resources/assets/scss/core/_module.scss */
+/* line 300, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon:hover svg path {
   fill: rgba(241, 96, 96, 0.6);
 }
-/* line 308, ../../resources/assets/scss/core/_module.scss */
+/* line 306, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 315, ../../resources/assets/scss/core/_module.scss */
+/* line 313, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
   stroke: #f16060;
@@ -991,23 +990,23 @@ p a:hover {
   transition: fill 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @media (max-width: 800px) {
-  /* line 308, ../../resources/assets/scss/core/_module.scss */
+  /* line 306, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon svg {
     margin: 2px auto;
   }
 }
-/* line 326, ../../resources/assets/scss/core/_module.scss */
+/* line 324, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon span {
   line-height: 21px;
 }
 @media (max-width: 1120px) {
-  /* line 326, ../../resources/assets/scss/core/_module.scss */
+  /* line 324, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon span {
     display: none;
   }
 }
 
-/* line 338, ../../resources/assets/scss/core/_module.scss */
+/* line 336, ../../resources/assets/scss/core/_module.scss */
 [data-current-section="0"] .indicator,
 [data-current-section="1"] .indicator {
   display: none;
@@ -1210,7 +1209,7 @@ button.button.small:after, button.button.small:before {
 }
 /* line 38, ../../resources/assets/scss/ui/_buttons.scss */
 .button:hover {
-  background-color: #d95656;
+  background-color: #d85656;
   color: white;
 }
 /* line 44, ../../resources/assets/scss/ui/_buttons.scss */
@@ -1752,7 +1751,7 @@ button.button.small:after, button.button.small:before {
 
 /* line 1, ../../resources/assets/scss/pages/about/_about.scss */
 .container.about {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -2092,7 +2091,7 @@ button.button.small:after, button.button.small:before {
 
 /* line 1, ../../resources/assets/scss/pages/contact/_contact.scss */
 .container.contact {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -2477,7 +2476,7 @@ div.jqcloud a {
 
 /* line 45, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud a:hover {
-  color: #F16060;
+  color: #E65F60;
 }
 
 /* line 46, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
@@ -2492,7 +2491,7 @@ div.jqcloud span.w10 {
 
 /* line 48, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w9 {
-  color: #F16060;
+  color: #E65F60;
 }
 
 /* line 49, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
@@ -2502,7 +2501,7 @@ div.jqcloud span.w8 {
 
 /* line 50, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
 div.jqcloud span.w7 {
-  color: #F16060;
+  color: #E65F60;
 }
 
 /* line 51, ../../resources/assets/scss/pages/boomerang/_cloud.scss */
@@ -3471,7 +3470,7 @@ blockquote.center {
 
 /* line 1, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
 .container.non-mod-page {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3528,7 +3527,7 @@ blockquote.center {
 
 /* line 1, ../../resources/assets/scss/pages/misc/_tag-cloud.scss */
 .container.non-mod-page {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3605,7 +3604,7 @@ section.account-section .content p {
 
 /* line 1, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .dash-background {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3781,7 +3780,7 @@ ul.actions li {
 /* line 156, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.actions li.arrow {
   padding: 8.5px 15px;
-  background: transparent url('../img/dashboard-arrow.svg?1439760487') center center no-repeat;
+  background: transparent url('../img/dashboard-arrow.svg?1439758397') center center no-repeat;
   position: relative;
   top: 3px;
   right: 3px;
@@ -4262,7 +4261,7 @@ li.is-unlocked.is-complete.is-open .inner-padding {
 }
 /* line 1, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
