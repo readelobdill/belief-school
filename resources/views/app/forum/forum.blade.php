@@ -16,7 +16,11 @@
             </div>
 
             <header>
-                <h1 class="plain">Welcome to the Know Your Amazing Self Forum</h1>
+                 <h1 class="title">
+                    <span data-arc="150">&middot; Welcome to the &middot;</span>
+                    {{$module->name}}
+                    <p class="gets">Forum</p>
+                </h1>
                 <p class="center">Get and give support in our friendly community environment, <strong>Feel free to share how you are feeling, challenges your faced and how you overcame them.</strong> This community is secure and only accessible to Paula Gosney and other people taking a journey... just like you.</p>
 
                 <div class="dots"></div>
