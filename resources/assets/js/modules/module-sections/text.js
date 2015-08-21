@@ -17,10 +17,10 @@ class TextSection extends ModuleSection {
         super.setupEventListeners();
         $(window).on('scroll', () => {
             this.scrollPosition = window.pageYOffset;
-            var winH = $(window).height();
-            animate.to(this.section.find('.inner'), 0, {scrollTo: {y: Math.ceil(this.scrollPosition)}});
+            //var winH = $(window).height();
+            //animate.to(this.section.find('.inner'), 0, {scrollTo: {y: Math.ceil(this.scrollPosition)}});
         });
-        //this.updateTextScroll();
+        this.updateTextScroll();
 
     }
 
