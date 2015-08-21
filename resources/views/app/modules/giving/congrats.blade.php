@@ -5,7 +5,6 @@
                 The more you give the more you get!!
             </h1>
             <p>You will be feeling really good right now, so continue the postitivity you are sharing with those around you - try doing one little thing a day and quickly this will become a habit in your life..</p>
-            <div class="dots"></div>
             <div class="actions">
                 <a href="#" class="button" data-complete-module>What's next?</a>
             </div>

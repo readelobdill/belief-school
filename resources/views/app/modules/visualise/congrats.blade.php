@@ -11,7 +11,6 @@
                 <a data-share href="//www.pinterest.com/pin/create/button/?{{http_build_query(['url' => route('module.share', [$moduleUser->secret]), 'media' => route('dreamboard.show', [$moduleUser->secret]), 'description' => 'My Dreamboard'])}}" class="pinterest">@include('app/partials/icons/pinterest')Share on Pinterest</a>
                 <a target="_blank" href="{{route('dreamboard.show', [$moduleUser->secret])}}" class="download">@include('app/partials/icons/download')Download</a>
             </div>
-            <div class="dots"></div>
             <div class="actions">
                 <a href="#" class="button" data-complete-module>What's next?</a>
             </div>
