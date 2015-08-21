@@ -182,7 +182,7 @@ class ModuleController extends Controller {
 
         $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first()->pivot;
 
-        if($moduleUser->step > $module->total_parts) {
+        if($moduleUser->step >= $module->total_parts) {
             abort(404);
         }
         if($moduleUser->complete) {
