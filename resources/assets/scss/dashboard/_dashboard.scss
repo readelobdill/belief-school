@@ -16,7 +16,6 @@
 
     @include breakpoint($brk-small) {
         width: 100%;
-        padding: 40px $gutter;
     }
 
     h1.plain {
@@ -37,7 +36,7 @@
             line-height: 26px;
             color: $fontColour;
 
-            @include breakpoint($brk-small) {
+            @include breakpoint($break-620) {
                 width: 100%;
                 padding-top: 40px;
             }

@@ -3,11 +3,12 @@
         <div class="inner">
             <h1 class="plain">Download your planner</h1>
 
-            <p>It is not what we do sometimes that matters it is what we do all the time. Fill your week with the unmovables: sleep, work and family, and then use the rest of your time wisely to nurture your body, heart and dreams.Download the planner from our resources section and use it to creare your weekly action plan to create real lasting change.</p>
+            <p>It is not what we do sometimes that matters it is what we do all the time. Fill your week with the unmovables: sleep, work and family, and then use the rest of your time wisely to nurture your body, heart and dreams.</p>
 
-            <p><a class="button" href="#pdf-download">Download planner and get started.</a></p>
+            <p>Download the planner from our resources section and use it to creare your weekly action plan to create real lasting change.</p>
 
-            <div class="dots"></div>
+            <p><a class="button small" href="#pdf-download">Download planner and get started</a></p>
+
             <div class="actions">
                 <a href="#" class="button" data-complete-module>What's next?</a>
             </div>
