@@ -12,7 +12,6 @@
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -63,7 +62,9 @@
 
         header,
         .burger,
-        .auth {
+        .auth,
+        .button,
+        .social {
             display: none !important;
         }
 
@@ -84,7 +85,13 @@
                 page-break-after: always;
             }
 
+            div.end-page[role=print] {
+                display: block;
+                page-break-before: always;
+            }
+
             h2 {
+                color: $black;
                 &:before {
                     content: '\e632';
                     font-family: "icomoon";
@@ -104,6 +111,12 @@
                     text-align: center;
                 }
 
+                .content {
+                    .inner-padding {
+                        opacity: 1;
+                    }
+                }
+
                 .header {
 
                     > .inner {
@@ -119,6 +132,9 @@
                 li {
                     page-break-before: always;
                     border: 0 !important;
+                    .content {
+                        max-height: 700px !important;
+                    }
                 }
 
             }

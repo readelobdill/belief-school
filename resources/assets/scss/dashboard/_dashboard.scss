@@ -43,6 +43,10 @@
 
             .inner-padding {
                 padding: 60px 0;
+                .content-width{
+                    margin: 0 auto;
+                    max-width: 445px;
+                }
             }
         }
     }

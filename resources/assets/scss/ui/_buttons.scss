@@ -21,7 +21,7 @@ button.button {
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
-    font-size: 15px; //this was 17px;
+    font-size: 15px;
     border: 0;
     @extend %brandon-grotesque;
 
@@ -50,7 +50,7 @@ button.button {
         top: 50%;
         right: 20px;
         content: "";
-        transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
         transition: transform $transition, width $transition, right $transition, margin $transition, background-color $transition;
     }
 

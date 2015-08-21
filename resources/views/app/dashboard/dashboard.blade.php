@@ -143,6 +143,17 @@
                         @endif
                     @endforeach
                 </ul>
+
+                <div class="end-page" role="print">
+                    <h1 class="title">
+                        End
+                    </h1>
+                    <p class="center">
+                        This is the end page text.
+                    </p>
+                </div>
+
+
             </div>
         </div>
     </div>
