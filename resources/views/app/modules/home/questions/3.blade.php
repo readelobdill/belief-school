@@ -5,9 +5,9 @@
     </h1>
     <div class="controls">
         <form action="" data-validate>
-			<div class="form-row">
-            	<input type="text" name="age" id="age" class="age" required data-parsley-type="integer" required data-parsley-validation-threshold="0">
-			</div>
+            <div class="form-row">
+                <input type="text" name="age" id="age" class="age" required data-parsley-type="integer" required data-parsley-validation-threshold="0">
+            </div>
         </form>
     </div>
 </div>
