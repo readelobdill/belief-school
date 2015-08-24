@@ -24,7 +24,7 @@ class VideoSection extends ModuleSection {
             deferred.resolve()
         }});
         t.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 1});
-        t.fromTo(this.section.find('.inner'), config.defaultAnimationSpeed, {y: -40}, {autoAlpha: 1, y: 0}, '-=0.4');
+        t.fromTo(this.section.find('.inner'), config.defaultAnimationSpeed, {y: "-55%"}, {autoAlpha: 1, y: "-50%"}, '-=0.4');
         t.fromTo(this.section.find('.next-section'), config.defaultAnimationSpeed, {scaleX: 0.9, scaleY: 0.9}, {scaleX: 1, scaleY: 1, autoAlpha: 1});
 
         return deferred.promise;

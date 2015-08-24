@@ -12,16 +12,48 @@ input[type=text],input[type=email], input[type=password], textarea {
     }
 }
 
+.account-creation {
+    input[type=text], input[type=email], input[type=password] {
+
+            color: $white;
+            background-color: $lightRed;
+
+            &:hover,
+            &:focus {
+                border: 2px solid $lightRed;
+                background-color: rgba($white, 0.9);
+                color: $white;
+                background: $lightRed;
+                @include input-placeholder() {
+                    color: $lightRed;
+                }
+            }
+    }
+}
+
 input[type=text], input[type=email], input[type=password] {
     width: 250px;
     font-size: 17px;
     padding: 15px;
     margin: 0 auto;
-    text-align:center;
+    text-align: center;
     height: 81px;
+    border: 2px solid $lightRed;
+    transition: color 0.2s ease;
 
-    @include input-placeholder {
+    @include input-placeholder() {
         color: rgba(white, 0.8);
+    }
+
+    &:hover,
+    &:focus {
+        border: 2px solid $lightRed;
+        background-color: rgba($white, 0.9);
+        color: $lightRed;
+        background: rgba($white, 0.8);
+        @include input-placeholder() {
+            color: $lightRed;
+        }
     }
 }
 
