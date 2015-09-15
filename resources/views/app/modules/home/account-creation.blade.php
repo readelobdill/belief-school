@@ -2,6 +2,8 @@
     <div class="content">
         <h1 class="plain">Would you like the confidence to create change?</h1>
 
+        Hello..
+
         <p>Excited? Intrigued? Fill in your details below and work through our FREE Creating Clarity worksheet to discover if Belief School is right for you.</p>
 
         <form action="{{route('users.create')}}" method="POST">
