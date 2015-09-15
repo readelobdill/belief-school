@@ -1,7 +1,8 @@
 <div class="inner">
     <div class="content">
-        <p>Create a Belief School account and get started on your FREE Belief School journey</p>
-        <p><a href="{{ route('about') }}">Or take me to the page of benefits first</a></p>
+        <h1 class="plain">Would you like the confidence to create change?</h1>
+
+        <p>Excited? Intrigued? Fill in your details below and work through our FREE Creating Clarity worksheet to discover if Belief School is right for you.</p>
 
         <form action="{{route('users.create')}}" method="POST">
             <div class="form-row">
@@ -24,6 +25,10 @@
                 <input type="password" name="password" required minlength="8">
                 <label>Password</label>
             </div>
+            <div class="form-row">
+                <input type="password" name="confirrm-password" required minlength="8">
+                <label>Confirm Password</label>
+            </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="actions">
                 <button class="next-section">
@@ -31,6 +36,9 @@
                 </button>
             </div>
         </form>
+
+       <p><a href="{{ route('about') }}">More information about Belief School please.</a></p>
+
 
     </div>
 
