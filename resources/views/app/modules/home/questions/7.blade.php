@@ -1,9 +1,11 @@
 <div class="content">
     <h1 class="title">
-        Why do you not have this in your life right now?
+        Why don't you have it?
     </h1>
     <p>
-        What is stopping you?
+        Don't over think this to much. What is the first thing <br>
+        that popped into your head when you read this<br> 
+        question? Come on be honest - no one is watching.
     </p>
     <div class="controls">
         <form action="" data-validate>

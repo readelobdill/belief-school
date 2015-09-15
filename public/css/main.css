@@ -1197,22 +1197,23 @@ button.button.small:after, button.button.small:before {
   transition: background-color 0.2s ease, color 0.2s ease;
   font-size: 15px;
   border: 0;
+  margin-bottom: 20px;
 }
-/* line 29, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 30, ../../resources/assets/scss/ui/_buttons.scss */
 .button.small {
   padding: 5px 15px;
   text-transform: inherit;
 }
-/* line 33, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 34, ../../resources/assets/scss/ui/_buttons.scss */
 .button.small:after, .button.small:before {
   display: none;
 }
-/* line 38, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 39, ../../resources/assets/scss/ui/_buttons.scss */
 .button:hover {
   background-color: #d95656;
   color: white;
 }
-/* line 44, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 45, ../../resources/assets/scss/ui/_buttons.scss */
 .button:after, .button:before {
   position: absolute;
   pointer-events: none;
@@ -1225,44 +1226,44 @@ button.button.small:after, button.button.small:before {
   transform-origin: 100% 50%;
   transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), width 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), right 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), margin 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-/* line 57, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 58, ../../resources/assets/scss/ui/_buttons.scss */
 .button:after {
   transform: rotate(45deg);
 }
-/* line 61, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 62, ../../resources/assets/scss/ui/_buttons.scss */
 .button:before {
   transform: rotate(-45deg);
 }
-/* line 65, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 66, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success {
   background: none;
   border: 3px solid #f16060;
   color: #f16060;
   padding-right: 45px;
 }
-/* line 71, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 72, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success:after, .button.success:before {
   background: #f16060;
   margin-top: 6px;
   right: 30px;
 }
-/* line 77, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 78, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success:after {
   transform: rotate(45deg);
   width: 10px;
 }
-/* line 82, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 83, ../../resources/assets/scss/ui/_buttons.scss */
 .button.success:before {
   transform: rotate(135deg);
   width: 18px;
 }
-/* line 88, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 89, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-disabled {
   background: #c5c5c5;
   cursor: default;
   color: #ECECEC;
 }
-/* line 92, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 93, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-disabled:after, .button.is-disabled:before {
   transform-origin: 50% 50%;
   width: 18px;
@@ -1270,25 +1271,25 @@ button.button.small:after, button.button.small:before {
   right: 10px;
   background-color: #ECECEC;
 }
-/* line 99, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 100, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-disabled:after {
   transform: rotate(-45deg);
 }
-/* line 103, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 104, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-disabled:before {
   transform: rotate(45deg);
 }
-/* line 108, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 109, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked {
   background: #c5c5c5;
   cursor: default;
   color: #ECECEC;
 }
-/* line 113, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 114, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:before {
   display: none;
 }
-/* line 117, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 118, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:after {
   content: '\e621';
   font-size: 15px;
@@ -1298,7 +1299,7 @@ button.button.small:after, button.button.small:before {
   font-family: 'icomoon';
   left: 12px;
 }
-/* line 127, ../../resources/assets/scss/ui/_buttons.scss */
+/* line 128, ../../resources/assets/scss/ui/_buttons.scss */
 .button.is-locked:hover {
   background: #c5c5c5;
   color: #ECECEC;

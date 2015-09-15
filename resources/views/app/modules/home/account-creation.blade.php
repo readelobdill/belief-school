@@ -1,6 +1,6 @@
 <div class="inner">
     <div class="content">
-        <h1 class="plain">Would you like the confidence to create change?</h1>
+        <h1 class="title">Would you like the confidence to create change?</h1>
 
         <p>Excited? Intrigued? Fill in your details below and work through our FREE Creating Clarity worksheet to discover if Belief School is right for you.</p>
 
@@ -22,14 +22,17 @@
                 <label>Username</label>
             </div>
             <div class="form-row">
-                <input type="password" name="password" required minlength="8">
+                <input type="password" name="password" required minlength="8" id="password">
                 <label>Password</label>
             </div>
             <div class="form-row">
-                <input type="password" name="confirrm-password" required minlength="8">
-                <label>Confirm Password</label>
+                <input type="password" name="re-password" required minlength="8" data-parsley-equalto="#password" >
+                <label>Re-confirm Password</label>
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+           <p><a href="{{ route('about') }}">More information about Belief School please.</a></p>
+
             <div class="actions">
                 <button class="next-section">
                     @include('app/partials/icons/down-arrow')
@@ -37,7 +40,6 @@
             </div>
         </form>
 
-       <p><a href="{{ route('about') }}">More information about Belief School please.</a></p>
 
 
     </div>
