@@ -7,7 +7,7 @@ class ModuleTableSeeder extends Seeder {
     public function run() {
         $modules = [
             [
-                'name' => 'Home',
+                'name' => 'Creating Clarity',
                 'slug' => 'home',
                 'total_parts' => 2,
                 'module_id' => 0,
@@ -40,7 +40,7 @@ class ModuleTableSeeder extends Seeder {
                 'module_id' => 0
             ],
             [
-                'name' => 'Fear and courage',
+                'name' => 'Facing out Fear',
                 'slug' => 'fear-courage',
                 'total_parts' => 2,
                 'module_id' => 0
@@ -52,13 +52,13 @@ class ModuleTableSeeder extends Seeder {
                 'module_id' => 0
             ],
             [
-                'name' => 'Reach out',
+                'name' => 'The Gratitude Effect',
                 'slug' => 'gratitude',
                 'total_parts' => 2,
                 'module_id' => 0
             ],
             [
-                'name' => 'Where to from here',
+                'name' => 'Planning and Practice',
                 'slug' => 'sustainable-change',
                 'total_parts' => 2,
                 'module_id' => 2
@@ -73,7 +73,7 @@ class ModuleTableSeeder extends Seeder {
         ];
 
         foreach($modules as $key => $module) {
-            $module['step'] = $key;
+            $module['order'] = $key;
             $module = new \App\Models\Module([$module]);
         }
 
