@@ -34,6 +34,10 @@ export default class Dashboard {
         this.dashboard.find('.is-unlocked.is-complete .header').click((e)  => {
             $(e.currentTarget).closest('.is-unlocked.is-complete').toggleClass('is-open');
         });
+        this.dashboard.find('[data-print]').on('click', (e) => {
+            e.preventDefault();
+            window.print();
+        });
 
     }
 }
