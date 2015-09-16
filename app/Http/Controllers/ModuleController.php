@@ -34,7 +34,7 @@ class ModuleController extends Controller {
             $module = Module::with(['requiredModule'])->where('slug', $module)->first();
         }
 
-        if(!$module->free && !$this->auth->user()->paid) {
+        if(!$module->free && $this->auth->check() && !$this->auth->user()->paid) {
             abort(404);
         }
 
