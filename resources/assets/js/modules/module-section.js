@@ -5,6 +5,7 @@ import config from 'config';
 import animate from 'modules/animate';
 import Q from "q";
 import "modules/arctext";
+import Accordion from './accordion';
 
 
 
@@ -13,6 +14,7 @@ class ModuleSection {
         this.section = $(section);
         this.module = module;
         this.setupEventListeners();
+        this.accordian = new Accordion(this.section.find('.accordion'), this);
     }
 
     open() {

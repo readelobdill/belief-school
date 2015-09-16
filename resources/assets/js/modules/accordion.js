@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 
-class Accordion {
+export default class Accordion {
     constructor(el, section) {
         this.el = $(el);
         this.section = section;
@@ -18,5 +18,3 @@ class Accordion {
     }
 
 }
-
-module.exports = Accordion;

@@ -1,5 +1,4 @@
 import Text from "./text";
-import Accordion from "modules/accordion"
 import $ from "jquery";
 import 'util/parsley';
 import client from 'sources/ModuleClient';
@@ -8,7 +7,7 @@ class TextWelcome extends Text {
 
     constructor(section, module) {
         super(section, module);
-        this.accordian = new Accordion(this.section.find('.accordion'), this);
+
 
         this.setupForm();
     }
