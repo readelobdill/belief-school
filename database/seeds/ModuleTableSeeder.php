@@ -46,7 +46,7 @@ class ModuleTableSeeder extends Seeder {
                 'module_id' => 0
             ],
             [
-                'name' => 'Who can you help?',
+                'name' => 'Who can I help?',
                 'slug' => 'giving',
                 'total_parts' => 2,
                 'module_id' => 0
