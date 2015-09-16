@@ -97,6 +97,11 @@ Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUs
 
 Route::any('email-exists', ['as' => 'account.check-email', 'uses' => 'UserController@checkEmail']);
 
+Route::get('forgot-password', ['as' => 'auth.forgot-password', 'uses' => 'Auth\PasswordController@getEmail']);
+Route::post('forgot-password', ['uses' => 'Auth\PasswordController@postEmail']);
+
+Route::get('reset-password/{token}', ['as' => 'auth.reset-password', 'uses' => 'Auth\PasswordController@getReset']);
+Route::post('reset-password', ['uses' => 'Auth\PasswordController@postReset']);
 
 
 /*Misc Pages*/
