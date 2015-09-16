@@ -7,3 +7,4 @@ output.js
 public/uploads/dreamboard
 .DS_Store
 public/uploads/you-to-you
+.sass-cache
