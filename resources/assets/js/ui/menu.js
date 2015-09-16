@@ -3,7 +3,7 @@ import TweenMax from "gsap/src/uncompressed/TweenMax";
 import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 
 
-class Menu {
+export default class Menu {
     constructor(menu, burger) {
         this.menu = $(menu);
         this.burger = $(burger);
@@ -34,5 +34,3 @@ class Menu {
     }
 }
 
-
-module.exports = Menu;
