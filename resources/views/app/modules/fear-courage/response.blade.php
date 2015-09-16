@@ -36,9 +36,9 @@
                 <div class="belief">
                     <label class="the-belief" for="response-2">
                         <span class="number">2 .</span>
-                        <strong>After facing</strong>
+                        <strong>I said</strong>
                         <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-2'} : '' }}"</p>
-                        <strong>I felt&hellip;</strong>
+                        <strong>Once I did this I felt&hellip;</strong>
                     </label>
                     <div class="the-affirmation">
                         <textarea name="response-2" id="response-2" required></textarea>
@@ -49,9 +49,9 @@
                 <div class="belief">
                     <label class="the-belief" for="response-3">
                         <span class="number">3 .</span>
-                        <strong>After facing</strong>
+                        <strong>I said</strong>
                         <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-3'} : '' }}"</p>
-                        <strong>I felt&hellip;</strong>
+                        <strong>Once I did this I felt&hellip;</strong>
                     </label>
                     <div class="the-affirmation">
                         <textarea name="response-3" id="response-3" required></textarea>
