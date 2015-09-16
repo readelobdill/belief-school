@@ -240,7 +240,7 @@ h1.plain.margin-bottom {
 
 /* line 42, ../../resources/assets/scss/core/_base.scss */
 .dots {
-  background: url('../img/icons/bullets.svg?1439760487') no-repeat top left;
+  background: url('../img/icons/bullets.svg?1436844418') no-repeat top left;
   width: 70px;
   height: 6px;
   background-size: cover;
@@ -294,8 +294,8 @@ h1.plain.margin-bottom {
 
 @font-face {
   font-family: 'SantEliaRoughAlt-BoldThr';
-  src: url('../fonts/2E98A4_0_0.eot?1439760487');
-  src: url('../fonts/2E98A4_0_0.eot?&1439760487#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1439760487') format("woff2"), url('../fonts/2E98A4_0_0.woff?1439760487') format("woff"), url('../fonts/2E98A4_0_0.ttf?1439760487') format("truetype");
+  src: url('../fonts/2E98A4_0_0.eot?1436093214');
+  src: url('../fonts/2E98A4_0_0.eot?&1436093214#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1436093222') format("woff2"), url('../fonts/2E98A4_0_0.woff?1436093214') format("woff"), url('../fonts/2E98A4_0_0.ttf?1436093212') format("truetype");
 }
 /* line 12, ../../resources/assets/scss/core/_fonts.scss */
 body, input[type=text], input[type=email], input[type=password], textarea, .title > span, .button, .pricing-container .title .price span, .pricing-container .title .gets {
@@ -1321,7 +1321,7 @@ button.button.small:after, button.button.small:before {
 }
 /* line 38, ../../resources/assets/scss/ui/_buttons.scss */
 .button:hover {
-  background-color: #d95656;
+  background-color: #d85656;
   color: white;
 }
 /* line 44, ../../resources/assets/scss/ui/_buttons.scss */
@@ -1872,7 +1872,7 @@ button.button.small:after, button.button.small:before {
 
 /* line 1, ../../resources/assets/scss/pages/about/_about.scss */
 .container.about {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -2212,7 +2212,7 @@ button.button.small:after, button.button.small:before {
 
 /* line 1, ../../resources/assets/scss/pages/contact/_contact.scss */
 .container.contact {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3387,12 +3387,21 @@ div.jqcloud span.w1 {
   justify-content: center;
   background: #f0f0f0;
   margin-bottom: 60px;
+  position: relative;
 }
-/* line 47, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 48, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+.video input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 999999px;
+  opacity: 0;
+}
+/* line 56, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video .upload {
   text-align: center;
 }
-/* line 50, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 59, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video .upload .upload-icon {
   width: 62px;
   height: 62px;
@@ -3405,28 +3414,28 @@ div.jqcloud span.w1 {
   transition: transform 300ms ease;
   cursor: pointer;
 }
-/* line 62, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 71, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video .upload .upload-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 65, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 74, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video .upload .upload-icon svg path {
   fill: white;
 }
-/* line 70, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 79, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video .upload .upload-icon:hover {
   transform: scale(1.1, 1.1);
   box-shadow: 0 0 30px white;
 }
 
-/* line 78, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 87, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 form.letter {
   width: 700px;
   margin-left: -127px;
   margin-bottom: 60px;
 }
-/* line 82, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 91, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 form.letter textarea {
   width: 100%;
   height: 290px;
@@ -3591,7 +3600,7 @@ blockquote.center {
 
 /* line 1, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
 .container.non-mod-page {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3648,7 +3657,7 @@ blockquote.center {
 
 /* line 1, ../../resources/assets/scss/pages/misc/_tag-cloud.scss */
 .container.non-mod-page {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3725,7 +3734,7 @@ section.account-section .content p {
 
 /* line 1, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .dash-background {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3901,7 +3910,7 @@ ul.actions li {
 /* line 156, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.actions li.arrow {
   padding: 8.5px 15px;
-  background: transparent url('../img/dashboard-arrow.svg?1439760487') center center no-repeat;
+  background: transparent url('../img/dashboard-arrow.svg?1439758397') center center no-repeat;
   position: relative;
   top: 3px;
   right: 3px;
@@ -4382,7 +4391,7 @@ li.is-unlocked.is-complete.is-open .inner-padding {
 }
 /* line 1, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums {
-  background: url('../img/home-background.png?1439760487') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
