@@ -9,7 +9,7 @@
         @if(isset($module->pivot->data[0]->letter))
             <em>{{$module->pivot->data[0]->letter}}</em>
         @elseif(isset($module->pivot->data[0]->video))
-            <em>I can has video</em>
+            {!! $module->pivot->data[0]->video->embed->html !!}
         @endif
         </div>
     </div>

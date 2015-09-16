@@ -43,7 +43,16 @@
     justify-content: center;
     background: #f0f0f0;
     margin-bottom: 60px;
+    position:relative;
 
+    input {
+        position:absolute;
+        top: 0;
+        left: 0;
+        font-size: 999999px;
+        opacity: 0;
+
+    }
     .upload {
         text-align:center;
 

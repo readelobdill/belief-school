@@ -238,8 +238,13 @@ class ModuleController extends Controller {
                         $body = $response['body'];
                         if($body['upload_quota']['space']['free'] > $file->getSize()) {
                             $url = url('uploads/you-to-you/'. $this->auth->user()->id . '/'.$fileName);
-                            $response = $lib->request('/me/videos', ['type' => 'pull', 'link' => $url]);
+                            $response = $lib->request('/me/videos', ['type' => 'pull', 'link' => $url], 'POST');
                             $video = $response['body'];
+
+                            $response = $lib->request($video['uri'], [
+                                'name' =>$this->auth->user()->first_name . ' ' . $this->auth->user()->last_name
+                            ], 'PATCH');
+
                             $moduleUser->data = [['video' => $video, 'localVideo' => $fileName]];
                             $moduleUser->step++;
                         }
