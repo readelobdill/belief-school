@@ -18,7 +18,7 @@
                 Reach out in the <a href="{{route('modules.forum',[$module->slug])}}">Forum</a> to someone who might be stuck, give them some of the courage you used to get here.
             </p>
             <p>
-                Take a moment, scroll through your <a href="{{route('dashboard')}}">Dashboard</a> and soak up all you have done and how special you are.
+                Take a moment, scroll through your <a href="{{route('dashboard')}}#module-{{$module->slug}}">Dashboard</a> and soak up all you have done and how special you are.
             </p>
         </div>
     </div>

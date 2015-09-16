@@ -74,7 +74,7 @@
 
             <p>Your next module will unlock in 48 Hours.</p>
 
-            <p><a href="{{route('dashboard')}}">Take a look at your dashboard and see the progress on your amazing Belief School journey</a> or <a href="{{route('modules.forum',[$module->slug])}}">share what you are grateful for in our supportive community forum.</a></p>
+            <p><a href="{{route('dashboard')}}#module-{{$module->slug}}">Take a look at your dashboard and see the progress on your amazing Belief School journey</a> or <a href="{{route('modules.forum',[$module->slug])}}">share what you are grateful for in our supportive community forum.</a></p>
 
         </div>
     </div>

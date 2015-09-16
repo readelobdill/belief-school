@@ -23,7 +23,7 @@
                 <h1 class="plain">Congratulations you are awesome!</h1>
                 <p>Your next module will unlock in 48 Hours.</p>
                 <p>
-                    Keep an eye on your <a href="{{route('dashboard')}}">Dashboard</a> to see the responses.
+                    Keep an eye on your <a href="{{route('dashboard')}}#module-{{$module->slug}}">Dashboard</a> to see the responses.
                 </p> 
                 <p>
                     Chat in the <a href="{{route('modules.forum',[$module->slug])}}">Forum</a> about how that felt, maybe encourage someone else to take this first step.
