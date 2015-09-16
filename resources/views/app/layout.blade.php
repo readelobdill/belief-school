@@ -22,6 +22,10 @@
 @yield('content')
 
 
+@include('app.ui.introduction-modal')
+
+
+
 <script src="{{asset('js/output.js')}}"></script>
 </body>
 </html>

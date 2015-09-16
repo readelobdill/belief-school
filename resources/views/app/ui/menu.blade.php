@@ -2,7 +2,7 @@
     <nav class="navigation">
         <h2>Navigation</h2>
         <ul>
-            <li class="ico-intro"><a href="">Introduction</a></li>
+            <li class="ico-intro"><a href="" data-remodal-target="introduction">Introduction</a></li>
             <li class="ico-account requires-auth {{(!Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{route('account')}}">My account</a></li>
             <li class="ico-about"><a href="{{ route('about') }}">About Belief School</a></li>
             <li class="ico-contact"><a href="{{ route('contact') }}">Contact us</a></li>

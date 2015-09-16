@@ -26,6 +26,7 @@ import Loading from 'util/loading';
 import Arc from 'ui/arc';
 import Forms from 'ui/forms';
 import Sharer from 'ui/share'
+import IntroVideo from 'ui/intro-video';
 
 UI.init();
 Loading.init();

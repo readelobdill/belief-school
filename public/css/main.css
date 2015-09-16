@@ -1,5 +1,5 @@
 @import url("//hello.myfonts.net/count/2e98a4");
-/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -240,7 +240,7 @@ h1.plain.margin-bottom {
 
 /* line 42, ../../resources/assets/scss/core/_base.scss */
 .dots {
-  background: url('../img/icons/bullets.svg?1442289859') no-repeat top left;
+  background: url('../img/icons/bullets.svg?1436844418') no-repeat top left;
   width: 70px;
   height: 6px;
   background-size: cover;
@@ -294,8 +294,8 @@ h1.plain.margin-bottom {
 
 @font-face {
   font-family: 'SantEliaRoughAlt-BoldThr';
-  src: url('../fonts/2E98A4_0_0.eot?1442289858');
-  src: url('../fonts/2E98A4_0_0.eot?&1442289858#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1442289858') format("woff2"), url('../fonts/2E98A4_0_0.woff?1442289858') format("woff"), url('../fonts/2E98A4_0_0.ttf?1442289858') format("truetype");
+  src: url('../fonts/2E98A4_0_0.eot?1436093214');
+  src: url('../fonts/2E98A4_0_0.eot?&1436093214#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1436093222') format("woff2"), url('../fonts/2E98A4_0_0.woff?1436093214') format("woff"), url('../fonts/2E98A4_0_0.ttf?1436093212') format("truetype");
 }
 /* line 12, ../../resources/assets/scss/core/_fonts.scss */
 body, input[type=text], input[type=email], input[type=password], textarea, .title > span, .button, .pricing-container .title .price span, .pricing-container .title .gets {
@@ -364,19 +364,19 @@ input[type=text], input[type=email], input[type=password] {
   border: 2px solid #f16060;
   transition: color 0.2s ease;
 }
-/* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 input[type=text]:-moz-placeholder, input[type=email]:-moz-placeholder, input[type=password]:-moz-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 64, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 64, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=password]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 67, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 67, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 56, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 56, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -495,19 +495,19 @@ textarea {
   border: 2px solid #f16060;
   transition: background 0.2s ease, background 0.2s ease;
 }
-/* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:-moz-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 64, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 64, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 67, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 67, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 56, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 56, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -516,19 +516,19 @@ textarea:focus {
   background: rgba(255, 255, 255, 0.8);
   color: #f16060;
 }
-/* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:focus:-moz-placeholder {
   color: #f16060;
 }
-/* line 64, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 64, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:focus::-moz-placeholder {
   color: #f16060;
 }
-/* line 67, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 67, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:focus:-ms-input-placeholder {
   color: #f16060;
 }
-/* line 56, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 56, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:focus::-webkit-input-placeholder {
   color: #f16060;
 }
@@ -537,38 +537,38 @@ textarea:hover {
   background: rgba(255, 255, 255, 0.8);
   color: #f16060;
 }
-/* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:hover:-moz-placeholder {
   color: #f16060;
 }
-/* line 64, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 64, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:hover::-moz-placeholder {
   color: #f16060;
 }
-/* line 67, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 67, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:hover:-ms-input-placeholder {
   color: #f16060;
 }
-/* line 56, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 56, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:hover::-webkit-input-placeholder {
   color: #f16060;
 }
-/* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:-moz-placeholder {
   color: #ffffff;
   opacity: 0.9;
 }
-/* line 64, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 64, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea::-moz-placeholder {
   color: #ffffff;
   opacity: 0.9;
 }
-/* line 67, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 67, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea:-ms-input-placeholder {
   color: #ffffff;
   opacity: 0.9;
 }
-/* line 56, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 56, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 textarea::-webkit-input-placeholder {
   color: #ffffff;
   opacity: 0.9;
@@ -1322,7 +1322,7 @@ button.button.small:after, button.button.small:before {
 }
 /* line 39, ../../resources/assets/scss/ui/_buttons.scss */
 .button:hover {
-  background-color: #d95656;
+  background-color: #d85656;
   color: white;
 }
 /* line 45, ../../resources/assets/scss/ui/_buttons.scss */
@@ -1543,6 +1543,377 @@ button.button.small:after, button.button.small:before {
 /* line 236, ../../resources/assets/scss/ui/_menu.scss */
 .menu ul li.ico-unlocked:before {
   content: "\e622";
+}
+
+/*
+ *  Remodal - v1.0.3
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
+/* Hide scroll bar */
+/* line 16, ../../resources/assets/scss/ui/_modal.scss */
+html.remodal-is-locked {
+  overflow: hidden;
+}
+
+/* Anti FOUC */
+/* line 22, ../../resources/assets/scss/ui/_modal.scss */
+.remodal,
+[data-remodal-id] {
+  display: none;
+}
+
+/* Necessary styles of the overlay */
+/* line 29, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  display: none;
+}
+
+/* Necessary styles of the wrapper */
+/* line 42, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 58, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-wrapper:after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  content: "";
+}
+
+/* Fix iPad, iPhone glitches */
+/* line 69, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-overlay,
+.remodal-wrapper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+/* line 77, ../../resources/assets/scss/ui/_modal.scss */
+.remodal {
+  position: relative;
+  outline: none;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* line 88, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
+}
+
+/*
+ *  Remodal - v1.0.3
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+/* ==========================================================================
+   Remodal's default mobile first theme
+   ========================================================================== */
+/* Default theme styles for the background */
+/* line 109, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+/* Default theme styles of the overlay */
+/* line 117, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-overlay {
+  background: rgba(43, 46, 56, 0.9);
+}
+
+/* line 121, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+/* line 127, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-overlay.remodal-is-opening {
+  -webkit-animation: remodal-overlay-opening-keyframes 0.3s;
+  animation: remodal-overlay-opening-keyframes 0.3s;
+}
+
+/* line 132, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation: remodal-overlay-closing-keyframes 0.3s;
+  animation: remodal-overlay-closing-keyframes 0.3s;
+}
+
+/* Default theme styles of the wrapper */
+/* line 139, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-wrapper {
+  padding: 10px 10px 0;
+}
+
+/* Default theme styles of the modal dialog */
+/* line 145, ../../resources/assets/scss/ui/_modal.scss */
+.remodal {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 35px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  color: #2b2e38;
+  background: #fff;
+}
+
+/* line 159, ../../resources/assets/scss/ui/_modal.scss */
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+/* line 165, ../../resources/assets/scss/ui/_modal.scss */
+.remodal.remodal-is-opening {
+  -webkit-animation: remodal-opening-keyframes 0.3s;
+  animation: remodal-opening-keyframes 0.3s;
+}
+
+/* line 170, ../../resources/assets/scss/ui/_modal.scss */
+.remodal.remodal-is-closing {
+  -webkit-animation: remodal-closing-keyframes 0.3s;
+  animation: remodal-closing-keyframes 0.3s;
+}
+
+/* Vertical align of the modal dialog */
+/* line 177, ../../resources/assets/scss/ui/_modal.scss */
+.remodal,
+.remodal-wrapper:after {
+  vertical-align: middle;
+}
+
+/* Close button */
+/* line 184, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: visible;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  text-decoration: none;
+  color: #95979c;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+/* line 208, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-close:hover,
+.remodal-close:focus {
+  color: #2b2e38;
+}
+
+/* line 213, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-close:before {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+  font-size: 25px;
+  line-height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 35px;
+  content: "\00d7";
+  text-align: center;
+}
+
+/* Dialog buttons */
+/* line 232, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-confirm,
+.remodal-cancel {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  min-width: 110px;
+  margin: 0;
+  padding: 12px 0;
+  cursor: pointer;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+}
+
+/* line 254, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-confirm {
+  color: #fff;
+  background: #81c784;
+}
+
+/* line 259, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-confirm:hover,
+.remodal-confirm:focus {
+  background: #66bb6a;
+}
+
+/* line 264, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-cancel {
+  color: #fff;
+  background: #e57373;
+}
+
+/* line 269, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-cancel:hover,
+.remodal-cancel:focus {
+  background: #ef5350;
+}
+
+/* Remove inner padding and border in Firefox 4+ for the button tag. */
+/* line 276, ../../resources/assets/scss/ui/_modal.scss */
+.remodal-confirm::-moz-focus-inner,
+.remodal-cancel::-moz-focus-inner,
+.remodal-close::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Keyframes
+   ========================================================================== */
+@-webkit-keyframes remodal-opening-keyframes {
+  from {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes remodal-opening-keyframes {
+  from {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes remodal-closing-keyframes {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+@keyframes remodal-closing-keyframes {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* Media queries
+   ========================================================================== */
+@media only screen and (min-width: 641px) {
+  /* line 387, ../../resources/assets/scss/ui/_modal.scss */
+  .remodal {
+    max-width: 700px;
+  }
+}
+/* IE8
+   ========================================================================== */
+/* line 395, ../../resources/assets/scss/ui/_modal.scss */
+.lt-ie9 .remodal-overlay {
+  background: #2b2e38;
+}
+
+/* line 399, ../../resources/assets/scss/ui/_modal.scss */
+.lt-ie9 .remodal {
+  width: 700px;
 }
 
 /* line 2, ../../resources/assets/scss/pages/home/_home.scss */
@@ -1873,7 +2244,7 @@ button.button.small:after, button.button.small:before {
 
 /* line 1, ../../resources/assets/scss/pages/about/_about.scss */
 .container.about {
-  background: url('../img/home-background.png?1442289858') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -1973,7 +2344,7 @@ button.button.small:after, button.button.small:before {
   max-width: 920px;
   margin: 0 auto;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .container.about .content-block:after {
   content: "";
   display: table;
@@ -2066,7 +2437,7 @@ button.button.small:after, button.button.small:before {
   background-color: #f16060;
   color: #ffffff;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .red-block:after {
   content: "";
   display: table;
@@ -2213,7 +2584,7 @@ button.button.small:after, button.button.small:before {
 
 /* line 1, ../../resources/assets/scss/pages/contact/_contact.scss */
 .container.contact {
-  background: url('../img/home-background.png?1442289858') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -2291,7 +2662,7 @@ button.button.small:after, button.button.small:before {
   max-width: 920px;
   margin: 0 auto;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .container.contact .content-block:after {
   content: "";
   display: table;
@@ -3013,7 +3384,7 @@ div.jqcloud span.w1 {
   margin-bottom: 60px;
   *zoom: 1;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .dreamboard .board:after {
   content: "";
   display: table;
@@ -3106,7 +3477,7 @@ div.jqcloud span.w1 {
   display: block;
   *zoom: 1;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .board .row-4:after {
   content: "";
   display: table;
@@ -3125,7 +3496,7 @@ div.jqcloud span.w1 {
   justify-content: space-between;
   *zoom: 1;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .board .col:after {
   content: "";
   display: table;
@@ -3617,7 +3988,7 @@ blockquote.center {
   max-width: 920px;
   margin: 0 auto;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .container.privacy .content-block:after,
 .container.terms .content-block:after {
   content: "";
@@ -3627,7 +3998,7 @@ blockquote.center {
 
 /* line 1, ../../resources/assets/scss/pages/misc/_non-mod-page.scss */
 .container.non-mod-page {
-  background: url('../img/home-background.png?1442289858') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3684,7 +4055,7 @@ blockquote.center {
 
 /* line 1, ../../resources/assets/scss/pages/misc/_tag-cloud.scss */
 .container.non-mod-page {
-  background: url('../img/home-background.png?1442289858') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3761,7 +4132,7 @@ section.account-section .content p {
 
 /* line 1, ../../resources/assets/scss/dashboard/_dashboard.scss */
 .dash-background {
-  background: url('../img/home-background.png?1442289858') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
@@ -3865,7 +4236,7 @@ section.account-section .content p {
   margin: 0 auto;
   *zoom: 1;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .header > .inner:after {
   content: "";
   display: table;
@@ -3937,7 +4308,7 @@ ul.actions li {
 /* line 156, ../../resources/assets/scss/dashboard/_dashboard.scss */
 ul.actions li.arrow {
   padding: 8.5px 15px;
-  background: transparent url('../img/dashboard-arrow.svg?1442289858') center center no-repeat;
+  background: transparent url('../img/dashboard-arrow.svg?1439758397') center center no-repeat;
   position: relative;
   top: 3px;
   right: 3px;
@@ -4418,7 +4789,7 @@ li.is-unlocked.is-complete.is-open .inner-padding {
 }
 /* line 1, ../../resources/assets/scss/forum/_forum.scss */
 .container.forums {
-  background: url('../img/home-background.png?1442289858') no-repeat center center;
+  background: url('../img/home-background.png?1435196056') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px;
