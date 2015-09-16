@@ -75,7 +75,7 @@ gulp.task('gladeyestage', function() {
             username: '55ca79962d47f',
             destination: './site',
             recursive: true,
-            exclude: ["*scss*", "*node_modules*", "*.sass-cache", "*.git", "*sublime*", "storage/views/*", ".idea/*", "storage/sessions/*", "storage/logs/*", '*/uploads/*']
+            exclude: ["*scss*", "*node_modules*", "*.sass-cache", "*.git", "*sublime*", "storage/views/*", ".idea/*", "storage/sessions/*", "storage/logs/*", '*/uploads/*', '.env']
 
         }));
 });
