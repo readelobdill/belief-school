@@ -2212,13 +2212,39 @@ button.button.small:after, button.button.small:before {
   text-align: center;
   margin-top: 45px;
 }
+/* line 10, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+.text-welcome p.mini-quote {
+  font-weight: 500;
+  position: relative;
+}
+/* line 14, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+.text-welcome p.mini-quote:before, .text-welcome p.mini-quote:after {
+  font-family: "icomoon";
+  font-style: normal;
+  position: relative;
+  color: #252E33;
+  font-size: 13px;
+}
+/* line 23, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+.text-welcome p.mini-quote:before {
+  content: '\e62b';
+  top: -5px;
+  left: 0;
+  padding-right: 8px;
+}
+/* line 30, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+.text-welcome p.mini-quote:after {
+  content: '\e62a';
+  bottom: 5px;
+  margin-left: 5px;
+}
 
-/* line 12, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 40, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li {
   position: relative;
   margin: 30px 0;
 }
-/* line 16, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 44, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li:after {
   width: 69px;
   border-bottom: 1px solid #d4d4d4;
@@ -2226,35 +2252,35 @@ ul.accordion li:after {
   display: block;
   margin: 22px auto 0 auto;
 }
-/* line 24, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 52, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li .answer {
   text-align: center;
   padding: 10px 0;
 }
-/* line 32, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 60, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li.is-open .toggle svg.collapse {
   transform: translateY(0px);
 }
-/* line 35, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 63, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li.is-open .toggle svg.expand {
   transform: translateY(50px);
 }
-/* line 39, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 67, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion li.is-open .answer {
   display: block;
 }
-/* line 44, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 72, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion .answer {
   display: none;
 }
-/* line 48, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 76, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
   margin-bottom: 10px;
 }
-/* line 54, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 82, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 .toggle {
   width: 30px;
   height: 30px;
@@ -2268,7 +2294,7 @@ ul.accordion h2 .toggle {
   -webkit-user-select: none;
   user-select: none;
 }
-/* line 64, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 92, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 .toggle svg {
   width: 100%;
   height: 100%;
@@ -2276,16 +2302,16 @@ ul.accordion h2 .toggle svg {
   top: 0;
   left: 0;
 }
-/* line 71, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 99, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 .toggle svg.collapse {
   transform: translateY(-50px);
 }
-/* line 75, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 103, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 ul.accordion h2 .toggle svg path {
   fill: #f16060;
 }
 
-/* line 85, ../../resources/assets/scss/pages/welcome/_welcome.scss */
+/* line 113, ../../resources/assets/scss/pages/welcome/_welcome.scss */
 .welcome-first-steps {
   margin-top: 70px;
 }

@@ -2,11 +2,13 @@
     <div class="pre-complete congrats-container">
         <div class="inner">
             <h1 class="plain">
-                Great job! <br>You are amazing and I know you will do well sticking to the option you chose.
+                Great job! <br>
+                We know you can stick to No Sugar. <br>
+                It's part of the journey.
             </h1>
-            <p>All of the answers over the course of your journey will save into your Dashboard. At the end of Belief School you can print your dashboard as your Belief School Maifesto to reminder of the process you have been through for self belief.</p>
+            <p>Keep your eyes on your Dashboard it is a living thing. The Forum is for you, the more you give here, the more you'll get.</p>
             <div class="actions">
-                <a href="#" class="button" data-complete-module>What's next?</a>
+                <a href="#" class="button" data-complete-module>I'm ready to start Module One</a>
             </div>
         </div>
     </div>

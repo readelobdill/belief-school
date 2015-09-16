@@ -25,7 +25,7 @@
         </p>
 
         <div class="actions">
-            <a href="#" class="button" >Need to know more before</a>
+            <a href="{{ route('about') }}" class="button" >Need to know more before</a>
         </div>
 
         <div class="actions">
