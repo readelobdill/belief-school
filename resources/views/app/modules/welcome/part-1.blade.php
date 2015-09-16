@@ -11,7 +11,7 @@
             Over the next eight modules we will help you uncover it, own it, and feel it. 
         </p>
         <p>
-            Paula Gosney is the creator and founder of Belief School. You can read her story <a href="#">here</a>. Belief School is the culmination of all she has learnt, taught and lived.
+            Paula Gosney is the creator and founder of Belief School. You can read her story <a href="http://beliefschool.com/broken-bits/" target="_blank">here</a>. Belief School is the culmination of all she has learnt, taught and lived.
         </p>
         <p class="mini-quote">
             I believe in you. There is not a thing you could tell me that would shock me or have me doubt my belief that you are magnificent, that you are worthy and that you can live YOUR best life.

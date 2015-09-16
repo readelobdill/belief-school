@@ -2,8 +2,12 @@
     <div class="pre-complete congrats-container">
 
         <div class="inner">
-        <h1 class="plain">Well done, you are awesome!</h1>
-            <p>As your Belief School Journey continues remember to turn those neagtives into affirmed positives.</p>
+        <h1 class="plain">Well done!</h1>
+            <p>Would you like to share what you learnt in the Forum?</p>
+
+            <p>How are you going with your commitment of No Sugar? If you have slipped up, start again today. Change is never a straight line.</p>
+
+            <p>Click through to your <a href="{{route('dashboard')}}">Dashboard</a> to see the responses that have come through from Module One and read you Affirmations.</p>
 
             <div class="actions">
                 <a href="#" class="button" data-complete-module>What's next?</a>

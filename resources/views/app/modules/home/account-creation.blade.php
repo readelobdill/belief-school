@@ -26,8 +26,8 @@
                 <label>Password</label>
             </div>
             <div class="form-row">
-                <input type="password" name="re-password" required minlength="8" data-parsley-equalto="#password" >
-                <label>Re-confirm Password</label>
+                <input type="password" name="confirm-password" required minlength="8" data-parsley-equalto="#password" >
+                <label>Confirm Password</label>
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

@@ -2,11 +2,11 @@
     <div class="pre-complete congrats-container">
         <div class="inner">
             <h1 class="plain">
-                Some copy about thanks for paying and welcome to belief school
+               Congratulations for choosing to invest time and money in your personal development.
             </h1>
-            <p>Lorum</p>
+            <p>We are excited for you, and inspired by you!</p>
             <div class="actions">
-                <a href="{{route('modules.view', ['welcome'])}}" class="button">Welcome module link</a>
+                <a href="{{route('modules.view', ['welcome'])}}" class="button">Let's get started</a>
             </div>
         </div>
     </div>

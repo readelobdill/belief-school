@@ -2,15 +2,17 @@
         <div class="pre-complete congrats-container">
             <div class="inner">
                 <h1 class="plain">
-                    Great job! Asking for feedback takes courage; you are going to learn a lot about courage over the course of your Belief School journey,
+                    You Rock Star!<br>
+                    Asking for feedback takes courage.<br>
+                    When we act courageously we create possibilities.
                 </h1>
 
-                <p class="annotation">Having trouble opening the email?<br />
-                    Copy/paste link below into own email instead<br />
+                <p class="annotation">Having trouble opening the email template?<br />
+                    Copy and paste the recommended copy and this link into your own email and send.<br />
                     <strong>{{route('tagcloud', [$moduleUser->secret])}}</strong>
                 </p>
 
-                <p>All of the answers will be collated and appear in your Dashboard once your recipients begin to send their answers, to you so you can start to build a picture of the awesomness you bring to the world.</p>
+                <p>As your responses come in they will appear on your <a href="{{route('dashboard')}}">Dashboard</a>, building a wonderful picture of the greatness others see in you.</p>
                 <div class="actions">
                     <a href="#" class="button" data-complete-module>What's next?</a>
                 </div>
@@ -21,7 +23,10 @@
                 <h1 class="plain">Congratulations you are awesome!</h1>
                 <p>Your next module will unlock in 48 Hours.</p>
                 <p>
-                    In the meantime <a href="{{route('dashboard')}}">keep an eye on your dashboard</a> for the qualities submitted by your friends and <a href="{{route('modules.forum',[$module->slug])}}">check in the forum to find support and chat to others about getting to know your amazing self.</a>
+                    Keep an eye on your <a href="{{route('dashboard')}}">Dashboard</a> to see the responses.
+                </p> 
+                <p>
+                    Chat in the <a href="{{route('modules.forum',[$module->slug])}}">Forum</a> about how that felt, maybe encourage someone else to take this first step.
                 </p>
                 {{-- <div class="dots"></div>
                 <div class="actions">
