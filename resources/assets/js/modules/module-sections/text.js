@@ -7,7 +7,7 @@ import Q from "q";
 import "modules/arctext";
 import ModuleSection from "modules/module-section";
 
-class TextSection extends ModuleSection {
+export default class TextSection extends ModuleSection {
     constructor(section, module) {
         super(section, module);
         this.scrollPosition = window.pageYOffset;
@@ -60,5 +60,3 @@ class TextSection extends ModuleSection {
     }
 
 }
-
-module.exports = TextSection;
