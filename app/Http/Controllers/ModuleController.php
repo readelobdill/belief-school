@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use stojg\crop\CropBalanced;
 use stojg\crop\CropEntropy;
+use Symfony\Component\HttpFoundation\File\File;
 use Vimeo\Vimeo;
 
 class ModuleController extends Controller {
@@ -230,7 +231,8 @@ class ModuleController extends Controller {
                     $fileName = Str::random(32).'.'.$file->guessExtension();
                     $file->move(public_path('uploads/you-to-you/'.$this->auth->user()->id), $fileName);
                     $lib = new Vimeo(env('VIMEO_APP_ID'), env('VIMEO_SECRET'), env('VIMEO_ACCESS_TOKEN'));
-
+                    //Recreating the file, as when move is called it doesn't update the
+                    $file = new File(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
                     $response = $lib->request('/me');
                     if($response['status'] === 200) {
                         $body = $response['body'];
