@@ -21,7 +21,7 @@
                     {{$module->name}}
                     <p class="gets">Forum</p>
                 </h1>
-                <p class="center">Get and give support in our friendly community environment, <strong>Feel free to share how you are feeling, challenges your faced and how you overcame them.</strong> This community is secure and only accessible to Paula Gosney and other people taking a journey... just like you.</p>
+                <p class="center">Be part of the Belief School Community. Share what you're learnt, your joys and your challenges. This Forum is completely secure and only accessible to those going through the school, and the Belief School Support Team.</p>
 
                 <div class="dots"></div>
             </header>

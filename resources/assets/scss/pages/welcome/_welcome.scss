@@ -6,6 +6,34 @@
         }
 
     }
+    p {
+        &.mini-quote {
+            font-weight: 500;
+            position: relative;
+
+            &:before,
+            &:after {
+                font-family:$icon;
+                font-style: normal;
+                position: relative;
+                color: $black;
+                font-size: 13px;
+            }
+
+            &:before {
+                content: '\e62b';
+                top: -5px;
+                left: 0;
+                padding-right: 8px;
+            }
+
+            &:after {
+                content: '\e62a';
+                bottom: 5px;
+                margin-left: 5px;
+            }
+        }
+    }
 }
 
 ul.accordion {

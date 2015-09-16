@@ -5,22 +5,27 @@
             {{ $module->name }}
         </h1>
 
-        <p>How we see ourselves in the world may not be how others see us. Often we are hard on ourselves, only focusing on our short comings and not celebrating the beautiful qualities other see in us and the way that we operate in the world. A lot of people are unaware of their strengths and so miss the opportunity to use these in the pursuit of their goals.</p>
+        <p>How we see ourselves is not always accurate.  We are often hard on ourselves, focusing on our short comings and not celebrating the beautiful qualities others see in us. If we are unaware of our strengths we miss the opportunity to play to them in the pursuit of happiness and success.</p>
 
-        <p class="bold">
-            The belief school boomerang will help you build a picture of your strengths and endearing qualities.
+        <p>
+            <strong>“When I did this exercise many years ago it changed my life, it really did. By having the courage to be vulnerable I was given the most wonderful gift.”</strong> <br> 
+            – Paula Gosney
         </p>
+
+        <blockquote>
+            To know your amazing self, you need to know the beautiful qualities others see in you.
+        </blockquote>
 
         <div class="dots"></div>
 
-        <h1 class="plain">Send an Email</h1>
-
-        <blockquote>
-            To really know your amazing self, you need to know the amazing qualities others see in you.
-        </blockquote>
+        <h1 class="plain">Your Task</h1>
 
         <p>
-            <strong>You will be sending the email below</strong> (don't worry you can edit to to add whatever message you like!) <strong>to as wide a group as possible, choosing people who you feel will have your best interests at heart.</strong> They need to know you well enough to comment on your character and they need to be people whose opinions you trust.
+            Send the email below to as wide a group of people as possible. Aim for 25 or more if you can. These don’t have to be your best buddies, they can be friends, family, team mates or work colleagues. They just need to be good people.
+        </p>
+
+        <p>
+            (Don't worry you can edit the email to say whatever you want. Although, we are pretty good at this and have chosen these words carefully to create the best outcome for you.)
         </p>
 
         <div class="email-client">
@@ -35,31 +40,37 @@
                 <div class="subject-row">Subject</div>
             </div>
             <div class="message">
-                <p>Dear Trusted Friend</p>
+                <p>Dear Friend,</p>
                 <p>
-                    {{Auth::user()->first_name}} is completing an online program called Belief School with the intention of developing their personal belief so they can create the life that they want. Jane has stepped out of her comfort zone and sent you this email because she values your opinion and trusts that you will answer the simple questions honestly and with her best interests at heart.
+                    {{Auth::user()->first_name}} is completing an online program called Belief School. It is a personal development program helping them build belief in themselves.
                 </p>
                 <p>
-                    Clicking on the link will take you to a page on our Belief School website where you can input the three amazing qualities you believe Janes has. The answers will be delivered to Jane anonymously mixed up with responses from up to 25 other friends, family and colleagues.
+                    {{Auth::user()->first_name}} has stepped out of their comfort zone and sent you this email because they values your opinion and trusts that you will answer the simple question, honestly and with their best interest at heart.
                 </p>
                 <p>
-                    Thanks for taking the time to answer these questions, it really does make a difference. <br>
+                    Clicking on the link will take you to a page on our Belief School website, you’ll be asked to input three words that describe {{Auth::user()->first_name}}’s best qualities. The answers will be delivered to {{Auth::user()->first_name}} anonymously, mixed up with responses from friends, family and colleagues.
+                </p>
+                <p>
+                    <strong>This will only take 1 minute yet will have a BIG impact.</strong> Thanks for taking the time, it really does make a difference.
+                </p>
+                <p>
                     Best regards <br>
                     Belief School <br>
                 </p>
             </div>
         </div>
 
+        <div class="actions">
+            <a href="mailto:?subject=Show%20your%20friend%20how%20special%20they%20are&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" data-update-module>Click here to open the email template</a>
+        </div>
+
         <blockquote>
-            Go on, get out of your comfort zone and send the emails.
+            Go on, be brave and send the emails.
         </blockquote>
 
         <p>
-            Nothing terrible is going to happen, people will either respond or they won’t. The world will not end and your arm will not fall off. <strong>In doing this you will start to gain some valuable insight into the qualities that you have which make YOU special.</strong>
+           Nothing terrible is going to happen, people will either respond or they won’t. The world will not end and your arm will not fall off. You can do this.
         </p>
-        <div class="actions">
-            <a href="mailto:?subject=Show%20your%20friend%20how%20special%20they%20are&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" data-update-module>I'm Ready!</a>
-        </div>
-
+            
     </div>
 </div>

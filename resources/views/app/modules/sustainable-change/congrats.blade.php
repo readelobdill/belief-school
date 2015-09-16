@@ -1,25 +1,26 @@
 <div class="inner">
     <div class="pre-complete congrats-container">
         <div class="inner">
-            <h1 class="plain">Download your planner</h1>
+            <h1 class="plain">You are one step away from completing Belief School.</h1>
 
-            <p>It is not what we do sometimes that matters it is what we do all the time. Fill your week with the unmovables: sleep, work and family, and then use the rest of your time wisely to nurture your body, heart and dreams.</p>
+            <p>This makes you extraordinary.</p>
 
-            <p>Download the planner from our resources section and use it to creare your weekly action plan to create real lasting change.</p>
+            <p>Module Eight is fun and fabulous and once complete you will be able to download your beautiful Manifesto.</p>
 
             <p><a class="button small" href="#pdf-download">Download planner and get started</a></p>
 
             <div class="actions">
-                <a href="#" class="button" data-complete-module>What's next?</a>
+                <a href="#" class="button" data-complete-module>I am ready for module eight</a>
             </div>
         </div>
     </div>
     <div class="post-complete congrats-container">
         <div class="inner">
-            <h1 class="plain">Your almost there! Revisit your dashboard and review your Belief School Journey before the final step.</h1>
-            <p>Your next module will unlock in 48 Hours.</p>
+            <p>Before you complete your journey you can revisit module one and send your email to as many people as you like. The more people who respond, the greater your understanding of how you are seen in the world.</p>
 
-            <p><a href="{{route('dashboard')}}">Take a look at your dashboard and see the progress on your amazing Belief School journey</a> or <a href="{route('modules.forum',[$module->slug])}}">share what you are grateful for in our supportive community forum.</a></p>
+            <p>Click here to send again.</p>
+
+            <p><a href="{route('modules.forum',[$module->slug])}}">Head over to the Forum</a> and share your insights and vision for your future. When you declare your intention out loud it gives it weight and pulls you forward.</p>
         </div>
     </div>
 </div>

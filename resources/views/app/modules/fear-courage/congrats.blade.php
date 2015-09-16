@@ -2,7 +2,8 @@
     <div class="pre-complete congrats-container">
 
         <div class="inner">
-            <p>On the other side of your fear is your true authentic self, feel pride in that you are empowering yourself. Action totally and utterly obliterates fear – and it is the only thing that does. </p>
+            <h1 class="plain">Action Obliterates fear, it is the only thing that does.</h1>
+            <p>When that familiar feeling of fear starts to creep in, trying to control you and keep you small. Remember this exercise, what you did and how you felt when you chose courage.</p>
 
             <div class="actions">
                 <a href="#" class="button" data-complete-module>What's next?</a>
@@ -11,11 +12,13 @@
     </div>
     <div class="post-complete congrats-container">
         <div class="inner">
-            <h1 class="plain">Congratulations you are awesome!</h1>
+            <h1 class="plain">You just made it through the trickiest exercise in Belief School. Awesome!</h1>
             <p>Your next module will unlock in 48 Hours.</p>
             <p>
-                Offer support to others on their journey in the <a href="{{route('modules.forum',[$module->slug])}}">forum</a> and share your fear &amp; courage learnings!</a> </p>
-                <p>Take a look at your <a href="{{route('dashboard')}}">dashboard</a> and see the progress on your amazing Belief School journey
+                Reach out in the <a href="{{route('modules.forum',[$module->slug])}}">Forum</a> to someone who might be stuck, give them some of the courage you used to get here.
+            </p>
+            <p>
+                Take a moment, scroll through your <a href="{{route('dashboard')}}">Dashboard</a> and soak up all you have done and how special you are.
             </p>
         </div>
     </div>

@@ -1,7 +1,11 @@
 <div class="content">
     <h1 class="title">
-        Why do you want this in your life?
+        Why do you want this?
     </h1>
+    <p>This is important, understanding why you want the <br> 
+        things you do, will play a big part in achieving them.</p>
+    <p>Dig a little deeper with this, once you have your<br>
+        first answer, then ask yourself Why, again.</p>
     <div class="controls">
         <form action="" data-validate>
             <div class="form-row">
