@@ -5,7 +5,7 @@
         <h1 class="plain">Well done!</h1>
             <p>Would you like to share what you learnt in the Forum?</p>
 
-            <p>How are you going with your commitment of No Sugar? If you have slipped up, start again today. Change is never a straight line.</p>
+            <p>How are you going with your commitment of <em>{{$requiredModules['welcome']->data[0]->challenge}}</em>? If you have slipped up, start again today. Change is never a straight line.</p>
 
             <p>Click through to your <a href="{{route('dashboard')}}">Dashboard</a> to see the responses that have come through from Module One and read you Affirmations.</p>
 

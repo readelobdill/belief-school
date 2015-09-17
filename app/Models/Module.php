@@ -95,6 +95,13 @@ class Module extends Model {
         return $this->belongsToMany('App\Models\User')->withTimestamps()->withPivot(['created_at', 'updated_at', 'data', 'complete', 'step', 'completed_at', 'secret']);
     }
 
+    public function requiredModules() {
+        return $this->belongsToMany('App\Models\Module', 'requires_module', 'module_id', 'required_id');
+    }
+    public function requiredByModules() {
+        return $this->belongsToMany('App\Models\Module', 'requires_module', 'required_id', 'module_id');
+    }
+
 
     public function newPivot(Model $parent, array $attributes, $table, $exists)
     {

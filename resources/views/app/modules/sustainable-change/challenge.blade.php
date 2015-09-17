@@ -29,7 +29,7 @@
 
         <blockquote class="center you-chose">
             <span>You chose:</span>
-            <em>“{{ $requiredModule->data[0]->challenge }}”</em>
+            <em>“{{ $requiredModules['welcome']->data[0]->challenge }}”</em>
         </blockquote>
 
         <p class="center">

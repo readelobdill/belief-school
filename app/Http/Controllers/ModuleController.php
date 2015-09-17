@@ -31,7 +31,7 @@ class ModuleController extends Controller {
             abort(404);
         }
         if($module === 'home') {
-            $module = Module::with(['requiredModule'])->where('slug', $module)->first();
+            $module = Module::with(['requiredModule', 'requiredModules'])->where('slug', $module)->first();
         }
 
         if(!$module->free && $this->auth->check() && !$this->auth->user()->paid) {
@@ -50,14 +50,22 @@ class ModuleController extends Controller {
         }
 
 
-        $requiredModule = null;
-        if(!empty($module->requiredModule)) {
-            $requiredModule = $this->auth->user()->modules()->where('modules.id', $module->requiredModule->id)->first();
+        $requiredModules = [];
+        if(!$module->requiredModules->isEmpty()) {
+            foreach($module->requiredModules as $mod) {
+                $requiredMod = $this->auth->user()->modules()->where('modules.id', $mod->id)->first();
 
-            if(empty($requiredModule)) {
-                abort(404);
+                if(empty($requiredMod)) {
+                    abort(404);
+                }
+                $requiredModules[$mod->slug] = $requiredMod->pivot;
             }
         }
+
+
+
+
+
 
         if(!empty($moduleUser) && $moduleUser->pivot->complete) {
             //abort(404);
@@ -100,7 +108,7 @@ class ModuleController extends Controller {
             'page' => $module->slug,
             'module' => $module,
             'moduleUser' => (!empty($moduleUser) ? $moduleUser->pivot : false),
-            'requiredModule' => (!empty($requiredModule) ? $requiredModule->pivot : false)]);
+            'requiredModules' => $requiredModules]);
     }
 
     public function tagCloud($secret) {

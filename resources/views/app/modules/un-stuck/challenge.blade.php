@@ -4,31 +4,35 @@
             Get Un-Stuck
         </h1>
 
-        <p>
-            When you first came through Belief School you identified the reason why you did not have the one thing you wanted in your life right now .
-        </p>
+        <p>Earlier on, you said the reason you didn’t have the one thing you wanted in your life was because <em>“{{ $requiredModules['home']->data->{'1'}->why_not }}”</em></p>
+        <p>Whatever the answer, we are pretty sure it’s an obstacle that can be overcome. The first step to creating change is becoming aware of what we say to ourselves about ourselves. We need to change our limiting beliefs.</p>
 
-        <blockquote>
-            This was <em>“{{ $requiredModule->data->{'1'}->why_not }}”</em>
-        </blockquote>
 
-        <p class="bold">
-            It doesn’t matter what that answer was, it is either not true or an obstacle that can be overcome.
-        </p>
+        <ul class="accordion">
+            <li>
+                <h2>
+                    Not quite sure what a limiting belief is?
+                    <div class="toggle">
+                        @include('app/partials/icons/collapse')
+                        @include('app/partials/icons/expand')
+                    </div>
+                </h2>
+                <div class="answer">
+                    <p>These are beliefs that we hold about ourselves to describe who we are. They will have either been given to us by someone else, or we have created them based on what we have experience in our life so far. A belief can be positive like, “I am a great dancer”, or limiting like:</p>
+                    <ul class="u-quote-list">
+                        <li>I am too old</li>
+                        <li>Men don’t do that</li>
+                        <li>I can’t, I’m shy</li>
+                    </ul>
 
-        <p>
-            Whatever those limiting beliefs are we are going to show you how to turn that negative chatter off and start to control the programing that is going on in your mind so it serves you rather than keeps you stuck.
-        </p>
+                    <p><strong>Just because you think it, doesn’t mean it is true.</strong></p>
 
-        <div class="dots"></div>
+                </div>
+            </li>
+        </ul>
 
-        <h1 class="title">
-            I am
-        </h1>
-
-        <p class="center">
-            Write out below three limiting beliefs you have. The ones you are always playing over and over in your mind.
-        </p>
+        <p>Take a moment and think about some of the statements you use to describe yourself that may be holding you back.  Write in your journal to explore this, or go to the Forum for more clarity. </p>
+        <p>Choose three and write them here:</p>
 
         <form action="" class="limiting-beliefs">
             <div class="beliefs">
