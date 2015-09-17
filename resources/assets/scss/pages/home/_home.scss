@@ -23,6 +23,11 @@
     .home-banner {
         z-index: 20;
         width: 700px;
+        svg {
+            path {
+                fill: white;
+            }
+        }
 
         @include breakpoint($break-620) {
             width: 120%;

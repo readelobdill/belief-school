@@ -6,7 +6,9 @@
     </video>
 </div>
 <div class="inner">
-    <img src="{{asset('img/home-banner.png')}}" class="home-banner">
+    <div class="home-banner">
+        @include('app.partials.logo')
+    </div>
     <div class="next-section" data-next-section>
         @include('app/partials/icons/down-arrow')
     </div>
