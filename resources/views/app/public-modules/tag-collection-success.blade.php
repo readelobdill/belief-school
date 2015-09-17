@@ -7,6 +7,7 @@
                 <h1 class="title">
                    Thank you for sharing <br /> your love for {{$moduleUser->user->first_name}}
                 </h1>
+                <p><a href="{{route('about')}}">Want to learn more about Belief School?</a></p>
             </header>
         </div>
     </div>

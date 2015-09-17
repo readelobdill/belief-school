@@ -14,7 +14,7 @@
                 <label>Last Name</label>
             </div>
             <div class="form-row">
-                <input type="email" name="email" required data-parsley-remote="{{route('account.check-email')}}" data-parlsey-remote-reverse="true">
+                <input type="email" name="email" required data-parsley-remote="{{route('account.check-email')}}" data-parlsey-remote-reverse="true" data-parsley-remote-message="Your email address is already associated to a Belief School account">
                 <label>Email Address</label>
             </div>
             <div class="form-row">

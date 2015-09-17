@@ -1,18 +1,11 @@
 <div class="inner">
     <div class="content">
-        <h1 class="title">Well done!</h1>
+        <h1 class="title">Notice how you feel, when you give.</h1>
 
-        <p class="center bold">
-            On the other side of fear is courage. Courage is one of those characteristics that are right up there with Humility, Joy and kindness. There is no downside to courage.
-        </p>
-
-        <h1 class="plain">
-            Giving Feels Good
-        </h1>
-
-        <p class="center">
-            Fill in how you felt when you had completed the three things you did for someone else  and what happened if anything?
-        </p>
+        <p>Great job, you now get to make the world a better place.</p>
+        <p>While you are doing your good deeds we really want you to focus on the feelings you have when you give. It is your feelings that speak to your subconscious and build new beliefs.</p>
+        <p>Take some photo’s if you can, we’d love to see them in the Forum!</p>
+        <p>In the spaces below write out how you felt. This will be saved to your Dashboard and be part of the beautiful Manifesto for you at the end of the program.</p>
 
         <form action="" class="positive-affirmations">
             <div class="positive-affirmations-fields">

@@ -298,7 +298,7 @@ h1.plain.margin-bottom {
   src: url('../fonts/2E98A4_0_0.eot?&1436093214#iefix') format("embedded-opentype"), url('../fonts/2E98A4_0_0.woff2?1436093222') format("woff2"), url('../fonts/2E98A4_0_0.woff?1436093214') format("woff"), url('../fonts/2E98A4_0_0.ttf?1436093212') format("truetype");
 }
 /* line 12, ../../resources/assets/scss/core/_fonts.scss */
-body, input[type=text], input[type=email], input[type=password], textarea, .title > span, .button, .pricing-container .title .price span, .pricing-container .title .gets {
+body, input[type=text], input[type=email], input[type=password], textarea, h1.title > span, .button, .pricing-container .title .price span, .pricing-container .title .gets {
   font-family: "brandon-grotesque", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -1158,8 +1158,16 @@ mark {
   font-weight: 500;
 }
 
-/* line 30, ../../resources/assets/scss/core/_typography.scss */
-.title {
+/* line 29, ../../resources/assets/scss/core/_typography.scss */
+h2.title {
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* line 35, ../../resources/assets/scss/core/_typography.scss */
+h1.title {
   position: relative;
   font-size: 30px;
   line-height: 37px;
@@ -1169,22 +1177,22 @@ mark {
   padding: 0 20px 20px 20px;
   margin-bottom: 22px;
 }
-/* line 40, ../../resources/assets/scss/core/_typography.scss */
-.title.module-page-title {
+/* line 45, ../../resources/assets/scss/core/_typography.scss */
+h1.title.module-page-title {
   max-width: 320px;
   margin: 0 auto 22px;
   line-height: 1;
 }
-/* line 46, ../../resources/assets/scss/core/_typography.scss */
-.title:after {
+/* line 51, ../../resources/assets/scss/core/_typography.scss */
+h1.title:after {
   width: 171px;
   border-bottom: 1px solid #1f2020;
   content: "";
   display: block;
   margin: 22px auto 0 auto;
 }
-/* line 54, ../../resources/assets/scss/core/_typography.scss */
-.title > span {
+/* line 59, ../../resources/assets/scss/core/_typography.scss */
+h1.title > span {
   display: block;
   font-size: 16px;
   text-transform: uppercase;
@@ -1192,7 +1200,7 @@ mark {
   font-weight: 500;
 }
 
-/* line 64, ../../resources/assets/scss/core/_typography.scss */
+/* line 69, ../../resources/assets/scss/core/_typography.scss */
 blockquote {
   color: #f16060;
   font-size: 21px;
@@ -1204,40 +1212,59 @@ blockquote {
   border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 70%);
   border-image-slice: 1;
 }
-/* line 76, ../../resources/assets/scss/core/_typography.scss */
+/* line 81, ../../resources/assets/scss/core/_typography.scss */
 blockquote.multiple {
   border-image: linear-gradient(23deg, #f16060 0%, rgba(241, 96, 96, 0) 90%);
   border-image-slice: 1;
 }
-/* line 80, ../../resources/assets/scss/core/_typography.scss */
+/* line 85, ../../resources/assets/scss/core/_typography.scss */
 blockquote.multiple ul {
   padding-left: 19px;
 }
-/* line 84, ../../resources/assets/scss/core/_typography.scss */
+/* line 89, ../../resources/assets/scss/core/_typography.scss */
 blockquote.multiple li {
   list-style: disc;
   border-bottom: 1px solid rgba(241, 96, 96, 0.2);
   padding-bottom: 18px;
   margin-bottom: 18px;
 }
-/* line 89, ../../resources/assets/scss/core/_typography.scss */
+/* line 94, ../../resources/assets/scss/core/_typography.scss */
 blockquote.multiple li:last-child {
   border-bottom: 0;
   padding-bottom: 0;
 }
-/* line 96, ../../resources/assets/scss/core/_typography.scss */
+/* line 101, ../../resources/assets/scss/core/_typography.scss */
 blockquote.dark {
   border-image: linear-gradient(23deg, rgba(37, 46, 51, 0.8) 0%, rgba(37, 46, 51, 0) 70%);
   border-image-slice: 1;
   color: #252e33;
 }
 
-/* line 103, ../../resources/assets/scss/core/_typography.scss */
+/* line 108, ../../resources/assets/scss/core/_typography.scss */
 .call-to-action {
   color: #f16060;
   font-weight: bold;
   text-align: center;
   font-size: 25px;
+}
+
+/* line 1, ../../resources/assets/scss/core/_lists.scss */
+.quote-list {
+  list-style: decimal;
+  margin-bottom: 20px;
+}
+/* line 4, ../../resources/assets/scss/core/_lists.scss */
+.quote-list > li {
+  margin-bottom: 5px;
+}
+
+/* line 9, ../../resources/assets/scss/core/_lists.scss */
+.u-quote-list {
+  margin-bottom: 20px;
+}
+/* line 11, ../../resources/assets/scss/core/_lists.scss */
+.u-quote-list > li {
+  margin-bottom: 5px;
 }
 
 /* line 1, ../../resources/assets/scss/ui/_burger.scss */
@@ -1942,6 +1969,10 @@ html.remodal-is-locked {
   z-index: 20;
   width: 700px;
 }
+/* line 27, ../../resources/assets/scss/pages/home/_home.scss */
+.background-video .home-banner svg path {
+  fill: white;
+}
 @media (max-width: 620px) {
   /* line 23, ../../resources/assets/scss/pages/home/_home.scss */
   .background-video .home-banner {
@@ -1949,41 +1980,41 @@ html.remodal-is-locked {
   }
 }
 
-/* line 33, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 38, ../../resources/assets/scss/pages/home/_home.scss */
 .intro-video {
   padding: 80px 40px;
 }
 
-/* line 42, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 47, ../../resources/assets/scss/pages/home/_home.scss */
 [data-page=home] .indicator .forum-icon {
   display: none;
 }
 
-/* line 51, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 56, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section {
   bottom: 60px;
 }
-/* line 54, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 59, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section svg path {
   fill: #f16060;
 }
-/* line 59, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 64, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section:hover svg path {
   fill: #98201a;
 }
-/* line 66, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 71, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content {
   width: 445px;
   text-align: center;
 }
-/* line 70, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 75, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content p {
   text-align: center;
   font-size: 17px;
   line-height: 23px;
   margin-bottom: 15px;
 }
-/* line 78, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 83, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation input {
   margin: 8px 0;
   height: 72px;
@@ -2732,12 +2763,12 @@ html.remodal-is-locked {
 }
 
 /* line 40, ../../resources/assets/scss/pages/welcome/_welcome.scss */
-ul.accordion li {
+ul.accordion > li {
   position: relative;
   margin: 30px 0;
 }
 /* line 44, ../../resources/assets/scss/pages/welcome/_welcome.scss */
-ul.accordion li:after {
+ul.accordion > li:after {
   width: 69px;
   border-bottom: 1px solid #d4d4d4;
   content: "";
@@ -2745,20 +2776,20 @@ ul.accordion li:after {
   margin: 22px auto 0 auto;
 }
 /* line 52, ../../resources/assets/scss/pages/welcome/_welcome.scss */
-ul.accordion li .answer {
+ul.accordion > li .answer {
   text-align: center;
   padding: 10px 0;
 }
 /* line 60, ../../resources/assets/scss/pages/welcome/_welcome.scss */
-ul.accordion li.is-open .toggle svg.collapse {
+ul.accordion > li.is-open .toggle svg.collapse {
   transform: translateY(0px);
 }
 /* line 63, ../../resources/assets/scss/pages/welcome/_welcome.scss */
-ul.accordion li.is-open .toggle svg.expand {
+ul.accordion > li.is-open .toggle svg.expand {
   transform: translateY(50px);
 }
 /* line 67, ../../resources/assets/scss/pages/welcome/_welcome.scss */
-ul.accordion li.is-open .answer {
+ul.accordion > li.is-open .answer {
   display: block;
 }
 /* line 72, ../../resources/assets/scss/pages/welcome/_welcome.scss */
@@ -3749,7 +3780,7 @@ div.jqcloud span.w1 {
     display: block;
   }
 }
-/* line 13, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 14, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video-details .detail {
   width: 225px;
   height: 274px;
@@ -3762,20 +3793,20 @@ div.jqcloud span.w1 {
   text-align: center;
   line-height: 26px;
 }
-/* line 24, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 25, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video-details .detail .number {
   position: absolute;
   top: 6px;
   left: 10px;
 }
 @media (max-width: 920px) {
-  /* line 13, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+  /* line 14, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
   .video-details .detail {
     margin: 20px auto;
   }
 }
 
-/* line 37, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 38, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video {
   width: 700px;
   height: 290px;
@@ -3786,20 +3817,28 @@ div.jqcloud span.w1 {
   background: #f0f0f0;
   margin-bottom: 60px;
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
-/* line 48, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 51, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video input {
   position: absolute;
   top: 0;
   left: 0;
   font-size: 999999px;
   opacity: 0;
+  cursor: pointer;
 }
-/* line 56, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 63, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+.video:hover .upload .upload-icon {
+  transform: scale(1.1, 1.1);
+  box-shadow: 0 0 30px white;
+}
+/* line 69, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video .upload {
   text-align: center;
 }
-/* line 59, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 72, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video .upload .upload-icon {
   width: 62px;
   height: 62px;
@@ -3812,28 +3851,23 @@ div.jqcloud span.w1 {
   transition: transform 300ms ease;
   cursor: pointer;
 }
-/* line 71, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 84, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video .upload .upload-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 74, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 87, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 .video .upload .upload-icon svg path {
   fill: white;
 }
-/* line 79, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
-.video .upload .upload-icon:hover {
-  transform: scale(1.1, 1.1);
-  box-shadow: 0 0 30px white;
-}
 
-/* line 87, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 97, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 form.letter {
   width: 700px;
   margin-left: -127px;
   margin-bottom: 60px;
 }
-/* line 91, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
+/* line 101, ../../resources/assets/scss/pages/you-to-you/_you-to-you.scss */
 form.letter textarea {
   width: 100%;
   height: 290px;

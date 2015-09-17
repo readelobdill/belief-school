@@ -5,26 +5,26 @@
         you really want?
     </h1>
     <p>
-        Let's put it another way, what do you want if you believed<br>
+        Let's put it another way, what do you want if you believed
         you could be, do or have anything?
     </p>
     <p>
-        Take a few minutes, what is that thought, that dream, that wish - yes <br>
+        Take a few minutes, what is that thought, that dream, that wish - yes
         the one you keep dismissing because you think it is not possible for you.
     </p>
     <p>
-        What is the one thing you would love if there were no limitations, <br>
+        What is the one thing you would love if there were no limitations,
         no obstacles - no fear?
     </p>
     <p>
         <strong>
-        Write a concise answer here as this information will be  included in <br>
+        Write a concise answer here as this information will be  included in
         your beautiful Belief School Manifesto.
         </strong>
     </p>
     <p>
         <strong>
-        Top Tip: It's a great idea to start a Belief School Journal and <br>
+        Top Tip: It's a great idea to start a Belief School Journal and
         explore these questions in more depth.
         </strong>
     </p>

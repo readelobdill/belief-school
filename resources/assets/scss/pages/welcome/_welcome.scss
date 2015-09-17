@@ -37,7 +37,7 @@
 }
 
 ul.accordion {
-    li {
+    > li {
         position: relative;
         margin: 30px 0;
 
@@ -55,7 +55,7 @@ ul.accordion {
         }
     }
 
-    li.is-open {
+    > li.is-open {
         .toggle {
             svg.collapse {
                 transform: translateY(0px);

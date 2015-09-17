@@ -20,7 +20,7 @@
 
             <p>Click here to send again.</p>
 
-            <p><a href="{route('modules.forum',[$module->slug])}}">Head over to the Forum</a> and share your insights and vision for your future. When you declare your intention out loud it gives it weight and pulls you forward.</p>
+            <p><a href="{{route('modules.forum',[$module->slug])}}">Head over to the Forum</a> and share your insights and vision for your future. When you declare your intention out loud it gives it weight and pulls you forward.</p>
         </div>
     </div>
 </div>

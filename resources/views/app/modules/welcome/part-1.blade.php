@@ -5,7 +5,7 @@
             Belief School
         </h1>
         <p>
-            Self-esteem is the unnegotiable cornerstone of success and happiness.
+            Self-esteem is the un-negotiable cornerstone of success and happiness.
         </p>
         <p>
             Over the next eight modules we will help you uncover it, own it, and feel it. 
@@ -81,13 +81,13 @@
 
                     <p>Why be part of the forum:</p>
 
-                    <p>
-                        1. You will feel like you are part of a community<br>
-                        2. You’ll get the recognition you deserve<br>
-                        3. ’ll be supported and encouraged if something feels tricky<br>
-                        4. You get to make someone else’s journey special<br>
-                        5. You will see that you are not alone
-                    </p>
+                    <ol class="quote-list">
+                        <li>You will feel like you are part of a community</li>
+                        <li>You’ll get the recognition you deserve</li>
+                        <li>I’ll be supported and encouraged if something feels tricky</li>
+                        <li>You get to make someone else’s journey special</li>
+                        <li>You will see that you are not alone</li>
+                    </ol>
 
 
                     <p><strong>How you are prepared to show up in the Forum, may be how you show up in your life.</strong> Become aware of this and use this opportunity to show up differently, if you need to.</p>
@@ -142,10 +142,10 @@
         <h1 class="title">First Step</h1>
         <p>This first exercise serves two purposes for you.</p>
 
-        <p>
-            1. It creates an opportunity to set yourself up to win, and demonstrate to yourself that you can commit and follow through<br>
-            2. It gives your body a gift while you are doing this work, for clarity and focus
-        </p>
+        <ol class="quote-list">
+            <li>It creates an opportunity to set yourself up to win, and demonstrate to yourself that you can commit and follow through<br></li>
+            <li>It gives your body a gift while you are doing this work, for clarity and focus</li>
+        </ol>
 
         <p>Knowing that when you say you’ll do something, you do it, is central to believing in yourself. Each personal victory gives you the confidence to step further and reach for new goals.</p>
 

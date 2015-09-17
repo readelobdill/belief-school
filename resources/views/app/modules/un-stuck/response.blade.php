@@ -1,77 +1,74 @@
 <div class="inner">
     <div class="content">
-        <h1 class="title">
-            This is just the beginning of your own personal journey
-        </h1>
+        <h1 class="plain">Turning the Negative Chatter Off</h1>
 
-        <p>
-            This is just the beginning of your own personal journey - writing out your limiting beliefs may seem daunting but we are about to turn those negative thoughts around with affirmation!
-        </p>
+        <p>Good job getting them down, they don’t need to be perfect. This is an exercise teaching your how to recognise the negative chatter and turn it into thoughts that will serve you.</p>
+        <h2 class="title">Affirmations</h2>
+        <p>Affirmations are powerful, you may believe they’re a bit kooky, but if you think about the logic behind them they make perfect sense.  Our thoughts create our actions, our actions reinforce our beliefs, which define our choices and create our lives.</p>
+        <p><strong>The purpose of this exercise is to show you how to turn your limiting beliefs into words that will open up more possibilities for you.</strong></p>
+        <p>You do this by crafting a positive statement in response to the limiting belief. This must be 100% positive and stated in the present, like it has already been achieved.</p>
 
-        <div class="dots"></div>
+        <ul class="accordion">
+            <li>
+                <h2>
+                    Examples of Limiting Beliefs turned into Affirmations
+                    <div class="toggle">
+                        @include('app/partials/icons/collapse')
+                        @include('app/partials/icons/expand')
+                    </div>
+                </h2>
+                <div class="answer">
+                    <p><em>“I’m hopeless with my kids, I always lose it.”</em></p>
+                    <p><em>“I am amazing with my kids my first response is gentle.”</em></p>
+                    <p><em>“I’m uncomfortable at parties”</em></p>
+                    <p><em>“I love going to parties and always enjoy meeting new people”</em></p>
+                    <p>No Negativity at all, no but’s, maybe’s or I’m going to try!</p>
+                    <p>If you are thinking about a goal, maybe a a business deal or a sports event. You would write something like this:</p>
+                    <p>I am so happy it’s July 16th I won my tournament, it feels awesome and I am proud of myself.</p>
+                    <p><a href="">Read more on how this works here (link through to my Blue Elephants Blog)</a></p>
+                </div>
+            </li>
+        </ul>
 
-        <h1 class="plain">
-            What are affirmations?
-        </h1>
-
-        <p>
-            <strong>Affirmations are the thoughts and words that we use every day.</strong> Negative affirmations are words that we tell ourselves that affirm negative emotions, words of anger, fear worry and negativity. Positive affirmations are words that are optimistic, joyful, hopeful and loving.
-        </p>
-
+        <p>Guidelines for creating Powerful Affirming Statements</p>
+        <ol class="quote-list">
+            <li>Start with positive words such as, I am, I do, I can, I have</li>
+            <li>Say it as often as you can, say it out loud and with feeling</li>
+            <li>Allow yourself to feel the emotion of your success</li>
+            <li>Create a visual picture in your mind</li>
+            <li>Stick them in visible places, on your mirror, the fridge, as your screen saver.</li>
+            <li>When you catch yourself dwelling on a limiting belief, immediately change it to the positive one.</li>
+            <li>Feel proud of this work, you are in the process of reprogramming your mind.</li>
+        </ol>
+        <h2 class="title">Important Truth</h2>
         <blockquote>
-            Our thoughts create our lives, when we use affirming thoughts this is what we bring into our lives.
+           <strong>You create what you focus on.<br />
+            If you are focusing on the lack of something, you will create this also.</strong>
         </blockquote>
 
-        <p class="bold">
-            It doesn’t matter what that answer was, it is either not true or an obstacle that can be overcome.
-        </p>
 
-        <p>
-            Whatever those limiting beliefs are we are going to show you how to turn that negative chatter off and start to control the programing that is going on in your mind so it serves you rather than keeps you stuck.
-        </p>
-
-        <div class="dots"></div>
-
-        <p>
-            <strong>I want you to now work with the limiting beliefs that you identified and turn them into positive affirmations.</strong> You do this by crafting a positive statement (no negativity at all). This must be stated in the present like you already have this or are this.
-        </p>
-
-        <p>
-            To create powerful affirming statements:
-        </p>
-
-        <blockquote class="multiple">
-            <ul>
-                <li>Look in the mirror when you say your affirmation and say it out loud with feeling.</li>
-                <li>Say it as often as you can.</li>
-                <li>Say it with emotion and picture it in your mind.</li>
-                <li>Write your affirmations out and stick them in visible places, on your mirror, on the fridge, as your screen saver.</li>
-                <li>As soon as you catch yourself dwelling on a limiting belief or negative thought, say your affirmation.</li>
-                <li>Feel proud of this work, you are in the process of reprogramming your mind.</li>
-            </ul>
-        </blockquote>
-
-        <p>Tak this limiting belief for example:</p>
-
-        <blockquote class="dark">
-            I’m hopeless with my kids I always lose it.
-        </blockquote>
-
-        <p>The affirmation would be:</p>
-
-        <blockquote>
-            I am amazing with my kids my first response is always gentle.
-        </blockquote>
-
-        <div class="dots"></div>
-
-        <h1 class="plain">
-            Your Turn!
-        </h1>
-
-        <p class="center">
-            Change the limiting beliefs you wrote earlier into positive affirmations:
-        </p>
+        <ul class="accordion">
+            <li>
+                <h2>
+                    How to keep negative thoughts out of your head:
+                    <div class="toggle">
+                        @include('app/partials/icons/collapse')
+                        @include('app/partials/icons/expand')
+                    </div>
+                </h2>
+                <div class="answer">
+                    <ol class="quote-list">
+                        <li>Surround your visual and audio space with things that give you joy and motivate you. Images that inspire you and fill you with happiness. Fill your world with music, podcasts and reading material that is makes you feel good. When your mind is idle these are the things that will trigger thoughts and emotions – you get to choose what they are.</li>
+                        <li>When negative thoughts or limiting beliefs start to crowd in, immediately start doing something that occupies your mind. This may be exercise, music, knitting, reading, washing the dog, or simply shooting hoops.</li>
+                        <li>Our minds are great at solving problems, but when they are left idle, they can start causing trouble – give your mind a job, then it is less likely to dwell on negative thoughts.</li>
+                        <li>Breath. Put your hands on your belly and slowly breathe into your tummy, pushing your hands out. As you breathe in think of a word that inspires you, as you breathe out allow your body to slowly relax.</li>
+                        <li>When you are down or feeling negative do not go online and trawl through social media (unless you are looking at happy stuff), stare at negative television, or read the depressing news. Put your mind to work, you will instantly feel better.</li>
+                        <li>Stick your positive affirmations where you can see them.</li>
+                        <li>Meditate. We love the app Headspace, to get you started if you don’t know how.</li>
+                    </ol>
+                </div>
+            </li>
+        </ul>
 
         <form action="" class="positive-affirmations">
             <div class="positive-affirmations-fields">
