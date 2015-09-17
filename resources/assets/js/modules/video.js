@@ -19,11 +19,11 @@ function Video(video) {
     let videoReady = Q.defer();
     this.videoReady = videoReady.promise;
     $('body').addClass('is-loading-video');
-
+    //this.video.pause();
 
 
     let percent = this.getPercentLoaded();
-
+    console.dir(this.video);
     if (percent !== null) {
         percent = 100 * Math.min(1, Math.max(0, percent));
         if(percent == 100) {
@@ -32,10 +32,12 @@ function Video(video) {
         // ... do something with var percent here (e.g. update the progress bar)
 
     }
-    this.video.addEventListener('progress', (e) => {
-
+    $(this.video).on('progress', e => {
         let percent = this.getPercentLoaded();
-
+        console.log(e);
+        for(let i = 0; i < this.video.buffered.length; i++) {
+            console.log(this.video.buffered.start(i), this.video.buffered.end(i))
+        }
         if (percent !== null) {
             percent = 100 * Math.min(1, Math.max(0, percent));
             if(percent == 100) {
@@ -44,7 +46,30 @@ function Video(video) {
             // ... do something with var percent here (e.g. update the progress bar)
 
         }
+    })
+    $(this.video).on('error stalled', e => {
+        console.log(e);
     });
+
+    $(this.video).on('loadstart', e => {
+        console.log(e);
+    });
+    $(this.video).on('load', e => {
+        console.log('loadend');
+    })
+
+    let canplayCallback = (e) => {
+        this.video.removeEventListener('canplaythrough', canplayCallback);
+        console.log('canplay');
+        videoReady.resolve(this.video);
+    }
+    if(this.video.readyState === 4) {
+        canplayCallback();
+    } else {
+        this.video.addEventListener('canplaythrough',canplayCallback);
+    }
+
+
 
     this.videoReady.then(() => {
         this.updatePosition();
