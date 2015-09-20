@@ -51,7 +51,7 @@
             </ul>
         </blockquote>
 
-        <p>Tak this limiting belief for example:</p>
+        <p>Take this limiting belief for example:</p>
 
         <blockquote class="dark">
             I’m hopeless with my kids I always lose it.

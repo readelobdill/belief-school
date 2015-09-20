@@ -185,28 +185,30 @@
             fill: white;
             transform: scale(1);
             transform-origin: 50% 50%;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
 
         path.circle {
             fill: white;
-            transition: fill 0.3s ease, opacity 0.3s ease;
+            //transition: fill 0.3s ease, opacity 0.3s ease;
+            transition: all 0.3s ease;
+            transform-origin: 50% 50%;
             opacity: 1;
         }
 
         &:hover {
             path.arrow {
-                transform: scale(1.2);
+                transform: scale(1.3);
             }
             path.circle {
-                opacity: 0.1;
+                opacity: 0;
+                transform: scale(0.85);
             }
         }
     }
 }
 
 .congrats-section {
-
     h1 {
         margin-bottom: 40px;
         line-height: 28px;
@@ -254,7 +256,26 @@
             }
         }
     }
+
+    .pre-complete,
+    .post-complete {
+        display: table;
+        margin: 0 auto;
+
+        >.inner {
+            display: table-cell;
+            vertical-align: middle;
+
+            .content {
+                margin: auto;
+                max-width: 445px;
+                width: 100%;
+            }
+        }
+    }
 }
+
+
 
 .actions {
     text-align:center;
@@ -274,6 +295,40 @@
         height: 100%;
         path {
             fill: $lightRed;
+        }
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+            transform-origin: 50% 50%;
+            transition: all 0.2s ease;
+        }
+
+        path.arrow {
+            fill: $lightRed;
+            transform: scale(1);
+            transform-origin: 50% 50%;
+            transition: all 0.2s ease;
+        }
+
+        path.circle {
+            fill: $lightRed;
+            transition: all 0.3s ease;
+            transform-origin: 50% 50%;
+            opacity: 1;
+        }
+
+        &:hover {
+            path.arrow {
+                transform: scale(1.3);
+            }
+            path.circle {
+                opacity: 0;
+                transform: scale(1.5);
+            }
         }
     }
 }
