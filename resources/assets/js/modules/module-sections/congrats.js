@@ -57,7 +57,7 @@ export default class CongratsSection extends Text {
     getTimelineOpen() {
         let timeline = new TimelineLite();
         let position = 0;
-        let $children = this.section.find('.pre-complete .inner').children();
+        let $children = this.section.find('.pre-complete .content').children();
         $children.each((index, el) => {
             timeline.fromTo(el, 0.5, {y: 0, opacity: 1}, {y: -500, opacity: 0}, position);
             position += 0.05;
@@ -71,7 +71,7 @@ export default class CongratsSection extends Text {
     getTimelineClosed() {
         let timeline = new TimelineLite();
         let position = 0;
-        let $children = this.section.find('.post-complete .inner').children();
+        let $children = this.section.find('.post-complete .content').children();
         timeline.to(this.section.find('.post-complete'), 0, {autoAlpha: 1});
         $children.each((index, el) => {
             timeline.fromTo(el, 0.5, {y: 500, opacity: 0}, {y: 0, opacity: 1}, position);
