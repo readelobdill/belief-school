@@ -61,7 +61,6 @@
                                 </li>
 
                             @elseif($mod->pivot && !$mod->pivot->complete)
-
                                 {{-- Unlocked and started but not finished. --}}
                                 <li class="module-{{ $mod->slug }} is-not-complete is-unlocked">
                                     <div class="header is-locked">
@@ -80,7 +79,7 @@
                                 </li>
 
                             @elseif($modules[$key-1]->pivot && $modules[$key-1]->pivot->complete)
-                                @if($modules[$key-1]->pivot->completed_at->diffInHours() < config('belief.lockout'))
+                                @if($modules[$key-1]->pivot->created_at->diffInHours() < config('belief.lockout'))
 
                                     {{-- Waiting for unlock --}}
                                     <li class="module-{{ $mod->slug }} is-locked">
@@ -91,7 +90,7 @@
                                             <ul class="actions">
                                                 <li class="unlock-countdown">
                                                     <div class="inner">
-                                                        Module will unlock in {{config('belief.lockout') - $modules[$key-1]->pivot->completed_at->diffInHours()}} hours
+                                                        Module will unlock {{$modules[$key-1]->pivot->created_at->addHours(config('belief.lockout'))->diffForHumans()}}
                                                     </div>
                                                 </li>
                                                 <li class="arrow"></li>

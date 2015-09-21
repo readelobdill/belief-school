@@ -83,7 +83,7 @@ class ModuleController extends Controller {
                 abort(404);
             } else if(!$previousModule->pivot->complete) {
                 abort(404);
-            } else if($previousModule->pivot->complete && (new Carbon($previousModule->pivot->completed_at))->diffInHours() < config('belief.lockout') && $previousModule->locks) {
+            } else if($previousModule->pivot->complete && (new Carbon($previousModule->pivot->created_at))->diffInHours() < config('belief.lockout') && $previousModule->locks) {
                 abort(404);
             }
         }
@@ -176,7 +176,7 @@ class ModuleController extends Controller {
                 abort(404);
             } else if(!$previousModule->pivot->complete) {
                 abort(404);
-            } else if($previousModule->pivot->complete && (new Carbon($previousModule->pivot->completed_at))->diffInHours() < config('belief.lockout') && $previousModule->locks) {
+            } else if($previousModule->pivot->complete && (new Carbon($previousModule->pivot->created_at))->diffInHours() < config('belief.lockout') && $previousModule->locks) {
                 abort(404);
             }
 

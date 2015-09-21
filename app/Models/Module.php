@@ -58,7 +58,7 @@ class Module extends Model {
 
         if(!empty($previousModule->pivot)
             && $previousModule->pivot->complete
-            && $previousModule->pivot->completed_at->diffInHours() >= config('belief.lockout')) {
+            && $previousModule->pivot->created_at->diffInHours() >= config('belief.lockout')) {
             return true;
         }
         if(!$previousModule->locks && !empty($previousModule->pivot) && $previousModule->pivot->complete) {
