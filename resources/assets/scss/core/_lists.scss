@@ -18,7 +18,7 @@
 
 ul {
     &.list--simple {
-        padding-left: 20px;
+        padding: 0 0 20px 20px;
         li {
             position: relative;
             margin-bottom: 10px;
@@ -38,6 +38,7 @@ ul {
     }
 
     &.accordion.single {
+        margin: 60px auto;
         h2 {
             font-weight: 500;
             font-style: italic;

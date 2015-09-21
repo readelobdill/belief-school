@@ -29,7 +29,6 @@
     > .inner {
         >.content {
             position: relative;
-            //max-width: 920px;
             width: 100%;
             margin: 0 auto;
             font-size: 17px;
@@ -71,11 +70,35 @@
         max-width: 445px;
         margin-left: auto;
         margin-right: auto;
-        font-weight: 500;
+        font-weight: 400;
 
         em {
-            color: $lightRed;
-            font-weight: 400;
+            color: #045F8D;
+            font-weight: 500;
+        }
+    }
+
+    ul.list-content {
+        text-align: center;
+
+        li {
+            font-weight: 500;
+            margin-bottom: 50px;
+            color: #045F8D;
+            font-size: 18px; //might be temp;
+
+            span {
+                color: $black;
+                display: block;
+                font-size: 0.875rem;
+                font-style: italic;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+
+                &:nth-child(2) {
+                    padding: 16px 0 0px
+                }
+            }
         }
     }
 }
@@ -291,6 +314,12 @@ ul.actions {
         content: "\e602";
     }
 
+    p {
+        color: $blue-dark;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
     &.module-icon:after,
     .page-icon:after {
         content: "\e602";
@@ -350,7 +379,7 @@ ul.actions {
         max-width: 445px;
         margin: auto auto 30px;
         li {
-            color: $lightRed;
+            color: $blue-dark;
             font-style: italic;
             span {
                 font-weight: 500;
