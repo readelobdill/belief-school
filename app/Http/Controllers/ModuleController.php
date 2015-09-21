@@ -102,13 +102,16 @@ class ModuleController extends Controller {
         }
 
 
+        $mobileDetect = new \Mobile_Detect();
 
 
         return view('app.modules.'.$module->slug.'.index', [
             'page' => $module->slug,
             'module' => $module,
             'moduleUser' => (!empty($moduleUser) ? $moduleUser->pivot : false),
-            'requiredModules' => $requiredModules]);
+            'requiredModules' => $requiredModules,
+            'isMobile' => $mobileDetect->isTablet() || $mobileDetect->isMobile()
+            ]);
     }
 
     public function tagCloud($secret) {

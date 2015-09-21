@@ -18,12 +18,15 @@ function Video(video) {
     this.duration = 7.984;
     let videoReady = Q.defer();
     this.videoReady = videoReady.promise;
+    if($(this.video).is('img')) {
+        videoReady.resolve(this);
+        return;
+    }
     $('body').addClass('is-loading-video');
     //this.video.pause();
 
 
     let percent = this.getPercentLoaded();
-    console.dir(this.video);
     if (percent !== null) {
         percent = 100 * Math.min(1, Math.max(0, percent));
         if(percent == 100) {
@@ -110,6 +113,9 @@ Video.prototype.updatePosition = function() {
 };
 
 Video.prototype.scrollTo = function(per, duration) {
+    if(!this.isVideo()) {
+        return () => {}
+    }
     var scrollTo = this.video.duration * per * multiplier;
     return TweenMax.to(window, duration, {
         scrollTo: {
@@ -120,6 +126,9 @@ Video.prototype.scrollTo = function(per, duration) {
 }
 
 Video.prototype.seek = function(per) {
+    if(!this.isVideo()) {
+        return Q.resolve();
+    }
     return this.videoReady.then(() => {
         this.video.currentTime = this.video.duration * per;
     })
@@ -127,8 +136,13 @@ Video.prototype.seek = function(per) {
 }
 
 Video.prototype.videoHeight = function() {
-    var height = this.duration * multiplier;
-    return height + $(window).height();
+    if(this.isVideo()) {
+        var height = this.duration * multiplier;
+        return height + $(window).height();
+    } else {
+        return 0;
+    }
+
 }
 
 
@@ -139,6 +153,10 @@ Video.prototype.destroy = function() {
     });
 
 };
+
+Video.prototype.isVideo = function() {
+    return $(this.video).is('video');
+}
 
 
 module.exports = Video;
