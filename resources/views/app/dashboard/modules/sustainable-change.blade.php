@@ -2,7 +2,7 @@
     <div class="inner-padding">
         <ul class="list-content">
             <li>
-                <span>Throughout my Belief School journey I choose to: </span>
+                <span>Throughout my Belief School <br/>journey I choose to: </span>
                 {{ $modules[1]->pivot->data[0]->challenge }}
             </li>
             <li>
