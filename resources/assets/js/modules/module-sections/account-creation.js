@@ -9,8 +9,10 @@ import ModuleSection from "modules/module-section";
 import Client from "sources/ModuleClient";
 import serialize from "util/serializeForm";
 import {showError, hideError} from 'util/errors';
+import Text from './text';
 
-export default class AccountCreationSection extends ModuleSection {
+
+export default class AccountCreationSection extends Text {
 
     constructor(section, module) {
         super(section,module);
