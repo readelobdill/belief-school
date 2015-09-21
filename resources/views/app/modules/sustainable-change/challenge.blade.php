@@ -9,7 +9,7 @@
             If you have stuck with this program and played hard out with each of the exercises you will have been on a bit of a roller coaster of emotions. Check your arms and legs, are they still there, no knife wounds, no missing bits!!
         </p>
 
-        <p class="bold">You have now had a taste of the six steps to Self Belief:</p>
+        <h2 class="title">You have now had a taste of the<br /> six steps to Self Belief:</h2>
         {{-- <blockquote class="multiple"> --}}
             <ol class="multiple-sustain">
                 <li>Celebrating your strengths</li>

@@ -1,7 +1,26 @@
 <div class="content">
     <div class="inner-padding">
-        <p>After <em>{{ $module->pivot->data[0]->{'challenge-1'} }}</em>, I felt <em>{{ $module->pivot->data[1]->{'response-1'} }}</em></p>
-        <p>After <em>{{ $module->pivot->data[0]->{'challenge-2'} }}</em>, I felt <em>{{ $module->pivot->data[1]->{'response-2'} }}</em></p>
-        <p>After <em>{{ $module->pivot->data[0]->{'challenge-3'} }}</em>, I felt <em>{{ $module->pivot->data[1]->{'response-3'} }}</em></p>
+        <ul class="list-content">
+            <li>
+                <span>After</span>
+                {{ $module->pivot->data[0]->{'challenge-1'} }}
+                <span>I felt </span>
+                {{ $module->pivot->data[1]->{'response-1'} }}
+            </li>
+
+            <li>
+                <span>After</span>
+                {{ $module->pivot->data[0]->{'challenge-2'} }}
+                <span>I felt </span>
+                {{ $module->pivot->data[1]->{'response-2'} }}
+            </li>
+
+            <li>
+                <span>After</span>
+                {{ $module->pivot->data[0]->{'challenge-3'} }}
+                <span>I felt </span>
+                {{ $module->pivot->data[1]->{'response-3'} }}
+            </li>
+        </ul>
     </div>
 </div>

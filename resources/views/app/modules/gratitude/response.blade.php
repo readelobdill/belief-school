@@ -25,10 +25,10 @@
             </div>
         </form>
 
-        <ul class="accordion">
+        <ul class="accordion single">
             <li>
                 <h2>
-                    Need some help with what to say 
+                    Need some help with what to say
                     <div class="toggle">
                         @include('app/partials/icons/collapse')
                         @include('app/partials/icons/expand')
@@ -39,7 +39,7 @@
 
                     <p>Try and make it about “them” as much as possible and be specific if you can, this makes it more meaningful.</p>
 
-                    <p>A gratitude letter (or text) may look something like this</p>
+                    <h3>A gratitude letter (or text) may look something like this:</h3>
 
                     <p class="mini-quote">
                         <em>Dear Suzie<br>
@@ -48,7 +48,7 @@
                     </p>
                 </div>
             </li>
-            
+
         </ul>
 
     </div>

@@ -48,7 +48,6 @@
             If you are focusing on the lack of something, you will create this also.</strong>
         </blockquote>
 
-
         <ul class="accordion single">
             <li>
                 <h2>
