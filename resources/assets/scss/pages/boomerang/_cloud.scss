@@ -37,26 +37,23 @@ div.jqcloud span.w5 { font-size: 300%; }
 div.jqcloud span.w4 { font-size: 250%; }
 div.jqcloud span.w3 { font-size: 200%; }
 div.jqcloud span.w2 { font-size: 150%; }
-div.jqcloud span.w1 { font-size: 100%; }
+div.jqcloud span.w1 { font-size: 130%; }
 
 /* colors */
 div.jqcloud { color: #F16060; }
 div.jqcloud a { color: inherit; }
 div.jqcloud a:hover { color: #E65F60; }
 div.jqcloud a:hover { color: #F16060; }
-div.jqcloud span.w10 { color: #F16060; }
-div.jqcloud span.w9 { color: #E65F60; }
-div.jqcloud span.w8 { color: #F16060; }
-div.jqcloud span.w7 { color: #E65F60; }
-div.jqcloud span.w6 { color: #F16060; }
-div.jqcloud span.w5 { color: #F16060; }
-
-div.jqcloud span.w4 { color: #E65F60; }
-
-div.jqcloud span.w3 { color: #F16060; }
-div.jqcloud span.w2 { color: #F16060; }
-
-div.jqcloud span.w1 { color: #F16060; }
+div.jqcloud span.w10 { color: lighten($blue-dark, 0 ); }
+div.jqcloud span.w9 { color: lighten($blue-dark, 20 ); }
+div.jqcloud span.w8 { color: lighten($blue-dark, 35 ); }
+div.jqcloud span.w7 { color: lighten($blue-dark, 40 ); }
+div.jqcloud span.w6 { color: lighten($blue-dark, 45 ); }
+div.jqcloud span.w5 { color: lighten($blue-light, 40 ); }
+div.jqcloud span.w4 { color: lighten($blue-light, 35 ); }
+div.jqcloud span.w3 { color: lighten($blue-light, 20 ); }
+div.jqcloud span.w2 { color: lighten($blue-light, 10 ); }
+div.jqcloud span.w1 { color: $blue-light; }
 
 
 // cloud styles for input.
