@@ -3,7 +3,7 @@
         <div class="inner">
             <h1 class="plain">
                 Great job! <br>
-                We know you can stick to No Sugar. <br>
+                We know you can stick to <span class="resolution">{{isset($moduleUser->data) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->challenge : ''}}</span>. <br>
                 It's part of the journey.
             </h1>
             <p>Keep your eyes on your Dashboard it is a living thing. The Forum is for you, the more you give here, the more you'll get.</p>

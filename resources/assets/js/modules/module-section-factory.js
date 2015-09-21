@@ -11,7 +11,8 @@ import ResponseSection from 'modules/module-sections/response';
 import DreamboardSection from 'modules/module-sections/dreamboard';
 import YouToYouSection from 'modules/module-sections/you-to-you';
 import FormSection from 'modules/module-sections/form';
-import PaymentSection from 'modules/module-sections/payment'
+import PaymentSection from 'modules/module-sections/payment';
+import WelcomeCongratsSection from 'modules/module-sections/welcome-congrats';
 import $ from 'jquery';
 
 var sectionTypes = {
@@ -28,7 +29,8 @@ var sectionTypes = {
     Dreamboard: DreamboardSection,
     YouToYou: YouToYouSection,
     Form: FormSection,
-    Payment: PaymentSection
+    Payment: PaymentSection,
+    WelcomeCongrats: WelcomeCongratsSection
 };
 
 

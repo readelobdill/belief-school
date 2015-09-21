@@ -42,7 +42,9 @@ class TextWelcome extends Text {
 
     submitForm() {
         let url = this.module.getUpdateUrl();
-        let data = {challenge: this.section.find('input:checked').val()}
+        let val = this.section.find('input:checked').val();
+        this.module.setData(val);
+        let data = {challenge: val}
         return client.saveModule(url, data);
     }
 

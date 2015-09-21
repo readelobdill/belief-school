@@ -13,7 +13,7 @@
         <section class="text-welcome module-section has-container has-text" data-type="TextWelcome" data-part="3">
             @include('app/modules/welcome/part-1')
         </section>
-        <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4" data-step="1">
+        <section class="congrats-section module-section has-container" data-type="WelcomeCongrats" data-part="4" data-step="1">
             @include('app/modules/welcome/part-2')
         </section>
     </div>
