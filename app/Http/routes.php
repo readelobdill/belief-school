@@ -119,7 +119,7 @@ Route::get('privacy-terms', ['as' => 'privacy-terms', function() {
 
 
 /*Admin routes*/
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'isAdmin']], function() {
     Route::get('/', ['as' => 'admin.home', 'uses' => '\App\Admin\Http\Controllers\DashboardController@getIndex']);
 
     Route::group(['prefix' => 'users'], function() {

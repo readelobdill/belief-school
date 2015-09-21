@@ -13,8 +13,6 @@
                 <th>Name</th>
                 <th>Slug</th>
                 <th>Comments</th>
-                <th>Edit</th>
-                <th>Delete</th>
             </tr>
             </thead>
             <tbody>
@@ -23,8 +21,6 @@
                     <td>{{$module->name}}</td>
                     <td>{{$module->slug}}</td>
                     <td><a href="{{route('admin.modules.comments', [$module->id])}}" class="btn btn-info btn-sm"><i class="fa fa-comment"></i> Comments</a></td>
-                    <td><a href="{{route('admin.modules.edit', [$module->id])}}" class="btn btn-warning btn-sm"><i class="fa fa-cog"></i> Edit</a></td>
-                    <td><a href="{{route('admin.modules.delete', [$module->id])}}" class="btn btn-danger btn-sm delete-module"><i class="fa fa-trash-o"></i> Delete</a></td>
                 </tr>
             @endforeach
 
