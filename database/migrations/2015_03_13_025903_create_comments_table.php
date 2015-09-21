@@ -20,6 +20,7 @@ class CreateCommentsTable extends Migration
             $table->string('title')->nullable();
             $table->text('body');
             $table->boolean('sticky')->default(false);
+            $table->boolean('deleted')->default(false);
 
             $table->integer('parent_id')->nullable();
             $table->integer('lft')->nullable();

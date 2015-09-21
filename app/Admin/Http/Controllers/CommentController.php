@@ -70,6 +70,12 @@ class CommentController extends Controller {
 
     }
 
+    public function deleteComment($comment) {
+
+        $comment->deleted = !$comment->deleted;
+        $comment->save();
+    }
+
     public function getReplyTo($id) {
         $comment = Comment::find($id);
 
