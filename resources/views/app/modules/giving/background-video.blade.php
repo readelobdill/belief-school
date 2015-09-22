@@ -20,7 +20,7 @@
         <div class="module-icon module-{{$module->slug}}"></div>
     </div>
 
-    <div class="next-section" data-next-section>
+    <div class="next-section absol" data-next-section>
         @include('app/partials/icons/down-arrow')
     </div>
 </div>
