@@ -11,8 +11,19 @@
 
 .u-quote-list {
     margin-bottom: 20px;
+
     > li {
         margin-bottom: 12px;
+        font-weight: 500;
+        font-style: italic;
+
+        &:before {
+            content: '“';
+        }
+
+        &:after {
+            content: '”';
+        }
     }
 }
 

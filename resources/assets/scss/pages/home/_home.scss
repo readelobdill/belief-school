@@ -82,5 +82,11 @@
     }
 }
 
+span.resolution {
+    display: block;
+    text-decoration: underline;
+    padding: 25px 0;
+}
+
 @import "questions";
 @import "question-nav";

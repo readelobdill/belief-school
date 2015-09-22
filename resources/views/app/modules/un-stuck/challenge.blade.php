@@ -1,7 +1,7 @@
 <div class="inner">
     <div class="content">
         <h1 class="title">
-            Get Un-Stuck
+            Understanding the importance of your thoughts
         </h1>
 
         <p>Earlier on, you said the reason you didn’t have the one thing you wanted in your life was because <em>“{{ $requiredModules['home']->data->{'1'}->why_not }}”</em></p>
