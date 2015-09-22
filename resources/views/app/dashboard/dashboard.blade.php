@@ -16,7 +16,10 @@
                         This dashboard is your Manifesto. Track your Belief School journey as you progress through the course and check in regularly.
                     </p>
                     <p class="center">
-                        <a class="button small" data-print>Download manifesto</a>
+                        At the completion of Belief School you will be able to download your beautiful manifesto below, as a reminder of your journey.
+                    </p>
+                    <p class="center">
+                        <a class="button small {{$modules->last()->pivot && $modules->last()->pivot->complete ? '' : 'is-disabled'}}" {{$modules->last()->pivot && $modules->last()->pivot->complete ? 'data-print' : ''}}>Download manifesto</a>
                     </p>
                 </header>
 
