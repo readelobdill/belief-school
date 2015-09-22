@@ -6,14 +6,18 @@
         </h1>
 
         <h2 class="title">The pure joy of giving, <br />expecting nothing in return</h2>
+
         <p>When we give with no motive, no payback expected, many unseen forces come in to play.</p>
         <p>On a physical level, creating connection with other humans produces Oxytocin, our love hormone. It supports growth, reduces stress, induces feelings of optimism and nurtures our self-esteem.</p>
+
         <blockquote>There is no better way to create evidence for yourself of how valuable you are, than by contributing to those around you.</blockquote>
+
         <p>The purpose of this exercise is to teach you to become aware of how you feel, when you give.</p>
         <p>You must be willing to give expecting nothing in return. Do this and you create a ripple effect, and the world gives back in ways you can not yet see; not always from the person you are helping, but because of who you are being.</p>
         <p><strong>At the core of self-belief is knowing that we matter, that we are needed and appreciated.</strong></p>
         <p>In the spaces below commit to three acts of kindness or contribution, these must be chosen selflessly, expecting nothing in return. It may be a one-off deed or the beginning of something long term. It can be as simple as bringing a meal to a friend in need, as public as standing on the side of the road collecting for a charity, or as close and personal as spending two hours building Lego with your son.</p>
-        <h2 class="title">I commit to these three acts kindness</h2>
+
+        <h2 class="title">I commit to these three acts of kindness</h2>
 
         <form action="" class="limiting-beliefs">
             <div class="beliefs">
@@ -44,11 +48,9 @@
             </div>
         </form>
 
-
         <div class="actions">
             <a href="#" class="button" data-save-module>Save it into your manifesto now!</a>
         </div>
-
 
     </div>
 </div>

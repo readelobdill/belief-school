@@ -321,7 +321,16 @@ ul.actions {
     p {
         color: $blue-dark;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 22px;
+        font-style: italic;
+
+        &:after {
+            content:'”';
+        }
+
+        &:before {
+            content:'“';
+        }
     }
 
     &.module-icon:after,

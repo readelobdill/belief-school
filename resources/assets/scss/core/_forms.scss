@@ -56,6 +56,10 @@ input[type=text], input[type=email], input[type=password] {
         @include input-placeholder() {
             color: $lightRed;
         }
+
+        + label {
+            color: $lightRed;
+        }
     }
 }
 
@@ -81,6 +85,7 @@ form .actions {
 input[type=radio],
 input[type=checked] {
     display:none;
+
     + label {
         position: relative;
         padding-left: 45px;
@@ -121,7 +126,7 @@ input[type=checked] {
 
     &:checked {
         + label {
-            font-weight:bold;
+            font-weight: bold;
             &:after {
                 transform: scale(1,1);
             }
@@ -192,7 +197,6 @@ textarea {
     input.has-content ~ label {
         top: 10px;
         left: 6px;
-
         right: inherit;
         transform: scale(.85);
     }

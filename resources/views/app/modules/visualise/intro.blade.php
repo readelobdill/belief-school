@@ -5,70 +5,67 @@
             {{ $module->name }}
         </h1>
 
-            <p>This week is fun! No mental workouts, just good old fashioned dreaming and appreciating what is fabulous in your life.</p>
+        <p>This is one of our favourite exercises in Belief School. It’s all about taking the time to see and appreciate what you already have in your life. To focus on the love and support you have around you.</p>
+        <p>The task for this week is to create a visual display, past and present. People who lift you up and love you unconditionally. Things that inspire you and remind you of the richness in your life.</p>
+        <p>Your task for this module is to fill the template with images from the three categories below. When this is complete you will have a digital collage that will fill you with joy, helping you focused on the love around you and the value you bring to this world.</p>
 
-            <p>The task for this week is to create a virtual display of all the wonderful things in your life past and present. A collection of all the things in your world that you love, that inspire you, that remind you of what a brilliant individual you are. Things you have accomplished, people who lift you up and see the best in you.</p>
+        <h1 class="plain">I Am Enough</h1>
 
-            <p><strong>You will eventually choose a template and fill it with pictures, images and inspirational words</strong>, but first you'll have to hunt these items down.  To make things easier I've created three categories; start collecting so you get a fairly even number of items from each:</p>
+        <p>The centre image is a picture of you.</p>
+        <p>Think of time when you felt so sure of who you were, you were excited and certain about your life. You’ll know the image when you see it, as you’ll get that great feeling inside. It doesn’t matter if you are 15 or 55, and it certainly doesn’t matter whether it is a perfect shot, it is about the feelings this image creates for you.</p>
+
+        <ul class="accordion single">
+            <li>
+                <h2>
+                    Struggling to find a photo
+                    <div class="toggle">
+                        @include('app/partials/icons/collapse')
+                        @include('app/partials/icons/expand')
+                    </div>
+                </h2>
+                <div class="answer">
+                    <p>If you really can’t find a photo you feel captures your true heart, take one this week. </p>
+                    <p>Before you do, fill your heart with happiness, wonder and excitement – sing, dance, walk down memory lane; whatever it takes for you to see yourself shinning in your eyes.</p>
+                </div>
+            </li>
+        </ul>
+
+        <h1 class="plain">Create</h2>
+
+        <p>Creating a visual board that celebrates you is a BIG part of building your belief in yourself, so invest the time. Find images from these three categories.</p>
 
         <div class="categories">
             <div class="category">
                 <i>
                     @include('app/partials/icons/mod-3-cat-1')
                 </i>
-                <h3>Category #1</h3>
+                <h3>The love around you</h3>
                 <p>
-                    Pictures of people (and pets) that you love dearly in this world and who love you. These people may have passed but still give you a profound sense of acceptance and love. Look for photographs that reflect those feelings. Whether they be a special time, or a look or smile.
+                    Pictures of people (and pets) that you love dearly in this world and who love you. These people may have passed but still give you a profound sense of acceptance and love. Look for photographs that reflect these feelings, maybe a special time, a look or smile.
                 </p>
             </div>
             <div class="category">
                 <i>
                     @include('app/partials/icons/mod-3-cat-2')
                 </i>
-                <h3>Category #2</h3>
+                <h3>Your life so far</h3>
                 <p>
-                    Pictures of things you have achieved that make you feel proud or remind you of a very special time. You may need to go and take a photo of that old trophy sitting on the shelf, or you uni degree, a love letter, a memento - as long as the image fills you with a sense of self love, pride and personal accomplishment.
+                    Pictures of things you have achieved that make you feel proud or remind you of a very special time. Maybe take a photo of a uni degree, a love letter, a memento. Things that give you a feeling of pride, personal accomplishment and self-love.
                 </p>
             </div>
             <div class="category">
                 <i>
                     @include('app/partials/icons/mod-3-cat-3')
                 </i>
-                <h3>Category #3</h3>
+                <h3>What Inspires</h3>
                 <p>
-                    Pictures of people and things that inspire you deeply. Anything that pulls you forward in a significant emotional way. These can be anything from beautiful fierce tigers, to Mahmoud Ali or an incredible waterfall – this is your world, your mind, your reflection and inspiration.
+                    Pictures of people or things that inspire you deeply. Anything that pulls you forward in a significant emotional way. A word of caution, do not add things that you want, if when you look at them you think about “not having” them. These images must inspire!
                 </p>
             </div>
         </div>
 
-        <p class="center">This digital collage is for you so do not for one second take into account what others may think. <br />
-        <strong>Do not edit your image selection for anyone.</strong></p>
-
-        <div class="dots"></div>
-
-        <h1 class="title">
-            Beautiful you
-        </h1>
-
-        <p><strong>In the centre find a picture of yourself.</strong> You’ll know the one, it makes you feel great inside. It doesn’t matter if you are 15 or 55, this picture must fill you with a strong feeling of self-love and a sense of your own personal power.<br />
-        This may take some finding, you may need to dig this out of old photos. <strong>This is very important, invest that energy into this exercise.</strong>
-        </p>
-
-        <p>If you really can’t find a photo, take one this week. But before you do, you must do whatever is necessary to fill your heart with happiness, wonder and excitement – sing, dance, walk down memory lane.</p>
-
-        <blockquote>
-            Whatever it takes so you can see yourself shining in your eyes
-        </blockquote>
-
-        <div class="dots"></div>
-
-        <h1 class="title">
-            Create
-        </h1>
-
-        <p class="center">
-            Take the time to complete this project this week. Once it is done if you want to select “share” you can share it on facebook or to Pinterest.
-        </p>
+        <p class="center"><b>This digital collage is for you, do not for one second take into account what others may think. Do not edit your image selection for anyone.</b></p>
+        <p class="center"><b>This is your journey.</b></p>
 
         <p class="call-to-action">
             Start uploading images
