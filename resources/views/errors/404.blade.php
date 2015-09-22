@@ -1,33 +1,22 @@
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>Belief School</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,300,900' rel='stylesheet' type='text/css'>
+        <script src="//use.typekit.net/oni6kia.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <link rel="stylesheet" href="{{asset('css/main.css')}}"/>
+        @if(App::environment('local'))
+            <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+        @endif
 
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                color: #f16060;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+        @yield('metadata')
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+         <style>
 
             .content {
-                position: relative;
-                max-width: 445px;
-                width: 100%;
-                margin: 0 auto;
-                font-size: 17px;
-                line-height: 26px;
-                color: black;
                 text-align: center;
             }
 
@@ -35,35 +24,29 @@
                 font-size: 25px;
                 margin-bottom: 45px;
             }
-
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-
-            a {
-                color: #f16060;
-            }
-
-            a:hover {
-                color: #98201a;
-            }
-
         </style>
     </head>
+
     <body>
         <div class="container non-mod-page">
             <div class="inner">
                 <header>
-                    <h1>404 <br />Something went wrong</h1>
+                    <h2 class="title">Cannot find that page</h1>
                 </header>
 
                 <div class="content">
-                    <p>Return to you <a href="{{ route('dashboard') }}">Dashboard</a></p>
+                    <p>Oops! You have found our 404 page.<br />
+                    The page you are trying to reach may not exist.</p>
+
+                    <p>Return to Belief School
+                        <a class="{{(!Auth::check() ? 'is-hidden-g' : '')}}" href="{{ route('dashboard') }}">Dashboard</a>
+                        <a class="{{(Auth::check() ? 'is-hidden-g' : '')}}" href="{{ route('modules.view', ['home']) }}">Home</a>
+                    </p>
                 </div>
 
             </div>
         </div>
 
+    <script src="{{asset('js/output.js')}}"></script>
     </body>
 </html>

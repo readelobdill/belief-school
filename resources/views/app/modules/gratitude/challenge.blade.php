@@ -15,7 +15,7 @@
 
         <p>One of the simplest ways to start a gratitude practise, is to keep a note pad close by. Each day write out ten things you are grateful for.</p>
 
-        <p>Write your first ten here.</p>
+        <h2 class="title">Write your first ten here.</h2>
 
         <form action="" class="gratitude-list">
             <ul>

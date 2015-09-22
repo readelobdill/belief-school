@@ -51,6 +51,7 @@
             font-weight:bold;
             font-size: 25px;
             margin-bottom: 22px;
+            min-height: 80px;
         }
         p {
             font-size: 14px;
@@ -361,18 +362,20 @@
         margin: 0 10px;
         vertical-align: top;
         font-weight: normal;
+
         &:hover {
             color: $lightRed;
-            svg {
-                path {
-                    fill: $lightRed;
-                }
-            }
+            // svg {
+            //     path {
+            //         fill: $lightRed;
+            //     }
+            // }
         }
         svg {
             height: 17px;
             display:inline-block;
             margin-right: 5px;
+            @include transition(fill $transition);
 
         }
     }

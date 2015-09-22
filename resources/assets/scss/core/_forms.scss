@@ -7,6 +7,7 @@ input[type=text],input[type=email], input[type=password], textarea {
     color: $white;
     box-shadow: inset 0 0 1px 4px rgba($darkRed, 0.0);
     transition: background 0.2s ease;
+
     &:focus {
         outline: 0;
     }
@@ -15,19 +16,20 @@ input[type=text],input[type=email], input[type=password], textarea {
 .account-creation {
     input[type=text], input[type=email], input[type=password] {
 
-            color: $white;
-            background-color: $lightRed;
+        color: $white;
+        background-color: $lightRed;
 
-            &:hover,
-            &:focus {
-                border: 2px solid $lightRed;
-                background-color: rgba($white, 0.9);
-                color: $white;
-                background: $lightRed;
-                @include input-placeholder() {
-                    color: $lightRed;
-                }
+        &:hover,
+        &:focus {
+            border: 2px solid $lightRed;
+            background-color: rgba($white, 0.9);
+            color: $white;
+            background: $lightRed;
+
+            @include input-placeholder() {
+                color: $lightRed;
             }
+        }
     }
 }
 
@@ -39,7 +41,7 @@ input[type=text], input[type=email], input[type=password] {
     text-align: center;
     height: 81px;
     border: 2px solid $lightRed;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
 
     @include input-placeholder() {
         color: rgba(white, 0.8);
@@ -52,6 +54,10 @@ input[type=text], input[type=email], input[type=password] {
         color: $lightRed;
         background: rgba($white, 0.8);
         @include input-placeholder() {
+            color: $lightRed;
+        }
+
+        + label {
             color: $lightRed;
         }
     }
@@ -76,10 +82,10 @@ form .actions {
     }
 }
 
-
 input[type=radio],
 input[type=checked] {
     display:none;
+
     + label {
         position: relative;
         padding-left: 45px;
@@ -120,7 +126,7 @@ input[type=checked] {
 
     &:checked {
         + label {
-            font-weight:bold;
+            font-weight: bold;
             &:after {
                 transform: scale(1,1);
             }
@@ -137,7 +143,8 @@ textarea {
     max-width: 100%;
     background: $lightRed;
     border: 2px solid $lightRed;
-    transition: background 0.2s ease, background 0.2s ease;//maybe remove if there is confict
+    transition: background 0.2s ease, border 0.2s ease;
+
     @include input-placeholder {
         color: rgba(white, 0.8);
     }
@@ -190,7 +197,6 @@ textarea {
     input.has-content ~ label {
         top: 10px;
         left: 6px;
-
         right: inherit;
         transform: scale(.85);
     }

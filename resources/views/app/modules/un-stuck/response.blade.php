@@ -8,9 +8,9 @@
         <p><strong>The purpose of this exercise is to show you how to turn your limiting beliefs into words that will open up more possibilities for you.</strong></p>
         <p>You do this by crafting a positive statement in response to the limiting belief. This must be 100% positive and stated in the present, like it has already been achieved.</p>
 
-        <ul class="accordion">
+        <ul class="accordion single">
             <li>
-                <h2>
+                <h2 class="title">
                     Examples of Limiting Beliefs turned into Affirmations
                     <div class="toggle">
                         @include('app/partials/icons/collapse')
@@ -18,19 +18,21 @@
                     </div>
                 </h2>
                 <div class="answer">
-                    <p><em>“I’m hopeless with my kids, I always lose it.”</em></p>
-                    <p><em>“I am amazing with my kids my first response is gentle.”</em></p>
-                    <p><em>“I’m uncomfortable at parties”</em></p>
-                    <p><em>“I love going to parties and always enjoy meeting new people”</em></p>
-                    <p>No Negativity at all, no but’s, maybe’s or I’m going to try!</p>
-                    <p>If you are thinking about a goal, maybe a a business deal or a sports event. You would write something like this:</p>
-                    <p>I am so happy it’s July 16th I won my tournament, it feels awesome and I am proud of myself.</p>
-                    <p><a href="">Read more on how this works here (link through to my Blue Elephants Blog)</a></p>
+                    <ul class="list--simple">
+                        <li><em>“I’m hopeless with my kids, I always lose it.”</em></li>
+                        <li><em>“I am amazing with my kids my first response is gentle.”</em></li>
+                        <li><em>“I’m uncomfortable at parties”</em></li>
+                        <li><em>“I love going to parties and always enjoy meeting new people”</em></li>
+                        <li>No Negativity at all, no but’s, maybe’s or I’m going to try!</li>
+                        <li>If you are thinking about a goal, maybe a a business deal or a sports event. You would write something like this:</li>
+                        <li>I am so happy it’s July 16th I won my tournament, it feels awesome and I am proud of myself.</li>
+                        <li><a href="">Read more</a> on how this works here [link through to my Blue Elephants Blog]</li>
+                    </ul>
                 </div>
             </li>
         </ul>
 
-        <p>Guidelines for creating Powerful Affirming Statements</p>
+        <h2 class="title">Guidelines for creating Powerful Affirming Statements</h2>
         <ol class="quote-list">
             <li>Start with positive words such as, I am, I do, I can, I have</li>
             <li>Say it as often as you can, say it out loud and with feeling</li>
@@ -46,8 +48,7 @@
             If you are focusing on the lack of something, you will create this also.</strong>
         </blockquote>
 
-
-        <ul class="accordion">
+        <ul class="accordion single">
             <li>
                 <h2>
                     How to keep negative thoughts out of your head:

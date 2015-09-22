@@ -5,7 +5,7 @@
             {{ $module->name }}
         </h1>
 
-        <h2>Courage is our Favourite Word</h2>
+        <h2 class="title">Courage is our Favourite Word</h2>
         <p>We all feel fear, we’re meant to, sensible fear keeps us safe. But there are two kinds of fear and the other kind is imagined fear. It sucks the fun, the joy and the creativity out of life.</p>
         <blockquote>Facing your fears big or small, day by day, builds your belief in yourself. It is this knee scraping that gives you Depth, Empathy and the ability to Lead Others.</blockquote>
         <p>If your life is ruled by fear you won’t be living up to your true potential. If your choices are based on what others think, or whether you are afraid of success or failure, life will be limited to the small safe zone you occupy.</p>
@@ -13,7 +13,7 @@
         <p>We can bang on about facing fear all day, it is meaningless unless we do it. This week is action week. This week you are going to grab a big handful of courage and do some things you’re afraid of.</p>
         <p>Fear is super personal, what is scary for one, is a walk in the park for another. For you it may be picking up the phone, cutting your hair or signing up for a sports event. Or as monumental as forgiving someone who has done you wrong, quitting your job or holding a big hairy spider.</p>
         <p>It doesn’t matter how big or small, the only thing that matters is you have not done these things because of some kind of fear.</p>
-        <p>Commit to your three acts of courage in the boxes below.</p>
+        <h2 class="title">Commit to your three acts of courage in the boxes below.</h2>
 
 
         <form action="" class="limiting-beliefs">

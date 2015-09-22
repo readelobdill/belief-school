@@ -2,10 +2,10 @@
     <div class="content">
         <h1 class="title">Notice how you feel, when you give.</h1>
 
-        <p>Great job, you now get to make the world a better place.</p>
+        <h2 class="title">Great job, you now get to make the world a better place.</h2>
         <p>While you are doing your good deeds we really want you to focus on the feelings you have when you give. It is your feelings that speak to your subconscious and build new beliefs.</p>
         <p>Take some photo’s if you can, we’d love to see them in the Forum!</p>
-        <p>In the spaces below write out how you felt. This will be saved to your Dashboard and be part of the beautiful Manifesto for you at the end of the program.</p>
+        <p><b>In the spaces below write out how you felt.</b> This will be saved to your Dashboard and be part of the beautiful Manifesto for you at the end of the program.</p>
 
         <form action="" class="positive-affirmations">
             <div class="positive-affirmations-fields">
