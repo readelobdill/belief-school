@@ -28,9 +28,5 @@
             <a href="{{ route('about') }}" class="button" >Need to know more before</a>
         </div>
 
-        <div class="actions">
-            <a href="{{route('payment')}}" class="button" >I want to find my amazing self</a>
-        </div>
-
     </div>
 </div>
