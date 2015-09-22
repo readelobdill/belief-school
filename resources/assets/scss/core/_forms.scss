@@ -19,6 +19,16 @@ input[type=text],input[type=email], input[type=password], textarea {
         color: $white;
         background-color: $lightRed;
 
+
+        &:focus ~ label {
+            color: $white;
+        }
+
+        &.has-content ~ label {
+            color: $white;
+        }
+
+
         &:hover,
         &:focus {
             border: 2px solid $lightRed;
@@ -28,6 +38,10 @@ input[type=text],input[type=email], input[type=password], textarea {
 
             @include input-placeholder() {
                 color: $lightRed;
+            }
+
+            + label {
+                color: $white;
             }
         }
     }

@@ -332,7 +332,15 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, tex
   color: #ffffff;
   background-color: #f16060;
 }
-/* line 22, ../../resources/assets/scss/core/_forms.scss */
+/* line 23, ../../resources/assets/scss/core/_forms.scss */
+.account-creation input[type=text]:focus ~ label, .account-creation input[type=email]:focus ~ label, .account-creation input[type=password]:focus ~ label {
+  color: #ffffff;
+}
+/* line 27, ../../resources/assets/scss/core/_forms.scss */
+.account-creation input[type=text].has-content ~ label, .account-creation input[type=email].has-content ~ label, .account-creation input[type=password].has-content ~ label {
+  color: #ffffff;
+}
+/* line 32, ../../resources/assets/scss/core/_forms.scss */
 .account-creation input[type=text]:hover, .account-creation input[type=text]:focus, .account-creation input[type=email]:hover, .account-creation input[type=email]:focus, .account-creation input[type=password]:hover, .account-creation input[type=password]:focus {
   border: 2px solid #f16060;
   background-color: rgba(255, 255, 255, 0.9);
@@ -355,8 +363,12 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, tex
 .account-creation input[type=text]:hover::-webkit-input-placeholder, .account-creation input[type=text]:focus::-webkit-input-placeholder, .account-creation input[type=email]:hover::-webkit-input-placeholder, .account-creation input[type=email]:focus::-webkit-input-placeholder, .account-creation input[type=password]:hover::-webkit-input-placeholder, .account-creation input[type=password]:focus::-webkit-input-placeholder {
   color: #f16060;
 }
+/* line 43, ../../resources/assets/scss/core/_forms.scss */
+.account-creation input[type=text]:hover + label, .account-creation input[type=text]:focus + label, .account-creation input[type=email]:hover + label, .account-creation input[type=email]:focus + label, .account-creation input[type=password]:hover + label, .account-creation input[type=password]:focus + label {
+  color: #ffffff;
+}
 
-/* line 36, ../../resources/assets/scss/core/_forms.scss */
+/* line 50, ../../resources/assets/scss/core/_forms.scss */
 input[type=text], input[type=email], input[type=password] {
   width: 250px;
   font-size: 17px;
@@ -383,7 +395,7 @@ input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder,
 input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 50, ../../resources/assets/scss/core/_forms.scss */
+/* line 64, ../../resources/assets/scss/core/_forms.scss */
 input[type=text]:hover, input[type=text]:focus, input[type=email]:hover, input[type=email]:focus, input[type=password]:hover, input[type=password]:focus {
   border: 2px solid #f16060;
   background-color: rgba(255, 255, 255, 0.9);
@@ -406,37 +418,37 @@ input[type=text]:hover:-ms-input-placeholder, input[type=text]:focus:-ms-input-p
 input[type=text]:hover::-webkit-input-placeholder, input[type=text]:focus::-webkit-input-placeholder, input[type=email]:hover::-webkit-input-placeholder, input[type=email]:focus::-webkit-input-placeholder, input[type=password]:hover::-webkit-input-placeholder, input[type=password]:focus::-webkit-input-placeholder {
   color: #f16060;
 }
-/* line 60, ../../resources/assets/scss/core/_forms.scss */
+/* line 74, ../../resources/assets/scss/core/_forms.scss */
 input[type=text]:hover + label, input[type=text]:focus + label, input[type=email]:hover + label, input[type=email]:focus + label, input[type=password]:hover + label, input[type=password]:focus + label {
   color: #f16060;
 }
 
-/* line 67, ../../resources/assets/scss/core/_forms.scss */
+/* line 81, ../../resources/assets/scss/core/_forms.scss */
 .checkbox-list li {
   margin-bottom: 20px;
 }
 
-/* line 72, ../../resources/assets/scss/core/_forms.scss */
+/* line 86, ../../resources/assets/scss/core/_forms.scss */
 form .actions {
   margin-top: 60px;
 }
 
-/* line 76, ../../resources/assets/scss/core/_forms.scss */
+/* line 90, ../../resources/assets/scss/core/_forms.scss */
 .radio-row {
   height: 72px;
   position: relative;
 }
-/* line 80, ../../resources/assets/scss/core/_forms.scss */
+/* line 94, ../../resources/assets/scss/core/_forms.scss */
 .radio-row label {
   margin-top: 19px;
 }
 
-/* line 85, ../../resources/assets/scss/core/_forms.scss */
+/* line 99, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio],
 input[type=checked] {
   display: none;
 }
-/* line 89, ../../resources/assets/scss/core/_forms.scss */
+/* line 103, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio] + label,
 input[type=checked] + label {
   position: relative;
@@ -447,7 +459,7 @@ input[type=checked] + label {
   display: inline-block;
   cursor: pointer;
 }
-/* line 98, ../../resources/assets/scss/core/_forms.scss */
+/* line 112, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio] + label:before, input[type=radio] + label:after,
 input[type=checked] + label:before,
 input[type=checked] + label:after {
@@ -455,7 +467,7 @@ input[type=checked] + label:after {
   left: 0;
   top: 0;
 }
-/* line 104, ../../resources/assets/scss/core/_forms.scss */
+/* line 118, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio] + label:after,
 input[type=checked] + label:after {
   transform-origin: 50% 50%;
@@ -469,7 +481,7 @@ input[type=checked] + label:after {
   content: "";
   transition: transform 0.3s ease;
 }
-/* line 117, ../../resources/assets/scss/core/_forms.scss */
+/* line 131, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio] + label:before,
 input[type=checked] + label:before {
   content: "";
@@ -479,18 +491,18 @@ input[type=checked] + label:before {
   border-radius: 34px;
   padding: 13px;
 }
-/* line 128, ../../resources/assets/scss/core/_forms.scss */
+/* line 142, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio]:checked + label,
 input[type=checked]:checked + label {
   font-weight: bold;
 }
-/* line 130, ../../resources/assets/scss/core/_forms.scss */
+/* line 144, ../../resources/assets/scss/core/_forms.scss */
 input[type=radio]:checked + label:after,
 input[type=checked]:checked + label:after {
   transform: scale(1, 1);
 }
 
-/* line 137, ../../resources/assets/scss/core/_forms.scss */
+/* line 151, ../../resources/assets/scss/core/_forms.scss */
 textarea {
   width: 500px;
   height: 130px;
@@ -518,7 +530,7 @@ textarea:-ms-input-placeholder {
 textarea::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 152, ../../resources/assets/scss/core/_forms.scss */
+/* line 166, ../../resources/assets/scss/core/_forms.scss */
 textarea:focus {
   background: rgba(255, 255, 255, 0.8);
   color: #f16060;
@@ -539,7 +551,7 @@ textarea:focus:-ms-input-placeholder {
 textarea:focus::-webkit-input-placeholder {
   color: #f16060;
 }
-/* line 161, ../../resources/assets/scss/core/_forms.scss */
+/* line 175, ../../resources/assets/scss/core/_forms.scss */
 textarea:hover {
   background: rgba(255, 255, 255, 0.8);
   color: #f16060;
@@ -581,11 +593,11 @@ textarea::-webkit-input-placeholder {
   opacity: 0.9;
 }
 
-/* line 176, ../../resources/assets/scss/core/_forms.scss */
+/* line 190, ../../resources/assets/scss/core/_forms.scss */
 .form-row {
   position: relative;
 }
-/* line 179, ../../resources/assets/scss/core/_forms.scss */
+/* line 193, ../../resources/assets/scss/core/_forms.scss */
 .form-row label {
   position: absolute;
   color: #ffffff;
@@ -598,7 +610,7 @@ textarea::-webkit-input-placeholder {
   transition: all 0.2s ease;
   transform: translateY(-50%);
 }
-/* line 196, ../../resources/assets/scss/core/_forms.scss */
+/* line 210, ../../resources/assets/scss/core/_forms.scss */
 .form-row input:focus ~ label,
 .form-row input.has-content ~ label {
   top: 10px;
@@ -606,7 +618,7 @@ textarea::-webkit-input-placeholder {
   right: inherit;
   transform: scale(0.85);
 }
-/* line 204, ../../resources/assets/scss/core/_forms.scss */
+/* line 218, ../../resources/assets/scss/core/_forms.scss */
 .form-row .error-container {
   position: absolute;
   left: 100%;
@@ -623,7 +635,7 @@ textarea::-webkit-input-placeholder {
   opacity: 0;
 }
 @media (max-width: 1024px) {
-  /* line 204, ../../resources/assets/scss/core/_forms.scss */
+  /* line 218, ../../resources/assets/scss/core/_forms.scss */
   .form-row .error-container {
     position: relative;
     left: 0;
@@ -634,11 +646,11 @@ textarea::-webkit-input-placeholder {
     border-top: 0;
   }
 }
-/* line 229, ../../resources/assets/scss/core/_forms.scss */
+/* line 243, ../../resources/assets/scss/core/_forms.scss */
 .form-row .error-container li {
   display: block;
 }
-/* line 233, ../../resources/assets/scss/core/_forms.scss */
+/* line 247, ../../resources/assets/scss/core/_forms.scss */
 .form-row .error-container:after, .form-row .error-container:before {
   right: 100%;
   top: 50%;
@@ -650,33 +662,33 @@ textarea::-webkit-input-placeholder {
   pointer-events: none;
 }
 @media (max-width: 1024px) {
-  /* line 233, ../../resources/assets/scss/core/_forms.scss */
+  /* line 247, ../../resources/assets/scss/core/_forms.scss */
   .form-row .error-container:after, .form-row .error-container:before {
     display: none;
   }
 }
-/* line 248, ../../resources/assets/scss/core/_forms.scss */
+/* line 262, ../../resources/assets/scss/core/_forms.scss */
 .form-row .error-container:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 9px;
   margin-top: -9px;
 }
-/* line 255, ../../resources/assets/scss/core/_forms.scss */
+/* line 269, ../../resources/assets/scss/core/_forms.scss */
 .form-row .error-container:before {
   border-color: rgba(174, 174, 174, 0);
   border-right-color: #aeaeae;
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 267, ../../resources/assets/scss/core/_forms.scss */
+/* line 281, ../../resources/assets/scss/core/_forms.scss */
 .form-row .arrow_box:after {
   border-color: rgba(255, 255, 255, 0);
   border-right-color: #ffffff;
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 273, ../../resources/assets/scss/core/_forms.scss */
+/* line 287, ../../resources/assets/scss/core/_forms.scss */
 .form-row .arrow_box:before {
   border-color: rgba(174, 174, 174, 0);
   border-right-color: #aeaeae;
@@ -684,7 +696,7 @@ textarea::-webkit-input-placeholder {
   margin-top: -11px;
 }
 
-/* line 282, ../../resources/assets/scss/core/_forms.scss */
+/* line 296, ../../resources/assets/scss/core/_forms.scss */
 .error-container {
   border: 1px solid #aeaeae;
   color: #aeaeae;
@@ -698,7 +710,7 @@ textarea::-webkit-input-placeholder {
 }
 
 @media (max-width: 1024px) {
-  /* line 294, ../../resources/assets/scss/core/_forms.scss */
+  /* line 308, ../../resources/assets/scss/core/_forms.scss */
   textarea + .error-container {
     border: 2px solid #ffffff !important;
     border-top: 0 !important;
@@ -1063,13 +1075,13 @@ p a:hover {
 .down-arrow svg:hover path.arrow {
   transform: scale(1.3);
 }
-/* line 328, ../../resources/assets/scss/core/_module.scss */
+/* line 329, ../../resources/assets/scss/core/_module.scss */
 .down-arrow svg:hover path.circle {
   opacity: 0;
-  transform: scale(1.5);
+  transform: scale(0.8);
 }
 
-/* line 336, ../../resources/assets/scss/core/_module.scss */
+/* line 337, ../../resources/assets/scss/core/_module.scss */
 .indicator {
   position: fixed;
   top: 50%;
@@ -1080,19 +1092,19 @@ p a:hover {
   z-index: 99;
 }
 @media (max-width: 1120px) {
-  /* line 336, ../../resources/assets/scss/core/_module.scss */
+  /* line 337, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     width: 50px;
     height: 100px;
   }
 }
 @media (max-width: 620px) {
-  /* line 336, ../../resources/assets/scss/core/_module.scss */
+  /* line 337, ../../resources/assets/scss/core/_module.scss */
   .indicator {
     display: none;
   }
 }
-/* line 354, ../../resources/assets/scss/core/_module.scss */
+/* line 355, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon {
   width: 50px !important;
   height: 50px;
@@ -1100,16 +1112,16 @@ p a:hover {
   padding: 8px;
   float: right;
 }
-/* line 362, ../../resources/assets/scss/core/_module.scss */
+/* line 363, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg {
   width: 100%;
   height: 100%;
 }
-/* line 365, ../../resources/assets/scss/core/_module.scss */
+/* line 366, ../../resources/assets/scss/core/_module.scss */
 .indicator .module-icon svg path {
   fill: white;
 }
-/* line 372, ../../resources/assets/scss/core/_module.scss */
+/* line 373, ../../resources/assets/scss/core/_module.scss */
 .indicator .page-icon:after {
   position: relative;
   font-size: 35px;
@@ -1118,7 +1130,7 @@ p a:hover {
   top: 0;
   left: 0;
 }
-/* line 382, ../../resources/assets/scss/core/_module.scss */
+/* line 383, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon {
   width: 110px;
   height: 50px;
@@ -1134,7 +1146,7 @@ p a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 1120px) {
-  /* line 382, ../../resources/assets/scss/core/_module.scss */
+  /* line 383, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon {
     background-color: rgba(255, 255, 255, 0.9);
     width: 50px;
@@ -1142,18 +1154,18 @@ p a:hover {
     padding: 15px 12px;
   }
 }
-/* line 405, ../../resources/assets/scss/core/_module.scss */
+/* line 406, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon:hover svg path {
   fill: rgba(241, 96, 96, 0.6);
 }
-/* line 411, ../../resources/assets/scss/core/_module.scss */
+/* line 412, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg {
   width: 25px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 418, ../../resources/assets/scss/core/_module.scss */
+/* line 419, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon svg path {
   fill: #f16060;
   stroke: #f16060;
@@ -1163,23 +1175,23 @@ p a:hover {
   transition: fill 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @media (max-width: 800px) {
-  /* line 411, ../../resources/assets/scss/core/_module.scss */
+  /* line 412, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon svg {
     margin: 2px auto;
   }
 }
-/* line 429, ../../resources/assets/scss/core/_module.scss */
+/* line 430, ../../resources/assets/scss/core/_module.scss */
 .indicator .forum-icon span {
   line-height: 21px;
 }
 @media (max-width: 1120px) {
-  /* line 429, ../../resources/assets/scss/core/_module.scss */
+  /* line 430, ../../resources/assets/scss/core/_module.scss */
   .indicator .forum-icon span {
     display: none;
   }
 }
 
-/* line 441, ../../resources/assets/scss/core/_module.scss */
+/* line 442, ../../resources/assets/scss/core/_module.scss */
 [data-current-section="0"] .indicator,
 [data-current-section="1"] .indicator {
   display: none;
@@ -2113,31 +2125,23 @@ html.remodal-is-locked {
   display: none;
 }
 
-/* line 56, ../../resources/assets/scss/pages/home/_home.scss */
-.account-creation > .inner .next-section {
-  bottom: 60px;
-}
 /* line 59, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation > .inner .next-section svg path {
   fill: #f16060;
 }
-/* line 64, ../../resources/assets/scss/pages/home/_home.scss */
-.account-creation > .inner .next-section:hover svg path {
-  fill: #98201a;
-}
-/* line 71, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 66, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content {
   width: 445px;
   text-align: center;
 }
-/* line 75, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 70, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation .content p {
   text-align: center;
   font-size: 17px;
   line-height: 23px;
   margin-bottom: 15px;
 }
-/* line 83, ../../resources/assets/scss/pages/home/_home.scss */
+/* line 78, ../../resources/assets/scss/pages/home/_home.scss */
 .account-creation input {
   margin: 8px 0;
   height: 72px;
@@ -2260,11 +2264,6 @@ html.remodal-is-locked {
 .questions .question .next-question svg {
   width: 100%;
   height: 100%;
-}
-/* line 122, ../../resources/assets/scss/pages/home/_questions.scss */
-.questions .question .next-question svg path {
-  fill: #f16060;
-  transition: fill 0.3s ease;
 }
 /* line 129, ../../resources/assets/scss/pages/home/_questions.scss */
 .questions .question .next-question:hover svg path {

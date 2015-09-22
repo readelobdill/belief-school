@@ -54,15 +54,10 @@
     > .inner {
 
         .next-section {
-            bottom: 60px;
+
             svg {
                 path {
                     fill: $lightRed;
-                }
-            }
-            &:hover {
-                svg path {
-                    fill: $darkRed;
                 }
             }
         }
