@@ -93,7 +93,7 @@
                                             <ul class="actions">
                                                 <li class="unlock-countdown">
                                                     <div class="inner">
-                                                        Module will unlock {{$modules[$key-1]->pivot->created_at->addHours(config('belief.lockout'))->diffForHumans()}}
+                                                        Module will unlock in {{$modules[$key-1]->pivot->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}
                                                     </div>
                                                 </li>
                                                 <li class="arrow"></li>
