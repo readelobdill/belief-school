@@ -24,11 +24,17 @@
                             </p>
 
                             <p class="center">
-                                <strong>Postal Address:</strong> <br />
-                                123 Business Street <br />
-                                Business Suburb <br />
-                                Auckland; New Zealand
+                                <strong>Registered office/address for service : </strong> <br />
+                                c/o Deloitte <br />
+                                18 Anzac Street, Suite 2, Level 2 <br />
+                                Takapuna <br />
+                                Auckland, 0622 <br />
+                                New Zealand
                             </p>
+
+
+
+
 
                     </div>
                 </div>

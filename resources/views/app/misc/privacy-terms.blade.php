@@ -15,6 +15,15 @@
                 <p>You also understand that any testimonials or endorsements by our customers or audience represented on our programs, websites, content, sales pages or social media channels have not been evaluated by us. The results experienced by any person participating in the Belief School Program may vary. </p>
 
                 <p>Any statements from any of the above platforms, our content and our coaching are simply our opinions and not a guarantee or promise of actual performance. We offer no psychological or counselling advice.</p>
+
+                <p class="center">
+                    <b>Registered office/address for service :</b> <br />
+                    c/o Deloitte <br />
+                    18 Anzac Street, Suite 2, Level 2 <br />
+                    Takapuna <br />
+                    Auckland, 0622 <br />
+                    New Zealand
+                </p>
             </div>
 
             <div class="content">
