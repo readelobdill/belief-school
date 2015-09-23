@@ -18,6 +18,7 @@ import Account from 'auth/account';
 /*Misc Pages*/
 import Forum from "forum/forum";
 import TagCloudForm from 'pages/tag-cloud-form';
+import About from 'pages/about';
 
 /*Utility*/
 import $ from 'jquery';
@@ -77,6 +78,9 @@ switch(page) {
         break;
     case 'tag-cloud-form':
         TagCloudForm.init();
+        break;
+    case 'about':
+        About.init();
         break;
 
 
