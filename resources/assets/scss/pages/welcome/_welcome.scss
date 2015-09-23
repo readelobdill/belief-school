@@ -57,6 +57,11 @@ ul.accordion {
 
     > li.is-open {
         .toggle {
+
+            svg {
+                cursor: pointer;
+            }
+
             svg.collapse {
                 transform: translateY(0px);
             }

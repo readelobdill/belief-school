@@ -17,7 +17,7 @@
         <ul class="accordion single">
             <li>
                 <h2>
-                    Struggling to find a photo
+                    Struggling to find a photo?
                     <div class="toggle">
                         @include('app/partials/icons/collapse')
                         @include('app/partials/icons/expand')
