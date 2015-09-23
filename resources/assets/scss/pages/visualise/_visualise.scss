@@ -64,11 +64,15 @@
 
     > .inner {
         align-items: inherit !important;
+        background: url(../img/dreamboard-fix-blur.jpg) no-repeat center center #efefef !important;
+        background-size: cover !important;
     }
 
     h1.title {
+        color: $white;
         &:after {
             width: 37px;
+            border-color: $white;
         }
     }
 
@@ -84,6 +88,11 @@
 }
 
 .board {
+    @include breakpoint($brk-xlarge) {
+        margin: auto;
+        width: 422px;
+    }
+
     .overlay {
         position:absolute;
         top: 0;
@@ -206,6 +215,7 @@
         display: flex;
         justify-content: space-between;
         width: 1085px;
+        margin: auto;
 
         @include breakpoint($brk-xlarge) {
             width: 100%;
@@ -217,7 +227,7 @@
     .image {
         width: 195px;
         height: 129px;
-        background: $grey;
+        background: rgba($grey, 0.9);
         box-shadow: 0 0 30px rgba($fontColour, 0.05);
         display: flex;
         justify-content: center;
@@ -260,11 +270,62 @@
             cursor:pointer;
         }
 
+        // &.image_5 {
+        //     transform: skew(-2deg) rotate(2deg);
+        //     top: -2px;
+        // }
+
+        // &.image_6 {
+        //     transform: skew(-2deg) rotate(2deg);
+        //     top: 4px;
+        // }
+
+        // &.image_7 {
+        //     transform: skew(2deg) rotate(-2deg);
+        //     top: 2px;
+        // }
+
+        // &.image_8 {
+        //     transform: skew(2deg) rotate(-2deg);
+        //     top: -2px;
+        // }
+
+        // &.image_9 {
+        //     transform: skew(2deg) rotate(-2deg);
+        //     top: -2px;
+        // }
+
+        // &.image_10 {
+        //     transform: rotate(-2deg);
+        //     top: -2px;
+        // }
+
+        // &.image_11 {
+        //     transform: rotate(2deg);
+        //     top: -2px;
+        // }
+
+        // &.image_12 {
+        //     transform: rotate(2deg);
+        //     top: 7px;
+        // }
+
+        // &.image_2,
+        // &.image_3,
+        // &.image_6,
+        // &.image_7,
+        // &.image_10,
+        // &.image_11 {
+        //     transform-origin: 50% 50%;
+        //     transform: scale(1.1, 1.1);
+        // }
+
         &.image_main {
             transform-origin: 50% 50%;
-            transform: scale(1.3, 1.3);
+            transform: scale(1.35, 1.35);
             position: relative;
             z-index: 2;
+            background: $grey;
 
             @include breakpoint($brk-xlarge) {
                 transform: scale(1, 1);

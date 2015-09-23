@@ -41,7 +41,7 @@
 
                 <p>You will comply with all applicable laws in your use of the Websites and will not use the Websites for any unlawful purpose;</p>
 
-                <ol>
+                <ol class="privacy">
                     <li>You will not harass or threaten, or another person.</li>
                     <li>You will not use any of the content of Belief School to create a competing product or service.</li>
                     <li>You will not impose, at our discretion an excessive large load on our technical infrastructure.</li>

@@ -26,7 +26,7 @@
                         <li>No Negativity at all, no but’s, maybe’s or I’m going to try!</li>
                         <li>If you are thinking about a goal, maybe a a business deal or a sports event. You would write something like this:</li>
                         <li>I am so happy it’s July 16th I won my tournament, it feels awesome and I am proud of myself.</li>
-                        <li><a href="">Read more</a> on how this works here [link through to my Blue Elephants Blog]</li>
+                        <li><a href="http://beliefschool.com/how-to-find-blue-elephants/">Read more</a> on how this works here.</li>
                     </ul>
                 </div>
             </li>
