@@ -23,7 +23,11 @@
                 </h1>
                 <p>Everything we collect on your Dashboard becomes part of your Personal Manifesto, our gift to you on completion of this program.</p>
 
-                <p>Your next module will unlock in 48 Hours.</p>
+                @if($moduleUser->created_at->diffInHours() < config('belief.lockout'))
+                    <p>Your next module will unlock in {{$moduleUser->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}.</p>
+                @else
+                    <p>Your <a href="{{route('modules.view', ['gratitude'])}}">next module</a> is ready and waiting for you.</p>
+                @endif
                 <p>Take a look at your <a href="{{route('dashboard')}}#module-{{$module->slug}}">dashboard</a> and see the progress on your amazing Belief School journey.</p>
             </div>
         </div>

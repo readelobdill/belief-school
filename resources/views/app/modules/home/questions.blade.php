@@ -3,7 +3,7 @@
     @for($i = 1; $i < $questionCount + 1; $i++)
         <div class="question question-{{$i}}">
             @include('app/modules/home/questions/'.$i)
-            <div class="next-question down-arrow">
+            <div class="next-question absol down-arrow">
                 @include('app/partials/icons/down-arrow')
             </div>
         </div>
