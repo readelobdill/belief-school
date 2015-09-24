@@ -21,7 +21,7 @@
             <div class="content">
                 <p>Before you complete your journey you can revisit module one and send your email to as many people as you like. The more people who respond, the greater your understanding of how you are seen in the world.</p>
 
-                <p>Click here to send again.</p>
+                <p><a href="mailto:?subject=Show%20your%20friend%20how%20special%20they%20are&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$requiredModules['boomerang']->secret]))}}" class="button" data-update-module>Click here to send again.</a></p>
 
                 <p><a href="{{route('modules.forum',[$module->slug])}}">Head over to the Forum</a> and share your insights and vision for your future. When you declare your intention out loud it gives it weight and pulls you forward.</p>
             </div>
