@@ -70,23 +70,23 @@
                 <div class="main-copy why-you-need">
                     <h1 class="plain">Why you need to do this?</h1>
                     <div class="why-you-need__node">
-                        <div class="icon"></div>
+                        <div class="icon person"></div>
                         <p>Your belief in yourself is the only things standing between you and the life you want.</p>
                     </div>
                     <div class="why-you-need__node">
-                        <div class="icon shield"></div>
+                        <div class="icon clarity"></div>
                         <p>Belief School is part of a journey of self-discovery. Understanding who you are and why you do the things you do, is the answer to everything.</p>
                     </div>
                     <div class="why-you-need__node">
-                        <div class="icon message"></div>
+                        <div class="icon shield"></div>
                         <p>On completion of the program you will have a heap of tools and resources to support you as you create the life you want.</p>
                     </div>
                     <div class="why-you-need__node">
-                        <div class="icon message"></div>
+                        <div class="icon bulb"></div>
                         <p>You don’t know what you don’t know – but we do.</p>
                     </div>
                     <div class="why-you-need__node">
-                        <div class="icon message"></div>
+                        <div class="icon heart"></div>
                         <p>It will change your life – <a href="{{route('privacy-terms') }}">guaranteed.</a></p>
                     </div>
                 </div>
@@ -127,30 +127,29 @@
 
                 <div class="pricing-container">
                     <h1 class="title">
-                        <span data-arc="10">&middot; Pricing Details &middot;</span>
+                        <span data-arc="120">&middot; Pricing Details &middot;</span>
                         <div class="price">$135 <span>NZD</span></div>
                     </h1>
 
                     <div class="content-block">
-
                         <h1 class="plain">What you get</h1>
 
                         <div class="what-you-get">
                             <div class="what-you-get__node">
-                                <div class="icon"></div>
-                                <p>A self-discipline exercise, setting you up for success and helping you build your self-discipline muscle.</p>
+                                <div class="icon gem"></div>
+                                <p>A self-discipline exercise, <b>setting you up for success</b> and helping you build your self-discipline muscle.</p>
                             </div>
                             <div class="what-you-get__node">
-                                <div class="icon shield"></div>
-                                <p>Eight unique, beautifully crafted modules, each with an interactive exercise that is simple to complete (not always easy ☺), but doable for every single person.</p>
+                                <div class="icon sheild"></div>
+                                <p><b>Eight unique, beautifully crafted modules</b>, each with an interactive exercise that is simple to complete (not always easy ☺), but doable for every single person.</p>
                             </div>
                             <div class="what-you-get__node">
-                                <div class="icon message"></div>
-                                <p>Your Belief School Manifesto. This is our gift to you. A beautiful collection of all that you have learnt and created about yourself, to share and refer to whenever you need to be reminded how fabulous you are.</p>
+                                <div class="icon book"></div>
+                                <p>Your <b>Belief School Manifesto</b>. This is our gift to you. A beautiful collection of all that you have learnt and created about yourself, to share and refer to whenever you need to be reminded how fabulous you are.</p>
                             </div>
                             <div class="what-you-get__node">
-                                <div class="icon message"></div>
-                                <p>Access to the Belief School community through our Forum. Paula Gosney the founder, and her team, will be available to your throughout your journey for guidance and support.</p>
+                                <div class="icon forum"></div>
+                                <p>Access to the <b>Belief School community</b> through our Forum. Paula Gosney the founder, and her team, will be available to your throughout your journey for guidance and support.</p>
                             </div>
                         </div>
                     </div>
@@ -211,13 +210,6 @@
                         </div>
                     </li>
                 </ul>
-
-{{--
-
-                <div class="terms-container">
-                    <h1 class="plain">Further Details</h1>
-                    <p>Our <a href="{{route('privacy-terms') }}">Terms &amp; Conditions</a> and <a href="{{route('privacy-terms') }}">Privacy Policy</a> are important to us and you! Please take the time to review the information.</p>
-                </div> --}}
 
                 <p class="center"><a href="{{ route('modules.view', ['home', 'skip' => 1])}}" class="button">I want to find my amazing self</a></p>
             </div>
