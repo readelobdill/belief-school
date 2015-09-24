@@ -174,6 +174,45 @@
     padding-top: 60px;
 }
 
+.why-you-need {
+    text-align: center;
+    font-weight: 500;
+
+    .why-you-need__node {
+        .icon {
+            position: relative;
+            margin: 0 auto;
+            height: 30px;
+            width: 30px;
+
+            &:after {
+                position: absolute;
+                content: "\e62c";
+                font-family: $icon;
+                margin-left: 50%;
+                @include transform(translateX(-100%));
+                top: 0;
+                font-size: 30px;
+                color: $black;
+            }
+
+            // &.shield:after {
+            //     content: '\e628';
+            //     font-size: 47px;
+            //     left: 4px;
+            //     top: 2px;
+            // }
+
+            // &.message:after {
+            //     content: '\e62d';
+            //     font-size: 37px;
+            //     left: 9px;
+            //     top: 3px;
+            // }
+        }
+    }
+}
+
 .red-block {
     padding: 50px $gutter;
     @include pie-clearfix();
@@ -259,68 +298,70 @@
         }
     }
 
-
-    .price-block {
-        border: 2px solid transparent;
-        border-image: linear-gradient(23deg, rgba(241, 96, 96, 0.4) 0%, rgba(241, 96, 96, 0) 90%);
-        border-image-slice: 1;
-        margin: 0 .5%;
-        padding: 60px 20px 0px 20px;
-        position: relative;
-        color: #f16060;
-        text-align: center;
-        line-height: 26px;
-        float: left;
-        width: 19%;
-        min-height: 380px;
-
-        @include breakpoint($break-800) {
-            max-width: 245px;
-            float: none;
-            width: 100%;
-            margin: 20px auto;
-        }
-
-        .icon {
-            position: relative;
-            margin: 0 auto;
-            width: 30px;
-            height: 30px;
-            margin-bottom: 20px;
-            width: 55px;
-
-            &:after {
-                position: absolute;
-                content: "\e62c";
-                font-family: $icon;
-                left: 7px;
-                top: 0;
-                font-size: 41px;
-                color: $black;
-            }
-
-            &.shield:after {
-                content: '\e628';
-                font-size: 47px;
-                left: 4px;
-                top: 2px;
-            }
-
-            &.message:after {
-                content: '\e62d';
-                font-size: 37px;
-                left: 9px;
-                top: 3px;
-            }
-        }
-        p {
-            color: $lightRed;
-            text-align: center;
-            font-size: 17px;
-            font-weight: 600;
-        }
-    }
 }
+
+
+//     .price-block {
+//         border: 2px solid transparent;
+//         border-image: linear-gradient(23deg, rgba(241, 96, 96, 0.4) 0%, rgba(241, 96, 96, 0) 90%);
+//         border-image-slice: 1;
+//         margin: 0 .5%;
+//         padding: 60px 20px 0px 20px;
+//         position: relative;
+//         color: #f16060;
+//         text-align: center;
+//         line-height: 26px;
+//         float: left;
+//         width: 19%;
+//         min-height: 380px;
+
+//         @include breakpoint($break-800) {
+//             max-width: 245px;
+//             float: none;
+//             width: 100%;
+//             margin: 20px auto;
+//         }
+
+//         .icon {
+//             position: relative;
+//             margin: 0 auto;
+//             width: 30px;
+//             height: 30px;
+//             margin-bottom: 20px;
+//             width: 55px;
+
+//             &:after {
+//                 position: absolute;
+//                 content: "\e62c";
+//                 font-family: $icon;
+//                 left: 7px;
+//                 top: 0;
+//                 font-size: 41px;
+//                 color: $black;
+//             }
+
+//             &.shield:after {
+//                 content: '\e628';
+//                 font-size: 47px;
+//                 left: 4px;
+//                 top: 2px;
+//             }
+
+//             &.message:after {
+//                 content: '\e62d';
+//                 font-size: 37px;
+//                 left: 9px;
+//                 top: 3px;
+//             }
+//         }
+//         p {
+//             color: $lightRed;
+//             text-align: center;
+//             font-size: 17px;
+//             font-weight: 600;
+//         }
+//     }
+// }
 
 .terms-container {
     padding-bottom: 30px;
