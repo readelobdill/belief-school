@@ -4,7 +4,7 @@
             <div class="content">
                 <h1 class="plain">You are one step away from completing Belief School.</h1>
 
-                <p><b>This makes you extraordinary.</p></b>
+                <p><b>This makes you extraordinary.</b></p>
 
                 <p>Module Eight is fun and fabulous and once complete you will be able to download your beautiful Manifesto.</p>
 
