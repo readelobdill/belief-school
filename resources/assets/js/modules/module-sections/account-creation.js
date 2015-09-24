@@ -22,6 +22,15 @@ export default class AccountCreationSection extends Text {
     setup() {
         super.setup();
 
+        this.form.find('input').each((i, obj) => {
+            let value = localStorage.getItem(`register-${$(obj).attr('name')}`);
+            if(value) {
+                $(obj).val(value);
+                $(obj).addClass('has-content');
+            }
+
+        });
+
     }
 
     setupForm() {
@@ -51,8 +60,17 @@ export default class AccountCreationSection extends Text {
                 $('.auth').find('.logout').removeClass('is-hidden-g');
                 $('.auth').find('.login').addClass('is-hidden-g');
                 $('.requires-auth').removeClass('is-hidden-g');
+
+                this.form.find('input').each((i, obj) => {
+                    let value = localStorage.removeItem(`register-${$(obj).attr('name')}`);
+                });
+
                 return this.module.nextSection();
             });
+        });
+        this.form.on('keyup', 'input', (e) => {
+            let item = $(e.currentTarget);
+            localStorage.setItem(`register-${item.attr('name')}`, item.val());
         });
     }
 
