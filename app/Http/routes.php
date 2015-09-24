@@ -109,6 +109,10 @@ Route::get('about', ['as' => 'about', function() {
     return view('app.misc.about', ['page'=>'about']);
 }]);
 
+Route::get('about-paula-gosney', ['as' => 'about-paula-gosney', function() {
+    return view('app.misc.about-paula-gosney', ['page'=>'about-paula-gosney']);
+}]);
+
 Route::get('contact', ['as' => 'contact', function() {
     return view('app.misc.contact', ['page'=>'contact']);
 }]);
