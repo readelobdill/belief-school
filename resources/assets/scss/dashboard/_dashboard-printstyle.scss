@@ -6,6 +6,13 @@
    Print styles
    ========================================================================== */
 
+@media print and (color) {
+   * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+   }
+}
+
 @media print {
 
     *,
@@ -61,6 +68,7 @@
     }
 
         header,
+        .menu,
         .burger,
         .auth,
         .button,
@@ -88,6 +96,14 @@
             div.end-page[role=print] {
                 display: block;
                 page-break-before: always;
+            }
+
+            .module-boomerang {
+                h2 {
+                    &:before {
+                        content: '\e600';
+                    }
+                }
             }
 
             h2 {
