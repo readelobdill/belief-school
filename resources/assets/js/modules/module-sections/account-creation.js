@@ -21,7 +21,6 @@ export default class AccountCreationSection extends Text {
     }
     setup() {
         super.setup();
-        $('body').css({minHeight: ''});
 
     }
 
