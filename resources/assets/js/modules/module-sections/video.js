@@ -11,10 +11,15 @@ import Froogaloop from 'util/froogaloop';
 class VideoSection extends ModuleSection {
 
 
+    constructor(section, module) {
+        super(section, module);
+        this.video = Froogaloop(this.section.find('iframe')[0]);
+    }
 
     setup() {
         super.setup();
         $('body').css({minHeight: ''});
+        this.video.api('play');
     }
 
     open() {
@@ -30,9 +35,9 @@ class VideoSection extends ModuleSection {
         return deferred.promise;
     }
     teardown() {
-        let video = Froogaloop(this.section.find('iframe')[0]);
-        video.api('pause');
+        this.video.api('pause');
     }
+
 }
 
 module.exports = VideoSection;
