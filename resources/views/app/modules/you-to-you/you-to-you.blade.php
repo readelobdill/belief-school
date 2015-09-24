@@ -4,14 +4,15 @@
            <span data-arc="100">&middot; Module {{$module->order -1}}  &middot;</span>
             {{ $module->name }}
         </h1>
-        <h2>Do you know how exceptional you are?</h2>
-        <p>We don’t say this lightly. You chose to start Belief School. And, you FINISHED IT.</p>
-        <p><strong>Who you have been throughout this program, is all you ever need to be throughout life.</strong></p>
-        <p><strong>Brave, dedicated, compassionate and willing to learn.</strong></p>
+        <h2 class="title">Do you know how exceptional you are?</h2>
+
+        <p class="center">We don’t say this lightly. You chose to start Belief School. And, you <b class="red">FINISHED IT.</b></p>
+        <p class="center"><strong>Who you have been throughout this program, is all you ever need to be throughout life.</strong></p>
+        <p class="center"><strong>Brave, dedicated, compassionate and willing to learn.</strong></p>
         <p>You have given yourself a great gift of knowledge and experience. At the beginning of this program we talked about self-discipline, you have shown to yourself that you have the discipline you need to create your best life.</p>
-        <p>If you apply this same commitment and willingness to learn, and you take the risks that you have done through each of the Belief School modules, You Can Do Anything.</p>
+        <p>If you apply this same commitment and willingness to learn, and you take the risks that you have done through each of the Belief School modules, <b>You Can Do Anything.</b></p>
         <p>Do you get it, this is it. This is what it takes.</p>
-        <ul>
+        <ul class="list--simple">
             <li>Understanding your <strong>Strengths</strong></li>
             <li>Using <strong>Affirming Words</strong> when you speak about yourself</li>
             <li>Calling on the <strong>Love</strong> and <strong>Resources</strong> around you</li>
@@ -19,7 +20,10 @@
             <li><strong>Contributing</strong> to the world</li>
             <li>Being <strong>Grateful</strong> for all that you have</li>
         </ul>
-        <p class="center"><strong>We are so proud of you!</strong></p>
+
+        <div class="dots"></div>
+
+        <h2 class="title"><strong>We are so proud of you!</strong></h2>
         <p class="center"><strong>And we want you to be proud of yourself.</strong></p>
 
         <p>Right now you have your last exercise to complete. We want you to do it now while the emotion is high. This is really important so put your heart and soul into it.</p>
@@ -35,9 +39,7 @@
 
         <div class="video">
             <div class="upload">
-                <div class="upload-icon">
-                    @include('app/partials/icons/upload-video')
-                </div>
+                <div class="upload-icon"></div>
                 Upload your video
                 <form action="" class="upload-video">
                     <input type="file" name="video">
