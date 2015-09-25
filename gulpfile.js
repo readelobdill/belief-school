@@ -9,6 +9,8 @@ var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
 var rsync = require('gulp-rsync');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 
 
 function swallowError(error) {
@@ -56,15 +58,23 @@ gulp.task('livereload', function() {
 
 gulp.task('watch', function() {
     livereload.listen();
+
+    gulp.watch('./resources/assets/css/main.css', ['postcss']);
     gulp.watch('./public/css/main.css', ['livereload']);
 });
 
 gulp.task('scripts', function() {
-    return scripts(false, false);
+    return scripts(false, true);
 });
 
 gulp.task('watchScripts', function() {
     return scripts(true, false);
+});
+
+gulp.task('postcss', function() {
+    return gulp.src('resources/assets/css/main.css')
+        .pipe(postcss([autoprefixer]))
+        .pipe(gulp.dest('public/css/'));
 });
 
 gulp.task('gladeyestage', function() {
