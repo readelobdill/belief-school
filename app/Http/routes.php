@@ -33,7 +33,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::post('comments/{comment}/reply', ['as' => 'comments.reply', 'uses' => 'CommentController@reply']);
     Route::post('modules/{module}/comment', ['as' => 'modules.comment', 'uses' => 'CommentController@create']);
-
+    Route::delete('comment/{comment}', ['as' => 'modules.comment.delete', 'uses' => 'CommentController@delete']);
 
     Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
 

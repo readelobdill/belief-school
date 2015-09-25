@@ -18,5 +18,16 @@ export default {
             }, defaultHeaders),
             body: JSON.stringify(data)
         })
+    },
+
+    deleteComment(url) {
+        return fetch(url, {
+            method: 'delete',
+            credentials: 'same-origin',
+            headers: $.extend({}, {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }, defaultHeaders)
+        });
     }
 }

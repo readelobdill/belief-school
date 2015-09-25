@@ -4,11 +4,11 @@
 @if($comment->deleted)
 
     <div class="inner is-deleted">
-        <h4>deleted</h4>
+        <h4>removed</h4>
         <div class="comment-creation-date">{{$comment->created_at->diffForHumans()}}</div>
-        <div class="comment-username"><strong>deleted</strong> said:</div>
+        <div class="comment-username"><strong>removed</strong> said:</div>
 
-        <p>deleted</p>
+        <p><em>removed</em></p>
 
         @if($comment->depth == 0 && Auth::user()->isAdmin())
             <a href="{{route('admin.comments.sticky', [$comment->id])}}" class="btn btn-info btn-xs sticky-comment {{($comment->sticky ? 'active' : '')}}">Sticky</a>
@@ -33,12 +33,15 @@
 
         <a href="#" data-id="{{$comment->id}}" class="reply">Reply</a>
 
-        @if($comment->depth == 0 && Auth::user()->isAdmin())
+        @if($comment->depth == 0 && Auth::user()->isAdmin() )
             <a href="{{route('admin.comments.sticky', [$comment->id])}}" class="btn btn-info btn-xs sticky-comment {{($comment->sticky ? 'active' : '')}}">Sticky</a>
         @endif
 
         @if(Auth::user()->isAdmin())
             <a href="{{route('admin.comments.delete', [$comment->id])}}" class="btn btn-danger btn-xs delete-comment">Delete</a>
+        @endif
+        @if(!Auth::user()->isAdmin() && Auth::user()->id == $comment->user->id)
+            <a href="{{route('modules.comment.delete', [$comment->id])}}" class="btn btn-danger btn-xs delete-comment">Delete</a>
         @endif
 
         <form action="{{route('comments.reply', [$comment->id])}}" method="POST" class="is-hidden reply-form">

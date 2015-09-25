@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import CommentForm from './comment-form';
 import CommentStore from "stores/CommentStore";
+import client from "sources/CommentClient";
 
 export default class Comment {
     constructor(comment, forum) {
@@ -14,6 +15,10 @@ export default class Comment {
         this.comment.find('.reply').first().on('click', (e) => {
             e.preventDefault();
             this.reply();
+        });
+        this.comment.find('.delete-comment').first().on('click', (e) => {
+            e.preventDefault();
+            this.deleteComment($(e.currentTarget).attr('href'));
         });
         this.replyForm.on('comment:new', (comment) => {
             this.addNewComment(comment)
@@ -43,5 +48,12 @@ export default class Comment {
         this.comment.removeClass('comment-is-loading');
 
 
+    }
+
+    deleteComment(url) {
+        client.deleteComment(url).then(response => response.text())
+            .then(comment => {
+                window.location = window.location;
+            });
     }
 }

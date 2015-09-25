@@ -59,4 +59,13 @@ class CommentController extends Controller {
         return view('comments.comment', ['comment' => $comment]);
     }
 
+    public function delete($comment) {
+        if($comment->user->id !== $this->auth->user()->id) {
+            abort(403);
+        }
+        $comment->deleted = !$comment->deleted;
+        $comment->save();
+        return view('comments.comment', ['comment' => $comment]);
+    }
+
 }
