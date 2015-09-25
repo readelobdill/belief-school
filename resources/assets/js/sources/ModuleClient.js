@@ -49,9 +49,11 @@ class ModuleClient extends EventEmitter {
 
         const xhr = new XMLHttpRequest();
 
-        const headers = new Headers($.extend({}, {
+        const headers = $.extend({}, {
             'Accept' : 'application/json'
-        }, defaultHeaders));
+        }, defaultHeaders);
+
+        console.log(headers);
 
 
         xhr.upload.addEventListener('progress',(oEvent) => {
@@ -76,15 +78,18 @@ class ModuleClient extends EventEmitter {
         xhr.open('POST', url);
 
 
-        headers.forEach(function(value, name) {
-            xhr.setRequestHeader(name, value);
-        })
+        Object.getOwnPropertyNames(headers).forEach(function(name) {
+            xhr.setRequestHeader(name, headers[name]);
+        }, this);
 
         xhr.send(data);
 
 
         return deferred.promise.then((response) => {
-            return JSON.parse(response.currentTarget.responseText);
+            console.log(response);
+            return JSON.parse(response.target.responseText);
+        }, (error) => {
+            console.log(error);
         });
     }
 
@@ -95,9 +100,9 @@ class ModuleClient extends EventEmitter {
 
         const xhr = new XMLHttpRequest();
 
-        const headers = new Headers($.extend({}, {
+        const headers = $.extend({}, {
             'Accept' : 'application/json'
-        }, defaultHeaders));
+        }, defaultHeaders);
 
 
         xhr.upload.addEventListener('progress',(oEvent) => {
@@ -122,15 +127,16 @@ class ModuleClient extends EventEmitter {
         xhr.open('POST', url);
 
 
-        headers.forEach(function(value, name) {
-            xhr.setRequestHeader(name, value);
-        })
+        Object.getOwnPropertyNames(headers).forEach(function(name) {
+            xhr.setRequestHeader(name, headers[name]);
+        }, this);
 
         xhr.send(data);
 
 
         return deferred.promise.then((response) => {
-            return JSON.parse(response.currentTarget.responseText);
+            console.log(response);
+            return JSON.parse(response.target.responseText);
         });
     }
 
