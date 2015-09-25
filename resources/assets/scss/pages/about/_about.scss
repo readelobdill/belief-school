@@ -299,6 +299,7 @@
 
 .what-you-get {
     @include pie-clearfix();
+
     .what-you-get__node {
         border: 2px solid transparent;
         border-image: linear-gradient(23deg, rgba(241, 96, 96, 0.4) 0%, rgba(241, 96, 96, 0) 90%);

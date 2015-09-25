@@ -23,14 +23,7 @@
                     </p>
                 </header>
 
-                <header role="print">
-                    <h1 class="title">
-                        This is your <br />Manifesto
-                    </h1>
-                    <p class="center">
-                        This can be the cover page text.
-                    </p>
-                </header>
+                <header role="print" class="manifesto-cover"></header>
 
                 <ul class="module-list">
                     @include('app.dashboard.modules.home', ['home' => $modules[0], 'welcome' => isset($modules[1]) ? $modules[1] : false])
