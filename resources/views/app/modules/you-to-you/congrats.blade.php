@@ -19,6 +19,6 @@
                 <p>When heading over to your <strong>dashboard</strong>, take a moment to save it out - send it to your trusted friends and family and share your journey.</p>
                 <p class="center"><a href="{{route('dashboard')}}#module-{{$module->slug}}" class="button">Check it out now!</a></p>
             </div>
-        </div>gulp
+        </div>
     </div>
 </div>
