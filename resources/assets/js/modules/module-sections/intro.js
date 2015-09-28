@@ -36,7 +36,7 @@ export default class IntroSection extends ModuleSection {
 
     jump() {
         return animate.to(this.section, 0, {autoAlpha: 1}).then(() => {
-            animate.to(this.section.find('.inner'), 0, {opacity: 0});
+            animate.to(this.section.find('.inner'), 0, {autoAlpha: 0});
             this.teardown();
 
         });
