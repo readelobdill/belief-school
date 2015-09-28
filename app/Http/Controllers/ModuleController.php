@@ -67,8 +67,8 @@ class ModuleController extends Controller {
 
 
 
-        if(!empty($moduleUser) && $moduleUser->pivot->complete) {
-            //abort(404);
+        if(!empty($moduleUser) && $moduleUser->pivot->complete && !\Session::get('paid', false)) {
+            return redirect(route('dashboard').'#module-'.$module->slug);
         }
 
 
