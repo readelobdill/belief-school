@@ -1,3 +1,5 @@
+import Q from 'q';
+
 /*Modules*/
 import Home from "pages/home";
 import Welcome from "pages/welcome";
@@ -28,6 +30,10 @@ import Arc from 'ui/arc';
 import Forms from 'ui/forms';
 import Sharer from 'ui/share'
 import IntroVideo from 'ui/intro-video';
+
+if(!window.Promise) {
+    window.Promise = Q;
+}
 
 UI.init();
 Loading.init();
