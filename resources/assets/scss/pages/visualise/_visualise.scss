@@ -247,7 +247,7 @@
 
 
         &:hover {
-            background: #eee;
+            background: rgba($grey, 1);
 
             .camera-icon {
                 transform-origin: 50% 50%;
@@ -326,20 +326,20 @@
             padding: 17px;
             transition: transform $transition, box-shadow $transition;
             box-shadow: 0 0 30px rgba(37, 46, 51, 0);
-
             position: absolute;
-            left: 50%;
-            top: 50%;
+            left: 50%; top: 50%;
             margin-left: -31px;
             margin-top: -31px;
+
             svg {
                 width: 100%;
-                height: 100%;
+                height: 28px;
                 path {
                     fill: white;
                 }
             }
         }
+
         .loader {
             display:none;
             width: 62px;
@@ -352,6 +352,7 @@
             font-weight: 500;
 
         }
+
         &.is-loading {
             .loader {
                 display:block;
