@@ -26,11 +26,6 @@ class Forum {
     }
 
     setupEventListeners() {
-        $(window).on('scroll', () => {
-            this.scrollPosition = window.pageYOffset;
-            var winH = $(window).height();
-            animate.to(this.forum.find('.inner'), 0, {scrollTo: {y: Math.ceil(this.scrollPosition)}});
-        });
 
         CommentStore.on('comment:added', (comment) => {
             this.comments.push(comment);
