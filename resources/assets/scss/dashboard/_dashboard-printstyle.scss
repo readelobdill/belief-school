@@ -100,7 +100,7 @@
     }
 
     .manifesto-cover {
-        background: image-url('manifesto/cover-page.jpg') center center no-repeat !important;
+        background: url('../img/manifesto/cover-page.jpg') center center no-repeat !important;
         background-size: cover !important;
         height: 287mm;
         width: 100%;
@@ -136,7 +136,7 @@
             display: block;
             page-break-before: always;
 
-            background: image-url('manifesto/background-image-test.jpg') center center no-repeat !important;
+            background: url('../img/manifesto/background-image-test.jpg') center center no-repeat !important;
             background-size: cover !important;
             page-break-before: always;
             width: 100%;
@@ -185,7 +185,7 @@
             }
 
             > li {
-                background: image-url('manifesto/background-image-test.jpg') center center no-repeat !important;
+                background: url('../img/manifesto/background-image-test.jpg') center center no-repeat !important;
                 background-size: cover !important;
                 page-break-before: always;
                 width: 100%;

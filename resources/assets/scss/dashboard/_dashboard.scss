@@ -1,5 +1,5 @@
 .dash-background {
-    background: image-url('home-background.png') no-repeat center center;
+    background: url('../img/home-background.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     padding: 50px;
@@ -204,7 +204,7 @@ ul.actions {
 
         &.arrow {
             padding: 8.5px 15px;
-            background: transparent image-url('dashboard-arrow.svg') center center no-repeat;
+            background: transparent url('../img/dashboard-arrow.svg') center center no-repeat;
             position: relative;
             top: 3px;
             right: 3px;
