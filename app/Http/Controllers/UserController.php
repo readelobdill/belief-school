@@ -74,7 +74,7 @@ class UserController extends Controller {
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required|email',
-            'password' => 'required|min:8',
+            'password' => 'min:8',
             'username' => 'required'
         ]);
 
