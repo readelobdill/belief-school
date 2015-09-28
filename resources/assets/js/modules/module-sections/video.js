@@ -37,6 +37,16 @@ class VideoSection extends ModuleSection {
 
         return deferred.promise;
     }
+
+    close() {
+        return new Promise((yes, no) => {
+            TweenMax.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 0, onComplete: () => {
+                TweenMax.to(this.section.find(  '.inner'), 0, {'display': 'none'});
+                this.teardown();
+                yes();
+            }});
+        })
+    }
     teardown() {
         this.video.api('pause');
     }

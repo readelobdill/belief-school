@@ -1,5 +1,4 @@
-import Q from 'q';
-
+import es6Promise from 'es6-promise';
 /*Modules*/
 import Home from "pages/home";
 import Welcome from "pages/welcome";
@@ -31,9 +30,7 @@ import Forms from 'ui/forms';
 import Sharer from 'ui/share'
 import IntroVideo from 'ui/intro-video';
 
-if(!window.Promise) {
-    window.Promise = Q;
-}
+es6Promise.polyfill();
 
 UI.init();
 Loading.init();
