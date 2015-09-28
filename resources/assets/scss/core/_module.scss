@@ -63,11 +63,13 @@
                     padding-top: 0;
                     height: 0;
                     width: inherit;
-
+                    visibility: visible;
                     @include breakpoint($break-620) {
                         padding-left: $gutter;
                         padding-right: $gutter;
                     }
+
+
 
                     iframe {
                         position: absolute;
