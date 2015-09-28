@@ -158,9 +158,9 @@
 
             &:before,
             &:after {
-                font-family:$icon;
+                font-family: $icon;
                 font-style: normal;
-                position: absolute;
+                position: relative;
                 color: $lightRed;
                 font-size: 13px;
             }
@@ -168,15 +168,14 @@
             &:before {
                 content: '\e62b';
                 top: 0;
-                left: 0;
-                margin-left: -10px;
+                left: -5px;
+                margin-left: -5px;
             }
 
             &:after {
                 content: '\e62a';
                 bottom: 3px;
-                margin-left: 10px;
-                //margin-right: -10px;
+                margin-left: 5px;
             }
         }
     }
