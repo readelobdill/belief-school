@@ -16,6 +16,12 @@
             }
         }
 
+        &.intro-video {
+            > .inner {
+                display:none;
+                visibility: visible;
+            }
+        }
         > .inner {
             padding: 40px $gutter;
 
