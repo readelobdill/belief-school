@@ -40,6 +40,7 @@
             height: 45px;
             display: inline-block;
             margin-bottom: 10px;
+
             svg {
                 height: 100%;
                 path {
@@ -47,12 +48,14 @@
                 }
             }
         }
+
         h3 {
             font-weight:bold;
             font-size: 25px;
-            margin-bottom: 22px;
             min-height: 80px;
+            margin: 0;
         }
+
         p {
             font-size: 14px;
         }
@@ -91,6 +94,10 @@
     @include breakpoint($brk-xlarge) {
         margin: auto;
         width: 422px;
+    }
+
+    @include breakpoint($brk-small) {
+        width: 100%;
     }
 
     .overlay {
@@ -269,56 +276,6 @@
             opacity: 0;
             cursor:pointer;
         }
-
-        // &.image_5 {
-        //     transform: skew(-2deg) rotate(2deg);
-        //     top: -2px;
-        // }
-
-        // &.image_6 {
-        //     transform: skew(-2deg) rotate(2deg);
-        //     top: 4px;
-        // }
-
-        // &.image_7 {
-        //     transform: skew(2deg) rotate(-2deg);
-        //     top: 2px;
-        // }
-
-        // &.image_8 {
-        //     transform: skew(2deg) rotate(-2deg);
-        //     top: -2px;
-        // }
-
-        // &.image_9 {
-        //     transform: skew(2deg) rotate(-2deg);
-        //     top: -2px;
-        // }
-
-        // &.image_10 {
-        //     transform: rotate(-2deg);
-        //     top: -2px;
-        // }
-
-        // &.image_11 {
-        //     transform: rotate(2deg);
-        //     top: -2px;
-        // }
-
-        // &.image_12 {
-        //     transform: rotate(2deg);
-        //     top: 7px;
-        // }
-
-        // &.image_2,
-        // &.image_3,
-        // &.image_6,
-        // &.image_7,
-        // &.image_10,
-        // &.image_11 {
-        //     transform-origin: 50% 50%;
-        //     transform: scale(1.1, 1.1);
-        // }
 
         &.image_main {
             transform-origin: 50% 50%;

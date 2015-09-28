@@ -11,7 +11,7 @@
 
         <h1 class="plain">I Am Enough</h1>
 
-        <p>The centre image is a picture of you.</p>
+        <p class="center"><b>The centre image is a picture of you.</b></p>
         <p>Think of time when you felt so sure of who you were, you were excited and certain about your life. You’ll know the image when you see it, as you’ll get that great feeling inside. It doesn’t matter if you are 15 or 55, and it certainly doesn’t matter whether it is a perfect shot, it is about the feelings this image creates for you.</p>
 
         <ul class="accordion single">
