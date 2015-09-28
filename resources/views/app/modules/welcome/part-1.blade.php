@@ -8,7 +8,7 @@
             Self-esteem is the un-negotiable cornerstone of success and happiness.
         </p>
         <p>
-            Over the next eight modules we will help you uncover it, own it, and feel it. 
+            Over the next eight modules we will help you uncover it, own it, and feel it.
         </p>
         <p>
             Paula Gosney is the creator and founder of Belief School. You can read her story <a href="http://beliefschool.com/broken-bits/" target="_blank">here</a>. Belief School is the culmination of all she has learnt, taught and lived.
@@ -20,7 +20,7 @@
             Each module is important. Commit to play full out. If you need help at any time, visit our <a href="{{route('modules.forum',[$module->slug])}}">online community</a> we are here for you.
         </p>
 
-        <blockquote>
+        <blockquote class="center">
             Getting you started right!<br>
            (The most copy you’ll read in Belief School. It’s important!)
         </blockquote>

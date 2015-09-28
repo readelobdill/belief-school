@@ -8,7 +8,7 @@
         <p>How we see ourselves is not always accurate.  We are often hard on ourselves, focusing on our short comings and not celebrating the beautiful qualities others see in us. If we are unaware of our strengths we miss the opportunity to play to them in the pursuit of happiness and success.</p>
 
         <p>
-            <strong>“When I did this exercise many years ago it changed my life, it really did. By having the courage to be vulnerable I was given the most wonderful gift.”</strong> <br> 
+            <strong>“When I did this exercise many years ago it changed my life, it really did. By having the courage to be vulnerable I was given the most wonderful gift.”</strong> <br>
             – Paula Gosney
         </p>
 
@@ -64,13 +64,11 @@
             <a href="mailto:?subject=Show%20your%20friend%20how%20special%20they%20are&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" data-update-module>Click here to open the email template</a>
         </div>
 
-        <blockquote>
-            Go on, be brave and send the emails.
-        </blockquote>
+        <h2 class="title">Go on, be brave and send the emails.</h2>
 
         <p>
            Nothing terrible is going to happen, people will either respond or they won’t. The world will not end and your arm will not fall off. You can do this.
         </p>
-            
+
     </div>
 </div>
