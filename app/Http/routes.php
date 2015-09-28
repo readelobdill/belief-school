@@ -56,6 +56,7 @@ Route::group(['middleware' => 'auth'], function() {
         $module->pivot->complete = 1;
         $module->pivot->completed_at = new \Carbon\Carbon();
         $module->pivot->save();
+        \Session::flash('paid', true);
 
         return redirect(route('modules.view', ['home']));
     }]);
