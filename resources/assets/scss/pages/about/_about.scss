@@ -5,15 +5,23 @@
     padding: 50px;
     min-width: 320px;
 
+    @include breakpoint($break-620) {
+        padding: 0;
+    }
+
     @include breakpoint($brk-small) {
         width: 100%;
         padding: 0;
     }
 
-
     > .inner {
         background: rgba($white, 0.9);
         padding: 0 $gutter;
+
+        @include breakpoint($break-620) {
+            padding-top: 20px;
+        }
+
         .content {
             position: relative;
             max-width: 920px;
@@ -43,7 +51,6 @@
         max-width: 445px;
         margin-left: auto;
         margin-right: auto;
-        font-weight: 400;
 
         em {
             color: $lightRed;
@@ -78,19 +85,25 @@
         }
     }
 
+    .content-block{
+        @include pie-clearfix();
+        width: 100%;
+        margin: 0 auto;
+        max-width: 920px;
+    }
+
     .col {
         float: left;
         width: 48%;
+
+        @include breakpoint($break-800) {
+            float: none !important;
+            width: 100% !important;
+        }
+
         &:nth-child(even) {
             float: right;
         }
-    }
-
-    .content-block{
-        width: 100%;
-        @include pie-clearfix();
-        max-width: 920px;
-        margin: 0 auto;
     }
 }
 
@@ -105,9 +118,8 @@
         text-align: center;
 
         @include breakpoint($break-800) {
-            max-width: 245px;
             float: none !important;
-            width: 100%;
+            width: 90%;
             margin: 20px auto 40px;
         }
 
@@ -192,23 +204,51 @@
                 margin-left: 50%;
                 @include transform(translateX(-100%));
                 top: 0;
-                font-size: 30px;
+                font-size: 24px;
                 color: $black;
             }
 
-            // &.shield:after {
-            //     content: '\e628';
-            //     font-size: 47px;
-            //     left: 4px;
-            //     top: 2px;
-            // }
+            &.person {
+                &:after {
+                    $size : 24px;
+                    content: '\e613';
+                    font-size: $size;
+                    width: $size;
+                }
+            }
 
-            // &.message:after {
-            //     content: '\e62d';
-            //     font-size: 37px;
-            //     left: 9px;
-            //     top: 3px;
-            // }
+            &.clarity {
+                &:after {
+                    content: '\e631';
+                    $size : 24px;
+                    font-size: $size;
+                    width: $size;
+                }
+            }
+
+            &.shield {
+                &:after {
+                    $size: 28px;
+                    content: '\e628';
+                    font-size: $size;
+                    width: $size;
+                }
+            }
+
+            &.bulb {
+                &:after {
+                    content: '\e625';
+                }
+            }
+
+            &.heart {
+                &:after {
+                    $size : 24px;
+                    content: '\e611';
+                    font-size: $size;
+                    width: $size;
+                }
+            }
         }
     }
 }
@@ -245,7 +285,6 @@
             margin-left: -60px;
         }
 
-
         &:after {
             content: '\e62a';
             height: 1px;
@@ -260,109 +299,79 @@
 
 .what-you-get {
     @include pie-clearfix();
+
     .what-you-get__node {
         border: 2px solid transparent;
         border-image: linear-gradient(23deg, rgba(241, 96, 96, 0.4) 0%, rgba(241, 96, 96, 0) 90%);
         border-image-slice: 1;
-        padding: 60px 20px 0px 20px;
+        padding: 30px 20px 20px;
         position: relative;
         color: #f16060;
         text-align: center;
         line-height: 26px;
         float: left;
-        width: 25%;
-        min-height: 320px;
+        width: 49%;
+        min-height: 210px;
+        margin: 0 1% 1% 0;
+
+        @include breakpoint($break-800) {
+            width: 100% !important;
+            float: none !important;
+            height: auto;
+        }
+
+        &:nth-child(2) {
+            display: block;
+            margin: 0 0 1% 0;
+        }
+
+        .icon {
+            color: $lightRed;
+            padding-bottom: 10px;
+            &:after {
+                position: relative;
+                font-family: $icon;
+                //margin-left: 50%;
+                @include transform(translateY(-100%));
+                top: 0; left: 0;
+                font-size: 29px;
+            }
+
+            &.gem {
+                &:after {
+                    content: '\e60c';
+                }
+            }
+
+            &.sheild {
+                &:after {
+                    content: '\e628';
+                }
+            }
+
+            &.book {
+                &:after {
+                    content: '\e60a';
+                }
+            }
+
+            &.forum {
+                &:after {
+                    content: '\e62d';
+                }
+            }
+        }
     }
 }
 
 .pricing-container {
     padding-bottom: 60px;
 
-    .title {
-        .price {
-            font-size: 50px;
-            span {
-                font-size: 15px;
-                @extend %brandon-grotesque;
-            }
-        }
-        .gets {
-            margin: 3px auto;
-            border-top: 1px solid black;
-            width: 100px;
-            padding: 15px 0px;
+    .price {
+        font-size: 50px;
+        span {
+            font-size: 15px;
             @extend %brandon-grotesque;
         }
-        &:after {
-            display: none;
-        }
     }
-
-}
-
-
-//     .price-block {
-//         border: 2px solid transparent;
-//         border-image: linear-gradient(23deg, rgba(241, 96, 96, 0.4) 0%, rgba(241, 96, 96, 0) 90%);
-//         border-image-slice: 1;
-//         margin: 0 .5%;
-//         padding: 60px 20px 0px 20px;
-//         position: relative;
-//         color: #f16060;
-//         text-align: center;
-//         line-height: 26px;
-//         float: left;
-//         width: 19%;
-//         min-height: 380px;
-
-//         @include breakpoint($break-800) {
-//             max-width: 245px;
-//             float: none;
-//             width: 100%;
-//             margin: 20px auto;
-//         }
-
-//         .icon {
-//             position: relative;
-//             margin: 0 auto;
-//             width: 30px;
-//             height: 30px;
-//             margin-bottom: 20px;
-//             width: 55px;
-
-//             &:after {
-//                 position: absolute;
-//                 content: "\e62c";
-//                 font-family: $icon;
-//                 left: 7px;
-//                 top: 0;
-//                 font-size: 41px;
-//                 color: $black;
-//             }
-
-//             &.shield:after {
-//                 content: '\e628';
-//                 font-size: 47px;
-//                 left: 4px;
-//                 top: 2px;
-//             }
-
-//             &.message:after {
-//                 content: '\e62d';
-//                 font-size: 37px;
-//                 left: 9px;
-//                 top: 3px;
-//             }
-//         }
-//         p {
-//             color: $lightRed;
-//             text-align: center;
-//             font-size: 17px;
-//             font-weight: 600;
-//         }
-//     }
-// }
-
-.terms-container {
-    padding-bottom: 30px;
 }

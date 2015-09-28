@@ -1,0 +1,15 @@
+.container.about {
+    figure.about__paula {
+        width: 100%;
+
+        @include breakpoint($break-800) {
+            width: 95%;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+}

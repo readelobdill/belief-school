@@ -7,7 +7,7 @@
         </h1>
 
         @if(isset($module->pivot->data[0]->letter))
-            <em>{{$module->pivot->data[0]->letter}}</em>
+            <p class="dashboard">{{$module->pivot->data[0]->letter}}</p>
         @elseif(isset($module->pivot->data[0]->video))
             {!! $module->pivot->data[0]->video->embed->html !!}
         @endif
