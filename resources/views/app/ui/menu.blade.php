@@ -16,9 +16,16 @@
         <ul>
             @foreach($modules as $key => $module)
                 @if($module->slug === 'home' || $module->isUnlocked($modules[$key-1]))
-                    <li class="ico-{{ ( $module->slug) }}">
-                        <a  href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
-                    </li>
+                    @if($module->pivot && $module->pivot->complete)
+                        <li class="ico-{{ ( $module->slug) }}">
+                            {{$module->name}}
+                        </li>
+                    @else
+                        <li class="ico-{{ ( $module->slug) }}">
+                            <a  href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
+                        </li>
+                    @endif
+
                @else
                     <li class="{{(Auth::check() && Auth::user()->paid ? 'ico-unlocked' : 'ico-locked')}}">
                         Module {{$module->order - 1}}
