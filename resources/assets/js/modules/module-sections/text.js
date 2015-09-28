@@ -17,17 +17,16 @@ export default class TextSection extends ModuleSection {
         super.setupEventListeners();
         $(window).on('scroll', () => {
             this.scrollPosition = window.pageYOffset;
-            //var winH = $(window).height();
-            //animate.to(this.section.find('.inner'), 0, {scrollTo: {y: Math.ceil(this.scrollPosition)}});
         });
-        this.updateTextScroll();
+
 
     }
 
     updateTextScroll() {
         var winH = $(window).height();
         var heightRatio = 1 - 80 / $('body').height();
-        animate.to(this.section.find('.inner'), 0, {scrollTo: {y: Math.ceil(this.scrollPosition)}});
+
+        this.section.find('.inner > .content').css('transform', `translate3d(0,${-Math.ceil(this.scrollPosition)}px,0)`);
         this.animationFrame = requestAnimationFrame(this.updateTextScroll.bind(this));
     }
 
@@ -36,7 +35,8 @@ export default class TextSection extends ModuleSection {
         this.updateHeight();
         $(window).on('resize.text', () => {
             this.updateHeight();
-        })
+        });
+        this.updateTextScroll();
     }
 
     teardown() {
