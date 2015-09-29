@@ -15,34 +15,32 @@ export default class TextSection extends ModuleSection {
 
     setupEventListeners() {
         super.setupEventListeners();
-        $(window).on('scroll', () => {
-            this.scrollPosition = window.pageYOffset;
-        });
+
 
 
     }
 
-    updateTextScroll() {
-        var winH = $(window).height();
-        var heightRatio = 1 - 80 / $('body').height();
-
+    _onScroll = () => {
+        this.scrollPosition = window.pageYOffset;
         this.section.find('.inner > .content').css('transform', `translate3d(0,${-Math.ceil(this.scrollPosition)}px,0)`);
-        this.animationFrame = requestAnimationFrame(this.updateTextScroll.bind(this));
+    };
+
+    _resize = () => {
+        this.updateHeight();
     }
+
 
     setup() {
         super.setup();
         this.updateHeight();
-        $(window).on('resize.text', () => {
-            this.updateHeight();
-        });
-        this.updateTextScroll();
+        $(window).on('resize.text', this._resize);
+        $(window).on('scroll', this._onScroll);
     }
 
     teardown() {
         super.teardown();
-        cancelAnimationFrame(this.animationFrame);
-        $(window).off('resize.text');
+        $(window).off('resize.text', this._resize);
+        $(window).off('scroll', this._onScroll);
     }
 
     open() {
