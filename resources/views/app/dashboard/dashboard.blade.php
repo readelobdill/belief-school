@@ -23,7 +23,7 @@
                     </p>
                 </header>
 
-                <header role="print" class="manifesto-cover"></header>
+                <div role="print" class="manifesto-cover"></div>
 
                 <ul class="module-list">
                     @include('app.dashboard.modules.home', ['home' => $modules[0], 'welcome' => isset($modules[1]) ? $modules[1] : false])
@@ -139,16 +139,7 @@
                     @endforeach
                 </ul>
 
-                <div class="end-page" role="print">
-                    <h1 class="title">
-                        End
-                    </h1>
-                    <p class="center">
-                        This is the end page text.
-                    </p>
-                </div>
-
-
+                <div class="end-page" role="print"></div>
             </div>
         </div>
     </div>
