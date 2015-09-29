@@ -36,7 +36,12 @@ function scripts(watch, production) {
     }
 
     bundler.transform(babelify.configure({
-        ignore: 'parsley.js'
+        ignore: 'parsley.js',
+        stage:2,
+        optional: [
+            "es7.decorators",
+            "es7.classProperties"
+        ]
     }));
     bundler.on('error', swallowError);
     rebundle = function() {
