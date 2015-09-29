@@ -6,7 +6,7 @@
            believe you
        </h1>
 
-        <p>Great job for answering those questions.</p>
+        <p class="center"><b>Great job for answering those questions.</b></p>
 
         <p>We know you can be whatever you want, do whatever you want and have anything you want in this one precious life. The only thing standing between you and your heart’s desire is your belief in yourself.</p>
 
@@ -25,7 +25,7 @@
         </p>
 
         <div class="actions">
-            <a href="{{ route('about') }}" class="button" >Need to know more before</a>
+            <a href="{{ route('about') }}" class="button small">Need to know more before?</a>
         </div>
 
     </div>

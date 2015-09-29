@@ -7,11 +7,14 @@
                 </h1>
                 <p>Print this out. Frame it. Put it somewhere where you will look at it every day.  Focus on the things that remind you how much value you bring to the world!</p>
 
-                <div class="social">
-                    <a data-share href="https://www.facebook.com/sharer/sharer.php?{{http_build_query(['u' => route('module.share', [$moduleUser->secret])])}}" class="facebook">@include('app/partials/icons/facebook')Share on Facebook</a>
-                    <a data-share href="//www.pinterest.com/pin/create/button/?{{http_build_query(['url' => route('module.share', [$moduleUser->secret]), 'media' => route('dreamboard.show', [$moduleUser->secret]), 'description' => 'My Dreamboard'])}}" class="pinterest">@include('app/partials/icons/pinterest')Share on Pinterest</a>
-                    <a target="_blank" href="{{route('dreamboard.show', [$moduleUser->secret])}}" class="download">@include('app/partials/icons/download')Download</a>
-                </div>
+                <ul class="social">
+                    <li class="fb" data-share href="https://www.facebook.com/sharer/sharer.php?{{http_build_query(['u' => route('module.share', [$moduleUser->secret])])}}" class="fb">Share on Facebook</li>
+
+                    <li class="pin" data-share href="//www.pinterest.com/pin/create/button/?{{http_build_query(['url' => route('module.share', [$moduleUser->secret]), 'media' => route('dreamboard.show', [$moduleUser->secret]), 'description' => 'My Dreamboard'])}}">Share on Pinterest</li>
+
+                    <li class="dl" href="{{route('dreamboard.show', [$moduleUser->secret])}}">Download</li>
+                </ul>
+
                 <div class="actions">
                     <a href="#" class="button" data-complete-module>What's next?</a>
                 </div>
