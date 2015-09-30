@@ -10,18 +10,15 @@
         </p>
 
         <h2 class="title">You have now had a taste of the<br /> six steps to Self Belief:</h2>
-        {{-- <blockquote class="multiple"> --}}
-            <ol class="multiple-sustain">
-                <li>Celebrating your strengths</li>
-                <li>Creating self-affirming words – focusing on what you want</li>
-                <li>Surrounding yourself with the things that lift you up and draw you forward</li>
-                <li>Facing your fears – discovering the power of courage</li>
-                <li>Giving more</li>
-                <li>Being Grateful</li>
-            </ol>
-        {{-- </blockquote> --}}
 
-        <div class="dots"></div>
+        <ol class="multiple-sustain">
+            <li>Celebrating your strengths</li>
+            <li>Creating self-affirming words – focusing on what you want</li>
+            <li>Surrounding yourself with the things that lift you up and draw you forward</li>
+            <li>Facing your fears – discovering the power of courage</li>
+            <li>Giving more</li>
+            <li>Being Grateful</li>
+        </ol>
 
         <p class="center">
             <strong>Throughout your Belief School journey you chose to demonstrate to yourself that you can follow through.</strong>

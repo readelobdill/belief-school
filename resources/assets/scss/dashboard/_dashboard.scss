@@ -1,3 +1,5 @@
+$content-width: 620px;
+
 .dash-background {
     background: url('../img/home-background.png') no-repeat center center;
     background-size: cover;
@@ -45,7 +47,7 @@
 
                 .content-width{
                     margin: 0 auto;
-                    max-width: 445px;
+                    max-width: $content-width;
                 }
             }
         }
@@ -68,7 +70,7 @@
     }
 
     p {
-        max-width: 445px;
+        max-width: $content-width;
         margin-left: auto;
         margin-right: auto;
         font-weight: 400;
@@ -79,6 +81,10 @@
             font-style: italic;
             font-weight: 500;
             text-align: center;
+
+            @include breakpoint($break-620) {
+                font-size: 18px;
+            }
         }
 
         em {
@@ -101,7 +107,7 @@
 
     ul.list-content {
         text-align: center;
-        width: 445px;
+        max-width: $content-width;
         margin: auto;
 
         li {
@@ -110,6 +116,10 @@
             color: #045F8D;
             font-size: 22px;
             font-style: italic;
+
+            @include breakpoint($break-620) {
+                font-size: 18px;
+            }
 
             &:last-child {
                 margin-bottom: 0;
@@ -127,7 +137,7 @@
                 line-height: normal;
 
                 &:nth-child(2) {
-                    padding: 20px 0 6px;
+                    padding: 10px 0 6px;
                 }
             }
         }
@@ -281,17 +291,8 @@ ul.actions {
                 position: absolute;
                 font-family: $icon;
                 content: "\e621";
-                // left: -27px;
-                // top: -9px;
                 font-size: 16px;
-
-                @include breakpoint($break-620) {
-                    // top: ;
-                    // left: ;
-                }
             }
-
-
         }
     }
 }
@@ -300,7 +301,7 @@ ul.actions {
     height: 200px;
     margin-bottom: 30px;
     font-weight: 600;
-    text-transform: lowercase; //remove this for testing.
+    text-transform: lowercase;
 }
 
 .small-dashboard {
@@ -350,6 +351,10 @@ ul.actions {
         font-weight: 500;
         font-size: 22px;
         font-style: italic;
+
+        @include breakpoint($break-620) {
+            font-size: 18px;
+        }
 
         &:after {
             content:'”';
@@ -416,16 +421,20 @@ ul.actions {
     }
 
     ul.experience {
-        max-width: 445px;
+        max-width: $content-width;
         margin: 0 auto;
-        padding: 20px 0 50px;
+        padding-bottom: 50px;
+        @include pie-clearfix();
 
         li {
             color: $blue-dark;
             font-style: italic;
+            margin-bottom: 8px;
+            font-weight: 500;
+
             span {
-                font-weight: 500;
-                font-style: normal;
+                //font-weight: 500;
+                //font-style: normal;
                 color: $black;
             }
         }

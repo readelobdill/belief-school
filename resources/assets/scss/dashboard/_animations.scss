@@ -18,6 +18,10 @@ li.is-unlocked.is-complete {
     .inner-padding {
         opacity: 0;
         transition: opacity 800ms $ease;
+
+        h2 {
+            margin-top: 0;
+        }
     }
 
     &.is-open {
@@ -26,7 +30,11 @@ li.is-unlocked.is-complete {
         }
 
         .content {
-            max-height: 900px;
+            max-height: 1266px;
+
+            @include breakpoint($break-620) {
+                max-height: 1350px;
+            }
         }
 
         .inner-padding {
