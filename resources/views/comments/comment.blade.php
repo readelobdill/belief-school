@@ -31,6 +31,17 @@
 
         <p>{!! $comment->body !!}</p>
 
+        @if(!$comment->images->isEmpty())
+            @foreach($comment->images as $image)
+                <div class="comment-image">
+                    <img src="{{$image->getPath()}}" alt="">
+                    @if($comment->user->id === Auth::user()->id)
+                        <a class="fb" data-share href="https://www.facebook.com/sharer/sharer.php?{{http_build_query(['u' => route('comment.image', [$comment->id, $image->filename])])}}">Share on Facebook</a>
+                    @endif
+                </div>
+            @endforeach
+        @endif
+
         <a href="#" data-id="{{$comment->id}}" class="reply">Reply</a>
 
         @if($comment->depth == 0 && Auth::user()->isAdmin() )
@@ -45,8 +56,12 @@
         @endif
 
         <form action="{{route('comments.reply', [$comment->id])}}" method="POST" class="is-hidden reply-form">
+            <div class="error-message"></div>
             <div class="form-row">
                 <textarea placeholder="Write a comment" name="body"></textarea>
+            </div>
+            <div class="form-row">
+                <input type="file" name="image" />
             </div>
             <div class="actions">
                 <button class="button small">Comment</button>

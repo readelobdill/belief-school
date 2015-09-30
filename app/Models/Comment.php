@@ -21,6 +21,10 @@ class Comment extends \Lanz\Commentable\Comment {
         return $this->belongsTo(\Config::get('auth.model'));
     }
 
+    public function images() {
+        return $this->hasMany('App\Models\CommentImage');
+    }
+
 
 
     public function getBodyAttribute($value) {

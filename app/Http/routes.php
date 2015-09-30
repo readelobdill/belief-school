@@ -25,6 +25,8 @@ Route::get('share/{secret}', ['as' => 'module.share', 'uses' => 'ModuleControlle
 Route::get('tagcloud/{secret}', ['as' => 'tagcloud', 'uses' => 'ModuleController@tagCloud']);
 Route::post('tagcloud/{secret}', ['as' => 'tags.submit', 'uses' => 'ModuleController@tagCloudSubmit']);
 
+Route::get('comment/{comment}/image/{imageName}', ['as' => 'comment.image', 'uses' => 'CommentController@getImage']);
+
 
 /*Authed routes*/
 Route::group(['middleware' => 'auth'], function() {

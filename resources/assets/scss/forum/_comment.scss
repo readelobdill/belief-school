@@ -40,7 +40,9 @@ ul.comments-list {
 
 li.comment {
     margin-top: 10px;
-
+    img {
+        max-width: 100%;
+    }
     .inner {
         border: 2px solid $darkGrey;
         position: relative;

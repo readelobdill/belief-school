@@ -26,7 +26,7 @@ class Module extends Model {
     }
 
     public function getAllComments() {
-        $comments = $this->comments()->with('user')->get()->toHierarchy();
+        $comments = $this->comments()->with('user', 'images')->get()->toHierarchy();
         $comments->sort(function($a, $b) {
             if($a->sticky == $b->sticky) {
                 if($a->created_at < $b->created_at) {

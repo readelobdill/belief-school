@@ -1,8 +1,10 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\CommentImage;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CommentController extends Controller {
 
@@ -37,6 +39,9 @@ class CommentController extends Controller {
      */
     public function reply($comment)
     {
+        $this->validate($this->request, [
+            'image' => 'mimes:jpeg,png,gif|max:1024',
+        ]);
         $nComment = new Comment([
             'title' => $this->request->input('title', ''),
             'body' => $this->request->input('body', '')
@@ -45,20 +50,41 @@ class CommentController extends Controller {
         $comment->commentable->comments()->save($nComment);
         $nComment->makeChildOf($comment);
 
+        $this->attachImage($this->request->file('image'), $nComment);
+
         return view('comments.comment', ['comment' => $nComment]);
     }
 
     public function create($module) {
+        $this->validate($this->request, [
+            'image' => 'mimes:jpeg,png,gif|max:1024',
+        ]);
         $comment = new Comment([
             'title' => $this->request->input('title', ''),
             'body' => $this->request->input('body')
         ]);
+
         $comment->user()->associate($this->auth->user());
         $module->comments()->save($comment);
+
+        $this->attachImage($this->request->file('image'), $comment);
+
 
         return view('comments.comment', ['comment' => $comment]);
     }
 
+    private function attachImage($image, $comment) {
+        if($image) {
+
+            $fileName = Str::random(32).'.'.$image->guessExtension();
+            if($image->getSize() > 1024 * 8) {
+                $image->move(public_path('uploads/comment-images/'.$this->auth->user()->id), $fileName);
+                $commentImage = new CommentImage(['filename' => $fileName]);
+                $comment->images()->save($commentImage);
+            }
+
+        }
+    }
     public function delete($comment) {
         if($comment->user->id !== $this->auth->user()->id) {
             abort(403);
@@ -67,5 +93,17 @@ class CommentController extends Controller {
         $comment->save();
         return view('comments.comment', ['comment' => $comment]);
     }
+
+
+    public function getImage($comment, $imageName) {
+        $image = $comment->images()->where('filename', $imageName)->first();
+        if(empty($image)) {
+           abort(404);
+        }
+
+        return view('app.forum.image', compact('image', 'comment'));
+
+    }
+
 
 }
