@@ -11,19 +11,6 @@
 
         <p>Think of someone who you’d like to express your thanks too. Open your email browser and send them an email now.</p>
 
-        <form action="">
-            <div class="form-row">
-                <textarea name="letter" required placeholder="Write here..." maxlength="280"></textarea>
-            </div>
-
-            <p class="margin-top">Brilliant, you just made someone’s day a little more special.</p>
-
-            <p>How did that feel?</p>
-
-            <div class="actions">
-                <button class="button">Save to Dashboard!</button>
-            </div>
-        </form>
 
         <ul class="accordion single">
             <li>
@@ -48,8 +35,22 @@
                     </p>
                 </div>
             </li>
-
         </ul>
 
+        <p class="margin-top"><b>Brilliant</b>, you just made someone’s day a little more special.</p>
+
+        <p class="center"><i>How did that feel?</i></p>
+
+
+
+        <form action="">
+            <div class="form-row">
+                <textarea name="letter" required placeholder="Write here..." maxlength="280"></textarea>
+            </div>
+
+            <div class="actions">
+                <button class="button">Save to Dashboard!</button>
+            </div>
+        </form>
     </div>
 </div>

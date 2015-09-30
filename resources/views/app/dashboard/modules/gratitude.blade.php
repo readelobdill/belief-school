@@ -1,6 +1,8 @@
 <div class="content">
     <div class="inner-padding">
-        <h2 class="dashboard__sub-heading">Gratitude Diary - Over the last 2 months...</h2>
+        <h2 class="title">
+            10 Things I am grateful for...
+        </h2>
 
         <ul class="experience">
             @foreach($module->pivot->data[0] as $key => $experience)
@@ -15,7 +17,7 @@
             @endforeach
         </ul>
 
-        <div class="dashboard__sub-heading">When I sent my letter of gratitude I felt...</div>
+        <h2 class="title">After I sent my letter of gratitude I felt...</h2>
         <p class="dashboard">
             {{ $module->pivot->data[1]->letter }}
         </p>

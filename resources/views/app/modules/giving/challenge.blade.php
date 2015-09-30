@@ -49,7 +49,7 @@
         </form>
 
         <div class="actions">
-            <a href="#" class="button" data-save-module>Save it into your manifesto now!</a>
+            <a href="#" class="button" data-save-module>Save it into your dashboard now!</a>
         </div>
 
     </div>
