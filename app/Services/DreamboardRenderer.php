@@ -43,18 +43,21 @@ class DreamboardRenderer {
          * 111
          * gutter: 27
          * */
-        $height = 467;
+        $height = 567;
         $imageWidth = 195;
         $imageHeight = 129;
         $gutter = 20;
         $dreamboardImage->newImage($width, $height, 'none');
+
+        $background = new Imagick(public_path('img/dreamboard-generated-bg.jpg'));
+        $dreamboardImage->compositeImage($background, imagick::COMPOSITE_OVER, 0, 0);
 
         foreach($this->dreamboard as $key => $imageName) {
             if($key !== 'image_main') {
                 $image = new Imagick(public_path('uploads/dreamboard/'.$this->user->id.'/'.$imageName));
                 $image->scaleImage($imageWidth, $imageHeight);
                 $x = $this->positions[$key]['x'];
-                $y = $this->positions[$key]['y'];
+                $y = $this->positions[$key]['y'] + 50;
                 $dreamboardImage->compositeImage($image, imagick::COMPOSITE_OVER, $x, $y);
             }
         }
@@ -62,7 +65,7 @@ class DreamboardRenderer {
         $image = new Imagick(public_path('uploads/dreamboard/'.$this->user->id.'/'.$this->dreamboard->image_main));
         $image->scaleImage($this->positions['image_main']['width'], $this->positions['image_main']['height']);
         $x = $this->positions['image_main']['x'];
-        $y = $this->positions['image_main']['y'];
+        $y = $this->positions['image_main']['y'] + 50;
         $dreamboardImage->compositeImage($image, imagick::COMPOSITE_OVER, $x, $y);
 
 
