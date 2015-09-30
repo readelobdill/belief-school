@@ -10,6 +10,7 @@
     @if(App::environment('local'))
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     @endif
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="{{asset('js/output.js')}}"></script>
 </head>
 <body data-page="{{ $page or 'page' }}">
