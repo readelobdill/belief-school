@@ -73,7 +73,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watchScripts', function() {
-    return scripts(true, false);
+    return scripts(true, true);
 });
 
 gulp.task('postcss', function() {
