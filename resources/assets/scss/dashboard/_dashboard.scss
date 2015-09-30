@@ -42,6 +42,7 @@
 
             .inner-padding {
                 padding: 60px 0;
+
                 .content-width{
                     margin: 0 auto;
                     max-width: 445px;
@@ -105,10 +106,14 @@
 
         li {
             font-weight: 500;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             color: #045F8D;
             font-size: 22px;
             font-style: italic;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
 
             span {
                 color: $black;
