@@ -49,19 +49,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('account', ['as' => 'account', 'middleware' => 'auth', 'uses' => 'UserController@account']);
     Route::post('account', ['as' => 'account.submit', 'middleware' => 'auth', 'uses' => 'UserController@submitAccount']);
 
-    Route::get('fake-pay', ['as' => 'payment', 'middleware' => 'auth',function() {
-        $user = Auth::user();
-        $user->paid = true;
-        $user->save();
-        $module = $user->modules()->where('slug', 'home')->first();
-        $module->pivot->step++;
-        $module->pivot->complete = 1;
-        $module->pivot->completed_at = new \Carbon\Carbon();
-        $module->pivot->save();
-        \Session::flash('paid', true);
+    Route::get('payments/pay', ['as' => 'payment', 'middleware' => 'auth','uses' => 'PaymentController@pay']);
 
-        return redirect(route('modules.view', ['home']));
-    }]);
+    Route::any('payments/return', ['as' => 'payments.return_url', 'middleware' => 'auth', 'uses' => 'PaymentController@completePayment']);
+    Route::any('payments/failure', ['as' => 'payments.fail', 'middleware' => 'auth', 'uses' => 'PaymentController@paymentFailed']);
 });
 
 
