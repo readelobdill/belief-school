@@ -39,7 +39,7 @@ class ModuleUser extends Model {
     }
 
     public function getDataAttribute($value) {
-        return json_decode($value);
+        return json_decode(json_decode($value));
     }
 
     public function setDataAttribute($value) {
