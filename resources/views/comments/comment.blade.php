@@ -4,11 +4,8 @@
 @if($comment->deleted)
 
     <div class="inner is-deleted">
-        <h4>removed</h4>
+        <h4>Comment removed</h4>
         <div class="comment-creation-date">{{$comment->created_at->diffForHumans()}}</div>
-        <div class="comment-username"><strong>removed</strong> said:</div>
-
-        <p><em>removed</em></p>
 
         @if($comment->depth == 0 && Auth::user()->isAdmin())
             <a href="{{route('admin.comments.sticky', [$comment->id])}}" class="btn btn-info btn-xs sticky-comment {{($comment->sticky ? 'active' : '')}}">Sticky</a>
@@ -25,7 +22,6 @@
     @endif
 
     <div class="inner">
-        <h4>{{$comment->user->username}}</h4>
         <div class="comment-creation-date">{{$comment->created_at->diffForHumans()}}</div>
         <div class="comment-username"><strong>{{$comment->user->username}}</strong> said:</div>
 
