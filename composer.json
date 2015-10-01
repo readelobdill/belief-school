@@ -4,13 +4,21 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"type": "project",
+
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://git.gladeye.org/daniel/omnipay-paymentexpress.git"
+		}
+	],
+
 	"require": {
-		"laravel/framework": "5.0.*",
+		"laravel/framework": "5.1.*",
         "lanz/laravel-commentable": "~2.0",
 		"barryvdh/laravel-ide-helper": "~2.0",
 		"doctrine/dbal": "~2.5",
 		"stojg/crop": "^1.2",
-		"omnipay/paymentexpress": "~2.1",
+		"daniel/omnipay-paymentexpress": "dev-master",
 		"misd/linkify": "^1.1",
 		"vimeo/vimeo-api": "^1.2",
 		"mobiledetect/mobiledetectlib": "^2.8"
