@@ -50,7 +50,7 @@
         <h1 class="plain">If you can't record it somehow then write a heartfelt letter to yourself:</h1>
 
         <form action="" class="letter">
-            <textarea id="" cols="30" rows="10" name="letter" maxlength="500"></textarea>
+            <textarea id="" cols="30" rows="10" name="letter" maxlength="500" placeholder="Write your letter here.."></textarea>
         </form>
 
         <div class="actions">

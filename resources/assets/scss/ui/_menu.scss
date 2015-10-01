@@ -30,6 +30,12 @@
             padding-left: 30px;
             transition: color $transition;
 
+            &.current-module {
+                &:before {
+                    color: $lightRed;
+                }
+            }
+
             &:before {
                 $size: 15px;
                 content: '\e62e';
@@ -165,68 +171,6 @@
                 }
             }
 
-
-
-
-
-
-            // ico-you-to-you
-
-            // &.ico-mod0 {
-            //     &:before {
-            //         content: '\e609';
-            //     }
-            // }
-
-            // &.ico-mod1 {
-            //     &:before {
-            //         content: '\e60a';
-            //     }
-            // }
-
-            // &.ico-mod2 {
-            //     &:before {
-            //         content: '\e60b';
-            //     }
-            // }
-
-            // &.ico-mod3 {
-            //     &:before {
-            //         content: '\e60c';
-            //     }
-            // }
-
-            // &.ico-mod4 {
-            //     &:before {
-            //         content: '\e60d';
-            //     }
-            // }
-
-            // &.ico-mod5 {
-            //     &:before {
-            //        content: '\e60e';
-            //     }
-            // }
-
-            // &.ico-mod6 {
-            //     &:before {
-            //         content: '\e60f';
-            //     }
-            // }
-
-            // &.ico-mod7 {
-            //     &:before {
-            //         content: '\e610';
-            //     }
-            // }
-
-            // &.ico-mod8 {
-            //     &:before {
-            //         content: '\e611';
-            //     }
-            // }
-
-
             &.ico-locked {
                 &:before {
                     content: "\e621";
@@ -237,12 +181,6 @@
                     content: "\e622";
                 }
             }
-
-            // &.ico-mod10 {
-            //     &:before {
-            //         content: '\e613';
-            //     }
-            // }
         }
     }
 

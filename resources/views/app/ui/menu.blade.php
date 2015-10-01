@@ -21,7 +21,7 @@
                             {{$module->name}}
                         </li>
                     @else
-                        <li class="ico-{{ ( $module->slug) }}">
+                        <li class="ico-{{ ( $module->slug) }} current-module">
                             <a  href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
                         </li>
                     @endif

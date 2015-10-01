@@ -86,7 +86,6 @@ form.reply-form {
     &.is-hidden {
         display: none;
     }
-
 }
 
 [data-page="forum"] {
@@ -94,3 +93,40 @@ form.reply-form {
         display: none;
     }
 }
+
+label.comment-image-upload {
+    @include transition(background $transition, color $transition);
+    background: $lightRed;
+    color: $white;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 3px 15px 4px 17px;
+    margin-top: 3px;
+
+    &:before {
+        @include transform(rotate(180deg) translateY(0px));
+        @include transition(transform $transition);
+        content: '\e619';
+        display: inline-block;
+        font-family: $icon;
+        position: relative;
+        left: -8px; top: 0;
+        transform-origin: 50% 50%;
+    }
+
+    &:hover {
+        background-color: #d95656;
+
+        &:before {
+            @include transform( rotate(180deg) translateY(2px));
+        }
+    }
+
+    input {
+        left: -9999px;
+        position: absolute;
+    }
+}
+
