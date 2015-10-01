@@ -3,9 +3,12 @@
     <div class="form-row">
         <textarea name="body"></textarea>
     </div>
-    <div class="form-row">
+
+    <label class="comment-image-upload">
+        Upload an image
         <input type="file" name="image" />
-    </div>
+    </label>
+
     <div class="actions">
         <button class="button small">Submit Comment</button>
     </div>
