@@ -67,8 +67,12 @@ class ModuleController extends Controller {
 
 
 
+
         if(!empty($moduleUser) && $moduleUser->pivot->complete && !\Session::get('paid', false)) {
-            return redirect(route('dashboard').'#module-'.$module->slug);
+            $latestModule = Module::getLatestModuleForUser($this->auth->user());
+            if($latestModule->id != $module->id) {
+                return redirect(route('modules.view', [$latestModule->slug]));
+            }
         }
 
 
