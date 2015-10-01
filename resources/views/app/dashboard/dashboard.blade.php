@@ -82,15 +82,12 @@
                                         <div class="header">
                                             <div class="inner">
                                                 <h2>Module {{$mod->order - 1}}</h2>
+
+                                                <ul class="actions">
+                                                    <li class="unlock-countdown">Module will unlock in {{$modules[$key-1]->pivot->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}</li>
+                                                    <li class="arrow"></li>
+                                                </ul>
                                             </div>
-                                            <ul class="actions">
-                                                <li class="unlock-countdown">
-                                                    <div class="inner">
-                                                        Module will unlock in {{$modules[$key-1]->pivot->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}
-                                                    </div>
-                                                </li>
-                                                <li class="arrow"></li>
-                                            </ul>
                                         </div>
                                     </li>
 
