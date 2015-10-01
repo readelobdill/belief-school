@@ -114,7 +114,7 @@ $content-width: 620px;
             font-weight: 500;
             margin-bottom: 30px;
             color: #045F8D;
-            font-size: 22px;
+            font-size: 21px;
             font-style: italic;
 
             @include breakpoint($break-620) {
@@ -168,8 +168,8 @@ $content-width: 620px;
                 }
             }
 
-            ul.actions li.forum {
-                border-right: none !important;
+            ul.actions li.arrow {
+                visibility: hidden;
             }
 
             ul.actions li.arrow {
@@ -207,96 +207,6 @@ $content-width: 620px;
     }
 }
 
-ul.actions {
-    float: right;
-
-    li {
-        display: inline-block;
-
-        @include breakpoint($break-620) {
-            //display: block;
-        }
-
-        &.arrow {
-            padding: 8.5px 15px;
-            background: transparent url('../img/dashboard-arrow.svg') center center no-repeat;
-            position: relative;
-            top: 3px;
-            right: 3px;
-            width: 40px;
-            transform-origin: center center;
-        }
-
-        &.forum {
-            padding: 8.5px 15px;
-            border-right: 1px solid #F89594;
-
-            @include breakpoint($break-620) {
-                border: none;
-            }
-
-            a.forum-icon {
-                font-size: 14px;
-                color: white;
-                font-weight: 500;
-                text-transform: initial;
-                position: relative;
-
-                &:before {
-                    position: absolute;
-                    font-family: $icon;
-                    content: "\e62d";
-                    top: -1px;
-                    font-size: 19px;
-                    left: -28px;
-
-                    @include breakpoint($break-620) {
-                        position: relative;
-                        top: 2px;
-                        left: 0;
-                    }
-                }
-
-                span {
-                    line-height: 21px;
-
-                    @include breakpoint($break-620) {
-                        display: none;
-                    }
-                }
-            }
-        }
-
-        &.unlock-countdown {
-            font-size: 14px;
-            text-transform: initial;
-            font-weight: 500;
-            position: relative;
-
-            >.inner {
-                height: 100%;
-
-                @include breakpoint($break-620) {
-                    display: none !important;
-                }
-            }
-
-            &.unlocked {
-                &:before {
-                    content: "\e622";
-                }
-            }
-
-            &:before {
-                position: absolute;
-                font-family: $icon;
-                content: "\e621";
-                font-size: 16px;
-            }
-        }
-    }
-}
-
 .tagcloud {
     height: 200px;
     margin-bottom: 30px;
@@ -320,6 +230,25 @@ ul.actions {
     &.page-icon:after {
         content: '\e632';
         left: 3px;
+    }
+}
+
+ul.and-i-am {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    @include pie-clearfix();
+
+    li {
+        color: $blue-dark;
+        font-style: italic;
+        margin-bottom: 8px;
+        font-weight: 500;
+        text-align: left;
+
+        span {
+            color: $black;
+        }
     }
 }
 
@@ -431,10 +360,9 @@ ul.actions {
             font-style: italic;
             margin-bottom: 8px;
             font-weight: 500;
+            text-align: center;
 
             span {
-                //font-weight: 500;
-                //font-style: normal;
                 color: $black;
             }
         }
@@ -500,6 +428,10 @@ ul.module-list {
             }
         }
 
+        &.is-not-complete {
+            color: green;
+        }
+
         &.is-locked {
             border-top: 1px solid $grey;
 
@@ -514,7 +446,7 @@ ul.module-list {
 
             .actions {
                 li.unlock-countdown {
-                    padding: 8.5px 15px;
+                    padding: 8.5px 35px 8.5px 15px;
 
                     @include breakpoint($brk-small) {
                         width: 100%;
@@ -531,6 +463,7 @@ ul.module-list {
                         }
                     }
                 }
+
                 li.arrow {
                     visibility: hidden;
 
@@ -538,6 +471,93 @@ ul.module-list {
                         display: none;
                     }
                 }
+            }
+        }
+    }
+}
+
+ul.actions {
+    float: right;
+
+    li {
+        display: inline-block;
+
+        &.arrow {
+            padding: 8.5px 15px;
+            background: transparent url('../img/dashboard-arrow.svg') center center no-repeat;
+            position: relative;
+            top: 3px;
+            right: 3px;
+            width: 40px;
+            transform-origin: center center;
+        }
+
+        &.forum {
+            padding: 8.5px 15px;
+            border-right: 1px solid #F89594;
+
+            @include breakpoint($break-620) {
+                border: none;
+            }
+
+            a.forum-icon {
+                font-size: 14px;
+                color: white;
+                font-weight: 500;
+                text-transform: initial;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    font-family: $icon;
+                    content: "\e62d";
+                    top: -1px;
+                    font-size: 19px;
+                    left: -28px;
+
+                    @include breakpoint($break-620) {
+                        position: relative;
+                        top: 2px;
+                        left: 0;
+                    }
+                }
+
+                span {
+                    line-height: 21px;
+
+                    @include breakpoint($break-620) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.unlock-countdown {
+            font-size: 14px;
+            text-transform: initial;
+            font-weight: 500;
+            position: relative;
+
+            >.inner {
+                height: 100%;
+
+                @include breakpoint($break-620) {
+                    display: none !important;
+                }
+            }
+
+            &.unlocked {
+                &:after {
+                    content: "\e622";
+                }
+            }
+
+            &:after {
+                position: absolute;
+                font-family: $icon;
+                content: "\e621";
+                font-size: 16px;
+                right: 13px;
             }
         }
     }

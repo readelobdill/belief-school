@@ -8,18 +8,22 @@
 
     <div class="content">
         <div class="inner-padding">
-            <p><b>I am {{$home->pivot->data->{'1'}->gender}} and I am {{$home->pivot->data->{'1'}->age}} years old.</b></p>
 
-            <p><b>I want {{$home->pivot->data->{'1'}->want}}.</b></p>
+            <ul class="and-i-am">
+                <li><span>I am</span> {{$home->pivot->data->{'1'}->gender}} <span> and I am</span> {{$home->pivot->data->{'1'}->age}} <span>years old.</span></li>
 
-            <p><b>Because {{$home->pivot->data->{'1'}->why}}.</b></p>
+                <li><span>I want</span> {{$home->pivot->data->{'1'}->want}}.</li>
 
-            <p><b>When I have it I will feel {{$home->pivot->data->{'1'}->how}}.</b></p>
+                <li><span>Because</span> {{$home->pivot->data->{'1'}->why}}.</li>
 
-            <p><b>I don't have this because {{$home->pivot->data->{'1'}->why_not}}.</b></p>
+                <li><span>When I have it I will feel</span> {{$home->pivot->data->{'1'}->how}}.</li>
 
-            @if($welcome && isset($welcome->pivot->data[0]))
-                <p><b>Throughout my Belief School journey I chose to {{$welcome->pivot->data[0]->challenge}}</b></p>
-            @endif
+                <li><span>I don't have this because</span> {{$home->pivot->data->{'1'}->why_not}}.</li>
+
+                @if($welcome && isset($welcome->pivot->data[0]))
+                    <li><span>Throughout my Belief School journey I chose to</span> {{$welcome->pivot->data[0]->challenge}}</li>
+                @endif
+
+            </ul>
         </div>
     </div>
