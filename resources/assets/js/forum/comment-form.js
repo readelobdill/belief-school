@@ -11,11 +11,34 @@ export default class CommentForm extends EventEmitter {
         this.setupEventListeners();
     }
 
+    validate() {
+        if(this.form.find('[name="body"]').val() == '') {
+            return 'Your post must have content';
+        }
+        let files = this.form.find('[name="image"]')[0].files;
+        if(files.length > 0) {
+
+            let file = files[0];
+            if(file.size > 1024 * 8) {
+                return 'The uploaded image must be less then 1MB';
+            }
+        }
+        return true;
+
+    }
+
     setupEventListeners() {
         this.form.on('submit', (e) => {
             e.preventDefault();
-           this.submitForm();
-            this.form[0].reset();
+            let message = this.validate();
+            if(message === true) {
+                this.submitForm();
+                this.form[0].reset();
+                this.form.find('.error-message').html('');
+            } else {
+                this.form.find('.error-message').html(message);
+            }
+
         })
     }
 
@@ -25,12 +48,12 @@ export default class CommentForm extends EventEmitter {
         }
         this.submitting = true;
         this.emit('comment:sending');
-        client.replyTo(this.form.attr('action'), serializeForm(this.form)).then((response) => {
-            return response.text()
+        client.replyTo(this.form.attr('action'), new FormData(this.form[0])).then((response) => {
+            return response.responseText;
         }).then((text) => {
             this.emit('comment:new', text);
             this.submitting = false;
-        });
+        }).done();
     }
 
     show() {

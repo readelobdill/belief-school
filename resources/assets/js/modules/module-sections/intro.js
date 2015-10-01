@@ -22,6 +22,7 @@ export default class IntroSection extends ModuleSection {
         }});
         t.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 1});
         t.to(this.section.find('.inner'), config.defaultAnimationSpeed, {autoAlpha: 1}, '-=0.4');
+        t.add(TweenMax.fromTo(this.section.find('.next-section'), 0.7, {scaleX: 0.9, scaleY: 0.9}, {scaleX: 1, scaleY: 1, autoAlpha: 1}));
 
 
         return deferred.promise.then(() => {
@@ -29,7 +30,7 @@ export default class IntroSection extends ModuleSection {
         }).then(() => {
             const t = new TimelineLite();
             t.add(this.video.scrollTo(0.5,2.5));
-            t.add(TweenMax.fromTo(this.section.find('.next-section'), 0.7, {scaleX: 0.9, scaleY: 0.9}, {scaleX: 1, scaleY: 1, autoAlpha: 1}));
+
         });
 
     }

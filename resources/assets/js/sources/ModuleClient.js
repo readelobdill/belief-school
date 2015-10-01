@@ -2,6 +2,7 @@ import 'whatwg-fetch';
 import $ from 'jquery';
 import Q from 'q';
 import EventEmitter from 'events';
+import {uploadWithProgress} from 'util/uploadWithProgress';
 
 const defaultHeaders = {
     'X-Requested-With' : 'XMLHttpRequest',
@@ -45,99 +46,13 @@ class ModuleClient extends EventEmitter {
         const data = new FormData();
         data.append('image', image);
         data.append('name', imageName);
-        const deferred = Q.defer();
-
-        const xhr = new XMLHttpRequest();
-
-        const headers = $.extend({}, {
-            'Accept' : 'application/json'
-        }, defaultHeaders);
-
-        console.log(headers);
-
-
-        xhr.upload.addEventListener('progress',(oEvent) => {
-            if (oEvent.lengthComputable) {
-                let percentComplete = oEvent.loaded / oEvent.total;
-                deferred.notify(percentComplete);
-            }
-
-        });
-        xhr.addEventListener('load', (response) => {
-            deferred.resolve(response);
-            this.emit('load:end')
-        });
-        xhr.addEventListener('error', (response) => {
-            deferred.reject(response);
-            this.emit('load:end')
-        });
-        xhr.addEventListener('abort', (response) => {
-            deferred.reject(response);
-            this.emit('load:end')
-        });
-        xhr.open('POST', url);
-
-
-        Object.getOwnPropertyNames(headers).forEach(function(name) {
-            xhr.setRequestHeader(name, headers[name]);
-        }, this);
-
-        xhr.send(data);
-
-
-        return deferred.promise.then((response) => {
-            console.log(response);
-            return JSON.parse(response.target.responseText);
-        }, (error) => {
-            console.log(error);
-        });
+        return uploadWithProgress(url, data).then(response => response.json());
     }
 
     saveVideo(url, video) {
         const data = new FormData();
         data.append('video', video);
-        const deferred = Q.defer();
-
-        const xhr = new XMLHttpRequest();
-
-        const headers = $.extend({}, {
-            'Accept' : 'application/json'
-        }, defaultHeaders);
-
-
-        xhr.upload.addEventListener('progress',(oEvent) => {
-            if (oEvent.lengthComputable) {
-                let percentComplete = oEvent.loaded / oEvent.total;
-                deferred.notify(percentComplete);
-            }
-
-        });
-        xhr.addEventListener('load', (response) => {
-            deferred.resolve(response);
-            this.emit('load:end')
-        });
-        xhr.addEventListener('error', (response) => {
-            deferred.reject(response);
-            this.emit('load:end')
-        });
-        xhr.addEventListener('abort', (response) => {
-            deferred.reject(response);
-            this.emit('load:end')
-        });
-        xhr.open('POST', url);
-
-
-        Object.getOwnPropertyNames(headers).forEach(function(name) {
-            xhr.setRequestHeader(name, headers[name]);
-        }, this);
-
-        xhr.send(data);
-
-
-        return deferred.promise.then((response) => {
-            console.log(response);
-            return JSON.parse(response.target.responseText);
-        });
+        return uploadWithProgress(url, data).then(response => response.json());
     }
 
     registerUser(url, data) {

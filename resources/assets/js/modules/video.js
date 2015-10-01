@@ -43,6 +43,7 @@ function Video(video) {
         }
         if (percent !== null) {
             percent = 100 * Math.min(1, Math.max(0, percent));
+            videoReady.notify(percent);
             if(percent == 100) {
                 videoReady.resolve(this.video);
             }
@@ -63,8 +64,8 @@ function Video(video) {
 
     let canplayCallback = (e) => {
         this.video.removeEventListener('canplaythrough', canplayCallback);
-        console.log('canplay');
-        videoReady.resolve(this.video);
+        console.log('canplaythrough');
+        //videoReady.resolve(this.video);
     }
     if(this.video.readyState === 4) {
         canplayCallback();

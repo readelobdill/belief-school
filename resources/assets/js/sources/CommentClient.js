@@ -1,5 +1,6 @@
 import 'whatwg-fetch';
 import $ from 'jquery';
+import {uploadWithProgress} from 'util/uploadWithProgress';
 
 let defaultHeaders = {
     'X-Requested-With' : 'XMLHttpRequest',
@@ -9,15 +10,7 @@ let defaultHeaders = {
 
 export default {
     replyTo: function(url, data) {
-        return fetch(url, {
-            method: 'post',
-            credentials: 'same-origin',
-            headers: $.extend({}, {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }, defaultHeaders),
-            body: JSON.stringify(data)
-        })
+        return uploadWithProgress(url, data);
     },
 
     deleteComment(url) {

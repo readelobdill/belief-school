@@ -32,61 +32,65 @@ import IntroVideo from 'ui/intro-video';
 
 es6Promise.polyfill();
 
-UI.init();
-Loading.init();
-Arc.init();
-Forms.init();
-Sharer.init();
 
-const page = $('body').data('page');
-switch(page) {
-    case 'home' :
-        Home.init();
-        break;
-    case 'welcome' :
-        Welcome.init();
-        break;
-    case 'boomerang':
-        Boomerang.init();
-        break;
-    case 'un-stuck':
-        UnStuck.init();
-        break;
-    case 'visualise':
-        Visualise.init();
-        break;
-    case 'you-to-you':
-        YouToYou.init();
-        break;
-    case 'fear-courage':
-        FearCourage.init();
-        break;
-    case 'giving':
-        Giving.init();
-        break;
-    case 'gratitude':
-        Gratitude.init();
-        break;
-    case 'sustainable-change':
-        SustainableChange.init();
-        break;
-    case 'forum':
-        Forum.init();
-        break;
-    case 'dashboard':
-        Dashboard.init();
-        break;
-    case 'account':
-        Account.init();
-        break;
-    case 'tag-cloud-form':
-        TagCloudForm.init();
-        break;
-    case 'about':
-        About.init();
-        break;
+$(function() {
+    UI.init();
+    Loading.init();
+    Arc.init();
+    Forms.init();
+    Sharer.init();
+
+    const page = $('body').data('page');
+    switch(page) {
+        case 'home' :
+            Home.init();
+            break;
+        case 'welcome' :
+            Welcome.init();
+            break;
+        case 'boomerang':
+            Boomerang.init();
+            break;
+        case 'un-stuck':
+            UnStuck.init();
+            break;
+        case 'visualise':
+            Visualise.init();
+            break;
+        case 'you-to-you':
+            YouToYou.init();
+            break;
+        case 'fear-courage':
+            FearCourage.init();
+            break;
+        case 'giving':
+            Giving.init();
+            break;
+        case 'gratitude':
+            Gratitude.init();
+            break;
+        case 'sustainable-change':
+            SustainableChange.init();
+            break;
+        case 'forum':
+            Forum.init();
+            break;
+        case 'dashboard':
+            Dashboard.init();
+            break;
+        case 'account':
+            Account.init();
+            break;
+        case 'tag-cloud-form':
+            TagCloudForm.init();
+            break;
+        case 'about':
+            About.init();
+            break;
 
 
-}
+    }
+});
+
 
 
