@@ -64,6 +64,7 @@ export default class IntroSection extends ModuleSection {
         super.teardown();
         this.video.destroy();
         this.video.seek(1);
+        $('body').removeClass('is-loading-video');
 
     }
 }
