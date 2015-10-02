@@ -36,6 +36,13 @@
                 }
             }
 
+            &.completed-module {
+                color: $grey;
+                &:before {
+                    color: $grey;
+                }
+            }
+
             &:before {
                 $size: 15px;
                 content: '\e62e';
