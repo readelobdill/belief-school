@@ -95,7 +95,7 @@ Route::get('forgot-password', ['as' => 'auth.forgot-password', 'uses' => 'Auth\P
 Route::post('forgot-password', ['uses' => 'Auth\PasswordController@postEmail']);
 
 Route::get('reset-password/{token}', ['as' => 'auth.reset-password', 'uses' => 'Auth\PasswordController@getReset']);
-Route::post('reset-password', ['uses' => 'Auth\PasswordController@postReset']);
+Route::post('reset-password', ['as' => 'auth.post-reset', 'uses' => 'Auth\PasswordController@postReset']);
 
 
 /*Misc Pages*/
