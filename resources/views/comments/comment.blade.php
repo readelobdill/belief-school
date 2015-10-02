@@ -58,6 +58,7 @@
             </div>
             <label class="comment-image-upload">
                 Upload an image
+                <span class="image-name"></span>
                 <input type="file" name="image" />
             </label>
             <div class="actions">
