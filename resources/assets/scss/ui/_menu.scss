@@ -1,4 +1,6 @@
 .menu {
+    $menu-grey: #959595;
+
     position:fixed;
     z-index: 98;
     height: 100%;
@@ -31,15 +33,24 @@
             transition: color $transition;
 
             &.current-module {
+                a {
+                    color: #f16060;
+                    font-weight: 600;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+
                 &:before {
                     color: $lightRed;
                 }
             }
 
             &.completed-module {
-                color: $grey;
+                color: $menu-grey;
                 &:before {
-                    color: $grey;
+                    color: $menu-grey;
                 }
             }
 
@@ -61,7 +72,7 @@
                 transition: color $transition;
 
                 &:hover {
-                    color: $darkGrey;
+                    color: $menu-grey;
                 }
             }
 
