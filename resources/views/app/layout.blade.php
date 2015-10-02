@@ -14,6 +14,7 @@
     <script src="{{asset('js/output.js')}}"></script>
 </head>
 <body data-page="{{ $page or 'page' }}">
+<div class="spinner"></div>
 @include('app.partials.buttons.burger')
 @include('app.ui.menu')
 
