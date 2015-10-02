@@ -8,11 +8,9 @@
                 <p>Print this out. Frame it. Put it somewhere where you will look at it every day.  Focus on the things that remind you how much value you bring to the world!</p>
 
                 <ul class="social">
-                    <li class="fb" data-share href="https://www.facebook.com/sharer/sharer.php?{{http_build_query(['u' => route('module.share', [$moduleUser->secret])])}}" class="fb">Share on Facebook</li>
-
-                    <li class="pin" data-share href="//www.pinterest.com/pin/create/button/?{{http_build_query(['url' => route('module.share', [$moduleUser->secret]), 'media' => route('dreamboard.show', [$moduleUser->secret]), 'description' => 'My Dreamboard'])}}">Share on Pinterest</li>
-
-                    <li class="dl" href="{{route('dreamboard.show', [$moduleUser->secret])}}">Download</li>
+                    <li><a class="fb"  data-share href="https://www.facebook.com/sharer/sharer.php?{{http_build_query(['u' => route('module.share', [$moduleUser->secret])])}}">Share on Facebook</a></li>
+                    <li><a class="pin" data-share href="//www.pinterest.com/pin/create/button/?{{http_build_query(['url' => route('module.share', [$moduleUser->secret]), 'media' => route('dreamboard.show', [$moduleUser->secret]), 'description' => 'My Dreamboard'])}}">Share on Pinterest</a></li>
+                    <li><a class="dl" href="{{route('dreamboard.show', [$moduleUser->secret])}}" target="_blank" >Download</a></li>
                 </ul>
 
                 <div class="actions">

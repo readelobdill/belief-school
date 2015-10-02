@@ -379,35 +379,43 @@ ul.social {
         margin: 0 10px;
         @include transition(color $transition);
 
-        &:before {
-            content: '';
-            font-family: $icon;
-            font-size: 1.3em;
-            position: relative;
-            left: -4px; top: 0;
-        }
+        a {
+            color: $black;
+            &:hover {
+                color: $lightRed;
+            }
 
-        &.fb {
             &:before {
-                content: '\e61f';
+                content: '';
+                font-family: $icon;
+                font-size: 1.3em;
+                position: relative;
+                left: -4px; top: 0;
+            }
+
+            &.fb {
+                &:before {
+                    content: '\e61f';
+                }
+            }
+
+            &.pin {
+                &:before {
+                    content: '\e620';
+                }
+            }
+
+            &.dl {
+                &:before {
+                    content: '\e619';
+                }
             }
         }
 
-        &.pin {
-            &:before {
-                content: '\e620';
-            }
-        }
 
-        &.dl {
-            &:before {
-                content: '\e619';
-            }
-        }
 
-        &:hover {
-            color: $lightRed;
-
-        }
+        // &:hover {
+        //     color: $lightRed;
+        // }
     }
 }
