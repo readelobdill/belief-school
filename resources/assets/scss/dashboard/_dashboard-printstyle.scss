@@ -7,11 +7,13 @@
    ========================================================================== */
 
 @media print and (color) {
-   * {
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-   }
+   // * {
+   //    -webkit-print-color-adjust: exact;
+   //    print-color-adjust: exact;
+   // }
 }
+
+//inset 0 0 10px 70px #FA0303
 
 @page {
     size: A4 portrait;
@@ -29,7 +31,7 @@
 }
 
 
-@media print {
+@media print and (color){
 
     /* THE INITAL RESET */
     *,
@@ -159,7 +161,6 @@
         h2 {
             color: $black;
             &:before {
-                content: '\e632';
                 font-family: "icomoon";
                 font-size: 65px;
                 color: $lightRed;
@@ -188,7 +189,7 @@
             }
 
             > li {
-                background: url('../img/manifesto/background-image-test.jpg') center center no-repeat !important;
+                background: url('../img/manifesto/background-image.jpg') center center no-repeat !important;
                 background-size: cover !important;
                 page-break-before: always;
                 width: 100%;
