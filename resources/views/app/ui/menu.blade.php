@@ -17,7 +17,7 @@
             @foreach($modules as $key => $module)
                 @if($module->slug === 'home' || $module->isUnlocked($modules[$key-1]))
                     @if($module->pivot && $module->pivot->complete)
-                        <li class="ico-{{ ( $module->slug) }}">
+                        <li class="ico-{{ ( $module->slug) }} completed-module">
                             {{$module->name}}
                         </li>
                     @else
