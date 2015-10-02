@@ -27,7 +27,7 @@
                 @if($moduleUser->created_at->diffInHours() < config('belief.lockout'))
                     <p>Your next module will unlock in {{$moduleUser->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}.</p>
                 @else
-                    <p>Your <a href="{{route('modules.view', ['visualise'])}}">next module</a> is ready and waiting for you.</p>
+                    <p>Your <a href="{{route('modules.view', ['you-to-you'])}}">next module</a> is ready and waiting for you.</p>
                 @endif
 
                 <p><a href="{{route('modules.forum',[$module->slug])}}">Head over to the Forum</a> and share your insights and vision for your future. When you declare your intention out loud it gives it weight and pulls you forward.</p>
