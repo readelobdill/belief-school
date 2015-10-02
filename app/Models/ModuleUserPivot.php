@@ -37,7 +37,10 @@ class ModuleUserPivot extends Pivot {
             $data = new \stdClass();
         }
         if(isset($data->{$imageName})) {
-            unlink(public_path('uploads/dreamboard/'.\Auth::user()->id.'/'.$data->{$imageName}));
+            if(file_exists(public_path('uploads/dreamboard/'.\Auth::user()->id.'/'.$data->{$imageName}))) {
+                unlink(public_path('uploads/dreamboard/'.\Auth::user()->id.'/'.$data->{$imageName}));
+            }
+
         }
         $data->{$imageName} = $image;
         $this->data = $data;
