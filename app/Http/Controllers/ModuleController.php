@@ -70,6 +70,9 @@ class ModuleController extends Controller {
 
         if(!empty($moduleUser) && $moduleUser->pivot->complete && !\Session::get('paid', false)) {
             $latestModule = Module::getLatestModuleForUser($this->auth->user());
+            if(empty($latestModule)) {
+                return redirect(route('dashboard'));
+            }
             if($latestModule->id != $module->id) {
                 return redirect(route('modules.view', [$latestModule->slug]));
             }
@@ -313,7 +316,7 @@ class ModuleController extends Controller {
         return view('app.forum.forum', compact('commentRenderer', 'module', 'page', 'comments'));
 
     }
-    
+
 
     public function submitDreamboardImage($moduleId, $imageNumber) {
         $module = Module::find($moduleId);
