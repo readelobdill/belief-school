@@ -48,27 +48,6 @@ h1.plain {
     background-size: cover;
     margin: 0 auto;
     opacity: 0.5;
-
-    // &:before {
-    //     content: '\e62e';
-    //     position: absolute;
-    //     font-size: $icon;
-    //     top: -12px; left: 0;
-    //     height: 1px; width: 45%;
-    //     background: $lightRed;
-    //     margin-left: 25%;
-    //     @include transform(translateX(-50%));
-    // }
-
-    // &:after {
-    //     content: '';
-    //     position: absolute;
-    //     bottom: -12px; left: 0;
-    //     height: 1px; width: 45%;
-    //     background: $lightRed;
-    //     margin-left: 50%;
-    //     @include transform(translateX(-50%));
-    // }
 }
 
 .auth {
