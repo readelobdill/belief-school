@@ -19,7 +19,7 @@
 							</div>
 						@endif
 
-						<form method="POST" action="{{route('auth.reset-password')}}">
+						<form method="POST" action="{{route('auth.post-reset')}}">
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 							<input type="hidden" name="token" value="{{ $token }}">
 
