@@ -46,13 +46,13 @@ class ModuleClient extends EventEmitter {
         const data = new FormData();
         data.append('image', image);
         data.append('name', imageName);
-        return uploadWithProgress(url, data).then(response => response.json());
+        return uploadWithProgress(url, data).then(response => JSON.parse(response.responseText));
     }
 
     saveVideo(url, video) {
         const data = new FormData();
         data.append('video', video);
-        return uploadWithProgress(url, data).then(response => response.json());
+        return uploadWithProgress(url, data).then(response => JSON.parse(response.responseText));
     }
 
     registerUser(url, data) {
