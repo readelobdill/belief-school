@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use App\Services\Payment;
+use Carbon\Carbon;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,12 @@ class PaymentController extends Controller {
         if($this->auth->user()->paid) {
             abort(404);
         }
-        $this->payment->handlePayment($this->auth->user(), 135.00);
+        if(Carbon::now()->gt(Carbon::createFromFormat('Y-m-d H:i:s',config('belief.discountedUntil')))) {
+            $amount = config('belief.price');
+        } else {
+            $amount = config('belief.discountedPrice');
+        }
+        $this->payment->handlePayment($this->auth->user(), $amount);
     }
 
     public function completePayment() {

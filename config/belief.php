@@ -16,5 +16,8 @@ Thanks for taking the time to answer these questions, it really does make a diff
 Best regards
 
 Belief School
-    '
+    ',
+    'discountedUntil' => '2015-10-15 00:00:00',
+    'discountedPrice' => 1.0,
+    'price' => 135.0
 ];
