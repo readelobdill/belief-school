@@ -129,3 +129,22 @@ label.comment-image-upload {
         position: absolute;
     }
 }
+
+.reply,
+.delete-comment {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid $lightRed;
+    padding: 0 7px;
+    margin-top: 7px;
+}
+
+.comment-image-facebookshare{
+    font-size: 14px;
+    font-weight: 500;
+    float: right;
+    border: 1px solid $lightRed;
+    padding: 0 7px;
+    margin-top: 7px;
+}

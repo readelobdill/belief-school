@@ -31,6 +31,8 @@
             @foreach($comment->images as $image)
                 <div class="comment-image">
                     <img src="{{$image->getPath()}}" alt="">
+                </div>
+                <div class="comment-image-facebookshare">
                     @if($comment->user->id === Auth::user()->id)
                         <a class="fb" data-share href="https://www.facebook.com/sharer/sharer.php?{{http_build_query(['u' => route('comment.image', [$comment->id, $image->filename])])}}">Share on Facebook</a>
                     @endif
