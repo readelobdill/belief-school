@@ -77,11 +77,10 @@ class CommentController extends Controller {
         if($image) {
 
             $fileName = Str::random(32).'.'.$image->guessExtension();
-            if($image->getSize() > 1024 * 8) {
-                $image->move(public_path('uploads/comment-images/'.$this->auth->user()->id), $fileName);
-                $commentImage = new CommentImage(['filename' => $fileName]);
-                $comment->images()->save($commentImage);
-            }
+            $image->move(public_path('uploads/comment-images/'.$this->auth->user()->id), $fileName);
+            $commentImage = new CommentImage(['filename' => $fileName]);
+            $comment->images()->save($commentImage);
+
 
         }
     }
