@@ -313,24 +313,7 @@ class ModuleController extends Controller {
         return view('app.forum.forum', compact('commentRenderer', 'module', 'page', 'comments'));
 
     }
-
-    public function sumbitTags($userId, $moduleId) {
-
-        $user = User::find($userId);
-
-        $module = Module::find($moduleId);
-        if($module->type !== 'tagcloud') {
-            \App::abort(404);
-        }
-
-        $moduleUser = $user->moduleUser()->where('module_id', '=', $moduleId)->first();
-
-
-        $moduleUser->addTags([$this->request->input('tag_1'), $this->request->input('tag_2'), $this->request->input('tag_3')]);
-
-        $moduleUser->save();
-
-    }
+    
 
     public function submitDreamboardImage($moduleId, $imageNumber) {
         $module = Module::find($moduleId);
