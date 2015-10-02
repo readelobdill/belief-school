@@ -19,7 +19,7 @@ export default class CommentForm extends EventEmitter {
         if(files.length > 0) {
 
             let file = files[0];
-            if(file.size > 1024 * 8) {
+            if(file.size > 1024 * 1024) {
                 return 'The uploaded image must be less then 1MB';
             }
         }
@@ -35,11 +35,23 @@ export default class CommentForm extends EventEmitter {
                 this.submitForm();
                 this.form[0].reset();
                 this.form.find('.error-message').html('');
+                this.form.removeClass('has-image');
+                this.form.find('.image-name').html('');
             } else {
                 this.form.find('.error-message').html(message);
             }
 
-        })
+        });
+        this.form.on('change', '[name=image]', e => {
+            let image = e.target;
+            if(image.files.length > 0) {
+                this.form.addClass('has-image');
+                this.form.find('.image-name').html(' | ' + image.files[0].name);
+            } else{
+                this.form.removeClass('has-image');
+                this.form.find('.image-name').html('');
+            }
+        });
     }
 
     submitForm() {
