@@ -10,10 +10,17 @@
         visibility: hidden;
 
         >.inner {
+            height: 100%;
+            display: table;
+            margin: auto;
+
             .content {
                 max-width: 445px;
                 width: 100%;
-                padding: 0 $gutter;
+                padding: 40px $gutter;
+                position: relative;
+                display: table-cell;
+                vertical-align: middle;
 
                 form {
                     position: relative;
@@ -22,7 +29,7 @@
                 }
 
                 p {
-                    text-align:center;
+                    text-align: center;
                 }
             }
         }
@@ -142,7 +149,7 @@
 
     &.question-0 {
         .question-nav {
-            visibility:hidden;
+            visibility: hidden;
         }
     }
 }

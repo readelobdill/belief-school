@@ -1,6 +1,5 @@
 .browserupgrade {
     display: none;
-    background: url('../img/icons/bullets.svg') no-repeat center center;
     position: fixed;
     left: 0; right: 0;
     top: 0; bottom: 0;
@@ -11,14 +10,16 @@
 }
 
 .ltie10 {
-    header,
     .menu,
     .burger,
     .auth,
     .button,
     .social,
+    .dots,
     .spinner,
-    .background-video {
+    .background-video,
+    .question-nav,
+    .indicator {
         display: none !important;
     }
 
