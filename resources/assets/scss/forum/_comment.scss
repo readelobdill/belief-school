@@ -72,6 +72,10 @@ form.comment-form {
         white-space: nowrap;
         background: white;
         font-size: 15px;
+
+        &:empty {
+            display: none;
+        }
     }
 }
 
