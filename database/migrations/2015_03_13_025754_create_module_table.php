@@ -23,6 +23,7 @@ class CreateModuleTable extends Migration {
             $table->boolean('locks')->default(true);
             $table->string('slug', 50);
 			$table->string('type', 50);
+			$table->string('video', 50);
             $table->text('data');
 			$table->timestamps();
 		});
