@@ -96,9 +96,8 @@
             margin: 0 auto;
             transform: scale(1, 1);
             transform-origin: 50% 50%;
-            transition: transform 300ms ease;
+            transition: transform 300ms ease, background-color $transition;
             cursor: pointer;
-            @include transition(background-color $transition);
 
             &:after {
                 @include transform(translate3d(-50%, -50%, 0));
