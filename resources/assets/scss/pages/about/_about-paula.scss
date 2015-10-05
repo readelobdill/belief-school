@@ -9,7 +9,13 @@
 
         img {
             width: 100%;
+            padding-bottom: 24px;
         }
     }
 
+    .cols {
+        -webkit-columns: 300px 2;
+        -moz-columns: 300px 2;
+        columns: 300px 2;
+    }
 }
