@@ -24,7 +24,8 @@ export function downloadVideo(url) {
         deferred.resolve(URL.createObjectURL(xhr.response));
     });
 
-    if (video.canPlayType('video/webm') === 'probably') {
+    let canPlayWebM = video.canPlayType('video/webm');
+    if (canPlayWebM === 'probably' ||  canPlayWebM === 'maybe') {
         xhr.open("GET", url + '.webm');
     }
     else {
