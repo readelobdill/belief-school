@@ -15,8 +15,8 @@ export default class Question {
     }
 
     open() {
+        this.setup();
         let timeline = new TimelineLite({onComplete: () => {
-            this.question.find('input,textarea').focus();
         }});
         timeline.to(this.question, 0, {autoAlpha: 1});
         let position = 0;
@@ -29,7 +29,9 @@ export default class Question {
     }
 
     close() {
+        this.teardown();
         let timeline = new TimelineLite({onComplete: () => {
+
         }});
         let position = 0;
         let $children = this.question.find('.content').children();
@@ -71,12 +73,64 @@ export default class Question {
         }
     }
 
+
+
     showNext() {
         return animate.to(this.question.find('.next-question'), 0.7, {autoAlpha: 1});
     }
 
     hideNext() {
         return animate.to(this.question.find('.next-question'), 0.7, {autoAlpha: .3});
+    }
+
+
+    setup() {
+        window.scrollTo(0,0);
+        this.updateHeight();
+        $(window).on('resize.question', this._resize);
+        $(window).on('scroll', this._onScroll);
+    }
+
+    teardown() {
+        $(window).off('resize.question', this._resize);
+        $(window).off('scroll', this._onScroll);
+    }
+
+
+    _onScroll = () => {
+        this.scrollPosition = window.pageYOffset;
+        this.scrollTo(this.scrollPosition);
+    };
+
+    _resize = () => {
+        this.updateHeight();
+    }
+
+    scrollTo(x) {
+        this.question.find('.inner > .content').css('transform', `translate3d(0,${-Math.ceil(x)}px,0)`);
+    }
+
+    updateHeight() {
+        let height = this.question.find('.content').outerHeight();
+        console.log(height);
+        let padding = parseInt(this.question.closest('section').css('padding-top'));
+        let innerPadding = parseInt(this.question.find('.inner').css('padding-top'));
+        $('body').css({minHeight: height + (padding * 2) + (innerPadding * 2)});
+    }
+
+    focusElement() {
+        let $element = this.question.find('input,textarea').eq(0);
+        if($element.length) {
+            console.log($element);
+            let offset = $element.offset();
+            if(offset.top > window.scrollY + $(window).height()) {
+                console.log('outside');
+            }
+            console.log(offset);
+        }
+
+        //window.scrollTo(0, offset.top);
+
     }
 
 

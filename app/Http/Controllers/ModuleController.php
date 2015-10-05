@@ -121,50 +121,7 @@ class ModuleController extends Controller {
             ]);
     }
 
-    public function tagCloud($secret) {
-        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
 
-        if(empty($moduleUser)) {
-            abort(404);
-        }
-
-        if($moduleUser->module->type !== 'tag-cloud') {
-            abort(404);
-        }
-
-        return view('app.public-modules/tag-collection', ['moduleUser' => $moduleUser, 'page' => 'tag-cloud-form']);
-    }
-
-    public function tagCloudSubmit($secret) {
-        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
-
-        if(empty($moduleUser)) {
-            abort(404);
-        }
-
-        if($moduleUser->module->type !== 'tag-cloud') {
-            abort(404);
-        }
-
-
-        $moduleUser->addTags($this->request->input('tags'));
-        $moduleUser->save();
-        return view('app.public-modules.tag-collection-success', ['page' => 'tag-collection-success', 'moduleUser'=>$moduleUser]);
-    }
-
-
-    public function share($secret) {
-        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
-
-        if(empty($moduleUser)) {
-            abort(404);
-        }
-        $module = $moduleUser->module;
-        $module->pivot = $moduleUser;
-
-
-        return view('app.share-modules.'.$moduleUser->module->slug, ['module' => $module, 'page' => 'share-'.$moduleUser->module->slug]);
-    }
 
 
     public function updateModule($module) {
@@ -304,6 +261,52 @@ class ModuleController extends Controller {
         } else {
             abort(404);
         }
+    }
+
+
+    public function tagCloud($secret) {
+        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
+
+        if(empty($moduleUser)) {
+            abort(404);
+        }
+
+        if($moduleUser->module->type !== 'tag-cloud') {
+            abort(404);
+        }
+
+        return view('app.public-modules/tag-collection', ['moduleUser' => $moduleUser, 'page' => 'tag-cloud-form']);
+    }
+
+    public function tagCloudSubmit($secret) {
+        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
+
+        if(empty($moduleUser)) {
+            abort(404);
+        }
+
+        if($moduleUser->module->type !== 'tag-cloud') {
+            abort(404);
+        }
+
+
+        $moduleUser->addTags($this->request->input('tags'));
+        $moduleUser->save();
+        return view('app.public-modules.tag-collection-success', ['page' => 'tag-collection-success', 'moduleUser'=>$moduleUser]);
+    }
+
+
+    public function share($secret) {
+        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
+
+        if(empty($moduleUser)) {
+            abort(404);
+        }
+        $module = $moduleUser->module;
+        $module->pivot = $moduleUser;
+
+
+        return view('app.share-modules.'.$moduleUser->module->slug, ['module' => $module, 'page' => 'share-'.$moduleUser->module->slug]);
     }
 
     public function viewForum($module) {
