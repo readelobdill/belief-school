@@ -8,7 +8,7 @@ export function showError(field, container, direction) {
 }
 
 export function hideError(field, container) {
-    hideError(field.$element, container);
+    hideRawError(field.$element, container);
 }
 
 
