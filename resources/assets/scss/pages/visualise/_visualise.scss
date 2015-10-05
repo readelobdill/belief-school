@@ -7,6 +7,18 @@
     }
 }
 
+[data-page="share-visualise"] {
+    .content {
+        text-align: center;
+        padding: 20px;
+
+        img {
+            width: 100%;
+            max-width: 1200px;
+        }
+    }
+}
+
 .categories {
     width: 890px;
     margin-left: -222px;
