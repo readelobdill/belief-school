@@ -36,7 +36,7 @@
 }
 
 .video {
-    @include transition(background-color $transition, color $transition);
+    @include transition(background-color $transition, color $transition, border $transition);
     position: relative;
     width: 260px;
     border: 2px solid #f16060;
@@ -44,12 +44,6 @@
     padding: 20px 30px;
     cursor: pointer;
     background-color: rgba($white,0.6);
-
-    @include breakpoint($brk-medium) {
-        width: 100%;
-        height: 230px;
-        margin-left: auto;
-    }
 
     &.has-video {
         background-color: $lightRed;
@@ -104,7 +98,7 @@
             transform-origin: 50% 50%;
             transition: transform 300ms ease;
             cursor: pointer;
-
+            @include transition(background-color $transition);
 
             &:after {
                 @include transform(translate3d(-50%, -50%, 0));
@@ -122,6 +116,41 @@
 }
 
 .either-or {
+    padding-top: 40px;
+
+    &.letter-chosen {
+
+        .video {
+            border-color: $grey;
+            color: $grey;
+            background-color: rgba($white,1);
+            opacity: 0.8;
+
+            &:hover {
+                .upload-icon {
+                    transform: scale(1.1, 1.1) !important;
+                }
+            }
+
+            input {
+                cursor: default;
+            }
+
+            .upload {
+                .upload-icon {
+                    background: $grey !important;
+                }
+            }
+        }
+
+        .letter-container {
+            form {
+                @include transform(translateY(0));
+                opacity: 1;
+            }
+        }
+    }
+
     h2.title {
         margin: 80px auto;
     }
@@ -134,10 +163,10 @@
         overflow: hidden;
         z-index: 1;
 
-        &.open {
-            form {
-                @include transform(translateY(0));
-            }
+        @include breakpoint($brk-medium) {
+            width: 100%;
+            height: 230px;
+            margin-left: auto;
         }
 
         textarea {
@@ -146,8 +175,13 @@
             margin: 0;
             background: $white;
 
+            @include input-placeholder {
+                color: $lightRed;
+            }
+
             &:hover {
                 background: $white;
+                color: $lightRed !important;
             }
 
             @include breakpoint($brk-medium) {
@@ -157,9 +191,10 @@
 
         form {
             @include transform(translateY(-100%));
-            @include transition(transform 300ms ease);
+            @include transition(transform 200ms ease-out, opacity 250ms ease-out);
             position: relative;
             z-index: 2;
+            opacity: 0;
 
             @include breakpoint($brk-medium) {
                 width: 100%;
