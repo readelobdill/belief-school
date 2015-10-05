@@ -45,20 +45,22 @@ class Module extends Model {
 
     public function getAllComments() {
         $comments = $this->comments()->with('user', 'images')->get()->toHierarchy();
-        $comments->sort(function($a, $b) {
+        $comments = $comments->sort(function($a, $b) {
             if($a->sticky == $b->sticky) {
-                if($a->created_at < $b->created_at) {
-                    return 1;
-                } else if($a->created_at == $b->created_at) {
+                if($a->created_at->gt($b->created_at)) {
+                    return -1;
+                } else if($a->created_at->eq($b->created_at)) {
                     return 0;
                 }
-                return -1;
-            } else if($a->sticky < $b->sticky) {
                 return 1;
             } else if($a->sticky > $b->sticky) {
                 return -1;
+            } else if($a->sticky < $b->sticky) {
+                return 1;
             }
         });
+
+
         return $comments;
     }
 
