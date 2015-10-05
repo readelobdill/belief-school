@@ -37,21 +37,27 @@
             <a href="{{route('modules.forum',[$module->slug])}}" target="_blank" class="button small">Need help?</a>
         </p>
 
-        <div class="video">
-            <div class="upload">
-                <div class="upload-icon"></div>
-                Upload your video
-                <form action="" class="upload-video">
-                    <input type="file" name="video">
+        <div class="either-or">
+
+            <div class="video">
+                <div class="upload">
+                    <div class="upload-icon"></div>
+                    <div class="upload-status">Upload your video</div>
+                    <form action="" class="upload-video">
+                        <input type="file" name="video">
+                    </form>
+                </div>
+            </div>
+
+            <h2 class="title">If you can't record it somehow then write a heartfelt letter to yourself</h2>
+
+            <div class="letter-container">
+                <div class="button small letter-trigger">Write a letter instead</div>
+                <form action="" class="letter">
+                    <textarea id="" cols="30" rows="10" name="letter" maxlength="500" placeholder="Write your letter here.."></textarea>
                 </form>
             </div>
         </div>
-
-        <h1 class="plain">If you can't record it somehow then write a heartfelt letter to yourself:</h1>
-
-        <form action="" class="letter">
-            <textarea id="" cols="30" rows="10" name="letter" maxlength="500" placeholder="Write your letter here.."></textarea>
-        </form>
 
         <div class="actions">
             <a href="" class="button" data-save-module>Save to dashboard <span class="percentage"></span></a>
