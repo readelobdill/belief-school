@@ -5,6 +5,7 @@ import serialize from 'util/serializeForm';
 import client from 'sources/ModuleClient';
 
 export default class YouToYou extends Text {
+    letterChosen = false;
     setupEventListeners() {
         super.setupEventListeners();
         this.section.on('submit', 'form', (e) => {
@@ -24,7 +25,8 @@ export default class YouToYou extends Text {
         });
 
         this.section.on('click', '.letter-trigger', e => {
-            this.section.find('.letter-container').toggleClass('open');
+            this.section.find('.either-or').toggleClass('letter-chosen');
+            this.letterChosen = !this.letterChosen;
         })
     }
 
