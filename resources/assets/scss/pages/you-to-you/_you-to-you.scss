@@ -150,10 +150,6 @@
         }
     }
 
-    h2.title {
-        margin: 80px auto;
-    }
-
     .letter-container {
         position: relative;
         margin-left: -127px;
@@ -175,13 +171,13 @@
             margin: 0;
             background: $white;
 
-            @include input-placeholder {
-                color: $lightRed;
-            }
-
             &:hover {
                 background: $white;
                 color: $lightRed !important;
+            }
+
+            @include input-placeholder {
+                color: $lightRed;
             }
 
             @include breakpoint($brk-medium) {
@@ -202,10 +198,20 @@
             }
         }
     }
+
+    .error-container {
+        @include transform(translateX(-50%));
+        border-top: 1px solid #aeaeae;
+        display: inline-block;
+        margin: 30px auto 30px 50%;
+    }
+
+    h2.title {
+        margin: 80px auto;
+    }
+
     .letter-trigger {
         @include transform(translateX(-50%));
-
-
         margin-left: 50%;
     }
 }
