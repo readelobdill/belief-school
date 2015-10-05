@@ -5,6 +5,17 @@ a {
         color: $darkRed;
         border-color: $darkRed;
     }
+
+    &.low-key {
+        font-weight: 500;
+        color: $black;
+        border-bottom: 2px solid $black;
+
+        &:hover {
+            border-color: $lightRed;
+            color: $lightRed;
+        }
+    }
 }
 
 p {

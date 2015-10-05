@@ -118,7 +118,6 @@
     padding-top: 40px;
 
     &.letter-chosen {
-
         .video {
             border-color: $grey;
             color: $grey;
@@ -143,6 +142,7 @@
         }
 
         .letter-container {
+            height: auto;
             form {
                 @include transform(translateY(0));
                 opacity: 1;
@@ -159,6 +159,7 @@
         margin-left: -127px;
         margin-bottom: 60px;
         width: 700px;
+        height: 0;
         overflow: hidden;
         z-index: 1;
 
@@ -200,13 +201,12 @@
                 margin-left: auto;
             }
         }
+    }
+    .letter-trigger {
+        @include transform(translateX(-50%));
 
-        .letter-trigger {
-            @include transform(translateX(-50%));
-            position: absolute;
-            top: 0;
-            margin-left: 50%;
-        }
+
+        margin-left: 50%;
     }
 }
 
