@@ -58,7 +58,7 @@
                 </form>
             </div>
         </div>
-
+        <div class="error-container" style="display:none"></div>
         <div class="actions">
             <a href="" class="button" data-save-module>Save to dashboard <span class="percentage"></span></a>
         </div>
