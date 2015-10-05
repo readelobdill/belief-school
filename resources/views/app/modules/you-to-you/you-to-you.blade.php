@@ -51,16 +51,17 @@
 
             <h2 class="title">If you can't record it somehow then write a heartfelt letter to yourself</h2>
 
+            <div class="button small letter-trigger">Write a letter instead</div>
             <div class="letter-container">
-                <div class="button small letter-trigger">Write a letter instead</div>
                 <form action="" class="letter">
                     <textarea id="" cols="30" rows="10" name="letter" maxlength="500" placeholder="Write your letter here.."></textarea>
                 </form>
             </div>
-        </div>
-        <div class="error-container" style="display:none"></div>
-        <div class="actions">
-            <a href="" class="button" data-save-module>Save to dashboard <span class="percentage"></span></a>
+
+            <div class="error-container" style="display:none"></div>
+            <div class="actions">
+                <a href="" class="button" data-save-module>Save to dashboard <span class="percentage"></span></a>
+            </div>
         </div>
 
     </div>
