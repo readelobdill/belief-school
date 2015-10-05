@@ -80,6 +80,15 @@ export default class Question {
     }
 
 
+    setup() {
+
+    }
+
+    teardown() {
+
+    }
+
+
 
 
 }
