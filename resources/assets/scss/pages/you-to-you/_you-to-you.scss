@@ -6,10 +6,8 @@
     margin-bottom: 60px;
     margin-top: 30px;
 
-
-
     @include breakpoint($brk-medium) {
-        display:block;
+        display: block;
     }
 
     .detail {
@@ -23,6 +21,7 @@
         color: $lightRed;
         text-align:center;
         line-height: 26px;
+
         .number {
             position:absolute;
             top: 6px;
@@ -37,19 +36,14 @@
 }
 
 .video {
-    width: 700px;
-    height: 290px;
-    margin-left: -127px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: #f0f0f0;
-    margin-bottom: 60px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
     @include transition(background-color $transition, color $transition);
+    position: relative;
+    width: 260px;
+    border: 2px solid #f16060;
+    margin: auto;
+    padding: 20px 30px;
+    cursor: pointer;
+    background-color: rgba($white,0.6);
 
     @include breakpoint($brk-medium) {
         width: 100%;
@@ -74,12 +68,13 @@
     }
 
     input {
-        position:absolute;
-        top: 0;
-        left: 0;
-        font-size: 999999px;
+        position: absolute;
+        width: 100%;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
         opacity: 0;
         cursor: pointer;
+        text-indent: -999999px;
     }
 
     &:hover:not(.has-video) {
@@ -94,6 +89,10 @@
     .upload {
         text-align: center;
 
+        .upload-status {
+            font-weight: 600;
+        }
+
         .upload-icon {
             width: 62px;
             height: 62px;
@@ -106,7 +105,9 @@
             transition: transform 300ms ease;
             cursor: pointer;
 
+
             &:after {
+                @include transform(translate3d(-50%, -50%, 0));
                 position: relative;
                 content: '\e62f';
                 font-family: $icon;
@@ -115,28 +116,63 @@
                 width: 30px;
                 height: 25px;
                 color: $white;
-                @include transform(translate3d(-50%, -50%, 0));
             }
         }
     }
 }
 
-form.letter {
-    width: 700px;
-    margin-left: -127px;
-    margin-bottom: 60px;
-
-    @include breakpoint($brk-medium) {
-        width: 100%;
-        margin-left: auto;
+.either-or {
+    h2.title {
+        margin: 80px auto;
     }
 
-    textarea {
-        width: 100%;
-        height: 290px;
+    .letter-container {
+        position: relative;
+        margin-left: -127px;
+        margin-bottom: 60px;
+        width: 700px;
+        overflow: hidden;
+        z-index: 1;
 
-        @include breakpoint($brk-medium) {
-            height: 230px;
+        &.open {
+            form {
+                @include transform(translateY(0));
+            }
+        }
+
+        textarea {
+            width: 100%;
+            height: 290px;
+            margin: 0;
+            background: $white;
+
+            &:hover {
+                background: $white;
+            }
+
+            @include breakpoint($brk-medium) {
+                height: 230px;
+            }
+        }
+
+        form {
+            @include transform(translateY(-100%));
+            @include transition(transform 300ms ease);
+            position: relative;
+            z-index: 2;
+
+            @include breakpoint($brk-medium) {
+                width: 100%;
+                margin-left: auto;
+            }
+        }
+
+        .letter-trigger {
+            @include transform(translateX(-50%));
+            position: absolute;
+            top: 0;
+            margin-left: 50%;
         }
     }
 }
+

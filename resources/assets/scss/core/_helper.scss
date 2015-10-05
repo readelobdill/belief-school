@@ -1,0 +1,29 @@
+.browserupgrade {
+    display: none;
+    position: fixed;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    z-index: 99999;
+    padding: 100px 30px 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ltie10 {
+    .menu,
+    .burger,
+    .auth,
+    .button,
+    .social,
+    .dots,
+    .spinner,
+    .background-video,
+    .question-nav,
+    .indicator {
+        display: none !important;
+    }
+
+    .browserupgrade {
+        display: block;
+    }
+}
