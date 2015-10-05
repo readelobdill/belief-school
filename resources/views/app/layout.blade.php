@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<!--[if lt IE 10]><html lang="en" class="ltie10"><![endif]-->
 <head>
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -16,7 +17,10 @@
 <body data-page="{{ $page or 'page' }}">
 
 <!--[if lt IE 10]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <div class="browserupgrade">
+        <h1 class="plain">You are using an <strong>outdated</strong> browser.</h1>
+        <p>Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    </div>
 <![endif]-->
 
 <div class="spinner"></div>
