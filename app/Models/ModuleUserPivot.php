@@ -1,11 +1,12 @@
 <?php namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class ModuleUserPivot extends Pivot {
     protected $table = 'module_user';
-    protected $dates = ['created_at', 'updated_at', 'completed_at'];
+    protected $dates = ['created_at', 'updated_at'];
     public function __construct(Model $parent, $attributes, $table, $exists = false) {
         parent::__construct($parent, $attributes, $table, $exists);
     }
@@ -57,5 +58,12 @@ class ModuleUserPivot extends Pivot {
             $this->attributes['data'] = $value;
         }
 
+    }
+
+    public function getCompletedAtAttribute($value) {
+        if(starts_with($value, '00-00-00')) {
+            return null;
+        }
+        return new Carbon($value);
     }
 }

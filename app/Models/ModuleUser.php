@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class ModuleUser extends Model {
     protected $table = 'module_user';
-    protected $dates = ['created_at', 'updated_at', 'completed_at'];
+    protected $dates = ['created_at', 'updated_at'];
 
 
     public function user() {
@@ -49,5 +49,12 @@ class ModuleUser extends Model {
             $this->attributes['data'] = $value;
         }
 
+    }
+
+    public function getCompletedAtAttribute($value) {
+        if(starts_with($value, '00-00-00')) {
+            return null;
+        }
+        return new Carbon($value);
     }
 }
