@@ -14,6 +14,11 @@
     <script src="{{asset('js/output.js')}}"></script>
 </head>
 <body data-page="{{ $page or 'page' }}">
+
+<!--[if lt IE 10]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
 <div class="spinner"></div>
 @include('app.partials.buttons.burger')
 @include('app.ui.menu')
