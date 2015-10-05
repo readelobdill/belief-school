@@ -5,6 +5,7 @@ import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 import "gsap/src/uncompressed/plugins/ScrollToPlugin";
 import config from 'config';
 import Q from 'q';
+import {downloadVideo} from 'util/downloadVideo';
 
 var multiplier = config.scrollDivider;
 var scrollOffset = window.pageYOffset / multiplier;
@@ -16,69 +17,40 @@ $(window).on('scroll', function() {
 function Video(video) {
     this.video = $(video)[0];
     this.duration = 7.984;
+    this._isVideo = true;
     let videoReady = Q.defer();
     this.videoReady = videoReady.promise;
     if($(this.video).is('img')) {
+        this._isVideo = false;
         videoReady.resolve(this);
         return;
     }
     $('body').addClass('is-loading-video');
     //this.video.pause();
+    this.videoContainer = $(document.createElement('video'));
+    this.videoContainer.addClass('display-video');
 
+    downloadVideo($(this.video).data('video')).then(response => {
+        this.videoContainer[0].src = response;
+        $(this.video).replaceWith(this.videoContainer);
+        this.video = this.videoContainer[0];
+        console.log($(this.video).is('video'));
+        videoReady.resolve(this);
+    }, error => {
 
-    let percent = this.getPercentLoaded();
-    if (percent !== null) {
-        percent = 100 * Math.min(1, Math.max(0, percent));
-        if(percent == 100) {
-            videoReady.resolve(this.video);
-        }
-        // ... do something with var percent here (e.g. update the progress bar)
+    }, progress => {
 
-    }
-    $(this.video).on('progress', e => {
-        let percent = this.getPercentLoaded();
-        console.log(e);
-        for(let i = 0; i < this.video.buffered.length; i++) {
-            console.log(this.video.buffered.start(i), this.video.buffered.end(i))
-        }
-        if (percent !== null) {
-            percent = 100 * Math.min(1, Math.max(0, percent));
-            videoReady.notify(percent);
-            if(percent == 100) {
-                videoReady.resolve(this.video);
-            }
-            // ... do something with var percent here (e.g. update the progress bar)
-
-        }
-    })
-    $(this.video).on('error stalled', e => {
-        console.log(e);
     });
 
-    $(this.video).on('loadstart', e => {
-        console.log(e);
-    });
-    $(this.video).on('load', e => {
-        console.log('loadend');
-    })
 
-    let canplayCallback = (e) => {
-        this.video.removeEventListener('canplaythrough', canplayCallback);
-        console.log('canplaythrough');
-        //videoReady.resolve(this.video);
-    }
-    if(this.video.readyState === 4) {
-        canplayCallback();
-    } else {
-        this.video.addEventListener('canplaythrough',canplayCallback);
-    }
+
 
 
 
     this.videoReady.then(() => {
         this.updatePosition();
         this.videoHasLoaded();
-    })
+    });
 
 
 
@@ -156,8 +128,10 @@ Video.prototype.destroy = function() {
 };
 
 Video.prototype.isVideo = function() {
-    return $(this.video).is('video');
+    return this._isVideo;
 }
+
+
 
 
 module.exports = Video;
