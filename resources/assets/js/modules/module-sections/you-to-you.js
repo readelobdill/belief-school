@@ -21,8 +21,10 @@ export default class YouToYou extends Text {
             } else {
                 $(e.currentTarget).closest('.video').removeClass('has-video');
             }
+        });
 
-
+        this.section.on('click', '.letter-trigger', e => {
+            this.section.find('.letter-container').toggleClass('open');
         })
     }
 
@@ -47,6 +49,10 @@ export default class YouToYou extends Text {
 
     setProgress(progress) {
         this.section.find('.actions .percentage').html(Math.floor(progress) + '%');
+    }
+
+    validate() {
+
     }
 }
 
