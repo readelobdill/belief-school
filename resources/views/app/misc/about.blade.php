@@ -131,6 +131,10 @@
                         <div class="price">$135 <span>NZD</span></div>
                     </h1>
 
+                    @if(!Auth::check() || !Auth::user()->paid)
+                        <p class="center"><a href="{{ route('modules.view', ['home', 'skip' => 1])}}" class="button small">Enrol Now</a></p>
+                    @endif
+
                     <div class="content-block">
                         <h1 class="plain">What you get</h1>
 
