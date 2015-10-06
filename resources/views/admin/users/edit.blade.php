@@ -23,7 +23,7 @@
                         <input name="email" id="email" class="form-control" type="email" required value="{{$user->email}}" />
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="paid" id="paid" />
+                        <input type="checkbox" name="paid" id="paid" {{$user->paid ? 'checked' : ''}} />
                         <label for="paid">Paid</label>
                     </div>
                     <div class="form-group">
