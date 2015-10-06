@@ -24,11 +24,12 @@ export function downloadVideo(url) {
         deferred.resolve(URL.createObjectURL(xhr.response));
     });
 
-    if (video.canPlayType('video/webm')) {
+    let canPlayWebM = video.canPlayType('video/webm');
+    if (canPlayWebM === 'probably' ||  canPlayWebM === 'maybe') {
         xhr.open("GET", url + '.webm');
     }
     else {
-        xhr.open("GET", url + 'mp4');
+        xhr.open("GET", url + '.mp4');
     }
 
     xhr.responseType = 'blob';
