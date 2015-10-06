@@ -1,7 +1,11 @@
 <li id="module-{{$home->slug}}">
-    <div class="header">
+    <div class="header {{!($home && isset($home->pivot->data{'1'})) ? 'is-locked' : ''}}">
         <div class="inner">
-            <h2>My Belief School Beginnings</h2>
+            @if($home && isset($home->pivot->data{'1'}))
+                <h2>My Belief School Beginnings</h2>
+            @else
+                <h2><a href="{{route('modules.view', [$home->slug] )}}">My Belief School Beginnings</a></h2>
+            @endif
 
         </div>
     </div>
