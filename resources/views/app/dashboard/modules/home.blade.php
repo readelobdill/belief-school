@@ -5,7 +5,7 @@
 
         </div>
     </div>
-
+    @if($home && isset($home->pivot->data{'1'}))
     <div class="content">
         <div class="inner-padding">
 
@@ -27,3 +27,5 @@
             </ul>
         </div>
     </div>
+        @endif
+</li>
