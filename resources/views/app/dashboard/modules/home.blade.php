@@ -1,7 +1,7 @@
 <li id="module-{{$home->slug}}">
-    <div class="header {{!($home && isset($home->pivot->data{'1'})) ? 'is-locked' : ''}}">
+    <div class="header {{!($home && $home->pivot->complete) ? 'is-locked' : ''}}">
         <div class="inner">
-            @if($home && isset($home->pivot->data{'1'}))
+            @if($home && $home->pivot->complete)
                 <h2>My Belief School Beginnings</h2>
             @else
                 <h2><a href="{{route('modules.view', [$home->slug] )}}">My Belief School Beginnings</a></h2>
@@ -9,7 +9,7 @@
 
         </div>
     </div>
-    @if($home && isset($home->pivot->data{'1'}))
+    @if($home && $home->pivot->complete)
     <div class="content">
         <div class="inner-padding">
 
