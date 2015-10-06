@@ -1,0 +1,10 @@
+@import "compass";
+@import "breakpoint";
+@import "core/settings"; // needs to be first.
+
+@import "forum/comment";
+
+
+.comments-list {
+	max-width: 500px;
+}

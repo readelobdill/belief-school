@@ -23,16 +23,7 @@ return [
         [
             'name' => 'Modules',
             'icon' => 'circle-o',
-            'children' => [
-                [
-                    'name' => 'List Modules',
-                    'url' => 'admin.modules.list'
-                ],
-                [
-                    'name' => 'Create Module',
-                    'url' => 'admin.modules.create'
-                ]
-            ]
+            'url' => 'admin.modules.list'
         ]
     ]
 ];
