@@ -11,7 +11,7 @@
             </a>
         @endif
 
-        <div class="module-icon page-icon module-{{$module->slug}}">
+        <div class="module-icon page-icon module-{{$module->template}}">
 
         </div>
     </div>
