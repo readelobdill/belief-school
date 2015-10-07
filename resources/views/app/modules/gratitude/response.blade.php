@@ -5,12 +5,11 @@
             Gratitude
         </h1>
 
-        <p>Nice, you have taken the first step towards consciously incorporating gratitude into your life. Keep it up.</p>
+        <p>Nice, you have taken the first step towards consciously incorporating gratitude into your life. We recommend starting a gratitude diary, writing out ten every day.</p>
 
-        <p>The next part of this exercise is to express gratitude to someone else. A simple unexpected note of appreciation can have a big impact. It costs nothing but gives much.</p>
+        <p>The next part of this exercise is to express gratitude to someone else. A simple, unexpected note of appreciation can have a big impact. It costs nothing but gives much.</p>
 
-        <p>Think of someone who you’d like to express your thanks too. Open your email browser and send them an email now.</p>
-
+        <p>Think of someone you’d like to express your thanks to. Write a card or open your email browser and send an email now.</p>
 
         <ul class="accordion single">
             <li>
@@ -22,7 +21,7 @@
                     </div>
                 </h2>
                 <div class="answer">
-                    <p>Unless you were taught to express yourself in this way, it may not come naturally to you. Don’t worry if it feels a little uncomfortable – well help you get started.</p>
+                    <p>Unless you were taught to express yourself in this way, it may not come naturally. Don’t worry if it feels a little uncomfortable – we’ll help you get started.</p>
 
                     <p>Try and make it about “them” as much as possible and be specific if you can, this makes it more meaningful.</p>
 
@@ -39,9 +38,7 @@
 
         <p class="margin-top"><b>Brilliant</b>, you just made someone’s day a little more special.</p>
 
-        <p class="center"><i>How did that feel?</i></p>
-
-
+        <p class="center">How did you feel expressing your gratitude?</p>
 
         <form action="">
             <div class="form-row">
@@ -49,7 +46,7 @@
             </div>
 
             <div class="actions">
-                <button class="button">Save to Dashboard!</button>
+                <button class="button">Save to my Dashboard</button>
             </div>
         </form>
     </div>
