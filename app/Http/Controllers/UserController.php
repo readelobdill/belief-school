@@ -49,7 +49,7 @@ class UserController extends Controller {
 
         $this->auth->login($user);
         $now = new Carbon();
-        $module = Module::findBySlug('home');
+        $module = Module::findByType('home');
         $user->modules()->attach($module, [
             'created_at' => $now,
             'updated_at' => $now,

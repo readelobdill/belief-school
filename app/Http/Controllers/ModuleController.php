@@ -26,12 +26,11 @@ class ModuleController extends Controller {
 
 
     public function viewModule($module = 'home') {
-
         if(empty($module)) {
             abort(404);
         }
         if($module === 'home') {
-            $module = Module::with(['requiredModule', 'requiredModules'])->where('slug', $module)->first();
+            $module = Module::with(['requiredModule', 'requiredModules'])->where('template', $module)->first();
         }
 
         if(!$module->free && $this->auth->check() && !$this->auth->user()->paid) {
