@@ -215,7 +215,7 @@
                     </li>
                 </ul>
                 @if(!Auth::check() || !Auth::user()->paid)
-                    <p class="center"><a href="{{ route('modules.view', ['home', 'skip' => 1])}}" class="button">I want to find my amazing self</a></p>
+                    <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button">I want to find my amazing self</a></p>
                 @endif
             </div>
         </div>

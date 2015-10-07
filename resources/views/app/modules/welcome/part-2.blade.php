@@ -18,7 +18,7 @@
         <div class="inner">
             <div class="content">
                 <h1 class="plain">You're one step closer!</h1>
-                <p>Your <a href="{{route('modules.view', ['boomerang'])}}">next module</a> is ready and waiting for you.</p>
+                <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}">next module</a> is ready and waiting for you.</p>
                 <p>
                     Also, you can visit your <a href="{{route('dashboard')}}#module-{{$module->slug}}">Dashboard</a> anytime to keep up-to-date on your progress.
                 </p>

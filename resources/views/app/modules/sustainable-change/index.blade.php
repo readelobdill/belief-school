@@ -10,7 +10,7 @@
             @include('app/modules/sustainable-change/intro-video')
         </section>
 
-        <section class="i-am module-section has-container has-text" data-type="Form" data-part="3">
+        <section class="i-am module-section has-container has-text" data-type="Text" data-part="3">
             @include('app/modules/sustainable-change/challenge')
         </section>
         <section class="affirmations module-section has-container has-text" data-type="Form" data-part="4" data-step="1">
