@@ -46,8 +46,7 @@
             <div class="content">
                 <h1 class="plain"> Continue to record what <br />you are grateful for...</h1>
 
-                <p>Keep your Gratitude Diary going - try to write down what you are grateful for at least once a day, even if you only write one thing.</p>
-                <p>Come back to your Belief School Dashboard to see the original 10 things you are grateful for if you are struggling to find inspiration</p>
+                <p>Keep your Gratitude Diary going – write down what you are grateful for each day.</p>
 
                 @if($moduleUser->created_at->diffInHours() < config('belief.lockout'))
                     <p>Your next module will unlock in {{$moduleUser->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}.</p>
@@ -55,7 +54,7 @@
                     <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}">next module</a> is ready and waiting for you.</p>
                 @endif
 
-                <p>Take a look at <a href="{{route('dashboard')}}#module-{{$module->slug}}">your dashboard</a> and see the progress on your amazing Belief School journey or share what you are grateful for in our supportive <a href="{{route('modules.forum',[$module->slug])}}">community forum.</a></p>
+                <p>Share what you are grateful for in the <a href="{{route('modules.forum',[$module->slug])}}">community forum.</a> Doing this publicly makes it even more powerful.</p>
             </div>
         </div>
     </div>
