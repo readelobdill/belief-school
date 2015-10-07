@@ -37,10 +37,10 @@ function Video(video) {
         console.log($(this.video).is('video'));
         videoReady.resolve(this);
     }, error => {
-
+        videoReady.reject(this);
     }, progress => {
 
-    });
+    }).done();
 
 
 
@@ -49,6 +49,8 @@ function Video(video) {
 
     this.videoReady.then(() => {
         this.updatePosition();
+        this.videoHasLoaded();
+    }).catch(error => {
         this.videoHasLoaded();
     });
 
