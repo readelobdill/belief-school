@@ -17,12 +17,9 @@ export default class CongratsSection extends Text {
         } else {
             container = container.first();
         }
-        return super.open().then(() => {
-            return Q.all(
-                [animate.to(this.section.find('.inner'), 0.7, {autoAlpha: 1}),
-                animate.to(container, 0.7, {autoAlpha: 1})]
-            );
-        })
+        super.open();
+        return animate.to(container, 0.7, {autoAlpha: 1});
+
     }
 
     setup() {
