@@ -145,46 +145,56 @@
         <form class="welcome-first-steps" action="{{ route('modules.update', ['welcome']) }}">
             <ul class="checkbox-list">
                 <li>
-                    <input required type="radio" name="assert" id="choice-1" value="Exercise for 30min each day for the duration of the program"><label for="choice-1">Exercise for 30min each day for the duration of the program</label>
+                    <input required type="radio" name="assert" id="choice-1" value="Exercising for 30min each day">
+                    <label for="choice-1">Exercising for 30min each day</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-2" value="Drink no coffee for the duration of the program"><label for="choice-2">Drink no coffee for the duration of the program</label>
+                    <input required type="radio" name="assert" id="choice-2" value="Drinking no coffee">
+                    <label for="choice-2">Drinking no coffee</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-3" value="Drink no alcohol for the duration of the program"><label for="choice-3">Drink no alcohol for the duration of the program</label>
+                    <input required type="radio" name="assert" id="choice-3" value="Drinking no alcohol">
+                    <label for="choice-3">Drinking no alcohol</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-4" value="Do not smoke anything for the duration of the program"><label for="choice-4">Do not smoke anything for the duration of the program</label>
+                    <input required type="radio" name="assert" id="choice-4" value="Not smoking anything">
+                    <label for="choice-4">Not smoking anything </label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-5" value="Have a 30 second cold shower (really cold) each day throughout the program"><label for="choice-5">Have a 30 second cold shower (really cold) each day throughout the program</label>
+                    <input required type="radio" name="assert" id="choice-5" value="Having a 30 second cold shower (really cold) each day">
+                    <label for="choice-5">Having a 30 second cold shower (really cold) each day</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-6" value="Eat no processed sugar for the duration of the program"><label for="choice-6">Eat no processed sugar for the duration of the program</label>
+                    <input required type="radio" name="assert" id="choice-6" value="Eating no processed sugar">
+                    <label for="choice-6">Eating no processed sugar</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-7" value="Eat no gluten for the duration of the program"><label for="choice-7">Eat no gluten for the duration of the program</label>
+                    <input required type="radio" name="assert" id="choice-7" value="Eating no gluten">
+                    <label for="choice-7">Eating no gluten</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-8" value="Eat no diary for the duration of the program"><label for="choice-8">Eat no diary for the duration of the program</label>
+                    <input required type="radio" name="assert" id="choice-8" value="Eating no dairy">
+                    <label for="choice-8">Eating no dairy</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-9" value="Drink a litre of water every day for the duration of the course"><label for="choice-9">Drink a litre of water every day for the duration of the course</label>
+                    <input required type="radio" name="assert" id="choice-9" value="Drinking a litre of water every day">
+                    <label for="choice-9">Drinking a litre of water every day</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-10" value="Maintain a vegetarian diet for the duration of the program"><label for="choice-10">Maintain a vegetarian diet for the duration of the program</label>
+                    <input required type="radio" name="assert" id="choice-10" value="Maintaining a vegetarian diet">
+                    <label for="choice-10">Maintaining a vegetarian diet</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-11" value="Go to bed, lights out by 10pm for the duration of the program"><label for="choice-11">Go to bed, lights out by 10pm for the duration of the program</label>
+                    <input required type="radio" name="assert" id="choice-11" value="Going to bed, lights out by 10pm">
+                    <label for="choice-11">Going to bed, lights out by 10pm</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-12" value="Meditate for 20min each day for the duration of the Program"><label for="choice-12">Meditate for 20min each day for the duration of the Program</label>
+                    <input required type="radio" name="assert" id="choice-12" value="Meditating for 20min each day ">
+                    <label for="choice-12">Meditating for 20min each day</label>
                 </li>
-
-
             </ul>
             <div class="actions">
-                <button class="button">I am committed to this </button>
+                <button class="button">I am committed to this</button>
             </div>
 
         </form>
