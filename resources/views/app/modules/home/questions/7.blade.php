@@ -3,11 +3,9 @@
         <h1 class="title">
             Why don't you have it?
         </h1>
-        <p>
-            Don't over think this to much. What is the first thing <br>
-            that popped into your head when you read this<br>
-            question? Come on be honest - no one is watching.
-        </p>
+
+        <p>Don't over think this too much. What is the first thing that popped into your head when you read this question? Come on, be honest – no one is watching.</p>
+
         <div class="controls">
             <form action="" data-validate>
                 <div class="form-row">

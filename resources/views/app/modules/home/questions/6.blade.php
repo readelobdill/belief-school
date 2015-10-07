@@ -1,15 +1,10 @@
 <div class="inner">
     <div class="content">
         <h1 class="title">
-            How will you feel when you have this
+            How will you feel when you have this?
         </h1>
         <p>You are doing great!</p>
-        <p>
-            Now, close your eyes for a moment and <br>
-            imagine in the perfect world, how you will <br>
-            <strong>FEEL</strong> when you have this thing you want. <br>
-            Write your feelings down.
-        </p>
+        <p>Now, close your eyes for a moment and imagine in the perfect world, how you will <b>FEEL</b> when you have this. Write that feeling down here.</p>
         <div class="controls">
             <form action="" data-validate>
                 <div class="form-row">

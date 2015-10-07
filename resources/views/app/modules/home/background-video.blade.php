@@ -7,7 +7,8 @@
 </div>
 <div class="inner">
     <div class="home-banner">
-        @include('app.partials.logo')
+        {{-- @include('app.partials.logo') --}}
+        <img src="{{ asset('img/logo-sm.svg') }}" alt="My Belief School" />
     </div>
     <div class="next-section absol" data-next-section>
         @include('app/partials/icons/down-arrow')
