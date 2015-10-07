@@ -28,13 +28,13 @@
                 <ul class="module-list">
                     @include('app.dashboard.modules.home', ['home' => $modules[0], 'welcome' => isset($modules[1]) ? $modules[1] : false])
                         @foreach($modules as $key => $mod)
-                            @if($mod->slug === 'home' || $mod->slug === 'welcome')
+                            @if($mod->template === 'home' || $mod->template === 'welcome')
                                 <?php continue; ?>
                             @else
                             @if($mod->pivot && $mod->pivot->complete)
 
                                 {{-- Unlocked and completed --}}
-                                <li id="module-{{$mod->slug}}" class="module-{{ $mod->slug }} is-unlocked is-complete {{(!isset($modules[$key+1]) || (isset($modules[$key+1]) && (!$modules[$key+1]->pivot || !$modules[$key+1]->pivot->complete)) ? 'is-open' : '')}}" data-type="{{$mod->slug}}">
+                                <li id="module-{{$mod->slug}}" class="module-{{ $mod->template }} is-unlocked is-complete {{(!isset($modules[$key+1]) || (isset($modules[$key+1]) && (!$modules[$key+1]->pivot || !$modules[$key+1]->pivot->complete)) ? 'is-open' : '')}}" data-type="{{$mod->template}}">
 
                                     <div class="header">
                                         <div class="inner">
@@ -48,17 +48,17 @@
                                                 <li class="arrow"></li>
                                             </ul>
                                             <div class="options">
-                                                @include('app.dashboard.module-options.'.$mod->slug, ['module' => $mod])
+                                                @include('app.dashboard.module-options.'.$mod->template, ['module' => $mod])
                                             </div>
                                         </div>
                                     </div>
 
-                                    @include('app.dashboard.modules.'.$mod->slug, ['module' => $mod])
+                                    @include('app.dashboard.modules.'.$mod->template, ['module' => $mod])
                                 </li>
 
                             @elseif($mod->pivot && !$mod->pivot->complete)
                                 {{-- Unlocked and started but not finished. --}}
-                                <li class="module-{{ $mod->slug }} is-not-complete is-unlocked">
+                                <li class="module-{{ $mod->template }} is-not-complete is-unlocked">
                                     <div class="header is-locked">
                                         <div class="inner">
                                             <h2><a href="{{route('modules.view', [$mod->slug] )}}">Module {{$mod->order - 1}} - {{$mod->name}}</a></h2>
@@ -78,7 +78,7 @@
                                 @if($modules[$key-1]->pivot->created_at->diffInHours() < config('belief.lockout'))
 
                                     {{-- Waiting for unlock --}}
-                                    <li class="module-{{ $mod->slug }} is-locked">
+                                    <li class="module-{{ $mod->template }} is-locked">
                                         <div class="header">
                                             <div class="inner">
                                                 <h2>Module {{$mod->order - 1}}</h2>
@@ -94,7 +94,7 @@
                                 @else
 
                                     {{-- Unlocked but not started--}}
-                                    <li class="module-{{ $mod->slug }} is-not-complete is-unlocked">
+                                    <li class="module-{{ $mod->template }} is-not-complete is-unlocked">
                                         <div class="header is-locked">
                                             <div class="inner">
                                                 <h2><a href="{{route('modules.view', [$mod->slug] )}}">Module {{$mod->order - 1}} - {{$mod->name}}</a></h2>
@@ -115,7 +115,7 @@
                             @else
 
                                 {{-- Locked --}}
-                                <li class="module-{{ $mod->slug }} is-locked">
+                                <li class="module-{{ $mod->template }} is-locked">
                                     <div class="header">
                                         <div class="inner">
                                             <h2>Module {{$mod->order - 1}}</h2>

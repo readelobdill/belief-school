@@ -23,7 +23,7 @@
                 @if($moduleUser->created_at->diffInHours() < config('belief.lockout'))
                     <p>Your next module will unlock in {{$moduleUser->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}.</p>
                 @else
-                    <p>Your <a href="{{route('modules.view', ['visualise'])}}">next module</a> is ready and waiting for you.</p>
+                    <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}">next module</a> is ready and waiting for you.</p>
                 @endif
 
                 <p>Click through to your <a href="{{route('dashboard')}}#module-{{$module->slug}}">Dashboard</a> to read your affirmations and keep an eye out for the qualities submitted by your friends.</p>

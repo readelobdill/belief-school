@@ -23,7 +23,7 @@
                 </h1>
                 <p>Click through to your <a href="{{route('dashboard')}}#module-{{$module->slug}}">Dashboard</a> to enjoy your journey.</p>
 
-                <p>Your <a href="{{route('modules.view', ['gratitude'])}}">next module</a> is ready and waiting for you.</p>
+                <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}">next module</a> is ready and waiting for you.</p>
             </div>
         </div>
     </div>

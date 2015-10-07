@@ -1,11 +1,15 @@
 <li id="module-{{$home->slug}}">
-    <div class="header">
+    <div class="header {{!($home && $home->pivot->complete) ? 'is-locked' : ''}}">
         <div class="inner">
-            <h2>My Belief School Beginnings</h2>
+            @if($home && $home->pivot->complete)
+                <h2>My Belief School Beginnings</h2>
+            @else
+                <h2><a href="{{route('modules.view', [$home->slug] )}}">My Belief School Beginnings</a></h2>
+            @endif
 
         </div>
     </div>
-
+    @if($home && $home->pivot->complete)
     <div class="content">
         <div class="inner-padding">
 
@@ -27,3 +31,5 @@
             </ul>
         </div>
     </div>
+        @endif
+</li>

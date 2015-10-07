@@ -10,8 +10,8 @@ class Module extends Model {
      * @param $slug
      * @return Module
      */
-    public static function findBySlug($slug) {
-        return static::where('slug', $slug)->first();
+    public static function findByType($type) {
+        return static::where('type', $type)->first();
     }
 
     public static function updateOrder($order) {

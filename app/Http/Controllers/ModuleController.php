@@ -26,19 +26,18 @@ class ModuleController extends Controller {
 
 
     public function viewModule($module = 'home') {
-
         if(empty($module)) {
             abort(404);
         }
         if($module === 'home') {
-            $module = Module::with(['requiredModule', 'requiredModules'])->where('slug', $module)->first();
+            $module = Module::with(['requiredModule', 'requiredModules'])->where('template', $module)->first();
         }
 
         if(!$module->free && $this->auth->check() && !$this->auth->user()->paid) {
             abort(404);
         }
 
-        if($module->slug === 'home' && !$this->auth->check()) {
+        if($module->template === 'home' && !$this->auth->check()) {
             $moduleUser = false;
         } else if($this->auth->check()) {
             $moduleUser = $this->auth
@@ -58,7 +57,7 @@ class ModuleController extends Controller {
                 if(empty($requiredMod)) {
                     abort(404);
                 }
-                $requiredModules[$mod->slug] = $requiredMod->pivot;
+                $requiredModules[$mod->template] = $requiredMod->pivot;
             }
         }
 
@@ -108,16 +107,20 @@ class ModuleController extends Controller {
             $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first();
         }
 
+        $nextModule = Module::where('order', $module->order + 1)->first();
+
+
 
         $mobileDetect = new \Mobile_Detect();
 
 
-        return view('app.modules.'.$module->slug.'.index', [
-            'page' => $module->slug,
+        return view('app.modules.'.$module->template.'.index', [
+            'page' => $module->template,
             'module' => $module,
             'moduleUser' => (!empty($moduleUser) ? $moduleUser->pivot : false),
             'requiredModules' => $requiredModules,
-            'isMobile' => $mobileDetect->isTablet() || $mobileDetect->isMobile()
+            'isMobile' => $mobileDetect->isTablet() || $mobileDetect->isMobile(),
+            'nextModule' => $nextModule
             ]);
     }
 

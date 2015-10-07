@@ -64,7 +64,7 @@ gulp.task('livereload', function() {
 gulp.task('watch', function() {
     livereload.listen();
 
-    gulp.watch('./resources/assets/css/main.css', ['postcss']);
+    gulp.watch('./resources/assets/css/**/*.css', ['postcss']);
     gulp.watch('./public/css/main.css', ['livereload']);
 });
 
@@ -77,7 +77,7 @@ gulp.task('watchScripts', function() {
 });
 
 gulp.task('postcss', function() {
-    return gulp.src('resources/assets/css/main.css')
+    return gulp.src('resources/assets/css/**/*.css')
         .pipe(postcss([autoprefixer]))
         .pipe(gulp.dest('public/css/'));
 });

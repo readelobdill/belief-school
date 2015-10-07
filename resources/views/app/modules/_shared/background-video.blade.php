@@ -12,7 +12,7 @@
             {{$module->name}}
         </h1>
 
-        <div class="module-icon module-{{$module->slug}}"></div>
+        <div class="module-icon module-{{$module->template}}"></div>
     </div>
 
     <div class="next-section absol" data-next-section>

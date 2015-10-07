@@ -12,6 +12,8 @@
             <tr>
                 <th>Name</th>
                 <th>Slug</th>
+                <th>BG Video</th>
+                <th>Vimeo ID</th>
                 <th>Comments</th>
             </tr>
             </thead>
@@ -20,6 +22,8 @@
                 <tr data-id="{{$module->id}}">
                     <td>{{$module->name}}</td>
                     <td>{{$module->slug}}</td>
+                    <td>{{$module->video}}</td>
+                    <td><a target="_blank" href="https://vimeo.com/{{$module->intro_video}}">{{$module->intro_video}}</a></td>
                     <td><a href="{{route('admin.modules.comments', [$module->id])}}" class="btn btn-info btn-sm"><i class="fa fa-comment"></i> Comments</a></td>
                 </tr>
             @endforeach

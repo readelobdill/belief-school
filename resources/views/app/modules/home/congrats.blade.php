@@ -7,7 +7,7 @@
                 </h1>
                 <p>We are excited for you, and inspired by you!</p>
                 <div class="actions">
-                    <a href="{{route('modules.view', ['welcome'])}}" class="button">Let's get started</a>
+                    <a href="{{route('modules.view', [$nextModule->slug])}}" class="button">Let's get started</a>
                 </div>
             </div>
         </div>

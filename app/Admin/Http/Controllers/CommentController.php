@@ -46,8 +46,7 @@ class CommentController extends Controller {
     }
 
 
-    public function toggleSticky($id) {
-        $comment = Comment::find($id);
+    public function toggleSticky($comment) {
         if(!empty($comment)) {
             $comment->sticky = !$comment->sticky;
             $comment->save();

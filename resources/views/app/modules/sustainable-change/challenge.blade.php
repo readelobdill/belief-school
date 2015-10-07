@@ -33,13 +33,10 @@
             How did it make you feel to stick with your chosen option throughout your journey?
         </p>
 
-        <form action="">
-            <div class="form-row">
-                <textarea name="i_felt" placeholder="I felt..." name="feel" required maxlength="280"></textarea>
-            </div>
-            <div class="actions">
-                <button class="button">Save to Dashboard!</button>
-            </div>
-        </form>
+
+        <div class="actions">
+            <button class="button" data-next-section>Save to Dashboard!</button>
+        </div>
+
     </div>
 </div>

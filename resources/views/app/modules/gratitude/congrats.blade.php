@@ -52,7 +52,7 @@
                 @if($moduleUser->created_at->diffInHours() < config('belief.lockout'))
                     <p>Your next module will unlock in {{$moduleUser->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}.</p>
                 @else
-                    <p>Your <a href="{{route('modules.view', ['sustainable-change'])}}">next module</a> is ready and waiting for you.</p>
+                    <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}">next module</a> is ready and waiting for you.</p>
                 @endif
 
                 <p>Take a look at <a href="{{route('dashboard')}}#module-{{$module->slug}}">your dashboard</a> and see the progress on your amazing Belief School journey or share what you are grateful for in our supportive <a href="{{route('modules.forum',[$module->slug])}}">community forum.</a></p>

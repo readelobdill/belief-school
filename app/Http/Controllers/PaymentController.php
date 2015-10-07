@@ -52,18 +52,18 @@ class PaymentController extends Controller {
             $userId = intval($data->MerchantReference);
             $user = User::find($userId);
             if($user->paid) {
-                return redirect(route('modules.view', ['home']));
+                return redirect(route('home'));
             }
             $user->paid = true;
             $user->save();
 
-            $module = $user->modules()->where('slug', 'home')->first();
+            $module = $user->modules()->where('template', 'home')->first();
             $module->pivot->step++;
             $module->pivot->complete = 1;
             $module->pivot->completed_at = new \Carbon\Carbon();
             $module->pivot->save();
             \Session::flash('paid', true);
-            return redirect(route('modules.view', ['home']));
+            return redirect(route('home'));
         } else {
             dd($result);
             return 'bad';
