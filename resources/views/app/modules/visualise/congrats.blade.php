@@ -5,7 +5,7 @@
                 <h1 class="plain">
                     This is your amazing life!
                 </h1>
-                <p>Print this out. Frame it. Put it somewhere where you will look at it every day.  Focus on the things that remind you how much value you bring to the world!</p>
+                <p>Print this out. Save it as your screen saver. Put it somewhere where you will look at it every day. Focus on the things that remind you how much value you bring to the world!`</p>
 
                 <ul class="social">
                     <li><a class="fb"  data-share href="https://www.facebook.com/sharer/sharer.php?{{http_build_query(['u' => route('module.share', [$moduleUser->secret])])}}">Share on Facebook</a></li>
@@ -28,9 +28,9 @@
                 @else
                     <p>Your <a href="{{route('modules.view', ['fear-courage'])}}">next module</a> is ready and waiting for you.</p>
                 @endif
-                <p>
-                    In the meantime <a href="{{route('dashboard')}}#module-{{$module->slug}}">keep an eye on your dashboard</a> for the qualities submitted by your friends and <a href="{{route('modules.forum',[$module->slug])}}">check in the forum</a> to find support and chat to others about getting to know your amazing self.
-                </p>
+                <p>In the meantime <a href="{{route('dashboard')}}#module-{{$module->slug}}">keep an eye on your dashboard</a> for the qualities submitted by your friends.</p>
+
+                <p><a href="{{route('modules.forum',[$module->slug])}}">Join the forum</a> for support and chat to others about celebrating your beautiful life.</p>
             </div>
         </div>
     </div>
