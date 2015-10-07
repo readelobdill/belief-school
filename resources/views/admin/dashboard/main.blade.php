@@ -6,7 +6,6 @@
 @stop
 
 @section('content')
-    Hi
 
 
 @stop
