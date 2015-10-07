@@ -24,6 +24,14 @@ ol.privacy {
     li {
         list-style: decimal;
         margin-bottom: 12px;
+
+        ul {
+            padding: 20px;
+
+            li {
+                list-style: initial;
+            }
+        }
     }
 }
 
