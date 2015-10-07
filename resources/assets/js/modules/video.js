@@ -16,7 +16,7 @@ $(window).on('scroll', function() {
 
 function Video(video) {
     this.video = $(video)[0];
-    this.duration = 7.984;
+    this.duration = 5;
     this._isVideo = true;
     let videoReady = Q.defer();
     this.videoReady = videoReady.promise;
