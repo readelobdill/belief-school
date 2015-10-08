@@ -22,17 +22,14 @@
 
     .home-banner {
         z-index: 20;
-        max-width: 700px;
+        max-width: 500px;
         width: 100%;
         position: absolute;
         top: 50%; left: 50%;
         transform: translate3d(-50%,-50%, 0);
 
-        svg {
+        img {
             width: 100%;
-            path {
-                fill: white;
-            }
         }
 
         @include breakpoint($break-620) {
