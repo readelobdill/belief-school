@@ -76,9 +76,21 @@
     }
 }
 
-p.annotation {
-    color: #aeaeae;
-    text-align:center;
+
+
+.congrats-container {
+
+    p.annotation {
+        color: #aeaeae;
+        text-align: left;
+    }
+
+    .message {
+        color: #aeaeae;
+        p {
+            text-align: left;
+        }
+    }
 }
 
 @import "cloud";
