@@ -27,6 +27,9 @@ export default class YouToYou extends Text {
 
         this.section.on('click', '.letter-trigger', e => {
             this.section.find('.either-or').toggleClass('letter-chosen');
+            this.section.find('.letter-container').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => {
+                this.updateHeight();
+            })
             this.letterChosen = !this.letterChosen;
         })
     }
