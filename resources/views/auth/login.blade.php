@@ -23,7 +23,7 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             <div class="form-row">
-                                <input type="email" name="email" value="{{ old('email') }}">
+                                <input type="email" name="email" class="{{count($errors) > 0 ? 'has-content' : ''}}" value="{{ old('email') }}">
                                 <label>Email Address</label>
                             </div>
 
