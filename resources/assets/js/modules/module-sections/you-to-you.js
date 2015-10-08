@@ -18,10 +18,13 @@ export default class YouToYou extends Text {
             this.submit();
         });
         this.section.on('change', '.upload-video [name=video]', e => {
+            let $parent = $(e.currentTarget).closest('.video')
             if(e.currentTarget.files.length > 0) {
-                $(e.currentTarget).closest('.video').addClass('has-video');
+                $parent.addClass('has-video');
+                $parent.find('.upload-status').html('Selected: ' + e.currentTarget.files[0].name);
             } else {
-                $(e.currentTarget).closest('.video').removeClass('has-video');
+                $parent.removeClass('has-video');
+                $parent.find('.upload-status').html('Upload your video');
             }
         });
 
