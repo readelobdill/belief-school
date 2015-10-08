@@ -19,13 +19,14 @@ export default class QuestionsSection extends ModuleSection {
         }).get();
         this.questionNav = new QuestionNav(this.section.find('.question-nav'));
         this.currentQuestion = 0;
-        this.questions[this.currentQuestion].open();
-        this.questionNav.setQuestion(this.currentQuestion);
-        this.section.addClass('question-'+this.currentQuestion);
+
     }
     setup() {
         super.setup();
         $('body').css({minHeight: ''});
+        this.questions[this.currentQuestion].open();
+        this.questionNav.setQuestion(this.currentQuestion);
+        this.section.addClass('question-'+this.currentQuestion);
     }
 
     open() {
