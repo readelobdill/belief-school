@@ -2,22 +2,33 @@
     <div class="pre-complete congrats-container">
         <div class="inner">
             <div class="content">
-                <h1 class="plain">
-                    Congratulations, you've made it through!
+                <h1 class="title">
+                    <span data-arc="170">&middot; Congratulations &middot;</span>
+                    You've made it through!
                 </h1>
-                <p>You've now completed your journey through Belief School. Come back from time to time to get inspiration from your dashboard and encouragement from our forums. This is your supportive community,</p>
+
+                <p>You've completed your Belief School Journey. </p>
+
+                <p>Sit for a moment and enjoy the feeling of success and completion. You have earned it.</p>
+
+                <p>We have loved having you with us and hope you stay connected with our community. We feel confident since you are here that your time with us has been worthwhile. Please pay this forward to those you care about, so they too can benefit from understanding how truly special they are.</p>
+
                 <div class="actions">
-                    <a href="#" class="button" data-complete-module>Save to dashboard!</a>
+                    <a href="#" class="button small" data-complete-module>What's next?</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="post-complete congrats-container">
-
         <div class="inner">
             <div class="content">
-                <p>When heading over to your <a href="{{route('dashboard')}}">dashboard</a>, take a moment to save it out - send it to your trusted friends and family and share your journey.</p>
-                <p class="center"><a href="{{route('dashboard')}}#module-{{$module->slug}}" class="button">Check it out now!</a></p>
+                <p>You can now download your Manifesto from the Dashboard.</p>
+
+                <p>This is a collection of the work you have done and the discoveries you have made. Save this somewhere special and read it regularly. Self-belief comes from each of these elements, they reflect the essence of who you are.</p>
+
+                <div class="actions">
+                    <a href="{{route('dashboard')}}" class="button">Download my manifesto now</a>
+                </div>
             </div>
         </div>
     </div>
