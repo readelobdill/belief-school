@@ -4,7 +4,7 @@
             Beautiful you
         </h1>
 
-        <img src="{{route('modules.visualise.dreamboard')}}" alt="Beautiful You">
+        <img src="{{route('dreamboard.show', [$module->pivot->secret])}}" alt="Beautiful You">
 
         <ul class="social">
             <li><a class="fb"  data-share href="https://www.facebook.com/sharer/sharer.php?{{http_build_query(['u' => route('module.share', [$module->pivot->secret])])}}">Share on Facebook</a></li>

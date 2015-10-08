@@ -1,5 +1,5 @@
 module.exports = {
-    scrollDivider: 800,
+    scrollDivider: 600,
 
     defaultAnimationSpeed: .7,
 

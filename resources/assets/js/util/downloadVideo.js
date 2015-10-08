@@ -9,7 +9,6 @@ const defaultHeaders = {
 }
 
 export function downloadVideo(url) {
-    console.log(URL.createObjectURL);
     let deferred = Q.defer();
 
     let xhr = new XMLHttpRequest();

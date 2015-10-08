@@ -79,15 +79,15 @@
 
         <form action="" class="i-choose">
             <div class="form-row">
-                <input name="i_chose form-control" required placeholder="I choose to..." maxlength="140" />
+                <input type="text" name="i_chose_1" class="form-control" required placeholder="I choose to..." maxlength="140" />
             </div>
 
             <div class="form-row">
-                <input name="i_chose form-control" required placeholder="I choose to..." maxlength="140" />
+                <input type="text" name="i_chose_2" class="form-control" required placeholder="I choose to..." maxlength="140" />
             </div>
 
             <div class="form-row">
-                <input name="i_chose form-control" required placeholder="I choose to..." maxlength="140" />
+                <input type="text" name="i_chose_3" class="form-control" required placeholder="I choose to..." maxlength="140" />
             </div>
 
             <div class="actions">

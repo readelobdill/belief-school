@@ -17,11 +17,11 @@
             @foreach($modules as $key => $module)
                 @if($module->template === 'home' || $module->isUnlocked($modules[$key-1]))
                     @if($module->pivot && $module->pivot->complete)
-                        <li class="ico-{{ ( $module->slug) }} completed-module">
+                        <li class="ico-{{ ( $module->template) }} completed-module">
                             {{$module->name}}
                         </li>
                     @else
-                        <li class="ico-{{ ( $module->slug) }} current-module">
+                        <li class="ico-{{ ( $module->template) }} current-module">
                             <a  href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
                         </li>
                     @endif

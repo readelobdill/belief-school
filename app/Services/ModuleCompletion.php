@@ -28,7 +28,7 @@ class ModuleCompletion {
             ],
             ['letter']
         ],
-        '2-fields' => [['i_chose']],
+        '2-fields' => [['i_chose_1', 'i_chose_2', 'i_chose_3']],
         'you-to-you' => [['letter']]
 
     ];
