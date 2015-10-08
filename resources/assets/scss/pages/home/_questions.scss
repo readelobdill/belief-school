@@ -146,10 +146,12 @@
             right: 5px;
         }
     }
+}
 
-    &.question-0 {
-        .question-nav {
-            visibility: hidden;
-        }
+[data-current-section="0"],
+[data-current-section="1"],
+[data-current-section="2"] {
+    .question-nav {
+        visibility: hidden;
     }
 }
