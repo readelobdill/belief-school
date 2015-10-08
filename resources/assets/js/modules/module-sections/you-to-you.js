@@ -29,11 +29,16 @@ export default class YouToYou extends Text {
         });
 
         this.section.on('click', '.letter-trigger', e => {
+            let button = $(e.currentTarget);
             this.section.find('.either-or').toggleClass('letter-chosen');
             this.section.find('.letter-container').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => {
                 this.updateHeight();
             })
             this.letterChosen = !this.letterChosen;
+            let oldText = button.html();
+            let newText = button.data('alternate');
+            button.html(newText);
+            button.data('alternate', oldText);
         })
     }
 
