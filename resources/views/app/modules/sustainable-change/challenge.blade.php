@@ -5,37 +5,34 @@
             {{ $module->name }}
         </h1>
 
-        <p>
-            If you have stuck with this program and played hard out with each of the exercises you will have been on a bit of a roller coaster of emotions. Check your arms and legs, are they still there, no knife wounds, no missing bits!!
-        </p>
+        <p>Belief School is all about your experience. You have now seen many of the great qualities you possess – felt what it is like to face your fear, to contribute to others, and focus on the good around you.</p>
 
-        <h2 class="title">You have now had a taste of the<br /> six steps to Self Belief:</h2>
+        <p>It’s now up to you to incorporate these principles into your daily life. This won’t happen automatically, you’ll have to make a conscious effort to develop these aspects of yourself.</p>
 
-        <ol class="multiple-sustain">
-            <li>Celebrating your strengths</li>
-            <li>Creating self-affirming words – focusing on what you want</li>
-            <li>Surrounding yourself with the things that lift you up and draw you forward</li>
-            <li>Facing your fears – discovering the power of courage</li>
-            <li>Giving more</li>
-            <li>Being Grateful</li>
-        </ol>
+        <p>This process, starts with <b>Observation</b>, which you have just done.  </p>
 
-        <p class="center">
-            <strong>Throughout your Belief School journey you chose to demonstrate to yourself that you can follow through.</strong>
-        </p>
+        <p>Then you <b>Imitate</b> the new behaviour. This may seem unnatural at first. In fact you may feel like a fake, this is totally normal.  </p>
 
-        <blockquote class="center you-chose">
-            <span>You chose:</span>
-            <em>“{{ $requiredModules['welcome']->data[0]->challenge }}”</em>
-        </blockquote>
+        <p>As you <b>Repeat</b> your new behaviour over and over, it starts to feel familiar. <b>Repetition and only repetition will create results.</b></p>
 
-        <p class="center">
-            How did it make you feel to stick with your chosen option throughout your journey?
-        </p>
+        <p>The results you create give you the evidence you need to build your belief. You have now <b>Internalised</b> this practice – it’s part of who you are.</p>
 
+        <p>Choose to be a perpetual student of life, look to the people who have what you want and be humble enough to always learn.</p>
+
+        <p>We have chosen these two movies for you to watch, both with very strong, important messages. If you have seen them, watch them again.</p>
+
+        <h2 class="title">Watch These</h2>
+
+        <div class="your-video">
+            <iframe src="https://www.youtube.com/embed/iCvmsMzlF7o" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="your-video">
+            <iframe src="https://www.youtube.com/embed/XkziAM_ZyDM" frameborder="0" allowfullscreen></iframe>
+        </div>
 
         <div class="actions">
-            <button class="button" data-next-section>Save to Dashboard!</button>
+            <button class="button" data-next-section>Continue</button>
         </div>
 
     </div>
