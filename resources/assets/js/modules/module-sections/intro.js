@@ -28,6 +28,7 @@ export default class IntroSection extends ModuleSection {
         return deferred.promise.then(() => {
             return this.video.videoReady
         }).then(() => {
+            $('body').css({minHeight: this.video.videoHeight()});
             const t = new TimelineLite();
             t.add(this.video.scrollTo(0.5,3.5));
 
@@ -58,7 +59,7 @@ export default class IntroSection extends ModuleSection {
 
     setup() {
         super.setup();
-        $('body').css({minHeight: this.video.videoHeight()});
+
     }
     teardown() {
         super.teardown();

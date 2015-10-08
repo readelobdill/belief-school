@@ -48,6 +48,13 @@ function Video(video) {
 
 
     this.videoReady.then(() => {
+        let defer = Q.defer();
+        this.video.addEventListener('loadedmetadata', response => {
+            defer.resolve();
+        })
+        return defer.promise;
+    }).then(() => {
+        this.duration = this.video.duration;
         this.updatePosition();
         this.videoHasLoaded();
     }).catch(error => {
