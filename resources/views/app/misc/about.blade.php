@@ -87,7 +87,7 @@
                     </div>
                     <div class="why-you-need__node">
                         <div class="icon heart"></div>
-                        <p>It will change your life – <a class="low-key" href="{{route('privacy-terms') }}">guaranteed.</a></p>
+                        <p>It will change your life – <a class="low-key" href="{{route('privacy-terms') }}#guarantee">guaranteed.</a></p>
                     </div>
                 </div>
             </div>

@@ -44,7 +44,7 @@
                 <p>If you add material to the Site, you represent and warrant that you have the necessary rights or licences to add the material and that uploading the material is not contrary to any laws of New Zealand.</p>
             </div>
 
-            <div class="content">
+            <div class="content" id="guarantee">
                 <h1 class="plain">Purchasing Goods or Services on the Site</h1>
 
                 <p>You may offer to purchase goods or services described on this Site for the price specified on this Site.  Your order is subject to any Terms and Conditions provided to you at the time of sale, or described to you at the time of purchase.</p>
@@ -63,7 +63,7 @@
 
                 <p>Where legislation implies any condition or warranty, and that legislation prohibits us from excluding or modifying the application of, or our liability under, any such condition or warranty, that condition or warranty will be deemed included but our liability will be limited for a breach of that condition or warranty to one or more of the following:</p>
 
-                <ul class="the-law">
+                <ul class="list--law">
                     <li>if the breach relates to goods:
                         <ul>
                             <li>replacement of the goods or the supply of equivalent goods;</li>
@@ -94,7 +94,7 @@
             <div class="content">
                 <h1 class="plain">Privacy Statement</h1>
 
-                <p>The Privacy Statement [[-please anchor link to the Privacy Policy section below]] available on our home page governs the collection, use and disclosure of your personal information by us.  The Privacy Statement [[please anchor link to the Privacy Policy section below]] forms a part of these terms of use.</p>
+                <p>The <a href="#privacy">Privacy Statement</a> available on our home page governs the collection, use and disclosure of your personal information by us.  The <a href="#privacy">Privacy Statement</a> forms a part of these terms of use.</p>
             </div>
 
             <div class="content">
@@ -130,15 +130,20 @@
                 <h1 class="plain">Contacting Us</h1>
 
                 <p>If you have any questions or concerns in relation to the Site or these terms of use, please contact us at:</p>
-                <p><a href="mailto:contact@beliefschool.com">contact@beliefschool.com</a></p>
-                <p> <b>Registered office/address for service: </b><br />
-                    Belief School Limited<br />
-                    c/o Deloitte <br />
-                    18 Anzac Street, Suite 2, Level 2 <br />
-                    Takapuna <br />
-                    Auckland, 0622 <br />
-                    New Zealand
-                </p>
+
+               <ul class="list--simple">
+                    <li>Phone: [09 215 9322]</li>
+                    <li>Email: [paulagosney@xtra.co.nz]</li>
+                    <li>Address: [17 Poronui Street, Mt Eden, Auckland 1024]</li>
+               </ul>
+            </div>
+
+            <div class="dots"></div>
+
+            <div class="content" id="privacy">
+                <h1 class="plain">Privacy policy</h1>
+
+                <p class="center"><i>Copy to come</i></p>
             </div>
 
 
