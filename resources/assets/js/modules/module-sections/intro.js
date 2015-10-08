@@ -29,7 +29,7 @@ export default class IntroSection extends ModuleSection {
             return this.video.videoReady
         }).then(() => {
             const t = new TimelineLite();
-            t.add(this.video.scrollTo(0.5,2.5));
+            t.add(this.video.scrollTo(0.5,3.5));
 
         });
 
