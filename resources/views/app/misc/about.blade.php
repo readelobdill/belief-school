@@ -153,7 +153,7 @@
                             </div>
                             <div class="what-you-get__node">
                                 <div class="icon forum"></div>
-                                <p>Access to the <b>Belief School community</b> through our Forum. Paula Gosney the founder, and her team, will be available to your throughout your journey for guidance and support.</p>
+                                <p>Access to the <b>Belief School community</b><br /> through our <b>Forum</b>. <br />Paula Gosney the founder, and her team, will be available to your throughout your journey for guidance and support.</p>
                             </div>
                         </div>
                     </div>

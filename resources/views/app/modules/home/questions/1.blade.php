@@ -5,7 +5,9 @@
             Belief School<br>
             journey starts here
         </h1>
-        <p>What do you know about yourself?<br> Answer below and find out&hellip;</p>
+
+        <p>To help you get some clarity we <br >are going to ask you a few questions.</p>
+
         <div class="next-question absol down-arrow">
             @include('app/partials/icons/down-arrow')
         </div>

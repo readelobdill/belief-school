@@ -4,8 +4,8 @@
             Understanding the importance of your thoughts
         </h1>
 
-        <p>Earlier on, you said the reason you didn’t have the one thing you wanted in your life was because <em>“{{ $requiredModules['home']->data->{'1'}->why_not }}”</em></p>
-        <p>Whatever the answer, we are pretty sure it’s an obstacle that can be overcome. The first step to creating change is becoming aware of what we say to ourselves about ourselves. We need to change our limiting beliefs.</p>
+        <p>Earlier on, you said the reason you didn’t have the one thing you wanted in your life was because <b><em>“{{ $requiredModules['home']->data->{'1'}->why_not }}”</em></b></p>
+        <p>Whatever your answer, we are pretty sure it’s an obstacle that can be overcome. The first step to creating change is becoming aware of what we say to ourselves about ourselves. We need to change our limiting beliefs.</p>
 
         <ul class="accordion single">
             <li>
@@ -17,7 +17,7 @@
                     </div>
                 </h2>
                 <div class="answer">
-                    <p>These are beliefs that we hold about ourselves to describe who we are. They will have either been given to us by someone else, or we have created them based on what we have experience in our life so far. A belief can be positive like, “I am a great dancer”, or limiting like:</p>
+                    <p>These are beliefs that we hold about ourselves to describe who we are. They will either have been given to us by someone else, or we created them based on what we have experienced in our life so far. A belief can be positive like, “I am a great dancer”, or limiting like:</p>
                     <ul class="u-quote-list">
                         <li>“I am too old”</li>
                         <li>“Men don’t do that”</li>
@@ -30,7 +30,8 @@
             </li>
         </ul>
 
-        <p>Take a moment and think about some of the statements you use to describe yourself that may be holding you back.  Write in your journal to explore this, or go to the Forum for more clarity. </p>
+        <p>Take a moment and think about some of the statements you use to describe yourself that may be holding you back.  Write in your journal to explore this, or go to the Forum for more clarity.</p>
+
         <p class="center"><b>Choose three and write them here:</b></p>
 
         <form action="" class="limiting-beliefs">
@@ -66,7 +67,5 @@
                 </button>
             </div>
         </form>
-
-
     </div>
 </div>

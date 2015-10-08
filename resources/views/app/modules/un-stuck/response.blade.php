@@ -2,10 +2,14 @@
     <div class="content">
         <h1 class="plain">Turning the Negative Chatter Off</h1>
 
-        <p>Good job getting them down, they don’t need to be perfect. This is an exercise teaching your how to recognise the negative chatter and turn it into thoughts that will serve you.</p>
+        <p>Good job getting them down, they don’t need to be perfect. This is an exercise teaching you how to recognise the negative chatter and turn it into thoughts that will serve you.</p>
+
         <h2 class="title">Affirmations</h2>
-        <p>Affirmations are powerful, you may believe they’re a bit kooky, but if you think about the logic behind them they make perfect sense.  Our thoughts create our actions, our actions reinforce our beliefs, which define our choices and create our lives.</p>
-        <p><strong>The purpose of this exercise is to show you how to turn your limiting beliefs into words that will open up more possibilities for you.</strong></p>
+
+        <p>Affirmations are powerful, you may believe they’re a bit kooky but, if you think about the logic behind them they make perfect sense. Our thoughts create our actions, our actions reinforce our beliefs, which define our choices and create our lives.</p>
+
+        <p><b>The purpose of this exercise is to show you how to turn your limiting beliefs into words that will open up more possibilities for you.</b></p>
+
         <p>You do this by crafting a positive statement in response to the limiting belief. This must be 100% positive and stated in the present, like it has already been achieved.</p>
 
         <ul class="accordion single">
@@ -23,9 +27,9 @@
                         <li><em>“I am amazing with my kids my first response is gentle.”</em></li>
                         <li><em>“I’m uncomfortable at parties”</em></li>
                         <li><em>“I love going to parties and always enjoy meeting new people”</em></li>
-                        <li>No Negativity at all, no but’s, maybe’s or I’m going to try!</li>
-                        <li>If you are thinking about a goal, maybe a a business deal or a sports event. You would write something like this:</li>
-                        <li>I am so happy it’s July 16th I won my tournament, it feels awesome and I am proud of myself.</li>
+                        <li>No negativity at all, no buts, maybes or saying I’m going to try!</li>
+                        <li>If you are thinking about a goal, maybe a business deal or a sports event, you would write something like this:</li>
+                        <li>I am so happy – it’s July 16th, I won my tournament, it feels awesome and I am proud of myself.</li>
                         <li><a href="http://beliefschool.com/how-to-find-blue-elephants/" target="_blank">Read more</a> on how this works here.</li>
                     </ul>
                 </div>
@@ -38,14 +42,15 @@
             <li>Say it as often as you can, say it out loud and with feeling</li>
             <li>Allow yourself to feel the emotion of your success</li>
             <li>Create a visual picture in your mind</li>
-            <li>Stick them in visible places, on your mirror, the fridge, as your screen saver.</li>
-            <li>When you catch yourself dwelling on a limiting belief, immediately change it to the positive one.</li>
-            <li>Feel proud of this work, you are in the process of reprogramming your mind.</li>
+            <li>Stick them in visible places, on your mirror, the fridge, as your screen saver</li>
+            <li>When you catch yourself dwelling on a limiting belief, immediately change it to the positive affirmation</li>
+            <li>Feel proud of this work, you are in the process of reprogramming your mind</li>
         </ol>
+
         <h2 class="title">Important Truth</h2>
-        <blockquote>
+        <blockquote class="center">
            <strong>You create what you focus on.<br />
-            If you are focusing on the lack of something, you will create this also.</strong>
+            If you are focusing on the lack of something, you will create more of this.</strong>
         </blockquote>
 
         <ul class="accordion single">
@@ -58,7 +63,7 @@
                     </div>
                 </h2>
                 <div class="answer">
-                    <ol class="quote-list">
+                    <ol class="numlist--simple">
                         <li>Surround your visual and audio space with things that give you joy and motivate you. Images that inspire you and fill you with happiness. Fill your world with music, podcasts and reading material that is makes you feel good. When your mind is idle these are the things that will trigger thoughts and emotions – you get to choose what they are.</li>
                         <li>When negative thoughts or limiting beliefs start to crowd in, immediately start doing something that occupies your mind. This may be exercise, music, knitting, reading, washing the dog, or simply shooting hoops.</li>
                         <li>Our minds are great at solving problems, but when they are left idle, they can start causing trouble – give your mind a job, then it is less likely to dwell on negative thoughts.</li>

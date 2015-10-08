@@ -6,7 +6,7 @@
                     There is no better feeling than the one we get when we make someone else's life better.
                 </h1>
                 <p>Choose to make this a daily habit.</p>
-                <p>You'll have some lovely stories from this module, please share them in the Forum, they will be a gift for everyone.</p>
+                <p>You'll have some lovely stories from this module, please share them in the <a href="{{route('modules.view', ['gratitude'])}}">Forum</a>, they will be a gift for everyone.</p>
                 <div class="actions">
                     <a href="#" class="button" data-complete-module>What's next?</a>
                 </div>
@@ -21,7 +21,7 @@
                     Congratulations.<br>
                     The world is a better place thanks to you.
                 </h1>
-                <p>Everything we collect on your <a href="{{route('dashboard')}}#module-{{$module->slug}}">Dashboard</a> becomes part of your Personal Manifesto, our gift to you on completion of this program.</p>
+                <p>Click through to your <a href="{{route('dashboard')}}#module-{{$module->slug}}">Dashboard</a> to enjoy your journey.</p>
 
                 <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}">next module</a> is ready and waiting for you.</p>
             </div>
