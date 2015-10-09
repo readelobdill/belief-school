@@ -221,12 +221,24 @@
 [data-page="you-to-you"] {
     .congrats-section {
         >.inner {
-            background-color: rgba($lightRed, 0.98) !important;
-            color: $white;
-            border: 7px double rgba($white, 0.9);
+            background: url('../img/final-congrats-image.jpg') no-repeat center center !important;
+
+
+            .content {
+                max-width: 620px;
+                background: rgba($white, 0.9);
+                color: $black;
+                padding: 30px $gutter;
+
+                // @include breakpoint($break-620 ) {
+                //     background: transparent;
+                // }
+            }
 
             .title {
                 color: $white;
+                margin: auto;
+                color: $black;
 
                 &:after {
                     display: none;
@@ -242,12 +254,17 @@
                 }
             }
 
-            p:first-of-type {
-                padding-top: 30px;
+            p {
+                font-weight: 500;
+                margin: auto auto 24px auto;
+                max-width: 445px;
+
+                &:first-of-type {
+                    padding-top: 60px;
+                }
             }
 
             .button {
-                border: 1px solid $white;
                 &.small {
                     padding: 12px;
                 }
