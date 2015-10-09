@@ -8,24 +8,49 @@
                         When we act courageously we create possibilities.
                     </h1>
 
-                    <p>Having trouble opening the email template?</p>
+                    <ul class="accordion single">
+                        <li>
+                            <h2>
+                                Having trouble opening the email template?
+                                <div class="toggle">
+                                    @include('app/partials/icons/collapse')
+                                    @include('app/partials/icons/expand')
+                                </div>
+                            </h2>
+                            <div class="answer left">
+                                <p>Copy and paste the recommended copy below and this link into your own email and send.</p>
 
-                    <p>Copy and paste the recommended copy below and this link into your own email and send.</p>
-                    <p class="annotation"><strong>{{route('tagcloud', [$moduleUser->secret])}}</strong></p>
+                                <p class="copy-link"><strong>{{route('tagcloud', [$moduleUser->secret])}}</strong></p>
 
-                    <div class="message">
-                        <p>Dear Friend,</p>
+                                <div class="email-client">
+                                    <div class="header">
+                                        <div class="close"></div>
+                                        <div class="minimize"></div>
+                                        <div class="maxamize"></div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="details-row">To</div>
+                                        <div class="cc-row">Cc</div>
+                                        <div class="subject-row">Subject</div>
+                                    </div>
+                                    <div class="message">
+                                        <p>Dear Friend,</p>
 
-                        <p>{{Auth::user()->first_name}} is completing an online program called Belief School. It is a personal development program helping them build belief in themselves. No, this is not spam, please text if you need to check.</p>
+                                        <p>{{Auth::user()->first_name}} is completing an online program called Belief School. It is a personal development program helping them build belief in themselves. No, this is not spam, please text if you need to check.</p>
 
-                        <p>{{Auth::user()->first_name}} has stepped out of their comfort zone and sent you this email because they value your opinion and trust that you will answer the simple question honestly and with their best interest at heart.</p>
+                                        <p>{{Auth::user()->first_name}} has stepped out of their comfort zone and sent you this email because they value your opinion and trust that you will answer the simple question honestly and with their best interest at heart.</p>
 
-                        <p>Clicking on the link will take you to a page on our Belief School website, you’ll be asked to input three words that describe {{Auth::user()->first_name}}’s best qualities. The answers will be delivered to {{Auth::user()->first_name}} anonymously, mixed up with responses from friends, family and colleagues.</p>
+                                        <p>Clicking on the link will take you to a page on our Belief School website, you’ll be asked to input three words that describe {{Auth::user()->first_name}}’s best qualities. The answers will be delivered to {{Auth::user()->first_name}} anonymously, mixed up with responses from friends, family and colleagues.</p>
 
-                        <p><b>This will only take 1 minute yet will have a BIG impact.</b> Thanks for taking the time, it really does make a difference.</p>
+                                        <p><b>This will only take 1 minute yet will have a BIG impact.</b> Thanks for taking the time, it really does make a difference.</p>
 
-                        <p>Best regards <br>Belief School <br></p>
-                    </div>
+                                        <p>Best regards <br>Belief School <br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
 
                     <p>As your responses come in they will appear on your <a href="{{route('dashboard')}}">Dashboard</a>, building a wonderful picture of the greatness others see in you.</p>
                     <div class="actions">

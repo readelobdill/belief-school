@@ -575,6 +575,10 @@ ul.actions {
                 content: "\e621";
                 font-size: 16px;
                 right: 13px;
+
+                @include breakpoint($break-620) {
+                    top: -7px;
+                }
             }
         }
     }

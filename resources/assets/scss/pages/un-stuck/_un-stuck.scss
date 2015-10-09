@@ -172,10 +172,23 @@
     }
 
     .the-affirmation {
+        .i-felt {
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 10px;
+
+            @include breakpoint($brk-medium) {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -33px;
+            }
+        }
+
         label {
             position: absolute;
-            top: 6px;
-            left: 10px;
+            top: 44px;
+            left: 11px;
         }
 
         .icon {
