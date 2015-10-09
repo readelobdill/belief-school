@@ -42,10 +42,15 @@ class ModuleClient extends EventEmitter {
             return response;
         })
     }
-    addImage(url, image, imageName) {
+    addImage(url, image, imageName, dimensions) {
         const data = new FormData();
         data.append('image', image);
         data.append('name', imageName);
+        data.append('width', dimensions.w);
+        data.append('height', dimensions.h);
+        data.append('x', dimensions.x);
+        data.append('y', dimensions.y);
+
         return uploadWithProgress(url, data).then(response => JSON.parse(response.responseText));
     }
 

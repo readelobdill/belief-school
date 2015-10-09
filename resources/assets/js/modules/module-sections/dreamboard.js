@@ -4,7 +4,8 @@ import Text from './text';
 import client from 'sources/ModuleClient';
 import TweenMax from "gsap/src/uncompressed/TweenMax";
 import TimelineLite from "gsap/src/uncompressed/TimelineLite";
-
+import {ImageCrop} from 'util/cropper';
+import 'remodal';
 
 export default class Dreamboard extends Text {
 
@@ -14,7 +15,8 @@ export default class Dreamboard extends Text {
         super.setupEventListeners();
         this.section.on('change', '.image input', (e) => {
             if(e.currentTarget.files.length > 0) {
-                this.submitImage(e.currentTarget.files[0], $(e.currentTarget).attr('name'));
+                //this.submitImage(e.currentTarget.files[0], $(e.currentTarget).attr('name'));
+                this.showCropper(e.currentTarget.files[0],$(e.currentTarget).attr('name'));
 
             }
         });
@@ -25,12 +27,12 @@ export default class Dreamboard extends Text {
         });
     }
 
-    submitImage(image, imageName) {
+    submitImage(image, imageName, dimensions) {
         let url = this.module.getUpdateUrl();
         let $image = this.section.find('.'+imageName);
         let $loader = $image.find('.loader');
         $image.addClass('is-loading')
-        client.addImage(url, image, imageName).then((response) => {
+        client.addImage(url, image, imageName, dimensions).then((response) => {
             $image.removeClass('is-loading').addClass('has-image').find('img').attr('src', response.imageUrl);
             this.toggleSubmit();
         }, false, (progress) => {
@@ -65,6 +67,51 @@ export default class Dreamboard extends Text {
         timeline.to(this.section.find('.overlay'), 0.3, {autoAlpha: 1}, 0);
         timeline.to(this.section.find('.modal'), 0.3, {autoAlpha: 1}, 0);
         timeline.to(this.section.find('.social'), 0.3, {autoAlpha: 1}, 0);
+
+    }
+
+    showCropper(file, name) {
+        let url = URL.createObjectURL(file);
+        let $modal = $('<div></div>')
+            .addClass('remodal')
+            .addClass('cropper-modal');
+        let cropper;
+        let $close = $('<button></button>').addClass('remodal-close');
+        let $done = $('<button>Done</button>').addClass('done-button');
+        $modal.append($close);
+        $modal.append($done);
+
+        $('body').append($modal);
+
+
+        let api = $modal.remodal();
+
+
+        let image = new Image();
+        $(image).one('load', e => {
+            $modal.one('opened', e => {
+                cropper = new ImageCrop(image, $modal);
+            });
+        });
+
+        api.open();
+
+        image.src = url;
+
+
+        $modal.on('closed', e => {
+            cropper.destroy();
+        });
+
+        $close.on('click', e => {
+            api.close();
+        });
+        $done.on('click', e => {
+            let data = cropper.getData();
+            api.close();
+            this.submitImage(file, name, data);
+        })
+
 
     }
 }
