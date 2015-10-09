@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Models\Module;
 use App\Models\ModuleUser;
 use App\Services\CommentRenderer;
+use App\Services\Cropper;
 use App\Services\DreamboardRenderer;
 use App\Services\ModuleCompletion;
 use Carbon\Carbon;
@@ -183,8 +184,8 @@ class ModuleController extends Controller {
                     $file = $this->request->file('image');
                     $fileName = Str::random(32).'.'.$file->guessExtension();
                     $file->move(public_path('uploads/dreamboard/'.$this->auth->user()->id), $fileName);
-                    $cropper = new CropBalanced(public_path('uploads/dreamboard/'.$this->auth->user()->id.'/'.$fileName));
-                    $croppedImage = $cropper->resizeAndCrop(390,258);
+                    $cropper = new Cropper(public_path('uploads/dreamboard/'.$this->auth->user()->id.'/'.$fileName));
+                    $croppedImage = $cropper->crop($this->request->input('x'), $this->request->input('y'), $this->request->input('width'), $this->request->input('height'));
                     $croppedImage->writeImage(public_path('uploads/dreamboard/'.$this->auth->user()->id.'/'.$fileName));
                     $moduleUser->addImage($fileName, $this->request->input('name'));
                 }
