@@ -7,12 +7,7 @@
         <ul class="experience">
             @foreach($module->pivot->data[0] as $key => $experience)
                 <li>
-                     @if ($key === 'diary_1' )
-                        <li> <span>I am grateful for...</span>{{ $experience }}
-                     @else
-
-                        <span>I am...</span> {{ $experience }}
-                     @endif
+                    <span>I am grateful for... </span> {{ $experience }}
                 </li>
             @endforeach
         </ul>

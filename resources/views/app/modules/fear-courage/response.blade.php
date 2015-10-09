@@ -50,12 +50,12 @@
                         <span class="number">1 .</span>
                         <strong>I said</strong>
                         <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-1'} : '' }}"</p>
-                        <strong>Once I did this I felt&hellip;</strong>
                     </label>
+
                     <div class="the-affirmation">
+                        <div class="i-felt"><strong>Once I did this I felt&hellip;</strong></div>
                         <textarea name="response-1" id="response-1" required></textarea>
                         <label class="number" for="response-1">1 .</label>
-
                     </div>
                 </div>
                 <div class="belief">
@@ -63,12 +63,12 @@
                         <span class="number">2 .</span>
                         <strong>I said</strong>
                         <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-2'} : '' }}"</p>
-                        <strong>Once I did this I felt&hellip;</strong>
                     </label>
+
                     <div class="the-affirmation">
+                        <div class="i-felt"><strong>Once I did this I felt&hellip;</strong></div>
                         <textarea name="response-2" id="response-2" required></textarea>
                         <label class="number" for="response-2">2 .</label>
-
                     </div>
                 </div>
                 <div class="belief">
@@ -76,12 +76,12 @@
                         <span class="number">3 .</span>
                         <strong>I said</strong>
                         <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-3'} : '' }}"</p>
-                        <strong>Once I did this I felt&hellip;</strong>
                     </label>
+
                     <div class="the-affirmation">
+                        <div class="i-felt"><strong>Once I did this I felt&hellip;</strong></div>
                         <textarea name="response-3" id="response-3" required></textarea>
                         <label class="number" for="response-3">3 .</label>
-
                     </div>
                 </div>
             </div>

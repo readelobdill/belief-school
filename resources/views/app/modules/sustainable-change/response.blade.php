@@ -78,17 +78,19 @@
         <p>Write these as an affirmation in the space below.</p>
 
         <form action="" class="i-choose">
-            <div class="form-row">
-                <input type="text" name="i_chose_1" class="form-control" required placeholder="I choose to..." maxlength="140" />
-            </div>
+            <ul>
+                <li class="form-row">
+                    <input type="text" name="i_chose_1" class="form-control" required placeholder="I choose to..." maxlength="140" />
+                </li>
 
-            <div class="form-row">
-                <input type="text" name="i_chose_2" class="form-control" required placeholder="I choose to..." maxlength="140" />
-            </div>
+                <li class="form-row">
+                    <input type="text" name="i_chose_2" class="form-control" required placeholder="I choose to..." maxlength="140" />
+                </li>
 
-            <div class="form-row">
-                <input type="text" name="i_chose_3" class="form-control" required placeholder="I choose to..." maxlength="140" />
-            </div>
+                <li class="form-row">
+                    <input type="text" name="i_chose_3" class="form-control" required placeholder="I choose to..." maxlength="140" />
+                </li>
+            </ul>
 
             <div class="actions">
                 <button class="button">Save to my dashboard</button>

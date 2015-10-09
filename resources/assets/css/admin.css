@@ -3,6 +3,11 @@
   display: none;
 }
 
+/* line 74, ../scss/core/_settings.scss */
+.grey {
+  color: #e6e6e6;
+}
+
 /* line 1, ../scss/forum/_comment.scss */
 ul.comments-list {
   margin-left: 0;

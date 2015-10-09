@@ -13,11 +13,13 @@
                         Belief School Dashboard
                     </h1>
                     <p class="center">
-                        This dashboard is your Manifesto. Track your Belief School journey as you progress through the course and check in regularly.
+                        Your dashboard tracks your Belief School journey as you progress through the course, check in regularly to enjoy the great work you are doing.
                     </p>
                     <p class="center">
-                        At the completion of Belief School you will be able to download your beautiful manifesto below, as a reminder of your journey.
+                        The content of the dashboard becomes your manifesto. At the completion of Belief School you will be able to download it and cherish this beautiful reminder of your journey.
                     </p>
+                    <p class="center"><i class="grey">TIP! Make sure you have the checkbox for ‘print background graphics’ selected in the Print dialogue box. Your manifesto will have our beautiful ink background!</i></p>
+
                     <p class="center">
                         <a class="button small {{$modules->last()->pivot && $modules->last()->pivot->complete ? '' : 'is-disabled'}}" {{$modules->last()->pivot && $modules->last()->pivot->complete ? 'data-print' : ''}}>Download manifesto</a>
                     </p>

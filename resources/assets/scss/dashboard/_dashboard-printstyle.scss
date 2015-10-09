@@ -6,15 +6,6 @@
    Print styles
    ========================================================================== */
 
-@media print and (color) {
-   // * {
-   //    -webkit-print-color-adjust: exact;
-   //    print-color-adjust: exact;
-   // }
-}
-
-//inset 0 0 10px 70px #FA0303
-
 @page {
     size: A4 portrait;
     margin: 0cm;
@@ -102,6 +93,10 @@
     .button,
     .social {
         display: none !important;
+    }
+
+    #module-creating-clarity {
+        display: none;
     }
 
     .dashboard-module,
