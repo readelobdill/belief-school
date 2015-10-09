@@ -306,6 +306,7 @@ html.remodal-is-locked {
         bottom:0;
         right: 0;
         z-index: 20;
+        @extend .button;
     }
 }
 
