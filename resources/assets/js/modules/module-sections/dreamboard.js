@@ -16,7 +16,7 @@ export default class Dreamboard extends Text {
         this.section.on('change', '.image input', (e) => {
             if(e.currentTarget.files.length > 0) {
                 //this.submitImage(e.currentTarget.files[0], $(e.currentTarget).attr('name'));
-                this.showCropper(e.currentTarget.files[0],$(e.currentTarget).attr('name'));
+                this.showCropper(e.currentTarget.files[0],$(e.currentTarget).attr('name'), e.currentTarget);
 
             }
         });
@@ -70,7 +70,7 @@ export default class Dreamboard extends Text {
 
     }
 
-    showCropper(file, name) {
+    showCropper(file, name, input) {
         let url = URL.createObjectURL(file);
         let $modal = $('<div></div>')
             .addClass('remodal')
@@ -101,6 +101,8 @@ export default class Dreamboard extends Text {
 
         $modal.on('closed', e => {
             cropper.destroy();
+            api.destroy();
+            $(input).replaceWith($(input).clone());
         });
 
         $close.on('click', e => {
