@@ -11,7 +11,7 @@ export function ImageCrop(img, target){
         canResize = false,
         start = {x:0,y:0};
 
-    var $container = $('<div class="crop-container"><div class="crop-selector"><div class="crop-shade shade-top"></div><div class="crop-shade shade-bottom"></div><div class="crop-shade shade-left"></div><div class="crop-shade shade-right"></div><div class="crop-resize"></div></div></div>');
+    var $container = $('<div class="crop-container"><div class="crop-selector"><div class="crop-selector-inner"></div><div class="crop-shade shade-top"></div><div class="crop-shade shade-bottom"></div><div class="crop-shade shade-left"></div><div class="crop-shade shade-right"></div><div class="crop-resize"><div class="crop-resize-inner"></div></div></div></div>');
     let $cropSelector = $container.find('.crop-selector');
     let $cropResize = $container.find('.crop-resize');
     let $shadeTop = $container.find('.shade-top');
@@ -25,8 +25,8 @@ export function ImageCrop(img, target){
 
     function shade(w,h){
         $container.find('.crop-shade').css({
-            position:'absolute',
-            background:'rgba(0,0,0,0.5)'
+            position:'absolute'//,
+            //background:'rgba(0,0,0,0.5)'
         });
         $container.find('.shade-top').css({
             bottom:'100%',
@@ -44,13 +44,13 @@ export function ImageCrop(img, target){
             right:'100%',
             height:h+'px',
             width:tw+'px',
-            top:0
+            top: 0
         });
         $container.find('.shade-right').css({
             left:'100%',
             height:h+'px',
             width:tw+'px',
-            top:0
+            top: 0
         });
     }
 
@@ -91,9 +91,7 @@ export function ImageCrop(img, target){
             width:sw+'px',
             height:sh+'px',
             left:sx+'px',
-            top:sy+'px',
-            border:'1px solid blue',
-            position:'absolute'
+            top:sy+'px'
         })
 
         currentData = {x:sx, y:sy, w:sw, h:sh};
@@ -105,15 +103,6 @@ export function ImageCrop(img, target){
     $img.css({
         width:'100%',
         height:'100%'
-    });
-
-    $cropResize.css({
-        width:'40px',
-        height:'40px',
-        position:'absolute',
-        bottom:'0',
-        right:'0',
-        background:'green'
     });
 
     target.append($container);
@@ -134,7 +123,6 @@ export function ImageCrop(img, target){
             height:currentData.h+'px',
             left:moveX+'px',
             top:moveY+'px',
-            border:'1px solid blue',
             position:'absolute'
         })
     };

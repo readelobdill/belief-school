@@ -1,0 +1,53 @@
+.cropper-modal.remodal {
+    background: transparent;
+}
+
+.crop-selector {
+    position: absolute;
+    cursor: move;
+    border: 2px solid white;
+    box-sizing: content-box;
+
+    // .crop-selector-inner { //leave if we want dashed border
+    //     position: relative;
+    //     box-sizing: content-box;
+    //     border: 3px dashed $lightRed;
+    //     z-index: 1;
+    //     width: calc(100% - 2px);
+    //     height: calc(100% - 2px);
+    //     left: -2px; top: -2px;
+    // }
+
+    .crop-shade {
+        background: rgba($white, 0.7);
+    }
+
+    .crop-resize {
+        $size: 36px;
+        position: absolute;
+        overflow: hidden;
+        width: $size; height: $size;
+        bottom: 0; right: 0px;
+        z-index: 2;
+        cursor: nwse-resize;
+
+        &:hover {
+            .crop-resize-inner {
+                @include transform( scale(1.2, 1.2));
+            }
+        }
+
+        .crop-resize-inner {
+            $size: 36px;
+
+            @include transform( scale(1, 1));
+            @include transition(transform $transition);
+            transform-origin: 50% 50%;
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 55px 55px;
+            background: url('../img/ui/resize.svg') no-repeat center center $lightRed;
+            background-size: 60px;
+            width: $size; height: $size;
+        }
+    }
+}
