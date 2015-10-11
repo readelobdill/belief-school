@@ -47,9 +47,6 @@ export default class CongratsSection extends Text {
         const timeline = new TimelineLite();
         timeline.add(this.getTimelineOpen());
         timeline.add(this.getTimelineClosed(), '-=0.15');
-        //animate.to(this.section.find('.pre-complete'), 0, {display: 'none'}).then(() => {
-        //    return animate.to(this.section.find('.post-complete'), 0, {display: 'block'});
-        //})
     }
 
     getTimelineOpen() {

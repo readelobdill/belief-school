@@ -13,7 +13,7 @@
         <section class="you-to-you module-section has-container has-text" data-type="YouToYou" data-part="3">
             @include('app/modules/you-to-you/you-to-you')
         </section>
-        <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4" data-step="1">
+        <section class="congrats-section module-section has-container" data-type="FinalCongrats" data-part="4" data-step="1">
             @include('app/modules/you-to-you/congrats')
         </section>
     </div>
