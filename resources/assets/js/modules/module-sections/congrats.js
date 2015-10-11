@@ -32,7 +32,8 @@ export default class CongratsSection extends Text {
         this.section.on('click','[data-complete-module]', this.completeModule.bind(this))
     }
 
-    completeModule() {
+    completeModule(e) {
+        e.preventDefault();
         if(this.submitting) {
             return false;
         }
