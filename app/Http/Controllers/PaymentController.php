@@ -65,8 +65,7 @@ class PaymentController extends Controller {
             \Session::flash('paid', true);
             return redirect(route('home'));
         } else {
-            dd($result);
-            return 'bad';
+            return redirect(route('payments.fail'));
         }
     }
 

@@ -32,7 +32,7 @@
                     <p>Your next module will unlock in {{$moduleUser->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}.</p>
                 @else
                     <div class="actions">
-                        <a href="#" class="button" data-complete-module>I am ready for module eight</a>
+                        <a href="{{route('modules.view', [$nextModule->slug])}}" class="button">I am ready for module eight</a>
                     </div>
                 @endif
 
