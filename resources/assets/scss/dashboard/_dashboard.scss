@@ -465,6 +465,10 @@ ul.module-list {
                 li.unlock-countdown {
                     padding: 8.5px 35px 8.5px 15px;
 
+                    @include breakpoint($break-620) {
+                        padding: 8.5px 15px;
+                    }
+
                     @include breakpoint($brk-small) {
                         width: 100%;
                     }
@@ -577,7 +581,7 @@ ul.actions {
                 right: 13px;
 
                 @include breakpoint($break-620) {
-                    top: -7px;
+                    display: none;
                 }
             }
         }
