@@ -31,7 +31,7 @@
         <div class="container non-mod-page">
             <div class="inner">
                 <header>
-                    <h2 class="title">Cannot find that page</h1>
+                    <h2 class="title">Cannot find that page</h2>
                 </header>
 
                 <div class="content">
