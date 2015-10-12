@@ -9,8 +9,11 @@
             <section class="payment-failure">
                 <div class="inner">
                     <div class="content">
+                        <p>[Your credit card can not be authenticated: 2000 : The Authorisation was Declined by the bank.]</p>
 
-                        [Your credit card can not be authenticated: 2000 : The Authorisation was Declined by the bank.]
+                        <div class="actions">
+                            <a href="#" class="button small">Try again</a>
+                        </div>
                     </div>
                 </div>
             </section>
