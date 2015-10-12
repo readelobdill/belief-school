@@ -13,6 +13,7 @@ import YouToYouSection from 'modules/module-sections/you-to-you';
 import FormSection from 'modules/module-sections/form';
 import PaymentSection from 'modules/module-sections/payment';
 import WelcomeCongratsSection from 'modules/module-sections/welcome-congrats';
+import FinalCongratsSection from 'modules/module-sections/final-congrats';
 import $ from 'jquery';
 
 var sectionTypes = {
@@ -30,7 +31,8 @@ var sectionTypes = {
     YouToYou: YouToYouSection,
     Form: FormSection,
     Payment: PaymentSection,
-    WelcomeCongrats: WelcomeCongratsSection
+    WelcomeCongrats: WelcomeCongratsSection,
+    FinalCongrats: FinalCongratsSection
 };
 
 

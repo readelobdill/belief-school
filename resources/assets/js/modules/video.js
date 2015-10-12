@@ -35,7 +35,10 @@ function Video(video) {
         $(this.video).replaceWith(this.videoContainer);
         this.video = this.videoContainer[0];
         console.log($(this.video).is('video'));
-        videoReady.resolve(this);
+        this.video.addEventListener('loadedmetadata', response => {
+            videoReady.resolve(this);
+        })
+
     }, error => {
         videoReady.reject(this);
     }, progress => {
@@ -48,12 +51,6 @@ function Video(video) {
 
 
     this.videoReady.then(() => {
-        let defer = Q.defer();
-        this.video.addEventListener('loadedmetadata', response => {
-            defer.resolve();
-        })
-        return defer.promise;
-    }).then(() => {
         this.duration = this.video.duration;
         this.updatePosition();
         this.videoHasLoaded();
@@ -99,6 +96,7 @@ Video.prototype.seek = function(per) {
 
     return this.videoReady.then(() => {
         this.video.currentTime = this.duration * per;
+        console.log('seek',this.duration);
     })
 
 }
