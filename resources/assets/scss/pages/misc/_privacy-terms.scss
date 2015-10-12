@@ -93,6 +93,9 @@
 ol.privacy-policy {
     >li {
         padding-left: 40px;
+        @include breakpoint($brk-small) {
+            padding: 0;
+        }
 
         h4 {
             font-weight: 600;
@@ -112,6 +115,10 @@ ol.privacy-policy {
                 margin-bottom: 12px;
                 list-style-type: disc;
                 padding-left: 30px;
+
+                @include breakpoint($brk-small) {
+                    padding: 0;
+                }
             }
         }
     }
