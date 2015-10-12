@@ -149,12 +149,12 @@ input[type=checked] {
 }
 
 textarea {
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     height: 130px;
     padding: 25px;
     margin: 32px auto 0 auto;
     font-size: 20px;
-    max-width: 100%;
     background: $lightRed;
     border: 2px solid $lightRed;
     transition: background 0.2s ease, border 0.2s ease;
