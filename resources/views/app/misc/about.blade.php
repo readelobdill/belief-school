@@ -211,7 +211,7 @@
                             </div>
                         </h2>
                         <div class="answer">
-                             <p>Our <a href="{{route('privacy-terms') }}">Terms &amp; Conditions</a> and <a href="{{route('privacy-terms') }}">Privacy Policy</a> are important to us and you! Please take the time to review this information.</p>
+                             <p>Our <a href="{{route('privacy-terms') }}">Terms &amp; Conditions</a> and <a href="{{route('privacy-terms') }}#privacy">Privacy Policy</a> are important to us and you! Please take the time to review this information.</p>
                         </div>
                     </li>
                 </ul>
