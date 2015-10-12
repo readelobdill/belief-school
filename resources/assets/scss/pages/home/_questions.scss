@@ -145,6 +145,9 @@
             right: inherit;
             right: 5px;
         }
+        @include breakpoint($brk-small) {
+            display: none;
+        }
     }
 }
 
