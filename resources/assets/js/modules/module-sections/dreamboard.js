@@ -6,6 +6,7 @@ import TweenMax from "gsap/src/uncompressed/TweenMax";
 import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 import {ImageCrop} from 'util/cropper';
 import 'remodal';
+import Q from 'q';
 
 export default class Dreamboard extends Text {
 
@@ -88,11 +89,20 @@ export default class Dreamboard extends Text {
 
 
         let image = new Image();
+        let imageLoaded = Q.defer();
+        let modalOpened = Q.defer();
         $(image).one('load', e => {
-            $modal.one('opened', e => {
-                cropper = new ImageCrop(image, $modal);
-            });
+            imageLoaded.resolve(image);
+
         });
+
+        $modal.one('opened', e => {
+            modalOpened.resolve($modal);
+        });
+
+        Q.all([imageLoaded.promise, modalOpened.promise]).then(() => {
+            cropper = new ImageCrop(image, $modal);
+        })
 
         api.open();
 
