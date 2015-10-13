@@ -83,6 +83,7 @@ export default class Dreamboard extends Text {
         $modal.append($done);
 
         $('body').append($modal);
+        $modal.addClass('is-loading');
 
 
         let api = $modal.remodal();
@@ -102,6 +103,7 @@ export default class Dreamboard extends Text {
 
         Q.all([imageLoaded.promise, modalOpened.promise]).then(() => {
             cropper = new ImageCrop(image, $modal);
+            $modal.removeClass('is-loading');
         })
 
         api.open();
