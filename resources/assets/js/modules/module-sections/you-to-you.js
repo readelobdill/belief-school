@@ -69,7 +69,7 @@ export default class YouToYou extends Text {
     }
 
     setProgress(progress) {
-        this.section.find('.actions .percentage').html(Math.floor(progress) + '%');
+        this.section.find('.actions .percentage').html(Math.floor(progress * 100) + '%');
     }
 
     validate() {
