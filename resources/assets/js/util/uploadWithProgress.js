@@ -27,7 +27,9 @@ export function uploadWithProgress(url, data) {
 
     });
     xhr.addEventListener('load', (response) => {
-        console.log(response);
+        if((response.target.status < 200 || response.target.status >= 400) && response.target.status !== 0 ) {
+            return deferred.reject(response.target.statusText);
+        }
         deferred.resolve(response.target);
     });
     xhr.addEventListener('error', (response) => {

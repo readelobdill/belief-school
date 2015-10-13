@@ -21,6 +21,11 @@ export default {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }, defaultHeaders)
+        }).then(response => {
+            if((response.status < 200 || response.status >= 400) && response.status !== 0 ) {
+                this.emit('load:error');
+                return Q.reject(response.statusText);
+            }
         });
     }
 }

@@ -29,6 +29,7 @@ import Arc from 'ui/arc';
 import Forms from 'ui/forms';
 import Sharer from 'ui/share'
 import IntroVideo from 'ui/intro-video';
+import 'ui/globalError';
 
 es6Promise.polyfill();
 

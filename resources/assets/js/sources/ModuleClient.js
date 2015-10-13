@@ -23,6 +23,11 @@ class ModuleClient extends EventEmitter {
                 'Content-Type': 'application/json'
             }, defaultHeaders),
             body: JSON.stringify(data)
+        }).then(response => {
+            if((response.status < 200 || response.status >= 400) && response.status !== 0 ) {
+                this.emit('load:error');
+                return Q.reject(response.statusText);
+            }
         }).then((response) => {
             this.emit('load:end');
             return response;
@@ -37,6 +42,11 @@ class ModuleClient extends EventEmitter {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }, defaultHeaders)
+        }).then(response => {
+            if((response.status < 200 || response.status >= 400) && response.status !== 0 ) {
+                this.emit('load:error');
+                return Q.reject(response.statusText);
+            }
         }).then((response) => {
             this.emit('load:end');
             return response;
@@ -51,13 +61,17 @@ class ModuleClient extends EventEmitter {
         data.append('x', dimensions.x);
         data.append('y', dimensions.y);
 
-        return uploadWithProgress(url, data).then(response => JSON.parse(response.responseText));
+        return uploadWithProgress(url, data).then(response => JSON.parse(response.responseText), error => {
+            this.emit('load:error');
+        });
     }
 
     saveVideo(url, video) {
         const data = new FormData();
         data.append('video', video);
-        return uploadWithProgress(url, data).then(response => JSON.parse(response.responseText));
+        return uploadWithProgress(url, data).then(response => JSON.parse(response.responseText), error => {
+            this.emit('load:error')
+        });
     }
 
     registerUser(url, data) {

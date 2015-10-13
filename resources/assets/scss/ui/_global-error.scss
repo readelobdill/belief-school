@@ -1,0 +1,12 @@
+.global-error {
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align:center;
+	background-color: $lightRed;
+	color:white;
+	padding: 20px;
+	z-index: 999999;
+
+}
