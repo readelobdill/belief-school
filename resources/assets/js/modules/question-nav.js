@@ -8,7 +8,6 @@ class QuestionNav {
 
     setQuestion(question) {
         this.el.find('.is-active').removeClass('is-active');
-        console.log(question);
         this.el.find('[data-question="'+(question)+'"]').addClass('is-active');
     }
 }
