@@ -89,11 +89,14 @@ export default class Question {
         this.updateHeight();
         $(window).on('resize.question', this._resize);
         $(window).on('scroll', this._onScroll);
+        this.question.parent().on('scroll.question', this._onInnerScroll);
+
     }
 
     teardown() {
         $(window).off('resize.question', this._resize);
         $(window).off('scroll', this._onScroll);
+        this.question.parent().off('scroll.question', this._onInnerScroll);
     }
 
 
@@ -106,13 +109,26 @@ export default class Question {
         this.updateHeight();
     }
 
+    _onInnerScroll = (e) => {
+        e.preventDefault();
+        console.log(e);
+        let target = $(e.target);
+        let scrollTop = target.scrollTop();
+        if(scrollTop > 0) {
+            target.scrollTop(0);
+            $('body,html').scrollTop(scrollTop);
+        }
+
+
+
+    }
+
     scrollTo(x) {
         this.question.find('.inner > .content').css('transform', `translate3d(0,${-Math.ceil(x)}px,0)`);
     }
 
     updateHeight() {
         let height = this.question.find('.content').outerHeight();
-        console.log(height);
         let padding = parseInt(this.question.closest('section').css('padding-top'));
         let innerPadding = parseInt(this.question.find('.inner').css('padding-top'));
         $('body').css({minHeight: height + (padding * 2) + (innerPadding * 2)});
