@@ -31,7 +31,6 @@ export default class TextSection extends ModuleSection {
 
     _onInnerScroll = (e) => {
         e.preventDefault();
-        console.log(e);
         let target = $(e.target);
         let scrollTop = target.scrollTop();
         if(scrollTop > 0) {
