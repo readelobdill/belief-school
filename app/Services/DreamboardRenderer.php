@@ -69,7 +69,8 @@ class DreamboardRenderer {
         $dreamboardImage->compositeImage($image, imagick::COMPOSITE_OVER, $x, $y);
 
 
-        $dreamboardImage->setImageFormat('png');
+        $dreamboardImage->setImageFormat('jpeg');
+        $dreamboardImage->setCompression(80);
         return $dreamboardImage;
     }
 
