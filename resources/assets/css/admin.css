@@ -8,6 +8,11 @@
   color: #999999;
 }
 
+/* line 78, ../scss/core/_settings.scss */
+.margin-top {
+  margin-top: 30px;
+}
+
 /* line 1, ../scss/forum/_comment.scss */
 ul.comments-list {
   margin-left: 0;
