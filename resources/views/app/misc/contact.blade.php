@@ -36,6 +36,15 @@
                     </div>
                 </div>
 
+                <div class="get-in-contact social">
+                    <ul class="social--list">
+                        <li><a class="fb" href="https://www.facebook.com/beliefschool" target="_blank" title="Belief School"></a></li>
+                        <li><a class="twit" href="https://www.twitter.com/beliefschool" target="_blank" title="Belief School"></a></li>
+                        <li><a class="pin" href="https://www.pinterest.com/beliefschool" target="_blank" title="Belief School"></a></li>
+                        <li><a class="insta" href="https://instagram.com/beliefschoolnz" target="_blank" title="Belief School"></a></li>
+                    </ul>
+                </div>
+
                 <div class="terms-container">
                     <h1 class="plain">Further Details</h1>
                     <p>

@@ -1,5 +1,5 @@
 .container.contact {
-    background: url('../img/home-background.png') no-repeat center center;
+    background: url(../img/home-background.png) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     padding: 50px;
@@ -100,4 +100,62 @@
         }
     }
 
+}
+
+.get-in-contact.social {
+    ul.social--list {
+        position:relative;
+        z-index: 20;
+        text-align:center;
+
+        li {
+            display: inline-block;
+            font-size: 13px;
+            color: $fontColour;
+            cursor: pointer;
+            margin: 0 10px;
+            @include transition(color $transition);
+        }
+
+        a {
+            color: $black;
+                &:hover {
+                    color: $lightRed;
+                }
+
+                &:before {
+                    content: '';
+                    font-family: $social;
+                    font-size: 1.3em;
+                    position: relative;
+                    left: -4px; top: 0;
+                }
+
+                &.twit {
+                    &:before {
+                        content: '\7c';
+                    }
+                }
+
+                &.pin {
+                    &:before {
+                        content: '\7d';
+                    }
+                }
+
+                &.insta {
+                    &:before {
+                        content: '\7a';
+                    }
+                }
+
+                &.fb {
+                    &:before {
+                        font-family: $icon;
+                        content: '\e61f';
+                    }
+                }
+            }
+
+    }
 }

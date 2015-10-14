@@ -132,9 +132,16 @@
                 <p>If you have any questions or concerns in relation to the Site or these terms of use, please contact us at:</p>
 
                <ul class="list--simple">
-                    <li>Phone: [09 215 9322]</li>
-                    <li>Email: [paulagosney@xtra.co.nz]</li>
-                    <li>Address: [17 Poronui Street, Mt Eden, Auckland 1024]</li>
+                    <li><b>Phone:</b> 09 215 9322</li>
+                    <li><b>Email:</b> <a href="mailto:paula@beliefschool.com" target="_blank">paula@beliefschool.com</a></li>
+                    <li><b>Registered office/address for service : </b> <br />
+                        Belief School Limited<br />
+                        c/o Deloitte <br />
+                        18 Anzac Street, Suite 2, Level 2 <br />
+                        Takapuna <br />
+                        Auckland, 0622 <br />
+                        New Zealand
+                    </li>
                </ul>
             </div>
 
@@ -217,10 +224,17 @@
                     <li>
                         <h4>Who can you contact for further information?</h4>
                         <p>If you have any questions about this Privacy Policy or any personal information that we have collected, please contact our Privacy Manager on:</p>
-                        <ul>
-                            <li>Phone: [09 215 9322]</li>
-                            <li>Email: [paulagosney@xtra.co.nz]</li>
-                            <li>Address: [17 Poronui Street, Mt Eden, Auckland 1024]</li>
+                        <ul class="list--simple">
+                            <li><b>Phone:</b> 09 215 9322</li>
+                            <li><b>Email:</b> <a href="mailto:paula@beliefschool.com" target="_blank">paula@beliefschool.com</a></li></li>
+                            <li><b>Registered office/address for service : </b> <br />
+                                Belief School Limited<br />
+                                c/o Deloitte <br />
+                                18 Anzac Street, Suite 2, Level 2 <br />
+                                Takapuna <br />
+                                Auckland, 0622 <br />
+                                New Zealand
+                            </li>
                         </ul>
                         <p>If you are not satisfied with the way we handle your enquiry or complaint, you can contact the Office of the New Zealand Privacy Commissioner by any of the following methods: Tel: 0800 803 909, mail: PO Box 10094, The Terrace, Wellington 6143, Fax: +64 4 474 7595, email: enquiries@privacy.org.nz or visit the webpage located at: http://privacy.org.nz/how-to-complain/.</p>
                     </li>
