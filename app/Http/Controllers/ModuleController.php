@@ -296,7 +296,11 @@ class ModuleController extends Controller {
 
         $moduleUser->addTags($this->request->input('tags'));
         $moduleUser->save();
-        return view('app.public-modules.tag-collection-success', ['page' => 'tag-collection-success', 'moduleUser'=>$moduleUser]);
+
+        $homeModule = $moduleUser->user->modules()->where('order', 0)->first();
+        $gender = $homeModule->pivot->data->{'1'}->gender;
+
+        return view('app.public-modules.tag-collection-success', ['page' => 'tag-collection-success', 'moduleUser'=>$moduleUser, 'gender' => $gender]);
     }
 
 
@@ -310,7 +314,7 @@ class ModuleController extends Controller {
         $module->pivot = $moduleUser;
 
 
-        return view('app.share-modules.'.$moduleUser->module->slug, ['module' => $module, 'page' => 'share-'.$moduleUser->module->slug]);
+        return view('app.share-modules.'.$moduleUser->module->template, ['module' => $module, 'page' => 'share-'.$moduleUser->module->template]);
     }
 
     public function viewForum($module) {
@@ -340,7 +344,7 @@ class ModuleController extends Controller {
 
 
     public function showDreamboardImage() {
-        $module = $this->auth->user()->modules()->where('slug', 'visualise')->first();
+        $module = $this->auth->user()->modules()->where('template', 'visualise')->first();
         $dreamboard = new DreamboardRenderer($module->pivot->data, $this->auth->user());
 
         return response($dreamboard->renderToImage()->getImageBlob(),200,['Content-type' => 'image/png']);

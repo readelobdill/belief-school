@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Belief School</title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,300,900' rel='stylesheet' type='text/css'>
     <script src="//use.typekit.net/oni6kia.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="{{asset('css/main.css')}}"/>
@@ -15,7 +14,7 @@
 
     @yield('metadata')
 </head>
-<body data-page="{{$page}}">
+<body data-page="{{$page or 'page'}}">
 
 @yield('content')
 

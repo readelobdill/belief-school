@@ -35,7 +35,7 @@ export default class TextSection extends ModuleSection {
         let scrollTop = target.scrollTop();
         if(scrollTop > 0) {
             target.scrollTop(0);
-            $('body,html').scrollTop(scrollTop);
+            $('body,html').scrollTop($('body').scrollTop() + scrollTop);
         }
 
 
@@ -48,14 +48,14 @@ export default class TextSection extends ModuleSection {
         this.updateHeight();
         $(window).on('resize.text', this._resize);
         $(window).on('scroll', this._onScroll);
-        this.section.find('.inner').on('scroll.text', this._onInnerScroll);
+        this.section.find('> .inner').on('scroll.text', this._onInnerScroll);
     }
 
     teardown() {
         super.teardown();
         $(window).off('resize.text', this._resize);
         $(window).off('scroll', this._onScroll);
-        this.section.find('.inner').off('scroll.text', this._onInnerScroll);
+        this.section.find('> .inner').off('scroll.text', this._onInnerScroll);
     }
 
     open() {

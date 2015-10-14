@@ -19,7 +19,7 @@ Route::get('modules/{module}', ['as' => 'modules.view', 'uses' => 'ModuleControl
 
 
 /*Routes that use the secret from module_users so show public content*/
-Route::get('dreamboard/{secret}.png', ['as' => 'dreamboard.show','uses' => 'ModuleController@showDreamboardForSecret']);
+Route::get('dreamboard/{secret}.jpeg', ['as' => 'dreamboard.show','uses' => 'ModuleController@showDreamboardForSecret']);
 Route::get('share/{secret}', ['as' => 'module.share', 'uses' => 'ModuleController@share']);
 
 Route::get('tagcloud/{secret}', ['as' => 'tagcloud', 'uses' => 'ModuleController@tagCloud']);

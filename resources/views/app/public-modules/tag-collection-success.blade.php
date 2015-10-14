@@ -7,7 +7,7 @@
                 <header>
                     <h1 class="title">
                        Thank you for helping {{$moduleUser->user->first_name}} <br />
-                       on [[her/his]] journey
+                       on {{$gender === 'male' ? 'his' : 'her'}} journey
                     </h1>
                     <p class="center"><a href="{{route('about')}}">Want to learn more about Belief School?</a></p>
                 </header>
