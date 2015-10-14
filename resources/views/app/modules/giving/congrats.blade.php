@@ -6,7 +6,7 @@
                     There is no better feeling than the one we get when we make someone else's life better.
                 </h1>
                 <p>Choose to make this a daily habit.</p>
-                <p>You'll have some lovely stories from this module, please share them in the <a href="{{route('modules.view', ['gratitude'])}}">Forum</a>, they will be a gift for everyone.</p>
+                <p>You'll have some lovely stories from this module, please share them in the <a href="{{route('modules.view', $module->slug)}}">Forum</a>, they will be a gift for everyone.</p>
                 <div class="actions">
                     <a href="#" class="button" data-complete-module>What's next?</a>
                 </div>
