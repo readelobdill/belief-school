@@ -24,6 +24,7 @@
 @import "ui/menu";
 @import 'ui/modal';
 @import 'ui/cropper';
+@import 'ui/global-error';
 
 // pages
 @import "pages/home/home";
@@ -52,3 +53,5 @@
 // forum
 @import "forum/forum";
 @import "forum/comment";
+
+
