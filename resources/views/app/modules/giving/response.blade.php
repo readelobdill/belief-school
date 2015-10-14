@@ -6,7 +6,7 @@
 
         <p>While you are doing your good deeds, we want you to focus on the feelings you have when you give. It is your feelings that speak to your subconscious and build new beliefs.</p>
 
-        <p>Take some photos if you can, we’d love to see them in the Forum!</p>
+        <p>Take some photos if you can, we’d love to see them in the <a href="<a href="{{route('modules.view', [$nextModule->slug])}}">Forum</a></p>
 
         <p>In the spaces below, write out how you felt. This will be saved to your Dashboard and become part of your Manifesto at the end of the program.</p>
 

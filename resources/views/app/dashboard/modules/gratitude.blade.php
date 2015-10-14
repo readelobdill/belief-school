@@ -1,7 +1,7 @@
 <div class="content">
     <div class="inner-padding">
         <h2 class="title">
-            10 Things I am grateful for...
+            10 Things I am grateful for
         </h2>
 
         <ul class="experience">

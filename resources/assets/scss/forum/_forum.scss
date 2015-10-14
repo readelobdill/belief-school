@@ -147,3 +147,10 @@
         width: 100%;
     }
 }
+
+[data-page="forum"] {
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

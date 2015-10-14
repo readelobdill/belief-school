@@ -22,16 +22,22 @@
                     </div>
                 </h2>
                 <div class="answer">
-                    <ul class="list--simple">
-                        <li><em>“I’m hopeless with my kids, I always lose it.”</em></li>
-                        <li><em>“I am amazing with my kids my first response is gentle.”</em></li>
-                        <li><em>“I’m uncomfortable at parties”</em></li>
-                        <li><em>“I love going to parties and always enjoy meeting new people”</em></li>
-                        <li>No negativity at all, no buts, maybes or saying I’m going to try!</li>
-                        <li>If you are thinking about a goal, maybe a business deal or a sports event, you would write something like this:</li>
-                        <li>I am so happy – it’s July 16th, I won my tournament, it feels awesome and I am proud of myself.</li>
-                        <li><a href="http://beliefschool.com/how-to-find-blue-elephants/" target="_blank">Read more</a> on how this works here.</li>
+
+                    <ul class="list--simple colors">
+                        <li>“I’m hopeless with my kids, I always lose it.”</li>
+                        <li>“I am amazing with my kids my first response is gentle.”</li>
+                        <li>“I’m uncomfortable at parties”</li>
+                        <li>“I love going to parties and always enjoy meeting new people”</li>
                     </ul>
+
+                    <p class="left">No negativity at all, no buts, maybes or saying I’m going to try! If you are thinking about a goal, maybe a business deal or a sports event, you would write something like this:</p>
+
+                    <ul class="list--simple">
+                    <li>I am so happy – it’s July 16th, I won my tournament, it feels awesome and I am proud of myself.</li>
+
+                    <div class="margin-top">
+                        <p class="left"> <a href="http://beliefschool.com/how-to-find-blue-elephants/" target="_blank">Read more</a> on how this works here.</p>
+                    </div>
                 </div>
             </li>
         </ul>
