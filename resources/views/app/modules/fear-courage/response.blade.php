@@ -42,7 +42,7 @@
 
         <p>These feelings will be saved to your Dashboard, they’ll be a great resource to call on in the future, when fear raises it head.</p>
 
-        <p>Stuck? Jump into the <a href="{{route('modules.forum', [$module->slug])}}">forum</a> for encouragement.</p>
+        <p>Stuck? Jump into the <a href="{{route('modules.forum', [$module->slug])}}">Forum</a> for encouragement.</p>
         <form action="" class="positive-affirmations">
             <div class="positive-affirmations-fields">
                 <div class="belief">

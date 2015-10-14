@@ -65,6 +65,15 @@ ul {
     &.list--simple {
         padding: 0 0 20px 20px;
 
+    &.colors {
+        li {
+            color: $black;
+            &:nth-child(2n) {
+                color: $lightRed;
+            }
+        }
+    }
+
         li {
             position: relative;
             margin-bottom: 10px;

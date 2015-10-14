@@ -44,7 +44,7 @@
 
                     <p>Choose three things, choose them now, write them down and submit.</p>
 
-                    <p>Commit to YOURSELF that you will do them this week; do the first one NOW. For the love of your amazing self, declare it in the Forum so you are held accountable.</p>
+                    <p>Commit to YOURSELF that you will do them this week; do the first one NOW. For the love of your amazing self, declare it in the <a href="{{route('modules.forum',[$module->slug])}}">Forum</a> so you are held accountable.</p>
                 </div>
             </li>
 

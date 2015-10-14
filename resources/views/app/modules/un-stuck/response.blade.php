@@ -30,10 +30,9 @@
                         <li>“I love going to parties and always enjoy meeting new people”</li>
                     </ul>
 
-                    <p class="left">No negativity at all, no buts, maybes or saying I’m going to try!
-If you are thinking about a goal, maybe a business deal or a sports event, you would write something like this:</p>
+                    <p class="left">No negativity at all, no buts, maybes or saying I’m going to try! If you are thinking about a goal, maybe a business deal or a sports event, you would write something like this:</p>
 
-                    <ul class="list--simple colors">
+                    <ul class="list--simple">
                     <li>I am so happy – it’s July 16th, I won my tournament, it feels awesome and I am proud of myself.</li>
 
                     <div class="margin-top">

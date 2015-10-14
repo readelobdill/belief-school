@@ -27,7 +27,7 @@
 
         <div class="dots"></div>
 
-        <h2 class="title"><strong>We are so proud of you!</strong></h2>
+        <h2 class="title"><strong>We are so Proud of you!</strong></h2>
 
         <p class="center"><strong>And we want you to be proud of yourself.</strong></p>
 
