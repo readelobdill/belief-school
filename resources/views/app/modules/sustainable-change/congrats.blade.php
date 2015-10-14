@@ -24,7 +24,7 @@
 
                 <p>Before you complete your journey, you can revisit <b>Module One</b> and send your email to as many people as you like. The more people who respond, the greater your understanding will be of the value you bring to the world.</p>
 
-                <p><a href="mailto:?subject=Show%20your%20friend%20how%20special%20they%20are&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$requiredModules['boomerang']->secret]))}}" class="button small" data-update-module>Click here to send again.</a></p>
+                <p><a href="mailto:?subject=A%20request%20from%20your%20friend&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$requiredModules['boomerang']->secret]))}}" class="button small" data-update-module>Click here to send again.</a></p>
 
                 <p>Module Eight is fun and fabulous and once complete you will be able to download your beautiful Manifesto.</p>
 
