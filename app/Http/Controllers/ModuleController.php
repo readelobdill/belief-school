@@ -314,7 +314,7 @@ class ModuleController extends Controller {
         $module->pivot = $moduleUser;
 
 
-        return view('app.share-modules.'.$moduleUser->module->slug, ['module' => $module, 'page' => 'share-'.$moduleUser->module->slug]);
+        return view('app.share-modules.'.$moduleUser->module->template, ['module' => $module, 'page' => 'share-'.$moduleUser->module->slug]);
     }
 
     public function viewForum($module) {
