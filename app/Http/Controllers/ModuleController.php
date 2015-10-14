@@ -344,7 +344,7 @@ class ModuleController extends Controller {
 
 
     public function showDreamboardImage() {
-        $module = $this->auth->user()->modules()->where('slug', 'visualise')->first();
+        $module = $this->auth->user()->modules()->where('template', 'visualise')->first();
         $dreamboard = new DreamboardRenderer($module->pivot->data, $this->auth->user());
 
         return response($dreamboard->renderToImage()->getImageBlob(),200,['Content-type' => 'image/png']);
