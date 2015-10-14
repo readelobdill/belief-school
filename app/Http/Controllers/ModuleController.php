@@ -296,7 +296,11 @@ class ModuleController extends Controller {
 
         $moduleUser->addTags($this->request->input('tags'));
         $moduleUser->save();
-        return view('app.public-modules.tag-collection-success', ['page' => 'tag-collection-success', 'moduleUser'=>$moduleUser]);
+
+        $homeModule = $moduleUser->user->modules()->where('order', 0)->first();
+        $gender = $homeModule->pivot->data->{'1'}->gender;
+
+        return view('app.public-modules.tag-collection-success', ['page' => 'tag-collection-success', 'moduleUser'=>$moduleUser, 'gender' => $gender]);
     }
 
 
