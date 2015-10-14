@@ -40,7 +40,7 @@
                                 Dale Wheeler
                             </div>
                             <div class="quote">
-                                Belief school was an amazing experience for me. It challenged me to look at my thought processes, and gave me the tools to create change. I would challenge any man to go through Belief School. Be willing to try something new, challenge yourself in a safe environment, where you are not being criticised, or judged for attempting to figure out how you think. I found it a humbling, and VERY worthwhile experience that surprised me. I recommend EVERY man do Belief School.
+                                Belief School was an amazing experience for me. It challenged me to look at my thought processes, and gave me the tools to create change. I would challenge any man to go through Belief School. Be willing to try something new, challenge yourself in a safe environment, where you are not being criticised, or judged for attempting to figure out how you think. I found it a humbling, and VERY worthwhile experience that surprised me. I recommend EVERY man do Belief School.
                             </div>
                         </div>
                     </div>{{-- end content block--}}
