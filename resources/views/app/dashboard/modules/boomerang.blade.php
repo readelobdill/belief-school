@@ -1,6 +1,6 @@
 <div class="content">
     <div class="inner-padding">
-        <h2 class="title">The people in my world think that I am&hellip;</h2>
+        <h2 class="title">The people in my world think that I am</h2>
 
         <script class="tagcloud-words" type="application/json">
             {!! json_encode($module->pivot->data) !!}

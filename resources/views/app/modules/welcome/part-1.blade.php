@@ -17,7 +17,7 @@
 
         <blockquote class="center">
             Getting you started right!<br>
-            (Read this, It’s important!)
+            (Read all of this, It’s important!)
         </blockquote>
         <div class="dots"></div>
         <ul class="accordion">
@@ -76,13 +76,13 @@
 
                     <p>Why be part of the forum:</p>
 
-                    <ol class="quote-list">
+                    <ul class="list--simple">
                         <li>You will feel like you are part of a community</li>
                         <li>You’ll get the recognition you deserve</li>
                         <li>You’ll be supported and encouraged if something feels tricky</li>
                         <li>You get to make someone else’s journey special</li>
                         <li>You’ll see that you are not alone</li>
-                    </ol>
+                    </ul>
 
                     <p><strong>How you are prepared to show up in the Forum, may be how you show up in your life.</strong> Become aware of this and use this opportunity to show up differently, if you need to.</p>
                     <p>It’s safe, it’s monitored, Paula and her team will be jumping in there regularly to cheer you on.</p>
