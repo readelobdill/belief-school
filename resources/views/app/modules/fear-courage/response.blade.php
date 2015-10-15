@@ -1,6 +1,6 @@
 <div class="inner">
     <div class="content">
-        <h1 class="plain">So Proud of You</h1>
+        <h1 class="plain">We&rsquo;re So Proud of You</h1>
 
         <p>On the other side of fear is courage. There is no downside to courage. When you act courageously, even if the outcome isn’t perfect, you will feel powerful. You get to see who you really are and discover that you are much stronger than you thought.</p>
 

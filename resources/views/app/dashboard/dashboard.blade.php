@@ -18,7 +18,7 @@
                     <p class="center">
                         The content of the dashboard becomes your manifesto. At the completion of Belief School you will be able to download it and cherish this beautiful reminder of your journey.
                     </p>
-                    <p class="center"><i class="grey">TIP! Make sure you have the checkbox for ‘print background graphics’ selected in the Print dialogue box. Your manifesto will have our beautiful ink background!</i></p>
+                    <p class="center"><i class="{{$modules->last()->pivot && $modules->last()->pivot->complete ? 'red-light' : 'grey'}}">TIP! Make sure you have the checkbox for ‘print background graphics’ selected in the Print dialogue box. Your manifesto will have our beautiful ink background!</i></p>
 
                     <p class="center">
                         <a class="button small {{$modules->last()->pivot && $modules->last()->pivot->complete ? '' : 'is-disabled'}}" {{$modules->last()->pivot && $modules->last()->pivot->complete ? 'data-print' : ''}}>Download manifesto</a>

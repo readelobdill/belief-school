@@ -172,7 +172,7 @@
                             </div>
                         </h2>
                         <div class="answer">
-                            <p>We understand this, the greatest commodity in life these days is time. Belief School is designed to go at your pass, you can take as long as you like. However, as you see the results of each module, you’ll be excited to do the next. When something is creating value, we make it a priority – we find the time.</p>
+                            <p>We understand this, the greatest commodity in life these days is time. Belief School is designed to go at your pace, you can take as long as you like. However, as you see the results of each module, you’ll be excited to do the next. When something is creating value, we make it a priority – we find the time.</p>
                         </div>
                     </li>
 

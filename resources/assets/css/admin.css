@@ -8,7 +8,12 @@
   color: #808080;
 }
 
-/* line 78, ../scss/core/_settings.scss */
+/* line 79, ../scss/core/_settings.scss */
+.red-light {
+  color: #f16060;
+}
+
+/* line 82, ../scss/core/_settings.scss */
 .margin-top {
   margin-top: 30px;
 }

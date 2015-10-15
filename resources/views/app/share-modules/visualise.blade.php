@@ -1,6 +1,6 @@
 @extends('app.public-layout')
 @section('metadata')
-    <meta property="og:title" content="My beautiful Life." />
+    <meta property="og:title" content="My Beautiful Life." />
     <meta property="og:site_name" content="Belief School" />
     <meta property="og:url" content="{{URL::current()}}" />
     <meta property="og:type" content="image" />
