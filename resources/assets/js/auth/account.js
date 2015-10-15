@@ -32,7 +32,15 @@ class Account {
     }
 
     submitForm() {
-        client.updateUser(this.form.attr('action'), serialize(this.form));
+        var self = this;
+        client.updateUser(this.form.attr('action'), serialize(this.form))
+            .then(() => {
+                self.form.find('.form-message').removeClass('is-hidden');
+
+                setTimeout(() => {
+                    self.form.find('.form-message').addClass('is-hidden');                    
+                }, 3000);
+            });
     }
 }
 

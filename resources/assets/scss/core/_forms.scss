@@ -84,7 +84,7 @@ input[type=text], input[type=email], input[type=password] {
 }
 
 form .actions {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .radio-row {
@@ -289,6 +289,15 @@ textarea {
         border-right-color: #aeaeae;
         border-width: 11px;
         margin-top: -11px;
+    }
+}
+
+.form-message {
+    margin-top: 30px;
+    @include transition(opacity 0.2s);
+    &.is-hidden {
+        display: block;
+        opacity: 0;
     }
 }
 

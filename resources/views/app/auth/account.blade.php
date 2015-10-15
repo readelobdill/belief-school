@@ -33,6 +33,13 @@
                                 <input type="password" name="password" minlength="8">
                                 <label>Password</label>
                             </div>
+
+                            <div class='form-message is-hidden'>
+                                <p class='red-light'>
+                                    Updates to account details have been saved successfully
+                                </p>
+                            </div>
+
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="actions">
                                 <button class="button">Save Details</button>
