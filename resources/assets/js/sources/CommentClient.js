@@ -26,6 +26,8 @@ export default {
                 this.emit('load:error');
                 return Q.reject(response.statusText);
             }
+
+            return response;
         });
     }
 }
