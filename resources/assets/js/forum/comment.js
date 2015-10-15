@@ -12,10 +12,13 @@ export default class Comment {
     }
 
     setupEventListeners() {
-        this.comment.find('.reply').first().on('click', (e) => {
-            e.preventDefault();
-            this.reply();
-        });
+        if(!this.comment.find('>.inner').hasClass('is-deleted')) {
+            this.comment.find('.reply').first().on('click', (e) => {
+                e.preventDefault();
+                this.reply();
+            });    
+        }
+        
         this.comment.find('.delete-comment').first().on('click', (e) => {
             e.preventDefault();
             this.deleteComment($(e.currentTarget).attr('href'));
