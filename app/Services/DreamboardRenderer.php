@@ -33,7 +33,7 @@ class DreamboardRenderer {
         $this->user = $user;
     }
 
-    public function renderToImage() {
+    public function renderToImage($includeTitle = false) {
         $images = [];
         $dreamboardImage = new Imagick();
         $width = 1200;
@@ -43,13 +43,15 @@ class DreamboardRenderer {
          * 111
          * gutter: 27
          * */
-        $height = 630;
+        $height = $includeTitle? 800 : 630;
         $imageWidth = 195;
         $imageHeight = 129;
         $gutter = 20;
         $dreamboardImage->newImage($width, $height, 'none');
+        $baseline = $includeTitle? 140 : 0;
+        $bg = $includeTitle? 'img/dreamboard-generated-bg-2.jpg' : 'img/dreamboard-generated-bg.jpg';
 
-        $background = new Imagick(public_path('img/dreamboard-generated-bg.jpg'));
+        $background = new Imagick(public_path($bg));
         $dreamboardImage->compositeImage($background, imagick::COMPOSITE_OVER, 0, 0);
 
         foreach($this->dreamboard as $key => $imageName) {
@@ -57,7 +59,7 @@ class DreamboardRenderer {
                 $image = new Imagick(public_path('uploads/dreamboard/'.$this->user->id.'/'.$imageName));
                 $image->scaleImage($imageWidth, $imageHeight);
                 $x = $this->positions[$key]['x'] + 57;
-                $y = $this->positions[$key]['y'] + 81;
+                $y = $baseline + $this->positions[$key]['y'] + 81;
                 $dreamboardImage->compositeImage($image, imagick::COMPOSITE_OVER, $x, $y);
             }
         }
@@ -65,7 +67,7 @@ class DreamboardRenderer {
         $image = new Imagick(public_path('uploads/dreamboard/'.$this->user->id.'/'.$this->dreamboard->image_main));
         $image->scaleImage($this->positions['image_main']['width'], $this->positions['image_main']['height']);
         $x = $this->positions['image_main']['x'] + 57;
-        $y = $this->positions['image_main']['y'] + 81;
+        $y = $baseline + $this->positions['image_main']['y'] + 81;
         $dreamboardImage->compositeImage($image, imagick::COMPOSITE_OVER, $x, $y);
 
 

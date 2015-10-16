@@ -347,7 +347,7 @@ class ModuleController extends Controller {
         $module = $this->auth->user()->modules()->where('template', 'visualise')->first();
         $dreamboard = new DreamboardRenderer($module->pivot->data, $this->auth->user());
 
-        return response($dreamboard->renderToImage()->getImageBlob(),200,['Content-type' => 'image/png']);
+        return response($dreamboard->renderToImage()->getImageBlob(),200,['Content-type' => 'image/jpeg']);
     }
 
     public function showDreamboardForSecret($secret) {
@@ -357,7 +357,7 @@ class ModuleController extends Controller {
         }
         $dreamboard = new DreamboardRenderer($moduleUser->data, $moduleUser->user);
 
-        return response($dreamboard->renderToImage()->getImageBlob(),200,['Content-type' => 'image/png']);
+        return response($dreamboard->renderToImage($this->request->input('fb', false))->getImageBlob(),200,['Content-type' => 'image/jpeg']);
 
     }
 }

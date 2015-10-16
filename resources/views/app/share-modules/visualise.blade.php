@@ -5,7 +5,7 @@
     <meta property="og:url" content="{{URL::current()}}" />
     <meta property="og:type" content="image" />
     <meta property="og:description" content="This is a collection of images that fill me with joy, inspire me and show me how much I am loved. I created this at Belief School." />
-    <meta property="og:image" content="{{route('dreamboard.show', [$module->pivot->secret])}}" />
+    <meta property="og:image" content="{{route('dreamboard.show', [$module->pivot->secret])}}?fb=1" />
 
 @endsection
 @section('content')
