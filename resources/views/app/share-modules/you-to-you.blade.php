@@ -22,9 +22,9 @@ $id = explode('/', $module->pivot->data[0]->video->uri)[2];
 
 <meta property="og:video:url" content="https://vimeo.com/moogaloop.swf?clip_id={{ $id }}&amp;autoplay=1" />
 <meta property="og:video:secure_url" content="https://vimeo.com/moogaloop.swf?clip_id={{ $id }}&amp;autoplay=1" />
+<meta property="og:video:width" content="{{$module->pivot->data[0]->video->width}}" />
+<meta property="og:video:height" content="{{$module->pivot->data[0]->video->height}}" />
 <meta property="og:video:type" content="application/x-shockwave-flash" />
-<meta property="og:video:width" content="640" />
-<meta property="og:video:height" content="360" />
 @endsection
 
 @section('content')

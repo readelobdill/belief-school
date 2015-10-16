@@ -2,7 +2,7 @@
     <div class="pre-complete congrats-container">
         <div class="inner">
             <div class="content">
-                <p>Your video or letter to yourself, will shortly be available in your Belief School dashboard. Use the link in your Dashboard to share it with your friends and family</p>
+                <p>Your video or letter to yourself, will shortly be available in your Belief School Dashboard. Use the link in your Dashboard to share it with your friends and family</p>
 
                 <p>You can now also download your Manifesto from the Dashboard.</p>
 
