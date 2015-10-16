@@ -53,10 +53,11 @@
                     <div class="upload-icon"></div>
                     <div class="upload-status">Upload your video</div>
                     <form action="" class="upload-video">
-                        <input type="file" name="video">
+                        <input type="file" name="video" accept="video/*">
                     </form>
                 </div>
             </div>
+            <p class='small center'>(Max file size {{ ini_get('upload_max_filesize') }})</p>
 
             <h2 class="title">If you can't record it somehow then write a heartfelt letter to yourself:</h2>
 

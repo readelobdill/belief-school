@@ -50,7 +50,8 @@ export default class YouToYou extends Text {
             let videoInput = this.section.find('.upload-video [name=video]')[0];
             if(videoInput.files.length > 0) {
                 client.saveVideo(url, videoInput.files[0]).then(e => {
-                    this.module.nextSection();
+                    var url = this.module.getCompleteUrl();
+                    return client.completeModule(url).then(() => this.module.nextSection());
                 }, error => {
 
                 }, progress => {
@@ -59,7 +60,8 @@ export default class YouToYou extends Text {
             } else {
                 let data = serialize(this.section.find('form.letter'));
                 client.saveModule(url, data).then(() => {
-                    this.module.nextSection();
+                    var url = this.module.getCompleteUrl();
+                    return client.completeModule(url).then(() => this.module.nextSection());
                 });
             }
         } else {
