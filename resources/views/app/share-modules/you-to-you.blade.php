@@ -1,7 +1,7 @@
 @extends('app.public-layout')
 @section('metadata')
 <?php
-$id = explode('/', $module->pivot->data[0]->video->uri)[0];
+$id = explode('/', $module->pivot->data[0]->video->uri)[2];
 ?>
 
 <meta property="og:title" content="Here I am" />
