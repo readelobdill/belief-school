@@ -11,6 +11,7 @@ var livereload = require('gulp-livereload');
 var rsync = require('gulp-rsync');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+var compass = require('gulp-compass');
 
 
 function swallowError(error) {
@@ -66,7 +67,22 @@ gulp.task('watch', function() {
 
     gulp.watch('./resources/assets/css/**/*.css', ['postcss']);
     gulp.watch('./public/css/main.css', ['livereload']);
+
+    gulp.src('./resources/assets/scss/*.scss')
+        .pipe(compass({
+            config_file: './config.rb',
+            css: 'resources/assets/css',
+            sass: 'resources/assets/scss',
+            task: 'watch'
+        }));
+
+    scripts(true, true);
 });
+
+
+
+
+
 
 gulp.task('scripts', function() {
     return scripts(false, true);
