@@ -38,7 +38,9 @@ export default class CongratsSection extends Text {
             return false;
         }
         this.submitting = true;
-        this.showNext();
+        var url = this.module.getCompleteUrl();
+        client.completeModule(url).then(this.showNext.bind(this));
+
     }
 
     showNext(response) {

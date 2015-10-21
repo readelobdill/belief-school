@@ -9,6 +9,16 @@ import Congrats from './congrats';
 export default class FinalCongrats extends Congrats {
 
 
+    completeModule(e) {
+        e.preventDefault();
+        if(this.submitting) {
+            return false;
+        }
+        this.submitting = true;
+        this.showNext();
+
+    }
+
     getTimelineClosed() {
         let timeline = new TimelineLite();
         timeline.to(this.section.find('.post-complete'), 0, {autoAlpha: 1});
