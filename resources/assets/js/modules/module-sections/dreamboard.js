@@ -7,6 +7,9 @@ import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 import {ImageCrop} from 'util/cropper';
 import 'remodal';
 import Q from 'q';
+import EXIF from 'exif-js';
+
+import 'blueimp-load-image/js/load-image.all.min.js';
 
 export default class Dreamboard extends Text {
 
@@ -89,13 +92,22 @@ export default class Dreamboard extends Text {
         let api = $modal.remodal();
 
 
-        let image = new Image();
+        let image;
         let imageLoaded = Q.defer();
         let modalOpened = Q.defer();
-        $(image).one('load', e => {
-            imageLoaded.resolve(image);
+        let options = {canvas: true}
 
+        loadImage.parseMetaData(file, function (data) {
+            if (data.exif) {
+                options.orientation = data.exif.get('Orientation');
+            }
+            loadImage(file, function(img) {
+                image = img;
+                imageLoaded.resolve(img);
+            }, options)
         });
+
+
 
         $modal.one('opened', e => {
             modalOpened.resolve($modal);
@@ -103,12 +115,12 @@ export default class Dreamboard extends Text {
 
         Q.all([imageLoaded.promise, modalOpened.promise]).then(() => {
             cropper = new ImageCrop(image, $modal);
+            //$modal.append(image);
             $modal.removeClass('is-loading');
         })
 
         api.open();
 
-        image.src = url;
 
 
         $modal.on('closed', e => {
@@ -129,4 +141,6 @@ export default class Dreamboard extends Text {
 
     }
 }
+
+
 
