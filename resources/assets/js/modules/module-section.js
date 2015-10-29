@@ -24,6 +24,7 @@ class ModuleSection {
         var t = new TimelineLite({onComplete: () => {
             deferred.resolve()
         }});
+        t.to(this.section, 0, {display: 'block', opacity: 0});
         t.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 1});
         t.fromTo(this.section.find('.inner'), config.defaultAnimationSpeed, {y: -40}, {autoAlpha: 1, y: 0}, '-=0.4');
         return deferred.promise;
@@ -31,12 +32,17 @@ class ModuleSection {
     }
 
     close() {
-        return new Promise((yes, no) => {
-            TweenMax.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 0, onComplete: () => {
-                this.teardown();
-                yes();
-            }});
-        })
+
+        var deferred = Q.defer();
+        var t = new TimelineLite({onComplete: () => {
+            this.teardown();
+            deferred.resolve();
+        }});
+        t.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 0});
+        t.to(this.section, 0, {display: 'none'});
+
+        return deferred.promise;
+
     }
 
     setup() {

@@ -20,6 +20,7 @@ export default class IntroSection extends ModuleSection {
         var t = new TimelineLite({onComplete: () => {
             deferred.resolve()
         }});
+        t.to(this.section, 0, {opacity: 0, display: 'block'});
         t.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 1});
         t.to(this.section.find('.inner'), config.defaultAnimationSpeed, {autoAlpha: 1}, '-=0.4');
         t.add(TweenMax.fromTo(this.section.find('.next-section'), 0.7, {scaleX: 0.9, scaleY: 0.9}, {scaleX: 1, scaleY: 1, autoAlpha: 1}));
@@ -37,7 +38,7 @@ export default class IntroSection extends ModuleSection {
     }
 
     jump() {
-        return animate.to(this.section, 0, {autoAlpha: 1}).then(() => {
+        return animate.to(this.section, 0, {autoAlpha: 1, display:'block'}).then(() => {
             animate.to(this.section.find('.inner'), 0, {autoAlpha: 0});
             this.teardown();
 

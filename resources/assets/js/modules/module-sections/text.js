@@ -46,9 +46,9 @@ export default class TextSection extends ModuleSection {
     setup() {
         super.setup();
         this.updateHeight();
-        $(window).on('resize.text', this._resize);
-        $(window).on('scroll', this._onScroll);
-        this.section.find('> .inner').on('scroll.text', this._onInnerScroll);
+        //$(window).on('resize.text', this._resize);
+        //$(window).on('scroll', this._onScroll);
+        //this.section.find('> .inner').on('scroll.text', this._onInnerScroll);
     }
 
     teardown() {
@@ -65,11 +65,11 @@ export default class TextSection extends ModuleSection {
     }
 
     updateHeight() {
-        let height = this.section.find('.content').outerHeight();
-
-        let padding = parseInt(this.section.css('padding-top'));
-        let innerPadding = parseInt(this.section.find('.inner').css('padding-top'));
-        $('body').css({minHeight: height + (padding * 2) + (innerPadding * 2)});
+        //let height = this.section.find('.content').outerHeight();
+        //
+        //let padding = parseInt(this.section.css('padding-top'));
+        //let innerPadding = parseInt(this.section.find('.inner').css('padding-top'));
+        //$('body').css({minHeight: height + (padding * 2) + (innerPadding * 2)});
     }
 
 }

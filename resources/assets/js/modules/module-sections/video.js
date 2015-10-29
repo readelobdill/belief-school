@@ -28,6 +28,7 @@ class VideoSection extends ModuleSection {
         var t = new TimelineLite({onComplete: () => {
             deferred.resolve()
         }});
+        t.to(this.section, 0, {display: 'block', opacity: 0});
         t.to(this.section.find('.inner'), 0, {display: 'block', opacity: 0});
         t.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 1});
 

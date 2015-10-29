@@ -1,13 +1,22 @@
 .module {
     > .module-section {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        visibility: hidden;
+        //position: fixed;
+        //top: 0;
+        //left: 0;
+        //width: 100%;
+        //height: 100%;
+        //visibility: hidden;
+        display:none;
         min-width: 320px;
+        &.background-video, &.intro-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
         &.background-video {
+
             > .inner {
                 @include breakpoint($break-620) {
                     padding: 80px $gutter;

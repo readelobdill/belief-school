@@ -81,6 +81,7 @@ export default class AccountCreationSection extends Text {
         var t = new TimelineLite({onComplete: () => {
             deferred.resolve()
         }});
+        t.to(this.section, 0, {display: 'block', opacity: 0});
         t.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 1});
         t.fromTo(this.section.find('.inner'), config.defaultAnimationSpeed, {y: -40}, {autoAlpha: 1, y: 0}, '-=0.4');
         t.fromTo(this.section.find('.next-section'), config.defaultAnimationSpeed, {scaleX: 0.9, scaleY: 0.9}, {scaleX: 1, scaleY: 1, autoAlpha: 1});
