@@ -114,15 +114,15 @@ class ModuleController extends Controller {
 
         $mobileDetect = new \Mobile_Detect();
 
-
-        return view('app.modules.'.$module->template.'.index', [
+        $headers=['Cache-Control'=>'no-cache, no-store, max-age=0, must-revalidate','Pragma'=>'no-cache','Expires'=>'Fri, 01 Jan 1990 00:00:00 GMT'];
+        return response(view('app.modules.'.$module->template.'.index', [
             'page' => $module->template,
             'module' => $module,
             'moduleUser' => (!empty($moduleUser) ? $moduleUser->pivot : false),
             'requiredModules' => $requiredModules,
             'isMobile' => $mobileDetect->isTablet() || $mobileDetect->isMobile(),
             'nextModule' => $nextModule
-            ]);
+            ]), 200, $headers);
     }
 
 
