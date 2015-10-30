@@ -110,3 +110,16 @@ gulp.task('gladeyestage', function() {
 
         }));
 });
+
+gulp.task('stage', function() {
+    gulp.src('./')
+        .pipe(rsync({
+            root: './',
+            hostname : 'gladeye.ded.air.sitehost.co.nz',
+            username: 'stage',
+            destination: './site',
+            recursive: true,
+            exclude: ["*scss*", "*node_modules*", "*.sass-cache", "*.git", "*sublime*", "storage/views/*", ".idea/*", "storage/sessions/*", "storage/logs/*", '*/uploads/*', '.env']
+
+        }));
+});
