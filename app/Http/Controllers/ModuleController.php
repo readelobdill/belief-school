@@ -209,26 +209,11 @@ class ModuleController extends Controller {
                     $file = $this->request->file('video');
                     $fileName = Str::random(32).'.'.$file->guessExtension();
                     $file->move(public_path('uploads/you-to-you/'.$this->auth->user()->id), $fileName);
-                    $lib = new Vimeo(env('VIMEO_APP_ID'), env('VIMEO_SECRET'), env('VIMEO_ACCESS_TOKEN'));
-                    //Recreating the file, as when move is called it doesn't update the
+                    //Recreating the file, as when move is called it doesn't update the location
                     $file = new File(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
-                    $response = $lib->request('/me');
-                    if($response['status'] === 200) {
-                        $body = $response['body'];
-                        if($body['upload_quota']['space']['free'] > $file->getSize()) {
-                            $url = url('uploads/you-to-you/'. $this->auth->user()->id . '/'.$fileName);
-                            $response = $lib->request('/me/videos', ['type' => 'pull', 'link' => $url], 'POST');
-                            $video = $response['body'];
+                    $moduleUser->data = [['localVideo' => $fileName]];
+                    $moduleUser->step++;
 
-                            $response = $lib->request($video['uri'], [
-                                'name' =>$this->auth->user()->first_name . ' ' . $this->auth->user()->last_name
-                            ], 'PATCH');
-
-                            $moduleUser->data = [['video' => $video, 'localVideo' => $fileName]];
-                            $moduleUser->step++;
-                        }
-
-                    }
 
                     break;
                 }
