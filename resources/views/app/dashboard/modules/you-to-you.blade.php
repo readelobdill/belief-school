@@ -7,9 +7,9 @@
 
             @if(isset($module->pivot->data[0]->letter))
                 <p class="dashboard">{{$module->pivot->data[0]->letter}}</p>
-            @elseif(isset($module->pivot->data[0]->video))
+            @elseif(isset($module->pivot->data[0]->localVideo))
                 <div class="your-video">
-                    {!! $module->pivot->data[0]->video->embed->html !!}
+                    <video controls preload="metadata" src="{{asset('uploads/you-to-you/'.Auth::user()->id . '/' . $module->pivot->data[0]->localVideo)}}"></video>
                 </div>
 
                 <ul class="social">
