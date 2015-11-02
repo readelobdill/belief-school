@@ -20,11 +20,11 @@ function swallowError(error) {
     this.emit('end');
 }
 
-function scripts(watch, production) {
+function scripts(watch, production, input, output) {
     var bundler, rebundle;
 
     bundler = browserify({
-        entries: './resources/assets/js/main.js',
+        entries: ['./resources/assets/js/'+input],
         debug: !production,
         paths: ['./node_modules', './resources/assets/js'],
         cache: {},
@@ -48,7 +48,7 @@ function scripts(watch, production) {
     rebundle = function() {
         var stream = bundler.bundle();
         stream.on('error', swallowError);
-        stream = stream.pipe(source('output.js'));
+            stream = stream.pipe(source(output));
         return stream.pipe(gulp.dest('./public/js'))
             .pipe(notify('Compiled JS'))
             .pipe(livereload());
@@ -76,7 +76,8 @@ gulp.task('watch', function() {
             task: 'watch'
         }));
 
-    scripts(true, true);
+    scripts(true, true, 'main.js', 'output.js');
+    scripts(true, true, 'pdf.js', 'pdf.js');
 });
 
 
