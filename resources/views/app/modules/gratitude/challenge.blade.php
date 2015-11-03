@@ -9,7 +9,7 @@
 
         <p>Gratitude reduces stress, helps you feel more connected, more compassionate and it strengthens your immune system. Whether you are feeling thankful for an occasion as important as a birth, or as simple as a hand delivered coffee, it has the same effect.</p>
 
-        <p>By actively acknowledging the people you are grateful for and writing down the positive things in your life, you become better at recognising the good amongst the challenging. It will help you see the abundance, the love and joy that already exists in your life.</p>
+        <p><b class="red">By actively acknowledging the people you are grateful for and writing down the positive things in your life, you become better at recognising the good amongst the challenging.</b> It will help you see the abundance, the love and joy that already exists in your life.</p>
 
         <p>Gratitude is a powerful emotion. It can be most valuable when times are tough. This isn’t easy, but if you can find small things to be grateful for it is almost impossible to stay angry, fearful or stressed.</p>
 
