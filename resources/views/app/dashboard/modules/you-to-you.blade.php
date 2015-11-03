@@ -10,6 +10,7 @@
             @elseif(isset($module->pivot->data[0]->localVideo))
                 <div class="your-video">
                     <video controls preload="metadata" src="{{asset('uploads/you-to-you/'.Auth::user()->id . '/' . $module->pivot->data[0]->localVideo)}}"></video>
+                    <img src="{{asset('uploads/you-to-you/'.Auth::user()->id.'/'.$module->pivot->data[0]->image)}}" alt="" class="poster">
                 </div>
 
                 <ul class="social">

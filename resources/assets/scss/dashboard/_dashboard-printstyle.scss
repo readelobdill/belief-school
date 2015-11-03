@@ -232,6 +232,17 @@
             transition: none;
         }
     }
+
+    .your-video {
+        video {
+            display:none;
+
+        }
+        .poster {
+            display:block;
+            width: 100%;
+        }
+    }
 }
 
 
