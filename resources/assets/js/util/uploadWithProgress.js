@@ -29,14 +29,16 @@ export function uploadWithProgress(url, data) {
     xhr.addEventListener('load', (response) => {
         if((response.target.status < 200 || response.target.status >= 400) && response.target.status !== 0 ) {
             return deferred.reject(response.target.statusText);
+        } else {
+            deferred.resolve(response.target);
         }
-        deferred.resolve(response.target);
+
     });
     xhr.addEventListener('error', (response) => {
-        deferred.reject(response.target);
+        deferred.reject(response.target.statusText);
     });
     xhr.addEventListener('abort', (response) => {
-        deferred.reject(response.target);
+        deferred.reject(response.target.statusText);
     });
     xhr.open('POST', url);
 
