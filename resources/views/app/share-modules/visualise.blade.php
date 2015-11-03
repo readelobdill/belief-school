@@ -1,4 +1,7 @@
 @extends('app.public-layout')
+@section('title')
+    My Beautiful Life
+@endsection
 @section('metadata')
     <meta property="og:title" content="My Beautiful Life." />
     <meta property="og:site_name" content="Belief School" />
