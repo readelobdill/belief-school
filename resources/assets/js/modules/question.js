@@ -18,7 +18,8 @@ export default class Question {
         this.setup();
         let timeline = new TimelineLite({onComplete: () => {
         }});
-        timeline.to(this.question, 0, {autoAlpha: 1});
+
+        timeline.to(this.question, 0, {autoAlpha: 1, display: 'block'});
         let position = 0;
         let $children = this.question.find('.content').children();
         $children.each((index, el) => {
@@ -39,7 +40,8 @@ export default class Question {
             timeline.fromTo(el, 0.5, {y: 0, opacity: 1}, {y: -500, opacity: 0}, position);
             position += 0.1;
         });
-        timeline.to(this.question, 0, {autoAlpha: 0});
+        timeline.to(this.question, 0, {autoAlpha: 0, display: 'none'});
+
 
         return timeline;
     }
@@ -86,17 +88,17 @@ export default class Question {
 
     setup() {
         window.scrollTo(0,0);
-        this.updateHeight();
-        $(window).on('resize.question', this._resize);
-        $(window).on('scroll', this._onScroll);
-        this.question.parent().on('scroll.question', this._onInnerScroll);
+        //this.updateHeight();
+        //$(window).on('resize.question', this._resize);
+        //$(window).on('scroll', this._onScroll);
+        //this.question.parent().on('scroll.question', this._onInnerScroll);
 
     }
 
     teardown() {
-        $(window).off('resize.question', this._resize);
-        $(window).off('scroll', this._onScroll);
-        this.question.parent().off('scroll.question', this._onInnerScroll);
+        //$(window).off('resize.question', this._resize);
+        //$(window).off('scroll', this._onScroll);
+        //this.question.parent().off('scroll.question', this._onInnerScroll);
     }
 
 

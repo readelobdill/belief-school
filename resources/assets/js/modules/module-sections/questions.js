@@ -79,11 +79,12 @@ export default class QuestionsSection extends ModuleSection {
                 this.section.removeClass('question-'+this.currentQuestion);
 
             });
-            timeline.add(this.questions[question].open(), '-=0.3');
+            timeline.add(this.questions[question].open());
             timeline.add(() => {
                 this.section.addClass('question-'+question);
                 this.currentQuestion = question;
             });
+            timeline.play();
 
 
         }
