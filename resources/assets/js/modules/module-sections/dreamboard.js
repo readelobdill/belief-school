@@ -7,7 +7,6 @@ import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 import {ImageCrop} from 'util/cropper';
 import 'remodal';
 import Q from 'q';
-import EXIF from 'exif-js';
 
 import 'blueimp-load-image/js/load-image.all.min.js';
 

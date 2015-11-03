@@ -7,6 +7,8 @@ use App\Services\Cropper;
 use App\Services\DreamboardRenderer;
 use App\Services\ModuleCompletion;
 use Carbon\Carbon;
+use FFMpeg\Coordinate\TimeCode;
+use FFMpeg\FFMpeg;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -129,6 +131,7 @@ class ModuleController extends Controller {
 
 
     public function updateModule($module) {
+        abort(500);
         $now = new Carbon();
         $hasModule = $this->auth->user()->modules()->where('modules.id', '=', $module->id)->first();
 
@@ -207,11 +210,19 @@ class ModuleController extends Controller {
             case 'you-to-you':
                 if($this->request->file('video') !== null) {
                     $file = $this->request->file('video');
-                    $fileName = Str::random(32).'.'.$file->guessExtension();
+                    $random = Str::random(32);
+                    $fileName = $random.'.'.$file->guessExtension();
                     $file->move(public_path('uploads/you-to-you/'.$this->auth->user()->id), $fileName);
                     //Recreating the file, as when move is called it doesn't update the location
-                    $file = new File(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
-                    $moduleUser->data = [['localVideo' => $fileName]];
+                    //$file = new File(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
+                    $ffmpeg = FFMpeg::create([
+                        'ffmpeg.binaries'  => env('FFMPEG_LOCATION'),
+                        'ffprobe.binaries' => env('FFPROBE_LOCATION'),
+                    ]);
+                    $video = $ffmpeg->open(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
+                    $frame = $video->frame(TimeCode::fromSeconds(0));
+                    $frame->save(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'.$random.'.jpg');
+                    $moduleUser->data = [['localVideo' => $fileName, 'image' => $random.'.jpg']];
                     $moduleUser->step++;
 
 

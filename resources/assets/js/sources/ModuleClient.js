@@ -63,6 +63,7 @@ class ModuleClient extends EventEmitter {
 
         return uploadWithProgress(url, data).then(response => JSON.parse(response.responseText), error => {
             this.emit('load:error');
+            return Q.reject(error);
         });
     }
 
@@ -70,7 +71,8 @@ class ModuleClient extends EventEmitter {
         const data = new FormData();
         data.append('video', video);
         return uploadWithProgress(url, data).then(response => JSON.parse(response.responseText), error => {
-            this.emit('load:error')
+            this.emit('load:error');
+            return Q.reject(error);
         });
     }
 

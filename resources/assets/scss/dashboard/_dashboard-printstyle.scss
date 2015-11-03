@@ -2,6 +2,8 @@
     display: none;
 }
 
+
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -22,7 +24,10 @@
 }
 
 
-@media print and (color){
+.print-manifesto {
+
+
+
 
     /* THE INITAL RESET */
     *,
@@ -225,6 +230,17 @@
         .inner-padding {
             opacity: 1;
             transition: none;
+        }
+    }
+
+    .your-video {
+        video {
+            display:none;
+
+        }
+        .poster {
+            display:block;
+            width: 100%;
         }
     }
 }
