@@ -131,7 +131,6 @@ class ModuleController extends Controller {
 
 
     public function updateModule($module) {
-        abort(500);
         $now = new Carbon();
         $hasModule = $this->auth->user()->modules()->where('modules.id', '=', $module->id)->first();
 
