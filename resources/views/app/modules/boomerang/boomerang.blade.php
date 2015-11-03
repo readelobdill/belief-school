@@ -24,6 +24,8 @@
 
         <p>(Don't worry, you can edit the email to say whatever you want, although we’re pretty good at this and have chosen these words carefully to create the best outcome for you.)</p>
 
+         <p><b><i>Send this email individually if you’d prefer.</i></b></p>
+
         <div class="email-client">
             <div class="header">
                 <div class="close"></div>
@@ -38,15 +40,15 @@
             <div class="message">
                 <p>Dear Friend,</p>
 
-                <p>{{Auth::user()->first_name}} is completing an online program called Belief School. It is a personal development program helping them build belief in themselves. No, this is not spam, please text if you need to check.</p>
+                <p>{{Auth::user()->first_name}} is completing an online program called Belief School. It is a personal development program helping him/her build belief in themselves. No, this is not spam, please text if you need to check.</p>
 
-                <p>{{Auth::user()->first_name}} has stepped out of their comfort zone and sent you this email because they value your opinion and trust that you will answer the simple question honestly and with their best interest at heart.</p>
+                <p>Your friend has stepped out of his/her comfort zone and sent you this email because they value your opinion and trust that you will answer the simple question honestly and with their best interest at heart.</p>
 
-                <p>Clicking on the link will take you to a page on our Belief School website, you’ll be asked to input three words that describe {{Auth::user()->first_name}}’s best qualities. The answers will be delivered to {{Auth::user()->first_name}} anonymously, mixed up with responses from friends, family and colleagues.</p>
+                <p>Clicking on the link will take you to a page on our Belief School website, you’ll be asked to input three words that describe {{Auth::user()->first_name}}'s best qualities. The answers will be delivered to {{Auth::user()->first_name}} anonymously, mixed up with responses from friends, family and colleagues.</p>
 
-                <p><b>This will only take 1 minute yet will have a BIG impact.</b> Thanks for taking the time, it really does make a difference.</p>
+                <p>This will only take 1 minute yet will have a BIG impact. Thanks for taking the time, it really does make a difference.</p>
 
-                <p>Best regards <br>Belief School <br></p>
+                <p>Best regards <br /> Belief School</p>
             </div>
         </div>
 

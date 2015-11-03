@@ -132,7 +132,6 @@
                 <p>If you have any questions or concerns in relation to the Site or these terms of use, please contact us at:</p>
 
                <ul class="list--simple">
-                    <li><b>Phone:</b> 09 215 9322</li>
                     <li><b>Email:</b> <a href="mailto:paula@beliefschool.com" target="_blank">paula@beliefschool.com</a></li>
                     <li><b>Registered office/address for service : </b> <br />
                         Belief School Limited<br />
@@ -225,7 +224,6 @@
                         <h4>Who can you contact for further information?</h4>
                         <p>If you have any questions about this Privacy Policy or any personal information that we have collected, please contact our Privacy Manager on:</p>
                         <ul class="list--simple">
-                            <li><b>Phone:</b> 09 215 9322</li>
                             <li><b>Email:</b> <a href="mailto:paula@beliefschool.com" target="_blank">paula@beliefschool.com</a></li></li>
                             <li><b>Registered office/address for service : </b> <br />
                                 Belief School Limited<br />

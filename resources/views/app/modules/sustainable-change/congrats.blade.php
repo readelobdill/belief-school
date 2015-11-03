@@ -2,7 +2,7 @@
     <div class="pre-complete congrats-container">
         <div class="inner">
             <div class="content">
-                <h1 class="plain">You are one step away from completing Belief School</h1>
+                <h1 class="plain">Well done, creating a plan brings focus and relief</h1>
 
                 <p>Share what you learnt and the steps you plan to take in the <a href="{{route('modules.forum',[$module->slug])}}">Forum.</a></p>
 
@@ -18,7 +18,7 @@
         <div class="inner">
             <div class="content">
 
-                <h1 class="plain">Well done, creating a plan brings focus and relief</h1>
+                <h1 class="plain">You are one step away from completing Belief School</h1>
 
                 <p><b>This makes you extraordinary.</b></p>
 

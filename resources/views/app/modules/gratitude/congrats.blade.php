@@ -1,38 +1,32 @@
 <div class="inner">
     <div class="pre-complete congrats-container">
         <div class="inner">
-            <div class="content">
+            <div class="content daily">
 
-                <h1 class="plain">Helping you make gratitude a daily practise</h1>
+                <h1 class="plain">Helping you make gratitude a daily practice</h1>
 
-                <ol class="numlist--simple">
-                    <li><b>Become aware of your surroundings</b>
-                        Notice the little things that make your life joyful. The sun on your face, the smell of fresh flowers – silently give thanks for the everyday things in our life.
-                    </li>
+                    <h4><b>Become aware of your surroundings</b></h4>
+                    <p>Notice the little things that make your life joyful. The sun on your face, the smell of fresh flowers – silently give thanks for the everyday things in our life.</p>
 
-                    <li><b>Set yourself up to win</b>
-                        If this is new to you, start with one heartfelt thankyou a day. Put a reminder on your mirror or screen saver. Focus on the feeling you get when you express gratitude, this will embed the new habit.
-                    </li>
+                    <h4><b>Set yourself up to win</b></h4>
+                    <p>If this is new to you, start with one heartfelt thankyou a day. Put a reminder on your mirror or screen saver. Focus on the feeling you get when you express gratitude, this will embed the new habit.</p>
 
-                    <li><b>Be creative</b>
-                        - Leave post-it notes
-                        - Create a gratitude jar and pop a thought in it each day
-                        - Write thank-you texts at the airport or bus stop
-                        - Start a gratitude chart with the kids
-                        - Get a journal and focus on what you love
-                        - Pray abundantly
-                    </li>
+                    <h4><b>Be creative</b></h4>
+                    <p>Leave post-it notes<br />
+                        Create a gratitude jar and pop a thought in it each day<br />
+                        Write thank-you texts at the airport or bus stop<br />
+                        Start a gratitude chart with the kids<br />
+                        Get a journal and focus on what you love<br />
+                        Pray abundantly<br />
+                    </p>
 
-                    <li><b>Put yourself in someone else’s shoes</b>
-                        Imagine what it feels like to have someone express gratitude to you, act on that feeling.
-                    </li>
+                    <h4><b>Put yourself in someone else’s shoes</b></h4>
+                    <p>Imagine what it feels like to have someone express gratitude to you, act on that feeling.</p>
 
-                    <li><b>Start with those closest to you</b>
-                        Express gratitude in your home, it is so easy to take our everyday for granted
-                    </li>
-                </ol>
+                    <h4><b>Start with those closest to you</b></h4>
+                    <p>Express gratitude in your home, it is so easy to take our everyday for granted</p>
 
-                <p>Gratitude is a practice. Learn to incorporate it into your daily life, enriching your connection with those around you.</p>
+                    <p>Gratitude is a practice. Learn to incorporate it into your daily life, enriching your connection with those around you.</p>
 
                 <div class="actions">
                     <a href="#" class="button" data-complete-module>I am ready for module 7</a>
@@ -44,7 +38,7 @@
     <div class="post-complete congrats-container">
         <div class="inner">
             <div class="content">
-                <h1 class="plain"> Continue to record what <br />you are grateful for...</h1>
+                <h1 class="plain"> Continue to record what <br />you are grateful for</h1>
 
                 <p>Keep your Gratitude Diary going – write down what you are grateful for each day.</p>
 

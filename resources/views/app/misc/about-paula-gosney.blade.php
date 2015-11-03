@@ -41,7 +41,7 @@
                         <div class="col">
                             <p>In Paula’s pursuit of Happiness she spent hundreds of hours sitting at the feet of personal development masters, participating in and devouring anything thing that would help her find her way through her personal pain.</p>
 
-                            <p>For Paula, Belief School is the culmination of everything she has learnt, taught and lived through. This is her gift back to world. She believes if she had been exposed to the principals that now define her life and are taught in Belief School, she would have made many different choices.</p>
+                            <p>For Paula, Belief School is the culmination of everything she has learnt, taught and lived through. This is her gift back to the world. She believes if she had been exposed to the principals that now define her life and are taught in Belief School, she would have made many different choices.</p>
                         </div>
                     </div>
 
