@@ -18,7 +18,7 @@
             <header>
                  <h1 class="title">
                     <span data-arc="150">&middot; Welcome to the &middot;</span>
-                    {{$module->name}}
+                        Belief School
                     <p class="gets">Forum</p>
                 </h1>
                 <p class="center">Be part of the Belief School Community. Share what you've learnt, your joys and your challenges. This Forum is completely secure and only accessible to those going through the school and the Belief School Support Team.</p>
