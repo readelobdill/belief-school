@@ -4,21 +4,21 @@
             <li>
                 <span>I said</span>
                 {{ $module->pivot->data[0]->{'challenge-1'} }}
-                <span>Once I did this I felt...</span>
+                <span>Once I did this I felt</span>
                 {{ $module->pivot->data[1]->{'response-1'} }}
             </li>
 
             <li>
                 <span>I said</span>
                 {{ $module->pivot->data[0]->{'challenge-2'} }}
-                <span>Once I did this I felt...</span>
+                <span>Once I did this I felt</span>
                 {{ $module->pivot->data[1]->{'response-2'} }}
             </li>
 
             <li>
                 <span>I said</span>
                 {{ $module->pivot->data[0]->{'challenge-3'} }}
-                <span>Once I did this I felt...</span>
+                <span>Once I did this I felt</span>
                 {{ $module->pivot->data[1]->{'response-3'} }}
             </li>
 
