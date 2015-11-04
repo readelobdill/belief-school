@@ -81,8 +81,10 @@ export default class Dreamboard extends Text {
         let cropper;
         let $close = $('<button></button>').addClass('remodal-close');
         let $done = $('<button>Done</button>').addClass('done-button');
+        let $spinner = $('<div></div>').addClass('spinner');
         $modal.append($close);
         $modal.append($done);
+        $modal.append($spinner);
 
         $('body').append($modal);
         $modal.addClass('is-loading');

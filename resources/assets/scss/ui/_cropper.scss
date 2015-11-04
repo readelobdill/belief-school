@@ -1,5 +1,14 @@
 .cropper-modal.remodal {
     background: transparent;
+
+    &.is-loading {
+        .done-button {
+            display:none;
+        }
+        .spinner {
+            display:block;
+        }
+    }
 }
 
 .crop-selector {
