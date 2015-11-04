@@ -7,9 +7,11 @@ import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 import {ImageCrop} from 'util/cropper';
 import 'remodal';
 import Q from 'q';
-
 import 'blueimp-load-image/js/load-image.all.min.js';
+import {showGlobalError} from 'ui/globalError';
 
+const allowedMimes = ['image/jpeg', 'image/png'];
+const maxFileSize = 1024*1024*15;
 export default class Dreamboard extends Text {
 
 
@@ -74,6 +76,19 @@ export default class Dreamboard extends Text {
     }
 
     showCropper(file, name, input) {
+
+        if(allowedMimes.indexOf(file.type) === -1) {
+            $(input).replaceWith($(input).clone());
+            showGlobalError("Please choose an image that has an extension of .jpg, .jpeg or .png");
+            return;
+        }
+        if(file.size > maxFileSize) {
+            $(input).replaceWith($(input).clone());
+            showGlobalError('Please choose an image with a filesize less then 15M');
+            return;
+        }
+
+
         let url = URL.createObjectURL(file);
         let $modal = $('<div></div>')
             .addClass('remodal')
