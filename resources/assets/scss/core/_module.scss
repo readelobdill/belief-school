@@ -231,15 +231,13 @@
     .congrats-container {
         width: 100%;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
+
+        //position: absolute;
         top: 0;
         left: 0;
         opacity: 0;
         visibility: hidden;
+
         @include breakpoint($break-620) {
             align-items: inherit;
         }
@@ -269,6 +267,10 @@
                 width: 100%;
             }
         }
+    }
+
+    .post-complete {
+        display:none;
     }
 }
 
