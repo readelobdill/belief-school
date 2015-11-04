@@ -3,8 +3,12 @@ import TweenMax from 'gsap/src/uncompressed/TweenMax';
 import TimelineLite from 'gsap/src/uncompressed/TimelineLite';
 import client from 'sources/ModuleClient';
 
+let currentErrors = 0;
+
 export function showGlobalError(error) {
+    currentErrors++;
     let $error = $('<div></div>').addClass('global-error');
+    $error.css({'z-index' : currentErrors + 1});
     $error.html(error);
     $('body').append($error);
 
@@ -13,8 +17,9 @@ export function showGlobalError(error) {
         setTimeout(() => {
             TweenMax.to($error, 0.3, {y: '-100%', opacity: 0, onComplete: () => {
                 $error.remove();
+                currentErrors--;
             }})
-        }, 3000)
+        }, 10000)
     }})
 }
 
