@@ -73,20 +73,14 @@ export default class QuestionsSection extends ModuleSection {
     goToQuestion(question) {
         if(this.currentQuestion !== question && this.questions[question]) {
             this.questionNav.setQuestion(question);
-            let timeline = new TimelineLite();
-            timeline.add(this.questions[this.currentQuestion].close());
-            timeline.add(() => {
-                this.section.removeClass('question-'+this.currentQuestion);
 
-            });
-            timeline.add(this.questions[question].open());
-            timeline.add(() => {
+            this.questions[this.currentQuestion].close().then(() => {
+                this.section.removeClass('question-'+this.currentQuestion);
+                return this.questions[question].open();
+            }).then(() => {
                 this.section.addClass('question-'+question);
                 this.currentQuestion = question;
             });
-            timeline.play();
-
-
         }
     }
 

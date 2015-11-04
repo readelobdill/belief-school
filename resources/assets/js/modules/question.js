@@ -5,6 +5,7 @@ import 'util/parsley';
 import TweenMax from "gsap/src/uncompressed/TweenMax";
 import TimelineLite from "gsap/src/uncompressed/TimelineLite";
 import {showError, hideError} from 'util/errors';
+import Q from 'q';
 
 export default class Question {
     constructor(question) {
@@ -15,8 +16,10 @@ export default class Question {
     }
 
     open() {
+        let defer = Q.defer();
         this.setup();
         let timeline = new TimelineLite({onComplete: () => {
+            defer.resolve();
         }});
 
         timeline.to(this.question, 0, {autoAlpha: 1, display: 'block'});
@@ -26,13 +29,14 @@ export default class Question {
             timeline.fromTo(el, 0.5, {y: 500, opacity: 0}, {y: 0, opacity: 1}, position);
             position += 0.1;
         });
-        return timeline;
+        return defer.promise;
     }
 
     close() {
+        let defer = Q.defer();
         this.teardown();
         let timeline = new TimelineLite({onComplete: () => {
-
+            defer.resolve();
         }});
         let position = 0;
         let $children = this.question.find('.content').children();
@@ -43,7 +47,7 @@ export default class Question {
         timeline.to(this.question, 0, {autoAlpha: 0, display: 'none'});
 
 
-        return timeline;
+        return defer.promise;
     }
 
     validate() {
@@ -88,65 +92,42 @@ export default class Question {
 
     setup() {
         window.scrollTo(0,0);
-        //this.updateHeight();
-        //$(window).on('resize.question', this._resize);
-        //$(window).on('scroll', this._onScroll);
-        //this.question.parent().on('scroll.question', this._onInnerScroll);
-
+        this.updateHeight();
+        $(window).on('resize.question', this._resize);
     }
 
     teardown() {
-        //$(window).off('resize.question', this._resize);
-        //$(window).off('scroll', this._onScroll);
-        //this.question.parent().off('scroll.question', this._onInnerScroll);
+        $(window).off('resize.question', this._resize);
+        let height = $(window).height();
+
+        let calcHeight = height-180;
+
+        this.question.closest('section').css('height', height);
     }
-
-
-    _onScroll = () => {
-        this.scrollPosition = window.pageYOffset;
-        this.scrollTo(this.scrollPosition);
-    };
 
     _resize = () => {
         this.updateHeight();
-    }
+    };
 
-    _onInnerScroll = (e) => {
-        e.preventDefault();
-        let target = $(e.target);
-        let scrollTop = target.scrollTop();
-        if(scrollTop > 0) {
-            target.scrollTop(0);
-            $('body,html').scrollTop(scrollTop);
-        }
-
-
-
-    }
 
     scrollTo(x) {
         this.question.find('.inner > .content').css('transform', `translate3d(0,${-Math.ceil(x)}px,0)`);
     }
 
     updateHeight() {
-        let height = this.question.find('.content').outerHeight();
-        let padding = parseInt(this.question.closest('section').css('padding-top'));
-        let innerPadding = parseInt(this.question.find('.inner').css('padding-top'));
-        $('body').css({minHeight: height + (padding * 2) + (innerPadding * 2)});
-    }
+        setTimeout(() => {
+            let height = $(window).height();
 
-    focusElement() {
-        let $element = this.question.find('input,textarea').eq(0);
-        if($element.length) {
-            console.log($element);
-            let offset = $element.offset();
-            if(offset.top > window.scrollY + $(window).height()) {
-                console.log('outside');
+            let calcHeight = height-180;
+            let contentHeight = this.question.find('.inner').outerHeight() + 180;
+            //this.question.find('.content').css('height', calcHeight);
+            if(contentHeight <= height) {
+                this.question.closest('section').css('height', height);
+            } else {
+                this.question.closest('section').css('height', contentHeight);
             }
-            console.log(offset);
-        }
 
-        //window.scrollTo(0, offset.top);
+        }, 0)
 
     }
 

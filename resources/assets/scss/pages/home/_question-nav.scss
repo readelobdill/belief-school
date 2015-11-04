@@ -1,4 +1,12 @@
 $radius: 5px;
+
+.question-0 {
+    .question-nav {
+        display:none;
+    }
+
+}
+
 .question-nav ul {
     position: relative;
     margin: 0;
@@ -11,7 +19,7 @@ $radius: 5px;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    z-index: 100;
+    z-index: 100;display:none;
 }
 
 .question-nav li {
