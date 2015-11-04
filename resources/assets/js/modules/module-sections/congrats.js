@@ -45,8 +45,14 @@ export default class CongratsSection extends Text {
 
     showNext(response) {
         const timeline = new TimelineLite();
+        let height = $(window).height();
+
+        let calcHeight = height-180;
+
+        this.section.css('height', height);
+
         timeline.add(this.getTimelineOpen());
-        timeline.add(this.getTimelineClosed(), '-=0.15');
+        timeline.add(this.getTimelineClosed());
     }
 
     getTimelineOpen() {
@@ -57,7 +63,7 @@ export default class CongratsSection extends Text {
             timeline.fromTo(el, 0.5, {y: 0, opacity: 1}, {y: -500, opacity: 0}, position);
             position += 0.05;
         });
-        timeline.to(this.section.find('.pre-complete'), 0, {autoAlpha: 0});
+        timeline.to(this.section.find('.pre-complete'), 0, {autoAlpha: 0, display: 'none', immediateRender: false});
 
 
         return timeline;
@@ -67,7 +73,7 @@ export default class CongratsSection extends Text {
         let timeline = new TimelineLite();
         let position = 0;
         let $children = this.section.find('.post-complete .content').children();
-        timeline.to(this.section.find('.post-complete'), 0, {autoAlpha: 1});
+        timeline.to(this.section.find('.post-complete'), 0, {autoAlpha: 1, display: 'table', immediateRender: false});
         $children.each((index, el) => {
             timeline.fromTo(el, 0.5, {y: 500, opacity: 0}, {y: 0, opacity: 1}, position);
             position += 0.05;
@@ -76,15 +82,26 @@ export default class CongratsSection extends Text {
     }
 
     updateHeight() {
-        let height;
-        if(this.module.isComplete()) {
-            height = this.section.find('.post-complete > .inner').outerHeight();
-        } else {
-            height = this.section.find('.pre-complete > .inner').outerHeight();
-        }
 
-        let padding = parseInt(this.section.css('padding-top'));
-        console.log(height);
-        $('body').css({minHeight: height + (padding * 2)});
+
+        setTimeout(() => {
+            let height = $(window).height();
+
+            let calcHeight = height-180;
+            let contentHeight;
+            if(this.module.isComplete()) {
+                contentHeight = this.section.find('.post-complete > .inner').outerHeight() + 180;
+            } else {
+                contentHeight = this.section.find('.pre-complete > .inner').outerHeight() + 180;
+            }
+            if(contentHeight <= height) {
+                this.section.css('height', height);
+            } else {
+                this.section.css('height', contentHeight);
+            }
+
+        }, 0)
+
+
     }
 }
