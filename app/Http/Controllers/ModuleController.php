@@ -215,8 +215,8 @@ class ModuleController extends Controller {
                     //Recreating the file, as when move is called it doesn't update the location
                     //$file = new File(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
                     $ffmpeg = FFMpeg::create([
-                        'ffmpeg.binaries'  => env('FFMPEG_LOCATION'),
-                        'ffprobe.binaries' => env('FFPROBE_LOCATION'),
+                        'ffmpeg.binaries'  => env('FFMPEG_LOCATION', ['avconv', 'ffmpeg']),
+                        'ffprobe.binaries' => env('FFPROBE_LOCATION', ['avprobe', 'ffprobe']),
                     ]);
                     $video = $ffmpeg->open(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
                     $frame = $video->frame(TimeCode::fromSeconds(0));
