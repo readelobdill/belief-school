@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="{{asset('css/main.css')}}"/>
+        <link rel="stylesheet" href="{{asset('css/dashboard-fonts.css')}}"/>
     </head>
 
     <body data-page="{{ $page or 'page' }}" class="print-manifesto">
@@ -54,12 +55,12 @@
                                                         <li class="arrow"></li>
                                                     </ul>
                                                     <div class="options">
-                                                        @include('app.dashboard.module-options.'.$mod->template, ['module' => $mod])
+                                                        @include('app.dashboard.module-options.'.$mod->template, ['module' => $mod, 'style' => 'pdf'])
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            @include('app.dashboard.modules.'.$mod->template, ['module' => $mod])
+                                            @include('app.dashboard.modules.'.$mod->template, ['module' => $mod, 'style' => 'pdf'])
                                         </li>
 
                                     @elseif($mod->pivot && !$mod->pivot->complete)

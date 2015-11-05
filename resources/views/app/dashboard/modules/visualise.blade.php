@@ -1,7 +1,11 @@
 <div class="content">
     <div class="inner-padding">
         <h1 class="title">
+            @if($style === 'pdf')
+                <img src="{{asset('img/beautiful-you.png')}}" width="205px" height="34px" alt="">
+            @else
             Beautiful you
+            @endif
         </h1>
 
         <img src="{{route('dreamboard.show', [$module->pivot->secret])}}" alt="Beautiful You">

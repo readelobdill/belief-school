@@ -53,7 +53,7 @@ class DashboardController extends Controller {
             'margin-left' => 0,
             'margin-right' => 0,
             'javascript-delay' => 300]);
-        $pdf->binary = env('WKHTMLTOPDF_LOCATION', '/usr/local/bin/wkhtmltopdf');
+        $pdf->binary = env('WKHTMLTOPDF_LOCATION', 'wkhtmltopdf');
         $pdf->send(false, true);
         dd($pdf);
 

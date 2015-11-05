@@ -26,7 +26,7 @@
 
 .print-manifesto {
 
-
+    font-family: "open_sans", Helvetica Neue, Helvetica, Arial, sans-serif;
 
 
     /* THE INITAL RESET */
@@ -208,6 +208,9 @@
 
         ul.list-content {
             width: 445px;
+            li span {
+                letter-spacing: normal;
+            }
         }
 
         ul.experience {
@@ -241,6 +244,12 @@
         .poster {
             display:block;
             width: 100%;
+        }
+    }
+
+    h1 {
+        img {
+            width: auto !important;
         }
     }
 }

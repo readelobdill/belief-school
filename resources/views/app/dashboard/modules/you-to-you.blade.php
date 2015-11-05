@@ -2,7 +2,11 @@
     <div class="inner-padding">
         <div class="content-width">
             <h1 class="title">
-                Here I am
+                @if($style === 'pdf')
+                    <img src="{{asset('img/here-i-am.png')}}" alt="">
+                @else
+                    Here I am
+                @endif
             </h1>
 
             @if(isset($module->pivot->data[0]->letter))

@@ -53,7 +53,7 @@
                                         </div>
                                     </div>
 
-                                    @include('app.dashboard.modules.'.$mod->template, ['module' => $mod])
+                                    @include('app.dashboard.modules.'.$mod->template, ['module' => $mod, 'style' => 'web'])
                                 </li>
 
                             @elseif($mod->pivot && !$mod->pivot->complete)
