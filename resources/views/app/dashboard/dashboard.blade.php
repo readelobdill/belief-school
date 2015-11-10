@@ -19,7 +19,7 @@
                         The content of the dashboard becomes your manifesto. At the completion of Belief School you will be able to download it and cherish this beautiful reminder of your journey.
                     </p>
                     <p class="center">
-                        <a class="button small {{$modules->last()->pivot && $modules->last()->pivot->complete ? '' : 'is-disabled'}}" {{$modules->last()->pivot && $modules->last()->pivot->complete ? 'data-print' : ''}}>Download manifesto</a>
+                        <a class="button small {{$modules->last()->pivot && $modules->last()->pivot->complete ? '' : 'is-disabled'}}" href="{{$modules->last()->pivot && $modules->last()->pivot->complete ? route('dashboard.manifesto') : 'javascript:void 0'}}" target="_blank">Download manifesto</a>
                     </p>
                 </header>
 
