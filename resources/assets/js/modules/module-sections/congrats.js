@@ -82,7 +82,11 @@ export default class CongratsSection extends Text {
     }
 
     updateHeight() {
+        let height = $(window).height();
 
+        let calcHeight = height-180;
+
+        this.section.css('height', height);
 
         setTimeout(() => {
             let height = $(window).height();
