@@ -24,7 +24,12 @@ class ModuleSection {
         var t = new TimelineLite({onComplete: () => {
             deferred.resolve()
         }});
-        t.to(this.section, 0, {display: 'block', opacity: 0});
+        t.to(this.section, 0, {display: 'block', opacity: 0, onComplete:() => {
+            this.section.find('[data-arc]').each(function() {
+                var arc = parseInt($(this).data('arc'));
+                $(this).arctext({radius: arc});
+            })
+        }});
         t.to(this.section, config.defaultAnimationSpeed, {autoAlpha: 1});
         t.fromTo(this.section.find('.inner'), config.defaultAnimationSpeed, {y: -40}, {autoAlpha: 1, y: 0}, '-=0.4');
         return deferred.promise;

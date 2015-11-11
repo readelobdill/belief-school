@@ -3,9 +3,9 @@ import "modules/arctext";
 
 export default {
     init() {
-        $('[data-arc]').each(function() {
-            var arc = parseInt($(this).data('arc'));
-            $(this).arctext({radius: arc});
-        })
+        //$('[data-arc]').each(function() {
+        //    var arc = parseInt($(this).data('arc'));
+        //    $(this).arctext({radius: arc});
+        //})
     }
 }

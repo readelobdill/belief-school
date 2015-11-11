@@ -20,9 +20,17 @@ export default class Question {
         this.setup();
         let timeline = new TimelineLite({onComplete: () => {
             defer.resolve();
+
         }});
 
-        timeline.to(this.question, 0, {autoAlpha: 1, display: 'block'});
+        timeline.to(this.question, 0, {autoAlpha: 1, display: 'block', onComplete: () => {
+            this.question.find('[data-arc]').each(function() {
+                console.log('test');
+                var arc = parseInt($(this).data('arc'));
+                $(this).arctext({radius: arc});
+            })
+        }});
+
         let position = 0;
         let $children = this.question.find('.content').children();
         $children.each((index, el) => {
