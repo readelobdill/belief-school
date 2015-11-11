@@ -47,12 +47,13 @@ class DreamboardRenderer {
         $imageWidth = 195;
         $imageHeight = 129;
         $gutter = 20;
-        $dreamboardImage->newImage($width, $height, 'none');
-        $baseline = $includeTitle? 140 : 0;
+        $dreamboardImage->newImage(1200, 630, 'none');
+
+        $baseline = $includeTitle? 170 : 0;
         $bg = $includeTitle? 'img/dreamboard-generated-bg-2.jpg' : 'img/dreamboard-generated-bg.jpg';
 
         $background = new Imagick(public_path($bg));
-        $dreamboardImage->compositeImage($background, imagick::COMPOSITE_OVER, 0, 0);
+        //$dreamboardImage->compositeImage($background, imagick::COMPOSITE_OVER, 0, 0);
 
         foreach($this->dreamboard as $key => $imageName) {
             if($key !== 'image_main') {
@@ -60,7 +61,7 @@ class DreamboardRenderer {
                 $image->scaleImage($imageWidth, $imageHeight);
                 $image->borderImage('white', 2, 2);
                 $x = $this->positions[$key]['x'] + 57;
-                $y = $baseline + $this->positions[$key]['y'] + 81;
+                $y = $this->positions[$key]['y'] + 81;
                 $dreamboardImage->compositeImage($image, imagick::COMPOSITE_OVER, $x, $y);
             }
         }
@@ -69,27 +70,16 @@ class DreamboardRenderer {
         $image->scaleImage($this->positions['image_main']['width'], $this->positions['image_main']['height']);
         $image->borderImage('white', 2, 2);
         $x = $this->positions['image_main']['x'] + 57;
-        $y = $baseline + $this->positions['image_main']['y'] + 81;
+        $y = $this->positions['image_main']['y'] + 81;
         $dreamboardImage->compositeImage($image, imagick::COMPOSITE_OVER, $x, $y);
 
-//        $controlPoints = array( 10, 10,
-//            10, 5,
-//
-//            10, $dreamboardImage->getImageHeight() - 20,
-//            10, $dreamboardImage->getImageHeight() - 5,
-//
-//            $dreamboardImage->getImageWidth() - 10, 10,
-//            $dreamboardImage->getImageWidth() - 10, 20,
-//
-//            $dreamboardImage->getImageWidth() - 10, $dreamboardImage->getImageHeight() - 10,
-//            $dreamboardImage->getImageWidth() - 10, $dreamboardImage->getImageHeight() - 30);
-//
-//        /* Perform the distortion */
-//        $dreamboardImage->distortImage(Imagick::DISTORTION_PERSPECTIVE, $controlPoints, true);
 
-        $dreamboardImage->setImageFormat('jpeg');
-        $dreamboardImage->setCompression(80);
-        return $dreamboardImage;
+        $degrees = array( 0.01, 0.001, 0.001, 1.0 );
+        $dreamboardImage->distortImage( Imagick::DISTORTION_BARRELINVERSE, $degrees, TRUE );
+        $background->compositeImage($dreamboardImage, Imagick::COMPOSITE_OVER, 0,$baseline);
+        $background->setImageFormat('jpeg');
+        $background->setCompression(80);
+        return $background;
     }
 
 
