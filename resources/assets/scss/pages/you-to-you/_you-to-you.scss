@@ -235,16 +235,11 @@
         >.inner {
             background: url('../img/final-congrats-image.jpg') no-repeat center center !important;
 
-
             .content {
                 max-width: 620px;
                 background: rgba($white, 0.9);
                 color: $black;
                 padding: 30px $gutter;
-
-                // @include breakpoint($break-620 ) {
-                //     background: transparent;
-                // }
             }
 
             .title {
