@@ -257,6 +257,7 @@
         cursor: pointer;
         transition: background-color $transition;
         backface-visibility: hidden;
+        border: 2px solid $white;
 
 
         &:hover {
