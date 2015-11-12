@@ -76,8 +76,6 @@
     }
 }
 
-
-
 .congrats-container {
 
     p.annotation {
@@ -88,7 +86,7 @@
     .copy-link {
         padding: 20px;
         color: #3e3e3e;
-        white-space: pre;
+        word-break: break-all;
         border: 1px solid gainsboro;
     }
 
