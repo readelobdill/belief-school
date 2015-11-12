@@ -14,8 +14,7 @@
 @section('content')
 <div class="content">
     <h1 class="title">
-        Beautiful<br>
-        you
+        My Beautiful Life
     </h1>
     <img src="{{route('dreamboard.show', [$module->pivot->secret])}}" />
 </div>
