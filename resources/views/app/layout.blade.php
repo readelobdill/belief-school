@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="Insightful interactive online modules give you the evidence you need to create the life you want.">
     <title>Belief School</title>
     <script src="//use.typekit.net/oni6kia.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
