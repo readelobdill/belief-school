@@ -5,7 +5,7 @@
 		<div class="inner">
 			<header>
 				<h1 class="title">
-					Login
+					Reset password
 				</h1>
 			</header>
 
@@ -14,7 +14,7 @@
 					<div class="content">
 						@if (count($errors) > 0)
 							<div class="alert alert-danger">
-								<strong>Whoops!</strong>Your email or password is incorrect<br><br>
+								<strong>Whoops!</strong> Something went wrong<br><br>
 
 							</div>
 						@endif
