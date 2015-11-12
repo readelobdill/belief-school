@@ -24,14 +24,14 @@
 
         <p>(Don't worry, you can edit the email to say whatever you want, although we’re pretty good at this and have chosen these words carefully to create the best outcome for you.)</p>
 
-         <p><b><i>Send this email individually if you’d prefer.</i></b></p>
+        <p><b><i>If you’d prefer to send this email individually, copy and paste this template into your email browser, make sure you include the link.</i></b></p>
 
 
         @include('app.modules.'.$module->template.'.email')
 
 
         <div class="actions">
-            <a href="mailto:?subject=A%20request%20from%20your%20friend&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user(), 'gender' => $requiredModules['home']->data->{'1'}->gender])->render() . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" data-update-module>Click here to open the email template</a>
+            <a href="mailto:?subject=A%20request%20from%20your%20friend&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user(), 'gender' => $requiredModules['home']->data->{'1'}->gender])->render() . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" title="Send your email to your friends" data-update-module>Click here to open the email template</a>
         </div>
 
         <h2 class="title">Go on, be brave and send the emails.</h2>

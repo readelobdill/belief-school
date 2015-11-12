@@ -6,8 +6,6 @@
            believe you
        </h1>
 
-        <p class="center"><b>Great job for answering those questions.</b></p>
-
         <p>You can be, do, have anything in this one precious life. The only thing standing between you and your heart’s desire is your belief in yourself.</p>
 
         <p>We can almost guarantee what you answered to the last question, is an obstacle (we’re not saying it’s not real) but we are pretty sure it can be overcome or, through a better understanding of yourself – changed.</p>

@@ -7,10 +7,10 @@
                 <h2>Forum</h2>
                 <ul class="links">
                     <li class="module">
-                        <a href="{{route('modules.view', [$module->slug])}}">Module {{$module->order - 1}} <span>- {{$module->name}}</span></a>
+                        <a href="{{route('modules.view', [$module->slug])}}" title="{{$module->name}}"> Module {{$module->order - 1}} <span>- {{$module->name}}</span></a>
                     </li>
                     <li class="dashboard">
-                        <a href="{{route('dashboard')}}">Dashboard</a>
+                        <a href="{{route('dashboard')}}" title="Dashboard" title="Dashboard">Dashboard</a>
                     </li>
                 </ul>
             </div>
@@ -23,7 +23,6 @@
                      @else
                          {{$module->name}}
                      @endif
-
 
                     <p class="gets">Forum</p>
                 </h1>

@@ -4,7 +4,7 @@
             @if($home && $home->pivot->complete)
                 <h2>My Belief School Beginnings</h2>
             @else
-                <h2><a href="{{route('modules.view', [$home->slug] )}}">My Belief School Beginnings</a></h2>
+                <h2><a href="{{route('modules.view', [$home->slug] )}}" title="My Belief School Beginnings">My Belief School Beginnings</a></h2>
             @endif
 
         </div>

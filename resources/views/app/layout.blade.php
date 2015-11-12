@@ -4,14 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="Insightful interactive online modules give you the evidence you need to create the life you want.">
     <title>Belief School</title>
+
+    <meta property="og:title" content="Belief School" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Insightful interactive online modules give you the evidence you need to create the life you want." />
+    <meta property="og:url" content="{{ URL::current() }}" />
+    <meta property="og:image" content="{{ asset("img/share/fb-share-img.jpg") }}" />
+
+    <link rel="apple-touch-icon" href="{{ asset("img/favicons/apple-touch-icon.png") }}" />
+
     <script src="//use.typekit.net/oni6kia.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="{{asset('css/main.css')}}"/>
     @if(App::environment('local'))
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     @endif
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script src="{{asset('js/output.js')}}"></script>
 </head>
 <body data-page="{{ $page or 'page' }}">

@@ -94,7 +94,7 @@
             <div class="content">
                 <h1 class="plain">Privacy Statement</h1>
 
-                <p>The <a href="#privacy">Privacy Statement</a> available on our home page governs the collection, use and disclosure of your personal information by us.  The <a href="#privacy">Privacy Statement</a> forms a part of these terms of use.</p>
+                <p>The <a href="#privacy" title="Privacy Statement">Privacy Statement</a> available on our home page governs the collection, use and disclosure of your personal information by us.  The <a href="#privacy" title="Privacy Statement">Privacy Statement</a> forms a part of these terms of use.</p>
             </div>
 
             <div class="content">
