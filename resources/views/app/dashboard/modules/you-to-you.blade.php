@@ -3,7 +3,7 @@
         <div class="content-width">
             <h1 class="title">
                 @if($style === 'pdf')
-                    <img src="{{asset('img/here-i-am.png')}}" alt="">
+                    <img src="{{asset('img/here-i-am.png')}}" alt="Here I am">
                 @else
                     Here I am
                 @endif
@@ -14,7 +14,7 @@
             @elseif(isset($module->pivot->data[0]->localVideo))
                 <div class="your-video">
                     <video controls preload="metadata" src="{{asset('uploads/you-to-you/'.Auth::user()->id . '/' . $module->pivot->data[0]->localVideo)}}"></video>
-                    <img src="{{asset('uploads/you-to-you/'.Auth::user()->id.'/'.$module->pivot->data[0]->image)}}" alt="" class="poster">
+                    <img src="{{asset('uploads/you-to-you/'.Auth::user()->id.'/'.$module->pivot->data[0]->image)}}" alt="you to you" class="poster">
                 </div>
 
                 <ul class="social">

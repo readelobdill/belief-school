@@ -30,7 +30,7 @@
         @if(!$comment->images->isEmpty())
             @foreach($comment->images as $image)
                 <div class="comment-image">
-                    <img src="{{$image->getPath()}}" alt="">
+                    <img src="{{$image->getPath()}}" alt="forum image">
                 </div>
                 <div class="comment-image-facebookshare">
                     @if($comment->user->id === Auth::user()->id)

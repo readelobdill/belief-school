@@ -17,7 +17,7 @@
                     <source id="mp4" type="video/mp4" src="{{asset('videos/Comp_720_60.mp4')}}">
                     <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
                 </video>
-                <img src="{{asset('img/home-banner.png')}}" class="home-banner" />
+                <img src="{{asset('img/home-banner.png')}}" class="home-banner" alt="home-banner" />
             </div>
 
             <div class="intro-video-container">

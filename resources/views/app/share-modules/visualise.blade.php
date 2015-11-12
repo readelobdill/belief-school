@@ -17,6 +17,6 @@
         Beautiful<br>
         you
     </h1>
-    <img src="{{route('dreamboard.show', [$module->pivot->secret])}}" />
+    <img src="{{route('dreamboard.show', [$module->pivot->secret])}}" alt="Beautiful You" />
 </div>
 @endsection

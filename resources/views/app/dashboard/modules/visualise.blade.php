@@ -2,7 +2,7 @@
     <div class="inner-padding">
         <h1 class="title">
             @if($style === 'pdf')
-                <img src="{{asset('img/beautiful-you.png')}}" width="205px" height="34px" alt="">
+                <img src="{{asset('img/beautiful-you.png')}}" width="205px" height="34px" alt="beautiful you">
             @else
             Beautiful you
             @endif

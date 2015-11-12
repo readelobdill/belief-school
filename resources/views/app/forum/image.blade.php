@@ -23,6 +23,6 @@
 </head>
 <body data-page="comment-image">
 
-<img src="{{asset('uploads/comment-images/'.$comment->user->id.'/'.$image->filename)}}" alt="">
+<img src="{{asset('uploads/comment-images/'.$comment->user->id.'/'.$image->filename)}}" alt="Belief School">
 </body>
 </html>

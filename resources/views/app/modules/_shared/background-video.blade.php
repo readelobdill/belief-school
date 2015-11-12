@@ -1,6 +1,6 @@
 <div class="video-wrapper">
     @if($isMobile)
-        <img src="{{asset('img/videos/'.$module->video.'.png')}}" alt="" class="display-video">
+        <img src="{{asset('img/videos/'.$module->video.'.png')}}" alt="module image" class="display-video">
     @else
         <div class="display-video" data-video="{{asset('videos/'.$module->video)}}"></div>
     @endif
