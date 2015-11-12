@@ -27,7 +27,7 @@ class UserController extends Controller {
             'last_name' => Input::get('last_name'),
             'email' => Input::get('email'),
             'paid' => Input::get('paid') ? true : false,
-            'password' => Input::get('password')
+            'password' => \Hash::make(Input::get('password'))
         ]);
         $group = Group::find(Input::get('group_id'));
         $user->group()->associate($group);
@@ -44,7 +44,7 @@ class UserController extends Controller {
         $user->paid = Input::get('paid', false) ? true : false;
 
         if(Input::get('password')) {
-            $user->password = Input::get('password');
+            $user->password = \Hash::make(Input::get('password'));
         }
         $group = Group::find(Input::get('group_id'));
         $user->group()->associate($group);

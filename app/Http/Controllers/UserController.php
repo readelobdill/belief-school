@@ -6,7 +6,6 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class UserController extends Controller {
@@ -35,6 +34,9 @@ class UserController extends Controller {
             'password' => 'required|min:8',
             'username' => 'required'
         ]);
+
+        $input = $this->request->input();
+        $input['password'] = \Hash::make($input['password']);
 
 
         $user = new User(
