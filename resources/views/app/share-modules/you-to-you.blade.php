@@ -1,4 +1,9 @@
 @extends('app.public-layout')
+
+
+@section('title')
+    Here I am
+@endsection
 @section('metadata')
 <?php
 $id = explode('/', $module->pivot->data[0]->video->uri)[2];

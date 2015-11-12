@@ -8,6 +8,10 @@ import CommentStore from 'stores/CommentStore';
 class Forum {
     constructor(forum) {
         this.forum = $(forum);
+        this.forum.find('[data-arc]').each(function() {
+            var arc = parseInt($(this).data('arc'));
+            $(this).arctext({radius: arc});
+        })
         this.comments = this.forum.find('.comment').map((index, comment) => {
             return new Comment(comment, this);
         }).get();
@@ -23,6 +27,8 @@ class Forum {
         this.setup();
         animate.to(this.forum.find('section.module-section'), 0, {autoAlpha: 1});
         animate.to(this.forum.find('section.module-section > .inner'), 0.7, {autoAlpha: 1});
+
+
     }
 
     setupEventListeners() {
