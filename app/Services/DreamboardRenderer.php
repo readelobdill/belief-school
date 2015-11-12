@@ -78,7 +78,7 @@ class DreamboardRenderer {
         $dreamboardImage->distortImage( Imagick::DISTORTION_BARRELINVERSE, $degrees, TRUE );
         $background->compositeImage($dreamboardImage, Imagick::COMPOSITE_OVER, 0,$baseline);
         $background->setImageFormat('jpeg');
-        $background->setCompression(80);
+        $background->setCompression(90);
         return $background;
     }
 
