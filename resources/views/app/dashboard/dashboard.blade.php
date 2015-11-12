@@ -41,7 +41,7 @@
                                             <h2>Module {{$mod->order - 1}} - {{$mod->name}}</h2>
                                             <ul class="actions">
                                                 <li class="forum">
-                                                    <a class="forum-icon" href="{{ route('modules.forum', [$mod->slug]) }}">
+                                                    <a class="forum-icon" href="{{ route('modules.forum', [$mod->slug]) }}" title="{{$mod->name}}">
                                                         <span>Forum</span>
                                                     </a>
                                                 </li>
@@ -61,10 +61,10 @@
                                 <li class="module-{{ $mod->template }} is-not-complete is-unlocked">
                                     <div class="header is-locked">
                                         <div class="inner">
-                                            <h2><a href="{{route('modules.view', [$mod->slug] )}}">Module {{$mod->order - 1}} - {{$mod->name}}</a></h2>
+                                            <h2><a href="{{route('modules.view', [$mod->slug] )}}" title="{{$mod->name}}">Module {{$mod->order - 1}} - {{$mod->name}}</a></h2>
                                             <ul class="actions">
                                                 <li class="forum">
-                                                    <a class="forum-icon" href="{{ route('modules.forum', [$mod->slug]) }}">
+                                                    <a class="forum-icon" href="{{ route('modules.forum', [$mod->slug]) }}" title="{{ $mod->name }}">
                                                         <span>Forum</span>
                                                     </a>
                                                 </li>
@@ -101,7 +101,7 @@
 
                                                 <ul class="actions">
                                                     <li class="forum">
-                                                        <a class="forum-icon" href="{{ route('modules.forum', [$mod->slug]) }}">
+                                                        <a class="forum-icon" href="{{ route('modules.forum', [$mod->slug]) }}" title="{{$mod->name}}">
                                                             <span>Forum</span>
                                                         </a>
                                                     </li>

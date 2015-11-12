@@ -6,7 +6,7 @@
                     There is no better feeling than the one we get when we make someone else's life better.
                 </h1>
                 <p>Choose to make this a daily habit.</p>
-                <p>You'll have some lovely stories from this module, please share them in the <a href="{{route('modules.forum', $module->slug)}}">Forum</a>, they will be a gift for everyone.</p>
+                <p>You'll have some lovely stories from this module, please share them in the <a href="{{route('modules.forum', $module->slug)}}" title="Forum">Forum</a>, they will be a gift for everyone.</p>
                 <div class="actions">
                     <a href="#" class="button" data-complete-module>What's next?</a>
                 </div>
@@ -21,9 +21,9 @@
                     Congratulations.<br>
                     The world is a better place thanks to you.
                 </h1>
-                <p>Click through to your <a href="{{route('dashboard')}}#module-{{$module->slug}}">Dashboard</a> to enjoy your journey.</p>
+                <p>Click through to your <a href="{{route('dashboard')}}#module-{{$module->slug}}" title="Dashboard">Dashboard</a> to enjoy your journey.</p>
 
-                <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}">next module</a> is ready and waiting for you.</p>
+                <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}" title="Next Module">next module</a> is ready and waiting for you.</p>
             </div>
         </div>
     </div>

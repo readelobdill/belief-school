@@ -53,7 +53,7 @@
         </div>
 
         <div class="actions">
-            <a href="mailto:?subject=A%20request%20from%20your%20friend&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" data-update-module>Click here to open the email template</a>
+            <a href="mailto:?subject=A%20request%20from%20your%20friend&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$moduleUser->secret]))}}" class="button" title="Click here to open the email template" data-update-module>Click here to open the email template</a>
         </div>
 
         <h2 class="title">Go on, be brave and send the emails.</h2>

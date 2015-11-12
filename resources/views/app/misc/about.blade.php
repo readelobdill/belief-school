@@ -133,7 +133,7 @@
                     </h1>
 
                     @if(!Auth::check() || !Auth::user()->paid)
-                        <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small">Enrol Now</a></p>
+                        <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
                     @endif
 
                     <div class="content-block">
@@ -211,12 +211,12 @@
                             </div>
                         </h2>
                         <div class="answer">
-                             <p>Our <a href="{{route('privacy-terms') }}">Terms &amp; Conditions</a> and <a href="{{route('privacy-terms') }}#privacy">Privacy Policy</a> are important to us and you! Please take the time to review this information.</p>
+                             <p>Our <a href="{{route('privacy-terms') }}" title="Terms &amp; Conditions">Terms &amp; Conditions</a> and <a href="{{route('privacy-terms') }}#privacy" title="Privacy Policy">Privacy Policy</a> are important to us and you! Please take the time to review this information.</p>
                         </div>
                     </li>
                 </ul>
                 @if(!Auth::check() || !Auth::user()->paid)
-                    <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button">I want to find my amazing self</a></p>
+                    <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button" title="I want to find my amazing self">I want to find my amazing self</a></p>
                 @endif
             </div>
         </div>

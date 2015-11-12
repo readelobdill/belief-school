@@ -8,7 +8,7 @@
         <div class="tagcloud"></div>
 
          <p class="center">
-             <a href="mailto:?subject=A%20request%20from%20your%20friend&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$module->pivot->secret]))}}" class="button small" data-update-module>Send your email to more people</a>
+             <a href="mailto:?subject=A%20request%20from%20your%20friend&body={{rawurlencode(view('emails.boomerang',['user' => Auth::user()])->render() . "\n\n" . route('tagcloud', [$module->pivot->secret]))}}" class="button small" title="Send your email to more people" data-update-module>Send your email to more people</a>
         </p>
     </div>
 </div>

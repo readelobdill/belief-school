@@ -19,12 +19,12 @@
                 @if($moduleUser->created_at->diffInHours() < config('belief.lockout'))
                     <p>Your next module will unlock in {{$moduleUser->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}.</p>
                 @else
-                    <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}">next module</a> is ready and waiting for you.</p>
+                    <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}" title="Next Module">next module</a> is ready and waiting for you.</p>
                 @endif
 
-                <p>Reach out in the <a href="{{route('modules.forum',[$module->slug])}}">Forum</a> to someone who might be stuck, give them some of the courage you used to get here.</p>
+                <p>Reach out in the <a href="{{route('modules.forum',[$module->slug])}}" title="Forum">Forum</a> to someone who might be stuck, give them some of the courage you used to get here.</p>
 
-                <p>Take a moment, scroll through your <a href="{{route('dashboard')}}#module-{{$module->slug}}">Dashboard</a> and soak up all you have done and how special you are.</p>
+                <p>Take a moment, scroll through your <a href="{{route('dashboard')}}#module-{{$module->slug}}" title="Dashboard">Dashboard</a> and soak up all you have done and how special you are.</p>
 
                 <p>How are you going with your commitment to <span class="commitment__display">{{$requiredModules['welcome']->data[0]->challenge}}?</span> You are in the process of building your self-discipline, if you’re on track, keep at it, if you have stumbled, start again today. ☺</p>
             </div>
