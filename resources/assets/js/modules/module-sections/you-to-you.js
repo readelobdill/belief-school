@@ -7,6 +7,7 @@ import {showRawError, hideRawError} from 'util/errors';
 
 export default class YouToYou extends Text {
     letterChosen = false;
+    submitted = false;
     setupEventListeners() {
         super.setupEventListeners();
         this.section.on('submit', 'form', (e) => {
@@ -43,9 +44,14 @@ export default class YouToYou extends Text {
     }
 
     submit() {
-        let errors = this.validate();
-        if(errors === true) {
-            this.section.find('.error-container').hide().html('');;
+
+        let validity = this.validate();
+        if(validity === true) {
+            if(this.submitted) {
+                return;
+            }
+            this.submitted = true;
+            this.section.find('.error-container').hide().html('');
             let url = this.module.getUpdateUrl();
             let videoInput = this.section.find('.upload-video [name=video]')[0];
             if(videoInput.files.length > 0) {
@@ -65,7 +71,7 @@ export default class YouToYou extends Text {
                 });
             }
         } else {
-            this.section.find('.error-container').show().html(errors);
+            this.section.find('.error-container').show().html(validity);
         }
 
     }
