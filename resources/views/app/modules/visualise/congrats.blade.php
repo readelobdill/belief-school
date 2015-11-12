@@ -9,7 +9,7 @@
 
                 <ul class="social">
                     <li><a class="fb"  data-share href="https://www.facebook.com/sharer/sharer.php?{{http_build_query(['u' => route('module.share', [$moduleUser->secret])])}}">Share on Facebook</a></li>
-                    <li><a class="pin" data-share href="//www.pinterest.com/pin/create/button/?{{http_build_query(['url' => route('module.share', [$moduleUser->secret]), 'media' => route('dreamboard.show', [$moduleUser->secret]), 'description' => 'My Dreamboard'])}}">Share on Pinterest</a></li>
+                    <li><a class="pin" data-share href="//www.pinterest.com/pin/create/button/?{{http_build_query(['url' => route('module.share', [$moduleUser->secret]), 'media' => route('dreamboard.show', [$moduleUser->secret]), 'description' => 'My Beautiful Life'])}}">Share on Pinterest</a></li>
                     <li><a class="dl" href="{{route('dreamboard.show', [$moduleUser->secret, 'fb' => 1])}}" target="_blank" >Download</a></li>
                 </ul>
 
