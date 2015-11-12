@@ -57,7 +57,7 @@
                     </form>
                 </div>
             </div>
-            <p class='small center'>(Max file size {{ ini_get('upload_max_filesize') }})</p>
+            <p class='small center'>Depending on the speed of your internet connection this video may take a while to upload. [Maximum file size 30MB]</p>
 
             <h2 class="title">If you can't record it somehow then write a heartfelt letter to yourself:</h2>
 

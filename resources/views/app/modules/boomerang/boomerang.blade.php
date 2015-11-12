@@ -24,7 +24,7 @@
 
         <p>(Don't worry, you can edit the email to say whatever you want, although we’re pretty good at this and have chosen these words carefully to create the best outcome for you.)</p>
 
-         <p><b><i>Send this email individually if you’d prefer.</i></b></p>
+        <p><b><i>If you’d prefer to send this email individually, copy and paste this template into your email browser, make sure you include the link.</i></b></p>
 
         <div class="email-client">
             <div class="header">
