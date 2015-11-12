@@ -61,7 +61,7 @@
             <label class="comment-image-upload">
                 Upload an image
                 <span class="image-name"></span>
-                <input type="file" name="image" />
+                <input type="file" name="image" accept="image/gif,image/jpeg,image/png" />
             </label>
             <div class="actions">
                 <button class="button small">Comment</button>
