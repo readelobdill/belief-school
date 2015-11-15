@@ -44,7 +44,10 @@ export default class CongratsSection extends Text {
     }
 
     showNext(response) {
-        const timeline = new TimelineLite();
+        const timeline = new TimelineLite({onComplete: () => {
+            this.section.css('height', 'auto');
+            this.updateHeight();
+        }});
         let height = $(window).height();
 
         let calcHeight = height-180;
