@@ -56,6 +56,7 @@
     padding: 20px 30px;
     cursor: pointer;
     background-color: rgba($white,0.6);
+    overflow:hidden;
 
     &.has-video {
         background-color: $lightRed;
@@ -81,6 +82,7 @@
         opacity: 0;
         cursor: pointer;
         text-indent: -999999px;
+        font-size: 99999px;
     }
 
     &:hover:not(.has-video) {
