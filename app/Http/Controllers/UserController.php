@@ -40,7 +40,7 @@ class UserController extends Controller {
 
 
         $user = new User(
-            $this->request->input()
+            $input
         );
 
         $group = Group::withName('User');
@@ -91,7 +91,7 @@ class UserController extends Controller {
         $user->username = $this->request->input('username');
 
         if($this->request->input('password')) {
-            $user->password = $this->request->input('password');
+            $user->password = \Hash::make($this->request->input('password'));
         }
         $user->save();
     }
