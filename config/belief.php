@@ -17,7 +17,7 @@ Best regards
 
 Belief School
     ',
-    'discountedUntil' => '2015-10-15 00:00:00',
+    'discountedUntil' => '2015-11-18 00:00:00',
     'discountedPrice' => 1.0,
     'price' => 135.0
 ];
