@@ -124,3 +124,16 @@ gulp.task('stage', function() {
 
         }));
 });
+
+gulp.task('live', function() {
+    gulp.src('./')
+        .pipe(rsync({
+            root: './',
+            hostname : 'gladeye.ded.air.sitehost.co.nz',
+            username: 'mybeliefschool',
+            destination: './site',
+            recursive: true,
+            exclude: ["*scss*", ".htaccess", "*node_modules*", "*.sass-cache", "*.git", "*sublime*", "storage/views/*", ".idea/*", "storage/sessions/*", "storage/logs/*", '*/uploads/*', '.env']
+
+        }));
+});
