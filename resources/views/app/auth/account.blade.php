@@ -22,11 +22,11 @@
                                 <label>Last Name</label>
                             </div>
                             <div class="form-row">
-                                <input type="email" name="email" class="has-content" required value="{{$user->email}}" data-parsley-remote="{{route('account.check-email')}}" data-parlsey-remote-reverse="true">
+                                <input type="email" name="email" class="has-content" required value="{{$user->email}}" data-parsley-remote="{{route('account.check-email')}}" data-parlsey-remote-reverse="true" data-parsley-remote-message="Your email address is already associated to a Belief School account">
                                 <label>Email Address</label>
                             </div>
                             <div class="form-row">
-                                <input type="text" name="username" class="has-content" required value="{{$user->username}}">
+                                <input type="text" name="username" class="has-content" required value="{{$user->username}}" data-parsley-remote="{{route('account.check-username')}}" data-parlsey-remote-reverse="true" data-parsley-remote-message="Your username is already associated to a Belief School account">
                                 <label>Username</label>
                             </div>
                             <div class="form-row">
