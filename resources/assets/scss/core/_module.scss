@@ -447,6 +447,24 @@
         display: block;
     }
 }
+.spinner-percentage {
+    display:none;
+    position:fixed;
+    top: 30%; left: 50%;
+    margin-top: -1.5em;
+    margin-left: -1.5em;
+    text-align:center;
+    line-height: 3em;
+    width: 3em;
+    height: 3em;
+    z-index: 3;
+    color: $lightRed;
+    font-weight: bold;
+
+    .is-loading-video & {
+        display:block;
+    }
+}
 
 
 @-webkit-keyframes load8 {

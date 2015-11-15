@@ -42,7 +42,7 @@ function Video(video) {
     }, error => {
         videoReady.reject(this);
     }, progress => {
-
+        $('.spinner-percentage').html(Math.floor(progress * 100) + '%');
     }).done();
 
 

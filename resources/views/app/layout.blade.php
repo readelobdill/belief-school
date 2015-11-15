@@ -34,6 +34,7 @@
 <![endif]-->
 
 <div class="spinner"></div>
+<div class="spinner-percentage"></div>
 @include('app.partials.buttons.burger')
 @include('app.ui.menu')
 
