@@ -91,6 +91,7 @@ Route::get('logout', ['as' => 'auth.logout','uses' => 'Auth\AuthController@getLo
 Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUser']);
 
 Route::any('email-exists', ['as' => 'account.check-email', 'uses' => 'UserController@checkEmail']);
+Route::any('username-exists', ['as' => 'account.check-username', 'uses' => 'UserController@checkUsername']);
 
 Route::get('forgot-password', ['as' => 'auth.forgot-password', 'uses' => 'Auth\PasswordController@getEmail']);
 Route::post('forgot-password', ['uses' => 'Auth\PasswordController@postEmail']);

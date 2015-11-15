@@ -20,7 +20,7 @@
                 <label>Email Address</label>
             </div>
             <div class="form-row">
-                <input type="text" name="username" required>
+                <input type="text" name="username" required data-parsley-remote="{{route('account.check-username')}}" data-parlsey-remote-reverse="true" data-parsley-remote-message="Your username is already associated to a Belief School account">
                 <label>Username</label>
             </div>
             <div class="form-row">

@@ -83,6 +83,19 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         }
     }
 
+    public static function usernameExists($username) {
+        $user = User::where('username', $username)->first();
+
+        if(empty($user)) {
+            return false;
+        } else {
+            if(\Auth::check() && $user->username === \Auth::user()->username) {
+                return false;
+            }
+            return true;
+        }
+    }
+
 
 
 }

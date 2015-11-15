@@ -107,4 +107,14 @@ class UserController extends Controller {
         }
     }
 
+    public function checkUsername() {
+        $username = $this->request->input('username');
+        $usernameExists = User::usernameExists($username);
+        if(!$usernameExists) {
+            return response('', 200);
+        } else {
+            abort(404);
+        }
+    }
+
 }
