@@ -6,6 +6,7 @@ use App\Services\CommentRenderer;
 use App\Services\Cropper;
 use App\Services\DreamboardRenderer;
 use App\Services\ModuleCompletion;
+use App\Services\Video;
 use Carbon\Carbon;
 use FFMpeg\Coordinate\TimeCode;
 use FFMpeg\FFMpeg;
@@ -214,14 +215,18 @@ class ModuleController extends Controller {
                     $file->move(public_path('uploads/you-to-you/'.$this->auth->user()->id), $fileName);
                     //Recreating the file, as when move is called it doesn't update the location
                     //$file = new File(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
-                    $ffmpeg = FFMpeg::create([
-                        'ffmpeg.binaries'  => env('FFMPEG_LOCATION', ['avconv', 'ffmpeg']),
-                        'ffprobe.binaries' => env('FFPROBE_LOCATION', ['avprobe', 'ffprobe']),
-                    ]);
-                    $video = $ffmpeg->open(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
-                    $frame = $video->frame(TimeCode::fromSeconds(0));
-                    $frame->save(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'.$random.'.jpg');
-                    $moduleUser->data = [['localVideo' => $fileName, 'image' => $random.'.jpg']];
+                    $video = new Video(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
+                    $video->saveFirstFrame(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'.$random.'.jpg');
+
+                    $cropper = new Cropper(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'.$random.'.jpg');
+                    $image = $cropper->fixOrientation();
+                    $image->writeImage(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'.$random.'.jpg');
+
+                    $video->exportToMp4(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $random . '.mp4');
+
+                    unlink(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
+
+                    $moduleUser->data = [['localVideo' => $random . '.mp4', 'image' => $random.'.jpg']];
                     $moduleUser->step++;
 
 

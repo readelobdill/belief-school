@@ -53,7 +53,7 @@
                     <div class="upload-icon"></div>
                     <div class="upload-status">Upload your video</div>
                     <form action="" class="upload-video">
-                        <input type="file" name="video" accept="video/mp4">
+                        <input type="file" name="video" accept="video/*">
                     </form>
                 </div>
             </div>

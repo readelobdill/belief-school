@@ -78,6 +78,9 @@ export default class YouToYou extends Text {
 
     setProgress(progress) {
         this.section.find('.actions .percentage').html(Math.floor(progress * 100) + '%');
+        if(progress == 1) {
+            this.section.find('.actions .button').html('Processing Video');
+        }
     }
 
     validate() {

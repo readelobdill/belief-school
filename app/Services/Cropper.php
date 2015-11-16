@@ -4,7 +4,7 @@ use Imagick;
 
 class Cropper {
 
-    protected $image;
+    public $image;
 
     function __construct($image) {
         $this->image = new Imagick($image);
@@ -14,6 +14,11 @@ class Cropper {
         $this->image = $this->correctOrientation($this->image);
         $this->image->cropImage($width, $height, $x, $y);
         $this->image->scaleImage(390, 258);
+        return $this->image;
+    }
+
+    function fixOrientation() {
+        $this->image = $this->correctOrientation($this->image);
         return $this->image;
     }
 
