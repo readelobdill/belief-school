@@ -14,7 +14,7 @@
                     <div class="content">
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">
-                                <strong>Whoops!</strong>Your email or password is incorrect<br><br>
+                                <strong>Whoops!</strong> Your email or password is incorrect<br><br>
 
                             </div>
                         @endif

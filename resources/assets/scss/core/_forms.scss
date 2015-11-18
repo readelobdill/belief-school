@@ -224,7 +224,7 @@ textarea {
         color: #aeaeae;
         padding: 10px;
         text-align: left;
-        white-space: nowrap;
+        //white-space: nowrap; removed to fix android BH191 bug.
         margin-left: 20px;
         background: white;
         font-size: 15px;
@@ -307,7 +307,7 @@ textarea {
     color: #aeaeae;
     padding: 10px;
     font-size: 15px;
-    white-space: nowrap;
+    //white-space: nowrap; removed to fix android BH191 bug.
     line-height: 1;
     text-align: center;
     border-top: 0;

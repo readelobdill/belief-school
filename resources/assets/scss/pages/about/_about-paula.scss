@@ -1,4 +1,6 @@
 .container.about {
+    -webkit-perspective: 1;
+
     figure.about__paula {
         width: 100%;
 
@@ -9,7 +11,12 @@
 
         img {
             width: 100%;
-            padding-bottom: 24px;
+            padding-bottom: 7px;
+            height: auto !important;
+
+            @include breakpoint($break-800) {
+                padding-bottom: 24px;
+            }
         }
     }
 
