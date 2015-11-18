@@ -24,7 +24,11 @@
                     <td>{{$module->slug}}</td>
                     <td>{{$module->video}}</td>
                     <td><a target="_blank" href="https://vimeo.com/{{$module->intro_video}}">{{$module->intro_video}}</a></td>
-                    <td><a href="{{route('admin.modules.comments', [$module->id])}}" class="btn btn-info btn-sm"><i class="fa fa-comment"></i> Comments</a></td>
+                    <td>
+                        @if($module->template !== 'home')
+                            <a href="{{route('modules.forum', [$module->slug])}}" class="btn btn-info btn-sm"><i class="fa fa-comment"></i> Comments</a>
+                        @endif
+                    </td>
                 </tr>
             @endforeach
 
