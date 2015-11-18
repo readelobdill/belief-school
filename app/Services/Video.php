@@ -7,7 +7,9 @@ use FFMpeg\Format\Video\X264;
 class Video {
     protected $video;
     protected $ffmpeg;
+    protected $path;
     public function __construct($path) {
+        $this->path = $path;
         $this->ffmpeg = FFMpeg::create([
             'ffmpeg.binaries'  => env('FFMPEG_LOCATION', ['avconv', 'ffmpeg']),
             'ffprobe.binaries' => env('FFPROBE_LOCATION', ['avprobe', 'ffprobe']),
@@ -23,6 +25,9 @@ class Video {
     }
 
     public function exportToMp4($path) {
-        $this->video->save(new X264(), $path);
+        //exec('avconv -i "'.$this->path.'" -c copy "'.$path.'"');
+        $format = new X264();
+        $format->setAudioCodec("libvo_aacenc");
+        $this->video->save($format, $path);
     }
 }
