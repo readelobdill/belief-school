@@ -4,6 +4,7 @@ import Q from 'q';
 import EventEmitter from 'events';
 import {uploadWithProgress} from 'util/uploadWithProgress';
 
+
 const defaultHeaders = {
     'X-Requested-With' : 'XMLHttpRequest',
     'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
@@ -86,6 +87,12 @@ class ModuleClient extends EventEmitter {
                 'Content-Type': 'application/json'
             }, defaultHeaders),
             body: JSON.stringify(data)
+        }).then(response => {
+            console.log(response);
+            if((response.status < 200 || response.status >= 400) && response.status !== 0 ) {
+                this.emit('load:error');
+                return Q.reject(response.statusText);
+            }
         }).then((response) => {
             this.emit('load:end');
             return response;
