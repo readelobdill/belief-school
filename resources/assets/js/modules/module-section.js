@@ -10,6 +10,7 @@ import Accordion from './accordion';
 
 
 class ModuleSection {
+    submitting = false;
     constructor(section, module) {
         this.section = $(section);
         this.module = module;
@@ -60,6 +61,10 @@ class ModuleSection {
 
     setupEventListeners() {
         this.section.on('click', '[data-next-section]', (e) => {
+            if(this.submitting) {
+                return;
+            }
+            this.submitting = true;
            this.module.nextSection();
         });
     }
