@@ -201,10 +201,6 @@ textarea {
         color: whitesmoke;
         transition: all 0.2s ease;
         transform: translateY(-50%);
-
-        @include breakpoint($brk-1024) {
-            //top: 32%;
-        }
     }
 
     input:focus ~ label,
@@ -224,13 +220,14 @@ textarea {
         color: #aeaeae;
         padding: 10px;
         text-align: left;
-        //white-space: nowrap; removed to fix android BH191 bug.
+        white-space: nowrap;
         margin-left: 20px;
         background: white;
         font-size: 15px;
         opacity: 0;
 
         @include breakpoint($brk-1024) {
+            white-space: normal;
             position: relative;
             left: 0;
             bottom: 0;
@@ -307,11 +304,16 @@ textarea {
     color: #aeaeae;
     padding: 10px;
     font-size: 15px;
-    //white-space: nowrap; removed to fix android BH191 bug.
+    white-space: nowrap;
     line-height: 1;
     text-align: center;
     border-top: 0;
     background-color: rgba($white, 0.8);
+
+    @include breakpoint($brk-1024) {
+        white-space: normal;
+    }
+
 }
 
 textarea +.error-container {

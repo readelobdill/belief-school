@@ -303,6 +303,7 @@
                 width: 195px * 2 + 32px;
                 height: 129px * 2 + 32px;
                 margin: 20px auto;
+                border: 3px solid #f16060;
             }
 
             @include breakpoint($brk-small) {
