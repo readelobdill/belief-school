@@ -10,7 +10,7 @@ use Input;
 class UserController extends Controller {
 
     public function getList() {
-        $users = User::with(['group'])->get();
+        $users = User::with(['group', 'modules'])->get();
         return view('admin.users.list', compact('users'));
     }
 
