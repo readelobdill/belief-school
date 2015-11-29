@@ -41,14 +41,17 @@
                         @endif
                     </td>
                     <td>
-
-                        Module {{max(0,$user->modules->last()->order - 1)}}: {{$user->modules->last()->name}} ({{$user->modules->last()->pivot->complete ? 'complete' : 'not complete'}})
+                        @if($user->modules->count() > 0)
+                            Module {{max(0,$user->modules->last()->order - 1)}}: {{$user->modules->last()->name}} ({{$user->modules->last()->pivot->complete ? 'complete' : 'not complete'}})
+                        @endif
                     </td>
                     <td>
-                        @if($user->modules->last()->pivot->complete)
-                            {{$user->modules->last()->pivot->completed_at->diffForHumans(null, true)}}
-                        @else
-                            {{$user->modules->last()->pivot->created_at->diffForHumans(null, true)}}
+                        @if($user->modules->count() > 0)
+                            @if($user->modules->last()->pivot->complete)
+                                {{$user->modules->last()->pivot->completed_at->diffForHumans(null, true)}}
+                            @else
+                                {{$user->modules->last()->pivot->created_at->diffForHumans(null, true)}}
+                            @endif
                         @endif
 
                     </td>
