@@ -17,6 +17,8 @@
          folder instead of downloading all of them to reduce the load. -->
     <link href="{!!asset('components/admin-lte/dist/css/skins/skin-yellow.min.css')!!}" rel="stylesheet" type="text/css" />
 
+    <link rel="stylesheet" href="{{asset('admin-assets/data-tables/datatables.min.css')}}">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -70,6 +72,8 @@
 <script src="{!!asset('components/admin-lte/bootstrap/js/bootstrap.min.js')!!}" type="text/javascript"></script>
 
 <script src="{!!asset('components/admin-lte/dist/js/app.min.js')!!}" type="text/javascript"></script>
+
+<script src="{{asset('admin-assets/data-tables/datatables.min.js')}}"></script>
 
 <script src="{{asset('components/requirejs/require.js')}}" data-main="{{asset('admin-assets/js/main.js')}}"></script>
 

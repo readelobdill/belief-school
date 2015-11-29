@@ -11,4 +11,6 @@ define(['modules/log'], function(log) {
             }.bind(this))
         }
     });
+
+    $('.users-table').DataTable();
 })
