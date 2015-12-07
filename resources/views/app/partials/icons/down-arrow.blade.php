@@ -5,5 +5,5 @@
     </g>
 </svg> --}}
 <div class="iecon">
-    <img class="iecon__arrow" src="img/icons/iefix/down-arrow.blade.svg" alt="down-arrow" />
+    <img class="iecon__arrow" src="{{asset('img/icons/iefix/down-arrow.blade.svg')}}" alt="down-arrow" />
 </div>
