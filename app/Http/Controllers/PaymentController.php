@@ -34,6 +34,16 @@ class PaymentController extends Controller {
 
     public function pay() {
         if($this->auth->user()->paid) {
+            $module = $this->auth->user()->modules()->where('template', 'home')->first();
+            if(!empty($module) && !$module->pivot->complete && $module->pivot->step === $module->total_parts) {
+                $module->pivot->step++;
+                $module->pivot->complete = 1;
+                $module->pivot->completed_at = new Carbon();
+                $module->pivot->save();
+                \Session::flash('paid', true);
+                return redirect(route('home'));
+            }
+
             abort(404);
         }
         if(Carbon::now()->gt(Carbon::createFromFormat('Y-m-d H:i:s',config('belief.discountedUntil')))) {
