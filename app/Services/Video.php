@@ -1,5 +1,6 @@
 <?php
 namespace App\Services;
+use Alchemy\BinaryDriver\Listeners\DebugListener;
 use FFMpeg\Coordinate\TimeCode;
 use FFMpeg\FFMpeg;
 use FFMpeg\Format\Video\X264;

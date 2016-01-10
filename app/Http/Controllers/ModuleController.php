@@ -222,11 +222,12 @@ class ModuleController extends Controller {
                     $image = $cropper->fixOrientation();
                     $image->writeImage(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'.$random.'.jpg');
 
-                    $video->exportToMp4(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $random . '.mp4');
+                    $video->exportToMp4(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $random . '-transcoded.mp4');
+
 
                     unlink(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
 
-                    $moduleUser->data = [['localVideo' => $random . '.mp4', 'image' => $random.'.jpg']];
+                    $moduleUser->data = [['localVideo' => $random . '-transcoded.mp4', 'image' => $random.'.jpg']];
                     $moduleUser->step++;
 
 
