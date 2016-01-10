@@ -12,3 +12,5 @@ main.css
 public/uploads/comment-images
 admin.css
 public/js/pdf.js
+jsconfig.json
+.vscode/settings.json
