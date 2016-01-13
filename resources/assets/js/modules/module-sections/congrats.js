@@ -24,6 +24,7 @@ export default class CongratsSection extends Text {
 
     setup() {
         super.setup();
+        $(window).on('resize', () => {this.updateHeight()});
     }
 
 
@@ -89,25 +90,27 @@ export default class CongratsSection extends Text {
 
         let calcHeight = height-180;
 
-        this.section.css('height', height);
+        this.section.css('height', 'auto');
+        if(!window.isMobile) {
+            setTimeout(() => {
+                let height = $(window).height();
 
-        setTimeout(() => {
-            let height = $(window).height();
+                let calcHeight = height-180;
+                let contentHeight;
+                if(this.module.isComplete()) {
+                    contentHeight = this.section.find('.post-complete > .inner').outerHeight() + 180;
+                } else {
+                    contentHeight = this.section.find('.pre-complete > .inner').outerHeight() + 180;
+                }
+                if(contentHeight <= height) {
+                    this.section.css('height', height);
+                } else {
+                    this.section.css('height', contentHeight);
+                }
 
-            let calcHeight = height-180;
-            let contentHeight;
-            if(this.module.isComplete()) {
-                contentHeight = this.section.find('.post-complete > .inner').outerHeight() + 180;
-            } else {
-                contentHeight = this.section.find('.pre-complete > .inner').outerHeight() + 180;
-            }
-            if(contentHeight <= height) {
-                this.section.css('height', height);
-            } else {
-                this.section.css('height', contentHeight);
-            }
+            }, 0)
+        }
 
-        }, 0)
 
 
     }

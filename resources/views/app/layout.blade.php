@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="{{($userAgent['platform'] === 'Macintosh' && $userAgent['browser'] === 'Safari' && version_compare($userAgent['version'], '8.0.0') < 1) ? 'ltie10' : ''}}">
 <!--[if lt IE 10]><html lang="en" class="ltie10"><![endif]-->
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,9 @@
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     @endif
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script>
+        window.isMobile = {{$mobileDetect->isMobile() ? 'true' : 'false'}};
+    </script>
     <script src="{{asset('js/output.js')}}"></script>
 </head>
 <body data-page="{{ $page or 'page' }}">
@@ -32,6 +35,12 @@
         <p>Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     </div>
 <![endif]-->
+@if($userAgent['platform'] === 'Macintosh' && $userAgent['browser'] === 'Safari' && version_compare($userAgent['version'], '8.0.0') === -1)
+    <div class="browserupgrade">
+        <h1 class="plain">You are using an <strong>outdated</strong> browser.</h1>
+        <p>Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    </div>
+@endif
 
 <div class="spinner"></div>
 <div class="spinner-percentage"></div>

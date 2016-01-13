@@ -32,4 +32,12 @@ export default class FinalCongrats extends Congrats {
         timeline.to(this.section.find('.pre-complete'), 0, {autoAlpha: 0, display:'none'});
         return timeline;
     }
+
+    updateHeight() {
+        let height = $(window).height();
+
+        let calcHeight = height-180;
+
+        this.section.css('height', 'auto');
+    }
 }

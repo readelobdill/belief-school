@@ -26,7 +26,8 @@ class Module extends Model {
     }
 
     public static function getLatestModuleForUser($user) {
-        $latestModule = $user->modules()->orderBy('order', 'DESC')->first();
+        $modules = $user->modules()->get();
+        $latestModule = $modules->last();
         if($latestModule->pivot->complete) {
             if($latestModule->pivot->created_at->diffInHours() < config('belief.lockout')) {
                 return $latestModule;

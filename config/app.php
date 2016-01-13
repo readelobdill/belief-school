@@ -152,6 +152,7 @@ return [
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 
 		'App\Providers\MenuServiceProvider',
+		'App\Providers\ViewComposerProvider',
 
 	],
 
