@@ -2,7 +2,6 @@
     input {
         width: 100%;
     }
-
     li {
         margin-bottom: 20px;
     }
@@ -18,7 +17,7 @@ b.personal-habits-title {
     display: block;
 }
 
-blockquote.center{
+blockquote.center {
     text-align: center;
     border-image: none;
 }
@@ -29,5 +28,24 @@ blockquote.center{
         display: block;
         font-size: 18px;
         margin-bottom: 12px;
+    }
+}
+
+.responsive-video-container {
+    position: relative;
+    padding-bottom: 50%;
+    padding-top: 25px;
+    height: 0;
+
+    & + .responsive-video-container {
+        margin: 20px 0;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }

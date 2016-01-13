@@ -23,11 +23,11 @@
 
         <h2 class="title">Watch These</h2>
 
-        <div class="your-video">
+        <div class="responsive-video-container">
             <iframe src="https://www.youtube.com/embed/iCvmsMzlF7o" frameborder="0" allowfullscreen></iframe>
         </div>
 
-        <div class="your-video">
+        <div class="responsive-video-container">
             <iframe src="https://www.youtube.com/embed/XkziAM_ZyDM" frameborder="0" allowfullscreen></iframe>
         </div>
 
