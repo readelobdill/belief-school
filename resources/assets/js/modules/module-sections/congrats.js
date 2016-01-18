@@ -24,7 +24,7 @@ export default class CongratsSection extends Text {
 
     setup() {
         super.setup();
-        $(window).on('resize', () => {this.updateHeight()});
+
     }
 
 
@@ -46,7 +46,6 @@ export default class CongratsSection extends Text {
 
     showNext(response) {
         const timeline = new TimelineLite({onComplete: () => {
-            this.section.css('height', 'auto');
             this.updateHeight();
         }});
         let height = $(window).height();
@@ -90,8 +89,9 @@ export default class CongratsSection extends Text {
 
         let calcHeight = height-180;
 
-        this.section.css('height', 'auto');
+
         if(!window.isMobile) {
+            this.section.css('height', height);
             setTimeout(() => {
                 let height = $(window).height();
 
@@ -109,6 +109,8 @@ export default class CongratsSection extends Text {
                 }
 
             }, 0)
+        } else {
+            this.section.css('height', 'auto');
         }
 
 
