@@ -1,0 +1,133 @@
+.faq {
+    background: url('../img/home-background.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px;
+    min-width: 320px;
+
+    @include breakpoint($break-620) {
+        padding: 0;
+    }
+
+    @include breakpoint($brk-small) {
+        width: 100%;
+        padding: 0;
+    }
+
+    > .inner {
+        background: rgba($white, 0.9);
+        padding: 0 $gutter;
+
+        @include breakpoint($break-620) {
+            padding-top: 20px;
+        }
+
+        .content {
+            position: relative;
+            max-width: 920px;
+            width: 100%;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 26px;
+            color: $fontColour;
+            padding: 60px 0;
+
+            @include breakpoint($brk-small) {
+                width: 100%;
+                padding-top: 40px;
+            }
+        }
+    }
+
+    &__nav-links {
+        max-width: 445px;
+        margin: 0 auto 30px;
+    }
+
+    &__question-container {
+        border-top: 1px solid lighten($lightRed, 20%);
+        margin: 20px 0 0;
+        padding: 40px 20px 20px;
+    }
+
+    &__question {
+        position: relative;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 0 15px;
+        text-transform: initial;
+        color: $lightRed;
+
+
+        &::before {
+            content: 'Q:';
+            padding-right: 8px;
+            position: relative;
+            display: inline-block;
+            top: 0;
+        }
+    }
+
+    &__answer {
+
+        p {
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        h4 {
+            color: $fontColour;
+            font-size: 1em;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+
+    &__list {
+        padding-left: 40px;
+        margin-bottom: 24px;
+
+        li {
+            position: relative;
+            font-weight: 500;
+            font-style: italic;
+
+            &::after {
+                position: absolute;
+                font-family: 'open-sans';
+                font-size: 2em;
+                line-height: 27px;
+                content: "•";
+                left: -.7em;
+                color: $lightRed;
+            }
+        }
+    }
+
+    .content-block{
+        @include pie-clearfix();
+        width: 100%;
+        margin: 0 auto;
+        max-width: 920px;
+    }
+
+    .col {
+        float: left;
+        width: 48%;
+
+        @include breakpoint($break-800) {
+            float: none !important;
+            width: 100% !important;
+        }
+
+        &:nth-child(even) {
+            float: right;
+        }
+    }
+}
+
+.main-copy + .main-copy{
+    padding-top: 60px;
+}

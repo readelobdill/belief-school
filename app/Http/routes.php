@@ -101,6 +101,11 @@ Route::post('reset-password', ['as' => 'auth.post-reset', 'uses' => 'Auth\Passwo
 
 
 /*Misc Pages*/
+
+Route::get('faq', ['as' => 'faq', function() {
+    return view('app.misc.faq', ['page'=>'faq']);
+}]);
+
 Route::get('about', ['as' => 'about', function() {
     return view('app.misc.about', ['page'=>'about']);
 }]);
