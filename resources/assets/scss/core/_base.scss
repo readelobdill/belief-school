@@ -97,3 +97,15 @@ h1.plain {
         }
     }
 }
+
+.are-you-sure {
+    margin: 60px auto;
+    max-width: 445px;
+
+    p {
+        font-size: 17px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+        word-wrap: break-word;
+    }
+}
