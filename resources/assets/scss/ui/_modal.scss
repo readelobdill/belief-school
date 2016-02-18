@@ -85,6 +85,40 @@ html.remodal-is-locked {
     text-size-adjust: 100%;
 }
 
+.help-modal {
+    max-width: 500px;
+    padding-bottom: 0 !important;
+    height: auto !important;
+
+    &__inner {
+        padding: 50px;
+    }
+
+    &__list {
+        padding-left: 23px;
+        margin-bottom: 24px;
+
+        li {
+            position: relative;
+            font-weight: 500;
+            font-style: italic;
+            text-align: left;
+            margin-bottom: 10px;
+            line-height: 24px;
+
+            &::after {
+                position: absolute;
+                content: "•";
+                font-family: 'open-sans';
+                font-size: 1.25em;
+                top: 0;
+                left: -.7em;
+                color: $lightRed;
+            }
+        }
+    }
+}
+
 .remodal-is-initialized {
     /* Disable Anti-FOUC */
     display: inline-block;

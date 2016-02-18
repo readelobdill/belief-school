@@ -43,8 +43,10 @@
 
         <p>Tell yourself how much you believe in you and all the things you love about yourself. Celebrate the lovely words people have used to describe you, the love you have around you and the things you have already achieved. Tell yourself you are enough, that you deserve to live your best life.</p>
 
+        @include('app.ui.help-modal')
+
         <p class="center margin-top">
-            <a href="{{route('modules.forum',[$module->slug])}}" target="_blank" class="button small">Need help, try the forum?</a>
+            <a href="" data-remodal-target="help-modal" title="help">Need help?</a>
         </p>
 
         <div class="either-or">
@@ -68,6 +70,9 @@
                 </form>
             </div>
 
+            <div class="are-you-sure">
+                <p>Do a quick double check of the content you have created for this module: once you click this button it will permanently save to your Dashboard.</p>
+            </div>
             <div class="error-container" style="display:none"></div>
             <div class="actions">
                 <a href="" class="button" data-save-module>Save to dashboard <span class="percentage"></span></a>
