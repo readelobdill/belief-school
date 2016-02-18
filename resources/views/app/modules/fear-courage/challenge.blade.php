@@ -80,10 +80,11 @@
             </div>
         </form>
 
+        <div class="are-you-sure">
+            <p>Do a quick double check of the content you have created for this module: once you click this button it will permanently save to your Dashboard.</p>
+        </div>
         <div class="actions">
             <a href="#" class="button" title="Save it into your dashboard now!" data-save-module>Save it into your dashboard now!</a>
         </div>
-
-
     </div>
 </div>
