@@ -112,6 +112,12 @@
                 }
             }
 
+            &.ico-faq {
+                &:before {
+                    content: '\e633';
+                }
+            }
+
             // Home Module
             // person-brain
             &.ico-home {

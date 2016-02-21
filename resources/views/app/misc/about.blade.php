@@ -160,6 +160,62 @@
                     </div>
                 </div>
 
+                <div class="pricing-container">
+                    <h1 class="title">
+                        <span data-arc="120">&middot; Belief School <b>Coached</b> &middot;</span>
+                        <div class="price">$270 <span>NZD</span></div>
+                    </h1>
+
+                    <div class="content-block --spacer">
+                        <div class="col">
+                            <p>Twice a year, over an eight week period, Paula Gosney works closely with a group who are looking for greater accountability and additional support as they work through Belief School, on their journey of self-discovery.</p>
+
+                            <p>Over the last decade, Paula has spent hundreds of hours working with people one-on-one, helping them catch sight of their own potential.  She is deeply passionate about helping you see how capable, creative and valuable you are.</p>
+                        </div>
+                        <div class="col">
+                            <p>This special coached program is an opportunity for you to work through Belief School with the creator, gaining more in-depth insights into the value of personal development and how you can apply this to yourself. You will be part of a dynamic group who will support and encourage you.</p>
+
+                            <p>The next coached course commences on the <b>4th of April.</b></p>
+                        </div>
+                    </div>
+
+                    @if(!Auth::check() || !Auth::user()->paid)
+                        <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
+                    @endif
+
+                    <div class="content-block">
+                        <h1 class="plain">What you get</h1>
+
+                        <div class="what-you-get --coached">
+                            <div class="what-you-get__node">
+                                <div class="icon sheild"></div>
+                                <p><b>Live webinars</b> <br />Twice weekly live webinars with Paula Gosney. One at the beginning of the week to work through the module, its purpose and the outcomes for you to create that week. The second on Thursday to answer questions, give support and help if you’re stuck. These sessions are recorded, if you can’t make it, they’ll be sent to you.</p>
+                            </div>
+
+                            <div class="what-you-get__node">
+                                <div class="icon gem"></div>
+                                <p><b>Work with Paula Gosney</b> <br />Have access to Paula’s wealth of knowledge, years of coaching experience and burning desire to help you see your brilliant self.</p>
+                            </div>
+
+                            <div class="what-you-get__node">
+                                <div class="icon facebook"></div>
+                                <p><b>Closed Facebook</b> <br />A group set up only for those on this specific program, facilitated by the Belief School Team, with Paula Gosney actively involved.</p>
+                            </div>
+
+                            <div class="what-you-get__node">
+                                <div class="icon forum"></div>
+                                <p><b>Weekly Q&amp;A</b> <br />A live session with Paula Gosney after each webinar – also recorded.</p>
+                            </div>
+
+                            <div class="what-you-get__node">
+                                <div class="icon book"></div>
+                                <p><b>Additional tools</b> and insights to support your journey</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <h1 class="plain">Is any of this chatter, getting in your way?</h1>
 
                 <ul class="accordion">
