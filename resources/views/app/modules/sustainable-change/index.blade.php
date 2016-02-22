@@ -13,7 +13,7 @@
         <section class="i-am module-section has-container has-text" data-type="Text" data-part="3">
             @include('app/modules/sustainable-change/challenge')
         </section>
-        <section class="affirmations module-section has-container has-text" data-type="Form" data-part="4" >
+        <section class="affirmations module-section has-container has-text" data-type="Form" data-part="4"  data-submit-step="0">
             @include('app/modules/sustainable-change/response')
         </section>
         <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4" data-step="1">

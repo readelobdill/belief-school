@@ -14,6 +14,7 @@ class ModuleSection {
     constructor(section, module) {
         this.section = $(section);
         this.module = module;
+        this.step = this.section.data('submit-step');
         this.setupEventListeners();
         this.accordian = new Accordion(this.section.find('.accordion'), this);
     }
@@ -66,6 +67,10 @@ class ModuleSection {
             }
             this.submitting = true;
            this.module.nextSection();
+        });
+        this.section.on('click', '[data-back]', e => {
+            e.preventDefault();
+            this.module.previousSection();
         });
     }
 }

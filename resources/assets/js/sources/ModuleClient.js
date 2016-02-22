@@ -14,7 +14,7 @@ const defaultHeaders = {
 
 class ModuleClient extends EventEmitter {
 
-    saveModule(url, data) {
+    saveModule(url, data, step) {
         this.emit('load:start');
         return fetch(url, {
             method: 'post',
@@ -23,7 +23,10 @@ class ModuleClient extends EventEmitter {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             }, defaultHeaders),
-            body: JSON.stringify(data)
+            body: JSON.stringify({
+                data: data,
+                step: step
+            })
         }).then(response => {
             if((response.status < 200 || response.status >= 400) && response.status !== 0 ) {
                 this.emit('load:error');

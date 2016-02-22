@@ -10,10 +10,10 @@
             @include('app/modules/gratitude/intro-video')
         </section>
 
-        <section class="i-am module-section has-container has-text" data-type="Form" data-part="3">
+        <section class="i-am module-section has-container has-text" data-type="Form" data-part="3" data-submit-step="0">
             @include('app/modules/gratitude/challenge')
         </section>
-        <section class="affirmations module-section has-container has-text" data-type="Form" data-part="4" data-step="1">
+        <section class="affirmations module-section has-container has-text" data-type="Form" data-part="4" data-step="1" data-submit-step="1">
             @include('app/modules/gratitude/response')
         </section>
         <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4" data-step="2">

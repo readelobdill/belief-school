@@ -57,8 +57,9 @@ export default class Challenge extends Text {
             let data = serialize(this.section.find('form'));
             this.module.setData(data);
             let url = this.module.getUpdateUrl();
-            client.saveModule(url, data).then(() => {
+            client.saveModule(url, data, this.step).then(() => {
                 this.module.nextSection();
+                this.submitting = false;
             })
         }
 

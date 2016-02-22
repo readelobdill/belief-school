@@ -10,7 +10,7 @@
             @include('app/modules/boomerang/intro-video')
         </section>
 
-        <section class="boomerang module-section has-container has-text" data-type="Boomerang" data-part="3">
+        <section class="boomerang module-section has-container has-text" data-type="Boomerang" data-part="3" data-submit-step="0">
             @include('app/modules/boomerang/boomerang')
         </section>
         <section class="congrats-section module-section has-container" data-type="Congrats" data-part="4" data-step="1">

@@ -39,8 +39,9 @@ export default class Form extends Text {
         this.submitting = true;
 
         if(this.validator.validate()) {
-            client.saveModule(url, data).then(() => {
+            client.saveModule(url, data, this.step).then(() => {
                 this.module.nextSection();
+                this.submitting = false;
             })
         }
     }

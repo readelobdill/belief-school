@@ -169,18 +169,20 @@ class ModuleController extends Controller {
 
         $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first()->pivot;
 
-        if($moduleUser->step >= $module->total_parts) {
-            abort(404);
+        if($moduleUser->step >= $module->total_parts) { //No longer want to not allow changes once past the end but not completed yet
+            //abort(404);
         }
         if($moduleUser->complete) {
             abort(404);
         }
 
 
-
+        $step = intval($this->request->get('step',$moduleUser->step));
         switch($module->type) {
             case 'tag-cloud':
-                $moduleUser->step++;
+                if($step === $moduleUser->step) {
+                    $moduleUser->step ++;
+                }
                 break;
             case 'dreamboard':
                 if($this->request->file('image') && $this->request->input('name')) {
@@ -228,14 +230,18 @@ class ModuleController extends Controller {
                     unlink(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
 
                     $moduleUser->data = [['localVideo' => $random . '-transcoded.mp4', 'image' => $random.'.jpg']];
-                    $moduleUser->step++;
+                    if($step === $moduleUser->step) {
+                        $moduleUser->step ++;
+                    }
 
 
                     break;
                 }
             default:
                 $moduleValidator = new ModuleCompletion($module);
-                if(!$moduleValidator->isValid($moduleUser->step, $this->request->input())) {
+
+                $requestData = $this->request->get('data');
+                if(!$moduleValidator->isValid($step, $requestData)) {
                     abort(422);
                 }
 
@@ -243,9 +249,11 @@ class ModuleController extends Controller {
                 if(empty($data)) {
                     $data = [];
                 }
-                $data[$moduleUser->step] = $this->request->input();
+                $data[$step] = $requestData;
                 $moduleUser->data = $data;
-                $moduleUser->step++;
+                if($step === $moduleUser->step) {
+                    $moduleUser->step ++;
+                }
 
                 break;
         }

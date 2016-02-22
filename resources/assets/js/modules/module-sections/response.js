@@ -27,8 +27,9 @@ export default class Affirmations extends Text {
             this.submitting = true;
             let data = serialize(this.section.find('form'));
             let url = this.module.getUpdateUrl();
-            client.saveModule(url, data).then(() => {
+            client.saveModule(url, data, this.step).then(() => {
                 this.module.nextSection();
+                this.submitting = false;
             });
         }
 

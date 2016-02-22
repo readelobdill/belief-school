@@ -18,8 +18,9 @@ export default class Boomerang extends Text {
 
         let url = this.module.getUpdateUrl();
         let data = {'email': true}
-        return client.saveModule(url, data).then(() => {
+        return client.saveModule(url, data, this.step).then(() => {
             this.module.nextSection();
+            this.submitting = false;
         });
     }
 }
