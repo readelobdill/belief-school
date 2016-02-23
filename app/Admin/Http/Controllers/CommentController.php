@@ -11,6 +11,7 @@ use App\Models\Comment;
 class CommentController extends Controller {
     protected $request;
     public function __construct(Request $request) {
+        parent::__construct();
         $this->request = $request;
     }
 

@@ -126,6 +126,7 @@ Route::get('privacy-terms', ['as' => 'privacy-terms', function() {
 /*Admin routes*/
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'isAdmin']], function() {
     Route::get('/', ['as' => 'admin.home', 'uses' => '\App\Admin\Http\Controllers\DashboardController@getIndex']);
+    Route::post('/update-options', ['as' => 'dashboard.update-options', 'uses' => '\App\Admin\Http\Controllers\DashboardController@postUpdateOptions']);
 
     Route::group(['prefix' => 'users'], function() {
         Route::get('', ['as' => 'admin.users.list', 'uses' => '\App\Admin\Http\Controllers\UserController@getList']);

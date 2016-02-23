@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class ModuleController extends Controller {
     protected $request;
     public function __construct(Request $request) {
+        parent::__construct();
         $this->request = $request;
     }
 
