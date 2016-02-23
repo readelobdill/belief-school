@@ -91,5 +91,101 @@ span.resolution {
     padding: 25px 0;
 }
 
+.course-container {
+    $gutter: 40px;
+
+    @include clearfix();
+    position: relative;
+    width: 100%;
+    max-width: 660px;
+    margin: 60px auto 30px;
+
+    &.hidden {
+        .course-container__column {
+            width: 100%;
+            float: none;
+            padding: 0;
+        }
+
+        .course-container__column:nth-child(2) {
+            display: none;
+        }
+
+        ul {
+            margin: 40px auto;
+            min-height: auto;
+        }
+    }
+
+    &__column {
+        width: 50%;
+        float: left;
+        padding: 30px 40px 30px 0;
+
+        &:nth-child(2) {
+            float: right;
+            border-left: 2px solid $grey;
+            padding: 30px 0 0 40px;
+        }
+    }
+
+    &__title {
+        line-height: 21px;
+        letter-spacing: 0.0075em;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        color: $fontColour;
+        margin-bottom: 1.25em;
+    }
+
+    &__sub-title {
+        display: block;
+        font-size: 13px;
+        font-style: italic;
+        font-weight: 200;
+    }
+
+    p {
+        margin-bottom: 1.25em;
+    }
+
+    ul {
+        max-width: 445px;
+        margin: 40px 0;
+        padding-left: 26px;
+        min-height: 240px;
+
+        li {
+            position: relative;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 10px;
+            line-height: 27px;
+
+            &::after {
+                position: absolute;
+                content: "•";
+                font-family: 'open-sans';
+                font-size: 1.25em;
+                top: 0;
+                left: -.7em;
+                color: $lightRed;
+            }
+        }
+    }
+
+
+
+    a.button {
+        margin-bottom: 10px;
+        padding: 12px 20px;
+
+        &::after, &::before {
+            display: none;
+        }
+    }
+}
+
 @import "questions";
 @import "question-nav";
