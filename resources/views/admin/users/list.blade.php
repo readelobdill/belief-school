@@ -14,6 +14,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Paid</th>
+                <th>Type</th>
                 <th>Age</th>
                 <th>Gender</th>
                 <th>Module</th>
@@ -30,6 +31,7 @@
                     <td>{{$user->first_name }} {{$user->last_name}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->paid}}</td>
+                    <td>{{!empty($user->type) ? $user->type : 'normal'}}</td>
                     <td>
                         @if(isset($user->modules[0]) && $user->modules[0]->pivot->complete)
                             {{$user->modules[0]->pivot->data->{'1'}->age}}

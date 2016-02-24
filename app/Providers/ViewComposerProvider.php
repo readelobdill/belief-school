@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Module;
+use App\Models\Option;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\View;
@@ -15,6 +16,10 @@ class ViewComposerProvider extends ServiceProvider {
         view()->composer(
             'app.layout', 'App\Http\ViewComposers\LayoutComposer'
         );
+
+        view()->composer('app.modules.home.details', function($view) {
+            $view->with('options', Option::getAll());
+        });
     }
 
 

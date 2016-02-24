@@ -10,6 +10,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 	use Authenticatable, CanResetPassword;
 
+    const COACHED = 'coached';
+    const NORMAL = 'normal';
 	/**
 	 * The database table used by the model.
 	 *

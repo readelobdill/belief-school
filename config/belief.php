@@ -19,5 +19,8 @@ Belief School
     ',
     'discountedUntil' => '2015-11-18 00:00:00',
     'discountedPrice' => 1.0,
-    'price' => 135.0
+    'price' => [
+        'normal' => 135.0,
+        'coached' => 270.0
+    ]
 ];

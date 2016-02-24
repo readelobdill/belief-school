@@ -32,7 +32,10 @@ class PaymentController extends Controller {
         $this->request = $request;
     }
 
-    public function pay() {
+    public function pay($type = User::NORMAL) {
+        if(!in_array($type, [User::NORMAL, User::COACHED])) {
+            abort(404);
+        }
         if($this->auth->user()->paid) {
             $module = $this->auth->user()->modules()->where('template', 'home')->first();
             if(!empty($module) && !$module->pivot->complete && $module->pivot->step === $module->total_parts) {
@@ -47,11 +50,11 @@ class PaymentController extends Controller {
             abort(404);
         }
         if(Carbon::now()->gt(Carbon::createFromFormat('Y-m-d H:i:s',config('belief.discountedUntil')))) {
-            $amount = config('belief.price');
+            $amount = config('belief.price.'.$type);
         } else {
             $amount = config('belief.discountedPrice');
         }
-        $this->payment->handlePayment($this->auth->user(), $amount);
+        $this->payment->handlePayment($this->auth->user(), $amount, $type);
     }
 
     public function completePayment() {
@@ -59,12 +62,15 @@ class PaymentController extends Controller {
 
         if($result->isSuccessful()) {
             $data = $result->getData();
-            $userId = intval($data->MerchantReference);
+            $userInfo = explode(',',$data->MerchantReference);
+            $userId = intval($userInfo[0]);
+            $type = $userInfo[1];
             $user = User::find($userId);
             if($user->paid) {
                 return redirect(route('home'));
             }
             $user->paid = true;
+            $user->type = $type;
             $user->save();
 
             $module = $user->modules()->where('template', 'home')->first();

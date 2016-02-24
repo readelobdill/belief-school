@@ -2,6 +2,7 @@
 namespace App\Services;
 
 
+use App\Models\User;
 use Omnipay\Omnipay;
 
 class Payment {
@@ -15,11 +16,11 @@ class Payment {
         $this->gateway->setTestMode(config('app.debug'));
     }
 
-    public function handlePayment($user, $amount) {
+    public function handlePayment($user, $amount, $type = User::NORMAL) {
         $params = [
             'amount' => $amount,
             'currency' => 'NZD',
-            'description' => $user->id,
+            'description' => "{$user->id},{$type}",
             'returnUrl' => route('payments.return_url')
         ];
         $purchase = $this->gateway->purchase($params);

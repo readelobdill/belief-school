@@ -50,7 +50,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('account', ['as' => 'account', 'middleware' => 'auth', 'uses' => 'UserController@account']);
     Route::post('account', ['as' => 'account.submit', 'middleware' => 'auth', 'uses' => 'UserController@submitAccount']);
 
-    Route::get('payments/pay', ['as' => 'payment', 'middleware' => 'auth','uses' => 'PaymentController@pay']);
+    Route::get('payments/pay/{type?}', ['as' => 'payment', 'middleware' => 'auth','uses' => 'PaymentController@pay']);
 
     Route::any('payments/return', ['as' => 'payments.return_url', 'middleware' => 'auth', 'uses' => 'PaymentController@completePayment']);
     Route::any('payments/failure', ['as' => 'payments.fail', 'middleware' => 'auth', 'uses' => 'PaymentController@paymentFailed']);

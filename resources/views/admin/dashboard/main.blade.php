@@ -13,7 +13,7 @@
             {!! csrf_field() !!}
             <div class="form-group">
                 <input type="checkbox" name="tutored_sessions_enabled" id="tutored_sessions_enabled" value="1" {{isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '1' ? 'checked' : '' }}>
-                <label for="tutored_sessions_enabled">Tutored Sessions</label>
+                <label for="tutored_sessions_enabled">Belief School Coached</label>
             </div>
 
             <button class="btn btn-info" type="submit">Update</button>

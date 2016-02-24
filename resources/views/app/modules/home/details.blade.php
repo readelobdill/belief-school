@@ -16,7 +16,7 @@
 
     </div>
 
-    <div class="course-container">
+    <div class="course-container {{isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '0' ? 'hidden' : ''}}">
         <div class="course-container__column">
             <h5 class="course-container__title">Belief School</h5>
 
@@ -27,10 +27,10 @@
                 <li>Access to the Belief School Community Forum</li>
             </ul>
             <div class="actions">
-                <a href="{{route('payment')}}" class="button">Start Belief School</a>
+                <a href="{{route('payment',[App\Models\User::NORMAL])}}" class="button">Start Belief School</a>
             </div>
         </div>
-
+        @if(isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '1')
         <div class="course-container__column">
             <h5 class="course-container__title">Belief School Coached</h5>
             <ul>
@@ -41,9 +41,10 @@
                 <li>Additional tools and insights to support your journey</li>
             </ul>
             <div class="actions">
-                <a href="{{route('payment')}}" class="button">Belief School Coached</a>
+                <a href="{{route('payment', [App\Models\User::COACHED])}}" class="button">Belief School Coached</a>
             </div>
         </div>
+        @endif
     </div>
 
     <div class="content">
