@@ -65,6 +65,10 @@ export default class Challenge extends Text {
 
     }
 
+    submit() {
+        this.submitChallenge();
+    }
+
 
 
 }

@@ -29,11 +29,19 @@ class Module {
         this.setupEventListeners();
     }
 
+    submitAndNextSection() {
+        if(this.sections[this.currentSection].submit !== undefined) {
+            return this.sections[this.currentSection].submit();
+        } else {
+            this.nextSection();
+        }
+    }
+
     nextSection() {
-        this.goToSection(this.currentSection + 1);
+        return this.goToSection(this.currentSection + 1);
     }
     previousSection() {
-        this.goToSection(this.currentSection - 1);
+        return this.goToSection(this.currentSection - 1);
     }
     goToSection(section) {
         $('body').attr('data-current-section', section);
@@ -53,7 +61,14 @@ class Module {
     }
 
     setupEventListeners() {
-
+        $('body').on('click', '[data-back]', e => {
+            e.preventDefault();
+            this.previousSection();
+        });
+        $('body').on('click', '[data-forward]', e => {
+            e.preventDefault();
+            this.submitAndNextSection();
+        });
     }
 
     getUpdateUrl() {

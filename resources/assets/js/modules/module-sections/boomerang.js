@@ -23,5 +23,9 @@ export default class Boomerang extends Text {
             this.submitting = false;
         });
     }
+
+    submit() {
+        this.updateModule();
+    }
 }
 

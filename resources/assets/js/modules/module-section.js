@@ -66,12 +66,11 @@ class ModuleSection {
                 return;
             }
             this.submitting = true;
-           this.module.nextSection();
+           this.module.nextSection().then(e => {
+               this.submitting = false;
+           });
         });
-        this.section.on('click', '[data-back]', e => {
-            e.preventDefault();
-            this.module.previousSection();
-        });
+
     }
 }
 

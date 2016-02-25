@@ -15,37 +15,41 @@
         </blockquote>
 
     </div>
+    @if(isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '1')
+        <div class="course-container {{isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '0' ? 'hidden' : ''}}">
+            <div class="course-container__column">
+                <h5 class="course-container__title">Belief School</h5>
 
-    <div class="course-container {{isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '0' ? 'hidden' : ''}}">
-        <div class="course-container__column">
-            <h5 class="course-container__title">Belief School</h5>
+                <ul>
+                    <li>Full Access to Belief School</li>
+                    <li>Self-discipline exercises</li>
+                    <li>Unlock a Belief School Manifesto on completion of the course</li>
+                    <li>Access to the Belief School Community Forum</li>
+                </ul>
+                <div class="actions">
+                    <a href="{{route('payment',[App\Models\User::NORMAL])}}" class="button">Start Belief School</a>
+                </div>
+            </div>
+            <div class="course-container__column">
+                <h5 class="course-container__title">Belief School Coached</h5>
+                <ul>
+                    <li>Work with Paula Gosney</li>
+                    <li>Twice weekly live webinars with Paula Gosney</li>
+                    <li>Closed community Facebook group</li>
+                    <li>Weekly Q&amp;A sessions</li>
+                    <li>Additional tools and insights to support your journey</li>
+                </ul>
+                <div class="actions">
+                    <a href="{{route('payment', [App\Models\User::COACHED])}}" class="button">Belief School Coached</a>
+                </div>
+            </div>
 
-            <ul>
-                <li>Full Access to Belief School</li>
-                <li>Self-discipline exercises</li>
-                <li>Unlock a Belief School Manifesto on completion of the course</li>
-                <li>Access to the Belief School Community Forum</li>
-            </ul>
-            <div class="actions">
-                <a href="{{route('payment',[App\Models\User::NORMAL])}}" class="button">Start Belief School</a>
-            </div>
         </div>
-        @if(isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '1')
-        <div class="course-container__column">
-            <h5 class="course-container__title">Belief School Coached</h5>
-            <ul>
-                <li>Work with Paula Gosney</li>
-                <li>Twice weekly live webinars with Paula Gosney</li>
-                <li>Closed community Facebook group</li>
-                <li>Weekly Q&amp;A sessions</li>
-                <li>Additional tools and insights to support your journey</li>
-            </ul>
-            <div class="actions">
-                <a href="{{route('payment', [App\Models\User::COACHED])}}" class="button">Belief School Coached</a>
-            </div>
+    @else
+        <div class="actions">
+            <a href="{{route('payment', [App\Models\User::NORMAL])}}" class="button" >Yes I want to start Belief School</a>
         </div>
-        @endif
-    </div>
+    @endif
 
     <div class="content">
 
