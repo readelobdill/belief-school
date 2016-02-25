@@ -22,5 +22,6 @@ Belief School
     'price' => [
         'normal' => 135.0,
         'coached' => 270.0
-    ]
+    ],
+    'listId' => env('MAILCHIMP_LIST_ID','eb24524e53'),
 ];

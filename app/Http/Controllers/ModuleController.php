@@ -2,16 +2,19 @@
 namespace App\Http\Controllers;
 use App\Models\Module;
 use App\Models\ModuleUser;
+use App\Models\User;
 use App\Services\CommentRenderer;
 use App\Services\Cropper;
 use App\Services\DreamboardRenderer;
 use App\Services\ModuleCompletion;
 use App\Services\Video;
 use Carbon\Carbon;
+use DrewM\MailChimp\MailChimp;
 use FFMpeg\Coordinate\TimeCode;
 use FFMpeg\FFMpeg;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use stojg\crop\CropBalanced;
 use stojg\crop\CropEntropy;
@@ -265,12 +268,22 @@ class ModuleController extends Controller {
 
     }
 
-    public function completeModule($module) {
+    public function completeModule(Request $request, MailChimp $mailChimp,$module) {
         $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first();
         if(!empty($moduleUser) && !$moduleUser->pivot->complete) {
             $moduleUser->pivot->complete = true;
             $moduleUser->pivot->completed_at = new Carbon();
             $moduleUser->pivot->save();
+            $mailChimp->put('lists/'.config('belief.listId', '').'/members/'.md5(Str::lower($request->user()->email)), [
+                'status' => 'subscribed',
+                'email_address' => $request->user()->email,
+                'merge_fields' => [
+                    'FNAME' => $request->user()->first_name,
+                    'LNAME' => $request->user()->last_name,
+                    'MODNUM' => $moduleUser->order,
+                    'TYPE' => $request->user()->type
+                ],
+            ]);
         } else {
             abort(404);
         }

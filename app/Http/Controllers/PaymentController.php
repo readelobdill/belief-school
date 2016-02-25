@@ -3,8 +3,10 @@
 use App\Models\User;
 use App\Services\Payment;
 use Carbon\Carbon;
+use DrewM\MailChimp\MailChimp;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PaymentController extends Controller {
 
@@ -32,7 +34,7 @@ class PaymentController extends Controller {
         $this->request = $request;
     }
 
-    public function pay($type = User::NORMAL) {
+    public function pay(Request $request, MailChimp $mailChimp,$type = User::NORMAL) {
         if(!in_array($type, [User::NORMAL, User::COACHED])) {
             abort(404);
         }
@@ -43,6 +45,16 @@ class PaymentController extends Controller {
                 $module->pivot->complete = 1;
                 $module->pivot->completed_at = new Carbon();
                 $module->pivot->save();
+                $mailChimp->post('lists/'.config('belief.listId', '').'/members', [
+                    'status' => 'subscribed',
+                    'email_address' => $request->user()->email,
+                    'merge_fields' => [
+                        'FNAME' => $request->user()->first_name,
+                        'LNAME' => $request->user()->last_name,
+                        'MODNUM' => $module->order,
+                        'TYPE' => $request->user()->type
+                    ],
+                ]);
                 \Session::flash('paid', true);
                 return redirect(route('home'));
             }
@@ -57,7 +69,7 @@ class PaymentController extends Controller {
         $this->payment->handlePayment($this->auth->user(), $amount, $type);
     }
 
-    public function completePayment() {
+    public function completePayment(MailChimp $mailChimp) {
         $result = $this->payment->completePayment();
 
         if($result->isSuccessful()) {
@@ -78,6 +90,18 @@ class PaymentController extends Controller {
             $module->pivot->complete = 1;
             $module->pivot->completed_at = new \Carbon\Carbon();
             $module->pivot->save();
+
+            $mailChimp->post('lists/'.config('belief.listId', '').'/members', [
+                'status' => 'subscribed',
+                'email_address' => $user->email,
+                'merge_fields' => [
+                    'FNAME' => $user->first_name,
+                    'LNAME' => $user->last_name,
+                    'MODNUM' => $module->order,
+                    'TYPE' => $user->type
+                ],
+            ]);
+
             \Session::flash('paid', true);
             return redirect(route('home'));
         } else {

@@ -1,5 +1,6 @@
 <?php namespace App\Providers;
 
+use DrewM\MailChimp\MailChimp;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
@@ -29,6 +30,9 @@ class AppServiceProvider extends ServiceProvider {
 			'Illuminate\Contracts\Auth\Registrar',
 			'App\Services\Registrar'
 		);
+		$this->app->singleton(MailChimp::class, function() {
+			return new MailChimp(config('mail.mailchimp.apiKey'));
+		});
 	}
 
 }
