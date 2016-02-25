@@ -134,7 +134,7 @@ class ModuleController extends Controller {
 
 
 
-    public function updateModule($module) {
+    public function updateModule(Vimeo $vimeo, $module) {
         $now = new Carbon();
         $hasModule = $this->auth->user()->modules()->where('modules.id', '=', $module->id)->first();
 
@@ -213,26 +213,37 @@ class ModuleController extends Controller {
 
                 break;
             case 'you-to-you':
-                if($this->request->file('video') !== null) {
-                    $file = $this->request->file('video');
-                    $random = Str::random(32);
-                    $fileName = $random.'.'.$file->guessExtension();
-                    $file->move(public_path('uploads/you-to-you/'.$this->auth->user()->id), $fileName);
-                    //Recreating the file, as when move is called it doesn't update the location
-                    //$file = new File(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
-                    $video = new Video(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
-                    $video->saveFirstFrame(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'.$random.'.jpg');
+                if(($completeUri = $this->request->get('data[complete_uri]', null, true)) !== null) {
 
-                    $cropper = new Cropper(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'.$random.'.jpg');
-                    $image = $cropper->fixOrientation();
-                    $image->writeImage(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'.$random.'.jpg');
+                    $response = $vimeo->request($completeUri, [], 'DELETE');
+                    $location = $response['headers']['Location'];
+                    $id = str_replace('/videos/', '', $location);
 
-                    $video->exportToMp4(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $random . '-transcoded.mp4');
+                    $response = $vimeo->request($location, [
+                        'name' =>$this->auth->user()->first_name . ' ' . $this->auth->user()->last_name,
+                        'privacy' => [
+                            'view' => 'unlisted',
+                            'download' => false,
+                            'add' => false,
+                            'comments' => 'nobody',
+                            'embed' => 'public'
+                        ],
+                        'embed' => [
+                            'buttons' => [
+                                'like' => false,
+                                'watchlater' => false,
+                                'share' => false,
+                                'embed' => false,
+                            ],
+                            'logos' => [
+                                'vimeo' => false
+                            ]
+                        ]
+                    ], 'PATCH');
 
 
-                    unlink(public_path('uploads/you-to-you/'.$this->auth->user()->id).'/'. $fileName);
 
-                    $moduleUser->data = [['localVideo' => $random . '-transcoded.mp4', 'image' => $random.'.jpg']];
+                    $moduleUser->data = [['video' => $response['body']]];
                     if($step === $moduleUser->step) {
                         $moduleUser->step ++;
                     }
@@ -380,6 +391,38 @@ class ModuleController extends Controller {
         $dreamboard = new DreamboardRenderer($moduleUser->data, $moduleUser->user);
 
         return response($dreamboard->renderToImage($this->request->input('fb', false))->getImageBlob(),200,['Content-type' => 'image/jpeg']);
+
+    }
+
+
+    public function getVimeoUploadDetails(Request $request) {
+        $lib = new Vimeo(env('VIMEO_APP_ID'), env('VIMEO_SECRET'), env('VIMEO_ACCESS_TOKEN'));
+
+        $response = $lib->request('/me/videos', ['type' => 'streaming'], 'POST');
+        return $response['body'];
+    }
+
+    public function getVimeoThumbnail(Vimeo $vimeo, $userId, $id) {
+
+        $moduleUser = User::findOrFail($userId)->modules()->where('modules.id', $id)->first();
+
+        if($moduleUser->type === 'you-to-you' && $moduleUser->pivot->complete) {
+            if(isset($moduleUser->pivot->data[0]->video)) {
+                $video = $moduleUser->pivot->data[0]->video;
+                $response = $vimeo->request($video->uri, [], 'GET');
+                if($response['body']['status'] === 'available') {
+                    $thumbnails = $response['body']['pictures']['sizes'];
+                    $lastThumbnail = $thumbnails[count($thumbnails) - 1]['link'];
+                    return redirect($lastThumbnail);
+                }
+            }
+
+
+
+
+
+        }
+        abort(404);
 
     }
 }

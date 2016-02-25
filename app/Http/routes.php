@@ -44,6 +44,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::post('modules/{module}/update', ['as' => 'modules.update', 'uses' => 'ModuleController@updateModule']);
     Route::post('modules/{module}/complete', ['as' => 'modules.complete', 'uses' => 'ModuleController@completeModule']);
+    Route::get('vimeo-upload', ['as' => 'vimeo.upload-url', 'uses' => 'ModuleController@getVimeoUploadDetails']);
 
 
 
@@ -161,3 +162,4 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'isAdmin']], functio
 });
 
 Route::get('profile', ['as' => 'users.profile', 'uses' => 'UserController@getProfile']);
+Route::get('vimeo-thumbnail/{userId}/{id}', ['as' => 'vimeo.thumbnail', 'uses' => 'ModuleController@getVimeoThumbnail']);

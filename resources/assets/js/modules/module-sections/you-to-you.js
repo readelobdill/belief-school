@@ -4,6 +4,7 @@ import Text from './text';
 import serialize from 'util/serializeForm';
 import client from 'sources/ModuleClient';
 import {showRawError, hideRawError} from 'util/errors';
+import MediaUploader from 'util/vimeo-uploader';
 
 export default class YouToYou extends Text {
     letterChosen = false;
@@ -53,16 +54,34 @@ export default class YouToYou extends Text {
             this.submitted = true;
             this.section.find('.error-container').hide().html('');
             let url = this.module.getUpdateUrl();
-            let videoInput = this.section.find('.upload-video [name=video]')[0];
+            let $videoInput = this.section.find('.upload-video [name=video]');
+            let videoInput = $videoInput[0];
             if(videoInput.files.length > 0) {
-                client.saveVideo(url, videoInput.files[0]).then(e => {
-                    var url = this.module.getCompleteUrl();
-                    return client.completeModule(url).then(() => this.module.nextSection());
-                }, error => {
-
-                }, progress => {
-                    this.setProgress(progress);
-                });
+                client.getVimeoUploadData($videoInput.data('vimeo-upload-url')).then(response => {
+                    console.log(response);
+                    let uploader = new MediaUploader({
+                        file: videoInput.files[0],
+                        url: response.upload_link_secure,
+                        ticket_id: response.ticket_id,
+                        complete_url: response.complete_uri,
+                        onComplete: complete_uri => {
+                            client.saveModule(url, {complete_uri}).then(response => {
+                                var url = this.module.getCompleteUrl();
+                                return client.completeModule(url).then(() => {
+                                    this.section.find('.actions .button').html('Done!');
+                                    this.module.nextSection();
+                                });
+                            })
+                        },
+                        onProgress: oEvent => {
+                            if (oEvent.lengthComputable) {
+                                let percentComplete = oEvent.loaded / oEvent.total;
+                                this.setProgress(percentComplete);
+                            }
+                        }
+                    });
+                    uploader.upload();
+                })
             } else {
                 let data = serialize(this.section.find('form.letter'));
                 client.saveModule(url, data).then(() => {

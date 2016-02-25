@@ -55,7 +55,7 @@
                     <div class="upload-icon"></div>
                     <div class="upload-status">Upload your video</div>
                     <form action="" class="upload-video">
-                        <input type="file" name="video" accept="video/*">
+                        <input type="file" name="video" accept="video/*" data-vimeo-upload-url="{{route('vimeo.upload-url')}}">
                     </form>
                 </div>
             </div>

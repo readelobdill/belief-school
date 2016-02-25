@@ -13,14 +13,15 @@
 <meta property="og:type" content="article" />
 <meta property="og:description" content="" />
 
-<meta property="og:image" content="{{asset('uploads/you-to-you/'.$module->pivot->user->id . '/' . $module->pivot->data[0]->image)}}" />
+<meta property="og:image" content="{{route('vimeo.thumbnail', [$module->pivot->user->id, $module->id])}}" />
 <meta property="og:image:height" content="720" />
 <meta property="og:image:width" content="1280" />
 
-<meta property="og:video:url" content="{{asset('uploads/you-to-you/'.$module->pivot->user->id. '/' . $module->pivot->data[0]->localVideo)}}" />
+<meta property="og:video:url" content="https://vimeo.com/moogaloop.swf?clip_id={{explode(':',str_replace('/videos/', '', $module->pivot->data[0]->video->uri))[0]}}&autoplay=1" />
+<meta property="og:video:secure_url" content="https://vimeo.com/moogaloop.swf?clip_id={{explode(':',str_replace('/videos/', '', $module->pivot->data[0]->video->uri))[0]}}&autoplay=1" />
 <meta property="og:video:width" content="1280" />
 <meta property="og:video:height" content="720" />
-<meta property="og:video:type" content="video/mp4" />
+<meta property="og:video:type" content="application/x-shockwave-flash" />
 
 @endsection
 
@@ -30,7 +31,7 @@
         Here I am
     </h1>
     <div class="your-video">
-        <video autoplay controls src="{{asset('uploads/you-to-you/'.$module->pivot->user->id . '/' . $module->pivot->data[0]->localVideo)}}"></video>
+        {!! $module->pivot->data[0]->video->embed->html !!}
     </div>
 </div>
 @endsection

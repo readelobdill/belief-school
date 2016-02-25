@@ -80,6 +80,23 @@ class ModuleClient extends EventEmitter {
         });
     }
 
+    getVimeoUploadData(url) {
+        return fetch(url, {
+            method: 'get',
+            credentials: 'same-origin',
+            headers: $.extend({}, {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }, defaultHeaders)
+        }).then(response => {
+            if((response.status < 200 || response.status >= 400) && response.status !== 0 ) {
+                this.emit('load:error');
+                return Q.reject(response.statusText);
+            }
+            return response;
+        }).then(response => response.json())
+    }
+
     registerUser(url, data) {
         this.emit('load:start');
         return fetch(url, {

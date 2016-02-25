@@ -11,10 +11,10 @@
 
             @if(isset($module->pivot->data[0]->letter))
                 <p class="dashboard">{{$module->pivot->data[0]->letter}}</p>
-            @elseif(isset($module->pivot->data[0]->localVideo))
+            @elseif(isset($module->pivot->data[0]->video))
                 <div class="your-video">
-                    <video controls preload="metadata" src="{{asset('uploads/you-to-you/'.Auth::user()->id . '/' . $module->pivot->data[0]->localVideo)}}"></video>
-                    <img src="{{asset('uploads/you-to-you/'.Auth::user()->id.'/'.$module->pivot->data[0]->image)}}" alt="you to you" class="poster">
+                    {!! $module->pivot->data[0]->video->embed->html !!}
+                    <img src="{{route('vimeo.thumbnail', [$module->pivot->user->id, $module->id])}}" alt="you to you" class="poster">
                 </div>
 
                 <ul class="social">
