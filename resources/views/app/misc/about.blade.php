@@ -136,7 +136,7 @@
                         <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
                     @endif
 
-                    <div class="content-block">
+                    <div class="content-block --spacer">
                         <h1 class="plain">What you get</h1>
 
                         <div class="what-you-get">
@@ -157,6 +157,14 @@
                                 <p>Access to the <b>Belief School community</b><br /> through our <b>Forum</b>. <br />Paula Gosney the founder, and her team, will be available to you throughout your journey, for guidance and support.</p>
                             </div>
                         </div>
+                    </div>
+
+                     <div class="content-block">
+                        <p>Many of us want to create change, but when left to our own devices life can get in the way. Our initial enthusiasm may wane, or we come up against a challenge, so we stall.</p>
+
+                        <p>When applied, the principles and exercises in Belief School are life changing. If you need help to stay on track, this option is for you.</p>
+
+                        <p>Need more information, please email us here: <a href="mailto:contact@beliefschool.com"> contact@beliefschool.com</a></p>
                     </div>
                 </div>
 
