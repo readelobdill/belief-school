@@ -30,7 +30,7 @@
     <h1 class="title">
         Here I am
     </h1>
-    <div class="your-video">
+    <div class="your-video --intrinsic-video">
         {!! $module->pivot->data[0]->video->embed->html !!}
     </div>
 </div>

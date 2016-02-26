@@ -409,6 +409,12 @@ ul.and-i-am {
     + .your-video {
         margin: 20px auto;
     }
+
+    &.--intrinsic-video {
+        padding-bottom: 56.25%;
+        height: 0;
+
+    }
 }
 
 ul.module-list {
