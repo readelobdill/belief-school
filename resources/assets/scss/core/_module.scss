@@ -339,6 +339,39 @@
     @include breakpoint($break-620) {
         display: none;
     }
+
+    .arrow {
+        position: absolute;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        margin: 0 9px;
+
+        svg {
+            width: 80%;
+            height: 40px;
+            path {
+                fill: $lightRed;
+                @include transition(fill $transition);
+            }
+
+            &:hover {
+                path {
+                    fill: $black;
+                }
+            }
+        }
+
+        &--back {
+            top: -8px;
+            transform: translateY(-100%);
+        }
+
+        &--forward {
+            bottom: 0;
+        }
+    }
+
     .module-icon {
         width: 50px !important;
         height: 50px;
