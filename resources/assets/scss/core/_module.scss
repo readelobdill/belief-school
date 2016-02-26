@@ -332,10 +332,12 @@
     height: 50px;
     width: 160px;
     z-index: 99;
+
     @include breakpoint($brk-large) {
         width: 50px;
         height: 100px;
     }
+
     @include breakpoint($break-620) {
         display: none;
     }
@@ -345,7 +347,7 @@
         cursor: pointer;
         width: 40px;
         height: 40px;
-        margin: 0 9px;
+        right: 0px;
 
         svg {
             width: 80%;
@@ -365,10 +367,21 @@
         &--back {
             top: -8px;
             transform: translateY(-100%);
+
+            @include breakpoint($brk-large) {
+                top: -8px;
+                transform: translateY(-100%);
+            }
         }
 
         &--forward {
-            bottom: 0;
+            bottom: -8px;
+            transform: translateY(100%);
+
+            @include breakpoint($brk-large) {
+                bottom: 0;
+                transform: none;
+            }
         }
     }
 

@@ -13,7 +13,6 @@
         <blockquote>
             Are you interested in laying down a foundation of self-belief to create the outcomes you want in your life?
         </blockquote>
-
     </div>
 
     <div class="course-container-heading">Which program is right for you?</div>
