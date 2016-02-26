@@ -91,6 +91,11 @@ span.resolution {
     padding: 25px 0;
 }
 
+.course-container-heading {
+    text-align: center;
+    @extend .course-container__title;
+}
+
 .course-container {
     $gutter: 40px;
 
@@ -98,7 +103,7 @@ span.resolution {
     position: relative;
     width: 100%;
     max-width: 660px;
-    margin: 60px auto 30px;
+    margin: 30px auto;
 
     &.hidden {
         .course-container__column {
