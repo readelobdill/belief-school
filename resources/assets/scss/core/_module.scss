@@ -367,21 +367,10 @@
         &--back {
             top: -8px;
             transform: translateY(-100%);
-
-            @include breakpoint($brk-large) {
-                top: -8px;
-                transform: translateY(-100%);
-            }
         }
 
         &--forward {
-            bottom: -8px;
-            transform: translateY(100%);
-
-            @include breakpoint($brk-large) {
-                bottom: 0;
-                transform: none;
-            }
+            bottom: -48px;
         }
     }
 
