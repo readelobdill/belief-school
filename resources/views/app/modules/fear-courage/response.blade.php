@@ -54,7 +54,7 @@
 
                     <div class="the-affirmation">
                         <div class="i-felt"><strong>Once I did this I felt&hellip;</strong></div>
-                        <textarea name="response-1" id="response-1" required maxlength="140"></textarea>
+                        <textarea name="response-1" id="response-1" required maxlength="140">{{ isset($moduleUser) && isset($moduleUser->data[1]) ? $moduleUser->data[1]->{'response-1'} : '' }}</textarea>
                         <label class="number" for="response-1">1 .</label>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
 
                     <div class="the-affirmation">
                         <div class="i-felt"><strong>Once I did this I felt&hellip;</strong></div>
-                        <textarea name="response-2" id="response-2" required maxlength="140"></textarea>
+                        <textarea name="response-2" id="response-2" required maxlength="140">{{ isset($moduleUser) && isset($moduleUser->data[1]) ? $moduleUser->data[1]->{'response-2'} : '' }}</textarea>
                         <label class="number" for="response-2">2 .</label>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
 
                     <div class="the-affirmation">
                         <div class="i-felt"><strong>Once I did this I felt&hellip;</strong></div>
-                        <textarea name="response-3" id="response-3" required maxlength="140"></textarea>
+                        <textarea name="response-3" id="response-3" required maxlength="140">{{ isset($moduleUser) && isset($moduleUser->data[1]) ? $moduleUser->data[1]->{'response-3'} : '' }}</textarea>
                         <label class="number" for="response-3">3 .</label>
                     </div>
                 </div>

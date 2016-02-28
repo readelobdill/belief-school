@@ -58,7 +58,7 @@ export default class YouToYou extends Text {
             let videoInput = $videoInput[0];
             if(videoInput.files.length > 0) {
                 client.getVimeoUploadData($videoInput.data('vimeo-upload-url')).then(response => {
-                    console.log(response);
+
                     let uploader = new MediaUploader({
                         file: videoInput.files[0],
                         url: response.upload_link_secure,

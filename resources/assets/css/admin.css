@@ -1,32 +1,40 @@
+/* line 71, ../scss/core/_settings.scss */
 .is-hidden-g {
   display: none;
 }
 
+/* line 75, ../scss/core/_settings.scss */
 .grey {
   color: #808080;
 }
 
+/* line 79, ../scss/core/_settings.scss */
 .red-light {
   color: #f16060;
 }
 
+/* line 82, ../scss/core/_settings.scss */
 .margin-top {
   margin-top: 30px;
 }
 
+/* line 1, ../scss/forum/_comment.scss */
 ul.comments-list {
   margin-left: 0;
 }
 @media (max-width: 620px) {
+  /* line 1, ../scss/forum/_comment.scss */
   ul.comments-list {
     margin-left: 0 !important;
   }
 }
+/* line 8, ../scss/forum/_comment.scss */
 ul.comments-list ul.comments-list {
   margin-left: 20px;
   margin-bottom: 40px;
   position: relative;
 }
+/* line 13, ../scss/forum/_comment.scss */
 ul.comments-list ul.comments-list:before {
   position: absolute;
   font-family: "icomoon";
@@ -36,32 +44,40 @@ ul.comments-list ul.comments-list:before {
   font-size: 12px;
 }
 @media (max-width: 620px) {
+  /* line 13, ../scss/forum/_comment.scss */
   ul.comments-list ul.comments-list:before {
     left: 7px;
     font-size: 10px;
   }
 }
+/* line 27, ../scss/forum/_comment.scss */
 ul.comments-list ul.comments-list ul.comments-list {
   margin-left: 20px;
 }
+/* line 30, ../scss/forum/_comment.scss */
 ul.comments-list ul.comments-list ul.comments-list ul.comments-list {
   margin-left: 20px;
 }
+/* line 33, ../scss/forum/_comment.scss */
 ul.comments-list ul.comments-list ul.comments-list ul.comments-list ul.comments-list {
   margin-left: 0;
 }
 
+/* line 41, ../scss/forum/_comment.scss */
 li.comment {
   margin-top: 10px;
 }
+/* line 43, ../scss/forum/_comment.scss */
 li.comment img {
   max-width: 100%;
 }
+/* line 46, ../scss/forum/_comment.scss */
 li.comment .inner {
   border: 2px solid #c5c5c5;
   position: relative;
   padding: 20px;
 }
+/* line 51, ../scss/forum/_comment.scss */
 li.comment .inner p {
   margin-bottom: 0;
   padding: 10px 0;
@@ -69,10 +85,12 @@ li.comment .inner p {
   word-break: break-word;
 }
 
+/* line 61, ../scss/forum/_comment.scss */
 form.comment-form textarea {
   width: 100%;
   font-size: 17px;
 }
+/* line 66, ../scss/forum/_comment.scss */
 form.comment-form .error-message {
   display: inline-block;
   border: 1px solid #aeaeae;
@@ -83,10 +101,12 @@ form.comment-form .error-message {
   background: white;
   font-size: 15px;
 }
+/* line 76, ../scss/forum/_comment.scss */
 form.comment-form .error-message:empty {
   display: none;
 }
 
+/* line 82, ../scss/forum/_comment.scss */
 .comment-creation-date {
   position: absolute;
   font-size: 14px;
@@ -95,19 +115,23 @@ form.comment-form .error-message:empty {
   right: 20px;
 }
 
+/* line 91, ../scss/forum/_comment.scss */
 form.reply-form textarea {
   width: 100%;
   font-size: 17px;
 }
 
+/* line 98, ../scss/forum/_comment.scss */
 form.reply-form.is-hidden {
   display: none;
 }
 
+/* line 104, ../scss/forum/_comment.scss */
 [data-page="forum"] .forum-icon {
   display: none;
 }
 
+/* line 109, ../scss/forum/_comment.scss */
 label.comment-image-upload {
   -moz-transition: background 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -o-transition: background 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955), color 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -122,6 +146,7 @@ label.comment-image-upload {
   padding: 3px 15px 4px 17px;
   margin-top: 3px;
 }
+/* line 120, ../scss/forum/_comment.scss */
 label.comment-image-upload:before {
   -moz-transform: rotate(180deg) translateY(0px);
   -ms-transform: rotate(180deg) translateY(0px);
@@ -139,20 +164,24 @@ label.comment-image-upload:before {
   top: 0;
   transform-origin: 50% 50%;
 }
+/* line 131, ../scss/forum/_comment.scss */
 label.comment-image-upload:hover {
   background-color: #d95656;
 }
+/* line 134, ../scss/forum/_comment.scss */
 label.comment-image-upload:hover:before {
   -moz-transform: rotate(180deg) translateY(2px);
   -ms-transform: rotate(180deg) translateY(2px);
   -webkit-transform: rotate(180deg) translateY(2px);
   transform: rotate(180deg) translateY(2px);
 }
+/* line 139, ../scss/forum/_comment.scss */
 label.comment-image-upload input {
   left: -9999px;
   position: absolute;
 }
 
+/* line 145, ../scss/forum/_comment.scss */
 .reply,
 .delete-comment {
   display: inline-block;
@@ -163,6 +192,7 @@ label.comment-image-upload input {
   margin-top: 7px;
 }
 
+/* line 155, ../scss/forum/_comment.scss */
 .comment-image-facebookshare {
   font-size: 14px;
   font-weight: 500;
@@ -172,6 +202,7 @@ label.comment-image-upload input {
   margin-top: 7px;
 }
 
+/* line 8, ../scss/admin.scss */
 .comments-list {
   max-width: 500px;
 }

@@ -54,7 +54,7 @@
         <form action="" class="limiting-beliefs">
             <div class="beliefs">
                 <div class="belief">
-                    <textarea name="challenge-1" id="belief-1" required maxlength="140"></textarea>
+                    <textarea name="challenge-1" id="belief-1" required maxlength="140">{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-1'} : '' }}</textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
@@ -62,7 +62,7 @@
                     <label class="number" for="belief-1">1 .</label>
                 </div>
                 <div class="belief">
-                    <textarea name="challenge-2" id="belief-2" required maxlength="140"></textarea>
+                    <textarea name="challenge-2" id="belief-2" required maxlength="140">{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-2'} : '' }}</textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
@@ -70,7 +70,7 @@
                     <label class="number" for="belief-2">2 .</label>
                 </div>
                 <div class="belief">
-                    <textarea name="challenge-3" id="belief-3" required maxlength="140"></textarea>
+                    <textarea name="challenge-3" id="belief-3" required maxlength="140">{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-3'} : '' }}</textarea>
                     <button class="icon" type="button" tabindex="-1">
                         @include('app/partials/icons/edit')
                         @include('app/partials/icons/tick')
@@ -80,9 +80,6 @@
             </div>
         </form>
 
-        <div class="are-you-sure">
-            <p>Do a quick double check of the content you have created for this module: once you click this button it will permanently save to your Dashboard.</p>
-        </div>
         <div class="actions">
             <a href="#" class="button" title="Save it into your dashboard now!" data-save-module>Save it into your dashboard now!</a>
         </div>

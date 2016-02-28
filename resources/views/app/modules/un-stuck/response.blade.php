@@ -1,7 +1,6 @@
 <div class="inner">
     <div class="content">
         <h1 class="plain">Turning the Negative Chatter Off</h1>
-        <a href="#" class="back" data-back>Back</a>
 
         <p>Good job getting them down, they don’t need to be perfect. This is an exercise teaching you how to recognise the negative chatter and turn it into thoughts that will serve you.</p>
 

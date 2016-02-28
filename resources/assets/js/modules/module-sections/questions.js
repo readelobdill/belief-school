@@ -100,7 +100,7 @@ export default class QuestionsSection extends ModuleSection {
 
         let url = this.module.getUpdateUrl();
         let data = this.getQuestionData();
-        return client.saveModule(url, data).then(() => {
+        return client.saveModule(url, data, this.step).then(() => {
             this.module.nextSection();
         });
     }

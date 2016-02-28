@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 class ModuleUser extends Model {
     protected $table = 'module_user';
     protected $dates = ['created_at', 'updated_at'];
+    protected $casts = [
+        'step' => 'integer',
+    ];
 
 
     public function user() {

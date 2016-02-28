@@ -80,15 +80,15 @@
         <form action="" class="i-choose">
             <ul>
                 <li class="form-row">
-                    <input type="text" name="i_chose_1" class="form-control" required placeholder="I choose to..." maxlength="140" />
+                    <input type="text" name="i_chose_1" class="form-control" required placeholder="I choose to..." maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'i_chose_1'} : '' }}" />
                 </li>
 
                 <li class="form-row">
-                    <input type="text" name="i_chose_2" class="form-control" required placeholder="I choose to..." maxlength="140" />
+                    <input type="text" name="i_chose_2" class="form-control" required placeholder="I choose to..." maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'i_chose_2'} : '' }}" />
                 </li>
 
                 <li class="form-row">
-                    <input type="text" name="i_chose_3" class="form-control" required placeholder="I choose to..." maxlength="140" />
+                    <input type="text" name="i_chose_3" class="form-control" required placeholder="I choose to..." maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'i_chose_3'} : '' }}" />
                 </li>
             </ul>
 

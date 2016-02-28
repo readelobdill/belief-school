@@ -53,8 +53,9 @@ export default class Dreamboard extends Text {
                 return false;
             }
             this.submitting = true;
-            client.saveModule(url, data).then(() => {
+            client.saveModule(url, data, this.step).then(() => {
                 this.module.nextSection();
+                this.submitting = false;
             });
         }
     }

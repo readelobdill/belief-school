@@ -167,7 +167,7 @@
                         <p>Need more information, please email us here: <a href="mailto:contact@beliefschool.com"> contact@beliefschool.com</a></p>
                     </div>
                 </div>
-
+                @if(isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '1')
                 <div class="pricing-container">
                     <h1 class="title">
                         <span data-arc="120">&middot; Belief School <b>Coached</b> &middot;</span>
@@ -186,6 +186,7 @@
                             <p>The next coached course commences on the <b>4th of April.</b></p>
                         </div>
                     </div>
+
 
                     @if(!Auth::check() || !Auth::user()->paid)
                         <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
@@ -222,6 +223,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
 
 
                 <h1 class="plain">Is any of this chatter, getting in your way?</h1>

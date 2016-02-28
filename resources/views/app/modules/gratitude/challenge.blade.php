@@ -20,49 +20,46 @@
         <form action="" class="gratitude-list">
             <ul>
                 <li class="form-row">
-                    <input type="text" name="diary_1" required maxlength="140">
+                    <input type="text" class="{{isset($moduleUser) && isset($moduleUser->data[0]) ? 'has-content' : ''}}" name="diary_1" required maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'diary_1'} : '' }}">
                     <label>I am grateful for...</label>
                 </li>
                 <li class="form-row">
-                    <input type="text" name="diary_2" required maxlength="140">
+                    <input type="text" class="{{isset($moduleUser) && isset($moduleUser->data[0]) ? 'has-content' : ''}}" name="diary_2" required maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'diary_2'} : '' }}">
                     <label>I am grateful for...</label>
                 </li>
                 <li class="form-row">
-                    <input type="text" name="diary_3" required maxlength="140">
+                    <input type="text" class="{{isset($moduleUser) && isset($moduleUser->data[0]) ? 'has-content' : ''}}" name="diary_3" required maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'diary_3'} : '' }}">
                     <label>I am grateful for...</label>
                 </li>
                 <li class="form-row">
-                    <input type="text" name="diary_4" required maxlength="140">
+                    <input type="text" class="{{isset($moduleUser) && isset($moduleUser->data[0]) ? 'has-content' : ''}}" name="diary_4" required maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'diary_4'} : '' }}">
                     <label>I am grateful for...</label>
                 </li>
                 <li class="form-row">
-                    <input type="text" name="diary_5" required maxlength="140">
+                    <input type="text" class="{{isset($moduleUser) && isset($moduleUser->data[0]) ? 'has-content' : ''}}" name="diary_5" required maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'diary_5'} : '' }}">
                     <label>I am grateful for...</label>
                 </li>
                 <li class="form-row">
-                    <input type="text" name="diary_6" required maxlength="140">
+                    <input type="text" class="{{isset($moduleUser) && isset($moduleUser->data[0]) ? 'has-content' : ''}}" name="diary_6" required maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'diary_6'} : '' }}">
                     <label>I am grateful for...</label>
                 </li>
                 <li class="form-row">
-                    <input type="text" name="diary_7" required maxlength="140">
+                    <input type="text" class="{{isset($moduleUser) && isset($moduleUser->data[0]) ? 'has-content' : ''}}" name="diary_7" required maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'diary_7'} : '' }}">
                     <label>I am grateful for...</label>
                 </li>
                 <li class="form-row">
-                    <input type="text" name="diary_8" required maxlength="140">
+                    <input type="text" class="{{isset($moduleUser) && isset($moduleUser->data[0]) ? 'has-content' : ''}}" name="diary_8" required maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'diary_8'} : '' }}">
                     <label>I am grateful for...</label>
                 </li>
                 <li class="form-row">
-                    <input type="text" name="diary_9" required maxlength="140">
+                    <input type="text" class="{{isset($moduleUser) && isset($moduleUser->data[0]) ? 'has-content' : ''}}" name="diary_9" required maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'diary_9'} : '' }}">
                     <label>I am grateful for...</label>
                 </li>
                 <li class="form-row">
-                    <input type="text" name="diary_10" required maxlength="140">
+                    <input type="text" class="{{isset($moduleUser) && isset($moduleUser->data[0]) ? 'has-content' : ''}}" name="diary_10" required maxlength="140" value="{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'diary_10'} : '' }}">
                     <label>I am grateful for...</label>
                 </li>
             </ul>
-            <div class="are-you-sure">
-                <p>Do a quick double check of the content you have created for this module: once you click this button it will permanently save to your Dashboard.</p>
-            </div>
             <div class="actions">
                 <button class="button">Save to Dashboard</button>
             </div>

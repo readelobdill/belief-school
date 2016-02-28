@@ -32,7 +32,7 @@
 
                     </ul>
 
-                    <p>As your responses come in they will appear on your <a href="{{route('dashboard')}}" title="Dashboard">Dashboard</a>, building a wonderful picture of the greatness others see in you.</p>
+                    <p>As your responses come in they will appear on your Dashboard, building a wonderful picture of the greatness others see in you.</p>
                     <div class="actions">
                         <a href="#" class="button" title="What's next?" data-complete-module>What's next?</a>
                     </div>

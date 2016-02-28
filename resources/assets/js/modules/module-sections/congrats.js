@@ -14,6 +14,7 @@ export default class CongratsSection extends Text {
         let container = this.section.find('.congrats-container');
         if(this.module.isComplete()) {
             container = container.last();
+            $('[data-back],[data-forward]').hide();
         } else {
             container = container.first();
         }
@@ -45,6 +46,7 @@ export default class CongratsSection extends Text {
     }
 
     showNext(response) {
+        $('[data-back],[data-forward]').hide();
         const timeline = new TimelineLite({onComplete: () => {
             this.updateHeight();
         }});
