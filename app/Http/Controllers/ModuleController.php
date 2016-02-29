@@ -404,6 +404,8 @@ class ModuleController extends Controller {
 
     public function getVimeoThumbnail(Vimeo $vimeo, $userId, $id) {
 
+        
+
         $moduleUser = User::findOrFail($userId)->modules()->where('modules.id', $id)->first();
 
         if($moduleUser->type === 'you-to-you' && $moduleUser->pivot->complete) {
@@ -411,9 +413,11 @@ class ModuleController extends Controller {
                 $video = $moduleUser->pivot->data[0]->video;
                 $response = $vimeo->request($video->uri, [], 'GET');
                 if($response['body']['status'] === 'available') {
-                    $thumbnails = $response['body']['pictures']['sizes'];
-                    $lastThumbnail = $thumbnails[count($thumbnails) - 1]['link'];
-                    return redirect($lastThumbnail);
+                    if(isset($response['body']['pictures']) && isset($response['body']['pictures']['sizes'])) {
+                        $thumbnails = $response['body']['pictures']['sizes'];
+                        $lastThumbnail = $thumbnails[count($thumbnails) - 1]['link'];
+                        return redirect($lastThumbnail);
+                    }
                 }
             }
 
@@ -422,7 +426,7 @@ class ModuleController extends Controller {
 
 
         }
-        abort(404);
+        return '';
 
     }
 }

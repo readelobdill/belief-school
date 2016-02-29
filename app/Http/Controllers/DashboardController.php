@@ -52,10 +52,13 @@ class DashboardController extends Controller {
             'margin-bottom' => 0,
             'margin-left' => 0,
             'margin-right' => 0,
+            'load-error-handling' => 'ignore',
+            'load-media-error-handling' => 'ignore',
             'javascript-delay' => 300]);
         $pdf->binary = env('WKHTMLTOPDF_LOCATION', 'wkhtmltopdf');
         $pdf->send(false, true);
         dd($pdf);
+
 
     }
 
