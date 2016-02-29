@@ -10,6 +10,12 @@
             <li class="ico-contact"><a href="{{ route('contact') }}" title="Contact Us">Contact us</a></li>
             <li class="ico-terms"><a href="{{route('privacy-terms') }}" title="Terms of Use/Privacy Policy">Terms of Use/Privacy Policy</a></li>
             <li class="ico-faq requires-auth {{(!Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{route('faq') }}" title="Frequently Asked Questions">FAQ</a></li>
+            <li class="ico-unlocked menu-auth-mobile login {{(!Auth::check() ? 'is-hidden-g' : '')}}">
+                <a href="{{route('auth.logout')}}">Logout</a>
+            </li>
+            <li class="ico-locked menu-auth-mobile login {{(Auth::check() ? 'is-hidden-g' : '')}}">
+                <a href="{{route('auth.login')}}">Login</a>
+            </li>
         </ul>
     </nav>
     <nav class="modules-navigation">
