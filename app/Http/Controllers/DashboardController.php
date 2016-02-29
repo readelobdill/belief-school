@@ -32,32 +32,38 @@ class DashboardController extends Controller {
     }
 
     public function manifesto() {
+        $fileName = $this->auth->user()->id.'.pdf';
+        if(file_exists(storage_path('manifestos/'.$fileName))) {
+            return response(file_get_contents(storage_path('manifestos/'.$fileName)), 200, ['content-type' => 'application/pdf', 'content-disposition' => 'attachment; filename="manifesto"']);
+        } else {
+            \File::makeDirectory(storage_path('manifestos'), 493, true, true);
+            $modules = Module::with(['users' => function($query) {
+                $query->where('user_id', $this->auth->user()->id);
+            }])->orderBy('order', 'asc')->get();
 
-        $modules = Module::with(['users' => function($query) {
-            $query->where('user_id', $this->auth->user()->id);
-        }])->orderBy('order', 'asc')->get();
+            foreach($modules as $key => $module) {
 
-        foreach($modules as $key => $module) {
+                $modules[$key]->pivot = !empty($module->users) && !$module->users->isEmpty() ? $module->users[0]->pivot : false;
+            }
+            $view = view('app.dashboard.pdf.dashboard', [
+                'modules' => $modules,
+                'page' => 'dashboard'
+            ])->render();
 
-            $modules[$key]->pivot = !empty($module->users) && !$module->users->isEmpty() ? $module->users[0]->pivot : false;
+            $pdf = new Pdf($view );
+            $pdf->setOptions([
+                'margin-top' => 0,
+                'margin-bottom' => 0,
+                'margin-left' => 0,
+                'margin-right' => 0,
+                'load-error-handling' => 'ignore',
+                'load-media-error-handling' => 'ignore',
+                'javascript-delay' => 300]);
+            $pdf->binary = env('WKHTMLTOPDF_LOCATION', 'wkhtmltopdf');
+
+            $pdf->saveAs(storage_path('manifestos/'.$fileName));
+            return redirect(route('dashboard.manifesto'));
         }
-        $view = view('app.dashboard.pdf.dashboard', [
-            'modules' => $modules,
-            'page' => 'dashboard'
-        ])->render();
-
-        $pdf = new Pdf($view );
-        $pdf->setOptions([
-            'margin-top' => 0,
-            'margin-bottom' => 0,
-            'margin-left' => 0,
-            'margin-right' => 0,
-            'load-error-handling' => 'ignore',
-            'load-media-error-handling' => 'ignore',
-            'javascript-delay' => 300]);
-        $pdf->binary = env('WKHTMLTOPDF_LOCATION', 'wkhtmltopdf');
-        $pdf->send(false, true);
-        dd($pdf);
 
 
     }
