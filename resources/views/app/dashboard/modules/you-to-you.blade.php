@@ -12,7 +12,7 @@
             @if(isset($module->pivot->data[0]->letter))
                 <p class="dashboard">{{$module->pivot->data[0]->letter}}</p>
             @elseif(isset($module->pivot->data[0]->video))
-                <div class="your-video --intrinsic-video">
+                <div class="your-video intrinsic-video">
                     {!! $module->pivot->data[0]->video->embed->html !!}
                     <img src="{{route('vimeo.thumbnail', [$module->pivot->user->id, $module->id])}}" alt="you to you" class="poster">
                 </div>
