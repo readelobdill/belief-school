@@ -91,7 +91,7 @@
         margin: 0 auto;
         max-width: 920px;
 
-        &.--spacer {
+        &.spacer {
             margin: 60px auto 30px;
         }
     }
@@ -204,8 +204,7 @@
                 position: absolute;
                 content: "\e62c";
                 font-family: $icon;
-                margin-left: 50%;
-                @include transform(translateX(-100%));
+                @include transform(translateX(-50%));
                 top: 0;
                 font-size: 24px;
                 color: $black;
@@ -334,8 +333,6 @@
             &:after {
                 position: relative;
                 font-family: $icon;
-                //margin-left: 50%;
-                @include transform(translateY(-100%));
                 top: 0; left: 0;
                 font-size: 29px;
             }
@@ -375,7 +372,7 @@
         }
     }
 
-    &.--coached {
+    &.coached {
         .what-you-get__node {
             margin: 0 0 10px;
             width: calc(50% - 5px);
