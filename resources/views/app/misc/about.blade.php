@@ -136,7 +136,7 @@
                         <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
                     @endif
 
-                    <div class="content-block --spacer">
+                    <div class="content-block spacer">
                         <h1 class="plain">What you get</h1>
 
                         <div class="what-you-get">
@@ -174,7 +174,7 @@
                         <div class="price">$270 <span>NZD</span></div>
                     </h1>
 
-                    <div class="content-block --spacer">
+                    <div class="content-block spacer">
                         <div class="col">
                             <p>Twice a year, over an eight week period, Paula Gosney works closely with a group who are looking for greater accountability and additional support as they work through Belief School, on their journey of self-discovery.</p>
 
@@ -195,7 +195,7 @@
                     <div class="content-block">
                         <h1 class="plain">What you get</h1>
 
-                        <div class="what-you-get --coached">
+                        <div class="what-you-get coached">
                             <div class="what-you-get__node">
                                 <div class="icon sheild"></div>
                                 <p><b>Live webinars</b> <br />Twice weekly live webinars with Paula Gosney. One at the beginning of the week to work through the module, its purpose and the outcomes for you to create that week. The second on Thursday to answer questions, give support and help if you’re stuck. These sessions are recorded, if you can’t make it, they’ll be sent to you.</p>

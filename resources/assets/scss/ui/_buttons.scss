@@ -161,3 +161,14 @@ button.button {
         border-radius: 100%;
     }
 }
+
+[data-current-section='1'] {
+    .iecon__arrow {
+        background: rgba($white, 0);
+        transition: background $transition, transform $transition;
+
+        &:hover {
+            background: rgba($white, 0.6);
+        }
+    }
+}
