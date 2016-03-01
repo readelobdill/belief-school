@@ -82,6 +82,9 @@ class Module {
     isComplete() {
         return this.container.data('is-complete');
     }
+    setComplete(complete) {
+        this.container.data('is-complete', complete);
+    }
 
     setData(data) {
         this.data = data;

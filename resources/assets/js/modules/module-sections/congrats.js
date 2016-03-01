@@ -49,8 +49,10 @@ export default class CongratsSection extends Text {
     }
 
     showNext(response) {
+        this.module.setComplete(true);
         $('[data-back],[data-forward]').hide();
         const timeline = new TimelineLite({onComplete: () => {
+            //this.section.css('height', 'auto');
             this.updateHeight();
         }});
         let height = $(window).height();
@@ -96,6 +98,7 @@ export default class CongratsSection extends Text {
 
 
         if(!window.isMobile) {
+
             this.section.css('height', height);
             setTimeout(() => {
                 let height = $(window).height();
