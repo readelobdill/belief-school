@@ -164,6 +164,11 @@ button.button {
 
 [data-current-section='1'] {
     .iecon__arrow {
-        background: none;
+        background: rgba($white, 0);
+        transition: background $transition, transform $transition;
+
+        &:hover {
+            background: rgba($white, 0.6);
+        }
     }
 }
