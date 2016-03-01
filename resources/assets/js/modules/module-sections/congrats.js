@@ -35,7 +35,10 @@ export default class CongratsSection extends Text {
     }
 
     completeModule(e) {
-        e.preventDefault();
+        if(e.preventDefault) {
+            e.preventDefault();
+        }
+
         if(this.submitting) {
             return false;
         }
@@ -117,5 +120,9 @@ export default class CongratsSection extends Text {
 
 
 
+    }
+
+    submit() {
+        this.completeModule();
     }
 }
