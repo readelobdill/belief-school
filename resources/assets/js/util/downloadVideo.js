@@ -7,6 +7,7 @@ const defaultHeaders = {
     'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
 
 }
+let blobs = [];
 
 export function downloadVideo(url) {
     let deferred = Q.defer();
@@ -20,6 +21,7 @@ export function downloadVideo(url) {
     });
 
     xhr.addEventListener('load', response => {
+        blobs.push(response);
         deferred.resolve(URL.createObjectURL(xhr.response));
     });
 

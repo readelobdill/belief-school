@@ -31,10 +31,10 @@ function Video(video) {
     this.videoContainer.addClass('display-video');
 
     downloadVideo($(this.video).data('video')).then(response => {
+        this.videoBlob = response;
         this.videoContainer[0].src = response;
         $(this.video).replaceWith(this.videoContainer);
         this.video = this.videoContainer[0];
-        console.log($(this.video).is('video'));
         this.video.addEventListener('loadedmetadata', response => {
             videoReady.resolve(this);
         })
