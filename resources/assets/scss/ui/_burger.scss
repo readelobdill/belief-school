@@ -11,8 +11,9 @@
     @include user-select(none);
 
     @include breakpoint($break-620) {
-        top: 0;
-        left: 0;
+        width: 46px;
+        height: 46px;
+        top: 0; left: 0;
     }
     &:hover {
         svg path {
@@ -26,6 +27,12 @@
         position:absolute;
         top: 8px;
         left: 8px;
+
+        @include breakpoint($break-620) {
+            top: 6px;
+            left: 6px;
+        }
+
         path {
             transition: fill 0.25s ease;
             fill: $fontColour;

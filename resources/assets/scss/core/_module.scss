@@ -450,6 +450,7 @@
 
         @include breakpoint($break-620) {
             float: right;
+            background: transparent;
         }
 
         &:hover {
