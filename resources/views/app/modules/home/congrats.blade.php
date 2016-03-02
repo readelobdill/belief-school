@@ -6,6 +6,7 @@
                    Congratulations for choosing to invest time and money in your personal development.
                 </h1>
                 <p>We are excited for you, and inspired by you!</p>
+                <p><b>You will receive a welcome email from us.</b></p>
                 <div class="actions">
                     <a href="{{route('modules.view', [$nextModule->slug])}}" class="button" title="Let's get started">Let's get started</a>
                 </div>
