@@ -15,7 +15,7 @@
                 <div class="belief">
                     <label class="the-belief" for="response-1">
                         <span class="number">1 .</span>
-                        <strong>After facing</strong>
+                        <strong>After</strong>
                         <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-1'} : '' }}"</p>
                     </label>
 
@@ -28,7 +28,7 @@
                 <div class="belief">
                     <label class="the-belief" for="response-2">
                         <span class="number">2 .</span>
-                        <strong>After facing</strong>
+                        <strong>After</strong>
                         <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-2'} : '' }}"</p>
                     </label>
 
@@ -41,7 +41,7 @@
                 <div class="belief">
                     <label class="the-belief" for="response-3">
                         <span class="number">3 .</span>
-                        <strong>After facing</strong>
+                        <strong>After</strong>
                         <p class="limiting-belief-text" >"{{ isset($moduleUser) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->{'challenge-3'} : '' }}"</p>
                     </label>
 

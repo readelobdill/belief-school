@@ -39,5 +39,9 @@
         <p>Nothing terrible is going to happen, people will either respond or they won’t. The world will not end and your arm will not fall off. You can do this.
         </p>
 
+        <div class="next-email-section" data-update-module>
+            @include('app/partials/icons/down-arrow')
+        </div>
+
     </div>
 </div>

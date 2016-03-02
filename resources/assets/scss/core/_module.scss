@@ -157,6 +157,10 @@
     }
 }
 
+.next-email-section {
+    cursor: pointer;
+}
+
 .next-section {
     position: relative;
     display: block;
@@ -352,7 +356,7 @@
         height: 40px;
         right: 5px;
 
-        [data-page='forum'] & {
+        [data-page='forum'] &, [data-page='home'] & {
             display: none;
         }
 
