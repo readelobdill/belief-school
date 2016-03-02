@@ -5,6 +5,10 @@ use Illuminate\Database\Eloquent\Model;
 class Module extends Model {
 
     protected $fillable = ['name', 'order', 'module_id', 'slug', 'total_parts', 'free'];
+    protected $casts = [
+        'order' => 'integer',
+        'total_parts' => 'integer',
+    ];
 
     /**
      * @param $slug

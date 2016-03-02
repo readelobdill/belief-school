@@ -42,7 +42,7 @@
 
         <form action="">
             <div class="form-row">
-                <textarea name="letter" required placeholder="Write here..." maxlength="280"></textarea>
+                <textarea name="letter" required placeholder="Write here..." maxlength="280">{{ isset($moduleUser) && isset($moduleUser->data[1]) ? $moduleUser->data[1]->{'letter'} : '' }}</textarea>
             </div>
 
             <div class="are-you-sure">

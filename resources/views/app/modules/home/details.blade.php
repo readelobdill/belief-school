@@ -15,9 +15,10 @@
         </blockquote>
     </div>
 
-    <div class="course-container-heading">Which program is right for you?</div>
+
 
     @if(isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '1')
+        <div class="course-container-heading">Which program is right for you?</div>
         <div class="course-container {{isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '0' ? 'hidden' : ''}}">
             <div class="course-container__column">
                 <h5 class="course-container__title">Belief School Automated</h5>

@@ -8,6 +8,10 @@ import Congrats from './congrats';
 
 export default class FinalCongrats extends Congrats {
 
+    open() {
+        $('[data-back],[data-forward]').hide();
+        return super.open();
+    }
 
     completeModule(e) {
         e.preventDefault();

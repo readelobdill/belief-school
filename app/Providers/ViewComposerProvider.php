@@ -17,7 +17,7 @@ class ViewComposerProvider extends ServiceProvider {
             'app.layout', 'App\Http\ViewComposers\LayoutComposer'
         );
 
-        view()->composer('app.modules.home.details', function($view) {
+        view()->composer(['app.modules.home.details', 'app.misc.about'], function($view) {
             $view->with('options', Option::getAll());
         });
     }

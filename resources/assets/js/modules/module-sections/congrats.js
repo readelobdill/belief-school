@@ -14,6 +14,7 @@ export default class CongratsSection extends Text {
         let container = this.section.find('.congrats-container');
         if(this.module.isComplete()) {
             container = container.last();
+            $('[data-back],[data-forward]').hide();
         } else {
             container = container.first();
         }
@@ -34,7 +35,10 @@ export default class CongratsSection extends Text {
     }
 
     completeModule(e) {
-        e.preventDefault();
+        if(e.preventDefault) {
+            e.preventDefault();
+        }
+
         if(this.submitting) {
             return false;
         }
@@ -45,7 +49,10 @@ export default class CongratsSection extends Text {
     }
 
     showNext(response) {
+        this.module.setComplete(true);
+        $('[data-back],[data-forward]').hide();
         const timeline = new TimelineLite({onComplete: () => {
+            //this.section.css('height', 'auto');
             this.updateHeight();
         }});
         let height = $(window).height();
@@ -91,6 +98,7 @@ export default class CongratsSection extends Text {
 
 
         if(!window.isMobile) {
+
             this.section.css('height', height);
             setTimeout(() => {
                 let height = $(window).height();
@@ -115,5 +123,9 @@ export default class CongratsSection extends Text {
 
 
 
+    }
+
+    submit() {
+        this.completeModule();
     }
 }

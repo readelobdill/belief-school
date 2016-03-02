@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 class ModuleUserPivot extends Pivot {
     protected $table = 'module_user';
     protected $dates = ['created_at', 'updated_at'];
+    protected $casts = [
+        'step' => 'integer',
+    ];
     public function __construct(Model $parent, $attributes, $table, $exists = false) {
         parent::__construct($parent, $attributes, $table, $exists);
     }

@@ -5,6 +5,9 @@ import serialize from 'util/serializeForm';
 import client from 'sources/ModuleClient';
 import {showRawError, hideRawError} from 'util/errors';
 import MediaUploader from 'util/vimeo-uploader';
+import {showGlobalError} from 'ui/globalError';
+
+const maxFileSize = 1024*1024*1024;
 
 export default class YouToYou extends Text {
     letterChosen = false;
@@ -57,8 +60,13 @@ export default class YouToYou extends Text {
             let $videoInput = this.section.find('.upload-video [name=video]');
             let videoInput = $videoInput[0];
             if(videoInput.files.length > 0) {
+                if(videoInput.files[0].size > maxFileSize) {
+                    showGlobalError('Please choose an video with a filesize less then 1GB');
+                    return false;
+                }
+                this.section.find('.actions .button .button-title').html('Starting Upload');
                 client.getVimeoUploadData($videoInput.data('vimeo-upload-url')).then(response => {
-                    console.log(response);
+                    this.section.find('.actions .button .button-title').html('Uploading');
                     let uploader = new MediaUploader({
                         file: videoInput.files[0],
                         url: response.upload_link_secure,

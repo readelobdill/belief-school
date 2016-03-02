@@ -38,7 +38,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::delete('comment/{comment}', ['as' => 'modules.comment.delete', 'uses' => 'CommentController@delete']);
 
     Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
-    Route::get('dashboard/manifesto.pdf', ['as' => 'dashboard.manifesto', 'uses' => 'DashboardController@manifesto']);
+    Route::get('dashboard/manifesto', ['as' => 'dashboard.manifesto', 'uses' => 'DashboardController@manifesto']);
 
     Route::get('modules/visualise/dreamboard', ['as' => 'modules.visualise.dreamboard','uses' => 'ModuleController@showDreamboardImage']);
 

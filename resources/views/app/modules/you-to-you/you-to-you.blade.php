@@ -75,7 +75,7 @@
             </div>
             <div class="error-container" style="display:none"></div>
             <div class="actions">
-                <a href="" class="button" data-save-module>Save to dashboard <span class="percentage"></span></a>
+                <a href="" class="button" data-save-module><span class="button-title">Save to dashboard</span> <span class="percentage"></span></a>
             </div>
         </div>
 

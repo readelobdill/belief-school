@@ -145,51 +145,51 @@
         <form class="welcome-first-steps" action="{{ route('modules.update', ['welcome']) }}">
             <ul class="checkbox-list">
                 <li>
-                    <input required type="radio" name="assert" id="choice-1" value="Exercising for 30min each day">
+                    <input required type="radio" name="assert" id="choice-1" value="Exercising for 30min each day" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Exercising for 30min each day' ? 'checked' : '' }}>
                     <label for="choice-1">Exercising for 30min each day</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-2" value="Drinking no coffee">
+                    <input required type="radio" name="assert" id="choice-2" value="Drinking no coffee" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Drinking no coffee' ? 'checked' : '' }}>
                     <label for="choice-2">Drinking no coffee</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-3" value="Drinking no alcohol">
+                    <input required type="radio" name="assert" id="choice-3" value="Drinking no alcohol" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Drinking no alcohol' ? 'checked' : '' }}>
                     <label for="choice-3">Drinking no alcohol</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-4" value="Not smoking anything">
+                    <input required type="radio" name="assert" id="choice-4" value="Not smoking anything" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Not smoking anything' ? 'checked' : '' }}>
                     <label for="choice-4">Not smoking anything </label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-5" value="Having a 30 second cold shower (really cold) each day">
+                    <input required type="radio" name="assert" id="choice-5" value="Having a 30 second cold shower (really cold) each day" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Having a 30 second cold shower (really cold) each day' ? 'checked' : '' }}>
                     <label for="choice-5">Having a 30 second cold shower (really cold) each day</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-6" value="Eating no processed sugar">
+                    <input required type="radio" name="assert" id="choice-6" value="Eating no processed sugar" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Eating no processed sugar' ? 'checked' : '' }}>
                     <label for="choice-6">Eating no processed sugar</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-7" value="Eating no gluten">
+                    <input required type="radio" name="assert" id="choice-7" value="Eating no gluten" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Eating no gluten' ? 'checked' : '' }}>
                     <label for="choice-7">Eating no gluten</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-8" value="Eating no dairy">
+                    <input required type="radio" name="assert" id="choice-8" value="Eating no dairy" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Eating no dairy' ? 'checked' : '' }}>
                     <label for="choice-8">Eating no dairy</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-9" value="Drinking a litre of water every day">
+                    <input required type="radio" name="assert" id="choice-9" value="Drinking a litre of water every day" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Drinking a litre of water every day' ? 'checked' : '' }}>
                     <label for="choice-9">Drinking a litre of water every day</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-10" value="Maintaining a vegetarian diet">
+                    <input required type="radio" name="assert" id="choice-10" value="Maintaining a vegetarian diet" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Maintaining a vegetarian diet' ? 'checked' : '' }}>
                     <label for="choice-10">Maintaining a vegetarian diet</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-11" value="Going to bed, lights out by 10pm">
+                    <input required type="radio" name="assert" id="choice-11" value="Going to bed, lights out by 10pm" {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === 'Going to bed, lights out by 10pm' ? 'checked' : '' }}>
                     <label for="choice-11">Going to bed, lights out by 10pm</label>
                 </li>
                 <li>
-                    <input required type="radio" name="assert" id="choice-12" value="Meditating for 20min each day ">
+                    <input required type="radio" name="assert" id="choice-12" value="Meditating for 20min each day " {{ isset($moduleUser) && isset($moduleUser->data[0]) && $moduleUser->data[0]->{'challenge'} === '' ? 'checked' : '' }}>
                     <label for="choice-12">Meditating for 20min each day</label>
                 </li>
             </ul>
