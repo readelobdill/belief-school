@@ -183,7 +183,7 @@ class ModuleController extends Controller {
         $step = intval($this->request->get('step',$moduleUser->step));
         switch($module->type) {
             case 'tag-cloud':
-                if($step === $moduleUser->step) {
+                if($step == $moduleUser->step) {
                     $moduleUser->step ++;
                 }
                 break;
@@ -244,7 +244,7 @@ class ModuleController extends Controller {
 
 
                     $moduleUser->data = [['video' => $response['body']]];
-                    if($step === $moduleUser->step) {
+                    if($step == $moduleUser->step) {
                         $moduleUser->step ++;
                     }
 
@@ -265,7 +265,7 @@ class ModuleController extends Controller {
                 }
                 $data[$step] = $requestData;
                 $moduleUser->data = $data;
-                if($step === $moduleUser->step) {
+                if($step == $moduleUser->step) {
                     $moduleUser->step ++;
                 }
 
