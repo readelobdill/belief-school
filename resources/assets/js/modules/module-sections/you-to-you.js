@@ -64,8 +64,9 @@ export default class YouToYou extends Text {
                     showGlobalError('Please choose an video with a filesize less then 1GB');
                     return false;
                 }
+                this.section.find('.actions .button .button-title').html('Starting Upload');
                 client.getVimeoUploadData($videoInput.data('vimeo-upload-url')).then(response => {
-
+                    this.section.find('.actions .button .button-title').html('Uploading');
                     let uploader = new MediaUploader({
                         file: videoInput.files[0],
                         url: response.upload_link_secure,
