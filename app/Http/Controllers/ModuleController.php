@@ -213,39 +213,48 @@ class ModuleController extends Controller {
 
                 break;
             case 'you-to-you':
-                if(($completeUri = $this->request->get('data[complete_uri]', null, true)) !== null) {
+                $completeUri = $this->request->get('data[complete_uri]', null, true);
+                $letter = $this->request->get('data[letter]', null, true);
+                if($completeUri !== null || $letter !== null) {
+                    $output = [];
+                    if($completeUri !== null) {
+                        $response = $vimeo->request($completeUri, [], 'DELETE');
+                        $location = $response['headers']['Location'];
+                        $id = str_replace('/videos/', '', $location);
 
-                    $response = $vimeo->request($completeUri, [], 'DELETE');
-                    $location = $response['headers']['Location'];
-                    $id = str_replace('/videos/', '', $location);
-
-                    $response = $vimeo->request($location, [
-                        'name' =>$this->auth->user()->first_name . ' ' . $this->auth->user()->last_name,
-                        'privacy' => [
-                            'view' => 'unlisted',
-                            'download' => false,
-                            'add' => false,
-                            'comments' => 'nobody',
-                            'embed' => 'public'
-                        ],
-                        'embed' => [
-                            'buttons' => [
-                                'like' => false,
-                                'watchlater' => false,
-                                'share' => false,
-                                'embed' => false,
+                        $response = $vimeo->request($location, [
+                            'name' =>$this->auth->user()->first_name . ' ' . $this->auth->user()->last_name,
+                            'privacy' => [
+                                'view' => 'unlisted',
+                                'download' => false,
+                                'add' => false,
+                                'comments' => 'nobody',
+                                'embed' => 'public'
                             ],
-                            'logos' => [
-                                'vimeo' => false
+                            'embed' => [
+                                'buttons' => [
+                                    'like' => false,
+                                    'watchlater' => false,
+                                    'share' => false,
+                                    'embed' => false,
+                                ],
+                                'logos' => [
+                                    'vimeo' => false
+                                ]
                             ]
-                        ]
-                    ], 'PATCH');
+                        ], 'PATCH');
+                        $output['video'] = $response['body'];
+                    }
+                    if($letter !== null) {
+                        $output['letter'] = $letter;
+                    }
 
 
 
-                    $moduleUser->data = [['video' => $response['body']]];
+
+                    $moduleUser->data = [$output];
                     if($step == $moduleUser->step) {
-                        $moduleUser->step ++;
+                        $moduleUser->step++;
                     }
 
 
