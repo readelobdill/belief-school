@@ -28,11 +28,13 @@ export default class Dashboard {
                 for(let word in wordsWeights) {
                     words.push({
                         text: word,
-                        weight: wordsWeights[word]
+                        weight: wordsWeights[word] + Math.random() * 2
                     })
                 }
                 $boomerang.find('.tagcloud').jQCloud(words, {
-                    autoResize :true});
+                    autoResize :true,
+                    removeOverflowing: false
+                });
             }
         }
 
