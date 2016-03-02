@@ -32,8 +32,7 @@ export default class Dashboard {
                     })
                 }
                 $boomerang.find('.tagcloud').jQCloud(words, {
-                    autoResize :true,
-                    removeOverflowing: false
+                    autoResize :true
                 });
             }
         }
