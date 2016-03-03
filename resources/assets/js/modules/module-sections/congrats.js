@@ -35,7 +35,7 @@ export default class CongratsSection extends Text {
     }
 
     completeModule(e) {
-        if(e.preventDefault) {
+        if(e && e.preventDefault) {
             e.preventDefault();
         }
 
@@ -54,6 +54,7 @@ export default class CongratsSection extends Text {
         const timeline = new TimelineLite({onComplete: () => {
             //this.section.css('height', 'auto');
             this.updateHeight();
+            this.submitting = false;
         }});
         let height = $(window).height();
 
@@ -63,6 +64,7 @@ export default class CongratsSection extends Text {
 
         timeline.add(this.getTimelineOpen());
         timeline.add(this.getTimelineClosed());
+
     }
 
     getTimelineOpen() {
