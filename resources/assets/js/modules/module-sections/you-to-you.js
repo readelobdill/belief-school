@@ -59,6 +59,8 @@ export default class YouToYou extends Text {
             let url = this.module.getUpdateUrl();
             let $videoInput = this.section.find('.upload-video [name=video]');
             let videoInput = $videoInput[0];
+            let $letterInput = this.section.find('form.letter [name=letter]');
+
             if(videoInput.files.length > 0) {
                 if(videoInput.files[0].size > maxFileSize) {
                     showGlobalError('Please choose an video with a filesize less then 1GB');
@@ -73,7 +75,11 @@ export default class YouToYou extends Text {
                         ticket_id: response.ticket_id,
                         complete_url: response.complete_uri,
                         onComplete: complete_uri => {
-                            client.saveModule(url, {complete_uri}).then(response => {
+                            let data = {complete_uri};
+                            if($letterInput.val() !== '') {
+                                data['letter'] = $letterInput.val();
+                            }
+                            client.saveModule(url, data).then(response => {
                                 var url = this.module.getCompleteUrl();
                                 return client.completeModule(url).then(() => {
                                     this.section.find('.actions .button').html('Done!');
@@ -92,7 +98,7 @@ export default class YouToYou extends Text {
                 })
             } else {
                 let data = serialize(this.section.find('form.letter'));
-                client.saveModule(url, data).then(() => {
+                client.saveModule(url, data, this.step).then(() => {
                     var url = this.module.getCompleteUrl();
                     return client.completeModule(url).then(() => this.module.nextSection());
                 });

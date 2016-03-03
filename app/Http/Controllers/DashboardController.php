@@ -32,9 +32,10 @@ class DashboardController extends Controller {
     }
 
     public function manifesto() {
+        $force = $this->request->has('force');
         $fileName = $this->auth->user()->id.'.pdf';
-        if(file_exists(storage_path('manifestos/'.$fileName))) {
-            return response(file_get_contents(storage_path('manifestos/'.$fileName)), 200, ['content-type' => 'application/pdf', 'content-disposition' => 'attachment; filename="manifesto"']);
+        if(file_exists(storage_path('manifestos/'.$fileName)) && !$force) {
+            return response(file_get_contents(storage_path('manifestos/'.$fileName)), 200, ['content-type' => 'application/pdf', 'content-disposition' => 'attachment; filename="manifesto.pdf"']);
         } else {
             \File::makeDirectory(storage_path('manifestos'), 493, true, true);
             $modules = Module::with(['users' => function($query) {

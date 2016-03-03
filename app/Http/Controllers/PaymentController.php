@@ -41,7 +41,7 @@ class PaymentController extends Controller {
         if($this->auth->user()->paid) {
             $module = $this->auth->user()->modules()->where('template', 'home')->first();
             if(!empty($module) && !$module->pivot->complete && $module->pivot->step === $module->total_parts) {
-                $module->pivot->step++;
+                $module->pivot->step = 3;
                 $module->pivot->complete = 1;
                 $module->pivot->completed_at = new Carbon();
                 $module->pivot->save();
@@ -86,7 +86,7 @@ class PaymentController extends Controller {
             $user->save();
 
             $module = $user->modules()->where('template', 'home')->first();
-            $module->pivot->step++;
+            $module->pivot->step = 3;
             $module->pivot->complete = 1;
             $module->pivot->completed_at = new \Carbon\Carbon();
             $module->pivot->save();
