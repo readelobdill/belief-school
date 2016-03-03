@@ -59,7 +59,7 @@ class DashboardController extends Controller {
                 'margin-right' => 0,
                 'load-error-handling' => 'ignore',
                 'load-media-error-handling' => 'ignore',
-                'javascript-delay' => 300]);
+                'javascript-delay' => 1000]);
             $pdf->binary = env('WKHTMLTOPDF_LOCATION', 'wkhtmltopdf');
 
             $pdf->saveAs(storage_path('manifestos/'.$fileName));
