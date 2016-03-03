@@ -85,15 +85,6 @@
         font-size: 99999px;
     }
 
-    &:hover:not(.has-video) {
-        .upload {
-            .upload-icon {
-                transform: scale(1.1, 1.1);
-                box-shadow: 0 0 30px rgba(255, 255, 255, 1);
-            }
-        }
-    }
-
     .upload {
         text-align: center;
 
@@ -127,49 +118,40 @@
     }
 }
 
-.either-or {
+.video-letter {
     padding-top: 40px;
 
-    &.letter-chosen {
-        .video {
-            border-color: $grey;
-            color: $grey;
-            background-color: rgba($white,1);
-            opacity: 0.8;
+    .video {
+        background-color: rgba($white,1);
+        opacity: 0.8;
 
-            &:hover {
-                .upload-icon {
-                    transform: scale(1, 1) !important;
-                }
-            }
-
-            input {
-                cursor: default;
-            }
-
-            .upload {
-                .upload-icon {
-                    background: $grey !important;
-                }
-            }
+        .upload-icon {
+            transform: scale(1, 1);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 1);
         }
 
-        .letter-container {
-            height: 290px;
-
-            form {
-                @include transform(translateY(0));
-                opacity: 1;
+        &:hover {
+            .upload-icon {
+                transform: scale(1.1, 1.1) !important;
             }
         }
     }
+
+    .letter-container {
+        height: 290px;
+
+        form {
+            @include transform(translateY(0));
+            opacity: 1;
+        }
+    }
+
 
     .letter-container {
         position: relative;
         margin-left: -127px;
         margin-bottom: 60px;
         width: 700px;
-        height: 0;
         overflow: hidden;
         z-index: 1;
         @include transition(height $transition);
@@ -202,11 +184,9 @@
         }
 
         form {
-            @include transform(translateY(-100%));
             @include transition(transform 200ms ease-out, opacity 250ms ease-out);
             position: relative;
             z-index: 2;
-            opacity: 0;
 
             @include breakpoint($brk-medium) {
                 width: 100%;

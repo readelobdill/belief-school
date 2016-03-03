@@ -49,7 +49,7 @@
             <a href="" data-remodal-target="help-modal" title="help">Need help?</a>
         </p>
 
-        <div class="either-or">
+        <div class="video-letter">
             <div class="video">
                 <div class="upload">
                     <div class="upload-icon"></div>
@@ -59,11 +59,11 @@
                     </form>
                 </div>
             </div>
-            <p class='small center'>Depending on the speed of your internet connection this video may take a while to upload. [Maximum file size 30MB, uploaded as MP4]</p>
+            <p class='small center'>Depending on the speed of your internet connection this video may take a while to upload. [Maximum file size 1GB, uploaded as MP4]</p>
 
-            <h2 class="title">If you can't record it somehow then write a heartfelt letter to yourself:</h2>
+            <h2 class="title">If you’d prefer, write yourself a heartfelt letter. We encourage you to do both; they will both be saved to your Manifesto.</h2>
 
-            <div class="button small letter-trigger" data-alternate="Close">Write your letter here..</div>
+
             <div class="letter-container">
                 <form action="" class="letter">
                     <textarea id="" cols="30" rows="10" name="letter" maxlength="500">Dear {{Auth::user()->first_name}}</textarea>
@@ -71,8 +71,9 @@
             </div>
 
             <div class="are-you-sure">
-                <p>Do a quick double check of the content you have created for this module; once you click this button it will permanently save to your Dashboard.</p>
+                <p>Double check the content you have created at the end of each module. Once you click this button, it will permanently save to your Dashboard.</p>
             </div>
+
             <div class="error-container" style="display:none"></div>
             <div class="actions">
                 <a href="" class="button" data-save-module><span class="button-title">Save to dashboard</span> <span class="percentage"></span></a>
