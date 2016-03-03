@@ -48,6 +48,10 @@ class TextWelcome extends Text {
         return client.saveModule(url, data);
     }
 
+    submit() {
+        this.form.submit();
+    }
+
 
 
 
