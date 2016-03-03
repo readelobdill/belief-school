@@ -46,7 +46,7 @@
             </div>
 
             <div class="are-you-sure">
-                <p>Do a quick double check of the content you have created for this module: once you click this button it will permanently save to your Dashboard.</p>
+                <p>Do a quick double check of the content you have created for this module; once you click this button it will permanently save to your Dashboard.</p>
             </div>
 
             <div class="actions">
