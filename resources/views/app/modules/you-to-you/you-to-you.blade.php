@@ -66,7 +66,7 @@
 
             <div class="letter-container">
                 <form action="" class="letter">
-                    <textarea id="" cols="30" rows="10" name="letter" maxlength="500">Dear {{Auth::user()->first_name}}</textarea>
+                    <textarea id="" cols="30" rows="10" name="letter" maxlength="500" placeholder="Dear {{Auth::user()->first_name}}"></textarea>
                 </form>
             </div>
 
