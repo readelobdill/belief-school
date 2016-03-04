@@ -24,9 +24,9 @@
                 <h5 class="course-container__title">Belief School Automated</h5>
 
                 <ul>
-                    <li>Full Access to Belief School’s eight interactive modules and exercises</li>
-                    <li>Self-discipline exercises, helping you build your inner strength</li>
-                    <li>Unlock a Belief School Manifesto on completion of the course</li>
+                    <li>Full Access to Belief School’s beautifully crafted program. Eight interactive modules and exercise</li>
+                    <li>A self discipline exercise, helping you build your inner strength</li>
+                    <li>Unlock and download your Belief School Manifesto on completion of the course</li>
                     <li>Access to the Belief School Community Forum</li>
                     <li>This is the perfect program for those who like to go at their own pace</li>
                 </ul>
@@ -37,17 +37,17 @@
             <div class="course-container__column">
                 <h5 class="course-container__title">Belief School Coached</h5>
                 <ul>
-                    <li>Full Access to Belief School’s eight interactive modules and exercises</li>
+                    <li>Full Access to the entire Belief School automated program</li>
                     <li>Work directly with Paula Gosney</li>
                     <li>Twice weekly live webinars with Paula Gosney. Also recorded and available for you</li>
                     <li>A private Facebook group just for this course</li>
-                    <li>Opportunities to connect within the group</li>
+                    <li>Opportunities to connect within the course group</li>
                     <li>Weekly Q&amp;A sessions</li>
                     <li>Additional tools and insights to support your journey</li>
                     <li>A great option for those who like a little more accountability and a deeper understanding of why they do the things they do</li>
                 </ul>
                 <div class="actions">
-                    <a href="{{route('payment', [App\Models\User::COACHED])}}" class="button">Belief School Coached</a>
+                    <a href="{{route('payment', [App\Models\User::COACHED])}}" class="button">Start Belief School Coached</a>
                 </div>
             </div>
 
