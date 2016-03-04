@@ -169,31 +169,37 @@
                 </div>
                 @if(isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '1')
                 <div class="pricing-container">
-                    <h1 class="title">
-                        <span data-arc="120">&middot; Belief School <b>Coached</b> &middot;</span>
-                        <div class="price">$270 <span>NZD</span></div>
-                    </h1>
 
-                    <div class="content-block spacer">
+                <h1 class="title">
+                    <span data-arc="120">&middot; Belief School <b>Coached</b> &middot;</span>
+                </h1>
+
+                    <div class="content-block">
                         <div class="col">
-                            <p>Twice a year, over an eight week period, Paula Gosney works closely with a group who are looking for greater accountability and additional support as they work through Belief School, on their journey of self-discovery.</p>
+                            <p>Twice a year, over an eight week period, Paula Gosney works closely with a group who are looking for <b>greater accountability and additional support</b> as they work through Belief School, on their journey of self-discovery.</p>
 
                             <p>Over the last decade, Paula has spent hundreds of hours working with people one-on-one, helping them catch sight of their own potential.  She is deeply passionate about helping you see how capable, creative and valuable you are.</p>
                         </div>
                         <div class="col">
                             <p>This special coached program is an opportunity for you to work through Belief School with the creator, gaining more in-depth insights into the value of personal development and how you can apply this to yourself. You will be part of a dynamic group who will support and encourage you.</p>
-
-                            <p>The next coached course commences on the <b>4th of April.</b></p>
                         </div>
                     </div>
 
-
-                    @if(!Auth::check() || !Auth::user()->paid)
-                        <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
-                    @endif
-
                     <div class="content-block">
+
+                         <h1 class="title">
+                            <div class="price">$270 <span>NZD</span></div>
+                        </h1>
+
+                        @if(!Auth::check() || !Auth::user()->paid)
+                            <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
+                        @endif
+
+                        <center><p>Program commences <b>April 4th</b></p></center>
+
                         <h1 class="plain">What you get</h1>
+
+                        <p>Full access to the complete automated Belief School Program described above.  In addition to support you:</p>
 
                         <div class="what-you-get coached">
                             <div class="what-you-get__node">
@@ -213,18 +219,17 @@
 
                             <div class="what-you-get__node">
                                 <div class="icon forum"></div>
-                                <p><b>Weekly Q&amp;A</b> <br />A live session with Paula Gosney after each webinar – also recorded.</p>
+                                <p><b>Weekly Q&amp;A</b> <br />A live session with Paula Gosney after each webinar, giving you the opportunity to get your questions answered and find solutions if you are stuck.</p>
                             </div>
 
                             <div class="what-you-get__node">
                                 <div class="icon book"></div>
-                                <p><b>Additional tools</b> and insights to support your journey</p>
+                                <p><b>Additional tools</b> and not yet released recordings to support your journey.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 @endif
-
 
                 <h1 class="plain">Is any of this chatter, getting in your way?</h1>
 
