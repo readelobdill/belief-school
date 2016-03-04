@@ -18,7 +18,9 @@
                 </div>
                 @else
                     <div class="your-video">
-                        <img style="margin: 0 auto" width="100%" src="{{asset('uploads/dreamboard/'.Auth::user()->id.'/'.$modules[4]->pivot->data->image_main)}}" alt="" >
+                        <a href="{{route('module.share', [$module->pivot->secret])}}">
+                            <img style="margin: 0 auto" width="100%" src="{{asset('uploads/dreamboard/'.Auth::user()->id.'/'.$modules[4]->pivot->data->image_main)}}" alt="" >
+                        </a>
                     </div>
                 @endif
 
