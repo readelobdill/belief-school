@@ -13,6 +13,9 @@ export default class Question {
         this.validator = false;
 
         this.setupValidation();
+        this.question.find('form').on('submit', e => {
+            e.preventDefault();
+        })
     }
 
     open() {
