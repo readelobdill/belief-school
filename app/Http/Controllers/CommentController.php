@@ -40,7 +40,7 @@ class CommentController extends Controller {
     public function reply($comment)
     {
         $this->validate($this->request, [
-            'image' => 'mimes:jpeg,png,gif|max:1024',
+            'image' => 'mimes:jpeg,png,gif|max:3072',
         ]);
         $nComment = new Comment([
             'title' => $this->request->input('title', ''),
@@ -57,7 +57,7 @@ class CommentController extends Controller {
 
     public function create($module) {
         $this->validate($this->request, [
-            'image' => 'mimes:jpeg,png,gif|max:1024',
+            'image' => 'mimes:jpeg,png,gif|max:3072',
         ]);
         $comment = new Comment([
             'title' => $this->request->input('title', ''),
