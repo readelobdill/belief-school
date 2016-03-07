@@ -9,7 +9,7 @@
             <section class="payment-failure">
                 <div class="inner">
                     <div class="content">
-                        <p>Please try again later</p>
+                        <p>To try again, click on Creating Clarity in the pull down menu.</p>
                     </div>
                 </div>
             </section>
