@@ -61,6 +61,10 @@ form.comment-form {
     textarea {
         width: 100%;
         font-size: 17px;
+
+        &:focus {
+            background: rgba(255, 255, 255, 0.8) !important
+        }
     }
 
     .error-message {
