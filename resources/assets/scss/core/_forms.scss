@@ -164,7 +164,7 @@ textarea {
     }
 
     &:focus {
-        background: rgba($white, 0.8) !important;
+        background: rgba($white, 0.8);
         color: $lightRed;
 
         @include input-placeholder() {
@@ -172,14 +172,14 @@ textarea {
         }
     }
 
-    // &:hover {
-    //     background: rgba($white, 0.8);
-    //     color: $lightRed;
+    &:hover {
+        background: rgba($white, 0.8);
+        color: $lightRed;
 
-    //     @include input-placeholder() {
-    //         color: $lightRed;
-    //     }
-    // }
+        @include input-placeholder() {
+            color: $lightRed;
+        }
+    }
 
     @include input-placeholder() {
         color: $white;

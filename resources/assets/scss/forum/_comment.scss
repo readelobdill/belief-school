@@ -62,7 +62,8 @@ form.comment-form {
         width: 100%;
         font-size: 17px;
 
-        &:focus {
+        &:focus,
+        &:hover {
             background: rgba(255, 255, 255, 0.8) !important
         }
     }
