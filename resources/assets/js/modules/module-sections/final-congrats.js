@@ -25,7 +25,15 @@ export default class FinalCongrats extends Congrats {
 
     getTimelineClosed() {
         let timeline = new TimelineLite();
-        timeline.to(this.section.find('.post-complete'), 0, {autoAlpha: 1, display: 'table'});
+        timeline.to(this.section.find('.post-complete'), 0, {autoAlpha: 1, display: 'table', onComplete: () => {
+
+            this.section.find('[data-arc]').each(function() {
+                var arc = parseInt($(this).data('arc'));
+                $(this).arctext('set',{radius: arc});
+            })
+
+        }});
+        //timeline.to()
         timeline.fromTo(this.section.find('.post-complete'), 0.5, {y: 500, opacity: 0}, {y: 0, opacity: 1});
         return timeline;
     }

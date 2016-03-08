@@ -237,6 +237,9 @@
     }
 
     .your-video {
+        a {
+            display:block;
+        }
         video {
             display:none;
 

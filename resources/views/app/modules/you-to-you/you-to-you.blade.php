@@ -59,14 +59,14 @@
                     </form>
                 </div>
             </div>
-            <p class='small center'>Depending on the speed of your internet connection this video may take a while to upload. [Maximum file size 1GB, uploaded as MP4]</p>
+            <p class='small center'>Depending on the speed of your internet connection this video may take a while to upload. [Maximum file size 1GB, uploaded as MP4 or MOV]</p>
 
             <h2 class="title">If you’d prefer, write yourself a heartfelt letter. We encourage you to do both; they will both be saved to your Manifesto.</h2>
 
 
             <div class="letter-container">
                 <form action="" class="letter">
-                    <textarea id="" cols="30" rows="10" name="letter" maxlength="500">Dear {{Auth::user()->first_name}}</textarea>
+                    <textarea id="" cols="30" rows="10" name="letter" maxlength="500" placeholder="Dear {{Auth::user()->first_name}}"></textarea>
                 </form>
             </div>
 

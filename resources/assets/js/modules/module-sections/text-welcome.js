@@ -22,15 +22,20 @@ class TextWelcome extends Text {
 
         this.form.on('submit', (e) => {
             e.preventDefault();
-            if(this.submitting) {
-                return false;
-            }
-            this.submitting = true;
-
-            this.submitForm().then(() => {
-                this.module.nextSection();
-            });
+            this.submitHandler();
         })
+    }
+
+    submitHandler() {
+        if(this.submitting) {
+            return false;
+        }
+        this.submitting = true;
+
+        this.submitForm().then(() => {
+            this.module.nextSection();
+            this.submitting = false;
+        });
     }
 
 
@@ -45,7 +50,11 @@ class TextWelcome extends Text {
         let val = this.section.find('input:checked').val();
         this.module.setData(val);
         let data = {challenge: val}
-        return client.saveModule(url, data);
+        return client.saveModule(url, data, this.step);
+    }
+
+    submit() {
+        this.submitHandler();
     }
 
 

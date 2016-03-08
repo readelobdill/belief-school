@@ -57,7 +57,6 @@ export default class QuestionsSection extends ModuleSection {
         this.section.on('click', '.next-question', function(e) {
             e.preventDefault();
             if(this.getCurrentQuestion().validate()) {
-                console.log(this.currentQuestion, this.questions.length);
                 if(this.currentQuestion >= this.questions.length - 1) {
                     this.questionsFinished();
                 } else {
@@ -68,6 +67,18 @@ export default class QuestionsSection extends ModuleSection {
 
 
         }.bind(this));
+        this.section.find('form').on('submit', e => {
+            e.preventDefault();
+            if(this.getCurrentQuestion().validate()) {
+                if(this.currentQuestion >= this.questions.length - 1) {
+                    this.questionsFinished();
+                } else {
+                    this.nextQuestion();
+                }
+
+            }
+            return false;
+        })
     }
 
     goToQuestion(question) {

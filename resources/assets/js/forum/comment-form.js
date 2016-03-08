@@ -19,8 +19,8 @@ export default class CommentForm extends EventEmitter {
         if(files.length > 0) {
 
             let file = files[0];
-            if(file.size > 1024 * 1024) {
-                return 'The uploaded image must be less then 1MB';
+            if(file.size > 1024 * 1024 * 3) {
+                return 'The uploaded image must be less then 3MB';
             }
         }
         return true;

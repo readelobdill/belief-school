@@ -33,18 +33,7 @@ export default class YouToYou extends Text {
             }
         });
 
-        this.section.on('click', '.letter-trigger', e => {
-            let button = $(e.currentTarget);
-            this.section.find('.either-or').toggleClass('letter-chosen');
-            this.section.find('.letter-container').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => {
-                this.updateHeight();
-            })
-            this.letterChosen = !this.letterChosen;
-            let oldText = button.html();
-            let newText = button.data('alternate');
-            button.html(newText);
-            button.data('alternate', oldText);
-        })
+
     }
 
     submit() {
@@ -117,17 +106,13 @@ export default class YouToYou extends Text {
     }
 
     validate() {
-        if(this.letterChosen) {
-            let letter = this.section.find('textarea[name=letter]');
-            if(letter.val() == '') {
-                return 'Your letter must not be empty';
-            }
-        } else {
-            let video = this.section.find('.upload-video [name=video]');
-            if(video[0].files.length === 0) {
-                return 'You must select a video to upload';
-            }
+        let video = this.section.find('.upload-video [name=video]');
+        let letter = this.section.find('textarea[name=letter]');
+
+        if(letter.val() == '' && video[0].files.length === 0) {
+            return 'You must record a video and/or write a letter';
         }
+
 
         return true;
     }
