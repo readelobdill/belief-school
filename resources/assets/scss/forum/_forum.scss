@@ -44,6 +44,12 @@
                 padding-left: 25px;
             }
 
+            span {
+                @include breakpoint($break-800) {
+                    display: none;
+                }
+            }
+
             &:before {
                 position: relative;
                 font-family: $icon;

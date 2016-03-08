@@ -4,7 +4,7 @@
     <div class="container forums">
         <div class="inner">
             <div class="forum-navigator">
-                <h2>Forum</h2>
+                <h2><span>Forum</span></h2>
                 <ul class="links">
                     <li class="module">
                         <a href="{{route('modules.view', [$module->slug])}}" title="{{$module->name}}"> Module {{$module->order - 1}} <span>- {{$module->name}}</span></a>
