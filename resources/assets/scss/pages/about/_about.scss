@@ -313,13 +313,13 @@
         line-height: 26px;
         float: left;
         width: calc(50% - 5px);
-        min-height: 210px;
+        min-height: 260px;
         margin: 0 10px 10px 0;
 
         @include breakpoint($break-800) {
             width: 100% !important;
             float: none !important;
-            height: auto;
+            min-height: auto;
         }
 
         &:nth-child(2n) {

@@ -163,8 +163,6 @@
                         <p>Many of us want to create change, but when left to our own devices life can get in the way. Our initial enthusiasm may wane, or we come up against a challenge, so we stall.</p>
 
                         <p>When applied, the principles and exercises in Belief School are life changing. If you need help to stay on track, this option is for you.</p>
-
-                        <p>Need more information, please email us here: <a href="mailto:contact@beliefschool.com"> contact@beliefschool.com</a></p>
                     </div>
                 </div>
                 @if(isset($options['tutored_sessions_enabled']) && $options['tutored_sessions_enabled']->value === '1')
@@ -185,7 +183,7 @@
                         </div>
                     </div>
 
-                    <div class="content-block">
+                    <div class="content-block spacer">
 
                          <h1 class="title">
                             <div class="price">$270 <span>NZD</span></div>
@@ -224,10 +222,12 @@
 
                             <div class="what-you-get__node">
                                 <div class="icon book"></div>
-                                <p><b>Additional tools</b> and not yet released recordings to support your journey.</p>
+                                <p><b>Additional tools</b> and not yet released recordings to support your journey. <br /></p>
                             </div>
                         </div>
                     </div>
+
+                    <p>Need more information, please email us here: <a href="mailto:contact@beliefschool.com"> contact@beliefschool.com</a></p>
                 </div>
                 @endif
 
