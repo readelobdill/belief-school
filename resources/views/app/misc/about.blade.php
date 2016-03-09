@@ -193,7 +193,7 @@
                             <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
                         @endif
 
-                        <center><p>Program commences <b>April 4th</b></p></center>
+                        <center><p>Program commences <b>April 11th</b></p></center>
 
                         <h1 class="plain">What you get</h1>
 
