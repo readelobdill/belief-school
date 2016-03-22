@@ -29,5 +29,23 @@ export default {
 
             return response;
         });
+    },
+    stickyComment(url) {
+        return fetch(url, {
+            method: 'post',
+            credentials: 'same-origin',
+            headers: $.extend({}, {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }, defaultHeaders)
+        }).then(response => {
+            if((response.status < 200 || response.status >= 400) && response.status !== 0 ) {
+                this.emit('load:error');
+                return Q.reject(response.statusText);
+            }
+
+            return response;
+        });
     }
+
 }

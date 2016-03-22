@@ -23,6 +23,10 @@ export default class Comment {
             e.preventDefault();
             this.deleteComment($(e.currentTarget).attr('href'));
         });
+        this.comment.find('.sticky-comment').first().on('click', (e) => {
+            e.preventDefault();
+            this.stickyComment($(e.currentTarget).attr('href'));
+        });
         this.replyForm.on('comment:new', (comment) => {
             this.addNewComment(comment)
         });
@@ -55,6 +59,13 @@ export default class Comment {
 
     deleteComment(url) {
         client.deleteComment(url).then(response => response.text())
+            .then(comment => {
+                window.location = window.location;
+            });
+    }
+
+    stickyComment(url) {
+        client.stickyComment(url).then(response => response.text())
             .then(comment => {
                 window.location = window.location;
             });
