@@ -11,15 +11,20 @@ export default class CongratsSection extends Text {
 
 
     open() {
-        let container = this.section.find('.congrats-container');
+        let container;
         if(this.module.isComplete()) {
-            container = container.last();
+            container = this.section.find('.post-complete');
             $('[data-back],[data-forward]').hide();
+
+            super.open();
+            return animate.to(container, 0.7, {autoAlpha: 1}).then(this.showNext.bind(this));
         } else {
-            container = container.first();
+            container = this.section.find('.pre-complete');
+
+            super.open();
+            return animate.to(container, 0.7, {autoAlpha: 1});
         }
-        super.open();
-        return animate.to(container, 0.7, {autoAlpha: 1});
+
 
     }
 
