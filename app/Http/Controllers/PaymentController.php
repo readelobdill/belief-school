@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use App\Services\Payment;
+use Auth;
 use Carbon\Carbon;
 use DrewM\MailChimp\MailChimp;
 use Illuminate\Auth\Guard;
@@ -78,6 +79,7 @@ class PaymentController extends Controller {
             $userId = intval($userInfo[0]);
             $type = $userInfo[1];
             $user = User::find($userId);
+            \Session::flash('paid', true);
             if($user->paid) {
                 return redirect(route('home'));
             }
@@ -102,8 +104,11 @@ class PaymentController extends Controller {
                 ],
             ]);
 
-            \Session::flash('paid', true);
-            return redirect(route('home'));
+
+            if(Auth::check()) {
+                return redirect(route('home'));
+            }
+
         } else {
             return redirect(route('payments.fail'));
         }
