@@ -7,7 +7,6 @@
                     We know you can stick to <span class="resolution">{{isset($moduleUser->data) && isset($moduleUser->data[0]) ? $moduleUser->data[0]->challenge : ''}}.</span>
                     It's part of the journey.
                 </h1>
-                <p>Keep your eyes on your <a href="{{route('dashboard')}}#module-{{$module->slug}}" title="Dashboard">Dashboard</a> it is a living thing. The <a href="{{route('modules.forum',[$module->slug])}}">Forum</a> is for you, the more you give here, the more you'll get.</p>
                 <div class="actions">
                     <a href="#" class="button" data-complete-module>I'm ready to start Module One</a>
                 </div>
