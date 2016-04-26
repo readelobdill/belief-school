@@ -98,7 +98,7 @@
             <div class="content-block">
                 <div class="col">
                     <p><b>Simple.</b> A small amount of theory and a quick video to set you up for the task ahead.</p>
-                    <p><b>Game Changing.</b> A small amount of theory and a quick video to set you up for the task ahead.</p>
+                    <p><b>Game Changing.</b> You are having the experience, it is your reality and cannot be denied.</p>
                     <p><b>Fun.</b> You’ll laugh a little and possibly cry a little, as you discover how special you are.</p>
                 </div>
                 <div class="col">
