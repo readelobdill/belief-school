@@ -148,7 +148,7 @@ return [
         /*
          * Other Service Providers...
          */
-        'Slynova\Commentable\ServiceProvider',
+        'Lanz\Commentable\CommentableServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 
 		'App\Providers\MenuServiceProvider',

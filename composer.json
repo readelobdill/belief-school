@@ -9,15 +9,19 @@
 		{
 			"type": "vcs",
 			"url": "https://git.gladeye.org/daniel/omnipay-paymentexpress.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/readelobdill/laravel-commentable.git"
 		}
 	],
 
 	"require": {
 		"laravel/framework": "5.1.*",
-        "slynova/laravel-commentable": "~2.0",
 		"barryvdh/laravel-ide-helper": "~2.0",
 		"doctrine/dbal": "~2.5",
 		"stojg/crop": "^1.2",
+		"readelobdill/laravel-commentable": "dev-master",
 		"daniel/omnipay-paymentexpress": "dev-master",
 		"misd/linkify": "^1.1",
 		"vimeo/vimeo-api": "^1.2",
