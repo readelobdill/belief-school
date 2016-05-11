@@ -25,7 +25,7 @@ $transition: 200ms $ease;
 $gutter: 20px;
 
 // breakpoints
-$breakpoint-default-feature: 'max-width';
+@include breakpoint-set('default feature', 'max-width');
 $break-620 : 620px;
 
     // window paddi@ng collapses,

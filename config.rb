@@ -1,3 +1,4 @@
+require 'breakpoint'
 require 'compass/import-once/activate'
 require 'compass-notify'
 # Require any additional compass plugins here.
