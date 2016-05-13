@@ -16,3 +16,4 @@ jsconfig.json
 .vscode/settings.json
 storage/manifestos
 public
+storage/clockwork
