@@ -29,25 +29,6 @@ class Module extends Model {
         }
     }
 
-    public static function getLatestModuleForUser($user) {
-        $modules = $user->modules()->get();
-        $latestModule = $modules->last();
-        if($latestModule->pivot->complete) {
-            if($latestModule->pivot->created_at->diffInHours() < config('belief.lockout')) {
-                return $latestModule;
-            } else {
-                $currentModule = static::where('order', $latestModule->order + 1)->first();
-                if(!empty($currentModule)) {
-                    return $currentModule;
-                } else {
-                    return null;
-                }
-            }
-        }
-        return $latestModule;
-
-    }
-
     public function getAllComments() {
         $comments = $this->comments()->with('user', 'images')->get()->toHierarchy();
         $comments = $comments->sort(function($a, $b) {

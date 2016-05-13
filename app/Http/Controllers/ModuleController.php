@@ -75,12 +75,12 @@ class ModuleController extends Controller {
 
 
         if(!empty($moduleUser) && $moduleUser->pivot->complete && !\Session::get('paid', false)) {
-            $latestModule = Module::getLatestModuleForUser($this->auth->user());
-            if(empty($latestModule)) {
-                return redirect(route('dashboard'));
-            }
-            if($latestModule->id != $module->id) {
-                return redirect(route('modules.view', [$latestModule->slug]));
+            // reset temporarily so we can go through module again if not sign up
+            $moduleUser->pivot->complete = false;
+            if($moduleUser->id == 1){
+                $moduleUser->pivot->step = 1;
+            } else {
+                $moduleUser->pivot->step = 0;
             }
         }
 
@@ -175,8 +175,8 @@ class ModuleController extends Controller {
         if($moduleUser->step >= $module->total_parts) { //No longer want to not allow changes once past the end but not completed yet
             //abort(404);
         }
-        if($moduleUser->complete) {
-            abort(404);
+        if($moduleUser->complete) { //DONT CURR IF ITS COMPLETE NO MORE
+            // abort(404);
         }
 
 
@@ -305,7 +305,7 @@ class ModuleController extends Controller {
                 ],
             ]);
         } else {
-            abort(404);
+            // abort(404);
         }
     }
 
