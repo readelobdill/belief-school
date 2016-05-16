@@ -171,16 +171,11 @@ class ModuleController extends Controller {
         }
 
         $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first()->pivot;
-
-        if($moduleUser->step >= $module->total_parts) { //No longer want to not allow changes once past the end but not completed yet
-            //abort(404);
+        if($moduleUser->complete && $moduleUser->module_id == 1) {
+            $step = intval('1');
+        } else {
+            $step = intval($this->request->get('step',$moduleUser->step));
         }
-        if($moduleUser->complete) { //DONT CURR IF ITS COMPLETE NO MORE
-            // abort(404);
-        }
-
-
-        $step = intval($this->request->get('step',$moduleUser->step));
         switch($module->type) {
             case 'tag-cloud':
                 if($step == $moduleUser->step) {
@@ -272,7 +267,12 @@ class ModuleController extends Controller {
                 if(empty($data)) {
                     $data = [];
                 }
-                $data[$step] = $requestData;
+
+                if(is_object($data)) {
+                    $data->$step = $requestData;
+                } else {
+                    $data[$step] = $requestData;
+                }
                 $moduleUser->data = $data;
                 if($step == $moduleUser->step) {
                     $moduleUser->step ++;

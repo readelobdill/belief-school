@@ -15,7 +15,7 @@
         <div class="controls">
             <form action="" data-validate>
                 <div class="form-row">
-                    <textarea name="want" id="want" cols="30" rows="10" required maxlength="140"></textarea>
+                    <textarea name="want" id="want" cols="30" rows="10" required maxlength="140">{{ isset($moduleUser) && isset($moduleUser->data->{'1'}) ? $moduleUser->data->{'1'}->{'want'} : '' }}</textarea>
                 </div>
             </form>
         </div>

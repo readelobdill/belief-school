@@ -8,7 +8,7 @@
         <div class="controls">
             <form action="" data-validate>
                 <div class="form-row">
-                    <textarea name="how" id="how" cols="30" rows="10" required maxlength="140"></textarea>
+                    <textarea name="how" id="how" cols="30" rows="10" required maxlength="140">{{ isset($moduleUser) && isset($moduleUser->data->{'1'}) ? $moduleUser->data->{'1'}->{'how'} : '' }}</textarea>
                 </div>
             </form>
         </div>

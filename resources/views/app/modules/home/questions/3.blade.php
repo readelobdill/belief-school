@@ -4,7 +4,7 @@
         <div class="controls">
             <form action="" data-validate>
                 <div class="form-row">
-                    <input type="text" name="age" id="age" class="age" required data-parsley-type="integer" required data-parsley-validation-threshold="0">
+                    <input type="text" name="age" id="age" class="age" required data-parsley-type="integer" required data-parsley-validation-threshold="0" value={{ isset($moduleUser) && isset($moduleUser->data->{'1'}) ? $moduleUser->data->{'1'}->{'age'} : '' }}>
                 </div>
             </form>
         </div>

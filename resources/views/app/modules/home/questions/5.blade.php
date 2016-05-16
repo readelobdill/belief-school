@@ -9,7 +9,7 @@
         <div class="controls">
             <form action="" data-validate>
                 <div class="form-row">
-                    <textarea name="why" id="why" cols="30" rows="10" maxlength="140" required data-parsley-maxlength="140" data-parsley-minlength="1"></textarea>
+                    <textarea name="why" id="why" cols="30" rows="10" maxlength="140" required data-parsley-maxlength="140" data-parsley-minlength="1">{{ isset($moduleUser) && isset($moduleUser->data->{'1'}) ? $moduleUser->data->{'1'}->{'why'} : '' }}</textarea>
                 </div>
             </form>
         </div>
