@@ -60,7 +60,7 @@ class PaymentController extends Controller {
                 return redirect(route('home'));
             }
 
-            abort(404);
+            return redirect(route('modules.view', 'welcome-to-belief-school'));
         }
         if(Carbon::now()->gt(Carbon::createFromFormat('Y-m-d H:i:s',config('belief.discountedUntil')))) {
             $amount = config('belief.price.'.$type);
