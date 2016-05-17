@@ -23,7 +23,13 @@
                 </h1>
                 <p>Click through to your <a href="{{route('dashboard')}}#module-{{$module->slug}}" title="Dashboard">Dashboard</a> to enjoy your journey.</p>
 
-                <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}" title="Next Module">next module</a> is ready and waiting for you.</p>
+                <h1 class="plain">You just made it through the trickiest exercise in Belief School. <br />We are seriously impressed!</h1>
+
+                @if($moduleUser->created_at->diffInHours() < config('belief.lockout'))
+                    <p>Your next module will unlock in {{$moduleUser->created_at->addHours(config('belief.lockout'))->diffForHumans(null, true)}}.</p>
+                @else
+                    <p>Your <a href="{{route('modules.view', [$nextModule->slug])}}" title="Next Module">next module</a> is ready and waiting for you.</p>
+                @endif
             </div>
         </div>
     </div>
