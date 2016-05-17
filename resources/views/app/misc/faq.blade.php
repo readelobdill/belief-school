@@ -98,14 +98,14 @@
                     <div id="6" class="faq__question-container">
                         <h4 class="faq__question">Can I go back to previous parts of a module that I’m currently working on?</h4>
                         <div class="faq__answer">
-                            <p>Yes you can go back to the video and the instructions and you can edit your responses for the module you are working on. Once you have completed this module, you may like to double check for typos, etc, as it will be saved to your Dashboard and Manifesto once it’s complete.</p>
+                            <p>Yes you can go back to the video and the instructions and you can edit your responses for the module you are working on. Use the arrows on the right-hand side to navigate within a module.</p>
                         </div>
                     </div>
 
                     <div id="7" class="faq__question-container">
                         <h4 class="faq__question">Can I go back and edit previous modules that I’ve already completed?</h4>
                         <div class="faq__answer">
-                            <p>We have always felt that your first response to a task is extremely valuable and we want you to cherish this. At this stage we have chosen not to allow you to edit completed modules.</p>
+                            <p>Yes, you can go back to previous modules and update or edit the content you have input. Do this by clicking on the module in the left-hand pull down menu. We encourage you to consider keeping your initial responses, often the first thought or idea is the closest to the truth and your heart.</p>
                         </div>
                     </div>
 
