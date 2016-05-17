@@ -93,7 +93,7 @@
             </ul>
 
             <div class="are-you-sure">
-                <p>Do a quick double check of the content you have created for this module; once you click this button it will permanently save to your Dashboard.</p>
+                <p>Once you click this button your content will be saved to the Dashboard. You can edit this by clicking on the module in the side menu.</p>
             </div>
             <div class="actions">
                 <button class="button">Save to my dashboard</button>
