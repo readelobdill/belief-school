@@ -28,7 +28,6 @@
     <script src="{{asset('js/output.js')}}"></script>
 </head>
 <body data-page="{{ $page or 'page' }}">
-
 <!--[if lt IE 10]>
     <div class="browserupgrade">
         <h1 class="plain">You are using an <strong>outdated</strong> browser.</h1>
@@ -41,7 +40,6 @@
         <p>Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     </div>
 @endif
-
 <div class="spinner"></div>
 <div class="spinner-percentage"></div>
 @include('app.partials.buttons.burger')
@@ -56,6 +54,7 @@
 
 @include('app.ui.introduction-modal')
 
+@if(getenv('APP_ENV')=='live')
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -64,8 +63,33 @@
 
     ga('create', 'UA-58267105-2', 'auto');
     ga('send', 'pageview');
-
 </script>
+<script>
+    window['_fs_debug'] = false;
+    window['_fs_host'] = 'www.fullstory.com';
+    window['_fs_org'] = '18WC2';
+    (function(m,n,e,t,l,o,g,y){
+      g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+      o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+      y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+      g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){FS(l,v)};
+      g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;FS(o,v)};
+      g.clearUserCookie=function(d,i){d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+      ';path=/;expires='+new Date(0);i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}
+    })(window,document,'FS','script','user');
+</script>
+    @if(Auth::user())
+        <script>
+            var userId = "<?php $user = Auth::user();echo $user->id; ?>";
+            var username = "<?php $user = Auth::user();echo $user->username; ?>";
+            var email = "<?php $user = Auth::user();echo $user->email; ?>";
+            FS.identify(userId, {
+                displayName: username,
+                email: email
+            });
+        </script>
+    @endif
+@endif
 
 </body>
 </html>
