@@ -207,13 +207,6 @@ $content-width: 620px;
     }
 }
 
-.tagcloud {
-    height: 700px;
-    margin-bottom: 30px;
-    font-weight: 600;
-    text-transform: lowercase;
-}
-
 .small-dashboard {
     font-size: 14px;
     font-weight: 500;
@@ -260,6 +253,7 @@ ul.and-i-am {
 }
 
 .module-boomerang {
+    position: relative;
     h2:before {
         content: "\e600";
     }
@@ -267,6 +261,85 @@ ul.and-i-am {
     &.module-icon:after,
     .page-icon:after {
         content: '\e600';
+    }
+
+    .edit-button-container{
+        position: absolute;
+        right: 0px;
+        top: 60px;
+
+        .edit,.cancel,.save{
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 18px;
+
+            i{
+                font-family: "icomoon";
+                font-style: normal;
+                position: relative;
+                margin-right: 7.5px;
+                font-size: 18px;
+
+                &.icon-edit:before{
+                    content: '\e61a';
+                }
+
+                &.icon-validate:before{
+                    content: '\e61d';
+                }
+
+                &.icon-close:before{
+                    content: '\e616';
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .cancel,.save{
+            display: none;
+        }
+    }
+
+    &.edit-words{
+        .cancel, .save, .tagcloud .cloud-word .remove-word{
+            display: inline;
+        }
+
+        .edit{
+            display: none;
+        }
+    }
+
+    .tagcloud {
+        height: 700px;
+        margin-bottom: 30px;
+        font-weight: 600;
+        text-transform: lowercase;
+
+        .cloud-word{
+            &.hidden{
+                display: none;
+            }
+
+            .remove-word:before{
+                content: '\e616'
+            }
+
+            .remove-word{
+                font-family: "icomoon";
+                font-style: normal;
+                display: none;
+                position: absolute;
+                top: 0;
+                left: -20px;
+                font-size: 12px;
+                cursor: pointer;
+                height: 20px;
+                width: 20px;
+                line-height: 20px;
+                text-align: center;
+            }
+        }
     }
 }
 

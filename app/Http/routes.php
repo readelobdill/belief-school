@@ -39,6 +39,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
     Route::get('dashboard/manifesto', ['as' => 'dashboard.manifesto', 'uses' => 'DashboardController@manifesto']);
+    Route::post('dashboard/save-word-cloud', ['as' => 'dashboard.save-word-cloud', 'uses' => 'DashboardController@saveWordCloud']);
 
     Route::get('modules/visualise/dreamboard', ['as' => 'modules.visualise.dreamboard','uses' => 'ModuleController@showDreamboardImage']);
 

@@ -70,4 +70,11 @@ class DashboardController extends Controller {
 
     }
 
+    public function saveWordCloud() {
+        $moduleUser = $this->auth->user()->modules()->where('modules.id', 3)->first()->pivot;
+        $moduleUser->data = $this->request->input('tags');
+        $moduleUser->save();
+        return redirect(route('dashboard'));
+    }
+
 }
