@@ -23,8 +23,8 @@
         <ul>
             @foreach($modules as $key => $module)
                 @if($module->template === 'home' || $module->isUnlocked($modules[$key-1]))
-                    <li class="ico-{{ ( $module->template) }}">
-                        <a  href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
+                    <li class="ico-{{ ( $module->template) }} {{strpos(Request::path(), $module->slug) ? 'current-module' : ''}}">
+                        <a href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
                     </li>
                @else
                     <li class="{{(Auth::check() && Auth::user()->paid ? 'ico-unlocked' : 'ico-locked')}}">
