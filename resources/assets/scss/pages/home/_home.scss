@@ -43,6 +43,13 @@
             width: 100%;
         }
 
+        p {
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 25px;
+        }
+
         @include breakpoint($break-620) {
             width: 90%;
         }
