@@ -1,3 +1,4 @@
+@include('app/modules/home/toolbar')
 <div class="inner">
     <div class="content">
         <header>

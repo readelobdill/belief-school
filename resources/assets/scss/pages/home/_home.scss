@@ -211,6 +211,19 @@ span.resolution {
 }
 
 .home-module{
+    .toolbar{
+        float: right;
+
+        a{
+            height: 30px;
+            background-color: $lightRed;
+            color: $white;
+            border-right: 1px solid $white;
+            float:left;
+            margin-bottom: 0px;
+        }
+    }
+
     .next-page{
         cursor: pointer;
         margin-top: 10px;
