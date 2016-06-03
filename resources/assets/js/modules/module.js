@@ -14,7 +14,7 @@ class Module {
         var skip = this.container.data('skip');
         let newIndex = 0;
         if(currentStep == 0 && !!parseInt(skip)) {
-            newIndex = 2;
+            newIndex = 7;
         } else {
             newIndex = this.container.find('[data-step="'+currentStep+'"]').index();
         }

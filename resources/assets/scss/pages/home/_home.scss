@@ -210,5 +210,79 @@ span.resolution {
     }
 }
 
+.home-module{
+    .next-page{
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .underline{
+        text-decoration: underline;
+    }
+
+    .welcome-text{
+        .price-container{
+            padding-bottom: none;
+
+            .actions button:before, .actions button:after{
+                content: none;
+            }
+        }
+
+        p.center{
+            a{
+                padding: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .content-block{
+        @include pie-clearfix();
+        width: 100%;
+        margin: 0 auto;
+        max-width: 920px;
+
+        &.spacer {
+            margin: 60px auto 30px;
+        }
+    }
+
+    .what-is-bs{
+        .col {
+            float: left;
+            width: 48%;
+
+            @include breakpoint($break-800) {
+                float: none !important;
+                width: 100% !important;
+            }
+
+            &:nth-child(even) {
+                float: right;
+            }
+        }
+    }
+
+    .unpacked{
+        .col{
+            text-align: center;
+        }
+
+        blockquote{
+            margin-top: 24px;
+        }
+
+        p.center{
+            margin-top: 24px;
+
+            a{
+                padding: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
 @import "questions";
 @import "question-nav";
