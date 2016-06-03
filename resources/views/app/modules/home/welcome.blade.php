@@ -29,7 +29,7 @@
                 <div class="price">$135 <span>NZD</span></div>
             </h1>
 
-            <p class="center"><a href="http://homestead.app?skip=1" class="button small" title="Enrol Now">Enrol Now</a></p>
+            <p class="center"><a href="{{ route('home', ['skip' => 7])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
 
             <div class="actions">
                 <button class="button" data-next-section>I’d like more program detail</button>

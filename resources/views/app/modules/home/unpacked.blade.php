@@ -121,6 +121,6 @@
         </div>
     </div>
 
-    <p class="center"><a href="http://homestead.app?skip=1" class="button small" title="Enrol Now">Yes, enrol me now</a></p>
+    <p class="center"><a href="{{ route('home', ['skip' => 7])}}" class="button small" title="Enrol Now">Yes, enrol me now</a></p>
 
 </div>
