@@ -14,10 +14,8 @@
                 <h1 class="plain">Yes</h1>
 
                 <div class="content-block">
-                    <div class="col">
-                        <p>Belief School is right for everyone! It’s impossible to go through Belief School and not feel good about yourself. All of us, no matter what is happening in our life, get enormous value from personal development and self-awareness.
-                        </p>
-                    </div>
+                    <p>Belief School is right for everyone! It’s impossible to go through Belief School and not feel good about yourself. All of us, no matter what is happening in our life, get enormous value from personal development and self-awareness.
+                    </p>
                 </div>
 
                 <div class="content-block">
