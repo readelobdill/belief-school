@@ -120,6 +120,10 @@ Route::get('about-paula-gosney', ['as' => 'about-paula-gosney', function() {
     return view('app.misc.about-paula-gosney', ['page'=>'about-paula-gosney']);
 }]);
 
+Route::get('right-for-me', ['as' => 'right-for-me', function() {
+    return view('app.misc.right-for-me', ['page'=>'right-for-me']);
+}]);
+
 Route::get('contact', ['as' => 'contact', function() {
     return view('app.misc.contact', ['page'=>'contact']);
 }]);
