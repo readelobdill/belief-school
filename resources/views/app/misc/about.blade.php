@@ -133,7 +133,7 @@
                     </h1>
 
                     @if(!Auth::check() || !Auth::user()->paid)
-                        <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
+                        <p class="center"><a href="{{ route('home', ['skip' => 7])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
                     @endif
 
                     <div class="content-block spacer">
@@ -190,7 +190,7 @@
                         </h1>
 
                         @if(!Auth::check() || !Auth::user()->paid)
-                            <p class="center"><a href="{{ route('home', ['skip' => 1])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
+                            <p class="center"><a href="{{ route('home', ['skip' => 7])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
                         @endif
 
                         <center><p>Program commences <b>April 11th</b></p></center>

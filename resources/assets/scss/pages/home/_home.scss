@@ -210,18 +210,19 @@ span.resolution {
     }
 }
 
-.home-module{
-    .toolbar{
-        float: right;
+.toolbar{
+    float: right;
 
-        a{
-            background-color: $lightRed;
-            color: $white;
-            border-right: 1px solid $white;
-            float: right;
-            margin-bottom: 0px;
-        }
+    a{
+        background-color: $lightRed;
+        color: $white;
+        border-right: 1px solid $white;
+        float: right;
+        margin-bottom: 0px;
     }
+}
+
+.home-module{
 
     .next-page{
         cursor: pointer;

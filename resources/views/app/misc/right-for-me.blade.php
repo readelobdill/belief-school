@@ -2,7 +2,8 @@
 
 @section('content')
 
-    <div class="container faq">
+    <div class="container right-for-me faq">
+        <!-- @include('app/modules/home/toolbar') -->
         <div class="inner">
             <div class="content">
                 <header>
@@ -123,6 +124,7 @@
                     </div> -->
                 </div>
             </div>
+            <p class="center"><a href="{{ route('home', ['skip' => 7])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
         </div>
     </div>
 
