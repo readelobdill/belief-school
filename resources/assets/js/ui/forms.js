@@ -3,7 +3,6 @@ import $ from 'jquery';
 class Forms {
     constructor() {
         this.setupLabels();
-        console.log('setup');
     }
 
 
