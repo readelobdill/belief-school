@@ -1,0 +1,12 @@
+.module.account-creation {
+    background: url(../img/home-background.png) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px;
+    min-width: 320px;
+
+    @include breakpoint($brk-small) {
+        width: 100%;
+        padding: 0;
+    }
+}

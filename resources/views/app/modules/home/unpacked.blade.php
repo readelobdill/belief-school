@@ -123,4 +123,7 @@
 
     <p class="center"><a href="{{ route('home', ['skip' => 7])}}" class="button small" title="Enrol Now">Yes, enrol me now</a></p>
 
+    <!-- TODO route around payment gateway here somehow here -->
+    <p class="center">Would you like to complete our <a href="{{ route('account-creation')}}">Pre Module</a>, to help you decide if Belief School is right for you? </p>
+
 </div>

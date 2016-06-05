@@ -124,6 +124,10 @@ Route::get('right-for-me', ['as' => 'right-for-me', function() {
     return view('app.misc.right-for-me', ['page'=>'right-for-me']);
 }]);
 
+Route::get('account-creation', ['as' => 'account-creation', function() {
+    return view('app.misc.account-creation', ['page'=>'account-creation']);
+}]);
+
 Route::get('contact', ['as' => 'contact', function() {
     return view('app.misc.contact', ['page'=>'contact']);
 }]);

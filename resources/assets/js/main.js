@@ -44,6 +44,7 @@ $(function() {
     const page = $('body').data('page');
     switch(page) {
         case 'home' :
+        case 'account-creation' :
             Home.init();
             break;
         case 'welcome' :
@@ -88,8 +89,6 @@ $(function() {
         case 'about':
             About.init();
             break;
-
-
     }
 });
 
