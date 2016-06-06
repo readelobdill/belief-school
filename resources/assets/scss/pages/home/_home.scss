@@ -292,6 +292,10 @@ span.resolution {
             a{
                 padding: 15px;
                 font-size: 18px;
+
+                &.premodule{
+                    padding: 0;
+                }
             }
         }
     }
