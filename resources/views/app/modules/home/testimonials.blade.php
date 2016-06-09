@@ -11,7 +11,7 @@
 
             <div class="content-block">
                 <div class="testimonial">
-                    //image
+                     <img class="" src="{{asset('img/testimonials/tiffany.jpg')}}"/>
                     <div class="name">
                         Michelle Heatherley
                     </div>
@@ -21,6 +21,7 @@
                 </div>
 
                 <div class="testimonial">
+                     <img class="" src="{{asset('img/testimonials/tiffany.jpg')}}"/>
                     <div class="name">
                         Tiffany Matthews
                     </div>
@@ -30,6 +31,7 @@
                 </div>
 
                 <div class="testimonial">
+                     <img class="" src="{{asset('img/testimonials/tiffany.jpg')}}"/>
                     <div class="name">
                         Dale Wheeler
                     </div>

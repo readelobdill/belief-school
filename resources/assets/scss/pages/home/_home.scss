@@ -293,6 +293,17 @@ span.resolution {
         }
     }
 
+    .testimonials{
+        img{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .quote{
+            line-height: 20px;
+        }
+    }
+
     .welcome-text{
         .price-container{
             padding-bottom: none;
@@ -338,6 +349,7 @@ span.resolution {
             max-width: 90%;
             padding-left: 50px;
             border-left: 2px solid $lightRed;
+            margin-bottom: 50px;
         }
         #module-summaries{
             .class-module{
