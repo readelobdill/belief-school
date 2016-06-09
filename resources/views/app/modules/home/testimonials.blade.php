@@ -11,6 +11,7 @@
 
             <div class="content-block">
                 <div class="testimonial">
+                    //image
                     <div class="name">
                         Michelle Heatherley
                     </div>
@@ -38,8 +39,8 @@
                 </div>
             </div>
         </div>
-        <div class="actions next-page" data-next-section>
-            @include('app/partials/icons/down-arrow')
+        <div class="actions more-detail">
+            <button class="button" data-next-section>I still have more questions</button>
         </div>
     </div>
 </div>

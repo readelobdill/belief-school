@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:    url('fonts/icomoon.eot?sfeyxr');
-    src:    url('fonts/icomoon.eot?sfeyxr#iefix') format('embedded-opentype'),
-        url('fonts/icomoon.ttf?sfeyxr') format('truetype'),
-        url('fonts/icomoon.woff?sfeyxr') format('woff'),
-        url('fonts/icomoon.svg?sfeyxr#icomoon') format('svg');
+    src:    url('fonts/icomoon.eot?oljm87');
+    src:    url('fonts/icomoon.eot?oljm87#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?oljm87') format('truetype'),
+        url('fonts/icomoon.woff?oljm87') format('woff'),
+        url('fonts/icomoon.svg?oljm87#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,33 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-data-extraction:before {
+    content: "\e906";
+}
+.icon-interactive:before {
+    content: "\e907";
+}
+.icon-build:before {
+    content: "\e908";
+}
+.icon-eight-dots:before {
+    content: "\e903";
+}
+.icon-15-min:before {
+    content: "\e904";
+}
+.icon-completed:before {
+    content: "\e905";
+}
+.icon-manifesto:before {
+    content: "\e902";
+}
+.icon-group:before {
+    content: "\e900";
+}
+.icon-support:before {
+    content: "\e901";
+}
 .icon-module-onboarding:before {
     content: "\e600";
 }

@@ -74,7 +74,7 @@
             </div>
         </li>
     </ul>
-    <div class="actions next-page" data-next-section>
-        @include('app/partials/icons/down-arrow')
+    <div class="actions more-detail">
+        <button class="button" data-next-section>See course overview</button>
     </div>
 </div>

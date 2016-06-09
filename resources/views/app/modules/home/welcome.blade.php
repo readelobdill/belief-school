@@ -1,4 +1,3 @@
-@include('app/modules/home/toolbar')
 <div class="inner">
     <div class="main-copy">
         <header>
@@ -31,12 +30,9 @@
 
             <p class="center"><a href="{{ route('home', ['skip' => 7])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
 
-            <div class="actions">
+            <div class="actions more-detail">
                 <button class="button" data-next-section>I’d like more program detail</button>
             </div>
         </div>
-    </div>
-    <div class="actions next-page" data-next-section>
-        @include('app/partials/icons/down-arrow')
     </div>
 </div>
