@@ -1,5 +1,4 @@
-@include('app/modules/home/toolbar')
-<div class="inner">
+<div class="inner chatter ">
     <header>
         <h1 class="title">
             Is any of this chatter, getting in the way?

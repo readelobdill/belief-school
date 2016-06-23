@@ -1,4 +1,4 @@
-<div class="inner">
+<div class="inner welcome-text ">
     <div class="main-copy">
         <header>
             <h1 class="title">
@@ -9,9 +9,10 @@
         <div class="content-block">
             <div class="col">
                 <p>We are so pleased you’re interested in Belief School. The online personal development experience for people wanting to create change and catch sight of their extraordinary potential.</p>
-                <blockquote>
-                    Personal belief is a furnace you build from the inside, fuel it, stoke it and the energy you create will light fires in all areas of your extraordinary life.
-                </blockquote>
+            </div>
+
+            <div class="red-block">
+                <p class="col"><b>Personal belief</b> is a furnace you build from the inside, fuel it, stoke it and the energy you create will light fires in all areas of your extraordinary life.</p>
             </div>
 
             <div class="col">
@@ -28,7 +29,7 @@
                 <div class="price">$135 <span>NZD</span></div>
             </h1>
 
-            <p class="center"><a href="{{ route('home', ['skip' => 7])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
+            <p class="center"><a href="{{ route('home', ['skip' => 5])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
 
             <div class="actions more-detail">
                 <button class="button" data-next-section>I’d like more program detail</button>

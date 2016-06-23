@@ -1,5 +1,4 @@
-@include('app/modules/home/toolbar')
-<div class="inner">
+<div class="inner testimonials">
     <div class="content">
         <header>
             <h1 class="title">

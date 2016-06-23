@@ -45,6 +45,7 @@ $(function() {
     switch(page) {
         case 'home' :
         case 'account-creation' :
+            Dashboard.init();
             Home.init();
             break;
         case 'welcome' :

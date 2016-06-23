@@ -7,8 +7,9 @@
         <div class="inner">
             <div class="content">
                 <header>
-                    <h1 class="title">
-                        Is Belief School right for me?
+                     <h1 class="title">
+                        <span data-arc="150">&middot; Is Belief School &middot;</span>
+                        right for me?
                     </h1>
                 </header>
 
@@ -124,7 +125,7 @@
                     </div> -->
                 </div>
             </div>
-            <p class="center"><a href="{{ route('home', ['skip' => 7])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
+            <p class="center"><a href="{{ route('home', ['skip' => 5])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
         </div>
     </div>
 

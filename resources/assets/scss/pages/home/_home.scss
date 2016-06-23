@@ -44,10 +44,12 @@
         }
 
         p {
+            font-family: 'SantEliaRoughAlt-BoldThr', serif;
             color: white;
             text-align: center;
             margin-top: 50px;
-            font-size: 25px;
+            font-size: 35px;
+            line-height: 50px;
         }
 
         @include breakpoint($break-620) {
@@ -252,59 +254,50 @@ span.resolution {
 
     .what-is-bs{
         .content-block{
-            p{
-                min-height: 100px;
-                padding: 50px;
+            max-width: 620px;
+        }
 
-                &.left{
-                    border-left: 2px solid $lightRed;
+        .col {
+            float: left;
+            width: 48%;
 
-                    span{
-                        float: left;
-                        padding: 12.5px 75px 12.5px 25px;
-                    }
-                }
+            @include breakpoint($break-800) {
+                float: none !important;
+                width: 100% !important;
+            }
 
-                &.right{
-                    border-right: 2px solid $lightRed;
-
-                    span{
-                        float: right;
-                        padding: 12.5px 25px 12.5px 75px;
-                    }
-                }
-
-                span{
-                    font-size: 75px;
-                    color: $lightRed;
-                }
-
-                @include breakpoint($brk-small) {
-                    &.left, &.right{
-                        border: none;
-                        padding: 20px;
-                        span{
-                            font-size: 35px;
-                            padding: 0px 25px;
-                        }
-                    }
-                }
+            &:nth-child(even) {
+                float: right;
             }
         }
     }
 
     .testimonials{
-        img{
-            width: 100%;
-            margin-bottom: 20px;
+        .testimonials-container{
+            padding-top: 0;
         }
 
-        .quote{
-            line-height: 20px;
+        .content{
+            width: auto;
+
+            img{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .quote{
+                line-height: 20px;
+            }
         }
     }
 
     .welcome-text{
+        .red-block{
+            padding: 30px 20px;
+            margin-bottom: 25px;
+            line-height: 26px;
+        }
+
         .price-container{
             padding-bottom: none;
         }
@@ -328,180 +321,55 @@ span.resolution {
         }
     }
 
-    .what-is-bs{
-        .col {
-            float: left;
-            width: 48%;
-
-            @include breakpoint($break-800) {
-                float: none !important;
-                width: 100% !important;
-            }
-
-            &:nth-child(even) {
-                float: right;
-            }
-        }
-    }
-
     .unpacked{
         .col{
-            max-width: 90%;
-            padding-left: 50px;
-            border-left: 2px solid $lightRed;
-            margin-bottom: 50px;
+            max-width: 620px;
+            text-align: center;
         }
-        #module-summaries{
-            .class-module{
-                background-color: #e9e9e9;
-                text-align: left;
-                width: 90%;
-                margin: 0 auto 50px auto;
 
-                h4{
-                    padding: 20px 0 17px 24px;
-                    background: $lightRed;
-                    color: white;
-                    margin: 0;
-
-                    span{
-                        margin-right: 8px;
-                    }
+        .header {
+            height: 43px;
+            cursor: pointer;
+            h2{
+                &:before{
+                    content: "";
                 }
-
-                .module-head{
+                span:before{
                     position: relative;
-                    display: table;
-                    height: 120px;
-                    width: 100%;
-
-                    h3{
-                        color: $lightRed;
-                        display: table-cell;
-                        vertical-align: middle;
-                        padding-left: 25px;
-                        width: 50%;
-                    }
-
-                    button{
-                        position: absolute;
-                        top: 40px;
-                        cursor: pointer;
-                    }
-
-                    button.explore{
-                        height: 40px;
-                        border-radius: 4px;
-                        right: 105px;
-                        overflow: hidden;
-                        -webkit-transition: all 0.3s ease-in-out;
-                        transition: all 0.3s ease-in-out;
-                    }
-
-                    button.arrow{
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 4px;
-                        right: 20px;
-                    }
+                    left: -4px;
+                    top: 4px;
+                    font-size: 24px;
                 }
+            }
+            ul{
+                line-height: 43px;
+                border-left: 1px soild #e6e6e6;
+            }
+        }
 
-                .module-body{
-                    max-height: 0px;
-                    overflow: hidden;
-                    p, blockquote{
-                        max-width: 445px;
-                        margin: 25px auto;
-                    }
+        .content{
+            p{
+                &:nth-child(1){
+                    margin-top: 25px;
                 }
-
-                &.expanded{
-
-                    .module-body{
-                        position: relative;
-                        padding-bottom: 30px;
-                        max-height: 2999px;
-                        -webkit-transition: max-height 0.6s cubic-bezier(0.77, 0, 0.175, 1);
-                        transition: max-height 0.6s cubic-bezier(0.77, 0, 0.175, 1);
-                    }
-
-                    button.arrow{
-                        -webkit-transform: rotate(180deg);
-                        -moz-transform: rotate(180deg);
-                        -o-transform: rotate(180deg);
-                        -ms-transform: rotate(180deg);
-                        transform: rotate(180deg);
-                    }
-                }
-
+                text-align: center;
+                max-width: 620px;
             }
         }
 
         #modules-unpacked {
-            display: table;
-            background-color: #e9e9e9;
-            border-radius: 3px;
-            margin-bottom: 60px;
-            overflow: hidden;
-            text-align: left;
-            width: 90%;
-            margin: 0 auto;
+            ul{
+                margin: 0 auto 50px auto;
+                max-width: 620px;
+                text-align: center;
 
-            .visual {
-                width: 100px;
-                background-color: $lightRed;
-                position: relative;
-
-                .arrow{
-                    width: 0;
-                    height: 0;
-                    border-top: 30px solid transparent;
-                    border-bottom: 30px solid transparent;
-                    border-right:20px solid #e9e9e9;
-                    position: absolute;
-                    right: -1px;
-                    top: 20px;
-                    -webkit-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
-                    transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
-                }
-
-                ul{
-                    list-style: none;
-                    padding: 15px 0;
-
-                    li{
-                        cursor: pointer;
-                        font-size: 36px;
-                        padding-left: 33px;
-                        color: #aeaeae;
-                        margin: 22px 0;
-                        -webkit-transition: all 0.2s ease-out;
-                        transition: all 0.2s ease-out;
-
-                        &.active{
-                            color: #e9e9e9;
-                        }
-                    }
-                }
-            }
-
-            .content {
-                width: 746px;
-                display: none;
-                vertical-align: middle;
-
-                &.active{
-                    display: table-cell;
+                span{
+                    font-size: 30px;
+                    margin: 25px auto;
                 }
 
                 h4{
-                    padding-left: 30px;
-                    margin-top: 40px;
-                }
-
-                p{
-                    margin: 0 0 40px 0;
-                    padding: 0 30px;
+                    margin: 10px 0px;
                 }
             }
         }
@@ -518,7 +386,8 @@ span.resolution {
         }
 
         blockquote{
-            margin-top: 24px;
+            margin: 24px auto;
+            max-width: 620px;
         }
 
         p.center{
