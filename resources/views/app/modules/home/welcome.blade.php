@@ -8,7 +8,7 @@
 
         <div class="content-block">
             <div class="col">
-                <p>We are so pleased you’re interested in Belief School. The online personal development experience for people wanting to create change and catch sight of their extraordinary potential.</p>
+                <p>Brilliant, you’re interested in Belief School. The online personal development experience that will light you up, shake you up and show you your magic!</p>
             </div>
 
             <div class="red-block">
@@ -16,11 +16,13 @@
             </div>
 
             <div class="col">
-                <p>Whatever project or journey you are about to embark on, Belief School gives you the confidence to live the life you choose. Do you have a goal you are driven to achieve, or maybe you find yourself stuck, creating the same unwanted outcomes, over and over.</p>
+                <p>Whatever project or journey you are about to embark on, Belief School gives you the confidence to live the life you choose.</p>
 
-                <p>Many people are unsure of how to create the happiness and purpose they seek. That purpose that lights up this life, is not sitting there for you to stumble on; you have to build it, breathe life into it—fuel it with vision, connection, creativity and persistence. </p>
+                <p>Do you have a goal you are driven to achieve, or are you stuck, creating the same unwanted outcomes, over and over? Many people are unsure how to create the happiness and purpose they seek.</p>
 
-                <p>Each Belief School module is designed to light that fire within and create the beautiful energy you need to live your life and love it.</p>
+                <p>Our purpose that lights up life, is not sitting there for us to stumble upon; we have to build it, breathe life into it—fuel it with vision, connection, creativity and persistence.</p>
+
+                <p>Each Belief School module is designed to ignite that fire within you and create the energy you need to live your life and love it.</p>
             </div>
         </div>
         <div class="price-container">

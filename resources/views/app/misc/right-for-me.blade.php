@@ -16,21 +16,10 @@
                 <h1 class="plain">Yes</h1>
 
                 <div class="content-block">
-                    <p>Belief School is right for everyone! It’s impossible to go through Belief School and not feel good about yourself. All of us, no matter what is happening in our life, get enormous value from personal development and self-awareness.
-                    </p>
+                    <p>Belief School is right for everyone! It’s impossible to go through Belief School and not feel good about yourself. All of us, no matter what is happening in our life, get enormous value from personal development and self-awareness.</p>
                 </div>
 
                 <div class="content-block">
-                    <div class="col">
-                        <ul class="faq__nav-links">
-                            <li><a href="#6">How much is Belief School?</a></li>
-                            <li><a href="#7">Our money back guarantee</a></li>
-                            <li><a href="#8">Who started Belief School and why? </a></li>
-                            <li><a href="#9">What are the terms and conditions of Belief School?</a></li>
-                            <li><a href="#10">What is the privacy policy of Belief School?</a></li>
-                        </ul>
-                    </div>
-
                     <div class="col">
                         <ul class="faq__nav-links">
                             <li><a href="#1">How much time do I need to set aside to complete the program?</a></li>
@@ -40,13 +29,23 @@
                             <li><a href="#5">What results can I expect from doing Belief School?</a></li>
                         </ul>
                     </div>
+
+                    <div class="col">
+                        <ul class="faq__nav-links">
+                            <li><a href="#6">How much is Belief School?</a></li>
+                            <li><a href="#7">Our money back guarantee</a></li>
+                            <li><a href="#8">Who started Belief School and why? </a></li>
+                            <li><a href="#9">What are the terms and conditions of Belief School?</a></li>
+                            <li><a href="#10">What is the privacy policy of Belief School?</a></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="main-copy">
                     <div id="1" class="faq__question-container">
                         <h4 class="faq__question">How much time do I need to set aside to complete the program?</h4>
                         <div class="faq__answer">
-                            <p>This really depends on you, how you work and process things. We have intentionally kept the theory as tight as possible. We know in Belief School that your greatest learning comes from taking action and this is where the focus is. On average you will need to allocated 1-2 hours per module.</p>
+                            <p>This really depends on you, how you work and process things. We have intentionally kept the theory as tight as possible. We know in Belief School that your greatest learning comes from taking action and this is where the focus is. On average you will need to allocate 1-2 hours per module.</p>
                         </div>
                     </div>
 
@@ -61,7 +60,7 @@
                         <h4 class="faq__question">What support do I get during the programme?</h4>
                         <div class="faq__answer">
                             <p>You can have as much or as little support as you want. If you are someone who likes to work autonomously, then you can work your way through the course at your own pace in your own space.</p>
-                            <p>If you enjoy connecting with others on the same journey, you can do this through our Forum; set up for support and discussion. You’ll also be invited to our Closed Facebook Community upon enrolment; this is the place where all the fun happens!</p>
+                            <p>If you enjoy connecting with others on the same journey, you can do this through our Forum, set up for support and discussion. You’ll also be invited to our Closed Facebook Community upon enrolment; this is the place where all the fun happens!</p>
                             <p>Paula Gosney and the Belief School Team are always available to you, whether it be through the channels mentioned above, or directly at: <a href="mailto:contact@beliefschool.com">contact@beliefschool.com.</a></p>
                         </div>
                     </div>
@@ -69,16 +68,15 @@
                     <div id="4" class="faq__question-container">
                         <h4 class="faq__question">I’m wondering if I should do this with someone.</h4>
                         <div class="faq__answer">
-                            <p>This is the perfect program to do with a friend, or group if you like that dynamic. Whether you do this with a team or bunch of pals, or you journey alone, there will ALWAYS be someone to help you, recognise what you are achieving and support you along the way.</p>
+                            <p>This is the perfect program to do with a friend, or group, if you like that dynamic. Whether you do this with a team or bunch of pals, or you journey alone, there will ALWAYS be someone to help you, recognise what you are achieving and support you along the way.</p>
                         </div>
                     </div>
 
                     <div id="5" class="faq__question-container">
                         <h4 class="faq__question">What results can I expect from doing Belief School?</h4>
                         <div class="faq__answer">
-                            <p>The outcomes are very personal and will be totally unique to you. There always seems to be one module in particular that creates an incredible, however this module is different for everyone.</p>
-                            <p>You will leave your Belief School experience feeling really good about yourself, you’ll have practises and principles to support you in your decision making and you will have a lot more self-awareness around how you show up, and the impact this has on how you feel about yourself.</p>
-                            <p>You will have discovered so many of the unique, authentic qualities you have that may have been hidden from you.</p>
+                            <p>The outcomes are very personal and will be totally unique to you. There always seems to be one module in particular that creates an incredible breakthrough. You’ll leave your Belief School experience feeling clear, calm and certain about yourself; you’ll have practices and principles to support you in your decision making and a lot more self-awareness around how you show up and the impact this has on how you feel about yourself.</p>
+                            <p>You will discover so many of the unique, authentic qualities you have that may have been hidden from you in the past.</p>
                         </div>
                     </div>
 
@@ -124,6 +122,11 @@
                         </div>
                     </div> -->
                 </div>
+            </div>
+            <div class="content-block red-block" style="text-align: center;">
+                <h2 class="title" style="margin: 0px 0px 20px 0px">YOU ARE WORTH IT</h2>
+                <p><b>Investing time and money in yourself is the most worthwhile thing you can do.</b></p>
+                <p>Sincerely from Paula Gosney and the whole Belief School Team, we hope you join us and allow yourself to experience the joy that comes from Belief School.</p>
             </div>
             <p class="center"><a href="{{ route('home', ['skip' => 5])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
         </div>

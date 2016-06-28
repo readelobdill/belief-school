@@ -15,7 +15,7 @@
                 </div>
             </h2>
             <div class="answer">
-                <p>We understand this, one of the greatest commodities in life these days is time. Belief School is designed to go at your pace. You can complete the program in a couple of weeks or do it over months, if that works for you. You will have lifelong access to the modules and can continue to develop your Dashboard and Manifesto as you wish. Investing time in yourself is one of the most rewarding and productive steps you can take towards creating the life you want.</p>
+                <p>We understand this; one of the greatest commodities in life is time. Belief School is designed to go at your pace. You can complete the program in a couple of weeks or do it over months. You will have lifelong access to the modules and can continue to develop your Dashboard and Manifesto as you wish. Investing time in yourself is one of the most rewarding and productive steps you can take towards creating the life you want.</p>
             </div>
         </li>
 
@@ -28,7 +28,7 @@
                 </div>
             </h2>
             <div class="answer">
-                <p>It can be a little scary as we start to look at who we are. One of the uniquely beautiful things about Belief School is each and every module will leave you feeling good about yourself. That is our promise to you and why Paula created Belief School. Not to fix people, or to tell you that you need to be more, but to show you how incredibly special you already are.</p>
+                <p>It can be a little scary as we start to look at who we are. One of the uniquely beautiful things about Belief School is each and every module will leave you feeling good about yourself. That is our promise to you and why Paula created Belief School. Not to fix you, or to tell you that you need to be more, but to show you how incredibly special you already are.</p>
             </div>
         </li>
 
@@ -54,7 +54,9 @@
                 </div>
             </h2>
             <div class="answer">
-                 <p>Belief School was not thought up six months ago. Paula Gosney has been working with people for 9 years helping them create real practical outcomes. Each of these modules has been crafted out of hundreds of hours of study, individual coaching and group dynamics. Because Belief School meets you where you are at, and works with your unique situation, the content and outcomes are exactly what you need, right now.</p>
+                 <p>Belief School was not thought up six months ago. Paula Gosney has been working with people for 9 years helping them create real, practical outcomes. Each of these modules has been crafted out of hundreds of hours of study, individual coaching and group dynamics.</p>
+
+                 <p class="red-block">Because Belief School meets you where you’re at, and works with your unique situation, the content and outcomes are exactly what you need right now.</p>
             </div>
         </li>
 
@@ -67,9 +69,9 @@
                 </div>
             </h2>
             <div class="answer">
-                 <p>Once you are registered and enrolled, you can login to our private, members-only section on my.beleifschool.com and start working right away.</p>
-                 <p>Each module has the instructions you need, a training video and built-in templates for you to interactive with. Everything is 100% automated.</p>
-                 <p>Our goal is to make your online learning experience as simple and impactful as possible.</p>
+                 <p>Once you are registered and enrolled, you can log in to our private, members-only section on my.beleifschool.com and start working right away.</p>
+                 <p>Each module has the instructions you need, a training video and built-in templates for you to interact with. Everything is 100% automated.</p>
+                 <p class="red-block">Our goal is to make your online learning experience as simple and impactful as possible.</p>
             </div>
         </li>
     </ul>

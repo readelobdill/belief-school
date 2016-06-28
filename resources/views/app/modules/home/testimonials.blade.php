@@ -40,8 +40,5 @@
                 </div>
             </div>
         </div>
-        <div class="actions more-detail">
-            <button class="button" data-next-section>I still have more questions</button>
-        </div>
     </div>
 </div>
