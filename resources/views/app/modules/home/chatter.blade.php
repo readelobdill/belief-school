@@ -56,7 +56,7 @@
             <div class="answer">
                  <p>Belief School was not thought up six months ago. Paula Gosney has been working with people for 9 years helping them create real, practical outcomes. Each of these modules has been crafted out of hundreds of hours of study, individual coaching and group dynamics.</p>
 
-                 <p class="red-block">Because Belief School meets you where you’re at, and works with your unique situation, the content and outcomes are exactly what you need right now.</p>
+                 <p class="red-block">Because Belief School meets you where you’re at and works with your unique situation the content and outcomes are exactly what you need right now.</p>
             </div>
         </li>
 
@@ -75,7 +75,8 @@
             </div>
         </li>
     </ul>
+
     <div class="actions more-detail">
-        <button class="button" data-next-section>See course overview</button>
+        <a href="{{ route('right-for-me')}}"><button class="button">Is Belief School Right for Me?</button></a>
     </div>
 </div>

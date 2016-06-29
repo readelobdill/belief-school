@@ -236,6 +236,12 @@ span.resolution {
         margin: 0 auto;
     }
 
+    .red-block{
+        padding: 20px;
+        margin-bottom: 25px;
+        line-height: 26px;
+    }
+
     .underline{
         text-decoration: underline;
     }
@@ -253,6 +259,10 @@ span.resolution {
     }
 
     .what-is-bs{
+        &.inner{
+            padding: 20px !important;
+        }
+
         .content-block{
             max-width: 620px;
         }
@@ -273,6 +283,10 @@ span.resolution {
     }
 
     .testimonials{
+        &.inner{
+            padding: 20px !important;
+        }
+
         .testimonials-container{
             padding-top: 0;
         }
@@ -291,13 +305,18 @@ span.resolution {
         }
     }
 
-    .welcome-text{
-        .red-block{
-            padding: 30px 20px;
-            margin-bottom: 25px;
-            line-height: 26px;
+    .chatter{
+        &.inner{
+            padding: 20px !important;
         }
 
+        p{
+            max-width: 620px;
+            margin: 0 auto;
+        }
+    }
+
+    .welcome-text{
         .price-container{
             padding-bottom: none;
         }
@@ -345,9 +364,20 @@ span.resolution {
                 line-height: 43px;
                 border-left: 1px soild #e6e6e6;
             }
+            @media (max-width: 620px){
+                h2 {
+                    font-size: 12px;
+                    text-align: left;
+                }
+
+                .actions{
+                    display: none !important;
+                }
+            }
         }
 
         .content{
+            width: 100%;
             p{
                 &:nth-child(1){
                     margin-top: 25px;

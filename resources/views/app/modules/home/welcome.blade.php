@@ -31,10 +31,8 @@
                 <div class="price">$135 <span>NZD</span></div>
             </h1>
 
-            <p class="center"><a href="{{ route('home', ['skip' => 5])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
-
             <div class="actions more-detail">
-                <button class="button" data-next-section>I’d like more program detail</button>
+                <a href="{{ route('home', ['skip' => 3])}}"><button class="button">I’d like more program detail</button></a>
             </div>
         </div>
     </div>

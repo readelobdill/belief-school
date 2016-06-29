@@ -52,10 +52,6 @@
             </div>
 
         </div>
-    @else
-        <div class="actions">
-            <a href="{{route('payment', [App\Models\User::NORMAL])}}" class="button" >Yes I want to start Belief School</a>
-        </div>
     @endif
 
     <div class="content">
@@ -65,7 +61,7 @@
         <p>If you need more information about either of these programs please email us at <a href="mailto:contact@beliefschool.com">contact@beliefschool.com</a></p>
 
         <div class="actions">
-            <a href="{{ route('about') }}" class="button small">Do you need to know more before you say yes?</a>
+            <a href="{{route('payment', [App\Models\User::NORMAL])}}" class="button" >Yes I want to start Belief School</a>
         </div>
    </div>
 </div>

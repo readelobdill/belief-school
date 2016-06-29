@@ -21,4 +21,6 @@
 
         <p class="center"><b>Belief School is a community.</b> Whether you are connecting with people in our Forum, or through our Closed Facebook group, the Belief School Team and our past and present Belief Schoolers, are there to support you, cheer you on and shed a tear if needed.</p>
     </div>
+
+    <p class="center"><a href="{{ route('home', ['skip' => 4])}}" class="button" title="Enrol Now">Enrol Now</a></p>
 </div>

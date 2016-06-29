@@ -7,10 +7,7 @@
         <div class="inner">
             <div class="content">
                 <header>
-                     <h1 class="title">
-                        <span data-arc="150">&middot; Is Belief School &middot;</span>
-                        right for me?
-                    </h1>
+                     <h1 class="title">Is Belief School right for me?</h1>
                 </header>
 
                 <h1 class="plain">Yes</h1>
@@ -23,20 +20,18 @@
                     <div class="col">
                         <ul class="faq__nav-links">
                             <li><a href="#1">How much time do I need to set aside to complete the program?</a></li>
-                            <li><a href="#2">I’m going through quite a bit of ‘stuff’ right now, should I wait till I am at a more settled time of my life?</a></li>
+                            <li><a href="#2">I’m going through quite a bit of ‘stuff’ right now, should I wait till I am more settled?</a></li>
                             <li><a href="#3">What support do I get during the programme?</a></li>
                             <li><a href="#4">I’m wondering if I should do this with someone.</a></li>
-                            <li><a href="#5">What results can I expect from doing Belief School?</a></li>
                         </ul>
                     </div>
 
                     <div class="col">
                         <ul class="faq__nav-links">
+                            <li><a href="#5">What results can I expect from doing Belief School?</a></li>
                             <li><a href="#6">How much is Belief School?</a></li>
                             <li><a href="#7">Our money back guarantee</a></li>
                             <li><a href="#8">Who started Belief School and why? </a></li>
-                            <li><a href="#9">What are the terms and conditions of Belief School?</a></li>
-                            <li><a href="#10">What is the privacy policy of Belief School?</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,9 +45,10 @@
                     </div>
 
                     <div id="2" class="faq__question-container">
-                        <h4 class="faq__question">I’m going through quite a bit of ‘stuff’ right now, should I wait till I am at a more settled time of my life?</h4>
+                        <h4 class="faq__question">I’m going through quite a bit of ‘stuff’ right now, should I wait till I am more settled? </h4>
                         <div class="faq__answer">
-                            <p></p>
+                            <p>If you are facing challenges right now, then this is the perfect time for you to do Belief School.  It’s very easy to get bogged down in our problems and not be able to see a way through. Each module in Belief School will give you the awareness and skills you need to find solutions and the courage and confidence to take the action you need. Our mission is to build you up so you can create the life you want.</p>
+                            <p>Often by taking our focus of a problem, we discover the solutions are right there in front of us.</p>
                         </div>
                     </div>
 
@@ -83,7 +79,7 @@
                     <div id="6" class="faq__question-container">
                         <h4 class="faq__question">How much is Belief School?</h4>
                         <div class="faq__answer">
-                            <p></p>
+                            <p>Belief School is incredible value at $135 NZD</p>
                         </div>
                     </div>
 
@@ -97,30 +93,9 @@
                     <div id="8" class="faq__question-container">
                         <h4 class="faq__question">Who started Belief School and why? </h4>
                         <div class="faq__answer">
-                            <p></p>
+                            <p>Belief School was created by Paula Gosney, you can read her story <a href="{{ route('about-paula-gosney')}}" >here.</a></p>
                         </div>
                     </div>
-
-                    <div id="9" class="faq__question-container">
-                        <h4 class="faq__question">What are the terms and conditions of Belief School?</h4>
-                        <div class="faq__answer">
-                            <p></p>
-                        </div>
-                    </div>
-
-                    <div id="10" class="faq__question-container">
-                        <h4 class="faq__question">What is the privacy policy of Belief School?</h4>
-                        <div class="faq__answer">
-                            <p></p>
-                        </div>
-                    </div>
-
-                   <!--  <div class="faq__question-container">
-                        <h4 class="faq__question"></h4>
-                        <div class="faq__answer">
-                            <p></p>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="content-block red-block" style="text-align: center;">
@@ -128,7 +103,7 @@
                 <p><b>Investing time and money in yourself is the most worthwhile thing you can do.</b></p>
                 <p>Sincerely from Paula Gosney and the whole Belief School Team, we hope you join us and allow yourself to experience the joy that comes from Belief School.</p>
             </div>
-            <p class="center"><a href="{{ route('home', ['skip' => 5])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
+            <p class="center"><a href="{{ route('account-creation')}}" class="button small" title="Enrol Now">Enrol Now</a></p>
         </div>
     </div>
 
