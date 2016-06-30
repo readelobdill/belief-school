@@ -15,7 +15,6 @@
             @include('app/modules/home/what-is-bs')
             @include('app/modules/home/testimonials')
             @include('app/modules/home/chatter')
-            @include('app/modules/home/what-bs-is-is-not')
         </section>
 
         <section class="unpacked module-section has-container" data-type="Text" data-part="3">

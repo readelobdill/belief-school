@@ -48,7 +48,7 @@
                         <h4 class="faq__question">I’m going through quite a bit of ‘stuff’ right now, should I wait till I am more settled? </h4>
                         <div class="faq__answer">
                             <p>If you are facing challenges right now, then this is the perfect time for you to do Belief School.  It’s very easy to get bogged down in our problems and not be able to see a way through. Each module in Belief School will give you the awareness and skills you need to find solutions and the courage and confidence to take the action you need. Our mission is to build you up so you can create the life you want.</p>
-                            <p>Often by taking our focus of a problem, we discover the solutions are right there in front of us.</p>
+                            <p>Often by taking our focus off a problem, we discover the solutions are right there in front of us.</p>
                         </div>
                     </div>
 

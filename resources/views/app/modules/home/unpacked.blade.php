@@ -117,7 +117,7 @@
             <div class="content">
                 <p><b>Planning and practise are essential</b> if we are to continue to play to our strengths and incorporate new strategies into our daily lives. In module seven we introduce the five fundamental and essential processes required to take a “desire” into a personal reality.</p>
                 <p><b>You can apply this to anything in your life:</b> health, wealth, love, communication, exercise; the process of internalisation is the same for all parts of our life.</p>
-                <p><b>In the context of Belief School,</b> you’ll look at what has stood out for you the most during the program and work with those realisations to create long last change.</p>
+                <p><b>In the context of Belief School,</b> you’ll look at what has stood out for you the most during the program and work with those realisations to create long lasting change.</p>
             </div>
         </li>
         <li class="module-here-i-am is-unlocked is-complete">
@@ -163,9 +163,10 @@
         </ul>
     </div>
 
-    <p class="center"><a href="{{ route('home', ['skip' => 4])}}" class="button small" title="Enrol Now">Yes, enrol me now</a></p>
+    <p class="center"><a href="{{ route('home', ['skip' => 4])}}" class="button" title="Enrol Now">Yes, enrol me now</a></p>
 
-    <!-- TODO route around payment gateway here somehow here -->
-    <p class="center">Would you like to complete our <a href="{{ route('account-creation')}}" class="premodule">Pre Module</a>, to help you decide if Belief School is right for you? </p>
+    <p class="center"><a href="{{ route('right-for-me')}}" class="premodule">Is Belief School right for me?</a></p>
+
+    <p class="center">Complete our <a href="{{ route('account-creation')}}" class="premodule">Pre Module</a> for free if you are still not sure Belief School is right for you.</p>
 
 </div>

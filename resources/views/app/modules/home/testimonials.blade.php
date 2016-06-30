@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="testimonial">
-                     <img class="" src="{{asset('img/testimonials/tiffany.jpg')}}"/>
+                     <img class="" src="{{asset('img/testimonials/dale.jpg')}}"/>
                     <div class="name">
                         Dale Wheeler
                     </div>

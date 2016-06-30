@@ -30,10 +30,6 @@
                 <span data-arc="120">· Your investment in you ·</span>
                 <div class="price">$135 <span>NZD</span></div>
             </h1>
-
-            <div class="actions more-detail">
-                <a href="{{ route('home', ['skip' => 3])}}"><button class="button">I’d like more program detail</button></a>
-            </div>
         </div>
     </div>
 </div>

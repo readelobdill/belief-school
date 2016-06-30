@@ -314,6 +314,10 @@ span.resolution {
             max-width: 620px;
             margin: 0 auto;
         }
+
+        .red-block{
+            margin-top: 15px;
+        }
     }
 
     .welcome-text{
@@ -366,7 +370,7 @@ span.resolution {
             }
             @media (max-width: 620px){
                 h2 {
-                    font-size: 12px;
+                    font-size: 10px;
                     text-align: left;
                 }
 
@@ -430,6 +434,27 @@ span.resolution {
                 &.premodule{
                     padding: 0;
                 }
+            }
+
+            .button:before, .button:after{
+                content: none;
+            }
+        }
+    }
+
+    .account-creation{
+        h4{
+            color: black;
+            margin: 30px;
+        }
+
+        .actions{
+            button:before, button:after{
+                content: none;
+            }
+
+            button{
+                padding: 20px 30px;
             }
         }
     }
