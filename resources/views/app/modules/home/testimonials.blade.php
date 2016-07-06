@@ -10,7 +10,7 @@
 
             <div class="content-block">
                 <div class="testimonial">
-                     <img class="" src="{{asset('img/testimonials/tiffany.jpg')}}"/>
+                     <img class="" src="{{asset('img/testimonials/michelle.jpg')}}"/>
                     <div class="name">
                         Michelle Heatherley
                     </div>

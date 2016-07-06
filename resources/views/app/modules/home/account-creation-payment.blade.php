@@ -1,8 +1,8 @@
-<div class="inner">
+<div class="inner account-creation">
     <div class="content">
-        <h1 class="title">Would you like the confidence to create change?</h1>
+        <h1 class="title">Congratulations on choosing to invest in you.</h1>
 
-        <p>Excited? Intrigued? Fill in your details below and work through our FREE Creating Clarity worksheet to discover if Belief School is right for you.</p>
+        <p>You are worth it!</p>
 
         <form action="{{route('users.create')}}" method="POST">
             <div class="form-row">
@@ -31,9 +31,11 @@
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
+            <p>Enrol now with a one-off payment of $135 NZD</p>
+
             <div class="actions">
-                <button class="next-section">
-                    @include('app/partials/icons/down-arrow')
+                <button class="button">
+                    YES
                 </button>
             </div>
         </form>
