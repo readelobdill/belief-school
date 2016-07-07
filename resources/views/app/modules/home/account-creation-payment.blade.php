@@ -4,7 +4,7 @@
 
         <p>You are worth it!</p>
 
-        <form action="{{route('users.create')}}" method="POST">
+        <form action="{{route('users.create')}}" method="POST" class="to-payment">
             <div class="form-row">
                 <input type="text" name="first_name" required>
                 <label>First Name</label>
@@ -34,9 +34,7 @@
             <p>Enrol now with a one-off payment of $135 NZD</p>
 
             <div class="actions">
-                <button class="button">
-                    YES
-                </button>
+                <button class="button">YES</button>
             </div>
         </form>
 
