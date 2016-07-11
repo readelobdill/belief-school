@@ -106,7 +106,7 @@ class PaymentController extends Controller {
 
 
             if(Auth::check()) {
-                return redirect(route('home'));
+                return redirect(route('home', ['skip' => 4]));
             }
 
         } else {
