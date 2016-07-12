@@ -2,7 +2,11 @@
     <nav class="navigation">
         <h2>Navigation</h2>
         <ul>
-            <li class="ico-intro"><a a href="{{ route('home', ['skip' => 1])}}" title="Introduction">Introduction</a></li>
+            @if(Auth::check())
+                <li class="ico-intro"><a href="" data-remodal-target="introduction" title="Introduction">Introduction</a></li>
+            @else
+                <li class="ico-intro"><a a href="{{ route('home', ['skip' => 1])}}" title="Introduction">Introduction</a></li>
+            @endif
             <li class="ico-dash requires-auth {{(!Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{route('dashboard')}}" title="Dashboard">Dashboard</a></li>
             <li class="ico-account requires-auth {{(!Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{route('account')}}" title="My Account">My account</a></li>
             <li class="ico-about"><a href="{{ route('home', ['skip' => 3])}}" title="Belief School Unpacked">Belief School Unpacked</a></li>
