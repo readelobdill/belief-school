@@ -77,7 +77,7 @@ class ModuleController extends Controller {
             // reset temporarily so we can go through module again if not sign up
             $moduleUser->pivot->complete = false;
             if($moduleUser->id == 1){
-                $moduleUser->pivot->step = 2;
+                $moduleUser->pivot->step = 1;
             } else {
                 $moduleUser->pivot->step = 0;
             }

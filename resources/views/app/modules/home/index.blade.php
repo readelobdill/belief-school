@@ -24,10 +24,10 @@
         <section class="account-creation module-section has-container" data-type="AccountCreation" data-part="4">
             @include('app/modules/home/account-creation-payment')
         </section>
-        <section class="questions module-section has-container" data-type="Questions" data-part="5" data-step="2">
+        <section class="questions module-section has-container" data-type="Questions" data-part="5" data-step="1">
             @include('app/modules/home/questions')
         </section>
-        <section class="congrats-section module-section has-container" data-type="Congrats" data-part="6" data-step="3">
+        <section class="congrats-section module-section has-container" data-type="Congrats" data-part="6" data-step="2">
             @include('app/modules/home/congrats')
         </section>
     </div>
