@@ -32,7 +32,6 @@ Route::get('comment/{comment}/image/{imageName}', ['as' => 'comment.image', 'use
 Route::group(['middleware' => 'auth'], function() {
     Route::get('modules/{module}/forum', ['as' => 'modules.forum', 'uses' => 'ModuleController@viewForum']);
 
-
     Route::post('comments/{comment}/reply', ['as' => 'comments.reply', 'uses' => 'CommentController@reply']);
     Route::post('modules/{module}/comment', ['as' => 'modules.comment', 'uses' => 'CommentController@create']);
     Route::delete('comment/{comment}', ['as' => 'modules.comment.delete', 'uses' => 'CommentController@delete']);
@@ -46,8 +45,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('modules/{module}/update', ['as' => 'modules.update', 'uses' => 'ModuleController@updateModule']);
     Route::post('modules/{module}/complete', ['as' => 'modules.complete', 'uses' => 'ModuleController@completeModule']);
     Route::get('vimeo-upload', ['as' => 'vimeo.upload-url', 'uses' => 'ModuleController@getVimeoUploadDetails']);
-
-
 
     Route::get('account', ['as' => 'account', 'middleware' => 'auth', 'uses' => 'UserController@account']);
     Route::post('account', ['as' => 'account.submit', 'middleware' => 'auth', 'uses' => 'UserController@submitAccount']);

@@ -34,7 +34,7 @@
             <p>Enrol now with a one-off payment of $135 NZD</p>
 
             <div class="actions">
-                <button class="button">YES</button>
+                <button class="button yes">YES</button>
             </div>
         </form>
 

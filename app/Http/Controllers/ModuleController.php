@@ -73,12 +73,11 @@ class ModuleController extends Controller {
 
 
 
-
         if(!empty($moduleUser) && $moduleUser->pivot->complete && !\Session::get('paid', false)) {
             // reset temporarily so we can go through module again if not sign up
             $moduleUser->pivot->complete = false;
             if($moduleUser->id == 1){
-                $moduleUser->pivot->step = 1;
+                $moduleUser->pivot->step = 2;
             } else {
                 $moduleUser->pivot->step = 0;
             }
@@ -119,7 +118,6 @@ class ModuleController extends Controller {
 
 
         $mobileDetect = new \Mobile_Detect();
-
         $headers=['Cache-Control'=>'no-cache, no-store, max-age=0, must-revalidate','Pragma'=>'no-cache','Expires'=>'Fri, 01 Jan 1990 00:00:00 GMT'];
         return response(view('app.modules.'.$module->template.'.index', [
             'page' => $module->template,
@@ -413,7 +411,7 @@ class ModuleController extends Controller {
 
     public function getVimeoThumbnail(Vimeo $vimeo, $userId, $id) {
 
-        
+
 
         $moduleUser = User::findOrFail($userId)->modules()->where('modules.id', $id)->first();
 

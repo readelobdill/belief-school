@@ -88,7 +88,8 @@ class PaymentController extends Controller {
             $user->save();
 
             $module = $user->modules()->where('template', 'home')->first();
-            $module->pivot->step = 3;
+            //if creating clarity has already been done go to welcome-to-belief-school
+            $module->pivot->step = $module->pivot->data ? 3 : 2;
             $module->pivot->complete = 1;
             $module->pivot->completed_at = new \Carbon\Carbon();
             $module->pivot->save();
@@ -106,7 +107,7 @@ class PaymentController extends Controller {
 
 
             if(Auth::check()) {
-                return redirect(route('home', ['skip' => 4]));
+                return redirect(route('home'));
             }
 
         } else {
