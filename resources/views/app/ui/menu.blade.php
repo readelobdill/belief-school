@@ -31,9 +31,15 @@
         <ul>
             @foreach($modules as $key => $module)
                 @if($module->template === 'home' || $module->isUnlocked($modules[$key-1]))
-                    <li class="ico-{{ ( $module->template) }} {{strpos(Request::path(), $module->slug) ? 'current-module' : ''}}">
-                        <a href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
-                    </li>
+                    @if($module->template === 'home' && !Auth::check())
+                        <li class="ico-{{ ( $module->template) }} {{strpos(Request::path(), $module->slug) ? 'current-module' : ''}}">
+                            <a href="{{route('account-creation')}}">{{$module->name}}</a>
+                        </li>
+                    @else
+                        <li class="ico-{{ ( $module->template) }} {{strpos(Request::path(), $module->slug) ? 'current-module' : ''}}">
+                            <a href="{{route('modules.view', [$module->slug])}}">{{$module->name}}</a>
+                        </li>
+                    @endif
                @else
                     <li class="{{(Auth::check() && Auth::user()->paid ? 'ico-unlocked' : 'ico-locked')}}">
                         Module {{$module->order - 1}}
