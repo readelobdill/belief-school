@@ -27,8 +27,14 @@
         <section class="questions module-section has-container" data-type="Questions" data-part="5" data-step="1">
             @include('app/modules/home/questions')
         </section>
-        <section class="congrats-section module-section has-container" data-type="Congrats" data-part="6" data-step="2">
-            @include('app/modules/home/congrats')
-        </section>
+        @if(Auth::check() && Auth::user()->paid)
+            <section class="congrats-section module-section has-container" data-type="Congrats" data-part="6" data-step="2">
+                @include('app/modules/home/congrats')
+            </section>
+        @else
+            <section class="details module-section has-container has-text" data-type="Payment" data-part="6" data-step="2">
+                @include('app/modules/home/details')
+            </section>
+        @endif
     </div>
 @endsection
