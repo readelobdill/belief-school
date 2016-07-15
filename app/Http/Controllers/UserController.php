@@ -4,6 +4,7 @@ use App\Models\Group;
 use App\Models\Module;
 use App\Models\User;
 use Carbon\Carbon;
+use DrewM\MailChimp\MailChimp;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -22,6 +23,12 @@ class UserController extends Controller {
     {
         $this->request = $request;
         $this->auth = $auth;
+    }
+
+    public function checkExistingUser(MailChimp $mailChimp){
+        $totalItems = $mailChimp->get('lists/'.config('belief.listId', '').'/members?fields=total_items');
+        $allMembers = $mailChimp->get('lists/'.config('belief.listId', '').'/members?fields=members&count='.$totalItems['total_items']);
+        clock($allMembers['members']);
     }
 
 
