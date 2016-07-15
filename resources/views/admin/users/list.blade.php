@@ -33,12 +33,12 @@
                     <td>{{$user->paid}}</td>
                     <td>{{!empty($user->type) ? $user->type : 'normal'}}</td>
                     <td>
-                        @if(isset($user->modules[0]) && $user->modules[0]->pivot->complete)
+                        @if(isset($user->modules[0]) && $user->modules[0]->pivot->complete && isset($user->modules[0]->pivot->data->{'1'}))
                             {{$user->modules[0]->pivot->data->{'1'}->age}}
                         @endif
                     </td>
                     <td>
-                        @if(isset($user->modules[0]) && $user->modules[0]->pivot->complete)
+                        @if(isset($user->modules[0]) && $user->modules[0]->pivot->complete && isset($user->modules[0]->pivot->data->{'1'}))
                             {{$user->modules[0]->pivot->data->{'1'}->gender}}
                         @endif
                     </td>
