@@ -44,6 +44,7 @@ class Module {
         return this.goToSection(this.currentSection - 1);
     }
     goToSection(section) {
+        window.history.replaceState(null, null, "/?skip=" + section);
         $('body').attr('data-current-section', section);
 
         if(this.currentSection !== section && this.sections[section]) {

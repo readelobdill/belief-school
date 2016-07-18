@@ -11,8 +11,8 @@
                 <p>Brilliant, you’re interested in Belief School. The online personal development experience that will light you up, shake you up and show you your magic!</p>
             </div>
 
-            <div class="red-block">
-                <p class="col"><b>Personal belief</b> is a furnace you build from the inside, fuel it, stoke it and the energy you create will light fires in all areas of your extraordinary life.</p>
+            <div>
+                <p class="col red-block"><b>Personal belief</b> is a furnace you build from the inside, fuel it, stoke it and the energy you create will light fires in all areas of your extraordinary life.</p>
             </div>
 
             <div class="col">

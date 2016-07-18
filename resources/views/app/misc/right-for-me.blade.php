@@ -103,7 +103,7 @@
                 <p><b>Investing time and money in yourself is the most worthwhile thing you can do.</b></p>
                 <p>Sincerely from Paula Gosney and the whole Belief School Team, we hope you join us and allow yourself to experience the joy that comes from Belief School.</p>
             </div>
-            <p class="center"><a href="{{ route('account-creation')}}" class="button small" title="Enrol Now">Enrol Now</a></p>
+            <p class="center"><a href="{{ route('home', ['skip' => 4])}}" class="button small" title="Enrol Now">Enrol Now</a></p>
         </div>
     </div>
 

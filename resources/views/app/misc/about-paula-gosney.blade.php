@@ -12,7 +12,7 @@
                 </header>
 
                 <div class="main-copy">
-                    <div class="content-block" style='margin-bottom: 50px; text-align: center' >
+                    <div class="content-block" style='text-align: center' >
                         <p style='max-width: 620px'><b>A Writer, Businesswoman, Warrior, Speaker and Mum.</b> Fiercely honest, a passionate coach, and a women who believes we are so much more capable than we allow ourselves to be.</p>
                     </div>
                     <div class="content-block cols">

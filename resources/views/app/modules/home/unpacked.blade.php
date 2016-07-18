@@ -15,7 +15,7 @@
         <li class="is-unlocked is-complete">
             <div class="header">
                 <div class="inner">
-                    <h2><span class="icon-module-onboarding"></span>Module 1 - Know your amazing self</h2>
+                    <h2><span class="icon-module-onboarding"></span>Module 1</h2>
                     <ul class="actions">
                         <li class="arrow"></li>
                     </ul>
@@ -30,14 +30,14 @@
         <li class="module-limiting-beliefs is-unlocked is-complete">
             <div class="header">
                 <div class="inner">
-                    <h2><span class="icon-module2"></span>Module 2 - Limiting Beliefs</h2>
+                    <h2><span class="icon-module2"></span>Module 2</h2>
                     <ul class="actions">
                         <li class="arrow"></li>
                     </ul>
                 </div>
             </div>
             <div class="content">
-                <p><b>When we change our words,</b> we change our minds and then we change our outcomes.</p>
+                <p><b>When we change our words,</b> we change our mind and then we change our outcomes.</p>
                 <p><b>It utterly defines how we feel,</b> how we interact with others, and the choices we make. I’m too old, I’m not smart enough, that’s not possible for me, I’m useless at that, my family sucks; as long as we keep saying this stuff to ourselves, we will continue to create it.</p>
                 <p><b>We want self-talk that opens up all possibilities.</b> Learning to recognise negative self-talk and then change it, is really important. Whatever limiting beliefs you hold, we will show you how to turn that negative chatter off and create an internal conversation that focuses on what you want, not what you don’t want.</p>
             </div>
@@ -45,7 +45,7 @@
         <li class="module-my-amazing-life is-unlocked is-complete">
             <div class="header">
                 <div class="inner">
-                    <h2><span class="icon-module3"></span>Module 3 - My amazing life</h2>
+                    <h2><span class="icon-module3"></span>Module 3</h2>
                     <ul class="actions">
                         <li class="arrow"></li>
                     </ul>
@@ -64,7 +64,7 @@
         <li class="module-facing-our-fear is-unlocked is-complete">
             <div class="header">
                 <div class="inner">
-                    <h2><span class="icon-module4"></span>Module 4 - Facing our Fear</h2>
+                    <h2><span class="icon-module4"></span>Module 4</h2>
                     <ul class="actions">
                         <li class="arrow"></li>
                     </ul>
@@ -78,7 +78,7 @@
         <li class="module-who-can-i-help is-unlocked is-complete">
             <div class="header">
                 <div class="inner">
-                    <h2><span class="icon-module5"></span>Module 5 - Who can I help?</h2>
+                    <h2><span class="icon-module5"></span>Module 5</h2>
                     <ul class="actions">
                         <li class="arrow"></li>
                     </ul>
@@ -93,7 +93,7 @@
         <li class="module-the-gratitdue-effect is-unlocked is-complete">
             <div class="header">
                 <div class="inner">
-                    <h2><span class="icon-module6"></span>Module 6 - The Gratitdue Effect</h2>
+                    <h2><span class="icon-module6"></span>Module 6</h2>
                     <ul class="actions">
                         <li class="arrow"></li>
                     </ul>
@@ -108,7 +108,7 @@
         <li class="module-planning-and-practice is-unlocked is-complete">
             <div class="header">
                 <div class="inner">
-                    <h2><span class="icon-module7"></span>Module 7 - Planning and Practise</h2>
+                    <h2><span class="icon-module7"></span>Module 7</h2>
                     <ul class="actions">
                         <li class="arrow"></li>
                     </ul>
@@ -123,7 +123,7 @@
         <li class="module-here-i-am is-unlocked is-complete">
             <div class="header">
                 <div class="inner">
-                    <h2><span class="icon-module8"></span>Module 8 - Here I am</h2>
+                    <h2><span class="icon-module8"></span>Module 8</h2>
                     <ul class="actions">
                         <li class="arrow"></li>
                     </ul>

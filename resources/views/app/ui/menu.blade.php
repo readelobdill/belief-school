@@ -12,9 +12,9 @@
             <li class="ico-about"><a href="{{ route('home', ['skip' => 3])}}" title="Belief School Unpacked">Belief School Unpacked</a></li>
             <li class="ico-about"><a href="{{ route('about-paula-gosney') }}" title="About Paula Gosney">About Paula Gosney</a></li>
             <li class="ico-about"><a href="{{ route('right-for-me')}}" title="Is Belief School Right for me?">Is Belief School Right for me?</a></li>
-<!--             <li class="ico-unlocked {{(Auth::check() ? 'is-hidden-g' : '')}}">
+            <li class="ico-unlocked {{(Auth::check() ? 'is-hidden-g' : '')}}">
                 <a href="{{ route('home', ['skip' => 4])}}">Enrol</a>
-            </li> -->
+            </li>
             <li class="ico-contact"><a href="{{ route('contact') }}" title="Contact Us">Contact us</a></li>
             <li class="ico-terms"><a href="{{route('privacy-terms') }}" title="Terms of Use/Privacy Policy">Terms of Use/Privacy Policy</a></li>
             <li class="ico-faq requires-auth {{(!Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{route('faq') }}" title="Frequently Asked Questions">FAQ</a></li>
