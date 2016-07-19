@@ -17,6 +17,7 @@
                 <th>Type</th>
                 <th>Age</th>
                 <th>Gender</th>
+                <th>Created</th>
                 <th>Module</th>
                 <th>Time</th>
                 <th>Group</th>
@@ -40,6 +41,11 @@
                     <td>
                         @if(isset($user->modules[0]) && $user->modules[0]->pivot->complete && isset($user->modules[0]->pivot->data->{'1'}))
                             {{$user->modules[0]->pivot->data->{'1'}->gender}}
+                        @endif
+                    </td>
+                    <td>
+                        @if($user->modules->count() > 0)
+                            {{$user->modules->last()->pivot->created_at->toFormattedDateString()}}
                         @endif
                     </td>
                     <td>
