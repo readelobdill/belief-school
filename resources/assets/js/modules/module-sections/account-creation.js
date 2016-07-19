@@ -65,7 +65,11 @@ export default class AccountCreationSection extends Text {
                     let value = localStorage.removeItem(`register-${$(obj).attr('name')}`);
                 });
 
-                return this.module.nextSection();
+                if(this.form.hasClass('to-payment')){
+                    window.location.href = location.origin + "/payments/pay/normal";
+                } else {
+                    return this.module.nextSection();
+                }
             });
         });
         this.form.on('keyup', 'input', (e) => {

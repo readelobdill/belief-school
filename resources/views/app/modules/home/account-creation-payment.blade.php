@@ -1,10 +1,10 @@
-<div class="inner">
+<div class="inner account-creation">
     <div class="content">
-        <h1 class="title">Would you like the confidence to create change?</h1>
+        <h1 class="title">Congratulations on choosing to invest in you.</h1>
 
-        <p>If you’d like to explore what is holding you back from investing in yourself, register here. Registering opens the Belief School premodule, with no payment required. The purpose of this premodule is to help you clarify what you want and what is holding you back. Do not over think these answers, go with your first response—that is where the gold is.</p>
+        <p>You are worth it!</p>
 
-        <form action="{{route('users.create')}}" method="POST">
+        <form action="{{route('users.create')}}" method="POST" class="to-payment">
             <div class="form-row">
                 <input type="text" name="first_name" required>
                 <label>First Name</label>
@@ -31,10 +31,10 @@
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
+            <p>Enrol now with a one-off payment of $135 NZD</p>
+
             <div class="actions">
-                <button class="next-section">
-                    @include('app/partials/icons/down-arrow')
-                </button>
+                <button class="button yes">YES</button>
             </div>
         </form>
 

@@ -20,6 +20,7 @@ import Account from 'auth/account';
 import Forum from "forum/forum";
 import TagCloudForm from 'pages/tag-cloud-form';
 import About from 'pages/about';
+import RightForMe from 'pages/right-for-me';
 
 /*Utility*/
 import $ from 'jquery';
@@ -44,6 +45,8 @@ $(function() {
     const page = $('body').data('page');
     switch(page) {
         case 'home' :
+        case 'account-creation' :
+            Dashboard.init();
             Home.init();
             break;
         case 'welcome' :
@@ -88,8 +91,9 @@ $(function() {
         case 'about':
             About.init();
             break;
-
-
+        case 'right-for-me':
+            RightForMe.init();
+            break;
     }
 });
 

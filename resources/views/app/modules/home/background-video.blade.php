@@ -8,6 +8,7 @@
 <div class="inner">
     <div class="home-banner">
         <img src="{{ asset('img/logo.png') }}" alt="My Belief School" />
+        <p>Where you discover how outstanding you are!</p>
     </div>
     <div class="next-section absol" data-next-section>
         @include('app/partials/icons/down-arrow')

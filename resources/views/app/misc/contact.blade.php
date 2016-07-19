@@ -21,7 +21,7 @@
 
                             <p class="center">
                                 <b>Get in touch with us here: </b> <br />
-                                <a href="mailto:paula@beliefschool.com">paula@beliefschool.com</a>
+                                <a href="mailto:contact@beleifschool.com">contact@beleifschool.com</a>
                             </p>
 
                             <p class="center">

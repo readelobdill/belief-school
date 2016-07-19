@@ -14,7 +14,7 @@ class Module {
         var skip = this.container.data('skip');
         let newIndex = 0;
         if(currentStep == 0 && !!parseInt(skip)) {
-            newIndex = 2;
+            newIndex = skip;
         } else {
             newIndex = this.container.find('[data-step="'+currentStep+'"]').index();
         }
@@ -44,6 +44,7 @@ class Module {
         return this.goToSection(this.currentSection - 1);
     }
     goToSection(section) {
+        window.history.replaceState(null, null, "/?skip=" + section);
         $('body').attr('data-current-section', section);
 
         if(this.currentSection !== section && this.sections[section]) {
@@ -68,6 +69,30 @@ class Module {
         $('body').on('click', '[data-forward]', e => {
             e.preventDefault();
             this.submitAndNextSection();
+        });
+
+        $("#module-summaries").on("click", "button", function() {
+            var $module = $(this).parent().parent();
+            $module.toggleClass('expanded');
+            if($module.hasClass('expanded')){
+                $module.find('button.explore').text('Collapse Module');
+            } else {
+                $module.find('button.explore').text('Explore Module');
+            }
+        });
+
+        $("#modules-unpacked").on("mouseover", "li", function() {
+            var i = $(this).index();
+            var li = $("#modules-unpacked li");
+            var c = $("#modules-unpacked .content");
+            var t = $(li[i]).position().top + 10;
+
+            $(c).removeClass("active");
+            $(li).removeClass("active");
+            $(li[i]).addClass("active");
+            $(c[i]).addClass("active");
+
+            $("#modules-unpacked .visual .arrow").css("top", t);
         });
     }
 

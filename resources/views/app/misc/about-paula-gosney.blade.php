@@ -12,8 +12,10 @@
                 </header>
 
                 <div class="main-copy">
+                    <div class="content-block" style='text-align: center' >
+                        <p style='max-width: 620px'><b>A Writer, Businesswoman, Warrior, Speaker and Mum.</b> Fiercely honest, a passionate coach, and a women who believes we are so much more capable than we allow ourselves to be.</p>
+                    </div>
                     <div class="content-block cols">
-                        <p>A Writer, Businesswoman, Warrior, Speaker and Mum. Fiercely honest, a passionate coach, and a women who believes we are so much more capable than we allow ourselves to be.</p>
 
                         <figure class="about__paula">
                             <img src="img/about-paula-image.jpg" alt="Paula Gosney" title="Paula Gosney" />
