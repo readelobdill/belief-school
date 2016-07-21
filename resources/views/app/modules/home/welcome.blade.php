@@ -28,7 +28,12 @@
         <div class="price-container">
             <h1 class="title">
                 <span data-arc="120">· Your investment in you ·</span>
-                <div class="price">$135 <span>NZD</span></div>
+                <div class="price"><span class="currency-symbol">$</span><span class="currency-value">135</span>
+                    <span class="select-style">
+                        <select class="currency-selector"></select>
+                        <span class="icon-arrow-down"></span>
+                    </span>
+                </div>
             </h1>
         </div>
     </div>
