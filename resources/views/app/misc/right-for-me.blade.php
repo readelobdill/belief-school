@@ -79,7 +79,13 @@
                     <div id="6" class="faq__question-container">
                         <h4 class="faq__question">How much is Belief School?</h4>
                         <div class="faq__answer">
-                            <p>Belief School is incredible value at $135 NZD</p>
+                            <p class="currency-cost">Belief School is incredible value at
+                                <span class="currency-symbol">$</span><span class="currency-value">135</span>
+                                <span class="select-style">
+                                    <select class="currency-selector"></select>
+                                    <span class="icon-arrow-down"></span>
+                                </span>
+                            </p>
                         </div>
                     </div>
 

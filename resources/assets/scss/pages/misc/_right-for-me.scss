@@ -1,6 +1,40 @@
 .right-for-me{
-	p.center a{
-		padding: 15px;
-	    font-size: 18px;
-	}
+    p.center a{
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    span.select-style{
+        overflow: hidden;
+        color: #f16060;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        border-bottom: 1px solid #f16060;
+        margin-bottom: 2px;
+
+        select{
+            padding-right: 20px;
+            font-size: 17px;
+            cursor: pointer;
+            color: #f16060;
+            border: none;
+            box-shadow: none;
+            background: transparent;
+            background-image: none;
+            -webkit-appearance: none;
+
+            &:focus{
+                outline: none;
+            }
+        }
+
+        span.icon-arrow-down{
+            font-size: 14px;
+            pointer-events: none;
+            position: absolute;
+            right: 0px;
+            top: 5px;
+        }
+    }
 }
