@@ -292,7 +292,7 @@ class ModuleController extends Controller {
             $moduleUser->pivot->complete = true;
             $moduleUser->pivot->completed_at = new Carbon();
             $moduleUser->pivot->save();
-            $mailChimp->put('lists/'.config('belief.listId', '').'/members/'.md5(Str::lower($request->user()->email)), [
+            $mailChimp->put('lists/'.config('belief.productListId', '').'/members/'.md5(Str::lower($request->user()->email)), [
                 'status' => 'subscribed',
                 'email_address' => $request->user()->email,
                 'merge_fields' => [

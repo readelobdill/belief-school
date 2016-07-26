@@ -26,14 +26,15 @@ class UserController extends Controller {
     }
 
     public function checkExistingUser(MailChimp $mailChimp){
-        $totalItems = $mailChimp->get('lists/'.config('belief.listId', '').'/members?fields=total_items');
-        $allMembers = $mailChimp->get('lists/'.config('belief.listId', '').'/members?fields=members&count='.$totalItems['total_items']);
-        clock($allMembers['members']);
+        $totalItems = $mailChimp->get('lists/'.config('belief.marketingListId', '').'/members?fields=total_items');
+        $allMembers = $mailChimp->get('lists/'.config('belief.marketingListId', '').'/members?fields=members&count='.$totalItems['total_items'])['members'];
+        $existingUser = array_where($allMembers, function($key, $item){
+            return $item['email_address'] == $this->request->input()['email'];
+        });
+        return empty($existingUser) ? $existingUser : head($existingUser);
     }
 
-
-    public function createUser() {
-//
+    public function createUser(MailChimp $mailChimp){
         $this->validate($this->request, [
            'first_name' => 'required',
             'last_name' => 'required',
@@ -54,7 +55,14 @@ class UserController extends Controller {
         $user->group()->associate($group);
         $user->save();
 
-
+        $mailChimp->post('lists/'.config('belief.marketingListId', '').'/members', [
+            'status' => 'subscribed',
+            'email_address' => $user->email,
+            'merge_fields' => [
+                'FNAME' => $user->first_name,
+                'LNAME' => $user->last_name
+            ]
+        ]);
 
         $this->auth->login($user);
         $now = new Carbon();
@@ -69,7 +77,6 @@ class UserController extends Controller {
         ]);
         return $user;
     }
-
 
     public function account() {
         $user = $this->auth->user();

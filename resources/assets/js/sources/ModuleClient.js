@@ -108,10 +108,11 @@ class ModuleClient extends EventEmitter {
             }, defaultHeaders),
             body: JSON.stringify(data)
         }).then(response => {
-            console.log(response);
             if((response.status < 200 || response.status >= 400) && response.status !== 0 ) {
                 this.emit('load:error');
                 return Q.reject(response.statusText);
+            } else {
+                return response.json();
             }
         }).then((response) => {
             this.emit('load:end');

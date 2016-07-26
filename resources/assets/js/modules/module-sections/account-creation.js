@@ -10,6 +10,7 @@ import Client from "sources/ModuleClient";
 import serialize from "util/serializeForm";
 import {showError, hideError} from 'util/errors';
 import Text from './text';
+import _ from 'lodash';
 
 
 export default class AccountCreationSection extends Text {
@@ -56,21 +57,31 @@ export default class AccountCreationSection extends Text {
                 return false;
             }
             this.submitting = true;
-            Client.registerUser(this.form.attr('action'), serialize(this.form)).then((response) => {
-                $('.auth').find('.logout').removeClass('is-hidden-g');
-                $('.auth').find('.login').addClass('is-hidden-g');
-                $('.requires-auth').removeClass('is-hidden-g');
-
-                this.form.find('input').each((i, obj) => {
-                    let value = localStorage.removeItem(`register-${$(obj).attr('name')}`);
-                });
-
-                if(this.form.hasClass('to-payment')){
-                    window.location.href = location.origin + "/payments/pay/normal";
-                } else {
+            if(this.form.hasClass('acquire-email')){
+                Client.registerUser(this.form.attr('action'), serialize(this.form)).then((existingUser) => {
+                    if(_.size(existingUser)){
+                        localStorage.setItem('register-first_name', _.get(existingUser, 'merge_fields.FNAME'));
+                        localStorage.setItem('register-last_name', _.get(existingUser, 'merge_fields.LNAME'));
+                    }
                     return this.module.nextSection();
-                }
-            });
+                });
+            } else {
+                Client.registerUser(this.form.attr('action'), serialize(this.form)).then((response) => {
+                    $('.auth').find('.logout').removeClass('is-hidden-g');
+                    $('.auth').find('.login').addClass('is-hidden-g');
+                    $('.requires-auth').removeClass('is-hidden-g');
+
+                    this.form.find('input').each((i, obj) => {
+                        let value = localStorage.removeItem(`register-${$(obj).attr('name')}`);
+                    });
+
+                    if(this.form.hasClass('to-payment')){
+                        window.location.href = location.origin + "/payments/pay/normal";
+                    } else {
+                        return this.module.nextSection();
+                    }
+                });
+            }
         });
         this.form.on('keyup', 'input', (e) => {
             let item = $(e.currentTarget);

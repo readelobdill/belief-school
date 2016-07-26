@@ -46,7 +46,7 @@ class PaymentController extends Controller {
                 $module->pivot->complete = 1;
                 $module->pivot->completed_at = new Carbon();
                 $module->pivot->save();
-                $mailChimp->post('lists/'.config('belief.listId', '').'/members', [
+                $mailChimp->post('lists/'.config('belief.productListId', '').'/members', [
                     'status' => 'subscribed',
                     'email_address' => $request->user()->email,
                     'merge_fields' => [
@@ -94,7 +94,7 @@ class PaymentController extends Controller {
             $module->pivot->completed_at = new \Carbon\Carbon();
             $module->pivot->save();
 
-            $mailChimp->post('lists/'.config('belief.listId', '').'/members', [
+            $mailChimp->post('lists/'.config('belief.productListId', '').'/members', [
                 'status' => 'subscribed',
                 'email_address' => $user->email,
                 'merge_fields' => [

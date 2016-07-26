@@ -91,7 +91,9 @@ Route::get('login', ['as' => 'auth.login','uses' => 'Auth\AuthController@getLogi
 Route::post('login', ['uses' => 'Auth\AuthController@postLogin']);
 Route::get('logout', ['as' => 'auth.logout','uses' => 'Auth\AuthController@getLogout']);
 
+Route::post('check-marketing-signup', ['as' => 'users.check-existing', 'uses' => 'UserController@checkExistingUser']);
 Route::post('users', ['as' => 'users.create', 'uses' => 'UserController@createUser']);
+
 
 Route::any('email-exists', ['as' => 'account.check-email', 'uses' => 'UserController@checkEmail']);
 Route::any('username-exists', ['as' => 'account.check-username', 'uses' => 'UserController@checkUsername']);
