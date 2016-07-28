@@ -26,6 +26,7 @@ class UserController extends Controller {
     }
 
     public function checkExistingUser(MailChimp $mailChimp){
+        // clock($mailChimp->get('lists/'.config('belief.marketingListId', '').'/interest-categories/00a7579f23/interests'));
         $totalItems = $mailChimp->get('lists/'.config('belief.marketingListId', '').'/members?fields=total_items');
         $allMembers = $mailChimp->get('lists/'.config('belief.marketingListId', '').'/members?fields=members&count='.$totalItems['total_items'])['members'];
         $existingUser = array_where($allMembers, function($key, $item){
@@ -55,13 +56,14 @@ class UserController extends Controller {
         $user->group()->associate($group);
         $user->save();
 
-        $mailChimp->post('lists/'.config('belief.marketingListId', '').'/members', [
+        $mailChimp->put('lists/'.config('belief.marketingListId', '').'/members/'.md5($user->email), [
             'status' => 'subscribed',
             'email_address' => $user->email,
             'merge_fields' => [
                 'FNAME' => $user->first_name,
                 'LNAME' => $user->last_name
-            ]
+            ],
+            'interests'  => array( config('belief.mybeliefschoolGroupingId', '') => true, config('belief.preventingeverythingyouwantGroupingId', '') => true )
         ]);
 
         $this->auth->login($user);

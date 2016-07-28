@@ -83,7 +83,7 @@ export default class AccountCreationSection extends Text {
                 });
             }
         });
-        this.form.on('keyup', 'input', (e) => {
+        this.form.on('input', 'input', (e) => {
             let item = $(e.currentTarget);
             localStorage.setItem(`register-${item.attr('name')}`, item.val());
         });

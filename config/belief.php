@@ -24,5 +24,7 @@ Belief School
         'coached' => 270.0
     ],
     'productListId' => env('MAILCHIMP_PRODUCT_LIST_ID','d281207365'),
-    'marketingListId' => env('MAILCHIMP_MARKETING_LIST_ID','eb24524e53')
+    'marketingListId' => env('MAILCHIMP_MARKETING_LIST_ID','eb24524e53'),
+    'mybeliefschoolGroupingId' => env('MAILCHIMP_MYBELIEFSCHOOL_GROUPING_ID', '0b8c9fad68'),
+    'preventingeverythingyouwantGroupingId' => env('MAILCHIMP_PREVENTINGEVERYTHINGYOUWANT_GROUPING_ID', 'c3067c2085')
 ];
