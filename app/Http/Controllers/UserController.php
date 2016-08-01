@@ -63,7 +63,7 @@ class UserController extends Controller {
                 'FNAME' => $user->first_name,
                 'LNAME' => $user->last_name
             ],
-            'interests'  => array( config('belief.mybeliefschoolGroupingId', '') => true, config('belief.preventingeverythingyouwantGroupingId', '') => true )
+            'interests'  => array( config('belief.mybeliefschoolGroupingId', '') => true )
         ]);
 
         $this->auth->login($user);
