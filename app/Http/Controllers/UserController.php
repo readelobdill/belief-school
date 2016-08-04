@@ -25,6 +25,19 @@ class UserController extends Controller {
         $this->auth = $auth;
     }
 
+    public function subscribeToPreventing(MailChimp $mailChimp){
+        $user = $this->request->data['merges'];
+        $mailChimp->put('lists/'.config('belief.marketingListId', '').'/members/'.md5($user['EMAIL']), [
+            'status' => 'subscribed',
+            'email_address' => $user['EMAIL'],
+            'merge_fields' => [
+                'FNAME' => $user['FNAME'],
+                'LNAME' => $user['LNAME']
+            ],
+            'interests'  => array( config('belief.preventingeverythingyouwantGroupingId', '') => true )
+        ]);
+    }
+
     public function checkExistingUser(MailChimp $mailChimp){
         // clock($mailChimp->get('lists/'.config('belief.marketingListId', '').'/interest-categories/00a7579f23/interests'));
         $totalItems = $mailChimp->get('lists/'.config('belief.marketingListId', '').'/members?fields=total_items');

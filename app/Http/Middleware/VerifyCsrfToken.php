@@ -5,6 +5,10 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 
 class VerifyCsrfToken extends BaseVerifier {
 
+	protected $except = [
+	  'preventing-add-to-list-subscribe',
+	];
+
 	/**
 	 * Handle an incoming request.
 	 *
