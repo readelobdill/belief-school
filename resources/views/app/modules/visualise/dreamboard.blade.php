@@ -1,9 +1,15 @@
-<div class="inner">
+<div class="inner {{isset($moduleUser->data->background) ? $moduleUser->data->background : 'black'}}">
     <div class="content">
-        <h1 class="title">
-            Beautiful<br>
-            you
-        </h1>
+        <!--<form class="image-outline-selector">
+          <input type="radio" name="outline-shape" class="rectangle" value="rectangle" checked/>
+          <input type="radio" name="outline-shape" class="circle" value="circle"/>
+          <input type="radio" name="outline-shape" class="hexagon" value="hexagon"/>
+        </form> -->
+
+        <div class="background-image-selector">
+            <button class="previous"></button>
+            <button class="next"></button>
+        </div>
 
         <div class="board">
             <div class="row-4">
@@ -40,7 +46,7 @@
         </div>
 
         <div class="actions">
-            <a href="#" class="button {{$moduleUser->data && count(get_object_vars($moduleUser->data)) == 13 ? '' : 'is-disabled'}}" data-save-module>Save to dashboard </a>
+            <a href="#" class="button {{$moduleUser->data && count(get_object_vars($moduleUser->data)) >= 13 ? '' : 'is-disabled'}}" data-save-module>Save to dashboard </a>
         </div>
     </div>
 </div>

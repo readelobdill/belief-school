@@ -2,6 +2,7 @@
 namespace App\Services;
 
 use App\Models\Module;
+use ImagickDraw;
 use Imagick;
 
 class DreamboardRenderer {
@@ -11,21 +12,21 @@ class DreamboardRenderer {
     protected $user;
 
     protected $positions = [
-        'image_1' => ['x' => 111, 'y' => 0],
-        'image_2' => ['x' => 333, 'y' => 0],
-        'image_3' => ['x' => 555, 'y' => 0],
-        'image_4' => ['x' => 777, 'y' => 0],
+        'image_2'    => ['x' => 235, 'y' => -5, 'rotation' => 5, 'border' => 20, 'height' => 200, 'width' => 200],
+        'image_6'    => ['x' => -5, 'y' => 250, 'rotation' => -10, 'border' => 25, 'height' => 250, 'width' => 250],
+        'image_1'    => ['x' => 10,  'y' => 30, 'rotation' => -5, 'border' => 20, 'height' => 200, 'width' => 200],
+        'image_4'    => ['x' => 710, 'y' => 10, 'rotation' => -5, 'border' => 20, 'height' => 200, 'width' => 200],
+        'image_5'    => ['x' => 945, 'y' => 50, 'rotation' => 5, 'border' => 20, 'height' => 200, 'width' => 200],
+        'image_7'    => ['x' => 635, 'y' => 250 , 'rotation' => 5, 'border' => 25, 'height' => 250, 'width' => 250],
+        'image_3'    => ['x' => 490, 'y' => 3, 'rotation' => 3, 'border' => 20, 'height' => 200, 'width' => 200],
 
-        'image_5' => ['x' => 0, 'y' => 169],
-        'image_6' => ['x' => 222, 'y' => 169],
-        'image_main' => ['x' => 414, 'y' => 149, 'width' => 253, 'height' => 167],
-        'image_7' => ['x' => 666, 'y' => 169 ],
-        'image_8' => ['x' => 888, 'y' => 169 ],
+        'image_8'    => ['x' => 930, 'y' => 320 , 'rotation' => -7, 'border' => 20, 'height' => 200, 'width' => 200],
 
-        'image_9' =>  ['x' => 111, 'y' => 338],
-        'image_10' => ['x' => 333, 'y' => 338],
-        'image_11' => ['x' => 555, 'y' => 338],
-        'image_12' => ['x' => 777, 'y' => 338],
+        'image_9'    => ['x' => -3, 'y' => 575, 'rotation' => 5, 'border' => 20, 'height' => 200, 'width' => 200],
+        'image_12'   => ['x' => 710, 'y' => 575, 'rotation' => -5, 'border' => 20, 'height' => 200, 'width' => 200],
+        'image_10'   => ['x' => 233, 'y' => 600, 'rotation' => -5, 'border' => 20, 'height' => 200, 'width' => 200],
+        'image_11'   => ['x' => 480, 'y' => 590, 'rotation' => 5, 'border' => 20, 'height' => 200, 'width' => 200],
+        'image_main' => ['x' => 275, 'y' => 230, 'rotation' => -4, 'border' => 45, 'height' => 310, 'width' => 310],
     ];
 
     public function __construct($dreamboard, $user) {
@@ -33,50 +34,36 @@ class DreamboardRenderer {
         $this->user = $user;
     }
 
-    public function renderToImage($includeTitle = false) {
-        $images = [];
+    public function renderToImage() {
         $dreamboardImage = new Imagick();
-        $width = 1200;
-        /*
-         * rowWidth: 862
-         * totalWidth: 1085
-         * 111
-         * gutter: 27
-         * */
-        $height = $includeTitle? 800 : 630;
-        $imageWidth = 195;
-        $imageHeight = 129;
-        $gutter = 20;
-        $dreamboardImage->newImage(1200, 630, 'none');
+        $dreamboardImage->newImage(1200, 848, 'none');
+        $background = new Imagick(public_path('img/dreamboard-backgrounds/'.$this->dreamboard->background.'.png'));
 
-        $baseline = $includeTitle? 170 : 0;
-        $bg = $includeTitle? 'img/dreamboard-generated-bg-2.jpg' : 'img/dreamboard-generated-bg.jpg';
+        foreach($this->positions as $key=>$value) {
+            if($key !== 'background') {
+                $image = new Imagick(public_path('uploads/dreamboard/'.$this->user->id.'/'.$this->dreamboard->$key));
+                // $image->cropThumbnailImage($value['width'], $value['height']);
+                $image->scaleImage($value['width'], $value['height']);
+                $image->borderImage('white', $value['border'], $value['border']);
+                $image->rotateImage('#00000000', $value['rotation']);
 
-        $background = new Imagick(public_path($bg));
-        //$dreamboardImage->compositeImage($background, imagick::COMPOSITE_OVER, 0, 0);
+                $shadow = clone $image;
+                $shadow->setImageBackgroundColor('black');
+                $shadow->shadowImage( 50, 5, 10, 10 );
+                $shadow->compositeImage( $image, Imagick::COMPOSITE_OVER, 0, 0 );
 
-        foreach($this->dreamboard as $key => $imageName) {
-            if($key !== 'image_main') {
-                $image = new Imagick(public_path('uploads/dreamboard/'.$this->user->id.'/'.$imageName));
-                $image->scaleImage($imageWidth, $imageHeight);
-                $image->borderImage('white', 2, 2);
-                $x = $this->positions[$key]['x'] + 57;
-                $y = $this->positions[$key]['y'] + 81;
-                $dreamboardImage->compositeImage($image, imagick::COMPOSITE_OVER, $x, $y);
+                if($key == 'image_main'){
+                    $draw = new ImagickDraw();
+                    $draw->setFont(public_path('fonts/2E98A4_0_0.ttf'));
+                    $draw->setFontSize(30);
+                    $shadow->annotateImage($draw, 100, 392.5, $value['rotation'], 'my beautiful life');
+                }
+
+                $dreamboardImage->compositeImage($shadow, imagick::COMPOSITE_OVER, $value['x'], $value['y']);
             }
         }
 
-        $image = new Imagick(public_path('uploads/dreamboard/'.$this->user->id.'/'.$this->dreamboard->image_main));
-        $image->scaleImage($this->positions['image_main']['width'], $this->positions['image_main']['height']);
-        $image->borderImage('white', 2, 2);
-        $x = $this->positions['image_main']['x'] + 57;
-        $y = $this->positions['image_main']['y'] + 81;
-        $dreamboardImage->compositeImage($image, imagick::COMPOSITE_OVER, $x, $y);
-
-
-        $degrees = array( 0.01, 0.001, 0.001, 1.0 );
-        $dreamboardImage->distortImage( Imagick::DISTORTION_BARRELINVERSE, $degrees, TRUE );
-        $background->compositeImage($dreamboardImage, Imagick::COMPOSITE_OVER, 0,$baseline);
+        $background->compositeImage($dreamboardImage, Imagick::COMPOSITE_OVER, 0, 0);
         $background->setImageFormat('jpeg');
         $background->setCompression(90);
         return $background;

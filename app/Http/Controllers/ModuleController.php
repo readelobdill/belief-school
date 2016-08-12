@@ -190,11 +190,14 @@ class ModuleController extends Controller {
                     $croppedImage->writeImage(public_path('uploads/dreamboard/'.$this->auth->user()->id.'/'.$fileName));
                     $moduleUser->addImage($fileName, $this->request->input('name'));
                 }
+                if($this->request->data['background']){
+                    $moduleUser->addBackgroundImage($this->request->data['background']);
+                }
                 if(count(get_object_vars($moduleUser->data)) == 1) {
                     $moduleUser->step = 1;
                 }
 
-                if(count(get_object_vars($moduleUser->data)) == 13 && $this->request->file('image') === null) {
+                if(count(get_object_vars($moduleUser->data)) >= 13 && $this->request->file('image') === null) {
                     $moduleUser->step = 2;
                 }
 
@@ -397,7 +400,7 @@ class ModuleController extends Controller {
         }
         $dreamboard = new DreamboardRenderer($moduleUser->data, $moduleUser->user);
 
-        return response($dreamboard->renderToImage($this->request->input('fb', false))->getImageBlob(),200,['Content-type' => 'image/jpeg']);
+        return response($dreamboard->renderToImage()->getImageBlob(),200,['Content-type' => 'image/jpeg']);
 
     }
 

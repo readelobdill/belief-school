@@ -57,7 +57,7 @@ export function ImageCrop(img, target) {
     function resize() {
         tw = target.width();
         th = target.height();
-        selectorRatio = 9 / 6;
+        selectorRatio = 1;
         tRatio = tw / th;
         ratio = w / h;
         cw = tw;
@@ -73,7 +73,7 @@ export function ImageCrop(img, target) {
             cy = (th - ch) / 2;
         }
 
-        sw = Math.round(cw / 3 * 2);
+        sw = Math.round(cw / 2);
         sh = sw / selectorRatio;
         sx = (cw - sw) / 2;
         sy = (ch - sh) / 2;

@@ -12,7 +12,15 @@ import {showGlobalError} from 'ui/globalError';
 
 const allowedMimes = ['image/jpeg', 'image/png'];
 const maxFileSize = 1024*1024*15;
+const backgrounds = ['black', 'birds', 'blue-rocks', 'wings'];
 export default class Dreamboard extends Text {
+    constructor(section, module){
+        super(section, module);
+        this.innerSection = this.section.find('.inner');
+        while(!this.innerSection.hasClass(backgrounds[0])){
+            backgrounds.push(backgrounds.shift());
+        }
+    }
 
 
 
@@ -24,6 +32,24 @@ export default class Dreamboard extends Text {
                 this.showCropper(e.currentTarget.files[0],$(e.currentTarget).attr('name'), e.currentTarget);
 
             }
+        });
+
+
+        // let $board = this.section.find('.board');
+        // this.section.on('click', '.image-outline-selector input', (e) => {
+        //     $board.removeClass('hexagon rectangle circle');
+        //     $board.addClass($(e.currentTarget).val());
+        // });
+
+        this.section.on('click', '.background-image-selector button', (e) => {
+            this.innerSection.removeClass(backgrounds.join(' '));
+            var $button = $(e.currentTarget);
+            if ($button.hasClass('next')){
+                backgrounds.push(backgrounds.shift())
+            } else if ($button.hasClass('previous')){
+
+            }
+            this.innerSection.addClass(backgrounds[0]);
         });
 
         this.section.on('click', '[data-save-module]', (e) => {
@@ -47,7 +73,9 @@ export default class Dreamboard extends Text {
 
     submit() {
         let url = this.module.getUpdateUrl();
-        let data = {};
+        let data = {
+            background: backgrounds[0]
+        };
         if(this.section.find('.has-image').length == 13) {
             if(this.submitting) {
                 return false;
@@ -73,7 +101,6 @@ export default class Dreamboard extends Text {
         timeline.to(this.section.find('.overlay'), 0.3, {autoAlpha: 1}, 0);
         timeline.to(this.section.find('.modal'), 0.3, {autoAlpha: 1}, 0);
         timeline.to(this.section.find('.social'), 0.3, {autoAlpha: 1}, 0);
-
     }
 
     showCropper(file, name, input) {

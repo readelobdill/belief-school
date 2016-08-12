@@ -50,6 +50,16 @@ class ModuleUserPivot extends Pivot {
         $this->data = $data;
     }
 
+    public function addBackgroundImage($backgroundName) {
+        clock($backgroundName);
+        $data = $this->data;
+        if(empty($data)) {
+            $data = new \stdClass();
+        }
+        $data->background = $backgroundName;
+        $this->data = $data;
+    }
+
     public function getDataAttribute($value) {
         return json_decode($value);
     }

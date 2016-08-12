@@ -13,7 +13,7 @@ class Cropper {
     function crop($x,$y,$width,$height) {
         $this->image = $this->correctOrientation($this->image);
         $this->image->cropImage($width, $height, $x, $y);
-        $this->image->scaleImage(390, 258);
+        $this->image->scaleImage(400, 400);
         return $this->image;
     }
 

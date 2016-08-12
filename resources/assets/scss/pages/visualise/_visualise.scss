@@ -79,8 +79,23 @@
 
     > .inner {
         align-items: inherit !important;
-        background: url(../img/dreamboard-background-blur.jpg) no-repeat center center #efefef !important;
-        background-size: cover !important;
+
+        &.black{
+            background: url(../img/dreamboard-backgrounds/black.png) no-repeat center center transparent !important;
+            background-size: contain !important;
+        }
+        &.birds{
+            background: url(../img/dreamboard-backgrounds/birds.png) no-repeat center center transparent !important;
+            background-size: contain !important;
+        }
+        &.blue-rocks{
+            background: url(../img/dreamboard-backgrounds/blue-rocks.png) no-repeat center center transparent !important;
+            background-size: contain !important;
+        }
+        &.wings{
+            background: url(../img/dreamboard-backgrounds/wings.png) no-repeat center center transparent !important;
+            background-size: contain !important;
+        }
     }
 
     h1.title {
@@ -88,6 +103,69 @@
         &:after {
             width: 37px;
             border-color: $white;
+        }
+    }
+
+    .image-outline-selector{
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        input{
+            height: 30px;
+            width: 30px;
+            background: #f16060;
+            display: inline-block;
+            cursor: pointer;
+            opacity: 0.5;
+
+            &:checked{
+                opacity: 1;
+            }
+
+            &.circle{
+                border-radius: 15px;
+            }
+
+            &.hexagon {
+              position: relative;
+              width: 30px;
+              height: 17.32px;
+              background-color: #f16060;
+              margin: 8.66px 0;
+            }
+
+            &.hexagon:before,
+            &.hexagon:after {
+              content: "";
+              position: absolute;
+              width: 0;
+              border-left: 15px solid transparent;
+              border-right: 15px solid transparent;
+            }
+
+            &.hexagon:before {
+              bottom: 100%;
+              border-bottom: 8.66px solid #f16060;
+            }
+
+            &.hexagon:after {
+              top: 100%;
+              width: 0;
+              border-top: 8.66px solid #f16060;
+            }
+        }
+    }
+
+    .background-image-selector{
+        position: absolute;
+        top: 40px;
+        right: 20px;
+
+        button{
+            width: 30px;
+            height: 30px;
+            background: purple;
+            cursor: pointer;
         }
     }
 
@@ -374,6 +452,48 @@
             }
             .camera-icon {
                 display:none;
+            }
+        }
+    }
+
+    &.circle {
+        .image, img{
+        }
+
+        .image{
+            border-radius: 1000px;
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+
+            &.image_main {
+                transform-origin: 50% 50%;
+                transform: scale(1.35, 1.35);
+                position: relative;
+                z-index: 2;
+                background: $grey;
+
+                @include breakpoint($brk-xlarge) {
+                    transform: scale(1, 1);
+                    width: 200px * 2 + 32px;
+                    height: 200px * 2 + 32px;
+                    margin: 20px auto;
+                    border: 3px solid #f16060;
+                }
+
+                @include breakpoint($brk-small) {
+                    width: 100%;
+                    padding-top: 66.1%;
+                    height: auto;
+                    margin-top: 0;
+                }
+            }
+
+            img {
+                width: auto;
+                position: relative;
             }
         }
     }
