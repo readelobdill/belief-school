@@ -17,16 +17,16 @@
                     </div>
                     <div class="content-block cols">
 
-                        <figure class="about__paula">
-                            <img src="img/about-paula-image.jpg" alt="Paula Gosney" title="Paula Gosney" />
-                        </figure>
-
                         <p>Paula has a remarkable career, setting up her first business at 21, that was quickly purchased by her largest competitor after a high profile Public Relations campaign. Moving to Sydney in her early 20’s she started her second business and established a marketing and promotions agency working for companies such Microsoft, Roche, AFAO and many more. </p>
 
                         <p>Returning home to marry her Kiwi partner she took her first <i>“real”</i> job working for New Zealand’s top independent Advertising Agency as an Account Director.</p>
 
                         <p>Her next venture was to establish an international business, distributing health products and developing a large sales team. Through this she discovered her great talent for coaching and her love of being on a stage, having now shared her knowledge and passion with audiences from 50 to 5000. It is here that Paula says, she did her 10,000 hours - in human development.
                         </p>
+
+                        <figure class="about__paula">
+                            <img src="img/about-paula-image.jpg" alt="Paula Gosney" title="Paula Gosney" />
+                        </figure>
                     </div>
 
                     <div class="content-block">
