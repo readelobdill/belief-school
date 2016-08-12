@@ -9,9 +9,9 @@
             @endif
             <li class="ico-dash requires-auth {{(!Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{route('dashboard')}}" title="Dashboard">Dashboard</a></li>
             <li class="ico-account requires-auth {{(!Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{route('account')}}" title="My Account">My account</a></li>
-            <li class="ico-about"><a href="{{ route('home', ['skip' => 3])}}" title="Belief School Unpacked">Belief School Unpacked</a></li>
+            <li class="ico-about {{(Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{ route('home', ['skip' => 3])}}" title="Belief School Unpacked">Belief School Unpacked</a></li>
             <li class="ico-about"><a href="{{ route('about-paula-gosney') }}" title="About Paula Gosney">About Paula Gosney</a></li>
-            <li class="ico-about"><a href="{{ route('right-for-me')}}" title="Is Belief School Right for me?">Is Belief School Right for me?</a></li>
+            <li class="ico-about {{(Auth::check() ? 'is-hidden-g' : '')}}"><a href="{{ route('right-for-me')}}" title="Is Belief School Right for me?">Is Belief School Right for me?</a></li>
             <li class="ico-unlocked {{(Auth::check() ? 'is-hidden-g' : '')}}">
                 <a href="{{ route('home', ['skip' => 4])}}">Enrol</a>
             </li>
