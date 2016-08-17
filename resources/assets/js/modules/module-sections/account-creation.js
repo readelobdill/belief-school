@@ -59,10 +59,8 @@ export default class AccountCreationSection extends Text {
             this.submitting = true;
             if(this.form.hasClass('acquire-email')){
                 Client.registerUser(this.form.attr('action'), serialize(this.form)).then((existingUser) => {
-                    if(_.size(existingUser)){
-                        localStorage.setItem('register-first_name', _.get(existingUser, 'merge_fields.FNAME'));
-                        localStorage.setItem('register-last_name', _.get(existingUser, 'merge_fields.LNAME'));
-                    }
+                    localStorage.setItem('register-first_name', _.get(existingUser, 'merge_fields.FNAME') || '');
+                    localStorage.setItem('register-last_name', _.get(existingUser, 'merge_fields.LNAME') || '');
                     return this.module.nextSection();
                 });
             } else {

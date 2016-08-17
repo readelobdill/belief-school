@@ -39,13 +39,7 @@ class UserController extends Controller {
     }
 
     public function checkExistingUser(MailChimp $mailChimp){
-        // clock($mailChimp->get('lists/'.config('belief.marketingListId', '').'/interest-categories/00a7579f23/interests'));
-        $totalItems = $mailChimp->get('lists/'.config('belief.marketingListId', '').'/members?fields=total_items');
-        $allMembers = $mailChimp->get('lists/'.config('belief.marketingListId', '').'/members?fields=members&count='.$totalItems['total_items'])['members'];
-        $existingUser = array_where($allMembers, function($key, $item){
-            return $item['email_address'] == $this->request->input()['email'];
-        });
-        return empty($existingUser) ? $existingUser : head($existingUser);
+        return $mailChimp->get('lists/'.config('belief.marketingListId', '').'/members/'.md5(strtolower($this->request->input()['email'])));
     }
 
     public function createUser(MailChimp $mailChimp){
