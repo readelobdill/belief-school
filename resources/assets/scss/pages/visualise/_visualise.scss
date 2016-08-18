@@ -83,18 +83,31 @@
         &.black{
             background: url(../img/dreamboard-backgrounds/black.png) no-repeat center center transparent !important;
             background-size: contain !important;
+            @include breakpoint($brk-xlarge) {
+                background-size: cover !important;
+            }
         }
         &.birds{
             background: url(../img/dreamboard-backgrounds/birds.png) no-repeat center center transparent !important;
             background-size: contain !important;
+            @include breakpoint($brk-xlarge) {
+                background-size: cover !important;
+            }
         }
         &.blue-rocks{
             background: url(../img/dreamboard-backgrounds/blue-rocks.png) no-repeat center center transparent !important;
             background-size: contain !important;
+            @include breakpoint($brk-xlarge) {
+                background-size: cover !important;
+            }
         }
         &.wings{
             background: url(../img/dreamboard-backgrounds/wings.png) no-repeat center center transparent !important;
             background-size: contain !important;
+
+            @include breakpoint($brk-xlarge) {
+                background-size: cover !important;
+            }
         }
     }
 
@@ -157,21 +170,44 @@
     }
 
     .background-image-selector{
+        text-align: center;
+        height: 35px;
+        display: flex;
+        justify-content: center;
         position: absolute;
-        top: 40px;
-        right: 20px;
+        top: 0;
+        right: 0;
 
         button{
-            width: 30px;
-            height: 30px;
-            background: purple;
+            width: 35px;
+            height: 35px;
             cursor: pointer;
+            background: #f16060;
+            color: white;
+            font-size: 25px;
+
+            &.previous{
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+        }
+
+        span{
+            background: #f16060;
+            color: white;
+            line-height: 35px;
+            border-right: 1px solid white;
+            border-left: 1px solid white;
+            padding: 0 20px;
         }
     }
 
     .board {
-        margin-bottom: 60px;
-        @include pie-clearfix();
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
     }
 
     .button {
@@ -241,102 +277,51 @@
     }
 
     .row-4, .mid-row {
-        padding: 20px 0;
-
-        @include breakpoint($brk-xlarge) {
-            display: block;
-        }
-
-        @include breakpoint($brk-xlarge) {
-            padding: 10px 0;
-        }
-
-        @include breakpoint($brk-small) {
-            padding: 0;
-        }
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .row-4 {
-        width: 862px;
-        margin: 0 auto;
-        display: block;
-        @include pie-clearfix();
-
         @include breakpoint($brk-xlarge) {
             width: 100%;
-        }
-    }
-
-    .col {
-        float: left;
-        display: flex;
-        justify-content: space-between;
-        @include pie-clearfix();
-
-        @include breakpoint($brk-xlarge) {
-            float: none;
-            width: 423px;
-        }
-
-        @include breakpoint($brk-small) {
-            width: 100%;
-            display: inline-block;
-            margin-top: 0 !important;
-        }
-
-        .image {
-            float: left;
-
-            @include breakpoint($brk-small) {
-                margin: 0 0 20px !important;
-                width: 100%;
-                float: none;
-            }
-
-            &:nth-child(2) {
-                margin-left: 27.5px;
-            }
-        }
-
-        &:nth-child(2){
-            float: right;
-
-            @include breakpoint($brk-xlarge) {
-                margin-bottom: 0;
-                margin-top: 20px;
-            }
         }
     }
 
     .mid-row {
-        display: flex;
-        justify-content: space-between;
-        width: 1085px;
-        margin: auto;
-
         @include breakpoint($brk-xlarge) {
             width: 100%;
-            display: block;
-            margin: 0 auto;
         }
     }
+    $imageDimension: 200px;
 
     .image {
-        width: 195px;
-        height: 129px;
+        width: $imageDimension;
+        height: $imageDimension;
         background: rgba($grey, 0.95);
         box-shadow: 0 0 30px rgba($fontColour, 0.08);
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
         position: relative;
         overflow: hidden;
         cursor: pointer;
         transition: background-color $transition;
         backface-visibility: hidden;
-        border: 2px solid $white;
+        border: 15px solid $white;
 
+        // @include rotate-element(-5deg);
+
+        &:nth-child(2n){
+            // @include rotate-element(5deg);
+        }
+
+        @include breakpoint($brk-xlarge) {
+            &:nth-child(1n){
+                @include rotate-element(0deg);
+            }
+        }
 
         &:hover {
             background: rgba($grey, 1);
@@ -348,16 +333,13 @@
             }
         }
 
-        @include breakpoint($brk-xlarge) {
-            width: 50%;
+        @include breakpoint($brk-small) {
+            width: $imageDimension * 2 - 25px;
+            height: $imageDimension * 2 - 25px;
         }
 
-        @include breakpoint($brk-small) {
-            width: 100%;
-            padding-top: 66.1%;
-            height: auto;
-            margin-bottom: 10px;
-            margin: 20px 0;
+        @include breakpoint($brk-xlarge) {
+            margin: 10px 0;
         }
 
         input {
@@ -371,24 +353,34 @@
 
         &.image_main {
             transform-origin: 50% 50%;
-            transform: scale(1.35, 1.35);
+            transform: scale(1.25, 1.25);
             position: relative;
             z-index: 2;
             background: $grey;
+            box-sizing: content-box;
+            border-bottom: 30px solid white;
+            overflow: visible;
 
             @include breakpoint($brk-xlarge) {
                 transform: scale(1, 1);
-                width: 195px * 2 + 32px;
-                height: 129px * 2 + 32px;
+                width: $imageDimension * 2 - 7px;
+                height: $imageDimension * 2 - 7px;
                 margin: 20px auto;
-                border: 3px solid #f16060;
             }
 
             @include breakpoint($brk-small) {
-                width: 100%;
-                padding-top: 66.1%;
-                height: auto;
+                width: $imageDimension * 2 - 55px;
+                height: $imageDimension * 2 - 55px;
                 margin-top: 0;
+            }
+
+            .beautiful-text{
+                font-family: 'SantEliaRoughAlt-BoldThr', serif;
+                position: absolute;
+                bottom: -25px;
+                font-size: 18px;
+                text-align: center;
+                width: 100%;
             }
         }
 

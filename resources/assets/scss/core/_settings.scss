@@ -82,3 +82,9 @@ $break-1024 : 1024px;
 .margin-top {
     margin-top: 30px;
 }
+
+@mixin rotate-element($degrees) {
+    -ms-transform: rotate($degrees); /* IE 9 */
+    -webkit-transform: rotate($degrees); /* Chrome, Safari, Opera */
+    transform: rotate($degrees)
+}

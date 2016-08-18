@@ -45,9 +45,9 @@ export default class Dreamboard extends Text {
             this.innerSection.removeClass(backgrounds.join(' '));
             var $button = $(e.currentTarget);
             if ($button.hasClass('next')){
-                backgrounds.push(backgrounds.shift())
+                backgrounds.push(backgrounds.shift());
             } else if ($button.hasClass('previous')){
-
+                backgrounds.unshift(backgrounds.pop());
             }
             this.innerSection.addClass(backgrounds[0]);
         });
