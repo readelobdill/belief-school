@@ -16,7 +16,7 @@ const backgrounds = ['black', 'birds', 'blue-rocks', 'wings'];
 export default class Dreamboard extends Text {
     constructor(section, module){
         super(section, module);
-        this.innerSection = this.section.find('.inner');
+        this.innerSection = this.section.find('.content');
         while(!this.innerSection.hasClass(backgrounds[0])){
             backgrounds.push(backgrounds.shift());
         }
