@@ -76,7 +76,7 @@ export default class Dreamboard extends Text {
         let data = {
             background: backgrounds[0]
         };
-        if(this.section.find('.has-image').length == 13) {
+        if(this.section.find('.has-image').length >= 13) {
             if(this.submitting) {
                 return false;
             }
@@ -89,7 +89,8 @@ export default class Dreamboard extends Text {
     }
 
     toggleSubmit() {
-        if(this.section.find('.has-image').length == 13) {
+        console.log()
+        if(this.section.find('.has-image').length >= 13) {
             this.section.find('[data-save-module]').removeClass('is-disabled')
         } else {
             this.section.find('[data-save-module]').addClass('is-disabled')

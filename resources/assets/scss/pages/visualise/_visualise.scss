@@ -442,6 +442,13 @@
                 height: $imageDimension;
             }
 
+            .image-container{
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
             .beautiful-text{
                 font-family: 'SantEliaRoughAlt-BoldThr', serif;
                 position: absolute;
