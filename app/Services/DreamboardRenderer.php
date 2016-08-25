@@ -56,7 +56,8 @@ class DreamboardRenderer {
                     $draw = new ImagickDraw();
                     $draw->setFont(public_path('fonts/2E98A4_0_0.ttf'));
                     $draw->setFontSize(30);
-                    $shadow->annotateImage($draw, 100, 392.5, $value['rotation'], 'my beautiful life');
+                    //TODO why is this different in testing site??
+                    $shadow->annotateImage($draw, 100, 400, $value['rotation'], 'my beautiful life');
                 }
 
                 $dreamboardImage->compositeImage($shadow, imagick::COMPOSITE_OVER, $value['x'], $value['y']);

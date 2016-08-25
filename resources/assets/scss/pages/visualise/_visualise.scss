@@ -83,6 +83,7 @@
     }
 
     .content{
+        max-width: 1300px;
         &.black{
             background: url(../img/dreamboard-backgrounds/black.png) no-repeat center center transparent !important;
             background-size: contain !important;
@@ -220,7 +221,6 @@
     // display: flex;
     // flex-direction: column;
     // justify-content: center;
-    max-width: 1300px;
     padding: 10% 0;
     @include breakpoint($brk-xlarge) {
         margin: auto;
@@ -419,7 +419,6 @@
 
         &.image_main {
             left: -40px;
-            @include rotate-element(-4deg);
             height: $imageDimension * 1.5;
             width: $imageDimension * 1.5;
             position: relative;
