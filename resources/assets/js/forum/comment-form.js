@@ -81,9 +81,10 @@ export default class CommentForm extends EventEmitter {
     toggle() {
         this.form.toggleClass('is-hidden');
         if(this.form.hasClass('is-hidden')) {
-            this.form.find('textarea').blur();
+            setTimeout(() => this.form.find('textarea').blur())
         } else {
-            this.form.find('textarea').focus();
+            setTimeout(() => this.form.find('textarea').focus())
+
         }
 
     }
