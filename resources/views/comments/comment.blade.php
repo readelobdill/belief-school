@@ -23,7 +23,7 @@
 
     <div class="inner">
         <div class="comment-creation-date">{{$comment->created_at->diffForHumans()}}</div>
-        <div class="comment-username"><strong>{{isset($comment->user) ? $comment->user->username : 'Paula'}}</strong> said:</div>
+        <div class="comment-username"><strong>{{$comment->user->username or 'Paula'}}</strong> said:</div>
 
         <p>{!! $comment->body !!}</p>
 
