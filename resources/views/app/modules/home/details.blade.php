@@ -6,12 +6,14 @@
            believe you
        </h1>
 
+        <p>We hear you, we just know you are more creative, stronger and resilient than you allow yourself to believe.</p>
+
         <p>You can be, do, have anything in this one precious life. The only thing standing between you and your heart’s desire is your belief in yourself.</p>
 
-        <p>We can almost guarantee what you answered to the last question, is an obstacle (we’re not saying it’s not real) but we are pretty sure it can be overcome or, through a better understanding of yourself – changed.</p>
+        <p>We can almost guarantee what you answered to the last question, is an obstacle (we’re not saying it’s not real) but we are pretty sure it can be overcome or, through a better understanding of yourself—changed.</p>
 
         <blockquote>
-            Are you interested in laying down a foundation of self-belief to create the outcomes you want in your life?
+            Personal development is an investment in your future. Unlock your potential; you are enough and you are worth it!
         </blockquote>
     </div>
 
@@ -56,12 +58,14 @@
 
     <div class="content">
 
-        <p>You can buy a gazillion programs, sign up the best coaches in the world, even win Lotto but, if you don’t believe in yourself and your self-worth, your life will stay the same.</p>
+        <p>Do you want to develop your self-belief?</p>
 
-        <p>If you need more information about either of these programs please email us at <a href="mailto:contact@beliefschool.com">contact@beliefschool.com</a></p>
+        <p>Do you want to stop fear making decisions for you?</p>
+
+        <p>Do you want the confidence to create change?</p>
 
         <div class="actions">
-            <a href="{{route('payment', [App\Models\User::NORMAL])}}" class="button" >Yes I want to start Belief School</a>
+            <a href="{{route('payment', [App\Models\User::NORMAL])}}" class="button" >Yes please enroll me in the Belief School Program</a>
         </div>
    </div>
 </div>

@@ -4,7 +4,9 @@
             Why don't you have it?
         </h1>
 
-        <p>Don't over think this too much. What is the first thing that popped into your head when you read this question? Come on, be honest – no one is watching.</p>
+        <p>Don't over think this too much; what is the first thing that popped into your head when you read the question? Come on, be honest—no one is watching. That first thought is often at the heart of what is holding you back.</p>
+
+        <p>If you are not sure, scribble some ideas down, be brutal with yourself; self-awareness is an essential step towards creating change.</p>
 
         <div class="controls">
             <form action="" data-validate>

@@ -11,7 +11,7 @@
 
         <p>What is the one thing you would love if there were no limitations, no obstacles – no fear?</p>
 
-        <p><b>It’s a great idea to start a Belief School journal and explore these questions in more depth, for now write a concise answer here. No one is going to see this but you!</b> </p>
+        <p><b>It’s a great idea to start a journal and explore these questions in more depth, for now write a concise answer here. No one is going to see this but you!</b> </p>
         <div class="controls">
             <form action="" data-validate>
                 <div class="form-row">

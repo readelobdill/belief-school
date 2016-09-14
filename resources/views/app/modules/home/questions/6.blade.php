@@ -4,7 +4,10 @@
             How will you feel when you have this?
         </h1>
         <p>You are doing great!</p>
-        <p>Now, close your eyes for a moment and imagine in the perfect world, how you will <b>FEEL</b> when you have this. Write that feeling down here.</p>
+        <p>Now, close your eyes and imagine in the perfect world, how you will <b>FEEL</b> when you have achieved this.
+Allow yourself to experience in vivid detail, the emotions you will feel when you have created this outcome.
+We call this going to the feeling place, it is the intensity of your emotions that enhance the wiring in your brain.
+Write those feelings down here.</p>
         <div class="controls">
             <form action="" data-validate>
                 <div class="form-row">

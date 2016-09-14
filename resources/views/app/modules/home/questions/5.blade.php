@@ -2,9 +2,9 @@
     <div class="content">
         <h1 class="title">Why do you want this?</h1>
 
-        <p>This is important; understanding why you want the things you do, will play a big part in achieving them.</p>
+        <p>This is important; understanding why you want the things you do, will play a big part in creating them.</p>
 
-        <p>Dig a little deeper, once you have thought of your initial response, ask yourself why – again.</p>
+        <p>Dig a little deeper, once you have your initial response, ask yourself why and then why again. You may find with this question, that your first thought masks a deeper need.</p>
 
         <div class="controls">
             <form action="" data-validate>
