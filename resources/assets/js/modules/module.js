@@ -19,7 +19,7 @@ class Module {
             newIndex = this.container.find('[data-step="'+currentStep+'"]').index();
         }
 
-        if(newIndex > 0) {
+        if(newIndex > 0 && this.sections[0].jump) {
             this.sections[0].jump();
         }
         this.goToSection(newIndex);
