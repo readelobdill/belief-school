@@ -109,11 +109,12 @@ export default class QuestionsSection extends ModuleSection {
         }
         this.submitting = true;
 
-        let url = this.module.getUpdateUrl();
+        let updateUrl = this.module.getUpdateUrl();
+        let completeUrl = this.module.getCompleteUrl();
         let data = this.getQuestionData();
-        return client.saveModule(url, data, this.step).then(() => {
+        return client.saveModule(updateUrl, data, this.step).then(client.completeModule(completeUrl).then(() => {
             this.module.nextSection();
-        });
+        }));
     }
 
     getQuestionData() {

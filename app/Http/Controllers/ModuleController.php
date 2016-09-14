@@ -9,7 +9,6 @@ use App\Services\DreamboardRenderer;
 use App\Services\ModuleCompletion;
 use App\Services\Video;
 use Carbon\Carbon;
-use DrewM\MailChimp\MailChimp;
 use FFMpeg\Coordinate\TimeCode;
 use FFMpeg\FFMpeg;
 use Illuminate\Auth\Guard;
@@ -20,6 +19,7 @@ use stojg\crop\CropBalanced;
 use stojg\crop\CropEntropy;
 use Symfony\Component\HttpFoundation\File\File;
 use Vimeo\Vimeo;
+use Infusionsoft_Contact;
 
 class ModuleController extends Controller {
 
@@ -30,7 +30,6 @@ class ModuleController extends Controller {
         $this->request = $request;
         $this->auth = $auth;
     }
-
 
     public function viewModule($module = 'home') {
         if(empty($module)) {
@@ -289,22 +288,23 @@ class ModuleController extends Controller {
 
     }
 
-    public function completeModule(Request $request, MailChimp $mailChimp,$module) {
+    private function getExistingContact($email){
+        $contacts = \Infusionsoft_DataService::query(new Infusionsoft_Contact(), array('Email' => $email));
+        return isset($contacts[0]) ? $contacts[0] : [];
+    }
+
+    public function completeModule(Request $request,$module) {
         $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first();
         if(!empty($moduleUser) && !$moduleUser->pivot->complete) {
             $moduleUser->pivot->complete = true;
             $moduleUser->pivot->completed_at = new Carbon();
             $moduleUser->pivot->save();
-            $mailChimp->put('lists/'.config('belief.productListId', '').'/members/'.md5(Str::lower($request->user()->email)), [
-                'status' => 'subscribed',
-                'email_address' => $request->user()->email,
-                'merge_fields' => [
-                    'FNAME' => $request->user()->first_name,
-                    'LNAME' => $request->user()->last_name,
-                    'MODNUM' => $moduleUser->order,
-                    'TYPE' => $request->user()->type
-                ],
-            ]);
+
+            $contact = $this->getExistingContact($request->user()->email);
+            if($contact){
+                \Infusionsoft_ContactService::removeFromGroup($contact->Id, config('belief.infusionsoftTagModule'.($moduleUser->id), ''));
+                \Infusionsoft_ContactService::addToGroup($contact->Id, config('belief.infusionsoftTagModule'.($moduleUser->id + 1), ''));
+            }
         } else {
             // abort(404);
         }

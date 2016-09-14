@@ -1,8 +1,9 @@
 <?php namespace App\Providers;
 
-use DrewM\MailChimp\MailChimp;
 use Illuminate\Support\ServiceProvider;
 use Vimeo\Vimeo;
+use Infusionsoft_AppPool;
+use Infusionsoft_App;
 
 class AppServiceProvider extends ServiceProvider {
 
@@ -32,12 +33,11 @@ class AppServiceProvider extends ServiceProvider {
 			'App\Services\Registrar'
 		);
 
-		$this->app->singleton(MailChimp::class, function() {
-			return new MailChimp(config('mail.mailchimp.apiKey'));
-		});
 		$this->app->singleton(Vimeo::class, function() {
 			return new Vimeo(env('VIMEO_APP_ID'), env('VIMEO_SECRET'), env('VIMEO_ACCESS_TOKEN'));
 		});
+
+		Infusionsoft_AppPool::addApp(new Infusionsoft_App(env('INFUSIONSOFT_HOST'), env('INFUSIONSOFT_KEY'), 443));
 	}
 
 }

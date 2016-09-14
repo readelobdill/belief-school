@@ -16,9 +16,6 @@ Route::get('/', ['as' => 'home', 'uses' => 'ModuleController@viewModule']);
 
 Route::get('modules/{module}', ['as' => 'modules.view', 'uses' => 'ModuleController@viewModule']);
 
-//Mailchimp sends webhook POST here
-Route::post('/preventing-add-to-list-subscribe', ['uses' => 'UserController@subscribeToPreventing']);
-
 /*Routes that use the secret from module_users so show public content*/
 Route::get('dreamboard/{secret}.jpeg', ['as' => 'dreamboard.show','uses' => 'ModuleController@showDreamboardForSecret']);
 Route::get('share/{secret}', ['as' => 'module.share', 'uses' => 'ModuleController@share']);

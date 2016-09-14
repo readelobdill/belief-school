@@ -119,8 +119,6 @@ return [
 	|
 	*/
 
-	'pretend' => env('MAIL_PRETEND', false),
-
-	'mailchimp' => ['apiKey' => env('MAILCHIMP_API_KEY', '')],
+	'pretend' => env('MAIL_PRETEND', false)
 
 ];

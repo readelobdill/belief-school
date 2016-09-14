@@ -4,10 +4,11 @@ use App\Models\Group;
 use App\Models\Module;
 use App\Models\User;
 use Carbon\Carbon;
-use DrewM\MailChimp\MailChimp;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Infusionsoft_DataService;
+use Infusionsoft_Contact;
 
 class UserController extends Controller {
 
@@ -25,24 +26,17 @@ class UserController extends Controller {
         $this->auth = $auth;
     }
 
-    public function subscribeToPreventing(MailChimp $mailChimp){
-        $user = $this->request->data['merges'];
-        $mailChimp->put('lists/'.config('belief.marketingListId', '').'/members/'.md5($user['EMAIL']), [
-            'status' => 'subscribed',
-            'email_address' => $user['EMAIL'],
-            'merge_fields' => [
-                'FNAME' => $user['FNAME'],
-                'LNAME' => $user['LNAME']
-            ],
-            'interests'  => array( config('belief.preventingeverythingyouwantGroupingId', '') => true )
-        ]);
+    public function checkExistingUser(){
+        $contacts = Infusionsoft_DataService::query(new Infusionsoft_Contact(), array('Email' => $this->request->input()['email']));
+        return isset($contacts[0]) ? $contacts[0]->toArray() : [];
     }
 
-    public function checkExistingUser(MailChimp $mailChimp){
-        return $mailChimp->get('lists/'.config('belief.marketingListId', '').'/members/'.md5(strtolower($this->request->input()['email'])));
+    private function getExistingContact(){
+        $contacts = Infusionsoft_DataService::query(new Infusionsoft_Contact(), array('Email' => $this->request->input()['email']));
+        return isset($contacts[0]) ? $contacts[0] : [];
     }
 
-    public function createUser(MailChimp $mailChimp){
+    public function createUser(){
         $this->validate($this->request, [
            'first_name' => 'required',
             'last_name' => 'required',
@@ -53,25 +47,28 @@ class UserController extends Controller {
 
         $input = $this->request->input();
         $input['password'] = \Hash::make($input['password']);
-
-
-        $user = new User(
-            $input
-        );
-
+        $user = new User($input);
         $group = Group::withName('User');
         $user->group()->associate($group);
         $user->save();
 
-        $mailChimp->put('lists/'.config('belief.marketingListId', '').'/members/'.md5($user->email), [
-            'status' => 'subscribed',
-            'email_address' => $user->email,
-            'merge_fields' => [
-                'FNAME' => $user->first_name,
-                'LNAME' => $user->last_name
-            ],
-            'interests'  => array( config('belief.mybeliefschoolGroupingId', '') => true )
-        ]);
+        $contact = $this->getExistingContact();
+        if(!$contact){
+            $contact = new Infusionsoft_Contact();
+            $contact->Leadsource = 'Belief School Product Site';
+        }
+        $contact->FirstName = $user->first_name;
+        $contact->LastName = $user->last_name;
+        $contact->Email = $user->email;
+        $contactId = $contact->save();
+
+        \Infusionsoft_ContactService::addToGroup($contactId, config('belief.infusionsoftTagModule1', ''));
+        \Infusionsoft_ContactService::addToGroup($contactId, config('belief.infusionsoftTagUnpaid', ''));
+        \Infusionsoft_ContactService::addToGroup($contactId, config('belief.infusionsoftTagUserNormal', ''));
+        if(config('app.debug')) \Infusionsoft_ContactService::addToGroup($contactId, config('belief.infusionsoftTagTesting', ''));
+
+        $emailService = new \Infusionsoft_APIEmailService();
+        $emailService->optIn($user->email, 'Product Sign Up');
 
         $this->auth->login($user);
         $now = new Carbon();

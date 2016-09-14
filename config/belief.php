@@ -23,8 +23,24 @@ Belief School
         'normal' => 135.0,
         'coached' => 270.0
     ],
-    'productListId' => env('MAILCHIMP_PRODUCT_LIST_ID','d281207365'),
-    'marketingListId' => env('MAILCHIMP_MARKETING_LIST_ID','eb24524e53'),
-    'mybeliefschoolGroupingId' => env('MAILCHIMP_MYBELIEFSCHOOL_GROUPING_ID', 'c3067c2085'),
-    'preventingeverythingyouwantGroupingId' => env('MAILCHIMP_PREVENTINGEVERYTHINGYOUWANT_GROUPING_ID', '0b8c9fad68')
+    'infusionsoftTagTesting' => 219,
+    'infusionsoftTagModule1' => 120,
+    'infusionsoftTagModule2' => 122,
+    'infusionsoftTagModule3' => 167,
+    'infusionsoftTagModule4' => 169,
+    'infusionsoftTagModule5' => 171,
+    'infusionsoftTagModule6' => 173,
+    'infusionsoftTagModule7' => 175,
+    'infusionsoftTagModule8' => 177,
+    'infusionsoftTagModule9' => 179,
+    'infusionsoftTagModule10' => 221,
+    'infusionsoftTagModules11' => 223, //This is called Modules Completed in Infusionsoft
+
+    'infusionsoftTagPaid'    => 128,
+    'infusionsoftTagUnpaid'  => 130,
+
+    'infusionsoftTagUserNormal' => 124,
+    'infusionsoftTagUserCoached' => 126,
+
+    'infusionsoftTagNewsletter' => 114
 ];
