@@ -60,6 +60,8 @@ class UserController extends Controller {
         $contact->FirstName = $user->first_name;
         $contact->LastName = $user->last_name;
         $contact->Email = $user->email;
+        $now = new Carbon();
+        $contact->_ModuleLastUpdated0 = $now->toIso8601String();
         $contactId = $contact->save();
 
         \Infusionsoft_ContactService::addToGroup($contactId, config('belief.infusionsoftTagModule1', ''));

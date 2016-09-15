@@ -304,6 +304,10 @@ class ModuleController extends Controller {
             if($contact){
                 \Infusionsoft_ContactService::removeFromGroup($contact->Id, config('belief.infusionsoftTagModule'.($moduleUser->id), ''));
                 \Infusionsoft_ContactService::addToGroup($contact->Id, config('belief.infusionsoftTagModule'.($moduleUser->id + 1), ''));
+
+                $now = new Carbon();
+                $contact->_ModuleLastUpdated0 = $now->toIso8601String();
+                $contact->save();
             }
         } else {
             // abort(404);

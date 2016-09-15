@@ -4,6 +4,7 @@ use Illuminate\Support\ServiceProvider;
 use Vimeo\Vimeo;
 use Infusionsoft_AppPool;
 use Infusionsoft_App;
+use Infusionsoft_Contact;
 
 class AppServiceProvider extends ServiceProvider {
 
@@ -37,6 +38,8 @@ class AppServiceProvider extends ServiceProvider {
 			return new Vimeo(env('VIMEO_APP_ID'), env('VIMEO_SECRET'), env('VIMEO_ACCESS_TOKEN'));
 		});
 
+		//This adds custom field to Contact prototype. Hopefully.
+		Infusionsoft_Contact::addCustomField(env('INFUSIONSOFT_MODULELASTUPDATED_KEY'));
 		Infusionsoft_AppPool::addApp(new Infusionsoft_App(env('INFUSIONSOFT_HOST'), env('INFUSIONSOFT_KEY'), 443));
 	}
 
