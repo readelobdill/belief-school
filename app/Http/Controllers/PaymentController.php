@@ -85,8 +85,6 @@ class PaymentController extends Controller {
             $module = $user->modules()->where('template', 'home')->first();
             //if creating clarity has already been done go to welcome-to-belief-school
             $module->pivot->step = $module->pivot->data ? 2 : 1;
-            $module->pivot->complete = 1;
-            $module->pivot->completed_at = new \Carbon\Carbon();
             $module->pivot->save();
 
             $contact = $this->getExistingContact($user->email);
