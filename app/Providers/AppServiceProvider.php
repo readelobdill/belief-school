@@ -39,7 +39,7 @@ class AppServiceProvider extends ServiceProvider {
 		});
 
 		//This adds custom field to Contact prototype. Hopefully.
-		Infusionsoft_Contact::addCustomField(env('INFUSIONSOFT_MODULELASTUPDATED_KEY'));
+		Infusionsoft_Contact::addCustomField('_ModuleLastUpdated0');
 		Infusionsoft_AppPool::addApp(new Infusionsoft_App(env('INFUSIONSOFT_HOST'), env('INFUSIONSOFT_KEY'), 443));
 	}
 

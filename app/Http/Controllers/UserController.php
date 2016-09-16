@@ -64,10 +64,10 @@ class UserController extends Controller {
         $contact->_ModuleLastUpdated0 = $now->toIso8601String();
         $contactId = $contact->save();
 
-        \Infusionsoft_ContactService::addToGroup($contactId, config('belief.infusionsoftTagModule1', ''));
-        \Infusionsoft_ContactService::addToGroup($contactId, config('belief.infusionsoftTagUnpaid', ''));
-        \Infusionsoft_ContactService::addToGroup($contactId, config('belief.infusionsoftTagUserNormal', ''));
-        if(config('app.debug')) \Infusionsoft_ContactService::addToGroup($contactId, config('belief.infusionsoftTagTesting', ''));
+        \Infusionsoft_ContactService::addToGroup($contactId, config('infusionsoft.module1Started', ''));
+        \Infusionsoft_ContactService::addToGroup($contactId, config('infusionsoft.unpaid', ''));
+        \Infusionsoft_ContactService::addToGroup($contactId, config('infusionsoft.userNormal', ''));
+        if(config('app.debug')) \Infusionsoft_ContactService::addToGroup($contactId, config('infusionsoft.testing', ''));
 
         $emailService = new \Infusionsoft_APIEmailService();
         $emailService->optIn($user->email, 'Product Sign Up');

@@ -110,6 +110,16 @@ class ModuleController extends Controller {
                 'secret' => Str::random(26)
             ]);
             $moduleUser = $this->auth->user()->modules()->where('modules.id', $module->id)->first();
+            $contact = $this->getExistingContact($this->auth->user()->email);
+
+            if($contact){
+                \Infusionsoft_ContactService::removeFromGroup($contact->Id, config('infusionsoft.module'.($module->id - 1).'Completed', ''));
+                \Infusionsoft_ContactService::addToGroup($contact->Id, config('infusionsoft.module'.($module->id).'Started', ''));
+
+                $now = new Carbon();
+                $contact->_ModuleLastUpdated0 = $now->toIso8601String();
+                $contact->save();
+            }
         }
 
         $nextModule = Module::where('order', $module->order + 1)->first();
@@ -302,8 +312,8 @@ class ModuleController extends Controller {
 
             $contact = $this->getExistingContact($request->user()->email);
             if($contact){
-                \Infusionsoft_ContactService::removeFromGroup($contact->Id, config('belief.infusionsoftTagModule'.($moduleUser->id), ''));
-                \Infusionsoft_ContactService::addToGroup($contact->Id, config('belief.infusionsoftTagModule'.($moduleUser->id + 1), ''));
+                \Infusionsoft_ContactService::removeFromGroup($contact->Id, config('infusionsoft.module'.($moduleUser->id).'Started', ''));
+                \Infusionsoft_ContactService::addToGroup($contact->Id, config('infusionsoft.module'.($moduleUser->id).'Completed', ''));
 
                 $now = new Carbon();
                 $contact->_ModuleLastUpdated0 = $now->toIso8601String();

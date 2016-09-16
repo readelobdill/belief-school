@@ -89,8 +89,8 @@ class PaymentController extends Controller {
 
             $contact = $this->getExistingContact($user->email);
             if($contact){
-                \Infusionsoft_ContactService::removeFromGroup($contact->Id, config('belief.infusionsoftTagUnpaid', ''));
-                \Infusionsoft_ContactService::addToGroup($contact->Id, config('belief.infusionsoftTagPaid', ''));
+                \Infusionsoft_ContactService::removeFromGroup($contact->Id, config('infusionsoft.unpaid', ''));
+                \Infusionsoft_ContactService::addToGroup($contact->Id, config('infusionsoft.paid', ''));
             }
 
             if(Auth::check()) {
