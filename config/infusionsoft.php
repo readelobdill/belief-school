@@ -22,8 +22,6 @@ return [
     'module9Completed' => 261,
     'module10Completed' => 263,
 
-    'allModulesCompleted' => 223,
-
     'paid'    => 128,
     'unpaid'  => 130,
 
