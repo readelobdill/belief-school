@@ -26,7 +26,7 @@ class DreamboardRenderer {
         'image_12'   => ['x' => 710, 'y' => 575, 'rotation' => -5, 'border' => 20, 'height' => 200, 'width' => 200],
         'image_10'   => ['x' => 233, 'y' => 600, 'rotation' => -5, 'border' => 20, 'height' => 200, 'width' => 200],
         'image_11'   => ['x' => 480, 'y' => 590, 'rotation' => 5, 'border' => 20, 'height' => 200, 'width' => 200],
-        'image_main' => ['x' => 275, 'y' => 230, 'rotation' => -4, 'border' => 45, 'height' => 310, 'width' => 310],
+        'image_main' => ['x' => 275, 'y' => 230, 'rotation' => 0, 'border' => 45, 'height' => 310, 'width' => 310],
     ];
 
     public function __construct($dreamboard, $user) {
@@ -51,13 +51,13 @@ class DreamboardRenderer {
                 $shadow->setImageBackgroundColor('black');
                 $shadow->shadowImage( 50, 5, 10, 10 );
                 $shadow->compositeImage( $image, Imagick::COMPOSITE_OVER, 0, 0 );
-
                 if($key == 'image_main'){
                     $draw = new ImagickDraw();
                     $draw->setFont(public_path('fonts/2E98A4_0_0.ttf'));
                     $draw->setFontSize(30);
                     //TODO why is this different in testing site??
-                    $shadow->annotateImage($draw, 100, 400, $value['rotation'], 'my beautiful life');
+                    $shadow->annotateImage($draw, 75, 385, $value['rotation'], 'my beautiful life');
+                    // $shadow->annotateImage($draw, 140, 470, $value['rotation'], 'my beautiful life');
                 }
 
                 $dreamboardImage->compositeImage($shadow, imagick::COMPOSITE_OVER, $value['x'], $value['y']);

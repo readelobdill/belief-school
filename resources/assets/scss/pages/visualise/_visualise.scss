@@ -86,28 +86,28 @@
         max-width: 1250px;
         &.black{
             background: url(../img/dreamboard-backgrounds/black.png) no-repeat center center transparent !important;
-            background-size: contain !important;
+            // background-size: contain !important;
             @include breakpoint($brk-xlarge) {
                 background-size: cover !important;
             }
         }
         &.birds{
             background: url(../img/dreamboard-backgrounds/birds.png) no-repeat center center transparent !important;
-            background-size: contain !important;
+            // background-size: contain !important;
             @include breakpoint($brk-xlarge) {
                 background-size: cover !important;
             }
         }
         &.blue-rocks{
             background: url(../img/dreamboard-backgrounds/blue-rocks.png) no-repeat center center transparent !important;
-            background-size: contain !important;
+            // background-size: contain !important;
             @include breakpoint($brk-xlarge) {
                 background-size: cover !important;
             }
         }
         &.wings{
             background: url(../img/dreamboard-backgrounds/wings.png) no-repeat center center transparent !important;
-            background-size: contain !important;
+            // background-size: contain !important;
 
             @include breakpoint($brk-xlarge) {
                 background-size: cover !important;
@@ -175,13 +175,17 @@
 
     .actions{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: wrap;
         margin-top: 25px;
 
         button, .button{
             z-index: 100;
             position: relative;
+        }
+
+        .button{
+            margin-left: 55px;
         }
 
         .background-image-selector{
@@ -358,20 +362,18 @@
             z-index: 48;
         }
         &.image_6{
-            left: -20px;
             @include rotate-element(-8deg);
         }
         &.image_7{
-            left: -50px;
+            left: -30px;
             @include rotate-element(4deg);
         }
         &.image_8{
             top: 20px;
-            left: -60px;
+            left: -40px;
             @include rotate-element(-8deg);
         }
         &.image_9{
-            left: -20px;
             @include rotate-element(10deg);
         }
         &.image_10{
@@ -418,8 +420,8 @@
         }
 
         &.image_main {
-            left: -40px;
-            @include rotate-element(-4deg);
+            left: -20px;
+            // @include rotate-element(-4deg);
             height: $imageDimension * 1.5;
             width: $imageDimension * 1.5;
             position: relative;
