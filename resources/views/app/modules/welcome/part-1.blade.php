@@ -132,15 +132,26 @@
         <div class="dots"></div>
         <h1 class="title">First Step</h1>
 
-        <p>This first exercise serves two purposes for you.</p>
+        <p>This first exercise has been created so you can become aware of how you behave when you set yourself a task or goal; self-awareness is essential for you to create change. By understanding your patterns you can set yourself up to win. Read more about this <a href="http://www.beliefschool.com/in-two-minds/" target="_blank">here.</a> <b>The task below gives you the opportunity to demonstrate to yourself that you can commit and follow through. Knowing when you say you’ll do something and then doing it, is central to believing in yourself.</b></p>
 
-        <p><b>It creates an opportunity to set yourself up to win and demonstrate to yourself that you can commit and follow through.</b></p>
+        <p>Each personal victory gives you the confidence to step further and reach for new goals. Theory will not do this for you, only action and new evidence will change deeply held beliefs.</p>
 
-        <p><b>It also gives your body a gift, while you’re doing this work, of clarity and focus.</b></p>
+        <p><b>Over the weeks ahead, watch your behaviour with this exercise, do you:</b></p>
 
-        <p>Knowing when you say you’ll do something, you do it, is central to believing in yourself. Every personal victory gives you the confidence to step further and reach for new goals.</p>
+        <p>
+            <ul class="first-steps-list">
+                <li>Set a goal and stick to it no matter what?</li>
+                <li>Fall off and then start again?</li>
+                <li>Start out great, but lose interest?</li>
+                <li>Come up with excuses and quit?</li>
+            </ul>
+        </p>
 
-        <p>Choose from the list below. <b>The one that you are fully prepared to commit to for the duration of this program.</b></p>
+        <p><b>Do not use this exercise to beat yourself up if you stumble, use it to learn about yourself and how you operate; if you become aware of an unhelpful pattern that plays out in your life, reach out for support and solutions in the Forum and in our Closed Facebook Group.</b></p>
+
+        <p><b>We have chosen tasks that affect your physical body because they are a gift to your mind, body and soul and will create a strong emotional feeling of success as you progress.</b></p>
+
+        <p>Choose the one task below that you are fully prepared to commit to for the duration of this program:</p>
 
         <form class="welcome-first-steps" action="{{ route('modules.update', ['welcome']) }}">
             <ul class="checkbox-list">
