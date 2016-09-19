@@ -31,8 +31,8 @@ class UserController extends Controller {
         return isset($contacts[0]) ? $contacts[0]->toArray() : [];
     }
 
-    private function getExistingContact(){
-        $contacts = Infusionsoft_DataService::query(new Infusionsoft_Contact(), array('Email' => $this->request->input()['email']));
+    private function getExistingContact($email){
+        $contacts = Infusionsoft_DataService::query(new Infusionsoft_Contact(), array('Email' => $email));
         return isset($contacts[0]) ? $contacts[0] : [];
     }
 
@@ -52,7 +52,7 @@ class UserController extends Controller {
         $user->group()->associate($group);
         $user->save();
 
-        $contact = $this->getExistingContact();
+        $contact = $this->getExistingContact($this->request->input()['email']);
         if(!$contact){
             $contact = new Infusionsoft_Contact();
             $contact->Leadsource = 'Belief School Product Site';
@@ -102,8 +102,19 @@ class UserController extends Controller {
             'username' => 'required'
         ]);
 
-
         $user = $this->auth->user();
+
+        $contact = $this->getExistingContact($user->email);
+        clock($contact);
+        if($contact){
+            $contact->FirstName = $this->request->input('first_name');
+            $contact->LastName = $this->request->input('last_name');
+            $contact->Email = $this->request->input('email');
+            $contact->save();
+
+            $emailService = new \Infusionsoft_APIEmailService();
+            $emailService->optIn($this->request->input('email'), 'Product Sign Up');
+        }
 
         $user->first_name = $this->request->input('first_name');
         $user->last_name = $this->request->input('last_name');
