@@ -13,7 +13,7 @@
         <p>We can almost guarantee what you answered to the last question, is an obstacle (we’re not saying it’s not real) but we are pretty sure it can be overcome or, through a better understanding of yourself—changed.</p>
 
         <blockquote>
-            Personal development is an investment in your future. Unlock your potential; you are enough and you are worth it!
+            Personal development is an investment in your future. Unlock your potential; you are worth it!
         </blockquote>
     </div>
 
