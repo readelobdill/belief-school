@@ -2,7 +2,7 @@
 <html>
     <head>
         <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{{asset('css/main.css')}}"/>
+        <link rel="stylesheet" href="{{asset('css/main.css').'?v='.getenv('APP_VERSION')}}"/>
 
         <style>
 
@@ -26,6 +26,6 @@
 
             <div class="push"></div>
         </div>
-        <script src="{{asset('js/output.js')}}"></script>
+        <script src="{{asset('js/output.js').'?v='.getenv('APP_VERSION')}}"></script>
     </body>
 </html>

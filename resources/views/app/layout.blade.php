@@ -17,7 +17,7 @@
 
     <script src="//use.typekit.net/oni6kia.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
-    <link rel="stylesheet" href="{{asset('css/main.css?v').'?v='.getenv('APP_VERSION')}}"/>
+    <link rel="stylesheet" href="{{asset('css/main.css').'?v='.getenv('APP_VERSION')}}"/>
     @if(App::environment('local'))
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     @endif
