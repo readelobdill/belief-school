@@ -418,6 +418,17 @@ class ModuleController extends Controller {
 
     }
 
+    public function showFacebookDreamboardForSecret($secret) {
+        $moduleUser = ModuleUser::with(['user', 'module'])->where('secret', $secret)->first();
+        if($moduleUser->module->type !== 'dreamboard') {
+            abort(404);
+        }
+        $dreamboard = new DreamboardRenderer($moduleUser->data, $moduleUser->user);
+
+        return response($dreamboard->renderToFacebookImage()->getImageBlob(),200,['Content-type' => 'image/jpeg']);
+
+    }
+
 
     public function getVimeoUploadDetails(Request $request) {
         $lib = new Vimeo(env('VIMEO_APP_ID'), env('VIMEO_SECRET'), env('VIMEO_ACCESS_TOKEN'));

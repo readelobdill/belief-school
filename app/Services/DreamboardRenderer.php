@@ -70,6 +70,38 @@ class DreamboardRenderer {
         return $background;
     }
 
+    public function renderToFacebookImage(){
+        $dreamboardImage = new Imagick();
+        $dreamboardImage->newImage(1620, 848, 'white');
 
+        $background = new Imagick(public_path('img/dreamboard-backgrounds/'.$this->dreamboard->background.'.png'));
+        $dreamboardImage->compositeImage($background, imagick::COMPOSITE_OVER, 210, 0);
+
+        foreach($this->positions as $key=>$value) {
+            $image = new Imagick(public_path('uploads/dreamboard/'.$this->user->id.'/'.$this->dreamboard->$key));
+            // $image->cropThumbnailImage($value['width'], $value['height']);
+            $image->scaleImage($value['width'], $value['height']);
+            $image->borderImage('white', $value['border'], $value['border']);
+            $image->rotateImage('#00000000', $value['rotation']);
+
+            $shadow = clone $image;
+            $shadow->setImageBackgroundColor('black');
+            $shadow->shadowImage( 50, 5, 10, 10 );
+            $shadow->compositeImage( $image, Imagick::COMPOSITE_OVER, 0, 0 );
+            if($key == 'image_main'){
+                $draw = new ImagickDraw();
+                $draw->setFont(public_path('fonts/2E98A4_0_0.ttf'));
+                $draw->setFontSize(30);
+                //TODO why is this different in testing site??
+                $shadow->annotateImage($draw, 75, 385, $value['rotation'], 'my beautiful life');
+                // $shadow->annotateImage($draw, 140, 470, $value['rotation'], 'my beautiful life');
+            }
+
+            $dreamboardImage->compositeImage($shadow, imagick::COMPOSITE_OVER, $value['x'] + 210, $value['y']);
+        }
+        $dreamboardImage->setImageFormat('jpeg');
+        $dreamboardImage->setCompression(90);
+        return $dreamboardImage;
+    }
 
 }
