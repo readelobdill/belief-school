@@ -72,12 +72,12 @@ class ModuleController extends Controller {
 
 
 
-        if(!empty($moduleUser) && $moduleUser->pivot->complete && !\Session::get('paid', false)) {
+        if(!empty($moduleUser) && !\Session::get('paid', false)) {
             // reset temporarily so we can go through module again if not sign up
-            $moduleUser->pivot->complete = false;
             if($moduleUser->id == 1){
                 $moduleUser->pivot->step = 1;
-            } else {
+            } else if ($moduleUser->pivot->complete) {
+                $moduleUser->pivot->complete = false;
                 $moduleUser->pivot->step = 0;
             }
         }
